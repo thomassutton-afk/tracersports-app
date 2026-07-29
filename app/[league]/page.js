@@ -3,21 +3,22 @@
 /**
  * app/[league]/page.js — Real Dashboard, league-agnostic.
  *
- * Currently rendering MOCK data (see generateMockRatings below), not live
+ * Currently rendering MOCK data (see generateMockStandings below), not live
  * Supabase queries — the real per-league databases aren't ready yet. Once
- * they are, swap generateMockRatings() for a real Supabase query using the
+ * they are, swap generateMockStandings() for a real Supabase query using the
  * same shape (team_id, rating, change, w, l) and nothing else here needs to
  * change.
  *
- * Standings and Playoff Bracket tabs are placeholders on purpose — each
- * league's playoff format differs enough (NBA: conference bracket + play-in;
- * WNBA: top-8 overall, no play-in) that building those properly is its own
- * task, not something to rush alongside this first pass.
+ * Playoff Bracket tab is still a placeholder — each league's bracket format
+ * differs enough (NBA: conference bracket + play-in; WNBA: top-8 overall)
+ * that it's its own task, not something to rush alongside Standings.
  */
 
 import { useState, useMemo } from "react";
 import { useParams } from "next/navigation";
 import { getLeagueConfig } from "@/lib/sports/registry";
+import TeamMark from "./TeamMark";
+import StandingsTab from "./StandingsTab";
 
 const TABS = [
   { id: "rankings", label: "Power Rankings" },
@@ -39,41 +40,20 @@ function seededRandom(seed) {
   };
 }
 
-function generateMockRatings(leagueConfig) {
+function generateMockStandings(leagueConfig) {
   const teamIds = Object.keys(leagueConfig.teams);
+  const seasonLength = leagueConfig.engine?.gamesPlayedCap ?? 82;
   return teamIds
     .map((id) => {
       const rand = seededRandom(id);
       const rating = 1400 + rand() * 250;
       const change = (rand() - 0.5) * 30;
-      const w = Math.floor(rand() * 40);
-      const l = Math.floor(rand() * 30);
+      const winPct = 0.25 + rand() * 0.5; // spread of records, not all .500
+      const w = Math.round(seasonLength * winPct);
+      const l = seasonLength - w;
       return { team_id: id, rating, change, w, l };
     })
     .sort((a, b) => b.rating - a.rating);
-}
-
-function TeamMark({ team, size = 28 }) {
-  return (
-    <div
-      style={{
-        width: size,
-        height: size,
-        borderRadius: "50%",
-        background: team.primary,
-        color: team.secondary === "#FFFFFF" || team.secondary === "#fff" ? team.secondary : "#fff",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontFamily: "var(--font-mono)",
-        fontSize: size * 0.36,
-        fontWeight: 700,
-        flexShrink: 0,
-      }}
-    >
-      {team.nickname ? team.nickname.slice(0, 2).toUpperCase() : "??"}
-    </div>
-  );
 }
 
 export default function LeaguePage() {
@@ -89,8 +69,8 @@ export default function LeaguePage() {
     configError = e.message;
   }
 
-  const ratings = useMemo(
-    () => (leagueConfig ? generateMockRatings(leagueConfig) : []),
+  const standings = useMemo(
+    () => (leagueConfig ? generateMockStandings(leagueConfig) : []),
     [leagueConfig]
   );
 
@@ -103,8 +83,8 @@ export default function LeaguePage() {
     );
   }
 
-  const minRating = Math.min(...ratings.map((r) => r.rating));
-  const maxRating = Math.max(...ratings.map((r) => r.rating));
+  const minRating = Math.min(...standings.map((r) => r.rating));
+  const maxRating = Math.max(...standings.map((r) => r.rating));
 
   return (
     <div>
@@ -120,7 +100,7 @@ export default function LeaguePage() {
         </div>
         <div className="hero-stats">
           <div className="hero-stat">
-            <div className="hero-stat-val">{ratings.length}</div>
+            <div className="hero-stat-val">{standings.length}</div>
             <div className="hero-stat-lbl">Teams</div>
           </div>
         </div>
@@ -175,7 +155,7 @@ export default function LeaguePage() {
               </tr>
             </thead>
             <tbody>
-              {ratings.map((row, i) => {
+              {standings.map((row, i) => {
                 const team = leagueConfig.teams[row.team_id];
                 const barPct = ((row.rating - minRating) / (maxRating - minRating)) * 100;
                 const chgPos = row.change > 0;
@@ -232,9 +212,7 @@ export default function LeaguePage() {
         )}
 
         {activeTab === "standings" && (
-          <div style={{ padding: "4rem 0", textAlign: "center", color: "var(--text3)", fontFamily: "var(--font-mono)", fontSize: 13 }}>
-            Standings — coming soon
-          </div>
+          <StandingsTab leagueConfig={leagueConfig} standings={standings} />
         )}
 
         {activeTab === "bracket" && (
