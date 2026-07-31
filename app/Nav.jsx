@@ -1,24 +1,31 @@
 "use client";
 
 /**
- * Shared site nav — brand mark + league switcher.
+ * Shared site nav — brand mark, league switcher, and Echo/Pulse variant
+ * toggle. All three are shared chrome, live in the URL (league as a path
+ * segment, variant as a ?variant= search param) so any page can read the
+ * current selection without needing a separate state-management layer.
  *
  * Season/All-Time/Teams/About links are intentionally NOT here yet — those
  * pages don't exist in this new structure yet. Add them back in, league-aware
  * (e.g. `/${league}/season/2026`), as each page gets built. Don't add dead
  * links ahead of real pages.
- *
- * The Echo/Pulse rating-variant toggle lives on the Dashboard/Season pages
- * themselves (it's page-level state, not nav-level), so it isn't here.
  */
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { getAllLeagueIds, getLeagueConfig } from "@/lib/sports/registry";
+
+const VARIANTS = [
+  { id: "continelo", label: "Echo" },
+  { id: "elo", label: "Pulse" },
+];
 
 export default function Nav() {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const currentLeague = pathname.split("/")[1]; // "" | "nba" | "wnba" | ...
+  const currentVariant = searchParams.get("variant") || "continelo";
   const leagueIds = getAllLeagueIds();
 
   return (
@@ -36,6 +43,17 @@ export default function Nav() {
         <div className="nav-links" />
 
         <div className="nav-right">
+          <div className="variant-toggle">
+            {VARIANTS.map((v) => (
+              <Link
+                key={v.id}
+                href={`${pathname}?variant=${v.id}`}
+                className={`vt-btn${currentVariant === v.id ? " active" : ""}`}
+              >
+                {v.label}
+              </Link>
+            ))}
+          </div>
           <div className="league-switcher">
             {leagueIds.map((id) => {
               const config = getLeagueConfig(id);
@@ -43,7 +61,7 @@ export default function Nav() {
               return (
                 <Link
                   key={id}
-                  href={`/${id}`}
+                  href={`/${id}?variant=${currentVariant}`}
                   className={`ls-btn${active ? " active" : ""}`}
                 >
                   {config.label}

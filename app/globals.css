@@ -145,6 +145,40 @@ body {
 }
 .vt-btn.active { background: var(--acc); color: #fff; }
 
+/* MAIN GRID (two-column Dashboard layout) */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.left-col {
+  padding: 1.5rem 2rem 2rem 0;
+  border-right: 1px solid var(--border);
+}
+.right-col { padding: 1.5rem 0 2rem 1.5rem; }
+
+/* SECTION LABEL */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
 /* HERO */
 .hero {
   max-width: 1200px;

@@ -10,8 +10,8 @@ CREATE TABLE IF NOT EXISTS teams (
     team_id      TEXT NOT NULL,
     sport        TEXT NOT NULL,
     full_name    TEXT NOT NULL,
-    city         TEXT NOT NULL,
-    nickname     TEXT NOT NULL,
+    city         TEXT,              -- nullable: display metadata lives in lib/sports/{league}/config.js, not here
+    nickname     TEXT,              -- nullable: same reason — especially true for historical/inactive teams
     conference   TEXT,              -- nullable: some sports/leagues don't use conferences
     division     TEXT,              -- nullable: e.g. WNBA has none
     active       BOOLEAN NOT NULL DEFAULT TRUE,

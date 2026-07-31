@@ -1,24 +1,30 @@
 "use client";
 
 /**
- * app/[league]/page.js — Real Dashboard, league-agnostic.
+ * app/[league]/page.js — Real Dashboard, league-agnostic, LIVE Supabase data.
  *
- * Currently rendering MOCK data (see generateMockStandings below), not live
- * Supabase queries — the real per-league databases aren't ready yet. Once
- * they are, swap generateMockStandings() for a real Supabase query using the
- * same shape (team_id, rating, change, w, l) and nothing else here needs to
- * change.
+ * Matches the old single-league Dashboard.jsx layout: two-column grid
+ * (ratings table left, Games panel right), Echo/Pulse variant read from the
+ * ?variant= search param (toggle lives in Nav.jsx, shared across the site).
+ *
+ * Fetches every game row for the current season/variant, then reduces
+ * client-side to: latest row per team (for current rating + last change)
+ * and summed w/l across all rows (season record) — w/l in the games table
+ * are per-game results (1/0), not running totals, so they must be summed,
+ * not read off the latest row.
  *
  * Playoff Bracket tab is still a placeholder — each league's bracket format
  * differs enough (NBA: conference bracket + play-in; WNBA: top-8 overall)
- * that it's its own task, not something to rush alongside Standings.
+ * that it's its own task.
  */
 
-import { useState, useMemo } from "react";
-import { useParams } from "next/navigation";
+import { useState, useEffect } from "react";
+import { useParams, useSearchParams } from "next/navigation";
 import { getLeagueConfig } from "@/lib/sports/registry";
+import { supabase } from "@/lib/supabase";
 import TeamMark from "./TeamMark";
 import StandingsTab from "./StandingsTab";
+import GamesPanel from "./GamesPanel";
 
 const TABS = [
   { id: "rankings", label: "Power Rankings" },
@@ -26,40 +32,47 @@ const TABS = [
   { id: "bracket", label: "Playoff Bracket" },
 ];
 
-// Deterministic pseudo-random from a string, so mock data doesn't jump
-// around on every re-render/hot-reload.
-function seededRandom(seed) {
-  let h = 0;
-  for (let i = 0; i < seed.length; i++) {
-    h = (h << 5) - h + seed.charCodeAt(i);
-    h |= 0;
-  }
-  return () => {
-    h = (h * 1103515245 + 12345) & 0x7fffffff;
-    return h / 0x7fffffff;
-  };
-}
+const CURRENT_SEASON = 2026;
 
-function generateMockStandings(leagueConfig) {
-  const teamIds = Object.keys(leagueConfig.teams);
-  const seasonLength = leagueConfig.engine?.gamesPlayedCap ?? 82;
-  return teamIds
-    .map((id) => {
-      const rand = seededRandom(id);
-      const rating = 1400 + rand() * 250;
-      const change = (rand() - 0.5) * 30;
-      const winPct = 0.25 + rand() * 0.5; // spread of records, not all .500
-      const w = Math.round(seasonLength * winPct);
-      const l = seasonLength - w;
-      return { team_id: id, rating, change, w, l };
-    })
-    .sort((a, b) => b.rating - a.rating);
+const VARIANT_LABELS = {
+  continelo: "Echo ratings — carry-forward variant",
+  elo: "Pulse ratings — reset each season",
+};
+
+async function fetchStandings(league, season, variant) {
+  const { data, error } = await supabase
+    .from("games")
+    .select("team_id, date, post_gm_rate, rating_change, w, l")
+    .eq("league", league)
+    .eq("season", season)
+    .eq("variant", variant)
+    .order("date", { ascending: true });
+
+  if (error) return { standings: [], error };
+
+  const byTeam = {};
+  for (const row of data ?? []) {
+    const t = (byTeam[row.team_id] ??= { team_id: row.team_id, w: 0, l: 0, rating: null, change: null });
+    t.w += row.w ?? 0;
+    t.l += row.l ?? 0;
+    // rows are date-ascending, so the last one we see is the latest
+    t.rating = row.post_gm_rate;
+    t.change = row.rating_change;
+  }
+
+  const standings = Object.values(byTeam).sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
+  return { standings, error: null };
 }
 
 export default function LeaguePage() {
   const params = useParams();
+  const searchParams = useSearchParams();
   const league = params.league;
+  const variant = searchParams.get("variant") || "continelo";
   const [activeTab, setActiveTab] = useState("rankings");
+  const [standings, setStandings] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [fetchError, setFetchError] = useState(null);
 
   let leagueConfig;
   let configError = null;
@@ -69,10 +82,15 @@ export default function LeaguePage() {
     configError = e.message;
   }
 
-  const standings = useMemo(
-    () => (leagueConfig ? generateMockStandings(leagueConfig) : []),
-    [leagueConfig]
-  );
+  useEffect(() => {
+    if (!leagueConfig) return;
+    setLoading(true);
+    fetchStandings(league, CURRENT_SEASON, variant).then(({ standings, error }) => {
+      setStandings(standings);
+      setFetchError(error);
+      setLoading(false);
+    });
+  }, [league, leagueConfig, variant]);
 
   if (configError) {
     return (
@@ -83,25 +101,43 @@ export default function LeaguePage() {
     );
   }
 
-  const minRating = Math.min(...standings.map((r) => r.rating));
-  const maxRating = Math.max(...standings.map((r) => r.rating));
+  if (loading) {
+    return (
+      <div style={{ padding: 40, fontFamily: "var(--font-mono)", color: "var(--text3)", fontSize: 13 }}>
+        Loading…
+      </div>
+    );
+  }
+
+  if (fetchError) {
+    return (
+      <div style={{ padding: 40, fontFamily: "var(--font-mono)", color: "#b91c1c", fontSize: 13 }}>
+        Couldn&apos;t load ratings: {fetchError.message}
+      </div>
+    );
+  }
+
+  if (standings.length === 0) {
+    return (
+      <div style={{ padding: 40, fontFamily: "var(--font-mono)", color: "var(--text3)", fontSize: 13 }}>
+        No data yet for {leagueConfig.label} season {CURRENT_SEASON}.
+      </div>
+    );
+  }
+
+  const minRating = Math.min(...standings.map((r) => r.rating ?? 0));
+  const maxRating = Math.max(...standings.map((r) => r.rating ?? 0));
 
   return (
     <div>
       <div className="hero">
         <div>
-          <div className="hero-label">{leagueConfig.fullName}</div>
-          <div className="hero-heading">
-            {leagueConfig.seasonLabel(2026)} Season
+          <div className="hero-label">
+            {leagueConfig.seasonLabel(CURRENT_SEASON)} Season
           </div>
+          <div className="hero-heading">Dashboard</div>
           <div className="hero-sub">
-            Echo ratings — carry-forward variant · Placeholder data, not live yet
-          </div>
-        </div>
-        <div className="hero-stats">
-          <div className="hero-stat">
-            <div className="hero-stat-val">{standings.length}</div>
-            <div className="hero-stat-lbl">Teams</div>
+            {VARIANT_LABELS[variant]} · Updated after every game
           </div>
         </div>
       </div>
@@ -111,7 +147,7 @@ export default function LeaguePage() {
           borderBottom: "1px solid var(--border)",
           background: "var(--surface)",
           display: "flex",
-          maxWidth: 1280,
+          maxWidth: 1200,
           margin: "0 auto",
           padding: "0 2rem",
         }}
@@ -141,86 +177,95 @@ export default function LeaguePage() {
         ))}
       </div>
 
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "1.5rem 2rem 4rem" }}>
-        {activeTab === "rankings" && (
-          <table style={{ width: "100%", borderCollapse: "collapse" }}>
-            <thead>
-              <tr style={{ fontSize: 11, color: "var(--text3)", textTransform: "uppercase", letterSpacing: 1 }}>
-                <th style={{ textAlign: "right", padding: "0 10px 8px 6px", width: 36 }}>#</th>
-                <th style={{ textAlign: "left", padding: "0 8px 8px" }}>Team</th>
-                <th style={{ textAlign: "right", padding: "0 16px 8px" }}>Rating</th>
-                <th style={{ textAlign: "right", padding: "0 8px 8px", width: 130 }}>Strength</th>
-                <th style={{ textAlign: "right", padding: "0 12px 8px" }}>Δ Last</th>
-                <th style={{ textAlign: "right", padding: "0 16px 8px" }}>Record</th>
-              </tr>
-            </thead>
-            <tbody>
-              {standings.map((row, i) => {
-                const team = leagueConfig.teams[row.team_id];
-                const barPct = ((row.rating - minRating) / (maxRating - minRating)) * 100;
-                const chgPos = row.change > 0;
-                const fillColor = team.primary;
-                return (
-                  <tr
-                    key={row.team_id}
-                    style={{
-                      borderLeft: `4px solid ${fillColor}`,
-                      background: `linear-gradient(to right, ${fillColor}22 0%, transparent 340px)`,
-                    }}
-                  >
-                    <td style={{ textAlign: "right", padding: "10px 10px 10px 6px", fontFamily: "var(--font-mono)", fontSize: 13, fontWeight: 700, color: "var(--text3)" }}>
-                      {i + 1}
-                    </td>
-                    <td style={{ padding: "10px 8px" }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                        <TeamMark team={team} />
-                        <span style={{ fontSize: 13, fontWeight: 700, color: "var(--text)" }}>{team.name}</span>
-                      </div>
-                    </td>
-                    <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 14, fontWeight: 700 }}>
-                      {row.rating.toFixed(1)}
-                    </td>
-                    <td style={{ padding: "0 8px", width: 130 }}>
-                      <div style={{ height: 4, background: "rgba(0,0,0,0.12)", borderRadius: 2 }}>
-                        <div style={{ width: `${barPct}%`, height: 4, borderRadius: 2, background: fillColor }} />
-                      </div>
-                    </td>
-                    <td style={{ textAlign: "right", padding: "0 12px" }}>
-                      <span
-                        style={{
-                          fontFamily: "var(--font-mono)",
-                          fontSize: 12,
-                          fontWeight: 700,
-                          padding: "2px 8px",
-                          borderRadius: 4,
-                          color: chgPos ? "#1a7a34" : "#b91c1c",
-                          background: chgPos ? "rgba(26,122,52,0.12)" : "rgba(185,28,28,0.10)",
-                        }}
-                      >
-                        {chgPos ? "+" : ""}
-                        {row.change.toFixed(1)}
-                      </span>
-                    </td>
-                    <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text2)" }}>
-                      {row.w}–{row.l}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        )}
-
-        {activeTab === "standings" && (
-          <StandingsTab leagueConfig={leagueConfig} standings={standings} />
-        )}
-
-        {activeTab === "bracket" && (
-          <div style={{ padding: "4rem 0", textAlign: "center", color: "var(--text3)", fontFamily: "var(--font-mono)", fontSize: 13 }}>
-            Playoff Bracket — coming soon
+      {activeTab === "rankings" && (
+        <div className="main-grid">
+          <div className="left-col">
+            <div className="section-label">Current Ratings</div>
+            <table className="ratings-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Team</th>
+                  <th className="r">Rating</th>
+                  <th className="r" style={{ width: 90 }}>Strength</th>
+                  <th className="r">Δ Last</th>
+                  <th className="r">Record</th>
+                </tr>
+              </thead>
+              <tbody>
+                {standings.map((row, i) => {
+                  const team = leagueConfig.teams[row.team_id];
+                  if (!team) return null; // defensive: skip any team_id not in this league's config
+                  const barPct = maxRating > minRating ? ((row.rating - minRating) / (maxRating - minRating)) * 100 : 50;
+                  const chgPos = (row.change ?? 0) > 0;
+                  // some primaries are pure black (e.g. Nets) — fall back to tertiary so the bar/border isn't invisible
+                  const fillColor = team.primary === "#000000" ? team.tertiary : team.primary;
+                  return (
+                    <tr
+                      key={row.team_id}
+                      style={{
+                        borderLeft: `4px solid ${fillColor}`,
+                        background: `linear-gradient(to right, ${fillColor}22 0%, transparent 340px)`,
+                      }}
+                    >
+                      <td style={{ textAlign: "right", padding: "0 10px 0 6px", fontFamily: "var(--font-mono)", fontSize: 13, fontWeight: 700, color: "var(--text3)", width: 36 }}>
+                        {i + 1}
+                      </td>
+                      <td style={{ padding: "10px 8px" }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                          <TeamMark team={team} />
+                          <span style={{ fontSize: 13, fontWeight: 700, color: team.secondary }}>{team.name}</span>
+                        </div>
+                      </td>
+                      <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 14, fontWeight: 700, color: "var(--text)" }}>
+                        {row.rating?.toFixed(1) ?? "—"}
+                      </td>
+                      <td style={{ padding: "0 8px", width: 130 }}>
+                        <div style={{ height: 4, background: "rgba(0,0,0,0.12)", borderRadius: 2 }}>
+                          <div style={{ width: `${barPct}%`, height: 4, borderRadius: 2, background: fillColor }} />
+                        </div>
+                      </td>
+                      <td style={{ textAlign: "right", padding: "0 12px" }}>
+                        <span
+                          style={{
+                            fontFamily: "var(--font-mono)",
+                            fontSize: 12,
+                            fontWeight: 700,
+                            padding: "2px 8px",
+                            borderRadius: 4,
+                            color: chgPos ? "#1a7a34" : "#b91c1c",
+                            background: chgPos ? "rgba(26,122,52,0.12)" : "rgba(185,28,28,0.10)",
+                          }}
+                        >
+                          {chgPos ? "+" : ""}
+                          {row.change?.toFixed(1) ?? "—"}
+                        </span>
+                      </td>
+                      <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text2)" }}>
+                        {row.w}–{row.l}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
           </div>
-        )}
-      </div>
+
+          <GamesPanel league={league} season={CURRENT_SEASON} variant={variant} leagueConfig={leagueConfig} />
+        </div>
+      )}
+
+      {activeTab === "standings" && (
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "1.5rem 2rem 4rem" }}>
+          <StandingsTab leagueConfig={leagueConfig} standings={standings} />
+        </div>
+      )}
+
+      {activeTab === "bracket" && (
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "4rem 2rem", textAlign: "center", color: "var(--text3)", fontFamily: "var(--font-mono)", fontSize: 13 }}>
+          Playoff Bracket — coming soon
+        </div>
+      )}
     </div>
   );
 }
