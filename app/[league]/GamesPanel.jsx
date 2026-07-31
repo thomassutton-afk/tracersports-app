@@ -36,7 +36,7 @@ function pairGameRows(rows) {
   const seen = new Set();
   const games = [];
   for (const row of rows) {
-    if (row.home_away !== "H" || !row.points_for) continue;
+    if (row.home_away !== "H" || !row.points_for || row.points_for < 50) continue;
     const key = `${row.date}_${row.team_id}_${row.opponent_id}`;
     if (seen.has(key)) continue;
     seen.add(key);
@@ -196,7 +196,7 @@ export default function GamesPanel({ league, season, variant, leagueConfig }) {
                     <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text3)" }}>{g.awayRating?.toFixed(1)}</span>
                   </div>
 
-                  {awayTeam && <TeamMark team={awayTeam} size={34} />}
+                  {awayTeam && <TeamMark team={awayTeam} teamId={g.away} league={league} size={34} />}
 
                   <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 3, padding: "0 8px", flexShrink: 0, minWidth: 44 }}>
                     {g.ot && (
@@ -207,7 +207,7 @@ export default function GamesPanel({ league, season, variant, leagueConfig }) {
                     <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text3)" }}>@</span>
                   </div>
 
-                  {homeTeam && <TeamMark team={homeTeam} size={34} />}
+                  {homeTeam && <TeamMark team={homeTeam} teamId={g.home} league={league} size={34} />}
 
                   <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 3 }}>
                     <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text2)" }}>{g.home}</span>

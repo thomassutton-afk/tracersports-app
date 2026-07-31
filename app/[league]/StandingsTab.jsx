@@ -52,7 +52,7 @@ export default function StandingsTab({ leagueConfig, standings }) {
         </td>
         <td style={{ padding: "9px 8px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <TeamMark team={team} size={24} />
+            <TeamMark team={team} teamId={t.team_id} league={leagueConfig.id} size={24} />
             <span style={{ fontSize: 12, fontWeight: 600, color: "var(--text)" }}>{team.name}</span>
           </div>
         </td>

@@ -36,7 +36,7 @@ const CURRENT_SEASON = 2026;
 
 const VARIANT_LABELS = {
   continelo: "Echo ratings — carry-forward variant",
-  elo: "Pulse ratings — reset each season",
+  elo: "Pulse ratings — season-reset variant",
 };
 
 async function fetchStandings(league, season, variant) {
@@ -46,7 +46,12 @@ async function fetchStandings(league, season, variant) {
     .eq("league", league)
     .eq("season", season)
     .eq("variant", variant)
-    .order("date", { ascending: true });
+    .order("date", { ascending: true })
+    // Supabase caps results at 1000 rows by default — a full season across
+    // every team (e.g. ~2,460 rows for 30 NBA teams x 82 games) silently
+    // gets truncated without this. 20000 comfortably covers any league's
+    // full season with room to grow.
+    .range(0, 19999);
 
   if (error) return { standings: [], error };
 
@@ -147,7 +152,7 @@ export default function LeaguePage() {
           borderBottom: "1px solid var(--border)",
           background: "var(--surface)",
           display: "flex",
-          maxWidth: 1200,
+          maxWidth: 1280,
           margin: "0 auto",
           padding: "0 2rem",
         }}
@@ -178,6 +183,7 @@ export default function LeaguePage() {
       </div>
 
       {activeTab === "rankings" && (
+        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "1.5rem 2rem 4rem" }}>
         <div className="main-grid">
           <div className="left-col">
             <div className="section-label">Current Ratings</div>
@@ -205,15 +211,15 @@ export default function LeaguePage() {
                       key={row.team_id}
                       style={{
                         borderLeft: `4px solid ${fillColor}`,
-                        background: `linear-gradient(to right, ${fillColor}22 0%, transparent 340px)`,
+                        background: `linear-gradient(to right, ${fillColor} 0%, ${fillColor} 180px, ${fillColor}55 260px, transparent 340px)`,
                       }}
                     >
-                      <td style={{ textAlign: "right", padding: "0 10px 0 6px", fontFamily: "var(--font-mono)", fontSize: 13, fontWeight: 700, color: "var(--text3)", width: 36 }}>
+                      <td style={{ textAlign: "right", padding: "0 10px 0 6px", fontFamily: "var(--font-mono)", fontSize: 13, fontWeight: 700, color: "#fff", width: 36 }}>
                         {i + 1}
                       </td>
                       <td style={{ padding: "10px 8px" }}>
                         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                          <TeamMark team={team} />
+                          <TeamMark team={team} teamId={row.team_id} league={league} />
                           <span style={{ fontSize: 13, fontWeight: 700, color: team.secondary }}>{team.name}</span>
                         </div>
                       </td>
@@ -253,16 +259,17 @@ export default function LeaguePage() {
 
           <GamesPanel league={league} season={CURRENT_SEASON} variant={variant} leagueConfig={leagueConfig} />
         </div>
+        </div>
       )}
 
       {activeTab === "standings" && (
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "1.5rem 2rem 4rem" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "1.5rem 2rem 4rem" }}>
           <StandingsTab leagueConfig={leagueConfig} standings={standings} />
         </div>
       )}
 
       {activeTab === "bracket" && (
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "4rem 2rem", textAlign: "center", color: "var(--text3)", fontFamily: "var(--font-mono)", fontSize: 13 }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "4rem 2rem", textAlign: "center", color: "var(--text3)", fontFamily: "var(--font-mono)", fontSize: 13 }}>
           Playoff Bracket — coming soon
         </div>
       )}
