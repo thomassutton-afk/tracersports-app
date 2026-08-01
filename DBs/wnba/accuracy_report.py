@@ -218,10 +218,8 @@ def main():
     write_summary(games, summary_path, seasons_label)
 
     print(f"{len(games):,} games -- {seasons_label}\n")
-    print(summarize(games, "All games"))
-    print(summarize([g for g in games if g["type"] == "R"], "Regular season"))
-    print(summarize([g for g in games if g["type"] == "P"], "Playoffs"))
-    print()
+    with open(summary_path) as f:
+        print(f.read())
     print(f"Wrote {csv_path}")
     print(f"Wrote {summary_path}")
 
