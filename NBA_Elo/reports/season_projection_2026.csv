@@ -1,0 +1,31 @@
+team,name,projected_wins,p10_wins,median_wins,p90_wins,avg_final_rating,prob_finish_first
+nba_0025,Oklahoma City Thunder,64.74,63.0,65.0,66.0,1766.6,0.957
+nba_0024,San Antonio Spurs,62.4,61.0,63.0,63.0,1738.2,0.043
+nba_0008,Detroit Pistons,59.9,59.0,60.0,61.0,1692.5,0.0
+nba_0002,Boston Celtics,55.9,55.0,56.0,57.0,1690.7,0.0
+nba_0013,Los Angeles Lakers,52.57,51.0,53.0,54.0,1601.4,0.0
+nba_0018,New York Knicks,52.42,51.0,53.0,54.0,1638.2,0.0
+nba_0007,Denver Nuggets,52.26,51.0,52.0,53.0,1624.0,0.0
+nba_0005,Cleveland Cavaliers,51.81,51.0,52.0,53.0,1625.0,0.0
+nba_0010,Houston Rockets,51.76,51.0,52.0,53.0,1603.9,0.0
+nba_0016,Minnesota Timberwolves,48.29,47.0,48.0,49.0,1561.2,0.0
+nba_0001,Atlanta Hawks,46.89,46.0,47.0,48.0,1581.8,0.0
+nba_0026,Toronto Raptors,45.35,44.0,45.0,46.0,1524.8,0.0
+nba_0020,Philadelphia 76ers,44.85,44.0,45.0,46.0,1506.7,0.0
+nba_0021,Phoenix Suns,44.81,44.0,45.0,46.0,1532.1,0.0
+nba_0030,Charlotte Hornets,44.15,43.0,44.0,45.0,1614.8,0.0
+nba_0019,Orlando Magic,43.7,43.0,44.0,45.0,1502.3,0.0
+nba_0014,Miami Heat,43.05,42.0,43.0,44.0,1515.2,0.0
+nba_0012,Los Angeles Clippers,42.4,41.0,42.0,44.0,1555.1,0.0
+nba_0022,Portland Trail Blazers,41.8,41.0,42.0,43.0,1509.5,0.0
+nba_0009,Golden State Warriors,37.98,37.0,38.0,39.0,1452.8,0.0
+nba_0015,Milwaukee Bucks,32.55,31.0,33.0,34.0,1370.7,0.0
+nba_0004,Chicago Bulls,30.81,30.0,31.0,32.0,1342.4,0.0
+nba_0003,New Orleans Pelicans,26.07,25.0,26.0,27.0,1382.6,0.0
+nba_0028,Memphis Grizzlies,25.9,25.0,26.0,27.0,1326.0,0.0
+nba_0006,Dallas Mavericks,24.96,24.0,25.0,26.0,1332.3,0.0
+nba_0023,Sacramento Kings,21.86,21.0,22.0,23.0,1310.0,0.0
+nba_0027,Utah Jazz,21.85,21.0,22.0,23.0,1263.4,0.0
+nba_0017,Brooklyn Nets,20.42,19.0,20.0,22.0,1278.3,0.0
+nba_0011,Indiana Pacers,20.27,19.0,20.0,21.0,1321.9,0.0
+nba_0029,Washington Wizards,18.28,17.0,18.0,19.0,1234.8,0.0

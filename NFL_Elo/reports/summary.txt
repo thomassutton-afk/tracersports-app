@@ -1,0 +1,1043 @@
+NFL Elo Ratings - Standings Summary
+========================================
+
+1996 (30 teams)
+----------------------------------------
+ 1. Green Bay Packers            13-3   Elo  1765.61
+ 2. New England Patriots         11-5   Elo  1659.99
+ 3. Carolina Panthers            12-4   Elo  1648.78
+ 4. San Francisco 49ers          12-4   Elo  1636.07
+ 5. Denver Broncos               13-3   Elo  1631.36
+ 6. Dallas Cowboys               10-6   Elo  1572.42
+ 7. Pittsburgh Steelers          10-6   Elo  1559.75
+ 8. Washington Redskins           9-7   Elo  1553.56
+ 9. Oakland Raiders               7-9   Elo  1549.99
+10. Buffalo Bills                10-6   Elo  1538.76
+11. Philadelphia Eagles          10-6   Elo  1528.66
+12. Cincinnati Bengals            8-8   Elo  1526.56
+13. Jacksonville Jaguars          9-7   Elo  1516.65
+14. Miami Dolphins                8-8   Elo  1502.83
+15. Kansas City Chiefs            9-7   Elo  1494.89
+16. Houston Oilers                8-8   Elo  1493.52
+17. Seattle Seahawks              7-9   Elo  1483.59
+18. Minnesota Vikings             9-7   Elo  1478.55
+19. Indianapolis Colts            9-7   Elo  1473.56
+20. Chicago Bears                 7-9   Elo  1469.77
+21. San Diego Chargers            8-8   Elo  1455.18
+22. New York Giants              6-10   Elo  1445.51
+23. Tampa Bay Buccaneers         6-10   Elo  1437.66
+24. St. Louis Rams               6-10   Elo  1425.46
+25. Arizona Cardinals             7-9   Elo  1407.29
+26. Baltimore Ravens             4-12   Elo  1405.34
+27. Detroit Lions                5-11   Elo  1394.90
+28. Atlanta Falcons              3-13   Elo  1330.31
+29. New Orleans Saints           3-13   Elo  1314.57
+30. New York Jets                1-15   Elo  1297.74
+
+1997 (30 teams)
+----------------------------------------
+ 1. Green Bay Packers            13-3   Elo  1761.65
+ 2. Denver Broncos               12-4   Elo  1713.47
+ 3. Kansas City Chiefs           13-3   Elo  1654.31
+ 4. San Francisco 49ers          13-3   Elo  1610.36
+ 5. New England Patriots         10-6   Elo  1609.68
+ 6. Pittsburgh Steelers          11-5   Elo  1586.25
+ 7. Jacksonville Jaguars         11-5   Elo  1572.43
+ 8. New York Giants            10-5-1   Elo  1563.66
+ 9. Detroit Lions                 9-7   Elo  1541.52
+10. Tampa Bay Buccaneers         10-6   Elo  1538.17
+11. Washington Redskins         8-7-1   Elo  1532.10
+12. New York Jets                 9-7   Elo  1518.00
+13. Seattle Seahawks              8-8   Elo  1513.05
+14. Tennessee Oilers              8-8   Elo  1508.06
+15. Miami Dolphins                9-7   Elo  1503.27
+16. Minnesota Vikings             9-7   Elo  1497.09
+17. Carolina Panthers             7-9   Elo  1473.51
+18. Cincinnati Bengals            7-9   Elo  1473.26
+19. Dallas Cowboys               6-10   Elo  1458.80
+20. Baltimore Ravens            6-9-1   Elo  1455.48
+21. Atlanta Falcons               7-9   Elo  1446.61
+22. Philadelphia Eagles         6-9-1   Elo  1435.06
+23. St. Louis Rams               5-11   Elo  1416.50
+24. Oakland Raiders              4-12   Elo  1410.72
+25. Buffalo Bills                6-10   Elo  1404.30
+26. Indianapolis Colts           3-13   Elo  1387.42
+27. Chicago Bears                4-12   Elo  1363.16
+28. New Orleans Saints           6-10   Elo  1362.31
+29. Arizona Cardinals            4-12   Elo  1352.79
+30. San Diego Chargers           4-12   Elo  1335.11
+
+1998 (30 teams)
+----------------------------------------
+ 1. Denver Broncos               14-2   Elo  1756.15
+ 2. Minnesota Vikings            15-1   Elo  1743.59
+ 3. Atlanta Falcons              14-2   Elo  1707.66
+ 4. New York Jets                12-4   Elo  1679.67
+ 5. San Francisco 49ers          12-4   Elo  1652.59
+ 6. Green Bay Packers            11-5   Elo  1619.71
+ 7. Jacksonville Jaguars         11-5   Elo  1601.51
+ 8. Miami Dolphins               10-6   Elo  1565.14
+ 9. Dallas Cowboys               10-6   Elo  1544.64
+10. Buffalo Bills                10-6   Elo  1540.56
+11. Seattle Seahawks              8-8   Elo  1539.06
+12. Tennessee Oilers              8-8   Elo  1532.73
+13. Tampa Bay Buccaneers          8-8   Elo  1520.54
+14. New England Patriots          9-7   Elo  1518.93
+15. New York Giants               8-8   Elo  1497.88
+16. Kansas City Chiefs            7-9   Elo  1487.35
+17. Pittsburgh Steelers           7-9   Elo  1472.64
+18. Arizona Cardinals             9-7   Elo  1459.47
+19. Detroit Lions                5-11   Elo  1441.75
+20. Oakland Raiders               8-8   Elo  1439.53
+21. Washington Redskins          6-10   Elo  1431.23
+22. New Orleans Saints           6-10   Elo  1424.10
+23. Baltimore Ravens             6-10   Elo  1416.82
+24. Carolina Panthers            4-12   Elo  1411.77
+25. St. Louis Rams               4-12   Elo  1368.70
+26. Chicago Bears                4-12   Elo  1365.84
+27. San Diego Chargers           5-11   Elo  1351.72
+28. Indianapolis Colts           3-13   Elo  1324.28
+29. Cincinnati Bengals           3-13   Elo  1300.13
+30. Philadelphia Eagles          3-13   Elo  1284.96
+
+1999 (31 teams)
+----------------------------------------
+ 1. St. Louis Rams               13-3   Elo  1705.35
+ 2. Tennessee Titans             13-3   Elo  1700.73
+ 3. Jacksonville Jaguars         14-2   Elo  1635.19
+ 4. Minnesota Vikings            10-6   Elo  1621.60
+ 5. Buffalo Bills                11-5   Elo  1620.21
+ 6. Tampa Bay Buccaneers         11-5   Elo  1585.49
+ 7. Indianapolis Colts           13-3   Elo  1584.78
+ 8. Kansas City Chiefs            9-7   Elo  1564.92
+ 9. Washington Redskins          10-6   Elo  1560.91
+10. New York Jets                 8-8   Elo  1559.93
+11. Oakland Raiders               8-8   Elo  1552.49
+12. Seattle Seahawks              9-7   Elo  1542.54
+13. Green Bay Packers             8-8   Elo  1532.20
+14. Dallas Cowboys                8-8   Elo  1530.99
+15. Denver Broncos               6-10   Elo  1522.84
+16. Baltimore Ravens              8-8   Elo  1520.83
+17. New England Patriots          8-8   Elo  1513.60
+18. Miami Dolphins                9-7   Elo  1494.21
+19. Carolina Panthers             8-8   Elo  1490.53
+20. Detroit Lions                 8-8   Elo  1467.24
+21. Pittsburgh Steelers          6-10   Elo  1464.42
+22. San Diego Chargers            8-8   Elo  1448.96
+23. Atlanta Falcons              5-11   Elo  1429.27
+24. New York Giants               7-9   Elo  1423.57
+25. Chicago Bears                6-10   Elo  1416.15
+26. Philadelphia Eagles          5-11   Elo  1390.64
+27. Arizona Cardinals            6-10   Elo  1373.47
+28. San Francisco 49ers          4-12   Elo  1349.45
+29. New Orleans Saints           3-13   Elo  1327.14
+30. Cincinnati Bengals           4-12   Elo  1323.50
+31. Cleveland Browns             2-14   Elo  1249.14
+
+2000 (31 teams)
+----------------------------------------
+ 1. Baltimore Ravens             12-4   Elo  1730.61
+ 2. New York Giants              12-4   Elo  1657.35
+ 3. Oakland Raiders              12-4   Elo  1654.69
+ 4. Tennessee Titans             13-3   Elo  1628.75
+ 5. Indianapolis Colts           10-6   Elo  1623.58
+ 6. Tampa Bay Buccaneers         10-6   Elo  1604.90
+ 7. Miami Dolphins               11-5   Elo  1594.70
+ 8. Denver Broncos               11-5   Elo  1587.74
+ 9. Philadelphia Eagles          11-5   Elo  1580.93
+10. St. Louis Rams               10-6   Elo  1572.63
+11. Green Bay Packers             9-7   Elo  1564.95
+12. New York Jets                 9-7   Elo  1549.87
+13. Pittsburgh Steelers           9-7   Elo  1548.53
+14. Minnesota Vikings            11-5   Elo  1531.78
+15. New Orleans Saints           10-6   Elo  1517.79
+16. Detroit Lions                 9-7   Elo  1511.69
+17. Washington Redskins           8-8   Elo  1509.82
+18. Carolina Panthers             7-9   Elo  1499.69
+19. Buffalo Bills                 8-8   Elo  1495.47
+20. Jacksonville Jaguars          7-9   Elo  1493.71
+21. Kansas City Chiefs            7-9   Elo  1489.39
+22. San Francisco 49ers          6-10   Elo  1443.09
+23. Dallas Cowboys               5-11   Elo  1429.84
+24. Seattle Seahawks             6-10   Elo  1423.68
+25. New England Patriots         5-11   Elo  1416.24
+26. Chicago Bears                5-11   Elo  1352.33
+27. Atlanta Falcons              4-12   Elo  1343.94
+28. Cincinnati Bengals           4-12   Elo  1326.88
+29. San Diego Chargers           1-15   Elo  1293.97
+30. Cleveland Browns             3-13   Elo  1273.51
+31. Arizona Cardinals            3-13   Elo  1252.33
+
+2001 (31 teams)
+----------------------------------------
+ 1. St. Louis Rams               14-2   Elo  1762.72
+ 2. Philadelphia Eagles          11-5   Elo  1685.39
+ 3. Pittsburgh Steelers          13-3   Elo  1653.63
+ 4. New England Patriots         11-5   Elo  1642.93
+ 5. Green Bay Packers            12-4   Elo  1632.11
+ 6. Oakland Raiders              10-6   Elo  1618.98
+ 7. San Francisco 49ers          12-4   Elo  1613.14
+ 8. Chicago Bears                13-3   Elo  1608.76
+ 9. Baltimore Ravens             10-6   Elo  1584.07
+10. Tampa Bay Buccaneers          9-7   Elo  1553.18
+11. New York Jets                10-6   Elo  1545.87
+12. Miami Dolphins               11-5   Elo  1523.20
+13. Washington Redskins           8-8   Elo  1507.10
+14. Denver Broncos                8-8   Elo  1501.75
+15. Jacksonville Jaguars         6-10   Elo  1498.22
+16. Tennessee Titans              7-9   Elo  1487.01
+17. Seattle Seahawks              9-7   Elo  1481.33
+18. New York Giants               7-9   Elo  1471.99
+19. Kansas City Chiefs           6-10   Elo  1463.07
+20. Indianapolis Colts           6-10   Elo  1453.75
+21. Cleveland Browns              7-9   Elo  1444.80
+22. San Diego Chargers           5-11   Elo  1429.25
+23. New Orleans Saints            7-9   Elo  1411.13
+24. Minnesota Vikings            5-11   Elo  1403.40
+25. Arizona Cardinals             7-9   Elo  1401.86
+26. Atlanta Falcons               7-9   Elo  1389.66
+27. Dallas Cowboys               5-11   Elo  1382.79
+28. Cincinnati Bengals           6-10   Elo  1371.71
+29. Buffalo Bills                3-13   Elo  1335.63
+30. Detroit Lions                2-14   Elo  1334.18
+31. Carolina Panthers            1-15   Elo  1309.08
+
+2002 (32 teams)
+----------------------------------------
+ 1. Tampa Bay Buccaneers         12-4   Elo  1724.23
+ 2. Oakland Raiders              11-5   Elo  1722.53
+ 3. Philadelphia Eagles          12-4   Elo  1656.41
+ 4. New York Jets                 9-7   Elo  1600.53
+ 5. Pittsburgh Steelers        10-5-1   Elo  1586.42
+ 6. Atlanta Falcons             9-6-1   Elo  1585.65
+ 7. Tennessee Titans             11-5   Elo  1585.40
+ 8. New York Giants              10-6   Elo  1561.51
+ 9. Green Bay Packers            12-4   Elo  1561.46
+10. New England Patriots          9-7   Elo  1553.03
+11. Denver Broncos                9-7   Elo  1552.29
+12. Miami Dolphins                9-7   Elo  1549.69
+13. Kansas City Chiefs            8-8   Elo  1547.10
+14. San Francisco 49ers          10-6   Elo  1529.93
+15. New Orleans Saints            9-7   Elo  1524.97
+16. Cleveland Browns              9-7   Elo  1508.91
+17. St. Louis Rams                7-9   Elo  1502.76
+18. Indianapolis Colts           10-6   Elo  1495.47
+19. Seattle Seahawks              7-9   Elo  1483.34
+20. Buffalo Bills                 8-8   Elo  1465.93
+21. Baltimore Ravens              7-9   Elo  1455.55
+22. Jacksonville Jaguars         6-10   Elo  1450.99
+23. San Diego Chargers            8-8   Elo  1445.32
+24. Washington Redskins           7-9   Elo  1441.53
+25. Minnesota Vikings            6-10   Elo  1440.87
+26. Carolina Panthers             7-9   Elo  1426.21
+27. Chicago Bears                4-12   Elo  1391.50
+28. Dallas Cowboys               5-11   Elo  1372.90
+29. Arizona Cardinals            5-11   Elo  1344.28
+30. Houston Texans               4-12   Elo  1325.88
+31. Detroit Lions                3-13   Elo  1316.68
+32. Cincinnati Bengals           2-14   Elo  1292.95
+
+2003 (32 teams)
+----------------------------------------
+ 1. New England Patriots         14-2   Elo  1703.94
+ 2. Tennessee Titans             12-4   Elo  1656.07
+ 3. Indianapolis Colts           12-4   Elo  1652.71
+ 4. Green Bay Packers            10-6   Elo  1650.29
+ 5. Philadelphia Eagles          12-4   Elo  1619.41
+ 6. Miami Dolphins               10-6   Elo  1606.45
+ 7. Kansas City Chiefs           13-3   Elo  1603.47
+ 8. Baltimore Ravens             10-6   Elo  1593.44
+ 9. Carolina Panthers            11-5   Elo  1592.59
+10. St. Louis Rams               12-4   Elo  1589.64
+11. Denver Broncos               10-6   Elo  1570.23
+12. Tampa Bay Buccaneers          7-9   Elo  1560.42
+13. Minnesota Vikings             9-7   Elo  1548.35
+14. Seattle Seahawks             10-6   Elo  1541.51
+15. New Orleans Saints            8-8   Elo  1514.93
+16. Dallas Cowboys               10-6   Elo  1504.84
+17. San Francisco 49ers           7-9   Elo  1504.36
+18. New York Jets                6-10   Elo  1480.56
+19. Buffalo Bills                6-10   Elo  1461.49
+20. Pittsburgh Steelers          6-10   Elo  1454.77
+21. Cincinnati Bengals            8-8   Elo  1441.75
+22. Chicago Bears                 7-9   Elo  1432.74
+23. Jacksonville Jaguars         5-11   Elo  1429.45
+24. Cleveland Browns             5-11   Elo  1414.56
+25. Atlanta Falcons              5-11   Elo  1407.14
+26. Oakland Raiders              4-12   Elo  1392.72
+27. Washington Redskins          5-11   Elo  1385.75
+28. Detroit Lions                5-11   Elo  1368.57
+29. San Diego Chargers           4-12   Elo  1363.07
+30. Houston Texans               5-11   Elo  1347.64
+31. New York Giants              4-12   Elo  1329.95
+32. Arizona Cardinals            4-12   Elo  1279.42
+
+2004 (32 teams)
+----------------------------------------
+ 1. New England Patriots         14-2   Elo  1784.55
+ 2. Indianapolis Colts           12-4   Elo  1678.95
+ 3. Pittsburgh Steelers          15-1   Elo  1662.19
+ 4. Philadelphia Eagles          13-3   Elo  1655.19
+ 5. San Diego Chargers           12-4   Elo  1619.68
+ 6. Buffalo Bills                 9-7   Elo  1609.98
+ 7. New York Jets                10-6   Elo  1571.23
+ 8. Denver Broncos               10-6   Elo  1567.93
+ 9. Baltimore Ravens              9-7   Elo  1564.72
+10. Kansas City Chiefs            7-9   Elo  1562.25
+11. Green Bay Packers            10-6   Elo  1553.25
+12. Carolina Panthers             7-9   Elo  1535.73
+13. Cincinnati Bengals            8-8   Elo  1520.40
+14. Atlanta Falcons              11-5   Elo  1515.93
+15. Minnesota Vikings             8-8   Elo  1511.32
+16. Houston Texans                7-9   Elo  1493.64
+17. New Orleans Saints            8-8   Elo  1473.03
+18. Seattle Seahawks              9-7   Elo  1470.48
+19. Jacksonville Jaguars          9-7   Elo  1467.12
+20. Tampa Bay Buccaneers         5-11   Elo  1450.58
+21. Washington Redskins          6-10   Elo  1449.24
+22. St. Louis Rams                8-8   Elo  1447.00
+23. New York Giants              6-10   Elo  1421.68
+24. Miami Dolphins               4-12   Elo  1413.90
+25. Arizona Cardinals            6-10   Elo  1410.26
+26. Tennessee Titans             5-11   Elo  1409.40
+27. Detroit Lions                6-10   Elo  1402.18
+28. Dallas Cowboys               6-10   Elo  1387.85
+29. Cleveland Browns             4-12   Elo  1384.12
+30. Chicago Bears                5-11   Elo  1362.20
+31. Oakland Raiders              5-11   Elo  1354.72
+32. San Francisco 49ers          2-14   Elo  1287.82
+
+2005 (32 teams)
+----------------------------------------
+ 1. Pittsburgh Steelers          11-5   Elo  1755.47
+ 2. Seattle Seahawks             13-3   Elo  1710.72
+ 3. Indianapolis Colts           14-2   Elo  1694.80
+ 4. Carolina Panthers            11-5   Elo  1661.07
+ 5. Denver Broncos               13-3   Elo  1659.53
+ 6. Kansas City Chiefs           10-6   Elo  1619.58
+ 7. New England Patriots         10-6   Elo  1618.69
+ 8. San Diego Chargers            9-7   Elo  1609.47
+ 9. Washington Redskins          10-6   Elo  1592.11
+10. New York Giants              11-5   Elo  1562.11
+11. Jacksonville Jaguars         12-4   Elo  1557.20
+12. Cincinnati Bengals           11-5   Elo  1547.52
+13. Chicago Bears                11-5   Elo  1532.70
+14. Tampa Bay Buccaneers         11-5   Elo  1522.93
+15. Minnesota Vikings             9-7   Elo  1513.74
+16. Dallas Cowboys                9-7   Elo  1497.23
+17. Miami Dolphins                9-7   Elo  1496.02
+18. Atlanta Falcons               8-8   Elo  1480.68
+19. Baltimore Ravens             6-10   Elo  1465.94
+20. Philadelphia Eagles          6-10   Elo  1420.89
+21. Green Bay Packers            4-12   Elo  1420.63
+22. Buffalo Bills                5-11   Elo  1418.56
+23. New York Jets                4-12   Elo  1406.82
+24. Cleveland Browns             6-10   Elo  1405.96
+25. St. Louis Rams               6-10   Elo  1392.49
+26. Arizona Cardinals            5-11   Elo  1392.38
+27. Detroit Lions                5-11   Elo  1373.20
+28. Tennessee Titans             4-12   Elo  1371.50
+29. Oakland Raiders              4-12   Elo  1371.08
+30. Houston Texans               2-14   Elo  1311.88
+31. San Francisco 49ers          4-12   Elo  1310.37
+32. New Orleans Saints           3-13   Elo  1305.24
+
+2006 (32 teams)
+----------------------------------------
+ 1. San Diego Chargers           14-2   Elo  1703.55
+ 2. New England Patriots         12-4   Elo  1684.44
+ 3. Indianapolis Colts           12-4   Elo  1678.36
+ 4. Chicago Bears                13-3   Elo  1675.22
+ 5. Baltimore Ravens             13-3   Elo  1660.86
+ 6. Philadelphia Eagles          10-6   Elo  1585.69
+ 7. Jacksonville Jaguars          8-8   Elo  1580.76
+ 8. Pittsburgh Steelers           8-8   Elo  1563.18
+ 9. Denver Broncos                9-7   Elo  1562.32
+10. Cincinnati Bengals            8-8   Elo  1554.70
+11. New Orleans Saints           10-6   Elo  1554.12
+12. Kansas City Chiefs            9-7   Elo  1532.01
+13. Buffalo Bills                 7-9   Elo  1516.70
+14. Seattle Seahawks              9-7   Elo  1514.26
+15. Dallas Cowboys                9-7   Elo  1509.48
+16. New York Jets                10-6   Elo  1506.54
+17. New York Giants               8-8   Elo  1495.23
+18. Carolina Panthers             8-8   Elo  1483.00
+19. St. Louis Rams                8-8   Elo  1468.89
+20. Tennessee Titans              8-8   Elo  1467.36
+21. Miami Dolphins               6-10   Elo  1465.05
+22. Green Bay Packers             8-8   Elo  1462.60
+23. Atlanta Falcons               7-9   Elo  1427.75
+24. Washington Redskins          5-11   Elo  1415.97
+25. Arizona Cardinals            5-11   Elo  1409.94
+26. Minnesota Vikings            6-10   Elo  1408.25
+27. Houston Texans               6-10   Elo  1404.16
+28. San Francisco 49ers           7-9   Elo  1394.70
+29. Tampa Bay Buccaneers         4-12   Elo  1355.02
+30. Detroit Lions                3-13   Elo  1339.82
+31. Cleveland Browns             4-12   Elo  1335.66
+32. Oakland Raiders              2-14   Elo  1288.10
+
+2007 (32 teams)
+----------------------------------------
+ 1. New England Patriots         16-0   Elo  1833.62
+ 2. Indianapolis Colts           13-3   Elo  1696.87
+ 3. San Diego Chargers           11-5   Elo  1664.14
+ 4. Green Bay Packers            13-3   Elo  1628.46
+ 5. Dallas Cowboys               13-3   Elo  1620.75
+ 6. Jacksonville Jaguars         11-5   Elo  1620.17
+ 7. Pittsburgh Steelers          10-6   Elo  1604.50
+ 8. New York Giants              10-6   Elo  1587.12
+ 9. Seattle Seahawks             10-6   Elo  1573.25
+10. Philadelphia Eagles           8-8   Elo  1552.04
+11. Washington Redskins           9-7   Elo  1541.37
+12. Minnesota Vikings             8-8   Elo  1540.19
+13. Houston Texans                8-8   Elo  1519.93
+14. Chicago Bears                 7-9   Elo  1512.33
+15. Cleveland Browns             10-6   Elo  1507.57
+16. Tennessee Titans             10-6   Elo  1505.01
+17. Tampa Bay Buccaneers          9-7   Elo  1498.66
+18. Cincinnati Bengals            7-9   Elo  1497.87
+19. New Orleans Saints            7-9   Elo  1491.56
+20. Arizona Cardinals             8-8   Elo  1479.06
+21. Buffalo Bills                 7-9   Elo  1441.42
+22. Denver Broncos                7-9   Elo  1440.13
+23. Carolina Panthers             7-9   Elo  1435.54
+24. Baltimore Ravens             5-11   Elo  1415.02
+25. Detroit Lions                 7-9   Elo  1407.80
+26. New York Jets                4-12   Elo  1401.44
+27. Oakland Raiders              4-12   Elo  1372.25
+28. Kansas City Chiefs           4-12   Elo  1345.10
+29. St. Louis Rams               3-13   Elo  1334.85
+30. San Francisco 49ers          5-11   Elo  1330.58
+31. Atlanta Falcons              4-12   Elo  1327.92
+32. Miami Dolphins               1-15   Elo  1276.68
+
+2008 (32 teams)
+----------------------------------------
+ 1. Pittsburgh Steelers          12-4   Elo  1698.63
+ 2. Philadelphia Eagles         9-6-1   Elo  1668.37
+ 3. Baltimore Ravens             11-5   Elo  1664.14
+ 4. New England Patriots         11-5   Elo  1633.02
+ 5. Indianapolis Colts           12-4   Elo  1627.95
+ 6. New York Giants              12-4   Elo  1620.06
+ 7. Tennessee Titans             13-3   Elo  1619.53
+ 8. San Diego Chargers            8-8   Elo  1587.47
+ 9. Arizona Cardinals             9-7   Elo  1576.18
+10. Minnesota Vikings            10-6   Elo  1570.31
+11. Atlanta Falcons              11-5   Elo  1555.87
+12. Carolina Panthers            12-4   Elo  1545.38
+13. New Orleans Saints            8-8   Elo  1535.17
+14. Dallas Cowboys                9-7   Elo  1533.41
+15. Green Bay Packers            6-10   Elo  1523.98
+16. Chicago Bears                 9-7   Elo  1521.89
+17. Miami Dolphins               11-5   Elo  1514.86
+18. Tampa Bay Buccaneers          9-7   Elo  1509.65
+19. New York Jets                 9-7   Elo  1504.49
+20. Washington Redskins           8-8   Elo  1482.68
+21. Houston Texans                8-8   Elo  1481.22
+22. Buffalo Bills                 7-9   Elo  1436.35
+23. Jacksonville Jaguars         5-11   Elo  1421.11
+24. Denver Broncos                8-8   Elo  1420.28
+25. San Francisco 49ers           7-9   Elo  1419.15
+26. Seattle Seahawks             4-12   Elo  1406.95
+27. Cincinnati Bengals         4-11-1   Elo  1381.71
+28. Cleveland Browns             4-12   Elo  1375.35
+29. Oakland Raiders              5-11   Elo  1371.42
+30. Kansas City Chiefs           2-14   Elo  1299.41
+31. St. Louis Rams               2-14   Elo  1257.18
+32. Detroit Lions                0-16   Elo  1239.13
+
+2009 (32 teams)
+----------------------------------------
+ 1. New Orleans Saints           13-3   Elo  1708.70
+ 2. Indianapolis Colts           14-2   Elo  1683.87
+ 3. San Diego Chargers           13-3   Elo  1663.80
+ 4. Minnesota Vikings            12-4   Elo  1663.14
+ 5. Green Bay Packers            11-5   Elo  1631.64
+ 6. Dallas Cowboys               11-5   Elo  1625.97
+ 7. New York Jets                 9-7   Elo  1625.84
+ 8. Baltimore Ravens              9-7   Elo  1607.46
+ 9. Philadelphia Eagles          11-5   Elo  1598.05
+10. New England Patriots         10-6   Elo  1585.93
+11. Pittsburgh Steelers           9-7   Elo  1583.96
+12. Carolina Panthers             8-8   Elo  1575.68
+13. Houston Texans                9-7   Elo  1553.35
+14. Atlanta Falcons               9-7   Elo  1548.52
+15. Arizona Cardinals            10-6   Elo  1538.22
+16. Tennessee Titans              8-8   Elo  1503.22
+17. San Francisco 49ers           8-8   Elo  1501.70
+18. Cincinnati Bengals           10-6   Elo  1495.78
+19. New York Giants               8-8   Elo  1480.50
+20. Miami Dolphins                7-9   Elo  1475.61
+21. Denver Broncos                8-8   Elo  1463.45
+22. Chicago Bears                 7-9   Elo  1442.26
+23. Buffalo Bills                6-10   Elo  1429.29
+24. Jacksonville Jaguars          7-9   Elo  1397.59
+25. Washington Redskins          4-12   Elo  1383.95
+26. Cleveland Browns             5-11   Elo  1377.63
+27. Seattle Seahawks             5-11   Elo  1362.52
+28. Tampa Bay Buccaneers         3-13   Elo  1358.69
+29. Kansas City Chiefs           4-12   Elo  1342.55
+30. Oakland Raiders              5-11   Elo  1303.96
+31. Detroit Lions                2-14   Elo  1249.05
+32. St. Louis Rams               1-15   Elo  1242.57
+
+2010 (32 teams)
+----------------------------------------
+ 1. Green Bay Packers            10-6   Elo  1743.30
+ 2. New England Patriots         14-2   Elo  1720.04
+ 3. Pittsburgh Steelers          12-4   Elo  1672.59
+ 4. Baltimore Ravens             12-4   Elo  1638.27
+ 5. New York Jets                11-5   Elo  1616.64
+ 6. Philadelphia Eagles          10-6   Elo  1614.49
+ 7. New Orleans Saints           11-5   Elo  1596.57
+ 8. San Diego Chargers            9-7   Elo  1594.28
+ 9. Atlanta Falcons              13-3   Elo  1592.22
+10. Indianapolis Colts           10-6   Elo  1578.74
+11. Chicago Bears                11-5   Elo  1575.10
+12. New York Giants              10-6   Elo  1556.64
+13. Oakland Raiders               8-8   Elo  1537.86
+14. Tampa Bay Buccaneers         10-6   Elo  1527.83
+15. Dallas Cowboys               6-10   Elo  1480.02
+16. Tennessee Titans             6-10   Elo  1467.60
+17. Kansas City Chiefs           10-6   Elo  1465.79
+18. Houston Texans               6-10   Elo  1458.44
+19. Miami Dolphins                7-9   Elo  1457.29
+20. San Francisco 49ers          6-10   Elo  1451.15
+21. Jacksonville Jaguars          8-8   Elo  1447.81
+22. Detroit Lions                6-10   Elo  1447.17
+23. Cleveland Browns             5-11   Elo  1413.70
+24. Cincinnati Bengals           4-12   Elo  1413.00
+25. Minnesota Vikings            6-10   Elo  1412.92
+26. Seattle Seahawks              7-9   Elo  1405.49
+27. St. Louis Rams                7-9   Elo  1404.78
+28. Washington Redskins          6-10   Elo  1384.86
+29. Buffalo Bills                4-12   Elo  1381.93
+30. Denver Broncos               4-12   Elo  1324.53
+31. Arizona Cardinals            5-11   Elo  1316.48
+32. Carolina Panthers            2-14   Elo  1299.95
+
+2011 (32 teams)
+----------------------------------------
+ 1. New England Patriots         13-3   Elo  1736.20
+ 2. New Orleans Saints           13-3   Elo  1690.63
+ 3. Green Bay Packers            15-1   Elo  1682.48
+ 4. San Francisco 49ers          13-3   Elo  1650.34
+ 5. Baltimore Ravens             12-4   Elo  1646.79
+ 6. New York Giants               9-7   Elo  1621.14
+ 7. Pittsburgh Steelers          12-4   Elo  1620.51
+ 8. Houston Texans               10-6   Elo  1605.87
+ 9. Philadelphia Eagles           8-8   Elo  1595.72
+10. San Diego Chargers            8-8   Elo  1551.58
+11. Detroit Lions                10-6   Elo  1546.90
+12. Atlanta Falcons              10-6   Elo  1532.79
+13. Chicago Bears                 8-8   Elo  1520.07
+14. Miami Dolphins               6-10   Elo  1504.41
+15. Seattle Seahawks              7-9   Elo  1503.64
+16. New York Jets                 8-8   Elo  1502.73
+17. Cincinnati Bengals            9-7   Elo  1493.40
+18. Tennessee Titans              9-7   Elo  1489.37
+19. Dallas Cowboys                8-8   Elo  1481.38
+20. Carolina Panthers            6-10   Elo  1448.32
+21. Arizona Cardinals             8-8   Elo  1436.29
+22. Oakland Raiders               8-8   Elo  1436.16
+23. Denver Broncos                8-8   Elo  1421.04
+24. Kansas City Chiefs            7-9   Elo  1419.92
+25. Buffalo Bills                6-10   Elo  1411.85
+26. Washington Redskins          5-11   Elo  1396.82
+27. Jacksonville Jaguars         5-11   Elo  1395.46
+28. Cleveland Browns             4-12   Elo  1381.12
+29. Minnesota Vikings            3-13   Elo  1369.58
+30. Indianapolis Colts           2-14   Elo  1322.50
+31. Tampa Bay Buccaneers         4-12   Elo  1295.17
+32. St. Louis Rams               2-14   Elo  1286.49
+
+2012 (32 teams)
+----------------------------------------
+ 1. New England Patriots         12-4   Elo  1697.14
+ 2. San Francisco 49ers        11-4-1   Elo  1692.59
+ 3. Seattle Seahawks             11-5   Elo  1665.19
+ 4. Denver Broncos               13-3   Elo  1663.73
+ 5. Baltimore Ravens             10-6   Elo  1649.50
+ 6. Atlanta Falcons              13-3   Elo  1648.82
+ 7. Green Bay Packers            11-5   Elo  1627.86
+ 8. Houston Texans               12-4   Elo  1596.53
+ 9. New York Giants               9-7   Elo  1585.76
+10. Chicago Bears                10-6   Elo  1575.09
+11. Cincinnati Bengals           10-6   Elo  1566.71
+12. New Orleans Saints            7-9   Elo  1541.03
+13. Washington Redskins          10-6   Elo  1540.41
+14. Minnesota Vikings            10-6   Elo  1534.00
+15. Pittsburgh Steelers           8-8   Elo  1527.56
+16. Carolina Panthers             7-9   Elo  1499.89
+17. Indianapolis Colts           11-5   Elo  1490.60
+18. Dallas Cowboys                8-8   Elo  1481.00
+19. Miami Dolphins                7-9   Elo  1469.98
+20. San Diego Chargers            7-9   Elo  1464.35
+21. St. Louis Rams              7-8-1   Elo  1445.34
+22. Tampa Bay Buccaneers          7-9   Elo  1441.52
+23. Tennessee Titans             6-10   Elo  1422.58
+24. Buffalo Bills                6-10   Elo  1407.05
+25. Detroit Lions                4-12   Elo  1402.08
+26. Cleveland Browns             5-11   Elo  1396.71
+27. Arizona Cardinals            5-11   Elo  1385.95
+28. New York Jets                6-10   Elo  1382.46
+29. Oakland Raiders              4-12   Elo  1336.46
+30. Philadelphia Eagles          4-12   Elo  1335.12
+31. Jacksonville Jaguars         2-14   Elo  1270.55
+32. Kansas City Chiefs           2-14   Elo  1257.63
+
+2013 (32 teams)
+----------------------------------------
+ 1. Seattle Seahawks             13-3   Elo  1723.35
+ 2. Denver Broncos               13-3   Elo  1718.17
+ 3. San Francisco 49ers          12-4   Elo  1695.44
+ 4. New England Patriots         12-4   Elo  1659.96
+ 5. New Orleans Saints           11-5   Elo  1621.95
+ 6. Carolina Panthers            12-4   Elo  1605.48
+ 7. Cincinnati Bengals           11-5   Elo  1579.53
+ 8. San Diego Chargers            9-7   Elo  1578.47
+ 9. Arizona Cardinals            10-6   Elo  1572.71
+10. Philadelphia Eagles          10-6   Elo  1566.53
+11. Kansas City Chiefs           11-5   Elo  1556.32
+12. Indianapolis Colts           11-5   Elo  1548.01
+13. Pittsburgh Steelers           8-8   Elo  1536.41
+14. Dallas Cowboys                8-8   Elo  1503.08
+15. St. Louis Rams                7-9   Elo  1502.52
+16. Detroit Lions                 7-9   Elo  1495.63
+17. Baltimore Ravens              8-8   Elo  1493.05
+18. Green Bay Packers           8-7-1   Elo  1481.74
+19. Chicago Bears                 8-8   Elo  1475.78
+20. Miami Dolphins                8-8   Elo  1472.47
+21. Tennessee Titans              7-9   Elo  1462.66
+22. Buffalo Bills                6-10   Elo  1447.97
+23. New York Giants               7-9   Elo  1447.30
+24. Minnesota Vikings          5-10-1   Elo  1419.31
+25. New York Jets                 8-8   Elo  1416.69
+26. Atlanta Falcons              4-12   Elo  1408.84
+27. Tampa Bay Buccaneers         4-12   Elo  1399.44
+28. Cleveland Browns             4-12   Elo  1347.32
+29. Washington Redskins          3-13   Elo  1333.16
+30. Oakland Raiders              4-12   Elo  1320.28
+31. Houston Texans               2-14   Elo  1312.90
+32. Jacksonville Jaguars         4-12   Elo  1293.89
+
+2014 (32 teams)
+----------------------------------------
+ 1. New England Patriots         12-4   Elo  1744.62
+ 2. Seattle Seahawks             12-4   Elo  1735.21
+ 3. Green Bay Packers            12-4   Elo  1659.53
+ 4. Denver Broncos               12-4   Elo  1632.11
+ 5. Dallas Cowboys               12-4   Elo  1631.29
+ 6. Baltimore Ravens             10-6   Elo  1613.21
+ 7. Indianapolis Colts           11-5   Elo  1597.57
+ 8. Pittsburgh Steelers          11-5   Elo  1585.00
+ 9. Philadelphia Eagles          10-6   Elo  1578.06
+10. Detroit Lions                11-5   Elo  1565.55
+11. Kansas City Chiefs            9-7   Elo  1563.47
+12. Buffalo Bills                 9-7   Elo  1554.53
+13. Cincinnati Bengals         10-5-1   Elo  1539.11
+14. Houston Texans                9-7   Elo  1533.96
+15. Carolina Panthers           7-8-1   Elo  1533.16
+16. Arizona Cardinals            11-5   Elo  1526.61
+17. San Francisco 49ers           8-8   Elo  1502.33
+18. San Diego Chargers            9-7   Elo  1502.02
+19. Miami Dolphins                8-8   Elo  1499.48
+20. New York Giants              6-10   Elo  1471.13
+21. New Orleans Saints            7-9   Elo  1457.55
+22. St. Louis Rams               6-10   Elo  1449.91
+23. Minnesota Vikings             7-9   Elo  1443.76
+24. Atlanta Falcons              6-10   Elo  1428.40
+25. Cleveland Browns              7-9   Elo  1403.92
+26. New York Jets                4-12   Elo  1382.82
+27. Chicago Bears                5-11   Elo  1367.02
+28. Tampa Bay Buccaneers         2-14   Elo  1323.36
+29. Oakland Raiders              3-13   Elo  1310.65
+30. Jacksonville Jaguars         3-13   Elo  1303.74
+31. Washington Redskins          4-12   Elo  1296.10
+32. Tennessee Titans             2-14   Elo  1265.96
+
+2015 (32 teams)
+----------------------------------------
+ 1. Carolina Panthers            15-1   Elo  1744.57
+ 2. Seattle Seahawks             10-6   Elo  1697.76
+ 3. Kansas City Chiefs           11-5   Elo  1676.11
+ 4. New England Patriots         12-4   Elo  1668.86
+ 5. Denver Broncos               12-4   Elo  1635.62
+ 6. Pittsburgh Steelers          10-6   Elo  1628.45
+ 7. Arizona Cardinals            13-3   Elo  1628.25
+ 8. Cincinnati Bengals           12-4   Elo  1616.51
+ 9. Green Bay Packers            10-6   Elo  1610.44
+10. Minnesota Vikings            11-5   Elo  1575.25
+11. New York Jets                10-6   Elo  1539.87
+12. Buffalo Bills                 8-8   Elo  1538.70
+13. Washington Redskins           9-7   Elo  1504.27
+14. Houston Texans                9-7   Elo  1503.01
+15. Atlanta Falcons               8-8   Elo  1484.56
+16. Detroit Lions                 7-9   Elo  1476.02
+17. New York Giants              6-10   Elo  1456.40
+18. St. Louis Rams                7-9   Elo  1448.80
+19. Philadelphia Eagles           7-9   Elo  1441.32
+20. Baltimore Ravens             5-11   Elo  1438.33
+21. Indianapolis Colts            8-8   Elo  1437.92
+22. New Orleans Saints            7-9   Elo  1431.53
+23. Oakland Raiders               7-9   Elo  1430.40
+24. Chicago Bears                6-10   Elo  1420.22
+25. Dallas Cowboys               4-12   Elo  1415.09
+26. Miami Dolphins               6-10   Elo  1402.52
+27. San Diego Chargers           4-12   Elo  1390.95
+28. Tampa Bay Buccaneers         6-10   Elo  1387.93
+29. Jacksonville Jaguars         5-11   Elo  1373.35
+30. San Francisco 49ers          5-11   Elo  1355.72
+31. Cleveland Browns             3-13   Elo  1346.23
+32. Tennessee Titans             3-13   Elo  1298.71
+
+2016 (32 teams)
+----------------------------------------
+ 1. New England Patriots         14-2   Elo  1745.74
+ 2. Atlanta Falcons              11-5   Elo  1695.91
+ 3. Kansas City Chiefs           12-4   Elo  1640.36
+ 4. Pittsburgh Steelers          11-5   Elo  1623.51
+ 5. Dallas Cowboys               13-3   Elo  1607.80
+ 6. Green Bay Packers            10-6   Elo  1601.61
+ 7. Seattle Seahawks           10-5-1   Elo  1586.45
+ 8. Denver Broncos                9-7   Elo  1560.27
+ 9. Arizona Cardinals           7-8-1   Elo  1549.22
+10. New York Giants              11-5   Elo  1535.64
+11. Oakland Raiders              12-4   Elo  1533.37
+12. Indianapolis Colts            8-8   Elo  1525.07
+13. Philadelphia Eagles           7-9   Elo  1517.83
+14. Cincinnati Bengals          6-9-1   Elo  1511.13
+15. Tampa Bay Buccaneers          9-7   Elo  1506.77
+16. Washington Redskins         8-7-1   Elo  1505.33
+17. Carolina Panthers            6-10   Elo  1500.38
+18. Baltimore Ravens              8-8   Elo  1498.78
+19. Minnesota Vikings             8-8   Elo  1494.60
+20. Houston Texans                9-7   Elo  1491.90
+21. New Orleans Saints            7-9   Elo  1488.94
+22. Miami Dolphins               10-6   Elo  1485.38
+23. Detroit Lions                 9-7   Elo  1483.90
+24. Buffalo Bills                 7-9   Elo  1474.11
+25. Tennessee Titans              9-7   Elo  1461.62
+26. San Diego Chargers           5-11   Elo  1424.75
+27. New York Jets                5-11   Elo  1387.90
+28. Jacksonville Jaguars         3-13   Elo  1359.68
+29. Chicago Bears                3-13   Elo  1329.92
+30. Los Angeles Rams             4-12   Elo  1319.16
+31. San Francisco 49ers          2-14   Elo  1288.21
+32. Cleveland Browns             1-15   Elo  1266.30
+
+2017 (32 teams)
+----------------------------------------
+ 1. New England Patriots         13-3   Elo  1716.45
+ 2. Philadelphia Eagles          13-3   Elo  1712.37
+ 3. New Orleans Saints           11-5   Elo  1641.02
+ 4. Pittsburgh Steelers          13-3   Elo  1634.74
+ 5. Atlanta Falcons              10-6   Elo  1629.50
+ 6. Minnesota Vikings            13-3   Elo  1627.63
+ 7. Jacksonville Jaguars         10-6   Elo  1599.19
+ 8. Kansas City Chiefs           10-6   Elo  1594.71
+ 9. Los Angeles Rams             11-5   Elo  1587.26
+10. Baltimore Ravens              9-7   Elo  1579.40
+11. Los Angeles Chargers          9-7   Elo  1573.98
+12. Carolina Panthers            11-5   Elo  1550.62
+13. Dallas Cowboys                9-7   Elo  1544.44
+14. Seattle Seahawks              9-7   Elo  1542.39
+15. Detroit Lions                 9-7   Elo  1538.47
+16. Tennessee Titans              9-7   Elo  1493.94
+17. Buffalo Bills                 9-7   Elo  1464.63
+18. Arizona Cardinals             8-8   Elo  1447.91
+19. Cincinnati Bengals            7-9   Elo  1444.20
+20. Washington Redskins           7-9   Elo  1442.81
+21. San Francisco 49ers          6-10   Elo  1440.44
+22. Tampa Bay Buccaneers         5-11   Elo  1433.92
+23. Oakland Raiders              6-10   Elo  1424.50
+24. Green Bay Packers             7-9   Elo  1423.62
+25. Chicago Bears                5-11   Elo  1419.33
+26. Denver Broncos               5-11   Elo  1401.88
+27. New York Jets                5-11   Elo  1396.21
+28. Miami Dolphins               6-10   Elo  1391.18
+29. Houston Texans               4-12   Elo  1368.35
+30. Indianapolis Colts           4-12   Elo  1348.82
+31. New York Giants              3-13   Elo  1333.79
+32. Cleveland Browns             0-16   Elo  1249.67
+
+2018 (32 teams)
+----------------------------------------
+ 1. New Orleans Saints           13-3   Elo  1674.59
+ 2. Los Angeles Rams             13-3   Elo  1671.08
+ 3. New England Patriots         11-5   Elo  1656.13
+ 4. Kansas City Chiefs           12-4   Elo  1652.12
+ 5. Chicago Bears                12-4   Elo  1640.34
+ 6. Los Angeles Chargers         12-4   Elo  1617.52
+ 7. Indianapolis Colts           10-6   Elo  1610.70
+ 8. Baltimore Ravens             10-6   Elo  1603.74
+ 9. Pittsburgh Steelers         9-6-1   Elo  1603.11
+10. Philadelphia Eagles           9-7   Elo  1595.59
+11. Seattle Seahawks             10-6   Elo  1589.20
+12. Dallas Cowboys               10-6   Elo  1548.04
+13. Minnesota Vikings           8-7-1   Elo  1540.70
+14. Houston Texans               11-5   Elo  1539.27
+15. Atlanta Falcons               7-9   Elo  1515.58
+16. Tennessee Titans              9-7   Elo  1512.58
+17. Carolina Panthers             7-9   Elo  1501.47
+18. Detroit Lions                6-10   Elo  1476.55
+19. Cleveland Browns            7-8-1   Elo  1456.37
+20. Denver Broncos               6-10   Elo  1446.89
+21. Buffalo Bills                6-10   Elo  1421.07
+22. Green Bay Packers           6-9-1   Elo  1418.91
+23. Jacksonville Jaguars         5-11   Elo  1417.95
+24. Tampa Bay Buccaneers         5-11   Elo  1409.08
+25. New York Giants              5-11   Elo  1408.87
+26. Cincinnati Bengals           6-10   Elo  1389.20
+27. Washington Redskins           7-9   Elo  1388.45
+28. San Francisco 49ers          4-12   Elo  1370.71
+29. Miami Dolphins                7-9   Elo  1361.28
+30. New York Jets                4-12   Elo  1336.24
+31. Oakland Raiders              4-12   Elo  1328.42
+32. Arizona Cardinals            3-13   Elo  1299.13
+
+2019 (32 teams)
+----------------------------------------
+ 1. Kansas City Chiefs           12-4   Elo  1719.79
+ 2. Baltimore Ravens             14-2   Elo  1718.36
+ 3. San Francisco 49ers          13-3   Elo  1716.23
+ 4. New Orleans Saints           13-3   Elo  1653.68
+ 5. Tennessee Titans              9-7   Elo  1642.01
+ 6. New England Patriots         12-4   Elo  1634.28
+ 7. Green Bay Packers            13-3   Elo  1607.39
+ 8. Minnesota Vikings            10-6   Elo  1597.51
+ 9. Dallas Cowboys                8-8   Elo  1561.20
+10. Los Angeles Rams              9-7   Elo  1556.35
+11. Seattle Seahawks             11-5   Elo  1549.48
+12. Buffalo Bills                10-6   Elo  1532.00
+13. Philadelphia Eagles           9-7   Elo  1525.93
+14. Houston Texans               10-6   Elo  1524.46
+15. Chicago Bears                 8-8   Elo  1512.38
+16. Atlanta Falcons               7-9   Elo  1507.99
+17. Pittsburgh Steelers           8-8   Elo  1503.68
+18. Tampa Bay Buccaneers          7-9   Elo  1499.23
+19. Denver Broncos                7-9   Elo  1480.24
+20. Indianapolis Colts            7-9   Elo  1474.13
+21. Los Angeles Chargers         5-11   Elo  1451.67
+22. New York Jets                 7-9   Elo  1434.69
+23. Cleveland Browns             6-10   Elo  1429.90
+24. Arizona Cardinals          5-10-1   Elo  1397.88
+25. Oakland Raiders               7-9   Elo  1388.56
+26. Jacksonville Jaguars         6-10   Elo  1377.62
+27. Detroit Lions              3-12-1   Elo  1363.46
+28. Carolina Panthers            5-11   Elo  1357.42
+29. New York Giants              4-12   Elo  1339.72
+30. Cincinnati Bengals           2-14   Elo  1326.62
+31. Miami Dolphins               5-11   Elo  1315.04
+32. Washington Redskins          3-13   Elo  1300.49
+
+2020 (32 teams)
+----------------------------------------
+ 1. Kansas City Chiefs           14-2   Elo  1716.86
+ 2. Buffalo Bills                13-3   Elo  1697.19
+ 3. Tampa Bay Buccaneers         11-5   Elo  1694.63
+ 4. Green Bay Packers            13-3   Elo  1675.32
+ 5. New Orleans Saints           12-4   Elo  1664.79
+ 6. Baltimore Ravens             11-5   Elo  1643.68
+ 7. Los Angeles Rams             10-6   Elo  1613.97
+ 8. Seattle Seahawks             12-4   Elo  1595.69
+ 9. Indianapolis Colts           11-5   Elo  1582.04
+10. Pittsburgh Steelers          12-4   Elo  1560.05
+11. Miami Dolphins               10-6   Elo  1556.16
+12. Tennessee Titans             11-5   Elo  1546.49
+13. Cleveland Browns             11-5   Elo  1543.80
+14. Arizona Cardinals             8-8   Elo  1508.95
+15. San Francisco 49ers          6-10   Elo  1491.80
+16. Chicago Bears                 8-8   Elo  1487.70
+17. New England Patriots          7-9   Elo  1487.67
+18. Atlanta Falcons              4-12   Elo  1469.31
+19. Minnesota Vikings             7-9   Elo  1466.66
+20. Washington Football Team      7-9   Elo  1464.11
+21. Las Vegas Raiders             8-8   Elo  1448.54
+22. Los Angeles Chargers          7-9   Elo  1446.91
+23. Dallas Cowboys               6-10   Elo  1416.29
+24. Carolina Panthers            5-11   Elo  1403.97
+25. New York Giants              6-10   Elo  1397.02
+26. Houston Texans               4-12   Elo  1390.50
+27. Denver Broncos               5-11   Elo  1388.14
+28. Philadelphia Eagles        4-11-1   Elo  1382.11
+29. Cincinnati Bengals         4-11-1   Elo  1358.65
+30. Detroit Lions                5-11   Elo  1334.60
+31. New York Jets                2-14   Elo  1294.90
+32. Jacksonville Jaguars         1-15   Elo  1266.46
+
+2021 (32 teams)
+----------------------------------------
+ 1. Buffalo Bills                11-6   Elo  1691.86
+ 2. Kansas City Chiefs           12-5   Elo  1667.30
+ 3. Tampa Bay Buccaneers         13-4   Elo  1642.86
+ 4. Los Angeles Rams             12-5   Elo  1642.17
+ 5. Dallas Cowboys               12-5   Elo  1627.54
+ 6. Green Bay Packers            13-4   Elo  1613.75
+ 7. Cincinnati Bengals           10-7   Elo  1598.30
+ 8. San Francisco 49ers          10-7   Elo  1588.69
+ 9. Indianapolis Colts            9-8   Elo  1586.25
+10. Tennessee Titans             12-5   Elo  1574.49
+11. New England Patriots         10-7   Elo  1574.22
+12. New Orleans Saints            9-8   Elo  1545.02
+13. Seattle Seahawks             7-10   Elo  1535.80
+14. Arizona Cardinals            11-6   Elo  1533.05
+15. Los Angeles Chargers          9-8   Elo  1517.76
+16. Miami Dolphins                9-8   Elo  1515.73
+17. Minnesota Vikings             8-9   Elo  1505.17
+18. Philadelphia Eagles           9-8   Elo  1499.51
+19. Cleveland Browns              8-9   Elo  1494.33
+20. Baltimore Ravens              8-9   Elo  1492.47
+21. Pittsburgh Steelers         9-7-1   Elo  1482.58
+22. Las Vegas Raiders            10-7   Elo  1448.70
+23. Washington Football Team     7-10   Elo  1445.07
+24. Denver Broncos               7-10   Elo  1430.67
+25. Chicago Bears                6-11   Elo  1408.93
+26. Atlanta Falcons              7-10   Elo  1386.32
+27. Carolina Panthers            5-12   Elo  1378.74
+28. Houston Texans               4-13   Elo  1351.47
+29. Detroit Lions              3-13-1   Elo  1326.89
+30. New York Giants              4-13   Elo  1321.50
+31. New York Jets                4-13   Elo  1292.14
+32. Jacksonville Jaguars         3-14   Elo  1275.79
+
+2022 (32 teams)
+----------------------------------------
+ 1. Kansas City Chiefs           14-3   Elo  1710.47
+ 2. Philadelphia Eagles          14-3   Elo  1696.39
+ 3. Cincinnati Bengals           12-4   Elo  1687.52
+ 4. San Francisco 49ers          13-4   Elo  1669.27
+ 5. Buffalo Bills                13-3   Elo  1668.75
+ 6. Dallas Cowboys               12-5   Elo  1647.27
+ 7. Jacksonville Jaguars          9-8   Elo  1539.73
+ 8. Baltimore Ravens             10-7   Elo  1535.13
+ 9. New England Patriots          8-9   Elo  1520.70
+10. Pittsburgh Steelers           9-8   Elo  1516.88
+11. Detroit Lions                 9-8   Elo  1516.50
+12. Green Bay Packers             8-9   Elo  1513.17
+13. Seattle Seahawks              9-8   Elo  1509.07
+14. Los Angeles Chargers         10-7   Elo  1506.41
+15. Minnesota Vikings            13-4   Elo  1499.41
+16. Miami Dolphins                9-8   Elo  1488.97
+17. Washington Commanders       8-8-1   Elo  1484.55
+18. New Orleans Saints           7-10   Elo  1482.42
+19. Cleveland Browns             7-10   Elo  1476.46
+20. New York Giants             9-7-1   Elo  1473.47
+21. Carolina Panthers            7-10   Elo  1464.41
+22. Tampa Bay Buccaneers          8-9   Elo  1458.88
+23. Tennessee Titans             7-10   Elo  1451.25
+24. Las Vegas Raiders            6-11   Elo  1447.45
+25. Atlanta Falcons              7-10   Elo  1444.43
+26. New York Jets                7-10   Elo  1427.91
+27. Los Angeles Rams             5-12   Elo  1404.68
+28. Denver Broncos               5-12   Elo  1382.84
+29. Arizona Cardinals            4-13   Elo  1366.40
+30. Indianapolis Colts         4-12-1   Elo  1358.23
+31. Houston Texans             3-13-1   Elo  1325.16
+32. Chicago Bears                3-14   Elo  1324.38
+
+2023 (32 teams)
+----------------------------------------
+ 1. San Francisco 49ers          12-5   Elo  1721.40
+ 2. Baltimore Ravens             13-4   Elo  1710.21
+ 3. Buffalo Bills                11-6   Elo  1668.53
+ 4. Kansas City Chiefs           11-6   Elo  1659.14
+ 5. Dallas Cowboys               12-5   Elo  1617.12
+ 6. Detroit Lions                12-5   Elo  1608.20
+ 7. Green Bay Packers             9-8   Elo  1576.48
+ 8. Miami Dolphins               11-6   Elo  1555.07
+ 9. New Orleans Saints            9-8   Elo  1545.43
+10. Tampa Bay Buccaneers          9-8   Elo  1544.16
+11. Los Angeles Rams             10-7   Elo  1540.25
+12. Cincinnati Bengals            9-8   Elo  1530.37
+13. Houston Texans               10-7   Elo  1520.26
+14. Philadelphia Eagles          11-6   Elo  1517.24
+15. Pittsburgh Steelers          10-7   Elo  1511.15
+16. Las Vegas Raiders             8-9   Elo  1504.44
+17. Jacksonville Jaguars          9-8   Elo  1488.44
+18. Seattle Seahawks              9-8   Elo  1483.99
+19. Cleveland Browns             11-6   Elo  1482.25
+20. Denver Broncos                8-9   Elo  1466.75
+21. Minnesota Vikings            7-10   Elo  1465.59
+22. Chicago Bears                7-10   Elo  1465.09
+23. Indianapolis Colts            9-8   Elo  1453.53
+24. New York Jets                7-10   Elo  1426.26
+25. Atlanta Falcons              7-10   Elo  1418.31
+26. New York Giants              6-11   Elo  1408.78
+27. Tennessee Titans             6-11   Elo  1406.35
+28. Los Angeles Chargers         5-12   Elo  1402.93
+29. Arizona Cardinals            4-13   Elo  1355.44
+30. New England Patriots         4-13   Elo  1339.77
+31. Washington Commanders        4-13   Elo  1314.66
+32. Carolina Panthers            2-15   Elo  1292.53
+
+2024 (32 teams)
+----------------------------------------
+ 1. Philadelphia Eagles          14-3   Elo  1744.01
+ 2. Baltimore Ravens             12-5   Elo  1700.31
+ 3. Detroit Lions                15-2   Elo  1699.19
+ 4. Buffalo Bills                13-4   Elo  1697.40
+ 5. Kansas City Chiefs           15-2   Elo  1665.94
+ 6. Green Bay Packers            11-6   Elo  1610.38
+ 7. Denver Broncos               10-7   Elo  1598.38
+ 8. Minnesota Vikings            14-3   Elo  1595.37
+ 9. Washington Commanders        12-5   Elo  1585.87
+10. Tampa Bay Buccaneers         10-7   Elo  1583.12
+11. Los Angeles Chargers         11-6   Elo  1546.12
+12. Los Angeles Rams             10-7   Elo  1544.15
+13. Houston Texans               10-7   Elo  1543.74
+14. Cincinnati Bengals            9-8   Elo  1538.47
+15. Seattle Seahawks             10-7   Elo  1532.75
+16. Pittsburgh Steelers          10-7   Elo  1528.72
+17. Arizona Cardinals             8-9   Elo  1476.23
+18. Miami Dolphins                8-9   Elo  1476.18
+19. San Francisco 49ers          6-11   Elo  1456.06
+20. Indianapolis Colts            8-9   Elo  1444.70
+21. Atlanta Falcons               8-9   Elo  1439.03
+22. New York Jets                5-12   Elo  1426.75
+23. Dallas Cowboys               7-10   Elo  1420.67
+24. Chicago Bears                5-12   Elo  1398.32
+25. New Orleans Saints           5-12   Elo  1390.28
+26. Jacksonville Jaguars         4-13   Elo  1388.73
+27. Las Vegas Raiders            4-13   Elo  1354.59
+28. New England Patriots         4-13   Elo  1339.61
+29. Cleveland Browns             3-14   Elo  1327.81
+30. Tennessee Titans             3-14   Elo  1326.69
+31. New York Giants              3-14   Elo  1312.90
+32. Carolina Panthers            5-12   Elo  1310.56
+
+2025 (32 teams)
+----------------------------------------
+ 1. Seattle Seahawks             14-3   Elo  1747.02
+ 2. Los Angeles Rams             12-5   Elo  1677.08
+ 3. New England Patriots         14-3   Elo  1675.05
+ 4. Houston Texans               12-5   Elo  1656.55
+ 5. Buffalo Bills                12-5   Elo  1646.16
+ 6. Denver Broncos               14-3   Elo  1635.89
+ 7. Jacksonville Jaguars         13-4   Elo  1610.04
+ 8. San Francisco 49ers          12-5   Elo  1583.16
+ 9. Philadelphia Eagles          11-6   Elo  1571.99
+10. Detroit Lions                 9-8   Elo  1568.02
+11. Minnesota Vikings             9-8   Elo  1553.72
+12. Chicago Bears                11-6   Elo  1539.22
+13. Green Bay Packers           9-7-1   Elo  1538.94
+14. Baltimore Ravens              8-9   Elo  1534.76
+15. Los Angeles Chargers         11-6   Elo  1532.88
+16. Pittsburgh Steelers          10-7   Elo  1495.15
+17. Kansas City Chiefs           6-11   Elo  1490.82
+18. Indianapolis Colts            8-9   Elo  1487.45
+19. Tampa Bay Buccaneers          8-9   Elo  1480.60
+20. Atlanta Falcons               8-9   Elo  1458.80
+21. Dallas Cowboys              7-9-1   Elo  1438.84
+22. Cincinnati Bengals           6-11   Elo  1437.26
+23. Miami Dolphins               7-10   Elo  1415.58
+24. Washington Commanders        5-12   Elo  1410.26
+25. New Orleans Saints           6-11   Elo  1407.16
+26. Carolina Panthers             8-9   Elo  1404.47
+27. New York Giants              4-13   Elo  1403.85
+28. Cleveland Browns             5-12   Elo  1387.40
+29. Arizona Cardinals            3-14   Elo  1350.85
+30. Tennessee Titans             3-14   Elo  1299.24
+31. New York Jets                3-14   Elo  1282.80
+32. Las Vegas Raiders            3-14   Elo  1280.14

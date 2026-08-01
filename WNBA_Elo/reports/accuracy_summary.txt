@@ -1,0 +1,49 @@
+WNBA Echo Ratings - Model Accuracy Report
+=============================================
+
+All games             n=6671   accuracy=0.656   brier=0.2168   log_loss=0.6226
+Regular season        n=6199   accuracy=0.653   brier=0.2176   log_loss=0.6242
+Playoffs              n= 472   accuracy=0.695   brier=0.2068   log_loss=0.6007
+
+By season:
+  1997                  n= 115   accuracy=0.600   brier=0.2217   log_loss=0.6360
+  1998                  n= 158   accuracy=0.759   brier=0.1815   log_loss=0.5441
+  1999                  n= 203   accuracy=0.631   brier=0.2293   log_loss=0.6502
+  2000                  n= 272   accuracy=0.691   brier=0.1965   log_loss=0.5755
+  2001                  n= 274   accuracy=0.668   brier=0.2132   log_loss=0.6104
+  2002                  n= 273   accuracy=0.645   brier=0.2234   log_loss=0.6367
+  2003                  n= 257   accuracy=0.685   brier=0.2224   log_loss=0.6388
+  2004                  n= 240   accuracy=0.608   brier=0.2398   log_loss=0.6738
+  2005                  n= 238   accuracy=0.676   brier=0.2074   log_loss=0.6011
+  2006                  n= 257   accuracy=0.685   brier=0.2092   log_loss=0.6064
+  2007                  n= 242   accuracy=0.616   brier=0.2390   log_loss=0.6737
+  2008                  n= 259   accuracy=0.641   brier=0.2186   log_loss=0.6297
+  2009                  n= 242   accuracy=0.628   brier=0.2310   log_loss=0.6557
+  2010                  n= 220   accuracy=0.650   brier=0.2228   log_loss=0.6352
+  2011                  n= 223   accuracy=0.677   brier=0.1990   log_loss=0.5817
+  2012                  n= 223   accuracy=0.709   brier=0.1965   log_loss=0.5774
+  2013                  n= 221   accuracy=0.624   brier=0.2287   log_loss=0.6511
+  2014                  n= 222   accuracy=0.599   brier=0.2254   log_loss=0.6374
+  2015                  n= 225   accuracy=0.658   brier=0.2271   log_loss=0.6448
+  2016                  n= 220   accuracy=0.627   brier=0.2236   log_loss=0.6352
+  2017                  n= 219   accuracy=0.694   brier=0.2029   log_loss=0.5907
+  2018                  n= 221   accuracy=0.624   brier=0.2276   log_loss=0.6491
+  2019                  n= 220   accuracy=0.668   brier=0.2113   log_loss=0.6100
+  2020                  n= 147   accuracy=0.701   brier=0.2054   log_loss=0.5997
+  2021                  n= 209   accuracy=0.660   brier=0.2195   log_loss=0.6272
+  2022                  n= 239   accuracy=0.640   brier=0.2188   log_loss=0.6272
+  2023                  n= 260   accuracy=0.638   brier=0.2133   log_loss=0.6156
+  2024                  n= 262   accuracy=0.676   brier=0.2090   log_loss=0.6059
+  2025                  n= 310   accuracy=0.661   brier=0.2147   log_loss=0.6179
+
+Worst 10 predictions (highest log loss - biggest confident misses):
+  2024-09-19  MIN 51-68 LAS  (favored: MIN @ 94.0%, winner: LAS, log_loss=2.818)
+  2006-08-13  IND 73-80 CHI  (favored: IND @ 92.5%, winner: CHI, log_loss=2.594)
+  2018-07-03  MIN 59-71 IND  (favored: MIN @ 92.1%, winner: IND, log_loss=2.535)
+  2025-08-21  NYL 85-91 CHI  (favored: NYL @ 91.1%, winner: CHI, log_loss=2.423)
+  2008-09-11  LAS 72-83 ATL  (favored: LAS @ 91.1%, winner: ATL, log_loss=2.418)
+  2024-09-19  NYL 67-78 ATL  (favored: NYL @ 91.0%, winner: ATL, log_loss=2.409)
+  2023-08-19  UTA 72-78 LAS  (favored: UTA @ 90.6%, winner: LAS, log_loss=2.361)
+  2018-07-20  LAS 76-78 IND  (favored: LAS @ 90.3%, winner: IND, log_loss=2.336)
+  2003-07-30  LAS 62-70 UTA  (favored: LAS @ 90.1%, winner: UTA, log_loss=2.317)
+  2013-08-08  MIN 75-79 WAS  (favored: MIN @ 89.8%, winner: WAS, log_loss=2.284)

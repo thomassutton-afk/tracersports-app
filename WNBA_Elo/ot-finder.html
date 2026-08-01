@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OT game finder</title>
+<style>
+  :root{
+    --bg:#f6f5f1; --card:#ffffff; --ink:#1f1e1c; --sub:#6b6a66;
+    --line:#e2e0d9; --accent:#0f6e56; --accent-bg:#e1f5ee; --accent-ink:#085041;
+    --danger:#993c1d;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    padding:32px 16px 80px;
+  }
+  .wrap{max-width:900px; margin:0 auto;}
+  h1{font-size:22px; font-weight:600; margin:0 0 4px;}
+  .lede{color:var(--sub); font-size:14px; margin:0 0 24px; line-height:1.5;}
+  .toolbar{display:flex; gap:8px; align-items:center; margin-bottom:16px; flex-wrap:wrap;}
+  button{
+    font:inherit; font-size:13px; cursor:pointer; border-radius:8px;
+    border:1px solid var(--line); background:#fff; color:var(--ink);
+    padding:8px 14px; transition:background .12s;
+  }
+  button:hover{background:#f1f0eb;}
+  button.primary{background:var(--accent); color:#fff; border-color:var(--accent); font-weight:600;}
+  button.primary:hover{background:#0c5c48;}
+  button.ghost{border:none; background:none; color:var(--sub); padding:4px 8px;}
+  button.ghost:hover{color:var(--danger); background:none;}
+  #slots{display:flex; flex-direction:column; gap:10px;}
+  .slot{
+    background:var(--card); border:1px solid var(--line); border-radius:10px;
+    padding:12px 14px;
+  }
+  .slot-head{display:flex; align-items:center; gap:8px; margin-bottom:8px;}
+  .slot-head span{font-size:12px; color:var(--sub); min-width:16px;}
+  .slot-head input{
+    flex:1; font:inherit; font-size:13px; padding:6px 8px; border:1px solid var(--line);
+    border-radius:6px; background:#fdfdfb;
+  }
+  .slot textarea{
+    width:100%; min-height:64px; resize:vertical; font-family:ui-monospace,SFMono-Regular,Consolas,monospace;
+    font-size:11px; padding:8px; border:1px solid var(--line); border-radius:6px;
+    background:#fdfdfb; color:var(--ink);
+  }
+  .status{font-size:12px; color:var(--sub); margin-top:16px; min-height:16px;}
+  .status.err{color:var(--danger);}
+  #report{margin-top:28px;}
+  #report h2{font-size:16px; font-weight:600; margin:0 0 4px;}
+  #report .count{font-size:13px; color:var(--sub); margin:0 0 14px;}
+  table{width:100%; border-collapse:collapse; font-size:13px;}
+  th{
+    text-align:left; font-weight:600; color:var(--sub); font-size:11px;
+    text-transform:uppercase; letter-spacing:.03em; padding:6px 10px; border-bottom:1px solid var(--line);
+  }
+  td{padding:9px 10px; border-bottom:1px solid var(--line);}
+  tr:last-child td{border-bottom:none;}
+  .tag{
+    display:inline-block; background:var(--accent-bg); color:var(--accent-ink);
+    font-weight:600; font-size:11px; padding:2px 8px; border-radius:20px;
+  }
+  .empty{color:var(--sub); font-size:13px; padding:20px 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>OT game finder</h1>
+  <p class="lede">Paste a team's Sports Reference game log CSV into each slot (label the team name for clean matching). Click "Find OT games" to get a chronological list of every game that went to overtime.</p>
+
+  <div class="toolbar">
+    <button class="primary" onclick="runReport()">Find OT games</button>
+    <button onclick="addSlot()">+ Add slot</button>
+    <button onclick="clearAll()">Clear all</button>
+  </div>
+
+  <div id="slots"></div>
+  <div class="status" id="status"></div>
+  <div id="report"></div>
+</div>
+
+<script>
+let slotCount = 0;
+
+function addSlot(prefill){
+  slotCount++;
+  const id = slotCount;
+  const div = document.createElement('div');
+  div.className = 'slot';
+  div.id = 'slot-' + id;
+  div.innerHTML =
+    '<div class="slot-head">' +
+      '<span>' + id + '.</span>' +
+      '<input type="text" placeholder="Team name (e.g. Los Angeles Sparks)" id="name-' + id + '">' +
+      '<button class="ghost" onclick="removeSlot(' + id + ')" title="Remove slot">&times;</button>' +
+    '</div>' +
+    '<textarea placeholder="Paste this team&#39;s CSV game log here..." id="csv-' + id + '"></textarea>';
+  document.getElementById('slots').appendChild(div);
+}
+
+function removeSlot(id){
+  const el = document.getElementById('slot-' + id);
+  if(el) el.remove();
+}
+
+function clearAll(){
+  document.getElementById('slots').innerHTML = '';
+  document.getElementById('report').innerHTML = '';
+  document.getElementById('status').textContent = '';
+  slotCount = 0;
+  for(let i=0;i<16;i++) addSlot();
+}
+
+// initial slots
+for(let i=0;i<16;i++) addSlot();
+
+function parseDate(str){
+  // e.g. "Sat May 25 2002"
+  const d = new Date(str.replace(/^[A-Za-z]{3}\s/, ''));
+  return isNaN(d) ? null : d;
+}
+
+function parseCSV(text){
+  const lines = text.split('\n').map(l => l.trim()).filter(l => l.length);
+  const rows = [];
+  for(const line of lines){
+    if(/^G,Date/i.test(line)) continue; // header
+    if(!/^\d+,/.test(line)) continue; // not a game row
+    const parts = line.split(',');
+    if(parts.length < 10) continue;
+    const date = parts[1];
+    const homeAway = parts[2];
+    const opponent = parts[3];
+    const otMarker = parts[5].trim();
+    rows.push({ date, opponent: opponent.trim(), ot: otMarker });
+  }
+  return rows;
+}
+
+function runReport(){
+  const statusEl = document.getElementById('status');
+  const reportEl = document.getElementById('report');
+  statusEl.className = 'status';
+  statusEl.textContent = '';
+
+  const slotEls = Array.from(document.querySelectorAll('.slot'));
+  const games = []; // {date, dateObj, teamA, teamB, ot}
+  let filled = 0;
+
+  slotEls.forEach(slotEl => {
+    const id = slotEl.id.split('-')[1];
+    const nameInput = document.getElementById('name-' + id);
+    const csvInput = document.getElementById('csv-' + id);
+    const teamName = (nameInput.value || '').trim() || ('Team ' + id);
+    const csvText = csvInput.value || '';
+    if(!csvText.trim()) return;
+    filled++;
+    const rows = parseCSV(csvText);
+    rows.forEach(r => {
+      if(!r.ot) return;
+      const dateObj = parseDate(r.date);
+      games.push({
+        date: r.date,
+        dateObj,
+        teamA: teamName,
+        teamB: r.opponent,
+        ot: r.ot
+      });
+    });
+  });
+
+  if(filled === 0){
+    statusEl.className = 'status err';
+    statusEl.textContent = 'Paste at least one team\'s CSV into a slot first.';
+    reportEl.innerHTML = '';
+    return;
+  }
+
+  // Dedupe: same date + same unordered pair of team names (case-insensitive)
+  const seen = new Map();
+  const deduped = [];
+  games.forEach(g => {
+    const key = [g.date, [g.teamA.toLowerCase(), g.teamB.toLowerCase()].sort().join('|')].join('::');
+    if(seen.has(key)) return;
+    seen.set(key, true);
+    deduped.push(g);
+  });
+
+  deduped.sort((a,b) => {
+    if(a.dateObj && b.dateObj) return a.dateObj - b.dateObj;
+    return a.date.localeCompare(b.date);
+  });
+
+  statusEl.textContent = filled + ' slot' + (filled === 1 ? '' : 's') + ' parsed \u2014 ' + games.length + ' OT rows found, ' + deduped.length + ' unique game' + (deduped.length === 1 ? '' : 's') + ' after de-duplication.';
+
+  if(deduped.length === 0){
+    reportEl.innerHTML = '<div class="empty">No overtime games found in the pasted logs.</div>';
+    return;
+  }
+
+  let rowsHtml = deduped.map(g =>
+    '<tr><td>' + g.date + '</td><td>' + g.teamA + ' vs ' + g.teamB + '</td><td><span class="tag">' + g.ot + '</span></td></tr>'
+  ).join('');
+
+  reportEl.innerHTML =
+    '<h2>Overtime games</h2>' +
+    '<p class="count">' + deduped.length + ' game' + (deduped.length === 1 ? '' : 's') + ', chronological</p>' +
+    '<table><thead><tr><th>Date</th><th>Matchup</th><th>OT</th></tr></thead><tbody>' + rowsHtml + '</tbody></table>';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,499 @@
+NBA Prediction Model by Week:
+
+Opening Night: October 21, 2025
+
+  Oklahoma City Thunder    proj 68.6 W  (10th-90th: 56-81)  P(1st) 37.2%
+  Cleveland Cavaliers      proj 65.2 W  (10th-90th: 52-78)  P(1st) 24.1%
+  New York Knicks          proj 60.8 W  (10th-90th: 45-75)  P(1st) 14.3%
+  Minnesota Timberwolves   proj 59.1 W  (10th-90th: 46-72)  P(1st) 8.2%
+  Boston Celtics           proj 58.7 W  (10th-90th: 47-70)  P(1st) 5.7%
+  Indiana Pacers           proj 52.7 W  (10th-90th: 42-64)  P(1st) 0.8%
+  Denver Nuggets           proj 51.1 W  (10th-90th: 38-64)  P(1st) 1.1%
+  Detroit Pistons          proj 49.6 W  (10th-90th: 35-64)  P(1st) 1.6%
+  Los Angeles Clippers     proj 49.3 W  (10th-90th: 36-61)  P(1st) 0.7%
+  Los Angeles Lakers       proj 49.2 W  (10th-90th: 36-62)  P(1st) 1.6%
+  Houston Rockets          proj 49.0 W  (10th-90th: 36-62)  P(1st) 0.7%
+  Golden State Warriors    proj 47.6 W  (10th-90th: 35-60)  P(1st) 0.7%
+  Milwaukee Bucks          proj 46.1 W  (10th-90th: 34-58)  P(1st) 0.3%
+  Orlando Magic            proj 45.6 W  (10th-90th: 31-60)  P(1st) 0.8%
+  San Antonio Spurs        proj 43.0 W  (10th-90th: 28-60)  P(1st) 1.3%
+  Memphis Grizzlies        proj 42.4 W  (10th-90th: 30-54)  P(1st) 0.2%
+  Portland Trail Blazers   proj 42.2 W  (10th-90th: 29-57)  P(1st) 0.1%
+  Chicago Bulls            proj 40.7 W  (10th-90th: 28-53)  P(1st) 0.2%
+  Miami Heat               proj 40.3 W  (10th-90th: 28-53)  P(1st) 0.0%
+  Atlanta Hawks            proj 40.2 W  (10th-90th: 27-54)  P(1st) 0.3%
+  Sacramento Kings         proj 39.2 W  (10th-90th: 27-52)  P(1st) 0.0%
+  Phoenix Suns             proj 38.9 W  (10th-90th: 26-52)  P(1st) 0.1%
+  Dallas Mavericks         proj 38.7 W  (10th-90th: 27-51)  P(1st) 0.0%
+  Toronto Raptors          proj 36.1 W  (10th-90th: 24-49)  P(1st) 0.0%
+  Philadelphia 76ers       proj 31.8 W  (10th-90th: 20-45)  P(1st) 0.0%
+  Brooklyn Nets            proj 29.0 W  (10th-90th: 18-41)  P(1st) 0.0%
+  New Orleans Pelicans     proj 28.9 W  (10th-90th: 18-40)  P(1st) 0.0%
+  Utah Jazz                proj 26.6 W  (10th-90th: 16-38)  P(1st) 0.0%
+  Charlotte Hornets        proj 26.3 W  (10th-90th: 16-38)  P(1st) 0.0%
+  Washington Wizards       proj 25.0 W  (10th-90th: 15-36)  P(1st) 0.0%
+
+Week 1: October 26, 2025
+
+  Oklahoma City Thunder    proj 71.5 W  (10th-90th: 60.0-82.0)  P(1st) 47.0%
+  Cleveland Cavaliers      proj 65.8 W  (10th-90th: 52.0-78.0)  P(1st) 21.5%
+  New York Knicks          proj 62.4 W  (10th-90th: 48.0-76.0)  P(1st) 12.9%
+  Minnesota Timberwolves   proj 59.0 W  (10th-90th: 45.0-72.0)  P(1st) 7.5%
+  Boston Celtics           proj 54.0 W  (10th-90th: 41.0-65.0)  P(1st) 2.2%
+  Detroit Pistons          proj 51.7 W  (10th-90th: 38.0-67.0)  P(1st) 1.6%
+  Denver Nuggets           proj 51.1 W  (10th-90th: 38.0-64.0)  P(1st) 0.8%
+  Los Angeles Lakers       proj 50.6 W  (10th-90th: 37.0-63.0)  P(1st) 1.8%
+  San Antonio Spurs        proj 49.5 W  (10th-90th: 34.0-65.0)  P(1st) 2.8%
+  Golden State Warriors    proj 48.9 W  (10th-90th: 37.0-61.0)  P(1st) 0.6%
+  Los Angeles Clippers     proj 48.4 W  (10th-90th: 36.0-60.0)  P(1st) 0.2%
+  Indiana Pacers           proj 47.8 W  (10th-90th: 36.0-59.0)  P(1st) 0.2%
+  Milwaukee Bucks          proj 47.0 W  (10th-90th: 35.0-58.0)  P(1st) 0.3%
+  Houston Rockets          proj 46.9 W  (10th-90th: 34.0-60.0)  P(1st) 0.1%
+  Miami Heat               proj 44.0 W  (10th-90th: 32.0-56.0)  P(1st) 0.0%
+  Chicago Bulls            proj 43.8 W  (10th-90th: 32.0-55.0)  P(1st) 0.2%
+  Orlando Magic            proj 42.7 W  (10th-90th: 29.0-56.0)  P(1st) 0.1%
+  Portland Trail Blazers   proj 42.3 W  (10th-90th: 30.0-55.0)  P(1st) 0.1%
+  Memphis Grizzlies        proj 42.0 W  (10th-90th: 30.0-54.0)  P(1st) 0.1%
+  Atlanta Hawks            proj 38.1 W  (10th-90th: 26.0-51.0)  P(1st) 0.0%
+  Phoenix Suns             proj 37.2 W  (10th-90th: 26.0-49.0)  P(1st) 0.0%
+  Sacramento Kings         proj 36.8 W  (10th-90th: 25.0-49.0)  P(1st) 0.0%
+  Toronto Raptors          proj 36.0 W  (10th-90th: 24.0-48.0)  P(1st) 0.0%
+  Philadelphia 76ers       proj 35.0 W  (10th-90th: 22.0-49.0)  P(1st) 0.0%
+  Dallas Mavericks         proj 33.9 W  (10th-90th: 23.0-46.0)  P(1st) 0.0%
+  Charlotte Hornets        proj 29.6 W  (10th-90th: 20.0-40.0)  P(1st) 0.0%
+  Utah Jazz                proj 28.5 W  (10th-90th: 18.0-39.0)  P(1st) 0.0%
+  New Orleans Pelicans     proj 27.2 W  (10th-90th: 17.0-38.0)  P(1st) 0.0%
+  Brooklyn Nets            proj 25.8 W  (10th-90th: 16.0-37.0)  P(1st) 0.0%
+  Washington Wizards       proj 24.7 W  (10th-90th: 16.0-35.0)  P(1st) 0.0%
+
+Week 2: November 2, 2025
+
+  Oklahoma City Thunder    proj 73.3 W  (10th-90th: 62.0-83.0)  P(1st) 59.6%
+  Cleveland Cavaliers      proj 64.1 W  (10th-90th: 51.0-76.0)  P(1st) 15.6%
+  New York Knicks          proj 60.3 W  (10th-90th: 47.0-73.0)  P(1st) 9.6%
+  Minnesota Timberwolves   proj 55.7 W  (10th-90th: 43.0-68.0)  P(1st) 4.1%
+  Boston Celtics           proj 54.6 W  (10th-90th: 43.0-65.0)  P(1st) 0.8%
+  Denver Nuggets           proj 52.8 W  (10th-90th: 41.0-64.0)  P(1st) 1.6%
+  Houston Rockets          proj 52.3 W  (10th-90th: 40.0-64.0)  P(1st) 1.3%
+  Detroit Pistons          proj 52.2 W  (10th-90th: 40.0-65.0)  P(1st) 2.2%
+  Los Angeles Lakers       proj 52.0 W  (10th-90th: 40.0-64.0)  P(1st) 1.1%
+  San Antonio Spurs        proj 49.8 W  (10th-90th: 35.0-65.0)  P(1st) 2.4%
+  Golden State Warriors    proj 48.7 W  (10th-90th: 37.0-60.0)  P(1st) 0.3%
+  Milwaukee Bucks          proj 48.0 W  (10th-90th: 36.0-59.0)  P(1st) 0.0%
+  Los Angeles Clippers     proj 47.5 W  (10th-90th: 36.0-59.0)  P(1st) 0.3%
+  Portland Trail Blazers   proj 47.0 W  (10th-90th: 35.0-59.0)  P(1st) 0.5%
+  Chicago Bulls            proj 45.9 W  (10th-90th: 35.0-58.0)  P(1st) 0.3%
+  Indiana Pacers           proj 45.0 W  (10th-90th: 34.0-55.0)  P(1st) 0.1%
+  Orlando Magic            proj 43.7 W  (10th-90th: 31.0-57.0)  P(1st) 0.0%
+  Miami Heat               proj 42.7 W  (10th-90th: 31.0-54.0)  P(1st) 0.0%
+  Atlanta Hawks            proj 41.6 W  (10th-90th: 29.0-53.0)  P(1st) 0.0%
+  Philadelphia 76ers       proj 40.4 W  (10th-90th: 29.0-53.0)  P(1st) 0.1%
+  Memphis Grizzlies        proj 39.2 W  (10th-90th: 28.0-50.0)  P(1st) 0.0%
+  Phoenix Suns             proj 37.7 W  (10th-90th: 27.0-49.0)  P(1st) 0.1%
+  Toronto Raptors          proj 37.2 W  (10th-90th: 26.0-49.0)  P(1st) 0.0%
+  Sacramento Kings         proj 36.8 W  (10th-90th: 26.0-48.0)  P(1st) 0.0%
+  Dallas Mavericks         proj 33.1 W  (10th-90th: 22.0-44.0)  P(1st) 0.0%
+  Charlotte Hornets        proj 27.7 W  (10th-90th: 18.0-38.0)  P(1st) 0.0%
+  Utah Jazz                proj 25.5 W  (10th-90th: 17.0-36.0)  P(1st) 0.0%
+  New Orleans Pelicans     proj 24.3 W  (10th-90th: 15.0-35.0)  P(1st) 0.0%
+  Brooklyn Nets            proj 21.5 W  (10th-90th: 13.0-31.0)  P(1st) 0.0%
+  Washington Wizards       proj 21.3 W  (10th-90th: 13.0-30.0)  P(1st) 0.0%
+
+Week 3: November 9, 2025
+
+  Oklahoma City Thunder    proj 74.8 W  (10th-90th: 66.0-83.0)  P(1st) 60.3%
+  Cleveland Cavaliers      proj 65.6 W  (10th-90th: 53.0-78.0)  P(1st) 16.6%
+  New York Knicks          proj 63.6 W  (10th-90th: 51.0-76.0)  P(1st) 10.7%
+  Denver Nuggets           proj 57.5 W  (10th-90th: 47.0-68.0)  P(1st) 1.9%
+  Minnesota Timberwolves   proj 57.3 W  (10th-90th: 46.0-68.0)  P(1st) 1.9%
+  Detroit Pistons          proj 57.0 W  (10th-90th: 44.0-69.0)  P(1st) 2.9%
+  Houston Rockets          proj 54.4 W  (10th-90th: 43.0-65.0)  P(1st) 1.1%
+  Boston Celtics           proj 52.8 W  (10th-90th: 42.0-63.0)  P(1st) 0.6%
+  Los Angeles Lakers       proj 52.4 W  (10th-90th: 41.0-64.0)  P(1st) 1.1%
+  San Antonio Spurs        proj 51.9 W  (10th-90th: 38.0-67.0)  P(1st) 2.8%
+  Golden State Warriors    proj 47.8 W  (10th-90th: 38.0-58.0)  P(1st) 0.0%
+  Milwaukee Bucks          proj 47.2 W  (10th-90th: 37.0-57.0)  P(1st) 0.0%
+  Miami Heat               proj 45.5 W  (10th-90th: 35.0-56.0)  P(1st) 0.0%
+  Portland Trail Blazers   proj 44.9 W  (10th-90th: 33.0-57.0)  P(1st) 0.0%
+  Chicago Bulls            proj 44.3 W  (10th-90th: 33.0-55.0)  P(1st) 0.0%
+  Atlanta Hawks            proj 42.7 W  (10th-90th: 32.0-55.0)  P(1st) 0.0%
+  Orlando Magic            proj 41.5 W  (10th-90th: 30.0-53.0)  P(1st) 0.0%
+  Toronto Raptors          proj 41.1 W  (10th-90th: 30.0-53.0)  P(1st) 0.0%
+  Phoenix Suns             proj 40.7 W  (10th-90th: 30.0-53.0)  P(1st) 0.0%
+  Los Angeles Clippers     proj 40.4 W  (10th-90th: 29.0-51.0)  P(1st) 0.0%
+  Philadelphia 76ers       proj 39.0 W  (10th-90th: 27.0-51.0)  P(1st) 0.1%
+  Indiana Pacers           proj 38.4 W  (10th-90th: 28.0-50.0)  P(1st) 0.0%
+  Memphis Grizzlies        proj 35.5 W  (10th-90th: 26.0-46.0)  P(1st) 0.0%
+  Sacramento Kings         proj 34.7 W  (10th-90th: 24.0-45.0)  P(1st) 0.0%
+  Dallas Mavericks         proj 31.5 W  (10th-90th: 21.0-42.0)  P(1st) 0.0%
+  New Orleans Pelicans     proj 26.3 W  (10th-90th: 17.0-37.0)  P(1st) 0.0%
+  Utah Jazz                proj 26.2 W  (10th-90th: 18.0-35.0)  P(1st) 0.0%
+  Charlotte Hornets        proj 26.1 W  (10th-90th: 17.0-36.0)  P(1st) 0.0%
+  Brooklyn Nets            proj 22.0 W  (10th-90th: 14.0-31.0)  P(1st) 0.0%
+  Washington Wizards       proj 18.9 W  (10th-90th: 11.0-27.0)  P(1st) 0.0%
+
+Week 4: November 16, 2025
+
+  Oklahoma City Thunder    proj 76.1 W  (10th-90th: 66.0-85.0)  P(1st) 70.2%
+  Cleveland Cavaliers      proj 63.8 W  (10th-90th: 51.0-75.0)  P(1st) 10.6%
+  New York Knicks          proj 61.1 W  (10th-90th: 48.0-73.0)  P(1st) 6.2%
+  Denver Nuggets           proj 60.8 W  (10th-90th: 50.0-70.0)  P(1st) 3.2%
+  Detroit Pistons          proj 59.1 W  (10th-90th: 47.0-71.0)  P(1st) 3.4%
+  Houston Rockets          proj 57.4 W  (10th-90th: 46.0-68.0)  P(1st) 1.4%
+  Minnesota Timberwolves   proj 56.2 W  (10th-90th: 45.0-67.0)  P(1st) 1.0%
+  Los Angeles Lakers       proj 55.4 W  (10th-90th: 44.0-66.0)  P(1st) 1.2%
+  Boston Celtics           proj 53.2 W  (10th-90th: 43.0-64.0)  P(1st) 0.2%
+  San Antonio Spurs        proj 52.3 W  (10th-90th: 39.0-66.0)  P(1st) 2.5%
+  Golden State Warriors    proj 50.7 W  (10th-90th: 41.0-60.0)  P(1st) 0.1%
+  Atlanta Hawks            proj 49.5 W  (10th-90th: 39.0-60.0)  P(1st) 0.0%
+  Toronto Raptors          proj 47.4 W  (10th-90th: 36.0-59.0)  P(1st) 0.0%
+  Orlando Magic            proj 45.3 W  (10th-90th: 35.0-57.0)  P(1st) 0.0%
+  Miami Heat               proj 44.5 W  (10th-90th: 34.0-55.0)  P(1st) 0.0%
+  Milwaukee Bucks          proj 44.2 W  (10th-90th: 34.0-54.0)  P(1st) 0.0%
+  Phoenix Suns             proj 43.2 W  (10th-90th: 32.0-54.0)  P(1st) 0.0%
+  Portland Trail Blazers   proj 43.0 W  (10th-90th: 33.0-54.0)  P(1st) 0.0%
+  Chicago Bulls            proj 40.8 W  (10th-90th: 31.0-50.0)  P(1st) 0.0%
+  Philadelphia 76ers       proj 39.6 W  (10th-90th: 29.0-50.0)  P(1st) 0.0%
+  Los Angeles Clippers     proj 37.9 W  (10th-90th: 28.0-48.0)  P(1st) 0.0%
+  Memphis Grizzlies        proj 34.2 W  (10th-90th: 25.0-44.0)  P(1st) 0.0%
+  Indiana Pacers           proj 31.8 W  (10th-90th: 23.0-41.0)  P(1st) 0.0%
+  Sacramento Kings         proj 30.0 W  (10th-90th: 21.0-39.0)  P(1st) 0.0%
+  Dallas Mavericks         proj 28.9 W  (10th-90th: 20.0-39.0)  P(1st) 0.0%
+  Utah Jazz                proj 27.8 W  (10th-90th: 19.0-37.0)  P(1st) 0.0%
+  Charlotte Hornets        proj 25.9 W  (10th-90th: 18.0-35.0)  P(1st) 0.0%
+  Brooklyn Nets            proj 22.9 W  (10th-90th: 15.0-32.0)  P(1st) 0.0%
+  New Orleans Pelicans     proj 22.7 W  (10th-90th: 15.0-32.0)  P(1st) 0.0%
+  Washington Wizards       proj 16.3 W  (10th-90th: 10.0-24.0)  P(1st) 0.0%
+
+Week 5: November 23, 2025
+
+  Oklahoma City Thunder    proj 77.5 W  (10th-90th: 69.0-85.0)  P(1st) 77.1%
+  Cleveland Cavaliers      proj 63.3 W  (10th-90th: 52.0-74.0)  P(1st) 6.7%
+  Detroit Pistons          proj 62.6 W  (10th-90th: 51.0-73.0)  P(1st) 6.2%
+  New York Knicks          proj 59.5 W  (10th-90th: 47.0-71.0)  P(1st) 3.7%
+  Denver Nuggets           proj 59.0 W  (10th-90th: 49.0-68.0)  P(1st) 1.9%
+  Minnesota Timberwolves   proj 57.0 W  (10th-90th: 46.0-67.0)  P(1st) 0.6%
+  Houston Rockets          proj 56.8 W  (10th-90th: 46.0-66.0)  P(1st) 0.6%
+  Los Angeles Lakers       proj 56.6 W  (10th-90th: 46.0-67.0)  P(1st) 1.4%
+  San Antonio Spurs        proj 53.1 W  (10th-90th: 41.0-66.0)  P(1st) 1.4%
+  Boston Celtics           proj 52.3 W  (10th-90th: 43.0-62.0)  P(1st) 0.2%
+  Miami Heat               proj 50.7 W  (10th-90th: 42.0-60.0)  P(1st) 0.0%
+  Toronto Raptors          proj 50.0 W  (10th-90th: 40.0-60.0)  P(1st) 0.1%
+  Orlando Magic            proj 48.8 W  (10th-90th: 39.0-59.0)  P(1st) 0.0%
+  Atlanta Hawks            proj 48.3 W  (10th-90th: 38.0-59.0)  P(1st) 0.0%
+  Phoenix Suns             proj 47.6 W  (10th-90th: 38.0-58.0)  P(1st) 0.1%
+  Golden State Warriors    proj 45.9 W  (10th-90th: 37.0-55.0)  P(1st) 0.0%
+  Chicago Bulls            proj 41.5 W  (10th-90th: 32.0-51.0)  P(1st) 0.0%
+  Portland Trail Blazers   proj 40.5 W  (10th-90th: 30.0-51.0)  P(1st) 0.0%
+  Philadelphia 76ers       proj 40.4 W  (10th-90th: 30.0-52.0)  P(1st) 0.0%
+  Milwaukee Bucks          proj 40.0 W  (10th-90th: 31.0-49.0)  P(1st) 0.0%
+  Los Angeles Clippers     proj 36.8 W  (10th-90th: 28.0-46.0)  P(1st) 0.0%
+  Memphis Grizzlies        proj 35.7 W  (10th-90th: 26.0-45.0)  P(1st) 0.0%
+  Indiana Pacers           proj 31.7 W  (10th-90th: 23.0-41.0)  P(1st) 0.0%
+  Sacramento Kings         proj 30.4 W  (10th-90th: 21.0-40.0)  P(1st) 0.0%
+  Dallas Mavericks         proj 27.0 W  (10th-90th: 19.0-35.0)  P(1st) 0.0%
+  Utah Jazz                proj 26.4 W  (10th-90th: 18.0-35.0)  P(1st) 0.0%
+  Brooklyn Nets            proj 23.5 W  (10th-90th: 16.0-32.0)  P(1st) 0.0%
+  Charlotte Hornets        proj 23.3 W  (10th-90th: 16.0-32.0)  P(1st) 0.0%
+  New Orleans Pelicans     proj 20.3 W  (10th-90th: 13.0-28.0)  P(1st) 0.0%
+  Washington Wizards       proj 15.7 W  (10th-90th: 9.0-23.0)  P(1st) 0.0%
+
+Week 6: November 30, 2025
+
+  Oklahoma City Thunder    proj 78.8 W  (10th-90th: 71.0-86.0)  P(1st) 82.5%
+  New York Knicks          proj 63.4 W  (10th-90th: 52.0-75.0)  P(1st) 6.4%
+  Detroit Pistons          proj 62.9 W  (10th-90th: 52.0-73.0)  P(1st) 3.1%
+  Houston Rockets          proj 61.2 W  (10th-90th: 52.0-70.0)  P(1st) 1.5%
+  Denver Nuggets           proj 60.0 W  (10th-90th: 51.0-69.0)  P(1st) 1.5%
+  Cleveland Cavaliers      proj 59.0 W  (10th-90th: 47.0-70.0)  P(1st) 1.7%
+  Los Angeles Lakers       proj 58.2 W  (10th-90th: 48.0-68.0)  P(1st) 0.9%
+  Minnesota Timberwolves   proj 56.1 W  (10th-90th: 46.0-66.0)  P(1st) 0.7%
+  San Antonio Spurs        proj 54.6 W  (10th-90th: 43.0-67.0)  P(1st) 1.1%
+  Boston Celtics           proj 53.9 W  (10th-90th: 44.0-63.0)  P(1st) 0.0%
+  Orlando Magic            proj 52.5 W  (10th-90th: 43.0-63.0)  P(1st) 0.4%
+  Miami Heat               proj 50.0 W  (10th-90th: 41.0-59.0)  P(1st) 0.1%
+  Toronto Raptors          proj 49.4 W  (10th-90th: 40.0-59.0)  P(1st) 0.1%
+  Atlanta Hawks            proj 48.2 W  (10th-90th: 38.0-58.0)  P(1st) 0.0%
+  Golden State Warriors    proj 46.1 W  (10th-90th: 37.0-55.0)  P(1st) 0.0%
+  Phoenix Suns             proj 45.3 W  (10th-90th: 37.0-54.0)  P(1st) 0.0%
+  Portland Trail Blazers   proj 40.4 W  (10th-90th: 31.0-50.0)  P(1st) 0.0%
+  Memphis Grizzlies        proj 39.1 W  (10th-90th: 31.0-47.0)  P(1st) 0.0%
+  Philadelphia 76ers       proj 38.3 W  (10th-90th: 29.0-48.0)  P(1st) 0.0%
+  Chicago Bulls            proj 37.5 W  (10th-90th: 29.0-47.0)  P(1st) 0.0%
+  Milwaukee Bucks          proj 37.2 W  (10th-90th: 29.0-46.0)  P(1st) 0.0%
+  Los Angeles Clippers     proj 32.8 W  (10th-90th: 25.0-42.0)  P(1st) 0.0%
+  Indiana Pacers           proj 31.7 W  (10th-90th: 23.0-41.0)  P(1st) 0.0%
+  Sacramento Kings         proj 28.0 W  (10th-90th: 20.0-36.0)  P(1st) 0.0%
+  Dallas Mavericks         proj 27.9 W  (10th-90th: 20.0-36.0)  P(1st) 0.0%
+  Utah Jazz                proj 26.0 W  (10th-90th: 18.0-34.0)  P(1st) 0.0%
+  Charlotte Hornets        proj 25.4 W  (10th-90th: 18.0-33.0)  P(1st) 0.0%
+  Brooklyn Nets            proj 21.4 W  (10th-90th: 14.0-29.0)  P(1st) 0.0%
+  New Orleans Pelicans     proj 20.3 W  (10th-90th: 14.0-27.0)  P(1st) 0.0%
+  Washington Wizards       proj 16.4 W  (10th-90th: 10.0-23.0)  P(1st) 0.0%
+
+Week 7: December 7, 2025
+
+  Oklahoma City Thunder    proj 80.1 W  (10th-90th: 72.0-87.0)  P(1st) 86.5%
+  New York Knicks          proj 64.9 W  (10th-90th: 54.0-75.0)  P(1st) 5.5%
+  Detroit Pistons          proj 63.5 W  (10th-90th: 54.0-73.0)  P(1st) 3.0%
+  Denver Nuggets           proj 59.6 W  (10th-90th: 51.0-67.0)  P(1st) 0.6%
+  Houston Rockets          proj 58.4 W  (10th-90th: 50.0-67.0)  P(1st) 0.5%
+  Boston Celtics           proj 58.3 W  (10th-90th: 50.0-66.0)  P(1st) 0.1%
+  Cleveland Cavaliers      proj 58.2 W  (10th-90th: 49.0-68.0)  P(1st) 0.6%
+  Minnesota Timberwolves   proj 57.6 W  (10th-90th: 48.0-67.0)  P(1st) 0.3%
+  San Antonio Spurs        proj 56.7 W  (10th-90th: 45.0-69.0)  P(1st) 2.2%
+  Los Angeles Lakers       proj 56.5 W  (10th-90th: 48.0-66.0)  P(1st) 0.6%
+  Orlando Magic            proj 51.9 W  (10th-90th: 43.0-61.0)  P(1st) 0.1%
+  Golden State Warriors    proj 47.3 W  (10th-90th: 39.0-55.0)  P(1st) 0.0%
+  Miami Heat               proj 46.6 W  (10th-90th: 39.0-54.0)  P(1st) 0.0%
+  Phoenix Suns             proj 46.1 W  (10th-90th: 37.0-55.0)  P(1st) 0.0%
+  Atlanta Hawks            proj 45.3 W  (10th-90th: 37.0-54.0)  P(1st) 0.0%
+  Toronto Raptors          proj 45.0 W  (10th-90th: 36.0-54.0)  P(1st) 0.0%
+  Philadelphia 76ers       proj 41.1 W  (10th-90th: 32.0-51.0)  P(1st) 0.0%
+  Memphis Grizzlies        proj 40.1 W  (10th-90th: 32.0-48.0)  P(1st) 0.0%
+  Portland Trail Blazers   proj 39.9 W  (10th-90th: 31.0-49.0)  P(1st) 0.0%
+  Milwaukee Bucks          proj 34.8 W  (10th-90th: 27.0-43.0)  P(1st) 0.0%
+  Los Angeles Clippers     proj 32.7 W  (10th-90th: 24.0-41.0)  P(1st) 0.0%
+  Dallas Mavericks         proj 32.4 W  (10th-90th: 24.0-41.0)  P(1st) 0.0%
+  Indiana Pacers           proj 31.5 W  (10th-90th: 24.0-40.0)  P(1st) 0.0%
+  Chicago Bulls            proj 31.5 W  (10th-90th: 24.0-40.0)  P(1st) 0.0%
+  Sacramento Kings         proj 29.6 W  (10th-90th: 22.0-38.0)  P(1st) 0.0%
+  Utah Jazz                proj 27.8 W  (10th-90th: 21.0-35.0)  P(1st) 0.0%
+  Charlotte Hornets        proj 25.7 W  (10th-90th: 19.0-33.0)  P(1st) 0.0%
+  Brooklyn Nets            proj 24.0 W  (10th-90th: 17.0-31.0)  P(1st) 0.0%
+  New Orleans Pelicans     proj 18.5 W  (10th-90th: 12.0-25.0)  P(1st) 0.0%
+  Washington Wizards       proj 16.3 W  (10th-90th: 11.0-22.0)  P(1st) 0.0%
+
+Week 8: December 14, 2025
+
+  Oklahoma City Thunder    proj 79.2 W  (10th-90th: 71.0-86.0)  P(1st) 79.5%
+  New York Knicks          proj 67.3 W  (10th-90th: 56.0-78.0)  P(1st) 9.6%
+  Detroit Pistons          proj 64.9 W  (10th-90th: 55.0-74.0)  P(1st) 3.5%
+  San Antonio Spurs        proj 61.7 W  (10th-90th: 51.0-73.0)  P(1st) 5.3%
+  Denver Nuggets           proj 60.2 W  (10th-90th: 52.0-68.0)  P(1st) 0.5%
+  Houston Rockets          proj 59.1 W  (10th-90th: 51.0-67.0)  P(1st) 0.3%
+  Minnesota Timberwolves   proj 57.5 W  (10th-90th: 49.0-66.0)  P(1st) 0.4%
+  Boston Celtics           proj 56.6 W  (10th-90th: 49.0-64.0)  P(1st) 0.2%
+  Cleveland Cavaliers      proj 56.0 W  (10th-90th: 46.0-66.0)  P(1st) 0.4%
+  Los Angeles Lakers       proj 55.4 W  (10th-90th: 47.0-65.0)  P(1st) 0.2%
+  Orlando Magic            proj 52.2 W  (10th-90th: 43.0-61.0)  P(1st) 0.1%
+  Phoenix Suns             proj 45.8 W  (10th-90th: 37.0-55.0)  P(1st) 0.0%
+  Miami Heat               proj 45.6 W  (10th-90th: 37.0-54.0)  P(1st) 0.0%
+  Atlanta Hawks            proj 44.9 W  (10th-90th: 37.0-53.0)  P(1st) 0.0%
+  Golden State Warriors    proj 44.2 W  (10th-90th: 36.0-52.0)  P(1st) 0.0%
+  Toronto Raptors          proj 44.1 W  (10th-90th: 35.0-53.0)  P(1st) 0.0%
+  Philadelphia 76ers       proj 41.4 W  (10th-90th: 32.0-51.0)  P(1st) 0.0%
+  Memphis Grizzlies        proj 38.6 W  (10th-90th: 31.0-47.0)  P(1st) 0.0%
+  Portland Trail Blazers   proj 38.5 W  (10th-90th: 30.0-47.0)  P(1st) 0.0%
+  Milwaukee Bucks          proj 34.4 W  (10th-90th: 27.0-42.0)  P(1st) 0.0%
+  Dallas Mavericks         proj 33.0 W  (10th-90th: 25.0-41.0)  P(1st) 0.0%
+  Los Angeles Clippers     proj 32.5 W  (10th-90th: 25.0-40.0)  P(1st) 0.0%
+  Chicago Bulls            proj 30.7 W  (10th-90th: 23.0-38.0)  P(1st) 0.0%
+  Utah Jazz                proj 29.9 W  (10th-90th: 22.0-37.0)  P(1st) 0.0%
+  Indiana Pacers           proj 28.8 W  (10th-90th: 21.0-37.0)  P(1st) 0.0%
+  Sacramento Kings         proj 27.4 W  (10th-90th: 20.0-35.0)  P(1st) 0.0%
+  Charlotte Hornets        proj 26.5 W  (10th-90th: 20.0-34.0)  P(1st) 0.0%
+  Brooklyn Nets            proj 25.6 W  (10th-90th: 18.0-33.0)  P(1st) 0.0%
+  New Orleans Pelicans     proj 21.5 W  (10th-90th: 15.0-28.0)  P(1st) 0.0%
+  Washington Wizards       proj 18.3 W  (10th-90th: 12.0-25.0)  P(1st) 0.0%
+
+Week 9: December 21, 2025
+
+  Oklahoma City Thunder    proj 77.8 W  (10th-90th: 70.0-85.0)  P(1st) 76.2%
+  New York Knicks          proj 67.1 W  (10th-90th: 57.0-76.0)  P(1st) 9.5%
+  Detroit Pistons          proj 66.0 W  (10th-90th: 57.0-74.0)  P(1st) 6.8%
+  San Antonio Spurs        proj 62.7 W  (10th-90th: 53.0-73.0)  P(1st) 5.9%
+  Denver Nuggets           proj 60.6 W  (10th-90th: 53.0-68.0)  P(1st) 0.7%
+  Minnesota Timberwolves   proj 57.8 W  (10th-90th: 48.0-67.0)  P(1st) 0.4%
+  Houston Rockets          proj 57.4 W  (10th-90th: 49.0-66.0)  P(1st) 0.0%
+  Boston Celtics           proj 57.2 W  (10th-90th: 49.0-65.0)  P(1st) 0.0%
+  Los Angeles Lakers       proj 54.8 W  (10th-90th: 46.0-64.0)  P(1st) 0.2%
+  Orlando Magic            proj 51.9 W  (10th-90th: 43.0-61.0)  P(1st) 0.1%
+  Cleveland Cavaliers      proj 51.3 W  (10th-90th: 42.0-61.0)  P(1st) 0.2%
+  Phoenix Suns             proj 46.1 W  (10th-90th: 38.0-54.0)  P(1st) 0.0%
+  Golden State Warriors    proj 44.9 W  (10th-90th: 37.0-52.0)  P(1st) 0.0%
+  Toronto Raptors          proj 44.3 W  (10th-90th: 36.0-53.0)  P(1st) 0.0%
+  Philadelphia 76ers       proj 44.2 W  (10th-90th: 35.0-53.0)  P(1st) 0.0%
+  Miami Heat               proj 43.7 W  (10th-90th: 36.0-51.0)  P(1st) 0.0%
+  Atlanta Hawks            proj 40.8 W  (10th-90th: 33.0-49.0)  P(1st) 0.0%
+  Portland Trail Blazers   proj 40.3 W  (10th-90th: 32.0-49.0)  P(1st) 0.0%
+  Memphis Grizzlies        proj 40.2 W  (10th-90th: 33.0-47.0)  P(1st) 0.0%
+  Chicago Bulls            proj 35.9 W  (10th-90th: 28.0-44.0)  P(1st) 0.0%
+  Milwaukee Bucks          proj 32.5 W  (10th-90th: 25.0-40.0)  P(1st) 0.0%
+  Dallas Mavericks         proj 32.0 W  (10th-90th: 24.0-40.0)  P(1st) 0.0%
+  Los Angeles Clippers     proj 31.6 W  (10th-90th: 24.0-39.0)  P(1st) 0.0%
+  Utah Jazz                proj 29.2 W  (10th-90th: 22.0-37.0)  P(1st) 0.0%
+  Charlotte Hornets        proj 27.8 W  (10th-90th: 21.0-35.0)  P(1st) 0.0%
+  Sacramento Kings         proj 27.0 W  (10th-90th: 20.0-34.0)  P(1st) 0.0%
+  Indiana Pacers           proj 26.9 W  (10th-90th: 20.0-34.0)  P(1st) 0.0%
+  Brooklyn Nets            proj 25.7 W  (10th-90th: 19.0-33.0)  P(1st) 0.0%
+  New Orleans Pelicans     proj 24.2 W  (10th-90th: 18.0-31.0)  P(1st) 0.0%
+  Washington Wizards       proj 18.9 W  (10th-90th: 13.0-25.0)  P(1st) 0.0%
+
+Week 10: December 28, 2025
+
+  Oklahoma City Thunder    proj 74.6 W  (10th-90th: 67.0-82.0)  P(1st) 64.2%
+  New York Knicks          proj 67.8 W  (10th-90th: 58.0-77.0)  P(1st) 15.6%
+  San Antonio Spurs        proj 65.4 W  (10th-90th: 55.0-76.0)  P(1st) 12.8%
+  Detroit Pistons          proj 64.9 W  (10th-90th: 56.0-73.0)  P(1st) 6.2%
+  Denver Nuggets           proj 58.9 W  (10th-90th: 51.0-66.0)  P(1st) 0.5%
+  Houston Rockets          proj 58.6 W  (10th-90th: 51.0-66.0)  P(1st) 0.1%
+  Boston Celtics           proj 56.9 W  (10th-90th: 49.0-64.0)  P(1st) 0.2%
+  Minnesota Timberwolves   proj 55.9 W  (10th-90th: 47.0-65.0)  P(1st) 0.3%
+  Los Angeles Lakers       proj 52.0 W  (10th-90th: 43.0-61.0)  P(1st) 0.1%
+  Cleveland Cavaliers      proj 51.6 W  (10th-90th: 42.0-61.0)  P(1st) 0.0%
+  Orlando Magic            proj 50.6 W  (10th-90th: 42.0-59.0)  P(1st) 0.0%
+  Phoenix Suns             proj 49.2 W  (10th-90th: 42.0-57.0)  P(1st) 0.0%
+  Toronto Raptors          proj 45.7 W  (10th-90th: 38.0-54.0)  P(1st) 0.0%
+  Golden State Warriors    proj 44.9 W  (10th-90th: 38.0-52.0)  P(1st) 0.0%
+  Miami Heat               proj 44.3 W  (10th-90th: 37.0-52.0)  P(1st) 0.0%
+  Philadelphia 76ers       proj 41.2 W  (10th-90th: 33.0-50.0)  P(1st) 0.0%
+  Memphis Grizzlies        proj 40.5 W  (10th-90th: 33.0-48.0)  P(1st) 0.0%
+  Atlanta Hawks            proj 37.6 W  (10th-90th: 30.0-45.0)  P(1st) 0.0%
+  Portland Trail Blazers   proj 37.1 W  (10th-90th: 29.0-45.0)  P(1st) 0.0%
+  Los Angeles Clippers     proj 36.3 W  (10th-90th: 29.0-43.0)  P(1st) 0.0%
+  Chicago Bulls            proj 36.2 W  (10th-90th: 29.0-44.0)  P(1st) 0.0%
+  Milwaukee Bucks          proj 34.9 W  (10th-90th: 28.0-42.0)  P(1st) 0.0%
+  Dallas Mavericks         proj 31.3 W  (10th-90th: 25.0-38.0)  P(1st) 0.0%
+  Utah Jazz                proj 30.9 W  (10th-90th: 24.0-38.0)  P(1st) 0.0%
+  Charlotte Hornets        proj 30.2 W  (10th-90th: 23.0-38.0)  P(1st) 0.0%
+  Brooklyn Nets            proj 29.6 W  (10th-90th: 22.0-37.0)  P(1st) 0.0%
+  Sacramento Kings         proj 26.6 W  (10th-90th: 20.0-33.0)  P(1st) 0.0%
+  Indiana Pacers           proj 23.4 W  (10th-90th: 17.0-30.0)  P(1st) 0.0%
+  New Orleans Pelicans     proj 22.9 W  (10th-90th: 17.0-29.0)  P(1st) 0.0%
+  Washington Wizards       proj 21.0 W  (10th-90th: 15.0-27.0)  P(1st) 0.0%
+
+Week 11: January 4, 2026
+
+  Oklahoma City Thunder    proj 75.2 W  (10th-90th: 68.0-82.0)  P(1st) 74.3%
+  Detroit Pistons          proj 65.7 W  (10th-90th: 57.0-74.0)  P(1st) 7.8%
+  San Antonio Spurs        proj 63.2 W  (10th-90th: 53.0-73.0)  P(1st) 10.3%
+  New York Knicks          proj 62.3 W  (10th-90th: 53.0-72.0)  P(1st) 4.6%
+  Boston Celtics           proj 59.8 W  (10th-90th: 53.0-66.0)  P(1st) 0.9%
+  Houston Rockets          proj 58.5 W  (10th-90th: 51.0-66.0)  P(1st) 0.6%
+  Minnesota Timberwolves   proj 57.5 W  (10th-90th: 49.0-66.0)  P(1st) 0.9%
+  Denver Nuggets           proj 55.4 W  (10th-90th: 48.0-63.0)  P(1st) 0.0%
+  Cleveland Cavaliers      proj 54.8 W  (10th-90th: 46.0-64.0)  P(1st) 0.5%
+  Los Angeles Lakers       proj 51.9 W  (10th-90th: 44.0-61.0)  P(1st) 0.1%
+  Phoenix Suns             proj 50.4 W  (10th-90th: 43.0-57.0)  P(1st) 0.0%
+  Orlando Magic            proj 49.2 W  (10th-90th: 41.0-57.0)  P(1st) 0.0%
+  Toronto Raptors          proj 47.0 W  (10th-90th: 40.0-54.0)  P(1st) 0.0%
+  Miami Heat               proj 46.5 W  (10th-90th: 40.0-53.0)  P(1st) 0.0%
+  Golden State Warriors    proj 46.3 W  (10th-90th: 39.0-53.0)  P(1st) 0.0%
+  Philadelphia 76ers       proj 46.2 W  (10th-90th: 38.0-55.0)  P(1st) 0.0%
+  Portland Trail Blazers   proj 40.9 W  (10th-90th: 34.0-49.0)  P(1st) 0.0%
+  Atlanta Hawks            proj 39.7 W  (10th-90th: 33.0-46.0)  P(1st) 0.0%
+  Memphis Grizzlies        proj 37.9 W  (10th-90th: 31.0-45.0)  P(1st) 0.0%
+  Los Angeles Clippers     proj 36.8 W  (10th-90th: 30.0-44.0)  P(1st) 0.0%
+  Milwaukee Bucks          proj 36.5 W  (10th-90th: 30.0-43.0)  P(1st) 0.0%
+  Chicago Bulls            proj 35.1 W  (10th-90th: 28.0-42.0)  P(1st) 0.0%
+  Dallas Mavericks         proj 30.3 W  (10th-90th: 24.0-37.0)  P(1st) 0.0%
+  Utah Jazz                proj 29.1 W  (10th-90th: 23.0-35.0)  P(1st) 0.0%
+  Charlotte Hornets        proj 29.0 W  (10th-90th: 23.0-35.0)  P(1st) 0.0%
+  Brooklyn Nets            proj 28.0 W  (10th-90th: 22.0-34.0)  P(1st) 0.0%
+  Sacramento Kings         proj 23.6 W  (10th-90th: 18.0-30.0)  P(1st) 0.0%
+  Washington Wizards       proj 22.4 W  (10th-90th: 17.0-28.0)  P(1st) 0.0%
+  Indiana Pacers           proj 21.1 W  (10th-90th: 15.0-27.0)  P(1st) 0.0%
+  New Orleans Pelicans     proj 20.5 W  (10th-90th: 16.0-26.0)  P(1st) 0.0%
+
+Week 12: January 11, 2026
+
+  Oklahoma City Thunder    proj 74.2 W  (10th-90th: 67.0-80.0)  P(1st) 73.1%
+  Detroit Pistons          proj 65.8 W  (10th-90th: 58.0-73.0)  P(1st) 9.3%
+  San Antonio Spurs        proj 63.7 W  (10th-90th: 54.0-73.0)  P(1st) 11.0%
+  New York Knicks          proj 61.9 W  (10th-90th: 53.0-71.0)  P(1st) 5.1%
+  Minnesota Timberwolves   proj 59.1 W  (10th-90th: 52.0-66.0)  P(1st) 1.0%
+  Boston Celtics           proj 57.9 W  (10th-90th: 51.0-65.0)  P(1st) 0.1%
+  Denver Nuggets           proj 55.8 W  (10th-90th: 50.0-62.0)  P(1st) 0.1%
+  Cleveland Cavaliers      proj 55.7 W  (10th-90th: 46.0-64.0)  P(1st) 0.3%
+  Houston Rockets          proj 55.0 W  (10th-90th: 48.0-62.0)  P(1st) 0.0%
+  Phoenix Suns             proj 52.0 W  (10th-90th: 45.0-59.0)  P(1st) 0.0%
+  Los Angeles Lakers       proj 51.0 W  (10th-90th: 43.0-59.0)  P(1st) 0.0%
+  Toronto Raptors          proj 48.4 W  (10th-90th: 42.0-55.0)  P(1st) 0.0%
+  Orlando Magic            proj 47.4 W  (10th-90th: 40.0-55.0)  P(1st) 0.0%
+  Philadelphia 76ers       proj 47.1 W  (10th-90th: 39.0-56.0)  P(1st) 0.0%
+  Golden State Warriors    proj 44.6 W  (10th-90th: 38.0-51.0)  P(1st) 0.0%
+  Miami Heat               proj 43.5 W  (10th-90th: 37.0-50.0)  P(1st) 0.0%
+  Atlanta Hawks            proj 43.5 W  (10th-90th: 36.0-51.0)  P(1st) 0.0%
+  Portland Trail Blazers   proj 42.4 W  (10th-90th: 36.0-49.0)  P(1st) 0.0%
+  Los Angeles Clippers     proj 40.2 W  (10th-90th: 33.0-47.0)  P(1st) 0.0%
+  Memphis Grizzlies        proj 37.3 W  (10th-90th: 31.0-44.0)  P(1st) 0.0%
+  Milwaukee Bucks          proj 36.6 W  (10th-90th: 31.0-43.0)  P(1st) 0.0%
+  Chicago Bulls            proj 35.3 W  (10th-90th: 30.0-41.0)  P(1st) 0.0%
+  Charlotte Hornets        proj 31.8 W  (10th-90th: 25.0-38.0)  P(1st) 0.0%
+  Dallas Mavericks         proj 29.4 W  (10th-90th: 24.0-35.0)  P(1st) 0.0%
+  Utah Jazz                proj 26.9 W  (10th-90th: 21.0-33.0)  P(1st) 0.0%
+  Brooklyn Nets            proj 25.8 W  (10th-90th: 20.0-32.0)  P(1st) 0.0%
+  Sacramento Kings         proj 23.9 W  (10th-90th: 18.0-30.0)  P(1st) 0.0%
+  Indiana Pacers           proj 23.0 W  (10th-90th: 17.0-29.0)  P(1st) 0.0%
+  Washington Wizards       proj 21.3 W  (10th-90th: 16.0-26.0)  P(1st) 0.0%
+  New Orleans Pelicans     proj 20.7 W  (10th-90th: 16.0-26.0)  P(1st) 0.0%
+
+Week 13: January 18, 2026
+
+  Oklahoma City Thunder    proj 74.8 W  (10th-90th: 68.0-81.0)  P(1st) 75.3%
+  Detroit Pistons          proj 66.6 W  (10th-90th: 59.0-74.0)  P(1st) 11.7%
+  San Antonio Spurs        proj 64.9 W  (10th-90th: 56.0-74.0)  P(1st) 10.7%
+  Boston Celtics           proj 58.5 W  (10th-90th: 52.0-64.0)  P(1st) 0.1%
+  Minnesota Timberwolves   proj 58.2 W  (10th-90th: 51.0-65.0)  P(1st) 0.2%
+  New York Knicks          proj 58.0 W  (10th-90th: 50.0-67.0)  P(1st) 1.2%
+  Cleveland Cavaliers      proj 56.9 W  (10th-90th: 49.0-65.0)  P(1st) 0.6%
+  Houston Rockets          proj 55.5 W  (10th-90th: 49.0-62.0)  P(1st) 0.0%
+  Denver Nuggets           proj 55.1 W  (10th-90th: 48.0-62.0)  P(1st) 0.2%
+  Phoenix Suns             proj 52.2 W  (10th-90th: 46.0-58.0)  P(1st) 0.0%
+  Los Angeles Lakers       proj 48.0 W  (10th-90th: 41.0-55.0)  P(1st) 0.0%
+  Golden State Warriors    proj 47.0 W  (10th-90th: 41.0-53.0)  P(1st) 0.0%
+  Orlando Magic            proj 46.8 W  (10th-90th: 40.0-53.0)  P(1st) 0.0%
+  Philadelphia 76ers       proj 46.4 W  (10th-90th: 39.0-54.0)  P(1st) 0.0%
+  Toronto Raptors          proj 45.6 W  (10th-90th: 39.0-52.0)  P(1st) 0.0%
+  Miami Heat               proj 44.9 W  (10th-90th: 39.0-51.0)  P(1st) 0.0%
+  Portland Trail Blazers   proj 44.1 W  (10th-90th: 38.0-50.0)  P(1st) 0.0%
+  Los Angeles Clippers     proj 41.7 W  (10th-90th: 36.0-48.0)  P(1st) 0.0%
+  Atlanta Hawks            proj 40.6 W  (10th-90th: 34.0-47.0)  P(1st) 0.0%
+  Memphis Grizzlies        proj 37.7 W  (10th-90th: 32.0-44.0)  P(1st) 0.0%
+  Chicago Bulls            proj 35.6 W  (10th-90th: 30.0-41.0)  P(1st) 0.0%
+  Milwaukee Bucks          proj 35.1 W  (10th-90th: 29.0-41.0)  P(1st) 0.0%
+  Charlotte Hornets        proj 34.5 W  (10th-90th: 28.0-41.0)  P(1st) 0.0%
+  Dallas Mavericks         proj 30.7 W  (10th-90th: 26.0-36.0)  P(1st) 0.0%
+  Utah Jazz                proj 26.6 W  (10th-90th: 22.0-32.0)  P(1st) 0.0%
+  Sacramento Kings         proj 25.9 W  (10th-90th: 21.0-31.0)  P(1st) 0.0%
+  Brooklyn Nets            proj 24.8 W  (10th-90th: 20.0-30.0)  P(1st) 0.0%
+  Indiana Pacers           proj 23.6 W  (10th-90th: 19.0-29.0)  P(1st) 0.0%
+  Washington Wizards       proj 20.4 W  (10th-90th: 16.0-26.0)  P(1st) 0.0%
+  New Orleans Pelicans     proj 20.3 W  (10th-90th: 16.0-25.0)  P(1st) 0.0%
+
+Week 14: January 25, 2026
+
+  Oklahoma City Thunder    proj 73.9 W  (10th-90th: 68.0-80.0)  P(1st) 77.3%
+  Detroit Pistons          proj 66.9 W  (10th-90th: 60.0-74.0)  P(1st) 13.0%
+  San Antonio Spurs        proj 63.1 W  (10th-90th: 55.0-71.0)  P(1st) 8.2%
+  Cleveland Cavaliers      proj 57.9 W  (10th-90th: 51.0-65.0)  P(1st) 0.6%
+  Boston Celtics           proj 57.3 W  (10th-90th: 52.0-63.0)  P(1st) 0.0%
+  New York Knicks          proj 57.2 W  (10th-90th: 49.0-65.0)  P(1st) 0.7%
+  Houston Rockets          proj 56.9 W  (10th-90th: 51.0-63.0)  P(1st) 0.2%
+  Denver Nuggets           proj 54.7 W  (10th-90th: 49.0-61.0)  P(1st) 0.0%
+  Minnesota Timberwolves   proj 53.4 W  (10th-90th: 46.0-61.0)  P(1st) 0.0%
+  Toronto Raptors          proj 51.3 W  (10th-90th: 45.0-57.0)  P(1st) 0.0%
+  Phoenix Suns             proj 50.8 W  (10th-90th: 45.0-57.0)  P(1st) 0.0%
+  Los Angeles Lakers       proj 49.9 W  (10th-90th: 43.0-57.0)  P(1st) 0.0%
+  Golden State Warriors    proj 47.3 W  (10th-90th: 42.0-52.0)  P(1st) 0.0%
+  Miami Heat               proj 46.3 W  (10th-90th: 41.0-51.0)  P(1st) 0.0%
+  Philadelphia 76ers       proj 46.1 W  (10th-90th: 39.0-53.0)  P(1st) 0.0%
+  Portland Trail Blazers   proj 44.1 W  (10th-90th: 38.0-50.0)  P(1st) 0.0%
+  Orlando Magic            proj 43.2 W  (10th-90th: 37.0-50.0)  P(1st) 0.0%
+  Los Angeles Clippers     proj 42.2 W  (10th-90th: 37.0-48.0)  P(1st) 0.0%
+  Atlanta Hawks            proj 42.0 W  (10th-90th: 36.0-48.0)  P(1st) 0.0%
+  Chicago Bulls            proj 39.1 W  (10th-90th: 34.0-45.0)  P(1st) 0.0%
+  Charlotte Hornets        proj 35.9 W  (10th-90th: 30.0-41.0)  P(1st) 0.0%
+  Memphis Grizzlies        proj 35.1 W  (10th-90th: 29.0-41.0)  P(1st) 0.0%
+  Milwaukee Bucks          proj 35.0 W  (10th-90th: 30.0-41.0)  P(1st) 0.0%
+  Dallas Mavericks         proj 32.6 W  (10th-90th: 28.0-38.0)  P(1st) 0.0%
+  Utah Jazz                proj 26.1 W  (10th-90th: 22.0-31.0)  P(1st) 0.0%
+  Indiana Pacers           proj 24.2 W  (10th-90th: 19.0-30.0)  P(1st) 0.0%
+  Sacramento Kings         proj 23.9 W  (10th-90th: 19.0-29.0)  P(1st) 0.0%
+  Brooklyn Nets            proj 22.9 W  (10th-90th: 18.0-28.0)  P(1st) 0.0%
+  New Orleans Pelicans     proj 22.5 W  (10th-90th: 18.0-27.0)  P(1st) 0.0%
+  Washington Wizards       proj 19.1 W  (10th-90th: 15.0-24.0)  P(1st) 0.0%
+
+Week 15: February 1, 2026
+

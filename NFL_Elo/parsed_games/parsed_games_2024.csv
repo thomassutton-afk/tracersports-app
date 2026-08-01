@@ -1,0 +1,571 @@
+Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT
+2024-09-05,2024,Reg,RS,Kansas City Chiefs,Baltimore Ravens,H,27,20,Unknown
+2024-09-05,2024,Reg,RS,Baltimore Ravens,Kansas City Chiefs,A,20,27,Unknown
+2024-09-06,2024,Reg,RS,Philadelphia Eagles,Green Bay Packers,H,34,29,Unknown
+2024-09-06,2024,Reg,RS,Green Bay Packers,Philadelphia Eagles,A,29,34,Unknown
+2024-09-08,2024,Reg,RS,Pittsburgh Steelers,Atlanta Falcons,A,18,10,Unknown
+2024-09-08,2024,Reg,RS,Atlanta Falcons,Pittsburgh Steelers,H,10,18,Unknown
+2024-09-08,2024,Reg,RS,Buffalo Bills,Arizona Cardinals,H,34,28,Unknown
+2024-09-08,2024,Reg,RS,Arizona Cardinals,Buffalo Bills,A,28,34,Unknown
+2024-09-08,2024,Reg,RS,New Orleans Saints,Carolina Panthers,H,47,10,Unknown
+2024-09-08,2024,Reg,RS,Carolina Panthers,New Orleans Saints,A,10,47,Unknown
+2024-09-08,2024,Reg,RS,Chicago Bears,Tennessee Titans,H,24,17,Unknown
+2024-09-08,2024,Reg,RS,Tennessee Titans,Chicago Bears,A,17,24,Unknown
+2024-09-08,2024,Reg,RS,New England Patriots,Cincinnati Bengals,A,16,10,Unknown
+2024-09-08,2024,Reg,RS,Cincinnati Bengals,New England Patriots,H,10,16,Unknown
+2024-09-08,2024,Reg,RS,Houston Texans,Indianapolis Colts,A,29,27,Unknown
+2024-09-08,2024,Reg,RS,Indianapolis Colts,Houston Texans,H,27,29,Unknown
+2024-09-08,2024,Reg,RS,Miami Dolphins,Jacksonville Jaguars,H,20,17,Unknown
+2024-09-08,2024,Reg,RS,Jacksonville Jaguars,Miami Dolphins,A,17,20,Unknown
+2024-09-08,2024,Reg,RS,Minnesota Vikings,New York Giants,A,28,6,Unknown
+2024-09-08,2024,Reg,RS,New York Giants,Minnesota Vikings,H,6,28,Unknown
+2024-09-08,2024,Reg,RS,Seattle Seahawks,Denver Broncos,H,26,20,Unknown
+2024-09-08,2024,Reg,RS,Denver Broncos,Seattle Seahawks,A,20,26,Unknown
+2024-09-08,2024,Reg,RS,Los Angeles Chargers,Las Vegas Raiders,H,22,10,Unknown
+2024-09-08,2024,Reg,RS,Las Vegas Raiders,Los Angeles Chargers,A,10,22,Unknown
+2024-09-08,2024,Reg,RS,Dallas Cowboys,Cleveland Browns,A,33,17,Unknown
+2024-09-08,2024,Reg,RS,Cleveland Browns,Dallas Cowboys,H,17,33,Unknown
+2024-09-08,2024,Reg,RS,Tampa Bay Buccaneers,Washington Commanders,H,37,20,Unknown
+2024-09-08,2024,Reg,RS,Washington Commanders,Tampa Bay Buccaneers,A,20,37,Unknown
+2024-09-08,2024,Reg,RS,Detroit Lions,Los Angeles Rams,H,26,20,Unknown
+2024-09-08,2024,Reg,RS,Los Angeles Rams,Detroit Lions,A,20,26,Unknown
+2024-09-09,2024,Reg,RS,San Francisco 49ers,New York Jets,H,32,19,Unknown
+2024-09-09,2024,Reg,RS,New York Jets,San Francisco 49ers,A,19,32,Unknown
+2024-09-12,2024,Reg,RS,Buffalo Bills,Miami Dolphins,A,31,10,Unknown
+2024-09-12,2024,Reg,RS,Miami Dolphins,Buffalo Bills,H,10,31,Unknown
+2024-09-15,2024,Reg,RS,Los Angeles Chargers,Carolina Panthers,A,26,3,Unknown
+2024-09-15,2024,Reg,RS,Carolina Panthers,Los Angeles Chargers,H,3,26,Unknown
+2024-09-15,2024,Reg,RS,Cleveland Browns,Jacksonville Jaguars,A,18,13,Unknown
+2024-09-15,2024,Reg,RS,Jacksonville Jaguars,Cleveland Browns,H,13,18,Unknown
+2024-09-15,2024,Reg,RS,Green Bay Packers,Indianapolis Colts,H,16,10,Unknown
+2024-09-15,2024,Reg,RS,Indianapolis Colts,Green Bay Packers,A,10,16,Unknown
+2024-09-15,2024,Reg,RS,New Orleans Saints,Dallas Cowboys,A,44,19,Unknown
+2024-09-15,2024,Reg,RS,Dallas Cowboys,New Orleans Saints,H,19,44,Unknown
+2024-09-15,2024,Reg,RS,Tampa Bay Buccaneers,Detroit Lions,A,20,16,Unknown
+2024-09-15,2024,Reg,RS,Detroit Lions,Tampa Bay Buccaneers,H,16,20,Unknown
+2024-09-15,2024,Reg,RS,Minnesota Vikings,San Francisco 49ers,H,23,17,Unknown
+2024-09-15,2024,Reg,RS,San Francisco 49ers,Minnesota Vikings,A,17,23,Unknown
+2024-09-15,2024,Reg,RS,Seattle Seahawks,New England Patriots,A,23,20,Unknown
+2024-09-15,2024,Reg,RS,New England Patriots,Seattle Seahawks,H,20,23,Unknown
+2024-09-15,2024,Reg,RS,Washington Commanders,New York Giants,H,21,18,Unknown
+2024-09-15,2024,Reg,RS,New York Giants,Washington Commanders,A,18,21,Unknown
+2024-09-15,2024,Reg,RS,New York Jets,Tennessee Titans,A,24,17,Unknown
+2024-09-15,2024,Reg,RS,Tennessee Titans,New York Jets,H,17,24,Unknown
+2024-09-15,2024,Reg,RS,Las Vegas Raiders,Baltimore Ravens,A,26,23,Unknown
+2024-09-15,2024,Reg,RS,Baltimore Ravens,Las Vegas Raiders,H,23,26,Unknown
+2024-09-15,2024,Reg,RS,Arizona Cardinals,Los Angeles Rams,H,41,10,Unknown
+2024-09-15,2024,Reg,RS,Los Angeles Rams,Arizona Cardinals,A,10,41,Unknown
+2024-09-15,2024,Reg,RS,Kansas City Chiefs,Cincinnati Bengals,H,26,25,Unknown
+2024-09-15,2024,Reg,RS,Cincinnati Bengals,Kansas City Chiefs,A,25,26,Unknown
+2024-09-15,2024,Reg,RS,Pittsburgh Steelers,Denver Broncos,A,13,6,Unknown
+2024-09-15,2024,Reg,RS,Denver Broncos,Pittsburgh Steelers,H,6,13,Unknown
+2024-09-15,2024,Reg,RS,Houston Texans,Chicago Bears,H,19,13,Unknown
+2024-09-15,2024,Reg,RS,Chicago Bears,Houston Texans,A,13,19,Unknown
+2024-09-16,2024,Reg,RS,Atlanta Falcons,Philadelphia Eagles,A,22,21,Unknown
+2024-09-16,2024,Reg,RS,Philadelphia Eagles,Atlanta Falcons,H,21,22,Unknown
+2024-09-19,2024,Reg,RS,New York Jets,New England Patriots,H,24,3,Unknown
+2024-09-19,2024,Reg,RS,New England Patriots,New York Jets,A,3,24,Unknown
+2024-09-22,2024,Reg,RS,Indianapolis Colts,Chicago Bears,H,21,16,Unknown
+2024-09-22,2024,Reg,RS,Chicago Bears,Indianapolis Colts,A,16,21,Unknown
+2024-09-22,2024,Reg,RS,New York Giants,Cleveland Browns,A,21,15,Unknown
+2024-09-22,2024,Reg,RS,Cleveland Browns,New York Giants,H,15,21,Unknown
+2024-09-22,2024,Reg,RS,Denver Broncos,Tampa Bay Buccaneers,A,26,7,Unknown
+2024-09-22,2024,Reg,RS,Tampa Bay Buccaneers,Denver Broncos,H,7,26,Unknown
+2024-09-22,2024,Reg,RS,Green Bay Packers,Tennessee Titans,A,30,14,Unknown
+2024-09-22,2024,Reg,RS,Tennessee Titans,Green Bay Packers,H,14,30,Unknown
+2024-09-22,2024,Reg,RS,Minnesota Vikings,Houston Texans,H,34,7,Unknown
+2024-09-22,2024,Reg,RS,Houston Texans,Minnesota Vikings,A,7,34,Unknown
+2024-09-22,2024,Reg,RS,Philadelphia Eagles,New Orleans Saints,A,15,12,Unknown
+2024-09-22,2024,Reg,RS,New Orleans Saints,Philadelphia Eagles,H,12,15,Unknown
+2024-09-22,2024,Reg,RS,Pittsburgh Steelers,Los Angeles Chargers,H,20,10,Unknown
+2024-09-22,2024,Reg,RS,Los Angeles Chargers,Pittsburgh Steelers,A,10,20,Unknown
+2024-09-22,2024,Reg,RS,Carolina Panthers,Las Vegas Raiders,A,36,22,Unknown
+2024-09-22,2024,Reg,RS,Las Vegas Raiders,Carolina Panthers,H,22,36,Unknown
+2024-09-22,2024,Reg,RS,Seattle Seahawks,Miami Dolphins,H,24,3,Unknown
+2024-09-22,2024,Reg,RS,Miami Dolphins,Seattle Seahawks,A,3,24,Unknown
+2024-09-22,2024,Reg,RS,Detroit Lions,Arizona Cardinals,A,20,13,Unknown
+2024-09-22,2024,Reg,RS,Arizona Cardinals,Detroit Lions,H,13,20,Unknown
+2024-09-22,2024,Reg,RS,Baltimore Ravens,Dallas Cowboys,A,28,25,Unknown
+2024-09-22,2024,Reg,RS,Dallas Cowboys,Baltimore Ravens,H,25,28,Unknown
+2024-09-22,2024,Reg,RS,Los Angeles Rams,San Francisco 49ers,H,27,24,Unknown
+2024-09-22,2024,Reg,RS,San Francisco 49ers,Los Angeles Rams,A,24,27,Unknown
+2024-09-22,2024,Reg,RS,Kansas City Chiefs,Atlanta Falcons,A,22,17,Unknown
+2024-09-22,2024,Reg,RS,Atlanta Falcons,Kansas City Chiefs,H,17,22,Unknown
+2024-09-23,2024,Reg,RS,Buffalo Bills,Jacksonville Jaguars,H,47,10,Unknown
+2024-09-23,2024,Reg,RS,Jacksonville Jaguars,Buffalo Bills,A,10,47,Unknown
+2024-09-23,2024,Reg,RS,Washington Commanders,Cincinnati Bengals,A,38,33,Unknown
+2024-09-23,2024,Reg,RS,Cincinnati Bengals,Washington Commanders,H,33,38,Unknown
+2024-09-26,2024,Reg,RS,Dallas Cowboys,New York Giants,A,20,15,Unknown
+2024-09-26,2024,Reg,RS,New York Giants,Dallas Cowboys,H,15,20,Unknown
+2024-09-29,2024,Reg,RS,Atlanta Falcons,New Orleans Saints,H,26,24,Unknown
+2024-09-29,2024,Reg,RS,New Orleans Saints,Atlanta Falcons,A,24,26,Unknown
+2024-09-29,2024,Reg,RS,Cincinnati Bengals,Carolina Panthers,A,34,24,Unknown
+2024-09-29,2024,Reg,RS,Carolina Panthers,Cincinnati Bengals,H,24,34,Unknown
+2024-09-29,2024,Reg,RS,Chicago Bears,Los Angeles Rams,H,24,18,Unknown
+2024-09-29,2024,Reg,RS,Los Angeles Rams,Chicago Bears,A,18,24,Unknown
+2024-09-29,2024,Reg,RS,Indianapolis Colts,Pittsburgh Steelers,H,27,24,Unknown
+2024-09-29,2024,Reg,RS,Pittsburgh Steelers,Indianapolis Colts,A,24,27,Unknown
+2024-09-29,2024,Reg,RS,Denver Broncos,New York Jets,A,10,9,Unknown
+2024-09-29,2024,Reg,RS,New York Jets,Denver Broncos,H,9,10,Unknown
+2024-09-29,2024,Reg,RS,Minnesota Vikings,Green Bay Packers,A,31,29,Unknown
+2024-09-29,2024,Reg,RS,Green Bay Packers,Minnesota Vikings,H,29,31,Unknown
+2024-09-29,2024,Reg,RS,Houston Texans,Jacksonville Jaguars,H,24,20,Unknown
+2024-09-29,2024,Reg,RS,Jacksonville Jaguars,Houston Texans,A,20,24,Unknown
+2024-09-29,2024,Reg,RS,Tampa Bay Buccaneers,Philadelphia Eagles,H,33,16,Unknown
+2024-09-29,2024,Reg,RS,Philadelphia Eagles,Tampa Bay Buccaneers,A,16,33,Unknown
+2024-09-29,2024,Reg,RS,Washington Commanders,Arizona Cardinals,A,42,14,Unknown
+2024-09-29,2024,Reg,RS,Arizona Cardinals,Washington Commanders,H,14,42,Unknown
+2024-09-29,2024,Reg,RS,San Francisco 49ers,New England Patriots,H,30,13,Unknown
+2024-09-29,2024,Reg,RS,New England Patriots,San Francisco 49ers,A,13,30,Unknown
+2024-09-29,2024,Reg,RS,Las Vegas Raiders,Cleveland Browns,H,20,16,Unknown
+2024-09-29,2024,Reg,RS,Cleveland Browns,Las Vegas Raiders,A,16,20,Unknown
+2024-09-29,2024,Reg,RS,Kansas City Chiefs,Los Angeles Chargers,A,17,10,Unknown
+2024-09-29,2024,Reg,RS,Los Angeles Chargers,Kansas City Chiefs,H,10,17,Unknown
+2024-09-29,2024,Reg,RS,Baltimore Ravens,Buffalo Bills,H,35,10,Unknown
+2024-09-29,2024,Reg,RS,Buffalo Bills,Baltimore Ravens,A,10,35,Unknown
+2024-09-30,2024,Reg,RS,Tennessee Titans,Miami Dolphins,A,31,12,Unknown
+2024-09-30,2024,Reg,RS,Miami Dolphins,Tennessee Titans,H,12,31,Unknown
+2024-09-30,2024,Reg,RS,Detroit Lions,Seattle Seahawks,H,42,29,Unknown
+2024-09-30,2024,Reg,RS,Seattle Seahawks,Detroit Lions,A,29,42,Unknown
+2024-10-03,2024,Reg,RS,Atlanta Falcons,Tampa Bay Buccaneers,H,36,30,Unknown
+2024-10-03,2024,Reg,RS,Tampa Bay Buccaneers,Atlanta Falcons,A,30,36,Unknown
+2024-10-06,2024,Reg,RS,Minnesota Vikings,New York Jets,H,23,17,Unknown
+2024-10-06,2024,Reg,RS,New York Jets,Minnesota Vikings,A,17,23,Unknown
+2024-10-06,2024,Reg,RS,Houston Texans,Buffalo Bills,H,23,20,Unknown
+2024-10-06,2024,Reg,RS,Buffalo Bills,Houston Texans,A,20,23,Unknown
+2024-10-06,2024,Reg,RS,Chicago Bears,Carolina Panthers,H,36,10,Unknown
+2024-10-06,2024,Reg,RS,Carolina Panthers,Chicago Bears,A,10,36,Unknown
+2024-10-06,2024,Reg,RS,Baltimore Ravens,Cincinnati Bengals,A,41,38,Unknown
+2024-10-06,2024,Reg,RS,Cincinnati Bengals,Baltimore Ravens,H,38,41,Unknown
+2024-10-06,2024,Reg,RS,Washington Commanders,Cleveland Browns,H,34,13,Unknown
+2024-10-06,2024,Reg,RS,Cleveland Browns,Washington Commanders,A,13,34,Unknown
+2024-10-06,2024,Reg,RS,Jacksonville Jaguars,Indianapolis Colts,H,37,34,Unknown
+2024-10-06,2024,Reg,RS,Indianapolis Colts,Jacksonville Jaguars,A,34,37,Unknown
+2024-10-06,2024,Reg,RS,Miami Dolphins,New England Patriots,A,15,10,Unknown
+2024-10-06,2024,Reg,RS,New England Patriots,Miami Dolphins,H,10,15,Unknown
+2024-10-06,2024,Reg,RS,Arizona Cardinals,San Francisco 49ers,A,24,23,Unknown
+2024-10-06,2024,Reg,RS,San Francisco 49ers,Arizona Cardinals,H,23,24,Unknown
+2024-10-06,2024,Reg,RS,Denver Broncos,Las Vegas Raiders,H,34,18,Unknown
+2024-10-06,2024,Reg,RS,Las Vegas Raiders,Denver Broncos,A,18,34,Unknown
+2024-10-06,2024,Reg,RS,Green Bay Packers,Los Angeles Rams,A,24,19,Unknown
+2024-10-06,2024,Reg,RS,Los Angeles Rams,Green Bay Packers,H,19,24,Unknown
+2024-10-06,2024,Reg,RS,New York Giants,Seattle Seahawks,A,29,20,Unknown
+2024-10-06,2024,Reg,RS,Seattle Seahawks,New York Giants,H,20,29,Unknown
+2024-10-06,2024,Reg,RS,Dallas Cowboys,Pittsburgh Steelers,A,20,17,Unknown
+2024-10-06,2024,Reg,RS,Pittsburgh Steelers,Dallas Cowboys,H,17,20,Unknown
+2024-10-07,2024,Reg,RS,Kansas City Chiefs,New Orleans Saints,H,26,13,Unknown
+2024-10-07,2024,Reg,RS,New Orleans Saints,Kansas City Chiefs,A,13,26,Unknown
+2024-10-10,2024,Reg,RS,San Francisco 49ers,Seattle Seahawks,A,36,24,Unknown
+2024-10-10,2024,Reg,RS,Seattle Seahawks,San Francisco 49ers,H,24,36,Unknown
+2024-10-13,2024,Reg,RS,Chicago Bears,Jacksonville Jaguars,H,35,16,Unknown
+2024-10-13,2024,Reg,RS,Jacksonville Jaguars,Chicago Bears,A,16,35,Unknown
+2024-10-13,2024,Reg,RS,Philadelphia Eagles,Cleveland Browns,H,20,16,Unknown
+2024-10-13,2024,Reg,RS,Cleveland Browns,Philadelphia Eagles,A,16,20,Unknown
+2024-10-13,2024,Reg,RS,Indianapolis Colts,Tennessee Titans,A,20,17,Unknown
+2024-10-13,2024,Reg,RS,Tennessee Titans,Indianapolis Colts,H,17,20,Unknown
+2024-10-13,2024,Reg,RS,Green Bay Packers,Arizona Cardinals,H,34,13,Unknown
+2024-10-13,2024,Reg,RS,Arizona Cardinals,Green Bay Packers,A,13,34,Unknown
+2024-10-13,2024,Reg,RS,Houston Texans,New England Patriots,A,41,21,Unknown
+2024-10-13,2024,Reg,RS,New England Patriots,Houston Texans,H,21,41,Unknown
+2024-10-13,2024,Reg,RS,Tampa Bay Buccaneers,New Orleans Saints,A,51,27,Unknown
+2024-10-13,2024,Reg,RS,New Orleans Saints,Tampa Bay Buccaneers,H,27,51,Unknown
+2024-10-13,2024,Reg,RS,Baltimore Ravens,Washington Commanders,H,30,23,Unknown
+2024-10-13,2024,Reg,RS,Washington Commanders,Baltimore Ravens,A,23,30,Unknown
+2024-10-13,2024,Reg,RS,Los Angeles Chargers,Denver Broncos,A,23,16,Unknown
+2024-10-13,2024,Reg,RS,Denver Broncos,Los Angeles Chargers,H,16,23,Unknown
+2024-10-13,2024,Reg,RS,Pittsburgh Steelers,Las Vegas Raiders,A,32,13,Unknown
+2024-10-13,2024,Reg,RS,Las Vegas Raiders,Pittsburgh Steelers,H,13,32,Unknown
+2024-10-13,2024,Reg,RS,Atlanta Falcons,Carolina Panthers,A,38,20,Unknown
+2024-10-13,2024,Reg,RS,Carolina Panthers,Atlanta Falcons,H,20,38,Unknown
+2024-10-13,2024,Reg,RS,Detroit Lions,Dallas Cowboys,A,47,9,Unknown
+2024-10-13,2024,Reg,RS,Dallas Cowboys,Detroit Lions,H,9,47,Unknown
+2024-10-13,2024,Reg,RS,Cincinnati Bengals,New York Giants,A,17,7,Unknown
+2024-10-13,2024,Reg,RS,New York Giants,Cincinnati Bengals,H,7,17,Unknown
+2024-10-14,2024,Reg,RS,Buffalo Bills,New York Jets,A,23,20,Unknown
+2024-10-14,2024,Reg,RS,New York Jets,Buffalo Bills,H,20,23,Unknown
+2024-10-17,2024,Reg,RS,Denver Broncos,New Orleans Saints,A,33,10,Unknown
+2024-10-17,2024,Reg,RS,New Orleans Saints,Denver Broncos,H,10,33,Unknown
+2024-10-20,2024,Reg,RS,Jacksonville Jaguars,New England Patriots,H,32,16,Unknown
+2024-10-20,2024,Reg,RS,New England Patriots,Jacksonville Jaguars,A,16,32,Unknown
+2024-10-20,2024,Reg,RS,Detroit Lions,Minnesota Vikings,A,31,29,Unknown
+2024-10-20,2024,Reg,RS,Minnesota Vikings,Detroit Lions,H,29,31,Unknown
+2024-10-20,2024,Reg,RS,Seattle Seahawks,Atlanta Falcons,A,34,14,Unknown
+2024-10-20,2024,Reg,RS,Atlanta Falcons,Seattle Seahawks,H,14,34,Unknown
+2024-10-20,2024,Reg,RS,Buffalo Bills,Tennessee Titans,H,34,10,Unknown
+2024-10-20,2024,Reg,RS,Tennessee Titans,Buffalo Bills,A,10,34,Unknown
+2024-10-20,2024,Reg,RS,Cincinnati Bengals,Cleveland Browns,A,21,14,Unknown
+2024-10-20,2024,Reg,RS,Cleveland Browns,Cincinnati Bengals,H,14,21,Unknown
+2024-10-20,2024,Reg,RS,Indianapolis Colts,Miami Dolphins,H,16,10,Unknown
+2024-10-20,2024,Reg,RS,Miami Dolphins,Indianapolis Colts,A,10,16,Unknown
+2024-10-20,2024,Reg,RS,Green Bay Packers,Houston Texans,H,24,22,Unknown
+2024-10-20,2024,Reg,RS,Houston Texans,Green Bay Packers,A,22,24,Unknown
+2024-10-20,2024,Reg,RS,Philadelphia Eagles,New York Giants,A,28,3,Unknown
+2024-10-20,2024,Reg,RS,New York Giants,Philadelphia Eagles,H,3,28,Unknown
+2024-10-20,2024,Reg,RS,Washington Commanders,Carolina Panthers,H,40,7,Unknown
+2024-10-20,2024,Reg,RS,Carolina Panthers,Washington Commanders,A,7,40,Unknown
+2024-10-20,2024,Reg,RS,Los Angeles Rams,Las Vegas Raiders,H,20,15,Unknown
+2024-10-20,2024,Reg,RS,Las Vegas Raiders,Los Angeles Rams,A,15,20,Unknown
+2024-10-20,2024,Reg,RS,Kansas City Chiefs,San Francisco 49ers,A,28,18,Unknown
+2024-10-20,2024,Reg,RS,San Francisco 49ers,Kansas City Chiefs,H,18,28,Unknown
+2024-10-20,2024,Reg,RS,Pittsburgh Steelers,New York Jets,H,37,15,Unknown
+2024-10-20,2024,Reg,RS,New York Jets,Pittsburgh Steelers,A,15,37,Unknown
+2024-10-21,2024,Reg,RS,Baltimore Ravens,Tampa Bay Buccaneers,A,41,31,Unknown
+2024-10-21,2024,Reg,RS,Tampa Bay Buccaneers,Baltimore Ravens,H,31,41,Unknown
+2024-10-21,2024,Reg,RS,Arizona Cardinals,Los Angeles Chargers,H,17,15,Unknown
+2024-10-21,2024,Reg,RS,Los Angeles Chargers,Arizona Cardinals,A,15,17,Unknown
+2024-10-24,2024,Reg,RS,Los Angeles Rams,Minnesota Vikings,H,30,20,Unknown
+2024-10-24,2024,Reg,RS,Minnesota Vikings,Los Angeles Rams,A,20,30,Unknown
+2024-10-27,2024,Reg,RS,Detroit Lions,Tennessee Titans,H,52,14,Unknown
+2024-10-27,2024,Reg,RS,Tennessee Titans,Detroit Lions,A,14,52,Unknown
+2024-10-27,2024,Reg,RS,Atlanta Falcons,Tampa Bay Buccaneers,A,31,26,Unknown
+2024-10-27,2024,Reg,RS,Tampa Bay Buccaneers,Atlanta Falcons,H,26,31,Unknown
+2024-10-27,2024,Reg,RS,Philadelphia Eagles,Cincinnati Bengals,A,37,17,Unknown
+2024-10-27,2024,Reg,RS,Cincinnati Bengals,Philadelphia Eagles,H,17,37,Unknown
+2024-10-27,2024,Reg,RS,Cleveland Browns,Baltimore Ravens,H,29,24,Unknown
+2024-10-27,2024,Reg,RS,Baltimore Ravens,Cleveland Browns,A,24,29,Unknown
+2024-10-27,2024,Reg,RS,Houston Texans,Indianapolis Colts,H,23,20,Unknown
+2024-10-27,2024,Reg,RS,Indianapolis Colts,Houston Texans,A,20,23,Unknown
+2024-10-27,2024,Reg,RS,Arizona Cardinals,Miami Dolphins,A,28,27,Unknown
+2024-10-27,2024,Reg,RS,Miami Dolphins,Arizona Cardinals,H,27,28,Unknown
+2024-10-27,2024,Reg,RS,Green Bay Packers,Jacksonville Jaguars,A,30,27,Unknown
+2024-10-27,2024,Reg,RS,Jacksonville Jaguars,Green Bay Packers,H,27,30,Unknown
+2024-10-27,2024,Reg,RS,New England Patriots,New York Jets,H,25,22,Unknown
+2024-10-27,2024,Reg,RS,New York Jets,New England Patriots,A,22,25,Unknown
+2024-10-27,2024,Reg,RS,Buffalo Bills,Seattle Seahawks,A,31,10,Unknown
+2024-10-27,2024,Reg,RS,Seattle Seahawks,Buffalo Bills,H,10,31,Unknown
+2024-10-27,2024,Reg,RS,Los Angeles Chargers,New Orleans Saints,H,26,8,Unknown
+2024-10-27,2024,Reg,RS,New Orleans Saints,Los Angeles Chargers,A,8,26,Unknown
+2024-10-27,2024,Reg,RS,Washington Commanders,Chicago Bears,H,18,15,Unknown
+2024-10-27,2024,Reg,RS,Chicago Bears,Washington Commanders,A,15,18,Unknown
+2024-10-27,2024,Reg,RS,Kansas City Chiefs,Las Vegas Raiders,A,27,20,Unknown
+2024-10-27,2024,Reg,RS,Las Vegas Raiders,Kansas City Chiefs,H,20,27,Unknown
+2024-10-27,2024,Reg,RS,Denver Broncos,Carolina Panthers,H,28,14,Unknown
+2024-10-27,2024,Reg,RS,Carolina Panthers,Denver Broncos,A,14,28,Unknown
+2024-10-27,2024,Reg,RS,San Francisco 49ers,Dallas Cowboys,H,30,24,Unknown
+2024-10-27,2024,Reg,RS,Dallas Cowboys,San Francisco 49ers,A,24,30,Unknown
+2024-10-28,2024,Reg,RS,Pittsburgh Steelers,New York Giants,H,26,18,Unknown
+2024-10-28,2024,Reg,RS,New York Giants,Pittsburgh Steelers,A,18,26,Unknown
+2024-10-31,2024,Reg,RS,New York Jets,Houston Texans,H,21,13,Unknown
+2024-10-31,2024,Reg,RS,Houston Texans,New York Jets,A,13,21,Unknown
+2024-11-03,2024,Reg,RS,Atlanta Falcons,Dallas Cowboys,H,27,21,Unknown
+2024-11-03,2024,Reg,RS,Dallas Cowboys,Atlanta Falcons,A,21,27,Unknown
+2024-11-03,2024,Reg,RS,Buffalo Bills,Miami Dolphins,H,30,27,Unknown
+2024-11-03,2024,Reg,RS,Miami Dolphins,Buffalo Bills,A,27,30,Unknown
+2024-11-03,2024,Reg,RS,Carolina Panthers,New Orleans Saints,H,23,22,Unknown
+2024-11-03,2024,Reg,RS,New Orleans Saints,Carolina Panthers,A,22,23,Unknown
+2024-11-03,2024,Reg,RS,Cincinnati Bengals,Las Vegas Raiders,H,41,24,Unknown
+2024-11-03,2024,Reg,RS,Las Vegas Raiders,Cincinnati Bengals,A,24,41,Unknown
+2024-11-03,2024,Reg,RS,Los Angeles Chargers,Cleveland Browns,A,27,10,Unknown
+2024-11-03,2024,Reg,RS,Cleveland Browns,Los Angeles Chargers,H,10,27,Unknown
+2024-11-03,2024,Reg,RS,Baltimore Ravens,Denver Broncos,H,41,10,Unknown
+2024-11-03,2024,Reg,RS,Denver Broncos,Baltimore Ravens,A,10,41,Unknown
+2024-11-03,2024,Reg,RS,Tennessee Titans,New England Patriots,H,20,17,Unknown
+2024-11-03,2024,Reg,RS,New England Patriots,Tennessee Titans,A,17,20,Unknown
+2024-11-03,2024,Reg,RS,Washington Commanders,New York Giants,A,27,22,Unknown
+2024-11-03,2024,Reg,RS,New York Giants,Washington Commanders,H,22,27,Unknown
+2024-11-03,2024,Reg,RS,Arizona Cardinals,Chicago Bears,H,29,9,Unknown
+2024-11-03,2024,Reg,RS,Chicago Bears,Arizona Cardinals,A,9,29,Unknown
+2024-11-03,2024,Reg,RS,Philadelphia Eagles,Jacksonville Jaguars,H,28,23,Unknown
+2024-11-03,2024,Reg,RS,Jacksonville Jaguars,Philadelphia Eagles,A,23,28,Unknown
+2024-11-03,2024,Reg,RS,Detroit Lions,Green Bay Packers,A,24,14,Unknown
+2024-11-03,2024,Reg,RS,Green Bay Packers,Detroit Lions,H,14,24,Unknown
+2024-11-03,2024,Reg,RS,Los Angeles Rams,Seattle Seahawks,A,26,20,Unknown
+2024-11-03,2024,Reg,RS,Seattle Seahawks,Los Angeles Rams,H,20,26,Unknown
+2024-11-03,2024,Reg,RS,Minnesota Vikings,Indianapolis Colts,H,21,13,Unknown
+2024-11-03,2024,Reg,RS,Indianapolis Colts,Minnesota Vikings,A,13,21,Unknown
+2024-11-04,2024,Reg,RS,Kansas City Chiefs,Tampa Bay Buccaneers,H,30,24,Unknown
+2024-11-04,2024,Reg,RS,Tampa Bay Buccaneers,Kansas City Chiefs,A,24,30,Unknown
+2024-11-07,2024,Reg,RS,Baltimore Ravens,Cincinnati Bengals,H,35,34,Unknown
+2024-11-07,2024,Reg,RS,Cincinnati Bengals,Baltimore Ravens,A,34,35,Unknown
+2024-11-10,2024,Reg,RS,Carolina Panthers,New York Giants,H,20,17,Unknown
+2024-11-10,2024,Reg,RS,New York Giants,Carolina Panthers,A,17,20,Unknown
+2024-11-10,2024,Reg,RS,New England Patriots,Chicago Bears,A,19,3,Unknown
+2024-11-10,2024,Reg,RS,Chicago Bears,New England Patriots,H,3,19,Unknown
+2024-11-10,2024,Reg,RS,Pittsburgh Steelers,Washington Commanders,A,28,27,Unknown
+2024-11-10,2024,Reg,RS,Washington Commanders,Pittsburgh Steelers,H,27,28,Unknown
+2024-11-10,2024,Reg,RS,San Francisco 49ers,Tampa Bay Buccaneers,A,23,20,Unknown
+2024-11-10,2024,Reg,RS,Tampa Bay Buccaneers,San Francisco 49ers,H,20,23,Unknown
+2024-11-10,2024,Reg,RS,New Orleans Saints,Atlanta Falcons,H,20,17,Unknown
+2024-11-10,2024,Reg,RS,Atlanta Falcons,New Orleans Saints,A,17,20,Unknown
+2024-11-10,2024,Reg,RS,Buffalo Bills,Indianapolis Colts,A,30,20,Unknown
+2024-11-10,2024,Reg,RS,Indianapolis Colts,Buffalo Bills,H,20,30,Unknown
+2024-11-10,2024,Reg,RS,Kansas City Chiefs,Denver Broncos,H,16,14,Unknown
+2024-11-10,2024,Reg,RS,Denver Broncos,Kansas City Chiefs,A,14,16,Unknown
+2024-11-10,2024,Reg,RS,Minnesota Vikings,Jacksonville Jaguars,A,12,7,Unknown
+2024-11-10,2024,Reg,RS,Jacksonville Jaguars,Minnesota Vikings,H,7,12,Unknown
+2024-11-10,2024,Reg,RS,Los Angeles Chargers,Tennessee Titans,H,27,17,Unknown
+2024-11-10,2024,Reg,RS,Tennessee Titans,Los Angeles Chargers,A,17,27,Unknown
+2024-11-10,2024,Reg,RS,Philadelphia Eagles,Dallas Cowboys,A,34,6,Unknown
+2024-11-10,2024,Reg,RS,Dallas Cowboys,Philadelphia Eagles,H,6,34,Unknown
+2024-11-10,2024,Reg,RS,Arizona Cardinals,New York Jets,H,31,6,Unknown
+2024-11-10,2024,Reg,RS,New York Jets,Arizona Cardinals,A,6,31,Unknown
+2024-11-10,2024,Reg,RS,Detroit Lions,Houston Texans,A,26,23,Unknown
+2024-11-10,2024,Reg,RS,Houston Texans,Detroit Lions,H,23,26,Unknown
+2024-11-11,2024,Reg,RS,Miami Dolphins,Los Angeles Rams,A,23,15,Unknown
+2024-11-11,2024,Reg,RS,Los Angeles Rams,Miami Dolphins,H,15,23,Unknown
+2024-11-14,2024,Reg,RS,Philadelphia Eagles,Washington Commanders,H,26,18,Unknown
+2024-11-14,2024,Reg,RS,Washington Commanders,Philadelphia Eagles,A,18,26,Unknown
+2024-11-17,2024,Reg,RS,Green Bay Packers,Chicago Bears,A,20,19,Unknown
+2024-11-17,2024,Reg,RS,Chicago Bears,Green Bay Packers,H,19,20,Unknown
+2024-11-17,2024,Reg,RS,New Orleans Saints,Cleveland Browns,H,35,14,Unknown
+2024-11-17,2024,Reg,RS,Cleveland Browns,New Orleans Saints,A,14,35,Unknown
+2024-11-17,2024,Reg,RS,Detroit Lions,Jacksonville Jaguars,H,52,6,Unknown
+2024-11-17,2024,Reg,RS,Jacksonville Jaguars,Detroit Lions,A,6,52,Unknown
+2024-11-17,2024,Reg,RS,Miami Dolphins,Las Vegas Raiders,H,34,19,Unknown
+2024-11-17,2024,Reg,RS,Las Vegas Raiders,Miami Dolphins,A,19,34,Unknown
+2024-11-17,2024,Reg,RS,Minnesota Vikings,Tennessee Titans,A,23,13,Unknown
+2024-11-17,2024,Reg,RS,Tennessee Titans,Minnesota Vikings,H,13,23,Unknown
+2024-11-17,2024,Reg,RS,Pittsburgh Steelers,Baltimore Ravens,H,18,16,Unknown
+2024-11-17,2024,Reg,RS,Baltimore Ravens,Pittsburgh Steelers,A,16,18,Unknown
+2024-11-17,2024,Reg,RS,Indianapolis Colts,New York Jets,A,28,27,Unknown
+2024-11-17,2024,Reg,RS,New York Jets,Indianapolis Colts,H,27,28,Unknown
+2024-11-17,2024,Reg,RS,Los Angeles Rams,New England Patriots,A,28,22,Unknown
+2024-11-17,2024,Reg,RS,New England Patriots,Los Angeles Rams,H,22,28,Unknown
+2024-11-17,2024,Reg,RS,Seattle Seahawks,San Francisco 49ers,A,20,17,Unknown
+2024-11-17,2024,Reg,RS,San Francisco 49ers,Seattle Seahawks,H,17,20,Unknown
+2024-11-17,2024,Reg,RS,Denver Broncos,Atlanta Falcons,H,38,6,Unknown
+2024-11-17,2024,Reg,RS,Atlanta Falcons,Denver Broncos,A,6,38,Unknown
+2024-11-17,2024,Reg,RS,Buffalo Bills,Kansas City Chiefs,H,30,21,Unknown
+2024-11-17,2024,Reg,RS,Kansas City Chiefs,Buffalo Bills,A,21,30,Unknown
+2024-11-17,2024,Reg,RS,Los Angeles Chargers,Cincinnati Bengals,H,34,27,Unknown
+2024-11-17,2024,Reg,RS,Cincinnati Bengals,Los Angeles Chargers,A,27,34,Unknown
+2024-11-18,2024,Reg,RS,Houston Texans,Dallas Cowboys,A,34,10,Unknown
+2024-11-18,2024,Reg,RS,Dallas Cowboys,Houston Texans,H,10,34,Unknown
+2024-11-21,2024,Reg,RS,Cleveland Browns,Pittsburgh Steelers,H,24,19,Unknown
+2024-11-21,2024,Reg,RS,Pittsburgh Steelers,Cleveland Browns,A,19,24,Unknown
+2024-11-24,2024,Reg,RS,Kansas City Chiefs,Carolina Panthers,A,30,27,Unknown
+2024-11-24,2024,Reg,RS,Carolina Panthers,Kansas City Chiefs,H,27,30,Unknown
+2024-11-24,2024,Reg,RS,Minnesota Vikings,Chicago Bears,A,30,27,Unknown
+2024-11-24,2024,Reg,RS,Chicago Bears,Minnesota Vikings,H,27,30,Unknown
+2024-11-24,2024,Reg,RS,Dallas Cowboys,Washington Commanders,A,34,26,Unknown
+2024-11-24,2024,Reg,RS,Washington Commanders,Dallas Cowboys,H,26,34,Unknown
+2024-11-24,2024,Reg,RS,Miami Dolphins,New England Patriots,H,34,15,Unknown
+2024-11-24,2024,Reg,RS,New England Patriots,Miami Dolphins,A,15,34,Unknown
+2024-11-24,2024,Reg,RS,Tampa Bay Buccaneers,New York Giants,A,30,7,Unknown
+2024-11-24,2024,Reg,RS,New York Giants,Tampa Bay Buccaneers,H,7,30,Unknown
+2024-11-24,2024,Reg,RS,Detroit Lions,Indianapolis Colts,A,24,6,Unknown
+2024-11-24,2024,Reg,RS,Indianapolis Colts,Detroit Lions,H,6,24,Unknown
+2024-11-24,2024,Reg,RS,Tennessee Titans,Houston Texans,A,32,27,Unknown
+2024-11-24,2024,Reg,RS,Houston Texans,Tennessee Titans,H,27,32,Unknown
+2024-11-24,2024,Reg,RS,Denver Broncos,Las Vegas Raiders,A,29,19,Unknown
+2024-11-24,2024,Reg,RS,Las Vegas Raiders,Denver Broncos,H,19,29,Unknown
+2024-11-24,2024,Reg,RS,Seattle Seahawks,Arizona Cardinals,H,16,6,Unknown
+2024-11-24,2024,Reg,RS,Arizona Cardinals,Seattle Seahawks,A,6,16,Unknown
+2024-11-24,2024,Reg,RS,Green Bay Packers,San Francisco 49ers,H,38,10,Unknown
+2024-11-24,2024,Reg,RS,San Francisco 49ers,Green Bay Packers,A,10,38,Unknown
+2024-11-24,2024,Reg,RS,Philadelphia Eagles,Los Angeles Rams,A,37,20,Unknown
+2024-11-24,2024,Reg,RS,Los Angeles Rams,Philadelphia Eagles,H,20,37,Unknown
+2024-11-25,2024,Reg,RS,Baltimore Ravens,Los Angeles Chargers,A,30,23,Unknown
+2024-11-25,2024,Reg,RS,Los Angeles Chargers,Baltimore Ravens,H,23,30,Unknown
+2024-11-28,2024,Reg,RS,Detroit Lions,Chicago Bears,H,23,20,Unknown
+2024-11-28,2024,Reg,RS,Chicago Bears,Detroit Lions,A,20,23,Unknown
+2024-11-28,2024,Reg,RS,Dallas Cowboys,New York Giants,H,27,20,Unknown
+2024-11-28,2024,Reg,RS,New York Giants,Dallas Cowboys,A,20,27,Unknown
+2024-11-28,2024,Reg,RS,Green Bay Packers,Miami Dolphins,H,30,17,Unknown
+2024-11-28,2024,Reg,RS,Miami Dolphins,Green Bay Packers,A,17,30,Unknown
+2024-11-29,2024,Reg,RS,Kansas City Chiefs,Las Vegas Raiders,H,19,17,Unknown
+2024-11-29,2024,Reg,RS,Las Vegas Raiders,Kansas City Chiefs,A,17,19,Unknown
+2024-12-01,2024,Reg,RS,Los Angeles Chargers,Atlanta Falcons,A,17,13,Unknown
+2024-12-01,2024,Reg,RS,Atlanta Falcons,Los Angeles Chargers,H,13,17,Unknown
+2024-12-01,2024,Reg,RS,Pittsburgh Steelers,Cincinnati Bengals,A,44,38,Unknown
+2024-12-01,2024,Reg,RS,Cincinnati Bengals,Pittsburgh Steelers,H,38,44,Unknown
+2024-12-01,2024,Reg,RS,Minnesota Vikings,Arizona Cardinals,H,23,22,Unknown
+2024-12-01,2024,Reg,RS,Arizona Cardinals,Minnesota Vikings,A,22,23,Unknown
+2024-12-01,2024,Reg,RS,Seattle Seahawks,New York Jets,A,26,21,Unknown
+2024-12-01,2024,Reg,RS,New York Jets,Seattle Seahawks,H,21,26,Unknown
+2024-12-01,2024,Reg,RS,Washington Commanders,Tennessee Titans,H,42,19,Unknown
+2024-12-01,2024,Reg,RS,Tennessee Titans,Washington Commanders,A,19,42,Unknown
+2024-12-01,2024,Reg,RS,Indianapolis Colts,New England Patriots,A,25,24,Unknown
+2024-12-01,2024,Reg,RS,New England Patriots,Indianapolis Colts,H,24,25,Unknown
+2024-12-01,2024,Reg,RS,Houston Texans,Jacksonville Jaguars,A,23,20,Unknown
+2024-12-01,2024,Reg,RS,Jacksonville Jaguars,Houston Texans,H,20,23,Unknown
+2024-12-01,2024,Reg,RS,Tampa Bay Buccaneers,Carolina Panthers,A,26,23,Unknown
+2024-12-01,2024,Reg,RS,Carolina Panthers,Tampa Bay Buccaneers,H,23,26,Unknown
+2024-12-01,2024,Reg,RS,Los Angeles Rams,New Orleans Saints,A,21,14,Unknown
+2024-12-01,2024,Reg,RS,New Orleans Saints,Los Angeles Rams,H,14,21,Unknown
+2024-12-01,2024,Reg,RS,Philadelphia Eagles,Baltimore Ravens,A,24,19,Unknown
+2024-12-01,2024,Reg,RS,Baltimore Ravens,Philadelphia Eagles,H,19,24,Unknown
+2024-12-01,2024,Reg,RS,Buffalo Bills,San Francisco 49ers,H,35,10,Unknown
+2024-12-01,2024,Reg,RS,San Francisco 49ers,Buffalo Bills,A,10,35,Unknown
+2024-12-02,2024,Reg,RS,Denver Broncos,Cleveland Browns,H,41,32,Unknown
+2024-12-02,2024,Reg,RS,Cleveland Browns,Denver Broncos,A,32,41,Unknown
+2024-12-05,2024,Reg,RS,Detroit Lions,Green Bay Packers,H,34,31,Unknown
+2024-12-05,2024,Reg,RS,Green Bay Packers,Detroit Lions,A,31,34,Unknown
+2024-12-08,2024,Reg,RS,Minnesota Vikings,Atlanta Falcons,H,42,21,Unknown
+2024-12-08,2024,Reg,RS,Atlanta Falcons,Minnesota Vikings,A,21,42,Unknown
+2024-12-08,2024,Reg,RS,Philadelphia Eagles,Carolina Panthers,H,22,16,Unknown
+2024-12-08,2024,Reg,RS,Carolina Panthers,Philadelphia Eagles,A,16,22,Unknown
+2024-12-08,2024,Reg,RS,Pittsburgh Steelers,Cleveland Browns,H,27,14,Unknown
+2024-12-08,2024,Reg,RS,Cleveland Browns,Pittsburgh Steelers,A,14,27,Unknown
+2024-12-08,2024,Reg,RS,Jacksonville Jaguars,Tennessee Titans,A,10,6,Unknown
+2024-12-08,2024,Reg,RS,Tennessee Titans,Jacksonville Jaguars,H,6,10,Unknown
+2024-12-08,2024,Reg,RS,Miami Dolphins,New York Jets,H,32,26,Unknown
+2024-12-08,2024,Reg,RS,New York Jets,Miami Dolphins,A,26,32,Unknown
+2024-12-08,2024,Reg,RS,New Orleans Saints,New York Giants,A,14,11,Unknown
+2024-12-08,2024,Reg,RS,New York Giants,New Orleans Saints,H,11,14,Unknown
+2024-12-08,2024,Reg,RS,Tampa Bay Buccaneers,Las Vegas Raiders,H,28,13,Unknown
+2024-12-08,2024,Reg,RS,Las Vegas Raiders,Tampa Bay Buccaneers,A,13,28,Unknown
+2024-12-08,2024,Reg,RS,Seattle Seahawks,Arizona Cardinals,A,30,18,Unknown
+2024-12-08,2024,Reg,RS,Arizona Cardinals,Seattle Seahawks,H,18,30,Unknown
+2024-12-08,2024,Reg,RS,Los Angeles Rams,Buffalo Bills,H,44,42,Unknown
+2024-12-08,2024,Reg,RS,Buffalo Bills,Los Angeles Rams,A,42,44,Unknown
+2024-12-08,2024,Reg,RS,San Francisco 49ers,Chicago Bears,H,38,13,Unknown
+2024-12-08,2024,Reg,RS,Chicago Bears,San Francisco 49ers,A,13,38,Unknown
+2024-12-08,2024,Reg,RS,Kansas City Chiefs,Los Angeles Chargers,H,19,17,Unknown
+2024-12-08,2024,Reg,RS,Los Angeles Chargers,Kansas City Chiefs,A,17,19,Unknown
+2024-12-09,2024,Reg,RS,Cincinnati Bengals,Dallas Cowboys,A,27,20,Unknown
+2024-12-09,2024,Reg,RS,Dallas Cowboys,Cincinnati Bengals,H,20,27,Unknown
+2024-12-12,2024,Reg,RS,Los Angeles Rams,San Francisco 49ers,A,12,6,Unknown
+2024-12-12,2024,Reg,RS,San Francisco 49ers,Los Angeles Rams,H,6,12,Unknown
+2024-12-15,2024,Reg,RS,Dallas Cowboys,Carolina Panthers,A,30,14,Unknown
+2024-12-15,2024,Reg,RS,Carolina Panthers,Dallas Cowboys,H,14,30,Unknown
+2024-12-15,2024,Reg,RS,Cincinnati Bengals,Tennessee Titans,A,37,27,Unknown
+2024-12-15,2024,Reg,RS,Tennessee Titans,Cincinnati Bengals,H,27,37,Unknown
+2024-12-15,2024,Reg,RS,Kansas City Chiefs,Cleveland Browns,A,21,7,Unknown
+2024-12-15,2024,Reg,RS,Cleveland Browns,Kansas City Chiefs,H,7,21,Unknown
+2024-12-15,2024,Reg,RS,Houston Texans,Miami Dolphins,H,20,12,Unknown
+2024-12-15,2024,Reg,RS,Miami Dolphins,Houston Texans,A,12,20,Unknown
+2024-12-15,2024,Reg,RS,New York Jets,Jacksonville Jaguars,A,32,25,Unknown
+2024-12-15,2024,Reg,RS,Jacksonville Jaguars,New York Jets,H,25,32,Unknown
+2024-12-15,2024,Reg,RS,Washington Commanders,New Orleans Saints,A,20,19,Unknown
+2024-12-15,2024,Reg,RS,New Orleans Saints,Washington Commanders,H,19,20,Unknown
+2024-12-15,2024,Reg,RS,Baltimore Ravens,New York Giants,A,35,14,Unknown
+2024-12-15,2024,Reg,RS,New York Giants,Baltimore Ravens,H,14,35,Unknown
+2024-12-15,2024,Reg,RS,Buffalo Bills,Detroit Lions,A,48,42,Unknown
+2024-12-15,2024,Reg,RS,Detroit Lions,Buffalo Bills,H,42,48,Unknown
+2024-12-15,2024,Reg,RS,Denver Broncos,Indianapolis Colts,H,31,13,Unknown
+2024-12-15,2024,Reg,RS,Indianapolis Colts,Denver Broncos,A,13,31,Unknown
+2024-12-15,2024,Reg,RS,Arizona Cardinals,New England Patriots,H,30,17,Unknown
+2024-12-15,2024,Reg,RS,New England Patriots,Arizona Cardinals,A,17,30,Unknown
+2024-12-15,2024,Reg,RS,Philadelphia Eagles,Pittsburgh Steelers,H,27,13,Unknown
+2024-12-15,2024,Reg,RS,Pittsburgh Steelers,Philadelphia Eagles,A,13,27,Unknown
+2024-12-15,2024,Reg,RS,Tampa Bay Buccaneers,Los Angeles Chargers,A,40,17,Unknown
+2024-12-15,2024,Reg,RS,Los Angeles Chargers,Tampa Bay Buccaneers,H,17,40,Unknown
+2024-12-15,2024,Reg,RS,Green Bay Packers,Seattle Seahawks,A,30,13,Unknown
+2024-12-15,2024,Reg,RS,Seattle Seahawks,Green Bay Packers,H,13,30,Unknown
+2024-12-16,2024,Reg,RS,Minnesota Vikings,Chicago Bears,H,30,12,Unknown
+2024-12-16,2024,Reg,RS,Chicago Bears,Minnesota Vikings,A,12,30,Unknown
+2024-12-16,2024,Reg,RS,Atlanta Falcons,Las Vegas Raiders,A,15,9,Unknown
+2024-12-16,2024,Reg,RS,Las Vegas Raiders,Atlanta Falcons,H,9,15,Unknown
+2024-12-19,2024,Reg,RS,Los Angeles Chargers,Denver Broncos,H,34,27,Unknown
+2024-12-19,2024,Reg,RS,Denver Broncos,Los Angeles Chargers,A,27,34,Unknown
+2024-12-21,2024,Reg,RS,Kansas City Chiefs,Houston Texans,H,27,19,Unknown
+2024-12-21,2024,Reg,RS,Houston Texans,Kansas City Chiefs,A,19,27,Unknown
+2024-12-21,2024,Reg,RS,Baltimore Ravens,Pittsburgh Steelers,H,34,17,Unknown
+2024-12-21,2024,Reg,RS,Pittsburgh Steelers,Baltimore Ravens,A,17,34,Unknown
+2024-12-22,2024,Reg,RS,Atlanta Falcons,New York Giants,H,34,7,Unknown
+2024-12-22,2024,Reg,RS,New York Giants,Atlanta Falcons,A,7,34,Unknown
+2024-12-22,2024,Reg,RS,Carolina Panthers,Arizona Cardinals,H,36,30,Unknown
+2024-12-22,2024,Reg,RS,Arizona Cardinals,Carolina Panthers,A,30,36,Unknown
+2024-12-22,2024,Reg,RS,Detroit Lions,Chicago Bears,A,34,17,Unknown
+2024-12-22,2024,Reg,RS,Chicago Bears,Detroit Lions,H,17,34,Unknown
+2024-12-22,2024,Reg,RS,Cincinnati Bengals,Cleveland Browns,H,24,6,Unknown
+2024-12-22,2024,Reg,RS,Cleveland Browns,Cincinnati Bengals,A,6,24,Unknown
+2024-12-22,2024,Reg,RS,Indianapolis Colts,Tennessee Titans,H,38,30,Unknown
+2024-12-22,2024,Reg,RS,Tennessee Titans,Indianapolis Colts,A,30,38,Unknown
+2024-12-22,2024,Reg,RS,Los Angeles Rams,New York Jets,A,19,9,Unknown
+2024-12-22,2024,Reg,RS,New York Jets,Los Angeles Rams,H,9,19,Unknown
+2024-12-22,2024,Reg,RS,Washington Commanders,Philadelphia Eagles,H,36,33,Unknown
+2024-12-22,2024,Reg,RS,Philadelphia Eagles,Washington Commanders,A,33,36,Unknown
+2024-12-22,2024,Reg,RS,Minnesota Vikings,Seattle Seahawks,A,27,24,Unknown
+2024-12-22,2024,Reg,RS,Seattle Seahawks,Minnesota Vikings,H,24,27,Unknown
+2024-12-22,2024,Reg,RS,Buffalo Bills,New England Patriots,H,24,21,Unknown
+2024-12-22,2024,Reg,RS,New England Patriots,Buffalo Bills,A,21,24,Unknown
+2024-12-22,2024,Reg,RS,Las Vegas Raiders,Jacksonville Jaguars,H,19,14,Unknown
+2024-12-22,2024,Reg,RS,Jacksonville Jaguars,Las Vegas Raiders,A,14,19,Unknown
+2024-12-22,2024,Reg,RS,Miami Dolphins,San Francisco 49ers,H,29,17,Unknown
+2024-12-22,2024,Reg,RS,San Francisco 49ers,Miami Dolphins,A,17,29,Unknown
+2024-12-22,2024,Reg,RS,Dallas Cowboys,Tampa Bay Buccaneers,H,26,24,Unknown
+2024-12-22,2024,Reg,RS,Tampa Bay Buccaneers,Dallas Cowboys,A,24,26,Unknown
+2024-12-23,2024,Reg,RS,Green Bay Packers,New Orleans Saints,H,34,0,Unknown
+2024-12-23,2024,Reg,RS,New Orleans Saints,Green Bay Packers,A,0,34,Unknown
+2024-12-25,2024,Reg,RS,Kansas City Chiefs,Pittsburgh Steelers,A,29,10,Unknown
+2024-12-25,2024,Reg,RS,Pittsburgh Steelers,Kansas City Chiefs,H,10,29,Unknown
+2024-12-25,2024,Reg,RS,Baltimore Ravens,Houston Texans,A,31,2,Unknown
+2024-12-25,2024,Reg,RS,Houston Texans,Baltimore Ravens,H,2,31,Unknown
+2024-12-26,2024,Reg,RS,Seattle Seahawks,Chicago Bears,A,6,3,Unknown
+2024-12-26,2024,Reg,RS,Chicago Bears,Seattle Seahawks,H,3,6,Unknown
+2024-12-28,2024,Reg,RS,Los Angeles Chargers,New England Patriots,A,40,7,Unknown
+2024-12-28,2024,Reg,RS,New England Patriots,Los Angeles Chargers,H,7,40,Unknown
+2024-12-28,2024,Reg,RS,Cincinnati Bengals,Denver Broncos,H,30,24,Unknown
+2024-12-28,2024,Reg,RS,Denver Broncos,Cincinnati Bengals,A,24,30,Unknown
+2024-12-28,2024,Reg,RS,Los Angeles Rams,Arizona Cardinals,H,13,9,Unknown
+2024-12-28,2024,Reg,RS,Arizona Cardinals,Los Angeles Rams,A,9,13,Unknown
+2024-12-29,2024,Reg,RS,Buffalo Bills,New York Jets,H,40,14,Unknown
+2024-12-29,2024,Reg,RS,New York Jets,Buffalo Bills,A,14,40,Unknown
+2024-12-29,2024,Reg,RS,Tampa Bay Buccaneers,Carolina Panthers,H,48,14,Unknown
+2024-12-29,2024,Reg,RS,Carolina Panthers,Tampa Bay Buccaneers,A,14,48,Unknown
+2024-12-29,2024,Reg,RS,New York Giants,Indianapolis Colts,H,45,33,Unknown
+2024-12-29,2024,Reg,RS,Indianapolis Colts,New York Giants,A,33,45,Unknown
+2024-12-29,2024,Reg,RS,Philadelphia Eagles,Dallas Cowboys,H,41,7,Unknown
+2024-12-29,2024,Reg,RS,Dallas Cowboys,Philadelphia Eagles,A,7,41,Unknown
+2024-12-29,2024,Reg,RS,Jacksonville Jaguars,Tennessee Titans,H,20,13,Unknown
+2024-12-29,2024,Reg,RS,Tennessee Titans,Jacksonville Jaguars,A,13,20,Unknown
+2024-12-29,2024,Reg,RS,Las Vegas Raiders,New Orleans Saints,A,25,10,Unknown
+2024-12-29,2024,Reg,RS,New Orleans Saints,Las Vegas Raiders,H,10,25,Unknown
+2024-12-29,2024,Reg,RS,Miami Dolphins,Cleveland Browns,A,20,3,Unknown
+2024-12-29,2024,Reg,RS,Cleveland Browns,Miami Dolphins,H,3,20,Unknown
+2024-12-29,2024,Reg,RS,Minnesota Vikings,Green Bay Packers,H,27,25,Unknown
+2024-12-29,2024,Reg,RS,Green Bay Packers,Minnesota Vikings,A,25,27,Unknown
+2024-12-29,2024,Reg,RS,Washington Commanders,Atlanta Falcons,H,30,24,Unknown
+2024-12-29,2024,Reg,RS,Atlanta Falcons,Washington Commanders,A,24,30,Unknown
+2024-12-30,2024,Reg,RS,Detroit Lions,San Francisco 49ers,A,40,34,Unknown
+2024-12-30,2024,Reg,RS,San Francisco 49ers,Detroit Lions,H,34,40,Unknown
+2025-01-04,2024,Reg,RS,Baltimore Ravens,Cleveland Browns,H,35,10,Unknown
+2025-01-04,2024,Reg,RS,Cleveland Browns,Baltimore Ravens,A,10,35,Unknown
+2025-01-04,2024,Reg,RS,Cincinnati Bengals,Pittsburgh Steelers,A,19,17,Unknown
+2025-01-04,2024,Reg,RS,Pittsburgh Steelers,Cincinnati Bengals,H,17,19,Unknown
+2025-01-05,2024,Reg,RS,Carolina Panthers,Atlanta Falcons,A,44,38,Unknown
+2025-01-05,2024,Reg,RS,Atlanta Falcons,Carolina Panthers,H,38,44,Unknown
+2025-01-05,2024,Reg,RS,New England Patriots,Buffalo Bills,H,23,16,Unknown
+2025-01-05,2024,Reg,RS,Buffalo Bills,New England Patriots,A,16,23,Unknown
+2025-01-05,2024,Reg,RS,Chicago Bears,Green Bay Packers,A,24,22,Unknown
+2025-01-05,2024,Reg,RS,Green Bay Packers,Chicago Bears,H,22,24,Unknown
+2025-01-05,2024,Reg,RS,Indianapolis Colts,Jacksonville Jaguars,H,26,23,Unknown
+2025-01-05,2024,Reg,RS,Jacksonville Jaguars,Indianapolis Colts,A,23,26,Unknown
+2025-01-05,2024,Reg,RS,Washington Commanders,Dallas Cowboys,A,23,19,Unknown
+2025-01-05,2024,Reg,RS,Dallas Cowboys,Washington Commanders,H,19,23,Unknown
+2025-01-05,2024,Reg,RS,Houston Texans,Tennessee Titans,A,23,14,Unknown
+2025-01-05,2024,Reg,RS,Tennessee Titans,Houston Texans,H,14,23,Unknown
+2025-01-05,2024,Reg,RS,Tampa Bay Buccaneers,New Orleans Saints,H,27,19,Unknown
+2025-01-05,2024,Reg,RS,New Orleans Saints,Tampa Bay Buccaneers,A,19,27,Unknown
+2025-01-05,2024,Reg,RS,Philadelphia Eagles,New York Giants,H,20,13,Unknown
+2025-01-05,2024,Reg,RS,New York Giants,Philadelphia Eagles,A,13,20,Unknown
+2025-01-05,2024,Reg,RS,Arizona Cardinals,San Francisco 49ers,H,47,24,Unknown
+2025-01-05,2024,Reg,RS,San Francisco 49ers,Arizona Cardinals,A,24,47,Unknown
+2025-01-05,2024,Reg,RS,Denver Broncos,Kansas City Chiefs,H,38,0,Unknown
+2025-01-05,2024,Reg,RS,Kansas City Chiefs,Denver Broncos,A,0,38,Unknown
+2025-01-05,2024,Reg,RS,New York Jets,Miami Dolphins,H,32,20,Unknown
+2025-01-05,2024,Reg,RS,Miami Dolphins,New York Jets,A,20,32,Unknown
+2025-01-05,2024,Reg,RS,Los Angeles Chargers,Las Vegas Raiders,A,34,20,Unknown
+2025-01-05,2024,Reg,RS,Las Vegas Raiders,Los Angeles Chargers,H,20,34,Unknown
+2025-01-05,2024,Reg,RS,Seattle Seahawks,Los Angeles Rams,A,30,25,Unknown
+2025-01-05,2024,Reg,RS,Los Angeles Rams,Seattle Seahawks,H,25,30,Unknown
+2025-01-05,2024,Reg,RS,Detroit Lions,Minnesota Vikings,H,31,9,Unknown
+2025-01-05,2024,Reg,RS,Minnesota Vikings,Detroit Lions,A,9,31,Unknown
+2025-01-11,2024,Playoff,1,Houston Texans,Los Angeles Chargers,H,32,12,Unknown
+2025-01-11,2024,Playoff,1,Los Angeles Chargers,Houston Texans,A,12,32,Unknown
+2025-01-11,2024,Playoff,1,Baltimore Ravens,Pittsburgh Steelers,H,28,14,Unknown
+2025-01-11,2024,Playoff,1,Pittsburgh Steelers,Baltimore Ravens,A,14,28,Unknown
+2025-01-12,2024,Playoff,1,Buffalo Bills,Denver Broncos,H,31,7,Unknown
+2025-01-12,2024,Playoff,1,Denver Broncos,Buffalo Bills,A,7,31,Unknown
+2025-01-12,2024,Playoff,1,Philadelphia Eagles,Green Bay Packers,H,22,10,Unknown
+2025-01-12,2024,Playoff,1,Green Bay Packers,Philadelphia Eagles,A,10,22,Unknown
+2025-01-12,2024,Playoff,1,Washington Commanders,Tampa Bay Buccaneers,A,23,20,Unknown
+2025-01-12,2024,Playoff,1,Tampa Bay Buccaneers,Washington Commanders,H,20,23,Unknown
+2025-01-13,2024,Playoff,1,Los Angeles Rams,Minnesota Vikings,H,27,9,Unknown
+2025-01-13,2024,Playoff,1,Minnesota Vikings,Los Angeles Rams,A,9,27,Unknown
+2025-01-18,2024,Playoff,2,Kansas City Chiefs,Houston Texans,H,23,14,Unknown
+2025-01-18,2024,Playoff,2,Houston Texans,Kansas City Chiefs,A,14,23,Unknown
+2025-01-18,2024,Playoff,2,Washington Commanders,Detroit Lions,A,45,31,Unknown
+2025-01-18,2024,Playoff,2,Detroit Lions,Washington Commanders,H,31,45,Unknown
+2025-01-19,2024,Playoff,2,Philadelphia Eagles,Los Angeles Rams,H,28,22,Unknown
+2025-01-19,2024,Playoff,2,Los Angeles Rams,Philadelphia Eagles,A,22,28,Unknown
+2025-01-19,2024,Playoff,2,Buffalo Bills,Baltimore Ravens,H,27,25,Unknown
+2025-01-19,2024,Playoff,2,Baltimore Ravens,Buffalo Bills,A,25,27,Unknown
+2025-01-26,2024,Playoff,3,Philadelphia Eagles,Washington Commanders,H,55,23,Unknown
+2025-01-26,2024,Playoff,3,Washington Commanders,Philadelphia Eagles,A,23,55,Unknown
+2025-01-26,2024,Playoff,3,Kansas City Chiefs,Buffalo Bills,H,32,29,Unknown
+2025-01-26,2024,Playoff,3,Buffalo Bills,Kansas City Chiefs,A,29,32,Unknown
+2025-02-09,2024,Playoff,4,Philadelphia Eagles,Kansas City Chiefs,N,40,22,Unknown
+2025-02-09,2024,Playoff,4,Kansas City Chiefs,Philadelphia Eagles,N,22,40,Unknown

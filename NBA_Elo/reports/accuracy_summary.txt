@@ -1,0 +1,51 @@
+WNBA Echo Ratings - Model Accuracy Report
+=============================================
+
+All games             n=39283   accuracy=0.668   brier=0.2091   log_loss=0.6051
+Regular season        n=36735   accuracy=0.669   brier=0.2087   log_loss=0.6043
+Playoffs              n=2548   accuracy=0.660   brier=0.2141   log_loss=0.6173
+
+By season:
+  1996                  n=1257   accuracy=0.693   brier=0.1984   log_loss=0.5812
+  1997                  n=1261   accuracy=0.707   brier=0.1902   log_loss=0.5612
+  1998                  n=1260   accuracy=0.717   brier=0.1865   log_loss=0.5532
+  1999                  n= 791   accuracy=0.702   brier=0.2073   log_loss=0.6022
+  2000                  n=1264   accuracy=0.679   brier=0.2003   log_loss=0.5855
+  2001                  n=1260   accuracy=0.675   brier=0.2043   log_loss=0.5929
+  2002                  n=1260   accuracy=0.647   brier=0.2169   log_loss=0.6251
+  2003                  n=1277   accuracy=0.670   brier=0.2067   log_loss=0.5984
+  2004                  n=1271   accuracy=0.659   brier=0.2115   log_loss=0.6097
+  2005                  n=1314   accuracy=0.660   brier=0.2092   log_loss=0.6050
+  2006                  n=1319   accuracy=0.661   brier=0.2144   log_loss=0.6176
+  2007                  n=1309   accuracy=0.652   brier=0.2187   log_loss=0.6281
+  2008                  n=1316   accuracy=0.677   brier=0.2015   log_loss=0.5873
+  2009                  n=1315   accuracy=0.697   brier=0.1974   log_loss=0.5771
+  2010                  n=1312   accuracy=0.695   brier=0.2007   log_loss=0.5859
+  2011                  n=1311   accuracy=0.677   brier=0.2032   log_loss=0.5923
+  2012                  n=1074   accuracy=0.675   brier=0.2070   log_loss=0.6013
+  2013                  n=1314   accuracy=0.680   brier=0.2031   log_loss=0.5911
+  2014                  n=1319   accuracy=0.654   brier=0.2108   log_loss=0.6083
+  2015                  n=1311   accuracy=0.674   brier=0.2072   log_loss=0.6003
+  2016                  n=1316   accuracy=0.698   brier=0.1990   log_loss=0.5821
+  2017                  n=1309   accuracy=0.646   brier=0.2176   log_loss=0.6237
+  2018                  n=1312   accuracy=0.665   brier=0.2136   log_loss=0.6163
+  2019                  n=1312   accuracy=0.654   brier=0.2131   log_loss=0.6146
+  2020                  n=1143   accuracy=0.637   brier=0.2220   log_loss=0.6344
+  2021                  n=1171   accuracy=0.606   brier=0.2307   log_loss=0.6534
+  2022                  n=1323   accuracy=0.649   brier=0.2238   log_loss=0.6410
+  2023                  n=1320   accuracy=0.637   brier=0.2278   log_loss=0.6489
+  2024                  n=1319   accuracy=0.648   brier=0.2146   log_loss=0.6168
+  2025                  n=1321   accuracy=0.648   brier=0.2154   log_loss=0.6190
+  2026                  n=1322   accuracy=0.682   brier=0.2090   log_loss=0.6069
+
+Worst 10 predictions (highest log loss - biggest confident misses):
+  2016-04-05  nba_0010 117-124 nba_0018  (favored: nba_0010 @ 96.3%, winner: nba_0018, log_loss=3.307)
+  2002-02-06  nba_0014 89-97 nba_0005  (favored: nba_0014 @ 95.1%, winner: nba_0005, log_loss=3.020)
+  2014-04-16  nba_0016 87-100 nba_0023  (favored: nba_0016 @ 94.9%, winner: nba_0023, log_loss=2.978)
+  2016-03-06  nba_0014 112-95 nba_0010  (favored: nba_0010 @ 5.3%, winner: nba_0014, log_loss=2.942)
+  2024-04-12  nba_0007 89-107 nba_0009  (favored: nba_0007 @ 94.6%, winner: nba_0009, log_loss=2.924)
+  1998-02-13  nba_0012 82-85 nba_0007  (favored: nba_0012 @ 94.4%, winner: nba_0007, log_loss=2.880)
+  2025-02-01  nba_0018 103-105 nba_0030  (favored: nba_0018 @ 94.3%, winner: nba_0030, log_loss=2.860)
+  2019-03-10  nba_0010 111-115 nba_0024  (favored: nba_0010 @ 94.2%, winner: nba_0024, log_loss=2.853)
+  2017-04-05  nba_0026 95-102 nba_0014  (favored: nba_0026 @ 93.9%, winner: nba_0014, log_loss=2.802)
+  2015-04-13  nba_0001 108-112 nba_0020  (favored: nba_0001 @ 93.8%, winner: nba_0020, log_loss=2.774)

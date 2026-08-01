@@ -1,0 +1,535 @@
+Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT
+2011-09-08,2011,Reg,RS,Green Bay Packers,New Orleans Saints,H,42,34,Unknown
+2011-09-08,2011,Reg,RS,New Orleans Saints,Green Bay Packers,A,34,42,Unknown
+2011-09-11,2011,Reg,RS,Philadelphia Eagles,St. Louis Rams,A,31,13,Unknown
+2011-09-11,2011,Reg,RS,St. Louis Rams,Philadelphia Eagles,H,13,31,Unknown
+2011-09-11,2011,Reg,RS,Houston Texans,Indianapolis Colts,H,34,7,Unknown
+2011-09-11,2011,Reg,RS,Indianapolis Colts,Houston Texans,A,7,34,Unknown
+2011-09-11,2011,Reg,RS,Jacksonville Jaguars,Tennessee Titans,H,16,14,Unknown
+2011-09-11,2011,Reg,RS,Tennessee Titans,Jacksonville Jaguars,A,14,16,Unknown
+2011-09-11,2011,Reg,RS,Baltimore Ravens,Pittsburgh Steelers,H,35,7,Unknown
+2011-09-11,2011,Reg,RS,Pittsburgh Steelers,Baltimore Ravens,A,7,35,Unknown
+2011-09-11,2011,Reg,RS,Chicago Bears,Atlanta Falcons,H,30,12,Unknown
+2011-09-11,2011,Reg,RS,Atlanta Falcons,Chicago Bears,A,12,30,Unknown
+2011-09-11,2011,Reg,RS,Buffalo Bills,Kansas City Chiefs,A,41,7,Unknown
+2011-09-11,2011,Reg,RS,Kansas City Chiefs,Buffalo Bills,H,7,41,Unknown
+2011-09-11,2011,Reg,RS,Cincinnati Bengals,Cleveland Browns,A,27,17,Unknown
+2011-09-11,2011,Reg,RS,Cleveland Browns,Cincinnati Bengals,H,17,27,Unknown
+2011-09-11,2011,Reg,RS,Detroit Lions,Tampa Bay Buccaneers,A,27,20,Unknown
+2011-09-11,2011,Reg,RS,Tampa Bay Buccaneers,Detroit Lions,H,20,27,Unknown
+2011-09-11,2011,Reg,RS,Arizona Cardinals,Carolina Panthers,H,28,21,Unknown
+2011-09-11,2011,Reg,RS,Carolina Panthers,Arizona Cardinals,A,21,28,Unknown
+2011-09-11,2011,Reg,RS,San Diego Chargers,Minnesota Vikings,H,24,17,Unknown
+2011-09-11,2011,Reg,RS,Minnesota Vikings,San Diego Chargers,A,17,24,Unknown
+2011-09-11,2011,Reg,RS,San Francisco 49ers,Seattle Seahawks,H,33,17,Unknown
+2011-09-11,2011,Reg,RS,Seattle Seahawks,San Francisco 49ers,A,17,33,Unknown
+2011-09-11,2011,Reg,RS,Washington Redskins,New York Giants,H,28,14,Unknown
+2011-09-11,2011,Reg,RS,New York Giants,Washington Redskins,A,14,28,Unknown
+2011-09-11,2011,Reg,RS,New York Jets,Dallas Cowboys,H,27,24,Unknown
+2011-09-11,2011,Reg,RS,Dallas Cowboys,New York Jets,A,24,27,Unknown
+2011-09-12,2011,Reg,RS,New England Patriots,Miami Dolphins,A,38,24,Unknown
+2011-09-12,2011,Reg,RS,Miami Dolphins,New England Patriots,H,24,38,Unknown
+2011-09-12,2011,Reg,RS,Oakland Raiders,Denver Broncos,A,23,20,Unknown
+2011-09-12,2011,Reg,RS,Denver Broncos,Oakland Raiders,H,20,23,Unknown
+2011-09-18,2011,Reg,RS,Green Bay Packers,Carolina Panthers,A,30,23,Unknown
+2011-09-18,2011,Reg,RS,Carolina Panthers,Green Bay Packers,H,23,30,Unknown
+2011-09-18,2011,Reg,RS,New Orleans Saints,Chicago Bears,H,30,13,Unknown
+2011-09-18,2011,Reg,RS,Chicago Bears,New Orleans Saints,A,13,30,Unknown
+2011-09-18,2011,Reg,RS,Cleveland Browns,Indianapolis Colts,A,27,19,Unknown
+2011-09-18,2011,Reg,RS,Indianapolis Colts,Cleveland Browns,H,19,27,Unknown
+2011-09-18,2011,Reg,RS,Detroit Lions,Kansas City Chiefs,H,48,3,Unknown
+2011-09-18,2011,Reg,RS,Kansas City Chiefs,Detroit Lions,A,3,48,Unknown
+2011-09-18,2011,Reg,RS,New York Jets,Jacksonville Jaguars,H,32,3,Unknown
+2011-09-18,2011,Reg,RS,Jacksonville Jaguars,New York Jets,A,3,32,Unknown
+2011-09-18,2011,Reg,RS,Tennessee Titans,Baltimore Ravens,H,26,13,Unknown
+2011-09-18,2011,Reg,RS,Baltimore Ravens,Tennessee Titans,A,13,26,Unknown
+2011-09-18,2011,Reg,RS,Pittsburgh Steelers,Seattle Seahawks,H,24,0,Unknown
+2011-09-18,2011,Reg,RS,Seattle Seahawks,Pittsburgh Steelers,A,0,24,Unknown
+2011-09-18,2011,Reg,RS,Buffalo Bills,Oakland Raiders,H,38,35,Unknown
+2011-09-18,2011,Reg,RS,Oakland Raiders,Buffalo Bills,A,35,38,Unknown
+2011-09-18,2011,Reg,RS,Washington Redskins,Arizona Cardinals,H,22,21,Unknown
+2011-09-18,2011,Reg,RS,Arizona Cardinals,Washington Redskins,A,21,22,Unknown
+2011-09-18,2011,Reg,RS,Tampa Bay Buccaneers,Minnesota Vikings,A,24,20,Unknown
+2011-09-18,2011,Reg,RS,Minnesota Vikings,Tampa Bay Buccaneers,H,20,24,Unknown
+2011-09-18,2011,Reg,RS,Dallas Cowboys,San Francisco 49ers,A,27,24,Unknown
+2011-09-18,2011,Reg,RS,San Francisco 49ers,Dallas Cowboys,H,24,27,Unknown
+2011-09-18,2011,Reg,RS,Denver Broncos,Cincinnati Bengals,H,24,22,Unknown
+2011-09-18,2011,Reg,RS,Cincinnati Bengals,Denver Broncos,A,22,24,Unknown
+2011-09-18,2011,Reg,RS,Houston Texans,Miami Dolphins,A,23,13,Unknown
+2011-09-18,2011,Reg,RS,Miami Dolphins,Houston Texans,H,13,23,Unknown
+2011-09-18,2011,Reg,RS,New England Patriots,San Diego Chargers,H,35,21,Unknown
+2011-09-18,2011,Reg,RS,San Diego Chargers,New England Patriots,A,21,35,Unknown
+2011-09-18,2011,Reg,RS,Atlanta Falcons,Philadelphia Eagles,H,35,31,Unknown
+2011-09-18,2011,Reg,RS,Philadelphia Eagles,Atlanta Falcons,A,31,35,Unknown
+2011-09-19,2011,Reg,RS,New York Giants,St. Louis Rams,H,28,16,Unknown
+2011-09-19,2011,Reg,RS,St. Louis Rams,New York Giants,A,16,28,Unknown
+2011-09-25,2011,Reg,RS,Carolina Panthers,Jacksonville Jaguars,H,16,10,Unknown
+2011-09-25,2011,Reg,RS,Jacksonville Jaguars,Carolina Panthers,A,10,16,Unknown
+2011-09-25,2011,Reg,RS,San Francisco 49ers,Cincinnati Bengals,A,13,8,Unknown
+2011-09-25,2011,Reg,RS,Cincinnati Bengals,San Francisco 49ers,H,8,13,Unknown
+2011-09-25,2011,Reg,RS,Cleveland Browns,Miami Dolphins,H,17,16,Unknown
+2011-09-25,2011,Reg,RS,Miami Dolphins,Cleveland Browns,A,16,17,Unknown
+2011-09-25,2011,Reg,RS,Tennessee Titans,Denver Broncos,H,17,14,Unknown
+2011-09-25,2011,Reg,RS,Denver Broncos,Tennessee Titans,A,14,17,Unknown
+2011-09-25,2011,Reg,RS,New Orleans Saints,Houston Texans,H,40,33,Unknown
+2011-09-25,2011,Reg,RS,Houston Texans,New Orleans Saints,A,33,40,Unknown
+2011-09-25,2011,Reg,RS,Buffalo Bills,New England Patriots,H,34,31,Unknown
+2011-09-25,2011,Reg,RS,New England Patriots,Buffalo Bills,A,31,34,Unknown
+2011-09-25,2011,Reg,RS,New York Giants,Philadelphia Eagles,A,29,16,Unknown
+2011-09-25,2011,Reg,RS,Philadelphia Eagles,New York Giants,H,16,29,Unknown
+2011-09-25,2011,Reg,RS,Detroit Lions,Minnesota Vikings,A,26,23,Unknown
+2011-09-25,2011,Reg,RS,Minnesota Vikings,Detroit Lions,H,23,26,Unknown
+2011-09-25,2011,Reg,RS,Oakland Raiders,New York Jets,H,34,24,Unknown
+2011-09-25,2011,Reg,RS,New York Jets,Oakland Raiders,A,24,34,Unknown
+2011-09-25,2011,Reg,RS,San Diego Chargers,Kansas City Chiefs,H,20,17,Unknown
+2011-09-25,2011,Reg,RS,Kansas City Chiefs,San Diego Chargers,A,17,20,Unknown
+2011-09-25,2011,Reg,RS,Baltimore Ravens,St. Louis Rams,A,37,7,Unknown
+2011-09-25,2011,Reg,RS,St. Louis Rams,Baltimore Ravens,H,7,37,Unknown
+2011-09-25,2011,Reg,RS,Green Bay Packers,Chicago Bears,A,27,17,Unknown
+2011-09-25,2011,Reg,RS,Chicago Bears,Green Bay Packers,H,17,27,Unknown
+2011-09-25,2011,Reg,RS,Seattle Seahawks,Arizona Cardinals,H,13,10,Unknown
+2011-09-25,2011,Reg,RS,Arizona Cardinals,Seattle Seahawks,A,10,13,Unknown
+2011-09-25,2011,Reg,RS,Tampa Bay Buccaneers,Atlanta Falcons,H,16,13,Unknown
+2011-09-25,2011,Reg,RS,Atlanta Falcons,Tampa Bay Buccaneers,A,13,16,Unknown
+2011-09-25,2011,Reg,RS,Pittsburgh Steelers,Indianapolis Colts,A,23,20,Unknown
+2011-09-25,2011,Reg,RS,Indianapolis Colts,Pittsburgh Steelers,H,20,23,Unknown
+2011-09-26,2011,Reg,RS,Dallas Cowboys,Washington Redskins,H,18,16,Unknown
+2011-09-26,2011,Reg,RS,Washington Redskins,Dallas Cowboys,A,16,18,Unknown
+2011-10-02,2011,Reg,RS,Washington Redskins,St. Louis Rams,A,17,10,Unknown
+2011-10-02,2011,Reg,RS,St. Louis Rams,Washington Redskins,H,10,17,Unknown
+2011-10-02,2011,Reg,RS,Detroit Lions,Dallas Cowboys,A,34,30,Unknown
+2011-10-02,2011,Reg,RS,Dallas Cowboys,Detroit Lions,H,30,34,Unknown
+2011-10-02,2011,Reg,RS,Kansas City Chiefs,Minnesota Vikings,H,22,17,Unknown
+2011-10-02,2011,Reg,RS,Minnesota Vikings,Kansas City Chiefs,A,17,22,Unknown
+2011-10-02,2011,Reg,RS,Cincinnati Bengals,Buffalo Bills,H,23,20,Unknown
+2011-10-02,2011,Reg,RS,Buffalo Bills,Cincinnati Bengals,A,20,23,Unknown
+2011-10-02,2011,Reg,RS,Tennessee Titans,Cleveland Browns,A,31,13,Unknown
+2011-10-02,2011,Reg,RS,Cleveland Browns,Tennessee Titans,H,13,31,Unknown
+2011-10-02,2011,Reg,RS,Houston Texans,Pittsburgh Steelers,H,17,10,Unknown
+2011-10-02,2011,Reg,RS,Pittsburgh Steelers,Houston Texans,A,10,17,Unknown
+2011-10-02,2011,Reg,RS,New Orleans Saints,Jacksonville Jaguars,A,23,10,Unknown
+2011-10-02,2011,Reg,RS,Jacksonville Jaguars,New Orleans Saints,H,10,23,Unknown
+2011-10-02,2011,Reg,RS,San Francisco 49ers,Philadelphia Eagles,A,24,23,Unknown
+2011-10-02,2011,Reg,RS,Philadelphia Eagles,San Francisco 49ers,H,23,24,Unknown
+2011-10-02,2011,Reg,RS,Chicago Bears,Carolina Panthers,H,34,29,Unknown
+2011-10-02,2011,Reg,RS,Carolina Panthers,Chicago Bears,A,29,34,Unknown
+2011-10-02,2011,Reg,RS,Atlanta Falcons,Seattle Seahawks,A,30,28,Unknown
+2011-10-02,2011,Reg,RS,Seattle Seahawks,Atlanta Falcons,H,28,30,Unknown
+2011-10-02,2011,Reg,RS,New York Giants,Arizona Cardinals,A,31,27,Unknown
+2011-10-02,2011,Reg,RS,Arizona Cardinals,New York Giants,H,27,31,Unknown
+2011-10-02,2011,Reg,RS,Green Bay Packers,Denver Broncos,H,49,23,Unknown
+2011-10-02,2011,Reg,RS,Denver Broncos,Green Bay Packers,A,23,49,Unknown
+2011-10-02,2011,Reg,RS,San Diego Chargers,Miami Dolphins,H,26,16,Unknown
+2011-10-02,2011,Reg,RS,Miami Dolphins,San Diego Chargers,A,16,26,Unknown
+2011-10-02,2011,Reg,RS,New England Patriots,Oakland Raiders,A,31,19,Unknown
+2011-10-02,2011,Reg,RS,Oakland Raiders,New England Patriots,H,19,31,Unknown
+2011-10-02,2011,Reg,RS,Baltimore Ravens,New York Jets,H,34,17,Unknown
+2011-10-02,2011,Reg,RS,New York Jets,Baltimore Ravens,A,17,34,Unknown
+2011-10-03,2011,Reg,RS,Tampa Bay Buccaneers,Indianapolis Colts,H,24,17,Unknown
+2011-10-03,2011,Reg,RS,Indianapolis Colts,Tampa Bay Buccaneers,A,17,24,Unknown
+2011-10-09,2011,Reg,RS,Cincinnati Bengals,Jacksonville Jaguars,A,30,20,Unknown
+2011-10-09,2011,Reg,RS,Jacksonville Jaguars,Cincinnati Bengals,H,20,30,Unknown
+2011-10-09,2011,Reg,RS,Kansas City Chiefs,Indianapolis Colts,A,28,24,Unknown
+2011-10-09,2011,Reg,RS,Indianapolis Colts,Kansas City Chiefs,H,24,28,Unknown
+2011-10-09,2011,Reg,RS,Oakland Raiders,Houston Texans,A,25,20,Unknown
+2011-10-09,2011,Reg,RS,Houston Texans,Oakland Raiders,H,20,25,Unknown
+2011-10-09,2011,Reg,RS,Pittsburgh Steelers,Tennessee Titans,H,38,17,Unknown
+2011-10-09,2011,Reg,RS,Tennessee Titans,Pittsburgh Steelers,A,17,38,Unknown
+2011-10-09,2011,Reg,RS,Buffalo Bills,Philadelphia Eagles,H,31,24,Unknown
+2011-10-09,2011,Reg,RS,Philadelphia Eagles,Buffalo Bills,A,24,31,Unknown
+2011-10-09,2011,Reg,RS,New Orleans Saints,Carolina Panthers,A,30,27,Unknown
+2011-10-09,2011,Reg,RS,Carolina Panthers,New Orleans Saints,H,27,30,Unknown
+2011-10-09,2011,Reg,RS,Seattle Seahawks,New York Giants,A,36,25,Unknown
+2011-10-09,2011,Reg,RS,New York Giants,Seattle Seahawks,H,25,36,Unknown
+2011-10-09,2011,Reg,RS,Minnesota Vikings,Arizona Cardinals,H,34,10,Unknown
+2011-10-09,2011,Reg,RS,Arizona Cardinals,Minnesota Vikings,A,10,34,Unknown
+2011-10-09,2011,Reg,RS,San Francisco 49ers,Tampa Bay Buccaneers,H,48,3,Unknown
+2011-10-09,2011,Reg,RS,Tampa Bay Buccaneers,San Francisco 49ers,A,3,48,Unknown
+2011-10-09,2011,Reg,RS,New England Patriots,New York Jets,H,30,21,Unknown
+2011-10-09,2011,Reg,RS,New York Jets,New England Patriots,A,21,30,Unknown
+2011-10-09,2011,Reg,RS,San Diego Chargers,Denver Broncos,A,29,24,Unknown
+2011-10-09,2011,Reg,RS,Denver Broncos,San Diego Chargers,H,24,29,Unknown
+2011-10-09,2011,Reg,RS,Green Bay Packers,Atlanta Falcons,A,25,14,Unknown
+2011-10-09,2011,Reg,RS,Atlanta Falcons,Green Bay Packers,H,14,25,Unknown
+2011-10-10,2011,Reg,RS,Detroit Lions,Chicago Bears,H,24,13,Unknown
+2011-10-10,2011,Reg,RS,Chicago Bears,Detroit Lions,A,13,24,Unknown
+2011-10-16,2011,Reg,RS,Atlanta Falcons,Carolina Panthers,H,31,17,Unknown
+2011-10-16,2011,Reg,RS,Carolina Panthers,Atlanta Falcons,A,17,31,Unknown
+2011-10-16,2011,Reg,RS,New York Giants,Buffalo Bills,H,27,24,Unknown
+2011-10-16,2011,Reg,RS,Buffalo Bills,New York Giants,A,24,27,Unknown
+2011-10-16,2011,Reg,RS,Cincinnati Bengals,Indianapolis Colts,H,27,17,Unknown
+2011-10-16,2011,Reg,RS,Indianapolis Colts,Cincinnati Bengals,A,17,27,Unknown
+2011-10-16,2011,Reg,RS,Green Bay Packers,St. Louis Rams,H,24,3,Unknown
+2011-10-16,2011,Reg,RS,St. Louis Rams,Green Bay Packers,A,3,24,Unknown
+2011-10-16,2011,Reg,RS,Pittsburgh Steelers,Jacksonville Jaguars,H,17,13,Unknown
+2011-10-16,2011,Reg,RS,Jacksonville Jaguars,Pittsburgh Steelers,A,13,17,Unknown
+2011-10-16,2011,Reg,RS,San Francisco 49ers,Detroit Lions,A,25,19,Unknown
+2011-10-16,2011,Reg,RS,Detroit Lions,San Francisco 49ers,H,19,25,Unknown
+2011-10-16,2011,Reg,RS,Philadelphia Eagles,Washington Redskins,A,20,13,Unknown
+2011-10-16,2011,Reg,RS,Washington Redskins,Philadelphia Eagles,H,13,20,Unknown
+2011-10-16,2011,Reg,RS,Oakland Raiders,Cleveland Browns,H,24,17,Unknown
+2011-10-16,2011,Reg,RS,Cleveland Browns,Oakland Raiders,A,17,24,Unknown
+2011-10-16,2011,Reg,RS,Baltimore Ravens,Houston Texans,H,29,14,Unknown
+2011-10-16,2011,Reg,RS,Houston Texans,Baltimore Ravens,A,14,29,Unknown
+2011-10-16,2011,Reg,RS,New England Patriots,Dallas Cowboys,H,20,16,Unknown
+2011-10-16,2011,Reg,RS,Dallas Cowboys,New England Patriots,A,16,20,Unknown
+2011-10-16,2011,Reg,RS,Tampa Bay Buccaneers,New Orleans Saints,H,26,20,Unknown
+2011-10-16,2011,Reg,RS,New Orleans Saints,Tampa Bay Buccaneers,A,20,26,Unknown
+2011-10-16,2011,Reg,RS,Chicago Bears,Minnesota Vikings,H,39,10,Unknown
+2011-10-16,2011,Reg,RS,Minnesota Vikings,Chicago Bears,A,10,39,Unknown
+2011-10-17,2011,Reg,RS,New York Jets,Miami Dolphins,H,24,6,Unknown
+2011-10-17,2011,Reg,RS,Miami Dolphins,New York Jets,A,6,24,Unknown
+2011-10-23,2011,Reg,RS,Denver Broncos,Miami Dolphins,A,18,15,Unknown
+2011-10-23,2011,Reg,RS,Miami Dolphins,Denver Broncos,H,15,18,Unknown
+2011-10-23,2011,Reg,RS,Houston Texans,Tennessee Titans,A,41,7,Unknown
+2011-10-23,2011,Reg,RS,Tennessee Titans,Houston Texans,H,7,41,Unknown
+2011-10-23,2011,Reg,RS,New York Jets,San Diego Chargers,H,27,21,Unknown
+2011-10-23,2011,Reg,RS,San Diego Chargers,New York Jets,A,21,27,Unknown
+2011-10-23,2011,Reg,RS,Cleveland Browns,Seattle Seahawks,H,6,3,Unknown
+2011-10-23,2011,Reg,RS,Seattle Seahawks,Cleveland Browns,A,3,6,Unknown
+2011-10-23,2011,Reg,RS,Atlanta Falcons,Detroit Lions,A,23,16,Unknown
+2011-10-23,2011,Reg,RS,Detroit Lions,Atlanta Falcons,H,16,23,Unknown
+2011-10-23,2011,Reg,RS,Carolina Panthers,Washington Redskins,H,33,20,Unknown
+2011-10-23,2011,Reg,RS,Washington Redskins,Carolina Panthers,A,20,33,Unknown
+2011-10-23,2011,Reg,RS,Chicago Bears,Tampa Bay Buccaneers,A,24,18,Unknown
+2011-10-23,2011,Reg,RS,Tampa Bay Buccaneers,Chicago Bears,H,18,24,Unknown
+2011-10-23,2011,Reg,RS,Pittsburgh Steelers,Arizona Cardinals,A,32,20,Unknown
+2011-10-23,2011,Reg,RS,Arizona Cardinals,Pittsburgh Steelers,H,20,32,Unknown
+2011-10-23,2011,Reg,RS,Dallas Cowboys,St. Louis Rams,H,34,7,Unknown
+2011-10-23,2011,Reg,RS,St. Louis Rams,Dallas Cowboys,A,7,34,Unknown
+2011-10-23,2011,Reg,RS,Green Bay Packers,Minnesota Vikings,A,33,27,Unknown
+2011-10-23,2011,Reg,RS,Minnesota Vikings,Green Bay Packers,H,27,33,Unknown
+2011-10-23,2011,Reg,RS,Kansas City Chiefs,Oakland Raiders,A,28,0,Unknown
+2011-10-23,2011,Reg,RS,Oakland Raiders,Kansas City Chiefs,H,0,28,Unknown
+2011-10-23,2011,Reg,RS,New Orleans Saints,Indianapolis Colts,H,62,7,Unknown
+2011-10-23,2011,Reg,RS,Indianapolis Colts,New Orleans Saints,A,7,62,Unknown
+2011-10-24,2011,Reg,RS,Jacksonville Jaguars,Baltimore Ravens,H,12,7,Unknown
+2011-10-24,2011,Reg,RS,Baltimore Ravens,Jacksonville Jaguars,A,7,12,Unknown
+2011-10-30,2011,Reg,RS,St. Louis Rams,New Orleans Saints,H,31,21,Unknown
+2011-10-30,2011,Reg,RS,New Orleans Saints,St. Louis Rams,A,21,31,Unknown
+2011-10-30,2011,Reg,RS,Baltimore Ravens,Arizona Cardinals,H,30,27,Unknown
+2011-10-30,2011,Reg,RS,Arizona Cardinals,Baltimore Ravens,A,27,30,Unknown
+2011-10-30,2011,Reg,RS,New York Giants,Miami Dolphins,H,20,17,Unknown
+2011-10-30,2011,Reg,RS,Miami Dolphins,New York Giants,A,17,20,Unknown
+2011-10-30,2011,Reg,RS,Tennessee Titans,Indianapolis Colts,H,27,10,Unknown
+2011-10-30,2011,Reg,RS,Indianapolis Colts,Tennessee Titans,A,10,27,Unknown
+2011-10-30,2011,Reg,RS,Houston Texans,Jacksonville Jaguars,H,24,14,Unknown
+2011-10-30,2011,Reg,RS,Jacksonville Jaguars,Houston Texans,A,14,24,Unknown
+2011-10-30,2011,Reg,RS,Minnesota Vikings,Carolina Panthers,A,24,21,Unknown
+2011-10-30,2011,Reg,RS,Carolina Panthers,Minnesota Vikings,H,21,24,Unknown
+2011-10-30,2011,Reg,RS,Buffalo Bills,Washington Redskins,H,23,0,Unknown
+2011-10-30,2011,Reg,RS,Washington Redskins,Buffalo Bills,A,0,23,Unknown
+2011-10-30,2011,Reg,RS,Detroit Lions,Denver Broncos,A,45,10,Unknown
+2011-10-30,2011,Reg,RS,Denver Broncos,Detroit Lions,H,10,45,Unknown
+2011-10-30,2011,Reg,RS,San Francisco 49ers,Cleveland Browns,H,20,10,Unknown
+2011-10-30,2011,Reg,RS,Cleveland Browns,San Francisco 49ers,A,10,20,Unknown
+2011-10-30,2011,Reg,RS,Pittsburgh Steelers,New England Patriots,H,25,17,Unknown
+2011-10-30,2011,Reg,RS,New England Patriots,Pittsburgh Steelers,A,17,25,Unknown
+2011-10-30,2011,Reg,RS,Cincinnati Bengals,Seattle Seahawks,A,34,12,Unknown
+2011-10-30,2011,Reg,RS,Seattle Seahawks,Cincinnati Bengals,H,12,34,Unknown
+2011-10-30,2011,Reg,RS,Philadelphia Eagles,Dallas Cowboys,H,34,7,Unknown
+2011-10-30,2011,Reg,RS,Dallas Cowboys,Philadelphia Eagles,A,7,34,Unknown
+2011-10-31,2011,Reg,RS,Kansas City Chiefs,San Diego Chargers,H,23,20,Unknown
+2011-10-31,2011,Reg,RS,San Diego Chargers,Kansas City Chiefs,A,20,23,Unknown
+2011-11-06,2011,Reg,RS,Atlanta Falcons,Indianapolis Colts,A,31,7,Unknown
+2011-11-06,2011,Reg,RS,Indianapolis Colts,Atlanta Falcons,H,7,31,Unknown
+2011-11-06,2011,Reg,RS,Dallas Cowboys,Seattle Seahawks,H,23,13,Unknown
+2011-11-06,2011,Reg,RS,Seattle Seahawks,Dallas Cowboys,A,13,23,Unknown
+2011-11-06,2011,Reg,RS,New York Jets,Buffalo Bills,A,27,11,Unknown
+2011-11-06,2011,Reg,RS,Buffalo Bills,New York Jets,H,11,27,Unknown
+2011-11-06,2011,Reg,RS,Houston Texans,Cleveland Browns,H,30,12,Unknown
+2011-11-06,2011,Reg,RS,Cleveland Browns,Houston Texans,A,12,30,Unknown
+2011-11-06,2011,Reg,RS,Miami Dolphins,Kansas City Chiefs,A,31,3,Unknown
+2011-11-06,2011,Reg,RS,Kansas City Chiefs,Miami Dolphins,H,3,31,Unknown
+2011-11-06,2011,Reg,RS,San Francisco 49ers,Washington Redskins,A,19,11,Unknown
+2011-11-06,2011,Reg,RS,Washington Redskins,San Francisco 49ers,H,11,19,Unknown
+2011-11-06,2011,Reg,RS,New Orleans Saints,Tampa Bay Buccaneers,H,27,16,Unknown
+2011-11-06,2011,Reg,RS,Tampa Bay Buccaneers,New Orleans Saints,A,16,27,Unknown
+2011-11-06,2011,Reg,RS,Cincinnati Bengals,Tennessee Titans,A,24,17,Unknown
+2011-11-06,2011,Reg,RS,Tennessee Titans,Cincinnati Bengals,H,17,24,Unknown
+2011-11-06,2011,Reg,RS,Denver Broncos,Oakland Raiders,A,38,24,Unknown
+2011-11-06,2011,Reg,RS,Oakland Raiders,Denver Broncos,H,24,38,Unknown
+2011-11-06,2011,Reg,RS,Arizona Cardinals,St. Louis Rams,H,19,13,Unknown
+2011-11-06,2011,Reg,RS,St. Louis Rams,Arizona Cardinals,A,13,19,Unknown
+2011-11-06,2011,Reg,RS,Green Bay Packers,San Diego Chargers,A,45,38,Unknown
+2011-11-06,2011,Reg,RS,San Diego Chargers,Green Bay Packers,H,38,45,Unknown
+2011-11-06,2011,Reg,RS,New York Giants,New England Patriots,A,24,20,Unknown
+2011-11-06,2011,Reg,RS,New England Patriots,New York Giants,H,20,24,Unknown
+2011-11-06,2011,Reg,RS,Baltimore Ravens,Pittsburgh Steelers,A,23,20,Unknown
+2011-11-06,2011,Reg,RS,Pittsburgh Steelers,Baltimore Ravens,H,20,23,Unknown
+2011-11-07,2011,Reg,RS,Chicago Bears,Philadelphia Eagles,A,30,24,Unknown
+2011-11-07,2011,Reg,RS,Philadelphia Eagles,Chicago Bears,H,24,30,Unknown
+2011-11-10,2011,Reg,RS,Oakland Raiders,San Diego Chargers,A,24,17,Unknown
+2011-11-10,2011,Reg,RS,San Diego Chargers,Oakland Raiders,H,17,24,Unknown
+2011-11-13,2011,Reg,RS,Dallas Cowboys,Buffalo Bills,H,44,7,Unknown
+2011-11-13,2011,Reg,RS,Buffalo Bills,Dallas Cowboys,A,7,44,Unknown
+2011-11-13,2011,Reg,RS,Pittsburgh Steelers,Cincinnati Bengals,A,24,17,Unknown
+2011-11-13,2011,Reg,RS,Cincinnati Bengals,Pittsburgh Steelers,H,17,24,Unknown
+2011-11-13,2011,Reg,RS,Arizona Cardinals,Philadelphia Eagles,A,21,17,Unknown
+2011-11-13,2011,Reg,RS,Philadelphia Eagles,Arizona Cardinals,H,17,21,Unknown
+2011-11-13,2011,Reg,RS,Jacksonville Jaguars,Indianapolis Colts,A,17,3,Unknown
+2011-11-13,2011,Reg,RS,Indianapolis Colts,Jacksonville Jaguars,H,3,17,Unknown
+2011-11-13,2011,Reg,RS,Houston Texans,Tampa Bay Buccaneers,A,37,9,Unknown
+2011-11-13,2011,Reg,RS,Tampa Bay Buccaneers,Houston Texans,H,9,37,Unknown
+2011-11-13,2011,Reg,RS,New Orleans Saints,Atlanta Falcons,A,26,23,Unknown
+2011-11-13,2011,Reg,RS,Atlanta Falcons,New Orleans Saints,H,23,26,Unknown
+2011-11-13,2011,Reg,RS,St. Louis Rams,Cleveland Browns,A,13,12,Unknown
+2011-11-13,2011,Reg,RS,Cleveland Browns,St. Louis Rams,H,12,13,Unknown
+2011-11-13,2011,Reg,RS,Denver Broncos,Kansas City Chiefs,A,17,10,Unknown
+2011-11-13,2011,Reg,RS,Kansas City Chiefs,Denver Broncos,H,10,17,Unknown
+2011-11-13,2011,Reg,RS,Miami Dolphins,Washington Redskins,H,20,9,Unknown
+2011-11-13,2011,Reg,RS,Washington Redskins,Miami Dolphins,A,9,20,Unknown
+2011-11-13,2011,Reg,RS,Tennessee Titans,Carolina Panthers,A,30,3,Unknown
+2011-11-13,2011,Reg,RS,Carolina Panthers,Tennessee Titans,H,3,30,Unknown
+2011-11-13,2011,Reg,RS,Seattle Seahawks,Baltimore Ravens,H,22,17,Unknown
+2011-11-13,2011,Reg,RS,Baltimore Ravens,Seattle Seahawks,A,17,22,Unknown
+2011-11-13,2011,Reg,RS,San Francisco 49ers,New York Giants,H,27,20,Unknown
+2011-11-13,2011,Reg,RS,New York Giants,San Francisco 49ers,A,20,27,Unknown
+2011-11-13,2011,Reg,RS,Chicago Bears,Detroit Lions,H,37,13,Unknown
+2011-11-13,2011,Reg,RS,Detroit Lions,Chicago Bears,A,13,37,Unknown
+2011-11-13,2011,Reg,RS,New England Patriots,New York Jets,A,37,16,Unknown
+2011-11-13,2011,Reg,RS,New York Jets,New England Patriots,H,16,37,Unknown
+2011-11-14,2011,Reg,RS,Green Bay Packers,Minnesota Vikings,H,45,7,Unknown
+2011-11-14,2011,Reg,RS,Minnesota Vikings,Green Bay Packers,A,7,45,Unknown
+2011-11-17,2011,Reg,RS,Denver Broncos,New York Jets,H,17,13,Unknown
+2011-11-17,2011,Reg,RS,New York Jets,Denver Broncos,A,13,17,Unknown
+2011-11-20,2011,Reg,RS,Miami Dolphins,Buffalo Bills,H,35,8,Unknown
+2011-11-20,2011,Reg,RS,Buffalo Bills,Miami Dolphins,A,8,35,Unknown
+2011-11-20,2011,Reg,RS,Detroit Lions,Carolina Panthers,H,49,35,Unknown
+2011-11-20,2011,Reg,RS,Carolina Panthers,Detroit Lions,A,35,49,Unknown
+2011-11-20,2011,Reg,RS,Baltimore Ravens,Cincinnati Bengals,H,31,24,Unknown
+2011-11-20,2011,Reg,RS,Cincinnati Bengals,Baltimore Ravens,A,24,31,Unknown
+2011-11-20,2011,Reg,RS,Cleveland Browns,Jacksonville Jaguars,H,14,10,Unknown
+2011-11-20,2011,Reg,RS,Jacksonville Jaguars,Cleveland Browns,A,10,14,Unknown
+2011-11-20,2011,Reg,RS,Green Bay Packers,Tampa Bay Buccaneers,H,35,26,Unknown
+2011-11-20,2011,Reg,RS,Tampa Bay Buccaneers,Green Bay Packers,A,26,35,Unknown
+2011-11-20,2011,Reg,RS,Dallas Cowboys,Washington Redskins,A,27,24,Unknown
+2011-11-20,2011,Reg,RS,Washington Redskins,Dallas Cowboys,H,24,27,Unknown
+2011-11-20,2011,Reg,RS,Oakland Raiders,Minnesota Vikings,A,27,21,Unknown
+2011-11-20,2011,Reg,RS,Minnesota Vikings,Oakland Raiders,H,21,27,Unknown
+2011-11-20,2011,Reg,RS,San Francisco 49ers,Arizona Cardinals,H,23,7,Unknown
+2011-11-20,2011,Reg,RS,Arizona Cardinals,San Francisco 49ers,A,7,23,Unknown
+2011-11-20,2011,Reg,RS,Seattle Seahawks,St. Louis Rams,A,24,7,Unknown
+2011-11-20,2011,Reg,RS,St. Louis Rams,Seattle Seahawks,H,7,24,Unknown
+2011-11-20,2011,Reg,RS,Atlanta Falcons,Tennessee Titans,H,23,17,Unknown
+2011-11-20,2011,Reg,RS,Tennessee Titans,Atlanta Falcons,A,17,23,Unknown
+2011-11-20,2011,Reg,RS,Chicago Bears,San Diego Chargers,H,31,20,Unknown
+2011-11-20,2011,Reg,RS,San Diego Chargers,Chicago Bears,A,20,31,Unknown
+2011-11-20,2011,Reg,RS,Philadelphia Eagles,New York Giants,A,17,10,Unknown
+2011-11-20,2011,Reg,RS,New York Giants,Philadelphia Eagles,H,10,17,Unknown
+2011-11-21,2011,Reg,RS,New England Patriots,Kansas City Chiefs,H,34,3,Unknown
+2011-11-21,2011,Reg,RS,Kansas City Chiefs,New England Patriots,A,3,34,Unknown
+2011-11-24,2011,Reg,RS,Green Bay Packers,Detroit Lions,A,27,15,Unknown
+2011-11-24,2011,Reg,RS,Detroit Lions,Green Bay Packers,H,15,27,Unknown
+2011-11-24,2011,Reg,RS,Dallas Cowboys,Miami Dolphins,H,20,19,Unknown
+2011-11-24,2011,Reg,RS,Miami Dolphins,Dallas Cowboys,A,19,20,Unknown
+2011-11-24,2011,Reg,RS,Baltimore Ravens,San Francisco 49ers,H,16,6,Unknown
+2011-11-24,2011,Reg,RS,San Francisco 49ers,Baltimore Ravens,A,6,16,Unknown
+2011-11-27,2011,Reg,RS,Arizona Cardinals,St. Louis Rams,A,23,20,Unknown
+2011-11-27,2011,Reg,RS,St. Louis Rams,Arizona Cardinals,H,20,23,Unknown
+2011-11-27,2011,Reg,RS,Atlanta Falcons,Minnesota Vikings,H,24,14,Unknown
+2011-11-27,2011,Reg,RS,Minnesota Vikings,Atlanta Falcons,A,14,24,Unknown
+2011-11-27,2011,Reg,RS,New York Jets,Buffalo Bills,H,28,24,Unknown
+2011-11-27,2011,Reg,RS,Buffalo Bills,New York Jets,A,24,28,Unknown
+2011-11-27,2011,Reg,RS,Cincinnati Bengals,Cleveland Browns,H,23,20,Unknown
+2011-11-27,2011,Reg,RS,Cleveland Browns,Cincinnati Bengals,A,20,23,Unknown
+2011-11-27,2011,Reg,RS,Tennessee Titans,Tampa Bay Buccaneers,H,23,17,Unknown
+2011-11-27,2011,Reg,RS,Tampa Bay Buccaneers,Tennessee Titans,A,17,23,Unknown
+2011-11-27,2011,Reg,RS,Carolina Panthers,Indianapolis Colts,A,27,19,Unknown
+2011-11-27,2011,Reg,RS,Indianapolis Colts,Carolina Panthers,H,19,27,Unknown
+2011-11-27,2011,Reg,RS,Houston Texans,Jacksonville Jaguars,A,20,13,Unknown
+2011-11-27,2011,Reg,RS,Jacksonville Jaguars,Houston Texans,H,13,20,Unknown
+2011-11-27,2011,Reg,RS,Oakland Raiders,Chicago Bears,H,25,20,Unknown
+2011-11-27,2011,Reg,RS,Chicago Bears,Oakland Raiders,A,20,25,Unknown
+2011-11-27,2011,Reg,RS,Washington Redskins,Seattle Seahawks,A,23,17,Unknown
+2011-11-27,2011,Reg,RS,Seattle Seahawks,Washington Redskins,H,17,23,Unknown
+2011-11-27,2011,Reg,RS,Denver Broncos,San Diego Chargers,A,16,13,Unknown
+2011-11-27,2011,Reg,RS,San Diego Chargers,Denver Broncos,H,13,16,Unknown
+2011-11-27,2011,Reg,RS,New England Patriots,Philadelphia Eagles,A,38,20,Unknown
+2011-11-27,2011,Reg,RS,Philadelphia Eagles,New England Patriots,H,20,38,Unknown
+2011-11-27,2011,Reg,RS,Pittsburgh Steelers,Kansas City Chiefs,A,13,9,Unknown
+2011-11-27,2011,Reg,RS,Kansas City Chiefs,Pittsburgh Steelers,H,9,13,Unknown
+2011-11-28,2011,Reg,RS,New Orleans Saints,New York Giants,H,49,24,Unknown
+2011-11-28,2011,Reg,RS,New York Giants,New Orleans Saints,A,24,49,Unknown
+2011-12-01,2011,Reg,RS,Seattle Seahawks,Philadelphia Eagles,H,31,14,Unknown
+2011-12-01,2011,Reg,RS,Philadelphia Eagles,Seattle Seahawks,A,14,31,Unknown
+2011-12-04,2011,Reg,RS,Tennessee Titans,Buffalo Bills,A,23,17,Unknown
+2011-12-04,2011,Reg,RS,Buffalo Bills,Tennessee Titans,H,17,23,Unknown
+2011-12-04,2011,Reg,RS,Carolina Panthers,Tampa Bay Buccaneers,A,38,19,Unknown
+2011-12-04,2011,Reg,RS,Tampa Bay Buccaneers,Carolina Panthers,H,19,38,Unknown
+2011-12-04,2011,Reg,RS,Pittsburgh Steelers,Cincinnati Bengals,H,35,7,Unknown
+2011-12-04,2011,Reg,RS,Cincinnati Bengals,Pittsburgh Steelers,A,7,35,Unknown
+2011-12-04,2011,Reg,RS,New England Patriots,Indianapolis Colts,H,31,24,Unknown
+2011-12-04,2011,Reg,RS,Indianapolis Colts,New England Patriots,A,24,31,Unknown
+2011-12-04,2011,Reg,RS,Houston Texans,Atlanta Falcons,H,17,10,Unknown
+2011-12-04,2011,Reg,RS,Atlanta Falcons,Houston Texans,A,10,17,Unknown
+2011-12-04,2011,Reg,RS,Kansas City Chiefs,Chicago Bears,A,10,3,Unknown
+2011-12-04,2011,Reg,RS,Chicago Bears,Kansas City Chiefs,H,3,10,Unknown
+2011-12-04,2011,Reg,RS,Miami Dolphins,Oakland Raiders,H,34,14,Unknown
+2011-12-04,2011,Reg,RS,Oakland Raiders,Miami Dolphins,A,14,34,Unknown
+2011-12-04,2011,Reg,RS,New York Jets,Washington Redskins,A,34,19,Unknown
+2011-12-04,2011,Reg,RS,Washington Redskins,New York Jets,H,19,34,Unknown
+2011-12-04,2011,Reg,RS,Denver Broncos,Minnesota Vikings,A,35,32,Unknown
+2011-12-04,2011,Reg,RS,Minnesota Vikings,Denver Broncos,H,32,35,Unknown
+2011-12-04,2011,Reg,RS,Baltimore Ravens,Cleveland Browns,A,24,10,Unknown
+2011-12-04,2011,Reg,RS,Cleveland Browns,Baltimore Ravens,H,10,24,Unknown
+2011-12-04,2011,Reg,RS,Arizona Cardinals,Dallas Cowboys,H,19,13,Unknown
+2011-12-04,2011,Reg,RS,Dallas Cowboys,Arizona Cardinals,A,13,19,Unknown
+2011-12-04,2011,Reg,RS,Green Bay Packers,New York Giants,A,38,35,Unknown
+2011-12-04,2011,Reg,RS,New York Giants,Green Bay Packers,H,35,38,Unknown
+2011-12-04,2011,Reg,RS,San Francisco 49ers,St. Louis Rams,H,26,0,Unknown
+2011-12-04,2011,Reg,RS,St. Louis Rams,San Francisco 49ers,A,0,26,Unknown
+2011-12-04,2011,Reg,RS,New Orleans Saints,Detroit Lions,H,31,17,Unknown
+2011-12-04,2011,Reg,RS,Detroit Lions,New Orleans Saints,A,17,31,Unknown
+2011-12-05,2011,Reg,RS,San Diego Chargers,Jacksonville Jaguars,A,38,14,Unknown
+2011-12-05,2011,Reg,RS,Jacksonville Jaguars,San Diego Chargers,H,14,38,Unknown
+2011-12-08,2011,Reg,RS,Pittsburgh Steelers,Cleveland Browns,H,14,3,Unknown
+2011-12-08,2011,Reg,RS,Cleveland Browns,Pittsburgh Steelers,A,3,14,Unknown
+2011-12-11,2011,Reg,RS,Houston Texans,Cincinnati Bengals,A,20,19,Unknown
+2011-12-11,2011,Reg,RS,Cincinnati Bengals,Houston Texans,H,19,20,Unknown
+2011-12-11,2011,Reg,RS,Baltimore Ravens,Indianapolis Colts,H,24,10,Unknown
+2011-12-11,2011,Reg,RS,Indianapolis Colts,Baltimore Ravens,A,10,24,Unknown
+2011-12-11,2011,Reg,RS,New York Jets,Kansas City Chiefs,H,37,10,Unknown
+2011-12-11,2011,Reg,RS,Kansas City Chiefs,New York Jets,A,10,37,Unknown
+2011-12-11,2011,Reg,RS,Detroit Lions,Minnesota Vikings,H,34,28,Unknown
+2011-12-11,2011,Reg,RS,Minnesota Vikings,Detroit Lions,A,28,34,Unknown
+2011-12-11,2011,Reg,RS,Jacksonville Jaguars,Tampa Bay Buccaneers,H,41,14,Unknown
+2011-12-11,2011,Reg,RS,Tampa Bay Buccaneers,Jacksonville Jaguars,A,14,41,Unknown
+2011-12-11,2011,Reg,RS,Philadelphia Eagles,Miami Dolphins,A,26,10,Unknown
+2011-12-11,2011,Reg,RS,Miami Dolphins,Philadelphia Eagles,H,10,26,Unknown
+2011-12-11,2011,Reg,RS,New Orleans Saints,Tennessee Titans,A,22,17,Unknown
+2011-12-11,2011,Reg,RS,Tennessee Titans,New Orleans Saints,H,17,22,Unknown
+2011-12-11,2011,Reg,RS,New England Patriots,Washington Redskins,A,34,27,Unknown
+2011-12-11,2011,Reg,RS,Washington Redskins,New England Patriots,H,27,34,Unknown
+2011-12-11,2011,Reg,RS,Atlanta Falcons,Carolina Panthers,A,31,23,Unknown
+2011-12-11,2011,Reg,RS,Carolina Panthers,Atlanta Falcons,H,23,31,Unknown
+2011-12-11,2011,Reg,RS,Denver Broncos,Chicago Bears,H,13,10,Unknown
+2011-12-11,2011,Reg,RS,Chicago Bears,Denver Broncos,A,10,13,Unknown
+2011-12-11,2011,Reg,RS,Arizona Cardinals,San Francisco 49ers,H,21,19,Unknown
+2011-12-11,2011,Reg,RS,San Francisco 49ers,Arizona Cardinals,A,19,21,Unknown
+2011-12-11,2011,Reg,RS,San Diego Chargers,Buffalo Bills,H,37,10,Unknown
+2011-12-11,2011,Reg,RS,Buffalo Bills,San Diego Chargers,A,10,37,Unknown
+2011-12-11,2011,Reg,RS,Green Bay Packers,Oakland Raiders,H,46,16,Unknown
+2011-12-11,2011,Reg,RS,Oakland Raiders,Green Bay Packers,A,16,46,Unknown
+2011-12-11,2011,Reg,RS,New York Giants,Dallas Cowboys,A,37,34,Unknown
+2011-12-11,2011,Reg,RS,Dallas Cowboys,New York Giants,H,34,37,Unknown
+2011-12-12,2011,Reg,RS,Seattle Seahawks,St. Louis Rams,H,30,13,Unknown
+2011-12-12,2011,Reg,RS,St. Louis Rams,Seattle Seahawks,A,13,30,Unknown
+2011-12-15,2011,Reg,RS,Atlanta Falcons,Jacksonville Jaguars,H,41,14,Unknown
+2011-12-15,2011,Reg,RS,Jacksonville Jaguars,Atlanta Falcons,A,14,41,Unknown
+2011-12-17,2011,Reg,RS,Dallas Cowboys,Tampa Bay Buccaneers,A,31,15,Unknown
+2011-12-17,2011,Reg,RS,Tampa Bay Buccaneers,Dallas Cowboys,H,15,31,Unknown
+2011-12-18,2011,Reg,RS,Cincinnati Bengals,St. Louis Rams,A,20,13,Unknown
+2011-12-18,2011,Reg,RS,St. Louis Rams,Cincinnati Bengals,H,13,20,Unknown
+2011-12-18,2011,Reg,RS,Miami Dolphins,Buffalo Bills,A,30,23,Unknown
+2011-12-18,2011,Reg,RS,Buffalo Bills,Miami Dolphins,H,23,30,Unknown
+2011-12-18,2011,Reg,RS,Washington Redskins,New York Giants,A,23,10,Unknown
+2011-12-18,2011,Reg,RS,New York Giants,Washington Redskins,H,10,23,Unknown
+2011-12-18,2011,Reg,RS,Carolina Panthers,Houston Texans,A,28,13,Unknown
+2011-12-18,2011,Reg,RS,Houston Texans,Carolina Panthers,H,13,28,Unknown
+2011-12-18,2011,Reg,RS,Seattle Seahawks,Chicago Bears,A,38,14,Unknown
+2011-12-18,2011,Reg,RS,Chicago Bears,Seattle Seahawks,H,14,38,Unknown
+2011-12-18,2011,Reg,RS,Indianapolis Colts,Tennessee Titans,H,27,13,Unknown
+2011-12-18,2011,Reg,RS,Tennessee Titans,Indianapolis Colts,A,13,27,Unknown
+2011-12-18,2011,Reg,RS,Kansas City Chiefs,Green Bay Packers,H,19,14,Unknown
+2011-12-18,2011,Reg,RS,Green Bay Packers,Kansas City Chiefs,A,14,19,Unknown
+2011-12-18,2011,Reg,RS,New Orleans Saints,Minnesota Vikings,A,42,20,Unknown
+2011-12-18,2011,Reg,RS,Minnesota Vikings,New Orleans Saints,H,20,42,Unknown
+2011-12-18,2011,Reg,RS,Detroit Lions,Oakland Raiders,A,28,27,Unknown
+2011-12-18,2011,Reg,RS,Oakland Raiders,Detroit Lions,H,27,28,Unknown
+2011-12-18,2011,Reg,RS,Arizona Cardinals,Cleveland Browns,H,20,17,Unknown
+2011-12-18,2011,Reg,RS,Cleveland Browns,Arizona Cardinals,A,17,20,Unknown
+2011-12-18,2011,Reg,RS,New England Patriots,Denver Broncos,A,41,23,Unknown
+2011-12-18,2011,Reg,RS,Denver Broncos,New England Patriots,H,23,41,Unknown
+2011-12-18,2011,Reg,RS,Philadelphia Eagles,New York Jets,H,45,19,Unknown
+2011-12-18,2011,Reg,RS,New York Jets,Philadelphia Eagles,A,19,45,Unknown
+2011-12-18,2011,Reg,RS,San Diego Chargers,Baltimore Ravens,H,34,14,Unknown
+2011-12-18,2011,Reg,RS,Baltimore Ravens,San Diego Chargers,A,14,34,Unknown
+2011-12-19,2011,Reg,RS,San Francisco 49ers,Pittsburgh Steelers,H,20,3,Unknown
+2011-12-19,2011,Reg,RS,Pittsburgh Steelers,San Francisco 49ers,A,3,20,Unknown
+2011-12-22,2011,Reg,RS,Indianapolis Colts,Houston Texans,H,19,16,Unknown
+2011-12-22,2011,Reg,RS,Houston Texans,Indianapolis Colts,A,16,19,Unknown
+2011-12-24,2011,Reg,RS,Buffalo Bills,Denver Broncos,H,40,14,Unknown
+2011-12-24,2011,Reg,RS,Denver Broncos,Buffalo Bills,A,14,40,Unknown
+2011-12-24,2011,Reg,RS,Cincinnati Bengals,Arizona Cardinals,H,23,16,Unknown
+2011-12-24,2011,Reg,RS,Arizona Cardinals,Cincinnati Bengals,A,16,23,Unknown
+2011-12-24,2011,Reg,RS,Tennessee Titans,Jacksonville Jaguars,H,23,17,Unknown
+2011-12-24,2011,Reg,RS,Jacksonville Jaguars,Tennessee Titans,A,17,23,Unknown
+2011-12-24,2011,Reg,RS,New England Patriots,Miami Dolphins,H,27,24,Unknown
+2011-12-24,2011,Reg,RS,Miami Dolphins,New England Patriots,A,24,27,Unknown
+2011-12-24,2011,Reg,RS,Pittsburgh Steelers,St. Louis Rams,H,27,0,Unknown
+2011-12-24,2011,Reg,RS,St. Louis Rams,Pittsburgh Steelers,A,0,27,Unknown
+2011-12-24,2011,Reg,RS,Baltimore Ravens,Cleveland Browns,H,20,14,Unknown
+2011-12-24,2011,Reg,RS,Cleveland Browns,Baltimore Ravens,A,14,20,Unknown
+2011-12-24,2011,Reg,RS,Oakland Raiders,Kansas City Chiefs,A,16,13,Unknown
+2011-12-24,2011,Reg,RS,Kansas City Chiefs,Oakland Raiders,H,13,16,Unknown
+2011-12-24,2011,Reg,RS,New York Giants,New York Jets,A,29,14,Unknown
+2011-12-24,2011,Reg,RS,New York Jets,New York Giants,H,14,29,Unknown
+2011-12-24,2011,Reg,RS,Carolina Panthers,Tampa Bay Buccaneers,H,48,16,Unknown
+2011-12-24,2011,Reg,RS,Tampa Bay Buccaneers,Carolina Panthers,A,16,48,Unknown
+2011-12-24,2011,Reg,RS,Minnesota Vikings,Washington Redskins,A,33,26,Unknown
+2011-12-24,2011,Reg,RS,Washington Redskins,Minnesota Vikings,H,26,33,Unknown
+2011-12-24,2011,Reg,RS,Detroit Lions,San Diego Chargers,H,38,10,Unknown
+2011-12-24,2011,Reg,RS,San Diego Chargers,Detroit Lions,A,10,38,Unknown
+2011-12-24,2011,Reg,RS,Philadelphia Eagles,Dallas Cowboys,A,20,7,Unknown
+2011-12-24,2011,Reg,RS,Dallas Cowboys,Philadelphia Eagles,H,7,20,Unknown
+2011-12-24,2011,Reg,RS,San Francisco 49ers,Seattle Seahawks,A,19,17,Unknown
+2011-12-24,2011,Reg,RS,Seattle Seahawks,San Francisco 49ers,H,17,19,Unknown
+2011-12-25,2011,Reg,RS,Green Bay Packers,Chicago Bears,H,35,21,Unknown
+2011-12-25,2011,Reg,RS,Chicago Bears,Green Bay Packers,A,21,35,Unknown
+2011-12-26,2011,Reg,RS,New Orleans Saints,Atlanta Falcons,H,45,16,Unknown
+2011-12-26,2011,Reg,RS,Atlanta Falcons,New Orleans Saints,A,16,45,Unknown
+2012-01-01,2011,Reg,RS,San Francisco 49ers,St. Louis Rams,A,34,27,Unknown
+2012-01-01,2011,Reg,RS,St. Louis Rams,San Francisco 49ers,H,27,34,Unknown
+2012-01-01,2011,Reg,RS,New England Patriots,Buffalo Bills,H,49,21,Unknown
+2012-01-01,2011,Reg,RS,Buffalo Bills,New England Patriots,A,21,49,Unknown
+2012-01-01,2011,Reg,RS,Green Bay Packers,Detroit Lions,H,45,41,Unknown
+2012-01-01,2011,Reg,RS,Detroit Lions,Green Bay Packers,A,41,45,Unknown
+2012-01-01,2011,Reg,RS,Tennessee Titans,Houston Texans,A,23,22,Unknown
+2012-01-01,2011,Reg,RS,Houston Texans,Tennessee Titans,H,22,23,Unknown
+2012-01-01,2011,Reg,RS,Miami Dolphins,New York Jets,H,19,17,Unknown
+2012-01-01,2011,Reg,RS,New York Jets,Miami Dolphins,A,17,19,Unknown
+2012-01-01,2011,Reg,RS,Philadelphia Eagles,Washington Redskins,H,34,10,Unknown
+2012-01-01,2011,Reg,RS,Washington Redskins,Philadelphia Eagles,A,10,34,Unknown
+2012-01-01,2011,Reg,RS,New Orleans Saints,Carolina Panthers,H,45,17,Unknown
+2012-01-01,2011,Reg,RS,Carolina Panthers,New Orleans Saints,A,17,45,Unknown
+2012-01-01,2011,Reg,RS,Jacksonville Jaguars,Indianapolis Colts,H,19,13,Unknown
+2012-01-01,2011,Reg,RS,Indianapolis Colts,Jacksonville Jaguars,A,13,19,Unknown
+2012-01-01,2011,Reg,RS,Chicago Bears,Minnesota Vikings,A,17,13,Unknown
+2012-01-01,2011,Reg,RS,Minnesota Vikings,Chicago Bears,H,13,17,Unknown
+2012-01-01,2011,Reg,RS,Arizona Cardinals,Seattle Seahawks,H,23,20,Unknown
+2012-01-01,2011,Reg,RS,Seattle Seahawks,Arizona Cardinals,A,20,23,Unknown
+2012-01-01,2011,Reg,RS,San Diego Chargers,Oakland Raiders,A,38,26,Unknown
+2012-01-01,2011,Reg,RS,Oakland Raiders,San Diego Chargers,H,26,38,Unknown
+2012-01-01,2011,Reg,RS,Baltimore Ravens,Cincinnati Bengals,A,24,16,Unknown
+2012-01-01,2011,Reg,RS,Cincinnati Bengals,Baltimore Ravens,H,16,24,Unknown
+2012-01-01,2011,Reg,RS,Pittsburgh Steelers,Cleveland Browns,A,13,9,Unknown
+2012-01-01,2011,Reg,RS,Cleveland Browns,Pittsburgh Steelers,H,9,13,Unknown
+2012-01-01,2011,Reg,RS,Kansas City Chiefs,Denver Broncos,A,7,3,Unknown
+2012-01-01,2011,Reg,RS,Denver Broncos,Kansas City Chiefs,H,3,7,Unknown
+2012-01-01,2011,Reg,RS,Atlanta Falcons,Tampa Bay Buccaneers,H,45,24,Unknown
+2012-01-01,2011,Reg,RS,Tampa Bay Buccaneers,Atlanta Falcons,A,24,45,Unknown
+2012-01-01,2011,Reg,RS,New York Giants,Dallas Cowboys,H,31,14,Unknown
+2012-01-01,2011,Reg,RS,Dallas Cowboys,New York Giants,A,14,31,Unknown
+2012-01-07,2011,Playoff,1,Houston Texans,Cincinnati Bengals,H,31,10,Unknown
+2012-01-07,2011,Playoff,1,Cincinnati Bengals,Houston Texans,A,10,31,Unknown
+2012-01-07,2011,Playoff,1,New Orleans Saints,Detroit Lions,H,45,28,Unknown
+2012-01-07,2011,Playoff,1,Detroit Lions,New Orleans Saints,A,28,45,Unknown
+2012-01-08,2011,Playoff,1,New York Giants,Atlanta Falcons,H,24,2,Unknown
+2012-01-08,2011,Playoff,1,Atlanta Falcons,New York Giants,A,2,24,Unknown
+2012-01-08,2011,Playoff,1,Denver Broncos,Pittsburgh Steelers,H,29,23,Unknown
+2012-01-08,2011,Playoff,1,Pittsburgh Steelers,Denver Broncos,A,23,29,Unknown
+2012-01-14,2011,Playoff,2,San Francisco 49ers,New Orleans Saints,H,36,32,Unknown
+2012-01-14,2011,Playoff,2,New Orleans Saints,San Francisco 49ers,A,32,36,Unknown
+2012-01-14,2011,Playoff,2,New England Patriots,Denver Broncos,H,45,10,Unknown
+2012-01-14,2011,Playoff,2,Denver Broncos,New England Patriots,A,10,45,Unknown
+2012-01-15,2011,Playoff,2,Baltimore Ravens,Houston Texans,H,20,13,Unknown
+2012-01-15,2011,Playoff,2,Houston Texans,Baltimore Ravens,A,13,20,Unknown
+2012-01-15,2011,Playoff,2,New York Giants,Green Bay Packers,A,37,20,Unknown
+2012-01-15,2011,Playoff,2,Green Bay Packers,New York Giants,H,20,37,Unknown
+2012-01-22,2011,Playoff,3,New England Patriots,Baltimore Ravens,H,23,20,Unknown
+2012-01-22,2011,Playoff,3,Baltimore Ravens,New England Patriots,A,20,23,Unknown
+2012-01-22,2011,Playoff,3,New York Giants,San Francisco 49ers,A,20,17,Unknown
+2012-01-22,2011,Playoff,3,San Francisco 49ers,New York Giants,H,17,20,Unknown
+2012-02-05,2011,Playoff,4,New York Giants,New England Patriots,N,21,17,Unknown
+2012-02-05,2011,Playoff,4,New England Patriots,New York Giants,N,17,21,Unknown

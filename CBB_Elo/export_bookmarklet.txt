@@ -1,0 +1,41 @@
+SPORTS-REFERENCE EXPORT BOOKMARKLET
+====================================
+
+WHAT THIS IS
+------------
+A bookmarklet -- a browser bookmark that runs a small snippet of JavaScript
+on the current page instead of navigating anywhere. Since it only runs
+when YOU click it, in YOUR normal browser, it's indistinguishable from any
+other on-page click -- there's no automation framework involved, so it
+won't trigger the same bot-detection that blocked the Playwright approach.
+
+WHAT IT DOES
+------------
+On a sports-reference schedule page, it finds the "Share & Export" control
+and clicks through to "Get table as Excel Workbook" for you -- the exact
+two clicks you've been doing by hand, just faster and without hunting for
+the tiny hover menu each time.
+
+HOW TO INSTALL IT
+-----------------
+1. Show your browser's bookmarks bar if it's hidden (Ctrl+Shift+B in
+   Chrome/Edge).
+2. Right-click the bookmarks bar -> "Add page" (or "New bookmark").
+3. For the name, put something like "SR Export".
+4. For the URL/location, paste the ENTIRE line below (starting with
+   "javascript:") exactly as-is:
+
+javascript:(function(){var btn=[...document.querySelectorAll('span,button,a,div')].find(el=>el.textContent.trim()==='Share & Export'&&el.offsetParent!==null);if(!btn){alert('Share & Export button not found on this page.');return;}btn.click();setTimeout(function(){var link=[...document.querySelectorAll('a,button,span,div')].find(el=>el.textContent.trim()==='Get table as Excel Workbook'&&el.offsetParent!==null);if(!link){alert('Export link not found -- the menu may not have opened.');return;}link.click();},400);})();
+
+5. Save it.
+
+HOW TO USE IT
+-------------
+Just navigate to any team's schedule page like you normally would, then
+click the bookmark instead of manually clicking through Share & Export.
+The download fires the same way it always has -- watch_downloads.py will
+pick it up exactly as before.
+
+If it ever pops up an alert saying it couldn't find something, the page's
+layout may have changed slightly -- just fall back to clicking manually
+for that one page and let me know what changed if you want it patched.

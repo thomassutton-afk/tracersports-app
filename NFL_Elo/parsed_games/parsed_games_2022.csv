@@ -1,0 +1,569 @@
+Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT
+2022-09-08,2022,Reg,RS,Buffalo Bills,Los Angeles Rams,A,31,10,Unknown
+2022-09-08,2022,Reg,RS,Los Angeles Rams,Buffalo Bills,H,10,31,Unknown
+2022-09-11,2022,Reg,RS,New Orleans Saints,Atlanta Falcons,A,27,26,Unknown
+2022-09-11,2022,Reg,RS,Atlanta Falcons,New Orleans Saints,H,26,27,Unknown
+2022-09-11,2022,Reg,RS,Cleveland Browns,Carolina Panthers,A,26,24,Unknown
+2022-09-11,2022,Reg,RS,Carolina Panthers,Cleveland Browns,H,24,26,Unknown
+2022-09-11,2022,Reg,RS,Chicago Bears,San Francisco 49ers,H,19,10,Unknown
+2022-09-11,2022,Reg,RS,San Francisco 49ers,Chicago Bears,A,10,19,Unknown
+2022-09-11,2022,Reg,RS,Pittsburgh Steelers,Cincinnati Bengals,A,23,20,Unknown
+2022-09-11,2022,Reg,RS,Cincinnati Bengals,Pittsburgh Steelers,H,20,23,Unknown
+2022-09-11,2022,Reg,RS,Houston Texans,Indianapolis Colts,H,20,20,Unknown
+2022-09-11,2022,Reg,RS,Indianapolis Colts,Houston Texans,A,20,20,Unknown
+2022-09-11,2022,Reg,RS,Philadelphia Eagles,Detroit Lions,A,38,35,Unknown
+2022-09-11,2022,Reg,RS,Detroit Lions,Philadelphia Eagles,H,35,38,Unknown
+2022-09-11,2022,Reg,RS,Washington Commanders,Jacksonville Jaguars,H,28,22,Unknown
+2022-09-11,2022,Reg,RS,Jacksonville Jaguars,Washington Commanders,A,22,28,Unknown
+2022-09-11,2022,Reg,RS,Miami Dolphins,New England Patriots,H,20,7,Unknown
+2022-09-11,2022,Reg,RS,New England Patriots,Miami Dolphins,A,7,20,Unknown
+2022-09-11,2022,Reg,RS,Baltimore Ravens,New York Jets,A,24,9,Unknown
+2022-09-11,2022,Reg,RS,New York Jets,Baltimore Ravens,H,9,24,Unknown
+2022-09-11,2022,Reg,RS,Kansas City Chiefs,Arizona Cardinals,A,44,21,Unknown
+2022-09-11,2022,Reg,RS,Arizona Cardinals,Kansas City Chiefs,H,21,44,Unknown
+2022-09-11,2022,Reg,RS,Minnesota Vikings,Green Bay Packers,H,23,7,Unknown
+2022-09-11,2022,Reg,RS,Green Bay Packers,Minnesota Vikings,A,7,23,Unknown
+2022-09-11,2022,Reg,RS,New York Giants,Tennessee Titans,A,21,20,Unknown
+2022-09-11,2022,Reg,RS,Tennessee Titans,New York Giants,H,20,21,Unknown
+2022-09-11,2022,Reg,RS,Los Angeles Chargers,Las Vegas Raiders,H,24,19,Unknown
+2022-09-11,2022,Reg,RS,Las Vegas Raiders,Los Angeles Chargers,A,19,24,Unknown
+2022-09-11,2022,Reg,RS,Tampa Bay Buccaneers,Dallas Cowboys,A,19,3,Unknown
+2022-09-11,2022,Reg,RS,Dallas Cowboys,Tampa Bay Buccaneers,H,3,19,Unknown
+2022-09-12,2022,Reg,RS,Seattle Seahawks,Denver Broncos,H,17,16,Unknown
+2022-09-12,2022,Reg,RS,Denver Broncos,Seattle Seahawks,A,16,17,Unknown
+2022-09-15,2022,Reg,RS,Kansas City Chiefs,Los Angeles Chargers,H,27,24,Unknown
+2022-09-15,2022,Reg,RS,Los Angeles Chargers,Kansas City Chiefs,A,24,27,Unknown
+2022-09-18,2022,Reg,RS,New York Giants,Carolina Panthers,H,19,16,Unknown
+2022-09-18,2022,Reg,RS,Carolina Panthers,New York Giants,A,16,19,Unknown
+2022-09-18,2022,Reg,RS,New York Jets,Cleveland Browns,A,31,30,Unknown
+2022-09-18,2022,Reg,RS,Cleveland Browns,New York Jets,H,30,31,Unknown
+2022-09-18,2022,Reg,RS,Jacksonville Jaguars,Indianapolis Colts,H,24,0,Unknown
+2022-09-18,2022,Reg,RS,Indianapolis Colts,Jacksonville Jaguars,A,0,24,Unknown
+2022-09-18,2022,Reg,RS,Detroit Lions,Washington Commanders,H,36,27,Unknown
+2022-09-18,2022,Reg,RS,Washington Commanders,Detroit Lions,A,27,36,Unknown
+2022-09-18,2022,Reg,RS,Miami Dolphins,Baltimore Ravens,A,42,38,Unknown
+2022-09-18,2022,Reg,RS,Baltimore Ravens,Miami Dolphins,H,38,42,Unknown
+2022-09-18,2022,Reg,RS,Tampa Bay Buccaneers,New Orleans Saints,A,20,10,Unknown
+2022-09-18,2022,Reg,RS,New Orleans Saints,Tampa Bay Buccaneers,H,10,20,Unknown
+2022-09-18,2022,Reg,RS,New England Patriots,Pittsburgh Steelers,A,17,14,Unknown
+2022-09-18,2022,Reg,RS,Pittsburgh Steelers,New England Patriots,H,14,17,Unknown
+2022-09-18,2022,Reg,RS,Los Angeles Rams,Atlanta Falcons,H,31,27,Unknown
+2022-09-18,2022,Reg,RS,Atlanta Falcons,Los Angeles Rams,A,27,31,Unknown
+2022-09-18,2022,Reg,RS,San Francisco 49ers,Seattle Seahawks,H,27,7,Unknown
+2022-09-18,2022,Reg,RS,Seattle Seahawks,San Francisco 49ers,A,7,27,Unknown
+2022-09-18,2022,Reg,RS,Dallas Cowboys,Cincinnati Bengals,H,20,17,Unknown
+2022-09-18,2022,Reg,RS,Cincinnati Bengals,Dallas Cowboys,A,17,20,Unknown
+2022-09-18,2022,Reg,RS,Arizona Cardinals,Las Vegas Raiders,A,29,23,Unknown
+2022-09-18,2022,Reg,RS,Las Vegas Raiders,Arizona Cardinals,H,23,29,Unknown
+2022-09-18,2022,Reg,RS,Denver Broncos,Houston Texans,H,16,9,Unknown
+2022-09-18,2022,Reg,RS,Houston Texans,Denver Broncos,A,9,16,Unknown
+2022-09-18,2022,Reg,RS,Green Bay Packers,Chicago Bears,H,27,10,Unknown
+2022-09-18,2022,Reg,RS,Chicago Bears,Green Bay Packers,A,10,27,Unknown
+2022-09-19,2022,Reg,RS,Buffalo Bills,Tennessee Titans,H,41,7,Unknown
+2022-09-19,2022,Reg,RS,Tennessee Titans,Buffalo Bills,A,7,41,Unknown
+2022-09-19,2022,Reg,RS,Philadelphia Eagles,Minnesota Vikings,H,24,7,Unknown
+2022-09-19,2022,Reg,RS,Minnesota Vikings,Philadelphia Eagles,A,7,24,Unknown
+2022-09-22,2022,Reg,RS,Cleveland Browns,Pittsburgh Steelers,H,29,17,Unknown
+2022-09-22,2022,Reg,RS,Pittsburgh Steelers,Cleveland Browns,A,17,29,Unknown
+2022-09-25,2022,Reg,RS,Miami Dolphins,Buffalo Bills,H,21,19,Unknown
+2022-09-25,2022,Reg,RS,Buffalo Bills,Miami Dolphins,A,19,21,Unknown
+2022-09-25,2022,Reg,RS,Carolina Panthers,New Orleans Saints,H,22,14,Unknown
+2022-09-25,2022,Reg,RS,New Orleans Saints,Carolina Panthers,A,14,22,Unknown
+2022-09-25,2022,Reg,RS,Chicago Bears,Houston Texans,H,23,20,Unknown
+2022-09-25,2022,Reg,RS,Houston Texans,Chicago Bears,A,20,23,Unknown
+2022-09-25,2022,Reg,RS,Cincinnati Bengals,New York Jets,A,27,12,Unknown
+2022-09-25,2022,Reg,RS,New York Jets,Cincinnati Bengals,H,12,27,Unknown
+2022-09-25,2022,Reg,RS,Indianapolis Colts,Kansas City Chiefs,H,20,17,Unknown
+2022-09-25,2022,Reg,RS,Kansas City Chiefs,Indianapolis Colts,A,17,20,Unknown
+2022-09-25,2022,Reg,RS,Minnesota Vikings,Detroit Lions,H,28,24,Unknown
+2022-09-25,2022,Reg,RS,Detroit Lions,Minnesota Vikings,A,24,28,Unknown
+2022-09-25,2022,Reg,RS,Baltimore Ravens,New England Patriots,A,37,26,Unknown
+2022-09-25,2022,Reg,RS,New England Patriots,Baltimore Ravens,H,26,37,Unknown
+2022-09-25,2022,Reg,RS,Tennessee Titans,Las Vegas Raiders,H,24,22,Unknown
+2022-09-25,2022,Reg,RS,Las Vegas Raiders,Tennessee Titans,A,22,24,Unknown
+2022-09-25,2022,Reg,RS,Philadelphia Eagles,Washington Commanders,A,24,8,Unknown
+2022-09-25,2022,Reg,RS,Washington Commanders,Philadelphia Eagles,H,8,24,Unknown
+2022-09-25,2022,Reg,RS,Jacksonville Jaguars,Los Angeles Chargers,A,38,10,Unknown
+2022-09-25,2022,Reg,RS,Los Angeles Chargers,Jacksonville Jaguars,H,10,38,Unknown
+2022-09-25,2022,Reg,RS,Atlanta Falcons,Seattle Seahawks,A,27,23,Unknown
+2022-09-25,2022,Reg,RS,Seattle Seahawks,Atlanta Falcons,H,23,27,Unknown
+2022-09-25,2022,Reg,RS,Los Angeles Rams,Arizona Cardinals,A,20,12,Unknown
+2022-09-25,2022,Reg,RS,Arizona Cardinals,Los Angeles Rams,H,12,20,Unknown
+2022-09-25,2022,Reg,RS,Green Bay Packers,Tampa Bay Buccaneers,A,14,12,Unknown
+2022-09-25,2022,Reg,RS,Tampa Bay Buccaneers,Green Bay Packers,H,12,14,Unknown
+2022-09-25,2022,Reg,RS,Denver Broncos,San Francisco 49ers,H,11,10,Unknown
+2022-09-25,2022,Reg,RS,San Francisco 49ers,Denver Broncos,A,10,11,Unknown
+2022-09-26,2022,Reg,RS,Dallas Cowboys,New York Giants,A,23,16,Unknown
+2022-09-26,2022,Reg,RS,New York Giants,Dallas Cowboys,H,16,23,Unknown
+2022-09-29,2022,Reg,RS,Cincinnati Bengals,Miami Dolphins,H,27,15,Unknown
+2022-09-29,2022,Reg,RS,Miami Dolphins,Cincinnati Bengals,A,15,27,Unknown
+2022-10-02,2022,Reg,RS,Minnesota Vikings,New Orleans Saints,A,28,25,Unknown
+2022-10-02,2022,Reg,RS,New Orleans Saints,Minnesota Vikings,H,25,28,Unknown
+2022-10-02,2022,Reg,RS,Atlanta Falcons,Cleveland Browns,H,23,20,Unknown
+2022-10-02,2022,Reg,RS,Cleveland Browns,Atlanta Falcons,A,20,23,Unknown
+2022-10-02,2022,Reg,RS,Buffalo Bills,Baltimore Ravens,A,23,20,Unknown
+2022-10-02,2022,Reg,RS,Baltimore Ravens,Buffalo Bills,H,20,23,Unknown
+2022-10-02,2022,Reg,RS,New York Giants,Chicago Bears,H,20,12,Unknown
+2022-10-02,2022,Reg,RS,Chicago Bears,New York Giants,A,12,20,Unknown
+2022-10-02,2022,Reg,RS,Tennessee Titans,Indianapolis Colts,A,24,17,Unknown
+2022-10-02,2022,Reg,RS,Indianapolis Colts,Tennessee Titans,H,17,24,Unknown
+2022-10-02,2022,Reg,RS,Dallas Cowboys,Washington Commanders,H,25,10,Unknown
+2022-10-02,2022,Reg,RS,Washington Commanders,Dallas Cowboys,A,10,25,Unknown
+2022-10-02,2022,Reg,RS,Seattle Seahawks,Detroit Lions,A,48,45,Unknown
+2022-10-02,2022,Reg,RS,Detroit Lions,Seattle Seahawks,H,45,48,Unknown
+2022-10-02,2022,Reg,RS,Los Angeles Chargers,Houston Texans,A,34,24,Unknown
+2022-10-02,2022,Reg,RS,Houston Texans,Los Angeles Chargers,H,24,34,Unknown
+2022-10-02,2022,Reg,RS,Philadelphia Eagles,Jacksonville Jaguars,H,29,21,Unknown
+2022-10-02,2022,Reg,RS,Jacksonville Jaguars,Philadelphia Eagles,A,21,29,Unknown
+2022-10-02,2022,Reg,RS,New York Jets,Pittsburgh Steelers,A,24,20,Unknown
+2022-10-02,2022,Reg,RS,Pittsburgh Steelers,New York Jets,H,20,24,Unknown
+2022-10-02,2022,Reg,RS,Arizona Cardinals,Carolina Panthers,A,26,16,Unknown
+2022-10-02,2022,Reg,RS,Carolina Panthers,Arizona Cardinals,H,16,26,Unknown
+2022-10-02,2022,Reg,RS,Las Vegas Raiders,Denver Broncos,H,32,23,Unknown
+2022-10-02,2022,Reg,RS,Denver Broncos,Las Vegas Raiders,A,23,32,Unknown
+2022-10-02,2022,Reg,RS,Green Bay Packers,New England Patriots,H,27,24,Unknown
+2022-10-02,2022,Reg,RS,New England Patriots,Green Bay Packers,A,24,27,Unknown
+2022-10-02,2022,Reg,RS,Kansas City Chiefs,Tampa Bay Buccaneers,A,41,31,Unknown
+2022-10-02,2022,Reg,RS,Tampa Bay Buccaneers,Kansas City Chiefs,H,31,41,Unknown
+2022-10-03,2022,Reg,RS,San Francisco 49ers,Los Angeles Rams,H,24,9,Unknown
+2022-10-03,2022,Reg,RS,Los Angeles Rams,San Francisco 49ers,A,9,24,Unknown
+2022-10-06,2022,Reg,RS,Indianapolis Colts,Denver Broncos,A,12,9,Unknown
+2022-10-06,2022,Reg,RS,Denver Broncos,Indianapolis Colts,H,9,12,Unknown
+2022-10-09,2022,Reg,RS,New York Giants,Green Bay Packers,A,27,22,Unknown
+2022-10-09,2022,Reg,RS,Green Bay Packers,New York Giants,H,22,27,Unknown
+2022-10-09,2022,Reg,RS,Tampa Bay Buccaneers,Atlanta Falcons,H,21,15,Unknown
+2022-10-09,2022,Reg,RS,Atlanta Falcons,Tampa Bay Buccaneers,A,15,21,Unknown
+2022-10-09,2022,Reg,RS,Buffalo Bills,Pittsburgh Steelers,H,38,3,Unknown
+2022-10-09,2022,Reg,RS,Pittsburgh Steelers,Buffalo Bills,A,3,38,Unknown
+2022-10-09,2022,Reg,RS,Minnesota Vikings,Chicago Bears,H,29,22,Unknown
+2022-10-09,2022,Reg,RS,Chicago Bears,Minnesota Vikings,A,22,29,Unknown
+2022-10-09,2022,Reg,RS,Los Angeles Chargers,Cleveland Browns,A,30,28,Unknown
+2022-10-09,2022,Reg,RS,Cleveland Browns,Los Angeles Chargers,H,28,30,Unknown
+2022-10-09,2022,Reg,RS,New England Patriots,Detroit Lions,H,29,0,Unknown
+2022-10-09,2022,Reg,RS,Detroit Lions,New England Patriots,A,0,29,Unknown
+2022-10-09,2022,Reg,RS,Houston Texans,Jacksonville Jaguars,A,13,6,Unknown
+2022-10-09,2022,Reg,RS,Jacksonville Jaguars,Houston Texans,H,6,13,Unknown
+2022-10-09,2022,Reg,RS,New York Jets,Miami Dolphins,H,40,17,Unknown
+2022-10-09,2022,Reg,RS,Miami Dolphins,New York Jets,A,17,40,Unknown
+2022-10-09,2022,Reg,RS,New Orleans Saints,Seattle Seahawks,H,39,32,Unknown
+2022-10-09,2022,Reg,RS,Seattle Seahawks,New Orleans Saints,A,32,39,Unknown
+2022-10-09,2022,Reg,RS,Tennessee Titans,Washington Commanders,A,21,17,Unknown
+2022-10-09,2022,Reg,RS,Washington Commanders,Tennessee Titans,H,17,21,Unknown
+2022-10-09,2022,Reg,RS,San Francisco 49ers,Carolina Panthers,A,37,15,Unknown
+2022-10-09,2022,Reg,RS,Carolina Panthers,San Francisco 49ers,H,15,37,Unknown
+2022-10-09,2022,Reg,RS,Philadelphia Eagles,Arizona Cardinals,A,20,17,Unknown
+2022-10-09,2022,Reg,RS,Arizona Cardinals,Philadelphia Eagles,H,17,20,Unknown
+2022-10-09,2022,Reg,RS,Dallas Cowboys,Los Angeles Rams,A,22,10,Unknown
+2022-10-09,2022,Reg,RS,Los Angeles Rams,Dallas Cowboys,H,10,22,Unknown
+2022-10-09,2022,Reg,RS,Baltimore Ravens,Cincinnati Bengals,H,19,17,Unknown
+2022-10-09,2022,Reg,RS,Cincinnati Bengals,Baltimore Ravens,A,17,19,Unknown
+2022-10-10,2022,Reg,RS,Kansas City Chiefs,Las Vegas Raiders,H,30,29,Unknown
+2022-10-10,2022,Reg,RS,Las Vegas Raiders,Kansas City Chiefs,A,29,30,Unknown
+2022-10-13,2022,Reg,RS,Washington Commanders,Chicago Bears,A,12,7,Unknown
+2022-10-13,2022,Reg,RS,Chicago Bears,Washington Commanders,H,7,12,Unknown
+2022-10-16,2022,Reg,RS,Atlanta Falcons,San Francisco 49ers,H,28,14,Unknown
+2022-10-16,2022,Reg,RS,San Francisco 49ers,Atlanta Falcons,A,14,28,Unknown
+2022-10-16,2022,Reg,RS,Cincinnati Bengals,New Orleans Saints,A,30,26,Unknown
+2022-10-16,2022,Reg,RS,New Orleans Saints,Cincinnati Bengals,H,26,30,Unknown
+2022-10-16,2022,Reg,RS,New England Patriots,Cleveland Browns,A,38,15,Unknown
+2022-10-16,2022,Reg,RS,Cleveland Browns,New England Patriots,H,15,38,Unknown
+2022-10-16,2022,Reg,RS,Indianapolis Colts,Jacksonville Jaguars,H,34,27,Unknown
+2022-10-16,2022,Reg,RS,Jacksonville Jaguars,Indianapolis Colts,A,27,34,Unknown
+2022-10-16,2022,Reg,RS,New York Jets,Green Bay Packers,A,27,10,Unknown
+2022-10-16,2022,Reg,RS,Green Bay Packers,New York Jets,H,10,27,Unknown
+2022-10-16,2022,Reg,RS,Minnesota Vikings,Miami Dolphins,A,24,16,Unknown
+2022-10-16,2022,Reg,RS,Miami Dolphins,Minnesota Vikings,H,16,24,Unknown
+2022-10-16,2022,Reg,RS,New York Giants,Baltimore Ravens,H,24,20,Unknown
+2022-10-16,2022,Reg,RS,Baltimore Ravens,New York Giants,A,20,24,Unknown
+2022-10-16,2022,Reg,RS,Pittsburgh Steelers,Tampa Bay Buccaneers,H,20,18,Unknown
+2022-10-16,2022,Reg,RS,Tampa Bay Buccaneers,Pittsburgh Steelers,A,18,20,Unknown
+2022-10-16,2022,Reg,RS,Los Angeles Rams,Carolina Panthers,H,24,10,Unknown
+2022-10-16,2022,Reg,RS,Carolina Panthers,Los Angeles Rams,A,10,24,Unknown
+2022-10-16,2022,Reg,RS,Seattle Seahawks,Arizona Cardinals,H,19,9,Unknown
+2022-10-16,2022,Reg,RS,Arizona Cardinals,Seattle Seahawks,A,9,19,Unknown
+2022-10-16,2022,Reg,RS,Buffalo Bills,Kansas City Chiefs,A,24,20,Unknown
+2022-10-16,2022,Reg,RS,Kansas City Chiefs,Buffalo Bills,H,20,24,Unknown
+2022-10-16,2022,Reg,RS,Philadelphia Eagles,Dallas Cowboys,H,26,17,Unknown
+2022-10-16,2022,Reg,RS,Dallas Cowboys,Philadelphia Eagles,A,17,26,Unknown
+2022-10-17,2022,Reg,RS,Los Angeles Chargers,Denver Broncos,H,19,16,Unknown
+2022-10-17,2022,Reg,RS,Denver Broncos,Los Angeles Chargers,A,16,19,Unknown
+2022-10-20,2022,Reg,RS,Arizona Cardinals,New Orleans Saints,H,42,34,Unknown
+2022-10-20,2022,Reg,RS,New Orleans Saints,Arizona Cardinals,A,34,42,Unknown
+2022-10-23,2022,Reg,RS,Cincinnati Bengals,Atlanta Falcons,H,35,17,Unknown
+2022-10-23,2022,Reg,RS,Atlanta Falcons,Cincinnati Bengals,A,17,35,Unknown
+2022-10-23,2022,Reg,RS,Carolina Panthers,Tampa Bay Buccaneers,H,21,3,Unknown
+2022-10-23,2022,Reg,RS,Tampa Bay Buccaneers,Carolina Panthers,A,3,21,Unknown
+2022-10-23,2022,Reg,RS,Baltimore Ravens,Cleveland Browns,H,23,20,Unknown
+2022-10-23,2022,Reg,RS,Cleveland Browns,Baltimore Ravens,A,20,23,Unknown
+2022-10-23,2022,Reg,RS,Tennessee Titans,Indianapolis Colts,H,19,10,Unknown
+2022-10-23,2022,Reg,RS,Indianapolis Colts,Tennessee Titans,A,10,19,Unknown
+2022-10-23,2022,Reg,RS,Dallas Cowboys,Detroit Lions,H,24,6,Unknown
+2022-10-23,2022,Reg,RS,Detroit Lions,Dallas Cowboys,A,6,24,Unknown
+2022-10-23,2022,Reg,RS,Washington Commanders,Green Bay Packers,H,23,21,Unknown
+2022-10-23,2022,Reg,RS,Green Bay Packers,Washington Commanders,A,21,23,Unknown
+2022-10-23,2022,Reg,RS,New York Giants,Jacksonville Jaguars,A,23,17,Unknown
+2022-10-23,2022,Reg,RS,Jacksonville Jaguars,New York Giants,H,17,23,Unknown
+2022-10-23,2022,Reg,RS,Las Vegas Raiders,Houston Texans,H,38,20,Unknown
+2022-10-23,2022,Reg,RS,Houston Texans,Las Vegas Raiders,A,20,38,Unknown
+2022-10-23,2022,Reg,RS,New York Jets,Denver Broncos,A,16,9,Unknown
+2022-10-23,2022,Reg,RS,Denver Broncos,New York Jets,H,9,16,Unknown
+2022-10-23,2022,Reg,RS,Kansas City Chiefs,San Francisco 49ers,A,44,23,Unknown
+2022-10-23,2022,Reg,RS,San Francisco 49ers,Kansas City Chiefs,H,23,44,Unknown
+2022-10-23,2022,Reg,RS,Seattle Seahawks,Los Angeles Chargers,A,37,23,Unknown
+2022-10-23,2022,Reg,RS,Los Angeles Chargers,Seattle Seahawks,H,23,37,Unknown
+2022-10-23,2022,Reg,RS,Miami Dolphins,Pittsburgh Steelers,H,16,10,Unknown
+2022-10-23,2022,Reg,RS,Pittsburgh Steelers,Miami Dolphins,A,10,16,Unknown
+2022-10-24,2022,Reg,RS,Chicago Bears,New England Patriots,A,33,14,Unknown
+2022-10-24,2022,Reg,RS,New England Patriots,Chicago Bears,H,14,33,Unknown
+2022-10-27,2022,Reg,RS,Baltimore Ravens,Tampa Bay Buccaneers,A,27,22,Unknown
+2022-10-27,2022,Reg,RS,Tampa Bay Buccaneers,Baltimore Ravens,H,22,27,Unknown
+2022-10-30,2022,Reg,RS,Denver Broncos,Jacksonville Jaguars,A,21,17,Unknown
+2022-10-30,2022,Reg,RS,Jacksonville Jaguars,Denver Broncos,H,17,21,Unknown
+2022-10-30,2022,Reg,RS,Miami Dolphins,Detroit Lions,A,31,27,Unknown
+2022-10-30,2022,Reg,RS,Detroit Lions,Miami Dolphins,H,27,31,Unknown
+2022-10-30,2022,Reg,RS,Philadelphia Eagles,Pittsburgh Steelers,H,35,13,Unknown
+2022-10-30,2022,Reg,RS,Pittsburgh Steelers,Philadelphia Eagles,A,13,35,Unknown
+2022-10-30,2022,Reg,RS,Atlanta Falcons,Carolina Panthers,H,37,34,Unknown
+2022-10-30,2022,Reg,RS,Carolina Panthers,Atlanta Falcons,A,34,37,Unknown
+2022-10-30,2022,Reg,RS,Dallas Cowboys,Chicago Bears,H,49,29,Unknown
+2022-10-30,2022,Reg,RS,Chicago Bears,Dallas Cowboys,A,29,49,Unknown
+2022-10-30,2022,Reg,RS,Minnesota Vikings,Arizona Cardinals,H,34,26,Unknown
+2022-10-30,2022,Reg,RS,Arizona Cardinals,Minnesota Vikings,A,26,34,Unknown
+2022-10-30,2022,Reg,RS,New Orleans Saints,Las Vegas Raiders,H,24,0,Unknown
+2022-10-30,2022,Reg,RS,Las Vegas Raiders,New Orleans Saints,A,0,24,Unknown
+2022-10-30,2022,Reg,RS,New England Patriots,New York Jets,A,22,17,Unknown
+2022-10-30,2022,Reg,RS,New York Jets,New England Patriots,H,17,22,Unknown
+2022-10-30,2022,Reg,RS,Tennessee Titans,Houston Texans,A,17,10,Unknown
+2022-10-30,2022,Reg,RS,Houston Texans,Tennessee Titans,H,10,17,Unknown
+2022-10-30,2022,Reg,RS,San Francisco 49ers,Los Angeles Rams,A,31,14,Unknown
+2022-10-30,2022,Reg,RS,Los Angeles Rams,San Francisco 49ers,H,14,31,Unknown
+2022-10-30,2022,Reg,RS,Washington Commanders,Indianapolis Colts,A,17,16,Unknown
+2022-10-30,2022,Reg,RS,Indianapolis Colts,Washington Commanders,H,16,17,Unknown
+2022-10-30,2022,Reg,RS,Seattle Seahawks,New York Giants,H,27,13,Unknown
+2022-10-30,2022,Reg,RS,New York Giants,Seattle Seahawks,A,13,27,Unknown
+2022-10-30,2022,Reg,RS,Buffalo Bills,Green Bay Packers,H,27,17,Unknown
+2022-10-30,2022,Reg,RS,Green Bay Packers,Buffalo Bills,A,17,27,Unknown
+2022-10-31,2022,Reg,RS,Cleveland Browns,Cincinnati Bengals,H,32,13,Unknown
+2022-10-31,2022,Reg,RS,Cincinnati Bengals,Cleveland Browns,A,13,32,Unknown
+2022-11-03,2022,Reg,RS,Philadelphia Eagles,Houston Texans,A,29,17,Unknown
+2022-11-03,2022,Reg,RS,Houston Texans,Philadelphia Eagles,H,17,29,Unknown
+2022-11-06,2022,Reg,RS,New York Jets,Buffalo Bills,H,20,17,Unknown
+2022-11-06,2022,Reg,RS,Buffalo Bills,New York Jets,A,17,20,Unknown
+2022-11-06,2022,Reg,RS,Detroit Lions,Green Bay Packers,H,15,9,Unknown
+2022-11-06,2022,Reg,RS,Green Bay Packers,Detroit Lions,A,9,15,Unknown
+2022-11-06,2022,Reg,RS,Minnesota Vikings,Washington Commanders,A,20,17,Unknown
+2022-11-06,2022,Reg,RS,Washington Commanders,Minnesota Vikings,H,17,20,Unknown
+2022-11-06,2022,Reg,RS,Los Angeles Chargers,Atlanta Falcons,A,20,17,Unknown
+2022-11-06,2022,Reg,RS,Atlanta Falcons,Los Angeles Chargers,H,17,20,Unknown
+2022-11-06,2022,Reg,RS,Cincinnati Bengals,Carolina Panthers,H,42,21,Unknown
+2022-11-06,2022,Reg,RS,Carolina Panthers,Cincinnati Bengals,A,21,42,Unknown
+2022-11-06,2022,Reg,RS,Miami Dolphins,Chicago Bears,A,35,32,Unknown
+2022-11-06,2022,Reg,RS,Chicago Bears,Miami Dolphins,H,32,35,Unknown
+2022-11-06,2022,Reg,RS,New England Patriots,Indianapolis Colts,H,26,3,Unknown
+2022-11-06,2022,Reg,RS,Indianapolis Colts,New England Patriots,A,3,26,Unknown
+2022-11-06,2022,Reg,RS,Jacksonville Jaguars,Las Vegas Raiders,H,27,20,Unknown
+2022-11-06,2022,Reg,RS,Las Vegas Raiders,Jacksonville Jaguars,A,20,27,Unknown
+2022-11-06,2022,Reg,RS,Seattle Seahawks,Arizona Cardinals,A,31,21,Unknown
+2022-11-06,2022,Reg,RS,Arizona Cardinals,Seattle Seahawks,H,21,31,Unknown
+2022-11-06,2022,Reg,RS,Tampa Bay Buccaneers,Los Angeles Rams,H,16,13,Unknown
+2022-11-06,2022,Reg,RS,Los Angeles Rams,Tampa Bay Buccaneers,A,13,16,Unknown
+2022-11-06,2022,Reg,RS,Kansas City Chiefs,Tennessee Titans,H,20,17,Unknown
+2022-11-06,2022,Reg,RS,Tennessee Titans,Kansas City Chiefs,A,17,20,Unknown
+2022-11-07,2022,Reg,RS,Baltimore Ravens,New Orleans Saints,A,27,13,Unknown
+2022-11-07,2022,Reg,RS,New Orleans Saints,Baltimore Ravens,H,13,27,Unknown
+2022-11-10,2022,Reg,RS,Carolina Panthers,Atlanta Falcons,H,25,15,Unknown
+2022-11-10,2022,Reg,RS,Atlanta Falcons,Carolina Panthers,A,15,25,Unknown
+2022-11-13,2022,Reg,RS,Tampa Bay Buccaneers,Seattle Seahawks,H,21,16,Unknown
+2022-11-13,2022,Reg,RS,Seattle Seahawks,Tampa Bay Buccaneers,A,16,21,Unknown
+2022-11-13,2022,Reg,RS,Minnesota Vikings,Buffalo Bills,A,33,30,Unknown
+2022-11-13,2022,Reg,RS,Buffalo Bills,Minnesota Vikings,H,30,33,Unknown
+2022-11-13,2022,Reg,RS,Miami Dolphins,Cleveland Browns,H,39,17,Unknown
+2022-11-13,2022,Reg,RS,Cleveland Browns,Miami Dolphins,A,17,39,Unknown
+2022-11-13,2022,Reg,RS,Tennessee Titans,Denver Broncos,H,17,10,Unknown
+2022-11-13,2022,Reg,RS,Denver Broncos,Tennessee Titans,A,10,17,Unknown
+2022-11-13,2022,Reg,RS,New York Giants,Houston Texans,H,24,16,Unknown
+2022-11-13,2022,Reg,RS,Houston Texans,New York Giants,A,16,24,Unknown
+2022-11-13,2022,Reg,RS,Detroit Lions,Chicago Bears,A,31,30,Unknown
+2022-11-13,2022,Reg,RS,Chicago Bears,Detroit Lions,H,30,31,Unknown
+2022-11-13,2022,Reg,RS,Kansas City Chiefs,Jacksonville Jaguars,H,27,17,Unknown
+2022-11-13,2022,Reg,RS,Jacksonville Jaguars,Kansas City Chiefs,A,17,27,Unknown
+2022-11-13,2022,Reg,RS,Pittsburgh Steelers,New Orleans Saints,H,20,10,Unknown
+2022-11-13,2022,Reg,RS,New Orleans Saints,Pittsburgh Steelers,A,10,20,Unknown
+2022-11-13,2022,Reg,RS,Indianapolis Colts,Las Vegas Raiders,A,25,20,Unknown
+2022-11-13,2022,Reg,RS,Las Vegas Raiders,Indianapolis Colts,H,20,25,Unknown
+2022-11-13,2022,Reg,RS,Green Bay Packers,Dallas Cowboys,H,31,28,Unknown
+2022-11-13,2022,Reg,RS,Dallas Cowboys,Green Bay Packers,A,28,31,Unknown
+2022-11-13,2022,Reg,RS,Arizona Cardinals,Los Angeles Rams,A,27,17,Unknown
+2022-11-13,2022,Reg,RS,Los Angeles Rams,Arizona Cardinals,H,17,27,Unknown
+2022-11-13,2022,Reg,RS,San Francisco 49ers,Los Angeles Chargers,H,22,16,Unknown
+2022-11-13,2022,Reg,RS,Los Angeles Chargers,San Francisco 49ers,A,16,22,Unknown
+2022-11-14,2022,Reg,RS,Washington Commanders,Philadelphia Eagles,A,32,21,Unknown
+2022-11-14,2022,Reg,RS,Philadelphia Eagles,Washington Commanders,H,21,32,Unknown
+2022-11-17,2022,Reg,RS,Tennessee Titans,Green Bay Packers,A,27,17,Unknown
+2022-11-17,2022,Reg,RS,Green Bay Packers,Tennessee Titans,H,17,27,Unknown
+2022-11-20,2022,Reg,RS,Buffalo Bills,Cleveland Browns,H,31,23,Unknown
+2022-11-20,2022,Reg,RS,Cleveland Browns,Buffalo Bills,A,23,31,Unknown
+2022-11-20,2022,Reg,RS,Detroit Lions,New York Giants,A,31,18,Unknown
+2022-11-20,2022,Reg,RS,New York Giants,Detroit Lions,H,18,31,Unknown
+2022-11-20,2022,Reg,RS,Washington Commanders,Houston Texans,A,23,10,Unknown
+2022-11-20,2022,Reg,RS,Houston Texans,Washington Commanders,H,10,23,Unknown
+2022-11-20,2022,Reg,RS,New England Patriots,New York Jets,H,10,3,Unknown
+2022-11-20,2022,Reg,RS,New York Jets,New England Patriots,A,3,10,Unknown
+2022-11-20,2022,Reg,RS,Atlanta Falcons,Chicago Bears,H,27,24,Unknown
+2022-11-20,2022,Reg,RS,Chicago Bears,Atlanta Falcons,A,24,27,Unknown
+2022-11-20,2022,Reg,RS,Baltimore Ravens,Carolina Panthers,H,13,3,Unknown
+2022-11-20,2022,Reg,RS,Carolina Panthers,Baltimore Ravens,A,3,13,Unknown
+2022-11-20,2022,Reg,RS,Philadelphia Eagles,Indianapolis Colts,A,17,16,Unknown
+2022-11-20,2022,Reg,RS,Indianapolis Colts,Philadelphia Eagles,H,16,17,Unknown
+2022-11-20,2022,Reg,RS,New Orleans Saints,Los Angeles Rams,H,27,20,Unknown
+2022-11-20,2022,Reg,RS,Los Angeles Rams,New Orleans Saints,A,20,27,Unknown
+2022-11-20,2022,Reg,RS,Las Vegas Raiders,Denver Broncos,A,22,16,Unknown
+2022-11-20,2022,Reg,RS,Denver Broncos,Las Vegas Raiders,H,16,22,Unknown
+2022-11-20,2022,Reg,RS,Cincinnati Bengals,Pittsburgh Steelers,A,37,30,Unknown
+2022-11-20,2022,Reg,RS,Pittsburgh Steelers,Cincinnati Bengals,H,30,37,Unknown
+2022-11-20,2022,Reg,RS,Dallas Cowboys,Minnesota Vikings,A,40,3,Unknown
+2022-11-20,2022,Reg,RS,Minnesota Vikings,Dallas Cowboys,H,3,40,Unknown
+2022-11-20,2022,Reg,RS,Kansas City Chiefs,Los Angeles Chargers,A,30,27,Unknown
+2022-11-20,2022,Reg,RS,Los Angeles Chargers,Kansas City Chiefs,H,27,30,Unknown
+2022-11-21,2022,Reg,RS,San Francisco 49ers,Arizona Cardinals,A,38,10,Unknown
+2022-11-21,2022,Reg,RS,Arizona Cardinals,San Francisco 49ers,H,10,38,Unknown
+2022-11-24,2022,Reg,RS,Buffalo Bills,Detroit Lions,A,28,25,Unknown
+2022-11-24,2022,Reg,RS,Detroit Lions,Buffalo Bills,H,25,28,Unknown
+2022-11-24,2022,Reg,RS,Dallas Cowboys,New York Giants,H,28,20,Unknown
+2022-11-24,2022,Reg,RS,New York Giants,Dallas Cowboys,A,20,28,Unknown
+2022-11-24,2022,Reg,RS,Minnesota Vikings,New England Patriots,H,33,26,Unknown
+2022-11-24,2022,Reg,RS,New England Patriots,Minnesota Vikings,A,26,33,Unknown
+2022-11-27,2022,Reg,RS,Cincinnati Bengals,Tennessee Titans,A,20,16,Unknown
+2022-11-27,2022,Reg,RS,Tennessee Titans,Cincinnati Bengals,H,16,20,Unknown
+2022-11-27,2022,Reg,RS,Cleveland Browns,Tampa Bay Buccaneers,H,23,17,Unknown
+2022-11-27,2022,Reg,RS,Tampa Bay Buccaneers,Cleveland Browns,A,17,23,Unknown
+2022-11-27,2022,Reg,RS,Miami Dolphins,Houston Texans,H,30,15,Unknown
+2022-11-27,2022,Reg,RS,Houston Texans,Miami Dolphins,A,15,30,Unknown
+2022-11-27,2022,Reg,RS,Jacksonville Jaguars,Baltimore Ravens,H,28,27,Unknown
+2022-11-27,2022,Reg,RS,Baltimore Ravens,Jacksonville Jaguars,A,27,28,Unknown
+2022-11-27,2022,Reg,RS,Washington Commanders,Atlanta Falcons,H,19,13,Unknown
+2022-11-27,2022,Reg,RS,Atlanta Falcons,Washington Commanders,A,13,19,Unknown
+2022-11-27,2022,Reg,RS,Carolina Panthers,Denver Broncos,H,23,10,Unknown
+2022-11-27,2022,Reg,RS,Denver Broncos,Carolina Panthers,A,10,23,Unknown
+2022-11-27,2022,Reg,RS,New York Jets,Chicago Bears,H,31,10,Unknown
+2022-11-27,2022,Reg,RS,Chicago Bears,New York Jets,A,10,31,Unknown
+2022-11-27,2022,Reg,RS,Las Vegas Raiders,Seattle Seahawks,A,40,34,Unknown
+2022-11-27,2022,Reg,RS,Seattle Seahawks,Las Vegas Raiders,H,34,40,Unknown
+2022-11-27,2022,Reg,RS,Los Angeles Chargers,Arizona Cardinals,A,25,24,Unknown
+2022-11-27,2022,Reg,RS,Arizona Cardinals,Los Angeles Chargers,H,24,25,Unknown
+2022-11-27,2022,Reg,RS,Kansas City Chiefs,Los Angeles Rams,H,26,10,Unknown
+2022-11-27,2022,Reg,RS,Los Angeles Rams,Kansas City Chiefs,A,10,26,Unknown
+2022-11-27,2022,Reg,RS,San Francisco 49ers,New Orleans Saints,H,13,0,Unknown
+2022-11-27,2022,Reg,RS,New Orleans Saints,San Francisco 49ers,A,0,13,Unknown
+2022-11-27,2022,Reg,RS,Philadelphia Eagles,Green Bay Packers,H,40,33,Unknown
+2022-11-27,2022,Reg,RS,Green Bay Packers,Philadelphia Eagles,A,33,40,Unknown
+2022-11-28,2022,Reg,RS,Pittsburgh Steelers,Indianapolis Colts,A,24,17,Unknown
+2022-11-28,2022,Reg,RS,Indianapolis Colts,Pittsburgh Steelers,H,17,24,Unknown
+2022-12-01,2022,Reg,RS,Buffalo Bills,New England Patriots,A,24,10,Unknown
+2022-12-01,2022,Reg,RS,New England Patriots,Buffalo Bills,H,10,24,Unknown
+2022-12-04,2022,Reg,RS,Cleveland Browns,Houston Texans,A,27,14,Unknown
+2022-12-04,2022,Reg,RS,Houston Texans,Cleveland Browns,H,14,27,Unknown
+2022-12-04,2022,Reg,RS,Baltimore Ravens,Denver Broncos,H,10,9,Unknown
+2022-12-04,2022,Reg,RS,Denver Broncos,Baltimore Ravens,A,9,10,Unknown
+2022-12-04,2022,Reg,RS,Detroit Lions,Jacksonville Jaguars,H,40,14,Unknown
+2022-12-04,2022,Reg,RS,Jacksonville Jaguars,Detroit Lions,A,14,40,Unknown
+2022-12-04,2022,Reg,RS,Minnesota Vikings,New York Jets,H,27,22,Unknown
+2022-12-04,2022,Reg,RS,New York Jets,Minnesota Vikings,A,22,27,Unknown
+2022-12-04,2022,Reg,RS,Washington Commanders,New York Giants,A,20,20,Unknown
+2022-12-04,2022,Reg,RS,New York Giants,Washington Commanders,H,20,20,Unknown
+2022-12-04,2022,Reg,RS,Philadelphia Eagles,Tennessee Titans,H,35,10,Unknown
+2022-12-04,2022,Reg,RS,Tennessee Titans,Philadelphia Eagles,A,10,35,Unknown
+2022-12-04,2022,Reg,RS,Pittsburgh Steelers,Atlanta Falcons,A,19,16,Unknown
+2022-12-04,2022,Reg,RS,Atlanta Falcons,Pittsburgh Steelers,H,16,19,Unknown
+2022-12-04,2022,Reg,RS,Green Bay Packers,Chicago Bears,A,28,19,Unknown
+2022-12-04,2022,Reg,RS,Chicago Bears,Green Bay Packers,H,19,28,Unknown
+2022-12-04,2022,Reg,RS,San Francisco 49ers,Miami Dolphins,H,33,17,Unknown
+2022-12-04,2022,Reg,RS,Miami Dolphins,San Francisco 49ers,A,17,33,Unknown
+2022-12-04,2022,Reg,RS,Seattle Seahawks,Los Angeles Rams,A,27,23,Unknown
+2022-12-04,2022,Reg,RS,Los Angeles Rams,Seattle Seahawks,H,23,27,Unknown
+2022-12-04,2022,Reg,RS,Cincinnati Bengals,Kansas City Chiefs,H,27,24,Unknown
+2022-12-04,2022,Reg,RS,Kansas City Chiefs,Cincinnati Bengals,A,24,27,Unknown
+2022-12-04,2022,Reg,RS,Las Vegas Raiders,Los Angeles Chargers,H,27,20,Unknown
+2022-12-04,2022,Reg,RS,Los Angeles Chargers,Las Vegas Raiders,A,20,27,Unknown
+2022-12-04,2022,Reg,RS,Dallas Cowboys,Indianapolis Colts,H,54,19,Unknown
+2022-12-04,2022,Reg,RS,Indianapolis Colts,Dallas Cowboys,A,19,54,Unknown
+2022-12-05,2022,Reg,RS,Tampa Bay Buccaneers,New Orleans Saints,H,17,16,Unknown
+2022-12-05,2022,Reg,RS,New Orleans Saints,Tampa Bay Buccaneers,A,16,17,Unknown
+2022-12-08,2022,Reg,RS,Los Angeles Rams,Las Vegas Raiders,H,17,16,Unknown
+2022-12-08,2022,Reg,RS,Las Vegas Raiders,Los Angeles Rams,A,16,17,Unknown
+2022-12-11,2022,Reg,RS,Buffalo Bills,New York Jets,H,20,12,Unknown
+2022-12-11,2022,Reg,RS,New York Jets,Buffalo Bills,A,12,20,Unknown
+2022-12-11,2022,Reg,RS,Cincinnati Bengals,Cleveland Browns,H,23,10,Unknown
+2022-12-11,2022,Reg,RS,Cleveland Browns,Cincinnati Bengals,A,10,23,Unknown
+2022-12-11,2022,Reg,RS,Dallas Cowboys,Houston Texans,H,27,23,Unknown
+2022-12-11,2022,Reg,RS,Houston Texans,Dallas Cowboys,A,23,27,Unknown
+2022-12-11,2022,Reg,RS,Detroit Lions,Minnesota Vikings,H,34,23,Unknown
+2022-12-11,2022,Reg,RS,Minnesota Vikings,Detroit Lions,A,23,34,Unknown
+2022-12-11,2022,Reg,RS,Jacksonville Jaguars,Tennessee Titans,A,36,22,Unknown
+2022-12-11,2022,Reg,RS,Tennessee Titans,Jacksonville Jaguars,H,22,36,Unknown
+2022-12-11,2022,Reg,RS,Philadelphia Eagles,New York Giants,A,48,22,Unknown
+2022-12-11,2022,Reg,RS,New York Giants,Philadelphia Eagles,H,22,48,Unknown
+2022-12-11,2022,Reg,RS,Baltimore Ravens,Pittsburgh Steelers,A,16,14,Unknown
+2022-12-11,2022,Reg,RS,Pittsburgh Steelers,Baltimore Ravens,H,14,16,Unknown
+2022-12-11,2022,Reg,RS,Kansas City Chiefs,Denver Broncos,A,34,28,Unknown
+2022-12-11,2022,Reg,RS,Denver Broncos,Kansas City Chiefs,H,28,34,Unknown
+2022-12-11,2022,Reg,RS,Carolina Panthers,Seattle Seahawks,A,30,24,Unknown
+2022-12-11,2022,Reg,RS,Seattle Seahawks,Carolina Panthers,H,24,30,Unknown
+2022-12-11,2022,Reg,RS,San Francisco 49ers,Tampa Bay Buccaneers,H,35,7,Unknown
+2022-12-11,2022,Reg,RS,Tampa Bay Buccaneers,San Francisco 49ers,A,7,35,Unknown
+2022-12-11,2022,Reg,RS,Los Angeles Chargers,Miami Dolphins,H,23,17,Unknown
+2022-12-11,2022,Reg,RS,Miami Dolphins,Los Angeles Chargers,A,17,23,Unknown
+2022-12-12,2022,Reg,RS,New England Patriots,Arizona Cardinals,A,27,13,Unknown
+2022-12-12,2022,Reg,RS,Arizona Cardinals,New England Patriots,H,13,27,Unknown
+2022-12-15,2022,Reg,RS,San Francisco 49ers,Seattle Seahawks,A,21,13,Unknown
+2022-12-15,2022,Reg,RS,Seattle Seahawks,San Francisco 49ers,H,13,21,Unknown
+2022-12-17,2022,Reg,RS,Minnesota Vikings,Indianapolis Colts,H,39,36,Unknown
+2022-12-17,2022,Reg,RS,Indianapolis Colts,Minnesota Vikings,A,36,39,Unknown
+2022-12-17,2022,Reg,RS,Cleveland Browns,Baltimore Ravens,H,13,3,Unknown
+2022-12-17,2022,Reg,RS,Baltimore Ravens,Cleveland Browns,A,3,13,Unknown
+2022-12-17,2022,Reg,RS,Buffalo Bills,Miami Dolphins,H,32,29,Unknown
+2022-12-17,2022,Reg,RS,Miami Dolphins,Buffalo Bills,A,29,32,Unknown
+2022-12-18,2022,Reg,RS,New Orleans Saints,Atlanta Falcons,H,21,18,Unknown
+2022-12-18,2022,Reg,RS,Atlanta Falcons,New Orleans Saints,A,18,21,Unknown
+2022-12-18,2022,Reg,RS,Pittsburgh Steelers,Carolina Panthers,A,24,16,Unknown
+2022-12-18,2022,Reg,RS,Carolina Panthers,Pittsburgh Steelers,H,16,24,Unknown
+2022-12-18,2022,Reg,RS,Philadelphia Eagles,Chicago Bears,A,25,20,Unknown
+2022-12-18,2022,Reg,RS,Chicago Bears,Philadelphia Eagles,H,20,25,Unknown
+2022-12-18,2022,Reg,RS,Jacksonville Jaguars,Dallas Cowboys,H,40,34,Unknown
+2022-12-18,2022,Reg,RS,Dallas Cowboys,Jacksonville Jaguars,A,34,40,Unknown
+2022-12-18,2022,Reg,RS,Detroit Lions,New York Jets,A,20,17,Unknown
+2022-12-18,2022,Reg,RS,New York Jets,Detroit Lions,H,17,20,Unknown
+2022-12-18,2022,Reg,RS,Kansas City Chiefs,Houston Texans,A,30,24,Unknown
+2022-12-18,2022,Reg,RS,Houston Texans,Kansas City Chiefs,H,24,30,Unknown
+2022-12-18,2022,Reg,RS,Denver Broncos,Arizona Cardinals,H,24,15,Unknown
+2022-12-18,2022,Reg,RS,Arizona Cardinals,Denver Broncos,A,15,24,Unknown
+2022-12-18,2022,Reg,RS,Las Vegas Raiders,New England Patriots,H,30,24,Unknown
+2022-12-18,2022,Reg,RS,New England Patriots,Las Vegas Raiders,A,24,30,Unknown
+2022-12-18,2022,Reg,RS,Cincinnati Bengals,Tampa Bay Buccaneers,A,34,23,Unknown
+2022-12-18,2022,Reg,RS,Tampa Bay Buccaneers,Cincinnati Bengals,H,23,34,Unknown
+2022-12-18,2022,Reg,RS,Los Angeles Chargers,Tennessee Titans,H,17,14,Unknown
+2022-12-18,2022,Reg,RS,Tennessee Titans,Los Angeles Chargers,A,14,17,Unknown
+2022-12-18,2022,Reg,RS,New York Giants,Washington Commanders,A,20,12,Unknown
+2022-12-18,2022,Reg,RS,Washington Commanders,New York Giants,H,12,20,Unknown
+2022-12-19,2022,Reg,RS,Green Bay Packers,Los Angeles Rams,H,24,12,Unknown
+2022-12-19,2022,Reg,RS,Los Angeles Rams,Green Bay Packers,A,12,24,Unknown
+2022-12-22,2022,Reg,RS,Jacksonville Jaguars,New York Jets,A,19,3,Unknown
+2022-12-22,2022,Reg,RS,New York Jets,Jacksonville Jaguars,H,3,19,Unknown
+2022-12-24,2022,Reg,RS,Baltimore Ravens,Atlanta Falcons,H,17,9,Unknown
+2022-12-24,2022,Reg,RS,Atlanta Falcons,Baltimore Ravens,A,9,17,Unknown
+2022-12-24,2022,Reg,RS,Buffalo Bills,Chicago Bears,A,35,13,Unknown
+2022-12-24,2022,Reg,RS,Chicago Bears,Buffalo Bills,H,13,35,Unknown
+2022-12-24,2022,Reg,RS,Carolina Panthers,Detroit Lions,H,37,23,Unknown
+2022-12-24,2022,Reg,RS,Detroit Lions,Carolina Panthers,A,23,37,Unknown
+2022-12-24,2022,Reg,RS,Cincinnati Bengals,New England Patriots,A,22,18,Unknown
+2022-12-24,2022,Reg,RS,New England Patriots,Cincinnati Bengals,H,18,22,Unknown
+2022-12-24,2022,Reg,RS,New Orleans Saints,Cleveland Browns,A,17,10,Unknown
+2022-12-24,2022,Reg,RS,Cleveland Browns,New Orleans Saints,H,10,17,Unknown
+2022-12-24,2022,Reg,RS,Houston Texans,Tennessee Titans,A,19,14,Unknown
+2022-12-24,2022,Reg,RS,Tennessee Titans,Houston Texans,H,14,19,Unknown
+2022-12-24,2022,Reg,RS,Kansas City Chiefs,Seattle Seahawks,H,24,10,Unknown
+2022-12-24,2022,Reg,RS,Seattle Seahawks,Kansas City Chiefs,A,10,24,Unknown
+2022-12-24,2022,Reg,RS,Minnesota Vikings,New York Giants,H,27,24,Unknown
+2022-12-24,2022,Reg,RS,New York Giants,Minnesota Vikings,A,24,27,Unknown
+2022-12-24,2022,Reg,RS,San Francisco 49ers,Washington Commanders,H,37,20,Unknown
+2022-12-24,2022,Reg,RS,Washington Commanders,San Francisco 49ers,A,20,37,Unknown
+2022-12-24,2022,Reg,RS,Dallas Cowboys,Philadelphia Eagles,H,40,34,Unknown
+2022-12-24,2022,Reg,RS,Philadelphia Eagles,Dallas Cowboys,A,34,40,Unknown
+2022-12-24,2022,Reg,RS,Pittsburgh Steelers,Las Vegas Raiders,H,13,10,Unknown
+2022-12-24,2022,Reg,RS,Las Vegas Raiders,Pittsburgh Steelers,A,10,13,Unknown
+2022-12-25,2022,Reg,RS,Green Bay Packers,Miami Dolphins,A,26,20,Unknown
+2022-12-25,2022,Reg,RS,Miami Dolphins,Green Bay Packers,H,20,26,Unknown
+2022-12-25,2022,Reg,RS,Los Angeles Rams,Denver Broncos,H,51,14,Unknown
+2022-12-25,2022,Reg,RS,Denver Broncos,Los Angeles Rams,A,14,51,Unknown
+2022-12-25,2022,Reg,RS,Tampa Bay Buccaneers,Arizona Cardinals,A,19,16,Unknown
+2022-12-25,2022,Reg,RS,Arizona Cardinals,Tampa Bay Buccaneers,H,16,19,Unknown
+2022-12-26,2022,Reg,RS,Los Angeles Chargers,Indianapolis Colts,A,20,3,Unknown
+2022-12-26,2022,Reg,RS,Indianapolis Colts,Los Angeles Chargers,H,3,20,Unknown
+2022-12-29,2022,Reg,RS,Dallas Cowboys,Tennessee Titans,A,27,13,Unknown
+2022-12-29,2022,Reg,RS,Tennessee Titans,Dallas Cowboys,H,13,27,Unknown
+2023-01-01,2022,Reg,RS,Atlanta Falcons,Arizona Cardinals,H,20,19,Unknown
+2023-01-01,2022,Reg,RS,Arizona Cardinals,Atlanta Falcons,A,19,20,Unknown
+2023-01-01,2022,Reg,RS,Tampa Bay Buccaneers,Carolina Panthers,H,30,24,Unknown
+2023-01-01,2022,Reg,RS,Carolina Panthers,Tampa Bay Buccaneers,A,24,30,Unknown
+2023-01-01,2022,Reg,RS,Detroit Lions,Chicago Bears,H,41,10,Unknown
+2023-01-01,2022,Reg,RS,Chicago Bears,Detroit Lions,A,10,41,Unknown
+2023-01-01,2022,Reg,RS,Cleveland Browns,Washington Commanders,A,24,10,Unknown
+2023-01-01,2022,Reg,RS,Washington Commanders,Cleveland Browns,H,10,24,Unknown
+2023-01-01,2022,Reg,RS,New York Giants,Indianapolis Colts,H,38,10,Unknown
+2023-01-01,2022,Reg,RS,Indianapolis Colts,New York Giants,A,10,38,Unknown
+2023-01-01,2022,Reg,RS,Kansas City Chiefs,Denver Broncos,H,27,24,Unknown
+2023-01-01,2022,Reg,RS,Denver Broncos,Kansas City Chiefs,A,24,27,Unknown
+2023-01-01,2022,Reg,RS,Jacksonville Jaguars,Houston Texans,A,31,3,Unknown
+2023-01-01,2022,Reg,RS,Houston Texans,Jacksonville Jaguars,H,3,31,Unknown
+2023-01-01,2022,Reg,RS,New England Patriots,Miami Dolphins,H,23,21,Unknown
+2023-01-01,2022,Reg,RS,Miami Dolphins,New England Patriots,A,21,23,Unknown
+2023-01-01,2022,Reg,RS,New Orleans Saints,Philadelphia Eagles,A,20,10,Unknown
+2023-01-01,2022,Reg,RS,Philadelphia Eagles,New Orleans Saints,H,10,20,Unknown
+2023-01-01,2022,Reg,RS,Seattle Seahawks,New York Jets,H,23,6,Unknown
+2023-01-01,2022,Reg,RS,New York Jets,Seattle Seahawks,A,6,23,Unknown
+2023-01-01,2022,Reg,RS,San Francisco 49ers,Las Vegas Raiders,A,37,34,Unknown
+2023-01-01,2022,Reg,RS,Las Vegas Raiders,San Francisco 49ers,H,34,37,Unknown
+2023-01-01,2022,Reg,RS,Green Bay Packers,Minnesota Vikings,H,41,17,Unknown
+2023-01-01,2022,Reg,RS,Minnesota Vikings,Green Bay Packers,A,17,41,Unknown
+2023-01-01,2022,Reg,RS,Los Angeles Chargers,Los Angeles Rams,H,31,10,Unknown
+2023-01-01,2022,Reg,RS,Los Angeles Rams,Los Angeles Chargers,A,10,31,Unknown
+2023-01-01,2022,Reg,RS,Pittsburgh Steelers,Baltimore Ravens,A,16,13,Unknown
+2023-01-01,2022,Reg,RS,Baltimore Ravens,Pittsburgh Steelers,H,13,16,Unknown
+2023-01-07,2022,Reg,RS,Kansas City Chiefs,Las Vegas Raiders,A,31,13,Unknown
+2023-01-07,2022,Reg,RS,Las Vegas Raiders,Kansas City Chiefs,H,13,31,Unknown
+2023-01-07,2022,Reg,RS,Jacksonville Jaguars,Tennessee Titans,H,20,16,Unknown
+2023-01-07,2022,Reg,RS,Tennessee Titans,Jacksonville Jaguars,A,16,20,Unknown
+2023-01-08,2022,Reg,RS,Buffalo Bills,New England Patriots,H,35,23,Unknown
+2023-01-08,2022,Reg,RS,New England Patriots,Buffalo Bills,A,23,35,Unknown
+2023-01-08,2022,Reg,RS,Cincinnati Bengals,Baltimore Ravens,H,27,16,Unknown
+2023-01-08,2022,Reg,RS,Baltimore Ravens,Cincinnati Bengals,A,16,27,Unknown
+2023-01-08,2022,Reg,RS,Atlanta Falcons,Tampa Bay Buccaneers,H,30,17,Unknown
+2023-01-08,2022,Reg,RS,Tampa Bay Buccaneers,Atlanta Falcons,A,17,30,Unknown
+2023-01-08,2022,Reg,RS,Carolina Panthers,New Orleans Saints,A,10,7,Unknown
+2023-01-08,2022,Reg,RS,New Orleans Saints,Carolina Panthers,H,7,10,Unknown
+2023-01-08,2022,Reg,RS,Minnesota Vikings,Chicago Bears,A,29,13,Unknown
+2023-01-08,2022,Reg,RS,Chicago Bears,Minnesota Vikings,H,13,29,Unknown
+2023-01-08,2022,Reg,RS,Pittsburgh Steelers,Cleveland Browns,H,28,14,Unknown
+2023-01-08,2022,Reg,RS,Cleveland Browns,Pittsburgh Steelers,A,14,28,Unknown
+2023-01-08,2022,Reg,RS,Houston Texans,Indianapolis Colts,A,32,31,Unknown
+2023-01-08,2022,Reg,RS,Indianapolis Colts,Houston Texans,H,31,32,Unknown
+2023-01-08,2022,Reg,RS,Miami Dolphins,New York Jets,H,11,6,Unknown
+2023-01-08,2022,Reg,RS,New York Jets,Miami Dolphins,A,6,11,Unknown
+2023-01-08,2022,Reg,RS,San Francisco 49ers,Arizona Cardinals,H,38,13,Unknown
+2023-01-08,2022,Reg,RS,Arizona Cardinals,San Francisco 49ers,A,13,38,Unknown
+2023-01-08,2022,Reg,RS,Washington Commanders,Dallas Cowboys,H,26,6,Unknown
+2023-01-08,2022,Reg,RS,Dallas Cowboys,Washington Commanders,A,6,26,Unknown
+2023-01-08,2022,Reg,RS,Denver Broncos,Los Angeles Chargers,H,31,28,Unknown
+2023-01-08,2022,Reg,RS,Los Angeles Chargers,Denver Broncos,A,28,31,Unknown
+2023-01-08,2022,Reg,RS,Philadelphia Eagles,New York Giants,H,22,16,Unknown
+2023-01-08,2022,Reg,RS,New York Giants,Philadelphia Eagles,A,16,22,Unknown
+2023-01-08,2022,Reg,RS,Seattle Seahawks,Los Angeles Rams,H,19,16,Unknown
+2023-01-08,2022,Reg,RS,Los Angeles Rams,Seattle Seahawks,A,16,19,Unknown
+2023-01-08,2022,Reg,RS,Detroit Lions,Green Bay Packers,A,20,16,Unknown
+2023-01-08,2022,Reg,RS,Green Bay Packers,Detroit Lions,H,16,20,Unknown
+2023-01-14,2022,Playoff,1,San Francisco 49ers,Seattle Seahawks,H,41,23,Unknown
+2023-01-14,2022,Playoff,1,Seattle Seahawks,San Francisco 49ers,A,23,41,Unknown
+2023-01-14,2022,Playoff,1,Jacksonville Jaguars,Los Angeles Chargers,H,31,30,Unknown
+2023-01-14,2022,Playoff,1,Los Angeles Chargers,Jacksonville Jaguars,A,30,31,Unknown
+2023-01-15,2022,Playoff,1,Buffalo Bills,Miami Dolphins,H,34,31,Unknown
+2023-01-15,2022,Playoff,1,Miami Dolphins,Buffalo Bills,A,31,34,Unknown
+2023-01-15,2022,Playoff,1,New York Giants,Minnesota Vikings,A,31,24,Unknown
+2023-01-15,2022,Playoff,1,Minnesota Vikings,New York Giants,H,24,31,Unknown
+2023-01-15,2022,Playoff,1,Cincinnati Bengals,Baltimore Ravens,H,24,17,Unknown
+2023-01-15,2022,Playoff,1,Baltimore Ravens,Cincinnati Bengals,A,17,24,Unknown
+2023-01-16,2022,Playoff,1,Dallas Cowboys,Tampa Bay Buccaneers,A,31,14,Unknown
+2023-01-16,2022,Playoff,1,Tampa Bay Buccaneers,Dallas Cowboys,H,14,31,Unknown
+2023-01-21,2022,Playoff,2,Kansas City Chiefs,Jacksonville Jaguars,H,27,20,Unknown
+2023-01-21,2022,Playoff,2,Jacksonville Jaguars,Kansas City Chiefs,A,20,27,Unknown
+2023-01-21,2022,Playoff,2,Philadelphia Eagles,New York Giants,H,38,7,Unknown
+2023-01-21,2022,Playoff,2,New York Giants,Philadelphia Eagles,A,7,38,Unknown
+2023-01-22,2022,Playoff,2,Cincinnati Bengals,Buffalo Bills,A,27,10,Unknown
+2023-01-22,2022,Playoff,2,Buffalo Bills,Cincinnati Bengals,H,10,27,Unknown
+2023-01-22,2022,Playoff,2,San Francisco 49ers,Dallas Cowboys,H,19,12,Unknown
+2023-01-22,2022,Playoff,2,Dallas Cowboys,San Francisco 49ers,A,12,19,Unknown
+2023-01-29,2022,Playoff,3,Philadelphia Eagles,San Francisco 49ers,H,31,7,Unknown
+2023-01-29,2022,Playoff,3,San Francisco 49ers,Philadelphia Eagles,A,7,31,Unknown
+2023-01-29,2022,Playoff,3,Kansas City Chiefs,Cincinnati Bengals,H,23,20,Unknown
+2023-01-29,2022,Playoff,3,Cincinnati Bengals,Kansas City Chiefs,A,20,23,Unknown
+2023-02-12,2022,Playoff,4,Kansas City Chiefs,Philadelphia Eagles,N,38,35,Unknown
+2023-02-12,2022,Playoff,4,Philadelphia Eagles,Kansas City Chiefs,N,35,38,Unknown

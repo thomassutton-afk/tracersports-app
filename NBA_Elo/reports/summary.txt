@@ -1,0 +1,1016 @@
+NBA Elo Ratings - Standings Summary
+========================================
+
+1996 (29 teams)
+----------------------------------------
+ 1. Chicago Bulls            72-10   Elo  1838.49
+ 2. Seattle SuperSonics      64-18   Elo  1720.40
+ 3. Utah Jazz                55-27   Elo  1689.16
+ 4. Orlando Magic            60-22   Elo  1661.57
+ 5. San Antonio Spurs        59-23   Elo  1632.15
+ 6. Los Angeles Lakers       53-29   Elo  1626.55
+ 7. Indiana Pacers           52-30   Elo  1593.67
+ 8. New York Knicks          47-35   Elo  1567.28
+ 9. Atlanta Hawks            46-36   Elo  1565.35
+10. Portland Trail Blazers   44-38   Elo  1560.95
+11. Detroit Pistons          46-36   Elo  1546.83
+12. Cleveland Cavaliers      47-35   Elo  1543.29
+13. Miami Heat               42-40   Elo  1526.28
+14. Houston Rockets          48-34   Elo  1516.54
+15. Phoenix Suns             41-41   Elo  1512.38
+16. Washington Bullets       39-43   Elo  1510.69
+17. Charlotte Hornets        41-41   Elo  1497.71
+18. Golden State Warriors    36-46   Elo  1459.08
+19. Sacramento Kings         39-43   Elo  1444.80
+20. Boston Celtics           33-49   Elo  1433.28
+21. Denver Nuggets           35-47   Elo  1416.68
+22. Los Angeles Clippers     29-53   Elo  1381.96
+23. Minnesota Timberwolves   26-56   Elo  1365.11
+24. New Jersey Nets          30-52   Elo  1364.65
+25. Dallas Mavericks         26-56   Elo  1349.58
+26. Milwaukee Bucks          25-57   Elo  1339.82
+27. Toronto Raptors          21-61   Elo  1296.69
+28. Philadelphia 76ers       18-64   Elo  1284.50
+29. Vancouver Grizzlies      15-67   Elo  1254.08
+
+1997 (29 teams)
+----------------------------------------
+ 1. Chicago Bulls            69-13   Elo  1828.68
+ 2. Utah Jazz                64-18   Elo  1755.39
+ 3. Miami Heat               61-21   Elo  1672.00
+ 4. Seattle SuperSonics      57-25   Elo  1661.40
+ 5. Houston Rockets          57-25   Elo  1655.51
+ 6. New York Knicks          57-25   Elo  1651.00
+ 7. Atlanta Hawks            56-26   Elo  1634.00
+ 8. Los Angeles Lakers       56-26   Elo  1633.73
+ 9. Detroit Pistons          54-28   Elo  1598.56
+10. Charlotte Hornets        54-28   Elo  1585.83
+11. Portland Trail Blazers   49-33   Elo  1576.53
+12. Washington Bullets       44-38   Elo  1559.59
+13. Orlando Magic            45-37   Elo  1558.95
+14. Phoenix Suns             40-42   Elo  1536.97
+15. Cleveland Cavaliers      42-40   Elo  1523.65
+16. Indiana Pacers           39-43   Elo  1520.22
+17. Minnesota Timberwolves   40-42   Elo  1450.15
+18. Los Angeles Clippers     36-46   Elo  1428.95
+19. Sacramento Kings         34-48   Elo  1419.79
+20. Toronto Raptors          30-52   Elo  1411.09
+21. Milwaukee Bucks          33-49   Elo  1401.86
+22. Golden State Warriors    30-52   Elo  1385.50
+23. New Jersey Nets          26-56   Elo  1377.58
+24. Philadelphia 76ers       22-60   Elo  1305.09
+25. San Antonio Spurs        20-62   Elo  1300.27
+26. Dallas Mavericks         24-58   Elo  1299.24
+27. Denver Nuggets           21-61   Elo  1293.20
+28. Boston Celtics           15-67   Elo  1254.08
+29. Vancouver Grizzlies      14-68   Elo  1219.67
+
+1998 (29 teams)
+----------------------------------------
+ 1. Chicago Bulls            62-20   Elo  1807.20
+ 2. Utah Jazz                62-20   Elo  1753.73
+ 3. Los Angeles Lakers       61-21   Elo  1702.99
+ 4. Indiana Pacers           58-24   Elo  1688.96
+ 5. San Antonio Spurs        56-26   Elo  1644.60
+ 6. Seattle SuperSonics      61-21   Elo  1634.70
+ 7. Phoenix Suns             56-26   Elo  1623.48
+ 8. Miami Heat               55-27   Elo  1611.79
+ 9. Atlanta Hawks            50-32   Elo  1594.52
+10. Charlotte Hornets        51-31   Elo  1589.02
+11. Cleveland Cavaliers      47-35   Elo  1560.37
+12. New York Knicks          43-39   Elo  1545.61
+13. Minnesota Timberwolves   45-37   Elo  1526.31
+14. Portland Trail Blazers   46-36   Elo  1522.85
+15. Washington Wizards       42-40   Elo  1520.31
+16. Detroit Pistons          37-45   Elo  1513.23
+17. Orlando Magic            41-41   Elo  1508.52
+18. New Jersey Nets          43-39   Elo  1506.98
+19. Houston Rockets          41-41   Elo  1496.17
+20. Milwaukee Bucks          36-46   Elo  1434.21
+21. Boston Celtics           36-46   Elo  1429.99
+22. Philadelphia 76ers       31-51   Elo  1425.79
+23. Sacramento Kings         27-55   Elo  1319.62
+24. Dallas Mavericks         20-62   Elo  1297.25
+25. Golden State Warriors    19-63   Elo  1282.16
+26. Vancouver Grizzlies      19-63   Elo  1252.29
+27. Los Angeles Clippers     17-65   Elo  1252.06
+28. Toronto Raptors          16-66   Elo  1250.31
+29. Denver Nuggets           11-71   Elo  1204.71
+
+1999 (29 teams)
+----------------------------------------
+ 1. San Antonio Spurs        37-13   Elo  1779.70
+ 2. Indiana Pacers           33-17   Elo  1658.47
+ 3. Utah Jazz                37-13   Elo  1650.52
+ 4. New York Knicks          27-23   Elo  1629.98
+ 5. Portland Trail Blazers   35-15   Elo  1609.26
+ 6. Miami Heat               33-17   Elo  1608.17
+ 7. Los Angeles Lakers       31-19   Elo  1582.64
+ 8. Detroit Pistons          29-21   Elo  1577.70
+ 9. Charlotte Hornets        26-24   Elo  1563.35
+10. Atlanta Hawks            31-19   Elo  1559.82
+11. Orlando Magic            33-17   Elo  1558.12
+12. Phoenix Suns             27-23   Elo  1545.55
+13. Philadelphia 76ers       28-22   Elo  1544.46
+14. Houston Rockets          31-19   Elo  1527.42
+15. Milwaukee Bucks          28-22   Elo  1512.33
+16. Seattle SuperSonics      25-25   Elo  1498.80
+17. Sacramento Kings         27-23   Elo  1485.91
+18. Minnesota Timberwolves   25-25   Elo  1466.49
+19. Cleveland Cavaliers      22-28   Elo  1458.17
+20. Boston Celtics           19-31   Elo  1437.68
+21. Toronto Raptors          23-27   Elo  1434.82
+22. New Jersey Nets          16-34   Elo  1426.45
+23. Washington Wizards       18-32   Elo  1417.62
+24. Dallas Mavericks         19-31   Elo  1409.84
+25. Golden State Warriors    21-29   Elo  1406.43
+26. Chicago Bulls            13-37   Elo  1365.14
+27. Denver Nuggets           14-36   Elo  1288.91
+28. Los Angeles Clippers      9-41   Elo  1271.01
+29. Vancouver Grizzlies       8-42   Elo  1225.66
+
+2000 (29 teams)
+----------------------------------------
+ 1. Los Angeles Lakers       67-15   Elo  1731.24
+ 2. Portland Trail Blazers   59-23   Elo  1706.74
+ 3. Indiana Pacers           56-26   Elo  1674.95
+ 4. San Antonio Spurs        53-29   Elo  1630.17
+ 5. Phoenix Suns             53-29   Elo  1626.79
+ 6. Miami Heat               52-30   Elo  1605.98
+ 7. Utah Jazz                55-27   Elo  1603.97
+ 8. New York Knicks          50-32   Elo  1593.77
+ 9. Philadelphia 76ers       49-33   Elo  1583.50
+10. Minnesota Timberwolves   50-32   Elo  1572.95
+11. Charlotte Hornets        49-33   Elo  1571.75
+12. Sacramento Kings         44-38   Elo  1541.85
+13. Dallas Mavericks         40-42   Elo  1524.35
+14. Milwaukee Bucks          42-40   Elo  1522.64
+15. Seattle SuperSonics      45-37   Elo  1518.14
+16. Detroit Pistons          42-40   Elo  1516.03
+17. Orlando Magic            41-41   Elo  1512.85
+18. Toronto Raptors          45-37   Elo  1484.27
+19. Houston Rockets          34-48   Elo  1470.58
+20. Boston Celtics           35-47   Elo  1465.72
+21. New Jersey Nets          31-51   Elo  1423.83
+22. Cleveland Cavaliers      32-50   Elo  1407.24
+23. Denver Nuggets           35-47   Elo  1403.62
+24. Washington Wizards       29-53   Elo  1397.75
+25. Atlanta Hawks            28-54   Elo  1344.68
+26. Vancouver Grizzlies      22-60   Elo  1313.84
+27. Golden State Warriors    19-63   Elo  1294.02
+28. Chicago Bulls            17-65   Elo  1257.17
+29. Los Angeles Clippers     15-67   Elo  1200.98
+
+2001 (29 teams)
+----------------------------------------
+ 1. Los Angeles Lakers       56-26   Elo  1805.81
+ 2. San Antonio Spurs        58-24   Elo  1682.36
+ 3. Sacramento Kings         55-27   Elo  1636.11
+ 4. Dallas Mavericks         53-29   Elo  1622.71
+ 5. Milwaukee Bucks          52-30   Elo  1622.61
+ 6. Philadelphia 76ers       56-26   Elo  1597.24
+ 7. Utah Jazz                53-29   Elo  1595.71
+ 8. Charlotte Hornets        46-36   Elo  1592.89
+ 9. Phoenix Suns             51-31   Elo  1591.22
+10. Toronto Raptors          47-35   Elo  1575.14
+11. Houston Rockets          45-37   Elo  1573.66
+12. Portland Trail Blazers   50-32   Elo  1570.25
+13. Minnesota Timberwolves   47-35   Elo  1558.81
+14. Seattle SuperSonics      44-38   Elo  1542.21
+15. Miami Heat               50-32   Elo  1533.19
+16. New York Knicks          48-34   Elo  1527.03
+17. Orlando Magic            43-39   Elo  1509.66
+18. Indiana Pacers           41-41   Elo  1497.63
+19. Denver Nuggets           40-42   Elo  1457.27
+20. Boston Celtics           36-46   Elo  1451.54
+21. Los Angeles Clippers     31-51   Elo  1429.88
+22. Detroit Pistons          32-50   Elo  1423.38
+23. Cleveland Cavaliers      30-52   Elo  1361.89
+24. Vancouver Grizzlies      23-59   Elo  1336.79
+25. New Jersey Nets          26-56   Elo  1330.04
+26. Atlanta Hawks            25-57   Elo  1329.42
+27. Washington Wizards       19-63   Elo  1283.09
+28. Chicago Bulls            15-67   Elo  1236.73
+29. Golden State Warriors    17-65   Elo  1224.98
+
+2002 (29 teams)
+----------------------------------------
+ 1. Los Angeles Lakers       58-24   Elo  1776.38
+ 2. Sacramento Kings         61-21   Elo  1721.56
+ 3. San Antonio Spurs        58-24   Elo  1680.13
+ 4. Dallas Mavericks         57-25   Elo  1670.89
+ 5. Portland Trail Blazers   49-33   Elo  1597.47
+ 6. Boston Celtics           49-33   Elo  1589.81
+ 7. New Jersey Nets          52-30   Elo  1588.47
+ 8. Seattle SuperSonics      45-37   Elo  1577.33
+ 9. Detroit Pistons          50-32   Elo  1549.19
+10. Minnesota Timberwolves   50-32   Elo  1548.58
+11. Charlotte Hornets        44-38   Elo  1546.83
+12. Utah Jazz                44-38   Elo  1546.82
+13. Philadelphia 76ers       43-39   Elo  1522.90
+14. Indiana Pacers           42-40   Elo  1507.71
+15. Toronto Raptors          42-40   Elo  1503.22
+16. Orlando Magic            44-38   Elo  1486.80
+17. Los Angeles Clippers     39-43   Elo  1477.51
+18. Milwaukee Bucks          41-41   Elo  1461.33
+19. Phoenix Suns             36-46   Elo  1457.79
+20. Miami Heat               36-46   Elo  1452.61
+21. Washington Wizards       37-45   Elo  1429.60
+22. Atlanta Hawks            33-49   Elo  1409.94
+23. New York Knicks          30-52   Elo  1391.97
+24. Cleveland Cavaliers      29-53   Elo  1376.82
+25. Houston Rockets          28-54   Elo  1376.61
+26. Denver Nuggets           27-55   Elo  1367.00
+27. Memphis Grizzlies        23-59   Elo  1319.36
+28. Golden State Warriors    21-61   Elo  1295.84
+29. Chicago Bulls            21-61   Elo  1269.76
+
+2003 (29 teams)
+----------------------------------------
+ 1. San Antonio Spurs        60-22   Elo  1775.02
+ 2. Sacramento Kings         59-23   Elo  1695.47
+ 3. Dallas Mavericks         60-22   Elo  1672.04
+ 4. Los Angeles Lakers       50-32   Elo  1660.60
+ 5. New Jersey Nets          49-33   Elo  1626.77
+ 6. Portland Trail Blazers   50-32   Elo  1602.03
+ 7. Minnesota Timberwolves   51-31   Elo  1579.22
+ 8. Philadelphia 76ers       48-34   Elo  1576.08
+ 9. Detroit Pistons          50-32   Elo  1553.02
+10. New Orleans Hornets      47-35   Elo  1548.55
+11. Utah Jazz                47-35   Elo  1543.26
+12. Phoenix Suns             44-38   Elo  1536.57
+13. Houston Rockets          43-39   Elo  1530.45
+14. Seattle SuperSonics      40-42   Elo  1523.53
+15. Indiana Pacers           48-34   Elo  1504.32
+16. Milwaukee Bucks          42-40   Elo  1490.13
+17. Orlando Magic            42-40   Elo  1487.46
+18. Boston Celtics           44-38   Elo  1482.34
+19. Golden State Warriors    38-44   Elo  1463.22
+20. New York Knicks          37-45   Elo  1455.44
+21. Washington Wizards       37-45   Elo  1424.10
+22. Atlanta Hawks            35-47   Elo  1423.00
+23. Memphis Grizzlies        28-54   Elo  1396.71
+24. Los Angeles Clippers     27-55   Elo  1384.18
+25. Chicago Bulls            30-52   Elo  1378.68
+26. Miami Heat               25-57   Elo  1346.37
+27. Toronto Raptors          24-58   Elo  1320.96
+28. Denver Nuggets           17-65   Elo  1264.69
+29. Cleveland Cavaliers      17-65   Elo  1259.42
+
+2004 (29 teams)
+----------------------------------------
+ 1. Detroit Pistons          54-28   Elo  1732.31
+ 2. San Antonio Spurs        57-25   Elo  1717.32
+ 3. Minnesota Timberwolves   58-24   Elo  1670.44
+ 4. Los Angeles Lakers       56-26   Elo  1667.28
+ 5. Indiana Pacers           61-21   Elo  1654.22
+ 6. Sacramento Kings         55-27   Elo  1649.67
+ 7. Dallas Mavericks         52-30   Elo  1625.32
+ 8. New Jersey Nets          47-35   Elo  1577.51
+ 9. Memphis Grizzlies        50-32   Elo  1562.06
+10. Miami Heat               42-40   Elo  1541.26
+11. Houston Rockets          45-37   Elo  1533.02
+12. Denver Nuggets           43-39   Elo  1525.66
+13. Portland Trail Blazers   41-41   Elo  1518.84
+14. Utah Jazz                42-40   Elo  1500.10
+15. Seattle SuperSonics      37-45   Elo  1491.82
+16. Golden State Warriors    37-45   Elo  1489.19
+17. New Orleans Hornets      41-41   Elo  1472.71
+18. Milwaukee Bucks          41-41   Elo  1471.78
+19. New York Knicks          39-43   Elo  1443.23
+20. Cleveland Cavaliers      35-47   Elo  1421.30
+21. Phoenix Suns             29-53   Elo  1417.58
+22. Boston Celtics           36-46   Elo  1413.93
+23. Philadelphia 76ers       33-49   Elo  1399.92
+24. Atlanta Hawks            28-54   Elo  1377.22
+25. Toronto Raptors          33-49   Elo  1369.48
+26. Los Angeles Clippers     28-54   Elo  1344.93
+27. Washington Wizards       25-57   Elo  1318.24
+28. Chicago Bulls            23-59   Elo  1302.53
+29. Orlando Magic            21-61   Elo  1292.50
+
+2005 (30 teams)
+----------------------------------------
+ 1. San Antonio Spurs        59-23   Elo  1723.11
+ 2. Detroit Pistons          54-28   Elo  1706.50
+ 3. Phoenix Suns             62-20   Elo  1695.95
+ 4. Miami Heat               59-23   Elo  1675.59
+ 5. Dallas Mavericks         58-24   Elo  1673.87
+ 6. Houston Rockets          51-31   Elo  1657.66
+ 7. Denver Nuggets           49-33   Elo  1593.16
+ 8. Seattle SuperSonics      52-30   Elo  1581.58
+ 9. Minnesota Timberwolves   44-38   Elo  1561.66
+10. Sacramento Kings         50-32   Elo  1555.58
+11. Indiana Pacers           44-38   Elo  1547.49
+12. Memphis Grizzlies        45-37   Elo  1540.32
+13. New Jersey Nets          42-40   Elo  1525.43
+14. Chicago Bulls            47-35   Elo  1522.64
+15. Boston Celtics           45-37   Elo  1513.94
+16. Golden State Warriors    34-48   Elo  1495.68
+17. Philadelphia 76ers       43-39   Elo  1493.95
+18. Washington Wizards       45-37   Elo  1484.69
+19. Cleveland Cavaliers      42-40   Elo  1471.60
+20. Los Angeles Clippers     37-45   Elo  1462.78
+21. Los Angeles Lakers       34-48   Elo  1417.39
+22. Toronto Raptors          33-49   Elo  1411.94
+23. New York Knicks          33-49   Elo  1409.05
+24. Orlando Magic            36-46   Elo  1375.10
+25. Milwaukee Bucks          30-52   Elo  1374.13
+26. Portland Trail Blazers   27-55   Elo  1362.46
+27. Utah Jazz                26-56   Elo  1354.74
+28. New Orleans Hornets      18-64   Elo  1307.37
+29. Charlotte Bobcats        18-64   Elo  1298.84
+30. Atlanta Hawks            13-69   Elo  1202.92
+
+2006 (30 teams)
+----------------------------------------
+ 1. San Antonio Spurs        63-19   Elo  1704.31
+ 2. Dallas Mavericks         60-22   Elo  1703.56
+ 3. Miami Heat               52-30   Elo  1697.19
+ 4. Detroit Pistons          64-18   Elo  1660.41
+ 5. Phoenix Suns             54-28   Elo  1628.23
+ 6. Los Angeles Clippers     47-35   Elo  1589.30
+ 7. Cleveland Cavaliers      50-32   Elo  1583.56
+ 8. Sacramento Kings         44-38   Elo  1578.25
+ 9. Memphis Grizzlies        49-33   Elo  1568.79
+10. Los Angeles Lakers       45-37   Elo  1567.04
+11. New Jersey Nets          49-33   Elo  1560.55
+12. Washington Wizards       42-40   Elo  1532.16
+13. Chicago Bulls            41-41   Elo  1521.04
+14. Indiana Pacers           41-41   Elo  1496.26
+15. Denver Nuggets           44-38   Elo  1487.86
+16. Utah Jazz                41-41   Elo  1484.10
+17. Orlando Magic            36-46   Elo  1473.18
+18. Seattle SuperSonics      35-47   Elo  1470.83
+19. Milwaukee Bucks          40-42   Elo  1463.18
+20. Houston Rockets          34-48   Elo  1461.62
+21. Philadelphia 76ers       38-44   Elo  1441.57
+22. Boston Celtics           33-49   Elo  1436.64
+23. New Orleans/Oklahoma City Hornets 38-44   Elo  1431.37
+24. Golden State Warriors    34-48   Elo  1427.23
+25. Minnesota Timberwolves   33-49   Elo  1408.43
+26. Toronto Raptors          27-55   Elo  1371.79
+27. Charlotte Bobcats        26-56   Elo  1364.84
+28. Atlanta Hawks            26-56   Elo  1318.69
+29. New York Knicks          23-59   Elo  1301.87
+30. Portland Trail Blazers   21-61   Elo  1263.92
+
+2007 (30 teams)
+----------------------------------------
+ 1. San Antonio Spurs        58-24   Elo  1761.67
+ 2. Dallas Mavericks         67-15   Elo  1691.59
+ 3. Phoenix Suns             61-21   Elo  1689.45
+ 4. Detroit Pistons          53-29   Elo  1644.19
+ 5. Cleveland Cavaliers      50-32   Elo  1628.48
+ 6. Chicago Bulls            49-33   Elo  1619.98
+ 7. Utah Jazz                51-31   Elo  1602.55
+ 8. Houston Rockets          52-30   Elo  1584.94
+ 9. Denver Nuggets           45-37   Elo  1571.61
+10. Golden State Warriors    42-40   Elo  1566.69
+11. New Jersey Nets          41-41   Elo  1539.58
+12. Toronto Raptors          47-35   Elo  1538.67
+13. Los Angeles Clippers     40-42   Elo  1521.09
+14. Miami Heat               44-38   Elo  1499.07
+15. New Orleans/Oklahoma City Hornets 39-43   Elo  1491.14
+16. Los Angeles Lakers       42-40   Elo  1483.16
+17. Orlando Magic            40-42   Elo  1477.78
+18. Philadelphia 76ers       35-47   Elo  1453.60
+19. Washington Wizards       41-41   Elo  1434.87
+20. Charlotte Bobcats        33-49   Elo  1429.47
+21. Sacramento Kings         33-49   Elo  1426.97
+22. Seattle SuperSonics      31-51   Elo  1416.43
+23. Indiana Pacers           35-47   Elo  1402.24
+24. New York Knicks          33-49   Elo  1386.72
+25. Portland Trail Blazers   32-50   Elo  1380.07
+26. Minnesota Timberwolves   32-50   Elo  1368.55
+27. Atlanta Hawks            30-52   Elo  1360.05
+28. Memphis Grizzlies        22-60   Elo  1358.96
+29. Boston Celtics           24-58   Elo  1336.33
+30. Milwaukee Bucks          28-54   Elo  1330.92
+
+2008 (30 teams)
+----------------------------------------
+ 1. Boston Celtics           66-16   Elo  1744.86
+ 2. Los Angeles Lakers       57-25   Elo  1707.32
+ 3. San Antonio Spurs        56-26   Elo  1676.23
+ 4. Utah Jazz                54-28   Elo  1673.04
+ 5. Detroit Pistons          59-23   Elo  1663.84
+ 6. New Orleans Hornets      56-26   Elo  1655.89
+ 7. Houston Rockets          55-27   Elo  1639.31
+ 8. Phoenix Suns             55-27   Elo  1636.48
+ 9. Orlando Magic            52-30   Elo  1606.72
+10. Dallas Mavericks         51-31   Elo  1583.26
+11. Denver Nuggets           50-32   Elo  1583.04
+12. Golden State Warriors    48-34   Elo  1569.17
+13. Cleveland Cavaliers      45-37   Elo  1564.11
+14. Philadelphia 76ers       40-42   Elo  1501.92
+15. Washington Wizards       43-39   Elo  1491.59
+16. Toronto Raptors          41-41   Elo  1475.05
+17. Sacramento Kings         38-44   Elo  1469.60
+18. Portland Trail Blazers   41-41   Elo  1466.32
+19. Atlanta Hawks            37-45   Elo  1462.42
+20. Indiana Pacers           36-46   Elo  1452.93
+21. Chicago Bulls            33-49   Elo  1435.75
+22. Charlotte Bobcats        32-50   Elo  1421.38
+23. New Jersey Nets          34-48   Elo  1408.98
+24. Minnesota Timberwolves   22-60   Elo  1343.64
+25. Los Angeles Clippers     23-59   Elo  1321.35
+26. Memphis Grizzlies        22-60   Elo  1317.26
+27. New York Knicks          23-59   Elo  1294.88
+28. Seattle SuperSonics      20-62   Elo  1291.94
+29. Milwaukee Bucks          26-56   Elo  1285.81
+30. Miami Heat               15-67   Elo  1253.32
+
+2009 (30 teams)
+----------------------------------------
+ 1. Los Angeles Lakers       65-17   Elo  1802.43
+ 2. Cleveland Cavaliers      66-16   Elo  1745.37
+ 3. Orlando Magic            59-23   Elo  1686.96
+ 4. Boston Celtics           62-20   Elo  1676.41
+ 5. Denver Nuggets           54-28   Elo  1660.98
+ 6. Houston Rockets          53-29   Elo  1660.49
+ 7. Portland Trail Blazers   54-28   Elo  1623.78
+ 8. Dallas Mavericks         50-32   Elo  1607.30
+ 9. San Antonio Spurs        54-28   Elo  1595.47
+10. Utah Jazz                48-34   Elo  1561.62
+11. Phoenix Suns             46-36   Elo  1546.58
+12. Chicago Bulls            41-41   Elo  1522.86
+13. Atlanta Hawks            47-35   Elo  1517.25
+14. New Orleans Hornets      49-33   Elo  1508.36
+15. Miami Heat               43-39   Elo  1501.83
+16. Philadelphia 76ers       41-41   Elo  1483.81
+17. Indiana Pacers           36-46   Elo  1476.29
+18. Detroit Pistons          39-43   Elo  1460.70
+19. Charlotte Bobcats        35-47   Elo  1448.03
+20. New Jersey Nets          34-48   Elo  1429.79
+21. Toronto Raptors          33-49   Elo  1428.33
+22. Milwaukee Bucks          34-48   Elo  1414.82
+23. Golden State Warriors    29-53   Elo  1410.37
+24. New York Knicks          32-50   Elo  1386.68
+25. Memphis Grizzlies        24-58   Elo  1348.36
+26. Oklahoma City Thunder    23-59   Elo  1344.74
+27. Minnesota Timberwolves   24-58   Elo  1326.42
+28. Washington Wizards       19-63   Elo  1295.63
+29. Sacramento Kings         17-65   Elo  1271.00
+30. Los Angeles Clippers     19-63   Elo  1254.96
+
+2010 (30 teams)
+----------------------------------------
+ 1. Orlando Magic            59-23   Elo  1729.41
+ 2. Los Angeles Lakers       57-25   Elo  1720.96
+ 3. Phoenix Suns             54-28   Elo  1681.78
+ 4. Boston Celtics           50-32   Elo  1668.81
+ 5. Cleveland Cavaliers      61-21   Elo  1668.50
+ 6. San Antonio Spurs        50-32   Elo  1616.61
+ 7. Dallas Mavericks         55-27   Elo  1610.83
+ 8. Utah Jazz                53-29   Elo  1608.37
+ 9. Denver Nuggets           53-29   Elo  1605.12
+10. Oklahoma City Thunder    50-32   Elo  1591.92
+11. Atlanta Hawks            53-29   Elo  1580.96
+12. Portland Trail Blazers   50-32   Elo  1576.43
+13. Milwaukee Bucks          46-36   Elo  1551.64
+14. Miami Heat               47-35   Elo  1550.53
+15. Charlotte Bobcats        44-38   Elo  1518.87
+16. Houston Rockets          42-40   Elo  1507.72
+17. Chicago Bulls            41-41   Elo  1489.12
+18. Memphis Grizzlies        40-42   Elo  1457.37
+19. Indiana Pacers           32-50   Elo  1455.95
+20. Toronto Raptors          40-42   Elo  1443.30
+21. New Orleans Hornets      37-45   Elo  1436.14
+22. Golden State Warriors    26-56   Elo  1397.40
+23. New York Knicks          29-53   Elo  1372.08
+24. Philadelphia 76ers       27-55   Elo  1367.07
+25. Detroit Pistons          27-55   Elo  1334.99
+26. Washington Wizards       26-56   Elo  1334.36
+27. Los Angeles Clippers     29-53   Elo  1320.51
+28. Sacramento Kings         25-57   Elo  1308.31
+29. New Jersey Nets          12-70   Elo  1258.71
+30. Minnesota Timberwolves   15-67   Elo  1234.46
+
+2011 (30 teams)
+----------------------------------------
+ 1. Dallas Mavericks         57-25   Elo  1755.39
+ 2. Miami Heat               58-24   Elo  1710.55
+ 3. Chicago Bulls            62-20   Elo  1678.74
+ 4. Oklahoma City Thunder    55-27   Elo  1650.70
+ 5. Los Angeles Lakers       57-25   Elo  1636.69
+ 6. Boston Celtics           56-26   Elo  1632.42
+ 7. San Antonio Spurs        61-21   Elo  1623.22
+ 8. Orlando Magic            52-30   Elo  1613.60
+ 9. Denver Nuggets           50-32   Elo  1604.04
+10. Memphis Grizzlies        46-36   Elo  1603.99
+11. Portland Trail Blazers   48-34   Elo  1561.22
+12. Houston Rockets          43-39   Elo  1559.04
+13. New Orleans Hornets      46-36   Elo  1514.39
+14. Philadelphia 76ers       41-41   Elo  1509.38
+15. Atlanta Hawks            44-38   Elo  1496.32
+16. Phoenix Suns             40-42   Elo  1495.84
+17. New York Knicks          42-40   Elo  1477.46
+18. Golden State Warriors    36-46   Elo  1465.27
+19. Milwaukee Bucks          35-47   Elo  1461.80
+20. Indiana Pacers           37-45   Elo  1457.42
+21. Utah Jazz                39-43   Elo  1435.30
+22. Los Angeles Clippers     32-50   Elo  1423.06
+23. Charlotte Bobcats        34-48   Elo  1405.13
+24. Detroit Pistons          30-52   Elo  1385.17
+25. Sacramento Kings         24-58   Elo  1380.47
+26. Washington Wizards       23-59   Elo  1311.48
+27. Cleveland Cavaliers      19-63   Elo  1303.00
+28. Toronto Raptors          22-60   Elo  1295.07
+29. New Jersey Nets          24-58   Elo  1291.97
+30. Minnesota Timberwolves   17-65   Elo  1259.88
+
+2012 (30 teams)
+----------------------------------------
+ 1. Miami Heat               46-20   Elo  1736.63
+ 2. San Antonio Spurs        50-16   Elo  1727.34
+ 3. Oklahoma City Thunder    47-19   Elo  1708.45
+ 4. Chicago Bulls            50-16   Elo  1650.38
+ 5. Boston Celtics           39-27   Elo  1619.58
+ 6. Memphis Grizzlies        41-25   Elo  1599.86
+ 7. Denver Nuggets           38-28   Elo  1587.46
+ 8. Indiana Pacers           42-24   Elo  1586.13
+ 9. Los Angeles Lakers       41-25   Elo  1580.42
+10. Los Angeles Clippers     40-26   Elo  1565.18
+11. Atlanta Hawks            40-26   Elo  1554.14
+12. Philadelphia 76ers       35-31   Elo  1545.01
+13. New York Knicks          36-30   Elo  1540.98
+14. Dallas Mavericks         36-30   Elo  1534.33
+15. Phoenix Suns             33-33   Elo  1533.50
+16. Utah Jazz                36-30   Elo  1531.10
+17. Houston Rockets          34-32   Elo  1495.00
+18. Orlando Magic            37-29   Elo  1482.89
+19. Milwaukee Bucks          31-35   Elo  1480.31
+20. Portland Trail Blazers   28-38   Elo  1433.10
+21. New Orleans Hornets      21-45   Elo  1419.57
+22. Detroit Pistons          25-41   Elo  1401.68
+23. Golden State Warriors    23-43   Elo  1388.81
+24. Toronto Raptors          23-43   Elo  1386.80
+25. Washington Wizards       20-46   Elo  1376.71
+26. Minnesota Timberwolves   26-40   Elo  1376.47
+27. Sacramento Kings         22-44   Elo  1374.83
+28. New Jersey Nets          22-44   Elo  1318.90
+29. Cleveland Cavaliers      21-45   Elo  1301.17
+30. Charlotte Bobcats         7-59   Elo  1162.50
+
+2013 (30 teams)
+----------------------------------------
+ 1. Miami Heat               66-16   Elo  1769.29
+ 2. San Antonio Spurs        58-24   Elo  1735.40
+ 3. Oklahoma City Thunder    60-22   Elo  1684.84
+ 4. Denver Nuggets           57-25   Elo  1661.52
+ 5. Memphis Grizzlies        56-26   Elo  1658.04
+ 6. Indiana Pacers           49-32   Elo  1620.62
+ 7. Los Angeles Clippers     56-26   Elo  1616.60
+ 8. New York Knicks          54-28   Elo  1609.27
+ 9. Golden State Warriors    47-35   Elo  1568.69
+10. Houston Rockets          45-37   Elo  1566.89
+11. Brooklyn Nets            49-33   Elo  1549.63
+12. Los Angeles Lakers       45-37   Elo  1533.94
+13. Dallas Mavericks         41-41   Elo  1531.16
+14. Chicago Bulls            45-37   Elo  1526.42
+15. Utah Jazz                43-39   Elo  1521.47
+16. Atlanta Hawks            44-38   Elo  1485.07
+17. Boston Celtics           41-40   Elo  1484.89
+18. Toronto Raptors          34-48   Elo  1458.52
+19. Philadelphia 76ers       34-48   Elo  1430.74
+20. Minnesota Timberwolves   31-51   Elo  1428.21
+21. Milwaukee Bucks          38-44   Elo  1423.31
+22. Washington Wizards       29-53   Elo  1420.53
+23. Portland Trail Blazers   33-49   Elo  1393.83
+24. Sacramento Kings         28-54   Elo  1388.90
+25. New Orleans Hornets      27-55   Elo  1382.59
+26. Detroit Pistons          29-53   Elo  1367.28
+27. Phoenix Suns             25-57   Elo  1332.51
+28. Cleveland Cavaliers      24-58   Elo  1316.01
+29. Charlotte Bobcats        21-61   Elo  1275.48
+30. Orlando Magic            20-62   Elo  1257.86
+
+2014 (30 teams)
+----------------------------------------
+ 1. San Antonio Spurs        62-20   Elo  1793.96
+ 2. Oklahoma City Thunder    59-23   Elo  1680.18
+ 3. Los Angeles Clippers     57-25   Elo  1668.36
+ 4. Miami Heat               54-28   Elo  1632.60
+ 5. Houston Rockets          54-28   Elo  1620.49
+ 6. Golden State Warriors    51-31   Elo  1619.72
+ 7. Memphis Grizzlies        50-32   Elo  1609.86
+ 8. Dallas Mavericks         49-33   Elo  1605.57
+ 9. Portland Trail Blazers   54-28   Elo  1594.90
+10. Phoenix Suns             48-34   Elo  1570.83
+11. Indiana Pacers           56-26   Elo  1563.28
+12. Toronto Raptors          48-34   Elo  1562.53
+13. Chicago Bulls            48-34   Elo  1549.51
+14. Washington Wizards       44-38   Elo  1546.18
+15. Brooklyn Nets            44-38   Elo  1531.42
+16. New York Knicks          37-45   Elo  1518.77
+17. Minnesota Timberwolves   40-42   Elo  1511.64
+18. Charlotte Bobcats        43-39   Elo  1500.30
+19. Atlanta Hawks            38-44   Elo  1467.85
+20. Denver Nuggets           36-46   Elo  1460.52
+21. New Orleans Pelicans     34-48   Elo  1427.48
+22. Cleveland Cavaliers      33-49   Elo  1419.03
+23. Sacramento Kings         28-54   Elo  1395.02
+24. Los Angeles Lakers       27-55   Elo  1369.67
+25. Detroit Pistons          29-53   Elo  1348.37
+26. Utah Jazz                25-57   Elo  1330.40
+27. Boston Celtics           25-57   Elo  1327.77
+28. Orlando Magic            23-59   Elo  1298.03
+29. Milwaukee Bucks          15-67   Elo  1248.08
+30. Philadelphia 76ers       19-63   Elo  1228.15
+
+2015 (30 teams)
+----------------------------------------
+ 1. Golden State Warriors    67-15   Elo  1831.12
+ 2. San Antonio Spurs        55-27   Elo  1709.02
+ 3. Cleveland Cavaliers      53-29   Elo  1692.15
+ 4. Los Angeles Clippers     56-26   Elo  1688.17
+ 5. Houston Rockets          56-26   Elo  1656.51
+ 6. Memphis Grizzlies        55-27   Elo  1628.17
+ 7. Atlanta Hawks            60-22   Elo  1601.68
+ 8. Oklahoma City Thunder    45-37   Elo  1584.01
+ 9. Chicago Bulls            50-32   Elo  1579.47
+10. Portland Trail Blazers   51-31   Elo  1563.05
+11. Dallas Mavericks         50-32   Elo  1558.34
+12. Washington Wizards       46-36   Elo  1541.27
+13. New Orleans Pelicans     45-37   Elo  1527.46
+14. Utah Jazz                38-44   Elo  1524.67
+15. Boston Celtics           40-42   Elo  1499.06
+16. Indiana Pacers           38-44   Elo  1498.82
+17. Toronto Raptors          49-33   Elo  1496.39
+18. Phoenix Suns             39-43   Elo  1474.88
+19. Brooklyn Nets            38-44   Elo  1461.38
+20. Miami Heat               37-45   Elo  1451.72
+21. Milwaukee Bucks          41-41   Elo  1448.28
+22. Detroit Pistons          32-50   Elo  1434.47
+23. Denver Nuggets           30-52   Elo  1406.35
+24. Charlotte Hornets        33-49   Elo  1399.24
+25. Sacramento Kings         29-53   Elo  1395.22
+26. Orlando Magic            25-57   Elo  1303.06
+27. Los Angeles Lakers       21-61   Elo  1285.37
+28. Minnesota Timberwolves   16-66   Elo  1258.36
+29. Philadelphia 76ers       18-64   Elo  1257.69
+30. New York Knicks          17-65   Elo  1247.92
+
+2016 (30 teams)
+----------------------------------------
+ 1. Golden State Warriors    73-9    Elo  1779.54
+ 2. Cleveland Cavaliers      57-25   Elo  1775.31
+ 3. San Antonio Spurs        67-15   Elo  1751.37
+ 4. Oklahoma City Thunder    55-27   Elo  1737.07
+ 5. Los Angeles Clippers     53-29   Elo  1613.92
+ 6. Portland Trail Blazers   44-38   Elo  1604.27
+ 7. Toronto Raptors          56-26   Elo  1602.85
+ 8. Atlanta Hawks            48-34   Elo  1586.94
+ 9. Miami Heat               48-34   Elo  1585.49
+10. Boston Celtics           48-34   Elo  1551.87
+11. Charlotte Hornets        48-34   Elo  1551.73
+12. Indiana Pacers           45-37   Elo  1539.42
+13. Houston Rockets          41-41   Elo  1530.28
+14. Utah Jazz                40-42   Elo  1524.23
+15. Washington Wizards       41-41   Elo  1514.07
+16. Dallas Mavericks         42-40   Elo  1499.55
+17. Detroit Pistons          44-38   Elo  1488.89
+18. Chicago Bulls            42-40   Elo  1463.77
+19. Memphis Grizzlies        42-40   Elo  1455.85
+20. Orlando Magic            35-47   Elo  1425.95
+21. Sacramento Kings         33-49   Elo  1415.11
+22. Denver Nuggets           33-49   Elo  1413.91
+23. Milwaukee Bucks          33-49   Elo  1393.51
+24. New Orleans Pelicans     30-52   Elo  1387.74
+25. Minnesota Timberwolves   29-53   Elo  1375.84
+26. New York Knicks          32-50   Elo  1375.27
+27. Phoenix Suns             23-59   Elo  1322.54
+28. Brooklyn Nets            21-61   Elo  1285.32
+29. Los Angeles Lakers       17-65   Elo  1255.44
+30. Philadelphia 76ers       10-72   Elo  1193.99
+
+2017 (30 teams)
+----------------------------------------
+ 1. Golden State Warriors    67-15   Elo  1861.64
+ 2. Cleveland Cavaliers      51-31   Elo  1697.74
+ 3. San Antonio Spurs        61-21   Elo  1674.13
+ 4. Houston Rockets          55-27   Elo  1615.22
+ 5. Los Angeles Clippers     51-31   Elo  1612.04
+ 6. Utah Jazz                51-31   Elo  1596.53
+ 7. Washington Wizards       49-33   Elo  1582.99
+ 8. Boston Celtics           53-29   Elo  1557.84
+ 9. Miami Heat               41-41   Elo  1556.94
+10. Toronto Raptors          51-31   Elo  1554.37
+11. Oklahoma City Thunder    47-35   Elo  1540.15
+12. Denver Nuggets           40-42   Elo  1532.42
+13. Portland Trail Blazers   41-41   Elo  1527.18
+14. Milwaukee Bucks          42-40   Elo  1502.66
+15. Memphis Grizzlies        43-39   Elo  1495.13
+16. Indiana Pacers           42-40   Elo  1493.36
+17. Chicago Bulls            41-41   Elo  1482.30
+18. Atlanta Hawks            43-39   Elo  1476.80
+19. New Orleans Pelicans     34-48   Elo  1462.46
+20. Charlotte Hornets        36-46   Elo  1456.92
+21. Minnesota Timberwolves   31-51   Elo  1439.28
+22. Detroit Pistons          37-45   Elo  1435.21
+23. Dallas Mavericks         33-49   Elo  1424.09
+24. Sacramento Kings         32-50   Elo  1392.15
+25. New York Knicks          31-51   Elo  1373.71
+26. Orlando Magic            29-53   Elo  1347.76
+27. Los Angeles Lakers       26-56   Elo  1337.71
+28. Philadelphia 76ers       28-54   Elo  1332.55
+29. Brooklyn Nets            20-62   Elo  1325.79
+30. Phoenix Suns             24-58   Elo  1315.63
+
+2018 (30 teams)
+----------------------------------------
+ 1. Golden State Warriors    58-24   Elo  1770.51
+ 2. Houston Rockets          65-17   Elo  1724.38
+ 3. Utah Jazz                48-34   Elo  1645.34
+ 4. Philadelphia 76ers       52-30   Elo  1626.21
+ 5. Toronto Raptors          59-23   Elo  1616.27
+ 6. Boston Celtics           55-27   Elo  1599.63
+ 7. Oklahoma City Thunder    48-34   Elo  1591.08
+ 8. New Orleans Pelicans     48-34   Elo  1588.28
+ 9. Cleveland Cavaliers      50-32   Elo  1588.27
+10. Denver Nuggets           46-36   Elo  1576.95
+11. Indiana Pacers           48-34   Elo  1573.08
+12. Portland Trail Blazers   49-33   Elo  1569.54
+13. San Antonio Spurs        47-35   Elo  1552.59
+14. Minnesota Timberwolves   47-35   Elo  1546.43
+15. Milwaukee Bucks          44-38   Elo  1517.05
+16. Washington Wizards       43-39   Elo  1506.40
+17. Los Angeles Clippers     42-40   Elo  1506.01
+18. Miami Heat               44-38   Elo  1501.09
+19. Detroit Pistons          39-43   Elo  1472.01
+20. Charlotte Hornets        36-46   Elo  1469.25
+21. Los Angeles Lakers       35-47   Elo  1461.60
+22. Brooklyn Nets            28-54   Elo  1381.71
+23. New York Knicks          29-53   Elo  1362.19
+24. Dallas Mavericks         24-58   Elo  1357.31
+25. Sacramento Kings         27-55   Elo  1337.77
+26. Atlanta Hawks            24-58   Elo  1336.30
+27. Chicago Bulls            27-55   Elo  1331.29
+28. Orlando Magic            25-57   Elo  1322.25
+29. Memphis Grizzlies        22-60   Elo  1304.65
+30. Phoenix Suns             21-61   Elo  1268.41
+
+2019 (30 teams)
+----------------------------------------
+ 1. Toronto Raptors          58-24   Elo  1745.90
+ 2. Golden State Warriors    57-25   Elo  1699.46
+ 3. Milwaukee Bucks          60-22   Elo  1698.47
+ 4. Houston Rockets          53-29   Elo  1684.35
+ 5. Portland Trail Blazers   53-29   Elo  1630.13
+ 6. Denver Nuggets           54-28   Elo  1617.44
+ 7. Utah Jazz                50-32   Elo  1613.27
+ 8. Philadelphia 76ers       51-31   Elo  1608.48
+ 9. Boston Celtics           49-33   Elo  1596.54
+10. San Antonio Spurs        48-34   Elo  1574.70
+11. Oklahoma City Thunder    49-33   Elo  1571.52
+12. Los Angeles Clippers     48-34   Elo  1535.03
+13. Orlando Magic            42-40   Elo  1525.21
+14. Indiana Pacers           48-34   Elo  1510.02
+15. Miami Heat               39-43   Elo  1491.08
+16. Brooklyn Nets            42-40   Elo  1485.72
+17. Charlotte Hornets        39-43   Elo  1481.65
+18. Detroit Pistons          41-41   Elo  1467.70
+19. Los Angeles Lakers       37-45   Elo  1454.88
+20. Minnesota Timberwolves   36-46   Elo  1453.06
+21. Sacramento Kings         39-43   Elo  1450.20
+22. Dallas Mavericks         33-49   Elo  1413.79
+23. Memphis Grizzlies        33-49   Elo  1413.41
+24. Washington Wizards       32-50   Elo  1404.70
+25. New Orleans Pelicans     33-49   Elo  1400.30
+26. Atlanta Hawks            29-53   Elo  1380.17
+27. Chicago Bulls            22-60   Elo  1293.31
+28. Cleveland Cavaliers      19-63   Elo  1288.78
+29. Phoenix Suns             19-63   Elo  1262.57
+30. New York Knicks          17-65   Elo  1251.42
+
+2020 (30 teams)
+----------------------------------------
+ 1. Los Angeles Lakers       52-19   Elo  1719.29
+ 2. Toronto Raptors          53-19   Elo  1698.91
+ 3. Boston Celtics           48-24   Elo  1686.98
+ 4. Milwaukee Bucks          56-17   Elo  1656.00
+ 5. Los Angeles Clippers     49-23   Elo  1643.35
+ 6. Miami Heat               44-29   Elo  1642.97
+ 7. Denver Nuggets           46-27   Elo  1588.94
+ 8. Houston Rockets          44-28   Elo  1571.13
+ 9. Oklahoma City Thunder    44-28   Elo  1567.70
+10. Utah Jazz                44-28   Elo  1563.98
+11. Indiana Pacers           45-28   Elo  1541.62
+12. Philadelphia 76ers       43-30   Elo  1541.08
+13. Dallas Mavericks         43-32   Elo  1539.43
+14. Phoenix Suns             34-39   Elo  1518.78
+15. San Antonio Spurs        32-39   Elo  1517.62
+16. Portland Trail Blazers   35-39   Elo  1507.96
+17. Memphis Grizzlies        34-39   Elo  1501.27
+18. Sacramento Kings         31-41   Elo  1483.46
+19. Orlando Magic            33-40   Elo  1480.63
+20. New Orleans Pelicans     30-42   Elo  1480.18
+21. Brooklyn Nets            35-37   Elo  1473.53
+22. Charlotte Hornets        23-42   Elo  1379.67
+23. Washington Wizards       25-47   Elo  1364.46
+24. Minnesota Timberwolves   19-45   Elo  1346.03
+25. Golden State Warriors    15-50   Elo  1339.38
+26. Atlanta Hawks            20-47   Elo  1339.07
+27. Chicago Bulls            22-43   Elo  1336.55
+28. New York Knicks          21-45   Elo  1335.94
+29. Detroit Pistons          20-46   Elo  1335.29
+30. Cleveland Cavaliers      19-46   Elo  1302.79
+
+2021 (30 teams)
+----------------------------------------
+ 1. Milwaukee Bucks          46-26   Elo  1719.61
+ 2. Phoenix Suns             51-21   Elo  1694.54
+ 3. Los Angeles Clippers     47-25   Elo  1669.88
+ 4. Utah Jazz                52-20   Elo  1653.91
+ 5. Philadelphia 76ers       49-23   Elo  1635.75
+ 6. Brooklyn Nets            48-24   Elo  1634.44
+ 7. Denver Nuggets           47-25   Elo  1601.34
+ 8. Atlanta Hawks            41-31   Elo  1582.24
+ 9. Portland Trail Blazers   42-30   Elo  1579.87
+10. Dallas Mavericks         42-30   Elo  1566.39
+11. Los Angeles Lakers       42-30   Elo  1566.17
+12. Memphis Grizzlies        38-34   Elo  1544.57
+13. New York Knicks          41-31   Elo  1542.68
+14. Miami Heat               40-32   Elo  1521.68
+15. Golden State Warriors    39-33   Elo  1517.52
+16. Boston Celtics           36-36   Elo  1499.95
+17. Washington Wizards       34-38   Elo  1477.01
+18. Indiana Pacers           34-38   Elo  1472.87
+19. Chicago Bulls            31-41   Elo  1470.48
+20. New Orleans Pelicans     31-41   Elo  1463.18
+21. San Antonio Spurs        33-39   Elo  1460.82
+22. Sacramento Kings         31-41   Elo  1428.90
+23. Toronto Raptors          27-45   Elo  1425.78
+24. Charlotte Hornets        33-39   Elo  1420.54
+25. Minnesota Timberwolves   23-49   Elo  1386.07
+26. Detroit Pistons          20-52   Elo  1325.08
+27. Cleveland Cavaliers      22-50   Elo  1297.82
+28. Houston Rockets          17-55   Elo  1288.29
+29. Orlando Magic            21-51   Elo  1284.75
+30. Oklahoma City Thunder    22-50   Elo  1268.46
+
+2022 (30 teams)
+----------------------------------------
+ 1. Golden State Warriors    53-29   Elo  1722.05
+ 2. Boston Celtics           51-31   Elo  1691.77
+ 3. Phoenix Suns             64-18   Elo  1662.61
+ 4. Miami Heat               53-29   Elo  1647.77
+ 5. Dallas Mavericks         52-30   Elo  1639.75
+ 6. Memphis Grizzlies        56-26   Elo  1639.03
+ 7. Milwaukee Bucks          51-31   Elo  1615.79
+ 8. Philadelphia 76ers       51-31   Elo  1608.27
+ 9. Toronto Raptors          48-34   Elo  1573.95
+10. Utah Jazz                49-33   Elo  1568.00
+11. Minnesota Timberwolves   46-36   Elo  1561.55
+12. Denver Nuggets           48-34   Elo  1547.80
+13. Atlanta Hawks            43-39   Elo  1541.77
+14. New Orleans Pelicans     36-46   Elo  1524.16
+15. Charlotte Hornets        43-39   Elo  1520.41
+16. Brooklyn Nets            44-38   Elo  1518.44
+17. Los Angeles Clippers     42-40   Elo  1509.52
+18. New York Knicks          37-45   Elo  1491.09
+19. Cleveland Cavaliers      44-38   Elo  1478.62
+20. San Antonio Spurs        34-48   Elo  1463.97
+21. Chicago Bulls            46-36   Elo  1456.25
+22. Los Angeles Lakers       33-49   Elo  1408.02
+23. Washington Wizards       35-47   Elo  1398.36
+24. Sacramento Kings         30-52   Elo  1371.47
+25. Indiana Pacers           25-57   Elo  1349.31
+26. Detroit Pistons          23-59   Elo  1332.69
+27. Orlando Magic            22-60   Elo  1300.69
+28. Oklahoma City Thunder    24-58   Elo  1294.56
+29. Houston Rockets          20-62   Elo  1281.74
+30. Portland Trail Blazers   27-55   Elo  1281.33
+
+2023 (30 teams)
+----------------------------------------
+ 1. Denver Nuggets           53-29   Elo  1708.20
+ 2. Boston Celtics           57-25   Elo  1670.88
+ 3. Philadelphia 76ers       54-28   Elo  1647.19
+ 4. Miami Heat               44-38   Elo  1596.27
+ 5. Milwaukee Bucks          58-24   Elo  1596.04
+ 6. New York Knicks          47-35   Elo  1591.94
+ 7. Golden State Warriors    44-38   Elo  1574.74
+ 8. Los Angeles Lakers       43-39   Elo  1573.10
+ 9. Memphis Grizzlies        51-31   Elo  1568.28
+10. Cleveland Cavaliers      51-31   Elo  1568.20
+11. Phoenix Suns             45-37   Elo  1559.69
+12. Sacramento Kings         48-34   Elo  1539.33
+13. Toronto Raptors          41-41   Elo  1539.12
+14. Chicago Bulls            40-42   Elo  1525.19
+15. Atlanta Hawks            41-41   Elo  1518.62
+16. Minnesota Timberwolves   42-40   Elo  1516.66
+17. Los Angeles Clippers     44-38   Elo  1515.21
+18. New Orleans Pelicans     42-40   Elo  1508.15
+19. Oklahoma City Thunder    40-42   Elo  1499.41
+20. Brooklyn Nets            45-37   Elo  1496.81
+21. Dallas Mavericks         38-44   Elo  1453.55
+22. Orlando Magic            34-48   Elo  1429.58
+23. Utah Jazz                37-45   Elo  1425.63
+24. Washington Wizards       35-47   Elo  1424.76
+25. Indiana Pacers           35-47   Elo  1395.29
+26. Charlotte Hornets        27-55   Elo  1368.91
+27. Portland Trail Blazers   33-49   Elo  1334.94
+28. Houston Rockets          22-60   Elo  1308.48
+29. San Antonio Spurs        22-60   Elo  1297.38
+30. Detroit Pistons          17-65   Elo  1251.08
+
+2024 (30 teams)
+----------------------------------------
+ 1. Boston Celtics           64-18   Elo  1781.31
+ 2. Dallas Mavericks         50-32   Elo  1685.07
+ 3. Oklahoma City Thunder    57-25   Elo  1667.17
+ 4. Minnesota Timberwolves   56-26   Elo  1660.01
+ 5. Denver Nuggets           57-25   Elo  1659.21
+ 6. Indiana Pacers           47-35   Elo  1598.64
+ 7. Golden State Warriors    46-36   Elo  1594.28
+ 8. New York Knicks          50-32   Elo  1587.23
+ 9. Phoenix Suns             49-33   Elo  1584.28
+10. Los Angeles Lakers       47-35   Elo  1568.71
+11. New Orleans Pelicans     49-33   Elo  1559.33
+12. Sacramento Kings         46-36   Elo  1551.48
+13. Miami Heat               46-36   Elo  1542.12
+14. Philadelphia 76ers       47-35   Elo  1540.23
+15. Milwaukee Bucks          49-33   Elo  1538.86
+16. Los Angeles Clippers     51-31   Elo  1538.37
+17. Cleveland Cavaliers      48-34   Elo  1537.45
+18. Orlando Magic            47-35   Elo  1531.67
+19. Houston Rockets          41-41   Elo  1503.23
+20. Chicago Bulls            39-43   Elo  1470.14
+21. Atlanta Hawks            36-46   Elo  1438.19
+22. Brooklyn Nets            32-50   Elo  1412.58
+23. Utah Jazz                31-51   Elo  1373.08
+24. San Antonio Spurs        22-60   Elo  1353.41
+25. Memphis Grizzlies        27-55   Elo  1331.77
+26. Toronto Raptors          25-57   Elo  1310.40
+27. Charlotte Hornets        21-61   Elo  1294.02
+28. Portland Trail Blazers   21-61   Elo  1291.29
+29. Washington Wizards       15-67   Elo  1252.77
+30. Detroit Pistons          14-68   Elo  1247.22
+
+2025 (30 teams)
+----------------------------------------
+ 1. Oklahoma City Thunder    68-14   Elo  1784.17
+ 2. Cleveland Cavaliers      64-18   Elo  1697.57
+ 3. Boston Celtics           61-21   Elo  1696.49
+ 4. Indiana Pacers           50-32   Elo  1682.12
+ 5. Minnesota Timberwolves   49-33   Elo  1679.81
+ 6. Los Angeles Clippers     50-32   Elo  1629.34
+ 7. Denver Nuggets           50-32   Elo  1627.87
+ 8. New York Knicks          51-31   Elo  1614.83
+ 9. Golden State Warriors    48-34   Elo  1596.89
+10. Houston Rockets          52-30   Elo  1586.53
+11. Milwaukee Bucks          48-34   Elo  1566.07
+12. Los Angeles Lakers       50-32   Elo  1565.53
+13. Memphis Grizzlies        48-34   Elo  1531.66
+14. Detroit Pistons          44-38   Elo  1524.84
+15. Orlando Magic            41-41   Elo  1497.28
+16. Chicago Bulls            39-43   Elo  1485.38
+17. Sacramento Kings         40-42   Elo  1483.10
+18. Portland Trail Blazers   36-46   Elo  1479.80
+19. Miami Heat               37-45   Elo  1475.06
+20. Dallas Mavericks         39-43   Elo  1459.78
+21. Atlanta Hawks            40-42   Elo  1452.71
+22. Phoenix Suns             36-46   Elo  1441.73
+23. San Antonio Spurs        34-48   Elo  1414.44
+24. Toronto Raptors          30-52   Elo  1388.23
+25. New Orleans Pelicans     21-61   Elo  1309.54
+26. Brooklyn Nets            26-56   Elo  1298.35
+27. Philadelphia 76ers       24-58   Elo  1295.75
+28. Utah Jazz                17-65   Elo  1273.89
+29. Charlotte Hornets        19-63   Elo  1235.76
+30. Washington Wizards       18-64   Elo  1226.12
+
+2026 (30 teams)
+----------------------------------------
+ 1. New York Knicks          53-29   Elo  1792.24
+ 2. Oklahoma City Thunder    64-18   Elo  1767.58
+ 3. San Antonio Spurs        62-20   Elo  1753.68
+ 4. Detroit Pistons          60-22   Elo  1661.77
+ 5. Boston Celtics           56-26   Elo  1656.05
+ 6. Denver Nuggets           54-28   Elo  1625.59
+ 7. Los Angeles Lakers       53-29   Elo  1599.08
+ 8. Cleveland Cavaliers      52-30   Elo  1597.40
+ 9. Charlotte Hornets        44-38   Elo  1597.03
+10. Houston Rockets          52-30   Elo  1595.42
+11. Minnesota Timberwolves   49-33   Elo  1584.03
+12. Orlando Magic            45-37   Elo  1548.00
+13. Toronto Raptors          46-36   Elo  1546.12
+14. Atlanta Hawks            46-36   Elo  1534.15
+15. Los Angeles Clippers     42-40   Elo  1532.06
+16. Philadelphia 76ers       45-37   Elo  1523.00
+17. Phoenix Suns             45-37   Elo  1516.56
+18. Portland Trail Blazers   42-40   Elo  1516.10
+19. Miami Heat               43-39   Elo  1512.48
+20. Golden State Warriors    37-45   Elo  1440.80
+21. New Orleans Pelicans     26-56   Elo  1382.39
+22. Milwaukee Bucks          32-50   Elo  1361.83
+23. Chicago Bulls            31-51   Elo  1344.22
+24. Dallas Mavericks         25-57   Elo  1337.71
+25. Indiana Pacers           20-62   Elo  1323.63
+26. Sacramento Kings         22-60   Elo  1311.32
+27. Memphis Grizzlies        25-57   Elo  1299.89
+28. Utah Jazz                22-60   Elo  1273.56
+29. Brooklyn Nets            20-62   Elo  1259.33
+30. Washington Wizards       17-65   Elo  1205.92

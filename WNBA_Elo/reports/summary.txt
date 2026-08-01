@@ -1,0 +1,454 @@
+WNBA Echo Ratings - Standings Summary
+========================================
+
+1997 (8 teams)
+----------------------------------------
+ 1. Houston Comets           18-10   Elo  1618.36
+ 2. Cleveland Rockers        15-13   Elo  1541.43
+ 3. Los Angeles Sparks       14-14   Elo  1530.52
+ 4. New York Liberty         17-11   Elo  1525.40
+ 5. Phoenix Mercury          16-12   Elo  1525.37
+ 6. Charlotte Sting          15-13   Elo  1505.54
+ 7. Sacramento Monarchs      10-18   Elo  1410.96
+ 8. Utah Starzz               7-21   Elo  1342.44
+
+1998 (10 teams)
+----------------------------------------
+ 1. Houston Comets           27-3    Elo  1747.43
+ 2. Phoenix Mercury          19-11   Elo  1615.88
+ 3. Cleveland Rockers        20-10   Elo  1572.83
+ 4. New York Liberty         18-12   Elo  1570.67
+ 5. Detroit Shock            17-13   Elo  1543.85
+ 6. Charlotte Sting          18-12   Elo  1507.93
+ 7. Los Angeles Sparks       12-18   Elo  1474.95
+ 8. Sacramento Monarchs       8-22   Elo  1365.01
+ 9. Utah Starzz               8-22   Elo  1339.30
+10. Washington Mystics        3-27   Elo  1261.90
+
+1999 (12 teams)
+----------------------------------------
+ 1. Houston Comets           26-6    Elo  1721.16
+ 2. Los Angeles Sparks       20-12   Elo  1580.70
+ 3. New York Liberty         18-14   Elo  1536.63
+ 4. Phoenix Mercury          15-17   Elo  1532.03
+ 5. Sacramento Monarchs      19-13   Elo  1531.13
+ 6. Charlotte Sting          15-17   Elo  1487.04
+ 7. Utah Starzz              15-17   Elo  1483.16
+ 8. Orlando Miracle          15-17   Elo  1479.24
+ 9. Detroit Shock            15-17   Elo  1467.95
+10. Minnesota Lynx           15-17   Elo  1464.92
+11. Washington Mystics       12-20   Elo  1368.57
+12. Cleveland Rockers         7-25   Elo  1347.09
+
+2000 (16 teams)
+----------------------------------------
+ 1. Houston Comets           27-5    Elo  1813.65
+ 2. Los Angeles Sparks       28-4    Elo  1723.10
+ 3. Sacramento Monarchs      21-11   Elo  1597.90
+ 4. New York Liberty         20-12   Elo  1589.84
+ 5. Phoenix Mercury          20-12   Elo  1560.86
+ 6. Utah Starzz              18-14   Elo  1552.76
+ 7. Cleveland Rockers        17-15   Elo  1506.07
+ 8. Minnesota Lynx           15-17   Elo  1478.19
+ 9. Orlando Miracle          16-16   Elo  1452.19
+10. Detroit Shock            14-18   Elo  1430.56
+11. Miami Sol                13-19   Elo  1428.87
+12. Washington Mystics       14-18   Elo  1413.13
+13. Portland Fire            10-22   Elo  1402.53
+14. Indiana Fever             9-23   Elo  1388.87
+15. Charlotte Sting           8-24   Elo  1333.85
+16. Seattle Storm             6-26   Elo  1326.68
+
+2001 (16 teams)
+----------------------------------------
+ 1. Los Angeles Sparks       28-4    Elo  1767.75
+ 2. Sacramento Monarchs      20-12   Elo  1648.74
+ 3. Cleveland Rockers        22-10   Elo  1586.85
+ 4. Charlotte Sting          18-14   Elo  1568.41
+ 5. New York Liberty         21-11   Elo  1564.07
+ 6. Houston Comets           19-13   Elo  1554.05
+ 7. Miami Sol                20-12   Elo  1540.18
+ 8. Utah Starzz              19-13   Elo  1530.48
+ 9. Phoenix Mercury          13-19   Elo  1468.45
+10. Orlando Miracle          13-19   Elo  1453.78
+11. Minnesota Lynx           12-20   Elo  1452.77
+12. Indiana Fever            10-22   Elo  1388.36
+13. Detroit Shock            10-22   Elo  1376.23
+14. Washington Mystics       10-22   Elo  1375.81
+15. Portland Fire            11-21   Elo  1363.82
+16. Seattle Storm            10-22   Elo  1358.61
+
+2002 (16 teams)
+----------------------------------------
+ 1. Los Angeles Sparks       25-7    Elo  1747.99
+ 2. Houston Comets           24-8    Elo  1633.16
+ 3. Utah Starzz              20-12   Elo  1566.85
+ 4. New York Liberty         18-14   Elo  1540.33
+ 5. Sacramento Monarchs      14-18   Elo  1521.31
+ 6. Charlotte Sting          18-14   Elo  1516.43
+ 7. Seattle Storm            17-15   Elo  1513.23
+ 8. Miami Sol                15-17   Elo  1492.58
+ 9. Orlando Miracle          16-16   Elo  1487.77
+10. Indiana Fever            16-16   Elo  1479.85
+11. Portland Fire            16-16   Elo  1478.98
+12. Washington Mystics       17-15   Elo  1469.24
+13. Cleveland Rockers        10-22   Elo  1402.85
+14. Minnesota Lynx           10-22   Elo  1398.60
+15. Detroit Shock             9-23   Elo  1382.28
+16. Phoenix Mercury          11-21   Elo  1367.05
+
+2003 (14 teams)
+----------------------------------------
+ 1. Detroit Shock            25-9    Elo  1638.59
+ 2. Los Angeles Sparks       24-10   Elo  1624.60
+ 3. Houston Comets           20-14   Elo  1576.86
+ 4. Sacramento Monarchs      19-15   Elo  1556.97
+ 5. Seattle Storm            18-16   Elo  1535.99
+ 6. Connecticut Sun          18-16   Elo  1518.67
+ 7. New York Liberty         16-18   Elo  1491.08
+ 8. Minnesota Lynx           18-16   Elo  1490.78
+ 9. Charlotte Sting          18-16   Elo  1479.75
+10. Cleveland Rockers        17-17   Elo  1476.11
+11. Indiana Fever            16-18   Elo  1466.03
+12. San Antonio Silver Stars 12-22   Elo  1406.39
+13. Washington Mystics        9-25   Elo  1378.89
+14. Phoenix Mercury           8-26   Elo  1373.57
+
+2004 (13 teams)
+----------------------------------------
+ 1. Seattle Storm            20-14   Elo  1631.32
+ 2. Los Angeles Sparks       25-9    Elo  1609.61
+ 3. Sacramento Monarchs      18-16   Elo  1580.19
+ 4. Connecticut Sun          18-16   Elo  1556.23
+ 5. Detroit Shock            17-17   Elo  1508.91
+ 6. Phoenix Mercury          17-17   Elo  1504.00
+ 7. Minnesota Lynx           18-16   Elo  1478.01
+ 8. New York Liberty         18-16   Elo  1469.82
+ 9. Washington Mystics       17-17   Elo  1468.13
+10. Charlotte Sting          16-18   Elo  1449.43
+11. Indiana Fever            15-19   Elo  1445.47
+12. Houston Comets           13-21   Elo  1444.98
+13. San Antonio Silver Stars  9-25   Elo  1372.92
+
+2005 (13 teams)
+----------------------------------------
+ 1. Sacramento Monarchs      25-9    Elo  1707.71
+ 2. Connecticut Sun          26-8    Elo  1660.04
+ 3. Indiana Fever            21-13   Elo  1558.89
+ 4. Seattle Storm            20-14   Elo  1557.45
+ 5. Houston Comets           19-15   Elo  1544.82
+ 6. Phoenix Mercury          16-18   Elo  1500.68
+ 7. Los Angeles Sparks       17-17   Elo  1486.66
+ 8. New York Liberty         18-16   Elo  1486.32
+ 9. Washington Mystics       16-18   Elo  1473.22
+10. Detroit Shock            16-18   Elo  1461.74
+11. Minnesota Lynx           14-20   Elo  1426.86
+12. Charlotte Sting           6-28   Elo  1334.89
+13. San Antonio Silver Stars  7-27   Elo  1310.88
+
+2006 (14 teams)
+----------------------------------------
+ 1. Detroit Shock            23-11   Elo  1679.26
+ 2. Sacramento Monarchs      21-13   Elo  1658.23
+ 3. Connecticut Sun          26-8    Elo  1646.64
+ 4. Los Angeles Sparks       25-9    Elo  1587.41
+ 5. Phoenix Mercury          18-16   Elo  1560.43
+ 6. Indiana Fever            21-13   Elo  1546.71
+ 7. Seattle Storm            18-16   Elo  1525.43
+ 8. Washington Mystics       18-16   Elo  1493.47
+ 9. Houston Comets           18-16   Elo  1483.86
+10. Charlotte Sting          11-23   Elo  1402.03
+11. New York Liberty         11-23   Elo  1396.45
+12. San Antonio Silver Stars 13-21   Elo  1394.53
+13. Minnesota Lynx           10-24   Elo  1349.84
+14. Chicago Sky               5-29   Elo  1280.23
+
+2007 (13 teams)
+----------------------------------------
+ 1. Phoenix Mercury          23-11   Elo  1691.53
+ 2. Detroit Shock            24-10   Elo  1597.82
+ 3. Indiana Fever            21-13   Elo  1567.30
+ 4. Connecticut Sun          18-16   Elo  1556.10
+ 5. Sacramento Monarchs      19-15   Elo  1528.02
+ 6. San Antonio Silver Stars 20-14   Elo  1512.97
+ 7. Washington Mystics       16-18   Elo  1498.44
+ 8. Seattle Storm            17-17   Elo  1495.42
+ 9. New York Liberty         16-18   Elo  1468.96
+10. Houston Comets           13-21   Elo  1452.30
+11. Chicago Sky              14-20   Elo  1424.65
+12. Minnesota Lynx           10-24   Elo  1390.35
+13. Los Angeles Sparks       10-24   Elo  1367.50
+
+2008 (14 teams)
+----------------------------------------
+ 1. Detroit Shock            22-12   Elo  1668.82
+ 2. San Antonio Silver Stars 24-10   Elo  1570.96
+ 3. Los Angeles Sparks       20-14   Elo  1569.71
+ 4. Seattle Storm            22-12   Elo  1557.85
+ 5. Connecticut Sun          21-13   Elo  1551.14
+ 6. New York Liberty         19-15   Elo  1535.85
+ 7. Sacramento Monarchs      18-16   Elo  1525.67
+ 8. Phoenix Mercury          16-18   Elo  1521.89
+ 9. Indiana Fever            17-17   Elo  1500.04
+10. Houston Comets           17-17   Elo  1490.69
+11. Minnesota Lynx           16-18   Elo  1479.07
+12. Chicago Sky              12-22   Elo  1425.66
+13. Washington Mystics       10-24   Elo  1339.44
+14. Atlanta Dream             4-30   Elo  1288.89
+
+2009 (13 teams)
+----------------------------------------
+ 1. Phoenix Mercury          23-11   Elo  1641.47
+ 2. Detroit Shock            18-16   Elo  1586.71
+ 3. Los Angeles Sparks       18-16   Elo  1569.48
+ 4. Indiana Fever            22-12   Elo  1567.86
+ 5. Seattle Storm            20-14   Elo  1532.82
+ 6. Atlanta Dream            18-16   Elo  1487.10
+ 7. Connecticut Sun          16-18   Elo  1481.23
+ 8. San Antonio Silver Stars 15-19   Elo  1479.47
+ 9. New York Liberty         13-21   Elo  1447.81
+10. Chicago Sky              16-18   Elo  1444.71
+11. Sacramento Monarchs      12-22   Elo  1440.29
+12. Washington Mystics       16-18   Elo  1423.24
+13. Minnesota Lynx           14-20   Elo  1415.13
+
+2010 (12 teams)
+----------------------------------------
+ 1. Seattle Storm            35-6    Elo  1702.53
+ 2. New York Liberty         24-15   Elo  1598.36
+ 3. Indiana Fever            22-15   Elo  1580.82
+ 4. Atlanta Dream            23-18   Elo  1570.99
+ 5. Washington Mystics       22-14   Elo  1557.63
+ 6. Phoenix Mercury          17-21   Elo  1516.83
+ 7. Connecticut Sun          17-17   Elo  1496.71
+ 8. Chicago Sky              14-20   Elo  1438.75
+ 9. Los Angeles Sparks       13-23   Elo  1434.35
+10. Minnesota Lynx           13-21   Elo  1429.32
+11. San Antonio Silver Stars 14-22   Elo  1413.93
+12. Tulsa Shock               6-28   Elo  1297.88
+
+2011 (12 teams)
+----------------------------------------
+ 1. Minnesota Lynx           27-7    Elo  1726.36
+ 2. Atlanta Dream            20-14   Elo  1607.07
+ 3. Seattle Storm            21-13   Elo  1565.82
+ 4. Connecticut Sun          21-13   Elo  1556.58
+ 5. New York Liberty         19-15   Elo  1547.40
+ 6. Indiana Fever            21-13   Elo  1541.60
+ 7. Phoenix Mercury          19-15   Elo  1516.83
+ 8. San Antonio Silver Stars 18-16   Elo  1516.35
+ 9. Chicago Sky              14-20   Elo  1442.63
+10. Los Angeles Sparks       15-19   Elo  1432.38
+11. Washington Mystics        6-28   Elo  1332.30
+12. Tulsa Shock               3-31   Elo  1233.69
+
+2012 (12 teams)
+----------------------------------------
+ 1. Indiana Fever            22-12   Elo  1688.46
+ 2. Minnesota Lynx           27-7    Elo  1663.83
+ 3. Los Angeles Sparks       24-10   Elo  1615.00
+ 4. Connecticut Sun          25-9    Elo  1607.25
+ 5. Atlanta Dream            19-15   Elo  1557.37
+ 6. San Antonio Silver Stars 21-13   Elo  1551.21
+ 7. Seattle Storm            16-18   Elo  1504.79
+ 8. Chicago Sky              14-20   Elo  1458.09
+ 9. New York Liberty         15-19   Elo  1442.72
+10. Tulsa Shock               9-25   Elo  1358.55
+11. Phoenix Mercury           7-27   Elo  1289.14
+12. Washington Mystics        5-29   Elo  1272.48
+
+2013 (12 teams)
+----------------------------------------
+ 1. Minnesota Lynx           26-8    Elo  1752.18
+ 2. Los Angeles Sparks       24-10   Elo  1623.25
+ 3. Chicago Sky              24-10   Elo  1577.11
+ 4. Indiana Fever            16-18   Elo  1535.12
+ 5. Phoenix Mercury          19-15   Elo  1510.19
+ 6. Atlanta Dream            17-17   Elo  1505.52
+ 7. Seattle Storm            17-17   Elo  1491.63
+ 8. Washington Mystics       17-17   Elo  1447.52
+ 9. San Antonio Silver Stars 12-22   Elo  1419.68
+10. Tulsa Shock              11-23   Elo  1410.04
+11. Connecticut Sun          10-24   Elo  1383.97
+12. New York Liberty         11-23   Elo  1347.52
+
+2014 (12 teams)
+----------------------------------------
+ 1. Phoenix Mercury          29-5    Elo  1759.11
+ 2. Minnesota Lynx           25-9    Elo  1654.58
+ 3. Los Angeles Sparks       16-18   Elo  1514.91
+ 4. Atlanta Dream            19-15   Elo  1497.03
+ 5. Indiana Fever            16-18   Elo  1484.88
+ 6. Chicago Sky              15-19   Elo  1481.63
+ 7. Washington Mystics       16-18   Elo  1463.62
+ 8. San Antonio Stars        16-18   Elo  1456.91
+ 9. New York Liberty         15-19   Elo  1439.83
+10. Connecticut Sun          13-21   Elo  1423.66
+11. Tulsa Shock              12-22   Elo  1416.13
+12. Seattle Storm            12-22   Elo  1410.16
+
+2015 (12 teams)
+----------------------------------------
+ 1. Minnesota Lynx           22-12   Elo  1615.22
+ 2. Phoenix Mercury          20-14   Elo  1590.40
+ 3. Indiana Fever            20-14   Elo  1589.54
+ 4. New York Liberty         23-11   Elo  1564.44
+ 5. Chicago Sky              21-13   Elo  1551.39
+ 6. Washington Mystics       18-16   Elo  1517.06
+ 7. Los Angeles Sparks       14-20   Elo  1493.24
+ 8. Atlanta Dream            15-19   Elo  1491.02
+ 9. Tulsa Shock              18-16   Elo  1463.80
+10. Connecticut Sun          15-19   Elo  1428.47
+11. Seattle Storm            10-24   Elo  1385.49
+12. San Antonio Stars         8-26   Elo  1311.57
+
+2016 (12 teams)
+----------------------------------------
+ 1. Minnesota Lynx           28-6    Elo  1706.28
+ 2. Los Angeles Sparks       26-8    Elo  1668.31
+ 3. Phoenix Mercury          16-18   Elo  1535.71
+ 4. Indiana Fever            17-17   Elo  1511.44
+ 5. Chicago Sky              18-16   Elo  1507.34
+ 6. Seattle Storm            16-18   Elo  1506.12
+ 7. New York Liberty         21-13   Elo  1499.26
+ 8. Connecticut Sun          14-20   Elo  1481.10
+ 9. Atlanta Dream            17-17   Elo  1478.18
+10. Washington Mystics       13-21   Elo  1449.55
+11. Dallas Wings             11-23   Elo  1360.45
+12. San Antonio Stars         7-27   Elo  1297.35
+
+2017 (12 teams)
+----------------------------------------
+ 1. Minnesota Lynx           27-7    Elo  1744.37
+ 2. Los Angeles Sparks       26-8    Elo  1705.93
+ 3. New York Liberty         22-12   Elo  1584.29
+ 4. Connecticut Sun          21-13   Elo  1547.52
+ 5. Phoenix Mercury          18-16   Elo  1532.05
+ 6. Washington Mystics       18-16   Elo  1500.68
+ 7. Seattle Storm            15-19   Elo  1471.76
+ 8. Dallas Wings             16-18   Elo  1444.75
+ 9. Chicago Sky              12-22   Elo  1405.77
+10. Atlanta Dream            12-22   Elo  1397.71
+11. San Antonio Stars         8-26   Elo  1344.82
+12. Indiana Fever             9-25   Elo  1321.05
+
+2018 (12 teams)
+----------------------------------------
+ 1. Seattle Storm            26-8    Elo  1698.34
+ 2. Connecticut Sun          21-13   Elo  1587.57
+ 3. Phoenix Mercury          20-14   Elo  1583.95
+ 4. Washington Mystics       22-12   Elo  1581.16
+ 5. Atlanta Dream            23-11   Elo  1568.06
+ 6. Los Angeles Sparks       19-15   Elo  1535.99
+ 7. Minnesota Lynx           18-16   Elo  1534.03
+ 8. Dallas Wings             15-19   Elo  1451.53
+ 9. Las Vegas Aces           14-20   Elo  1423.80
+10. Chicago Sky              13-21   Elo  1401.19
+11. New York Liberty          7-27   Elo  1326.75
+12. Indiana Fever             6-28   Elo  1307.75
+
+2019 (12 teams)
+----------------------------------------
+ 1. Washington Mystics       26-8    Elo  1711.94
+ 2. Connecticut Sun          23-11   Elo  1636.58
+ 3. Las Vegas Aces           21-13   Elo  1556.62
+ 4. Chicago Sky              20-14   Elo  1556.00
+ 5. Los Angeles Sparks       22-12   Elo  1550.54
+ 6. Minnesota Lynx           18-16   Elo  1540.07
+ 7. Seattle Storm            18-16   Elo  1532.26
+ 8. Indiana Fever            13-21   Elo  1439.17
+ 9. Phoenix Mercury          15-19   Elo  1436.14
+10. Dallas Wings             10-24   Elo  1380.21
+11. Atlanta Dream             8-26   Elo  1338.44
+12. New York Liberty         10-24   Elo  1322.61
+
+2020 (12 teams)
+----------------------------------------
+ 1. Seattle Storm            18-4    Elo  1760.56
+ 2. Las Vegas Aces           18-4    Elo  1605.98
+ 3. Connecticut Sun          10-12   Elo  1581.42
+ 4. Los Angeles Sparks       15-7    Elo  1555.61
+ 5. Minnesota Lynx           14-8    Elo  1536.58
+ 6. Phoenix Mercury          13-9    Elo  1525.12
+ 7. Chicago Sky              12-10   Elo  1504.22
+ 8. Washington Mystics        9-13   Elo  1499.94
+ 9. Dallas Wings              8-14   Elo  1416.10
+10. Atlanta Dream             7-15   Elo  1385.14
+11. Indiana Fever             6-16   Elo  1366.30
+12. New York Liberty          2-20   Elo  1263.61
+
+2021 (12 teams)
+----------------------------------------
+ 1. Connecticut Sun          27-9    Elo  1677.44
+ 2. Las Vegas Aces           26-11   Elo  1645.15
+ 3. Chicago Sky              24-18   Elo  1633.96
+ 4. Minnesota Lynx           22-11   Elo  1600.93
+ 5. Seattle Storm            21-12   Elo  1581.41
+ 6. Phoenix Mercury          25-18   Elo  1573.80
+ 7. Dallas Wings             14-19   Elo  1443.60
+ 8. Los Angeles Sparks       12-20   Elo  1430.20
+ 9. Washington Mystics       12-20   Elo  1421.62
+10. New York Liberty         12-21   Elo  1360.48
+11. Atlanta Dream             8-24   Elo  1324.81
+12. Indiana Fever             6-26   Elo  1306.77
+
+2022 (12 teams)
+----------------------------------------
+ 1. Las Vegas Aces           26-10   Elo  1707.49
+ 2. Connecticut Sun          25-11   Elo  1671.45
+ 3. Chicago Sky              26-10   Elo  1630.83
+ 4. Seattle Storm            22-14   Elo  1594.30
+ 5. Washington Mystics       22-14   Elo  1548.91
+ 6. Dallas Wings             18-18   Elo  1493.88
+ 7. Minnesota Lynx           14-22   Elo  1484.17
+ 8. New York Liberty         16-20   Elo  1470.47
+ 9. Phoenix Mercury          15-21   Elo  1435.83
+10. Atlanta Dream            14-22   Elo  1382.44
+11. Los Angeles Sparks       13-23   Elo  1354.54
+12. Indiana Fever             5-31   Elo  1226.51
+
+2023 (12 teams)
+----------------------------------------
+ 1. Las Vegas Aces           34-6    Elo  1784.93
+ 2. New York Liberty         32-8    Elo  1711.45
+ 3. Connecticut Sun          27-13   Elo  1597.86
+ 4. Dallas Wings             22-18   Elo  1562.15
+ 5. Chicago Sky              18-22   Elo  1500.00
+ 6. Washington Mystics       19-21   Elo  1472.46
+ 7. Los Angeles Sparks       17-23   Elo  1442.31
+ 8. Minnesota Lynx           19-21   Elo  1441.67
+ 9. Atlanta Dream            19-21   Elo  1436.67
+10. Seattle Storm            11-29   Elo  1391.89
+11. Indiana Fever            13-27   Elo  1357.42
+12. Phoenix Mercury           9-31   Elo  1301.94
+
+2024 (12 teams)
+----------------------------------------
+ 1. New York Liberty         32-8    Elo  1744.76
+ 2. Las Vegas Aces           27-13   Elo  1663.43
+ 3. Minnesota Lynx           30-10   Elo  1661.16
+ 4. Connecticut Sun          28-12   Elo  1617.61
+ 5. Seattle Storm            25-15   Elo  1551.54
+ 6. Indiana Fever            20-20   Elo  1477.46
+ 7. Washington Mystics       14-26   Elo  1454.44
+ 8. Atlanta Dream            15-25   Elo  1425.18
+ 9. Phoenix Mercury          19-21   Elo  1412.27
+10. Chicago Sky              13-27   Elo  1350.29
+11. Dallas Wings              9-31   Elo  1334.21
+12. Los Angeles Sparks        8-32   Elo  1307.01
+
+2025 (13 teams)
+----------------------------------------
+ 1. Las Vegas Aces           30-14   Elo  1722.12
+ 2. Minnesota Lynx           34-10   Elo  1665.69
+ 3. Atlanta Dream            30-14   Elo  1629.52
+ 4. Indiana Fever            24-20   Elo  1579.69
+ 5. Phoenix Mercury          27-17   Elo  1570.60
+ 6. New York Liberty         27-17   Elo  1553.32
+ 7. Seattle Storm            23-21   Elo  1509.14
+ 8. Golden State Valkyries   23-21   Elo  1505.83
+ 9. Los Angeles Sparks       21-23   Elo  1456.42
+10. Connecticut Sun          11-33   Elo  1360.96
+11. Washington Mystics       16-28   Elo  1353.03
+12. Dallas Wings             10-34   Elo  1308.28
+13. Chicago Sky              10-34   Elo  1284.29

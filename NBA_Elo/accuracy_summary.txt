@@ -1,0 +1,24 @@
+WNBA Echo Ratings - Model Accuracy Report
+=============================================
+
+All games             n= 748   accuracy=0.671   brier=0.2074   log_loss=0.6016
+Regular season        n= 710   accuracy=0.665   brier=0.2094   log_loss=0.6057
+Playoffs              n=  38   accuracy=0.789   brier=0.1702   log_loss=0.5236
+
+By season:
+  1997                  n= 115   accuracy=0.609   brier=0.2215   log_loss=0.6348
+  1998                  n= 158   accuracy=0.741   brier=0.1842   log_loss=0.5510
+  1999                  n= 203   accuracy=0.635   brier=0.2295   log_loss=0.6500
+  2000                  n= 272   accuracy=0.684   brier=0.1985   log_loss=0.5807
+
+Worst 10 predictions (highest log loss - biggest confident misses):
+  1997-08-24  HOU 58-68 SAC  (favored: HOU @ 84.5%, winner: SAC, log_loss=1.862)
+  1999-07-23  MIN 55-60 WAS  (favored: MIN @ 83.6%, winner: WAS, log_loss=1.811)
+  1999-06-14  NYL 61-83 WAS  (favored: NYL @ 83.6%, winner: WAS, log_loss=1.810)
+  2000-07-11  LAS 77-80 POR  (favored: LAS @ 83.5%, winner: POR, log_loss=1.804)
+  1998-07-27  CHA 70-76 SAC  (favored: CHA @ 82.7%, winner: SAC, log_loss=1.754)
+  1998-08-01  HOU 71-74 CLE  (favored: HOU @ 82.7%, winner: CLE, log_loss=1.753)
+  1997-07-22  NYL 71-78 UTA  (favored: NYL @ 82.3%, winner: UTA, log_loss=1.733)
+  1999-09-04  HOU 67-68 NYL  (favored: HOU @ 82.2%, winner: NYL, log_loss=1.729)
+  2000-07-05  MIN 60-67 SEA  (favored: MIN @ 81.3%, winner: SEA, log_loss=1.675)
+  1998-07-22  CHA 58-61 UTA  (favored: CHA @ 80.5%, winner: UTA, log_loss=1.636)

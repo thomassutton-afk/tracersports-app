@@ -1,0 +1,16 @@
+team,name,projected_wins,p10_wins,median_wins,p90_wins,avg_final_rating,prob_finish_first
+wnba_0011,Minnesota Lynx,28.77,22.0,29.0,35.0,1608.1,0.292
+wnba_0008,Las Vegas Aces,27.23,21.0,27.0,33.0,1597.0,0.208
+wnba_0018,Atlanta Dream,26.74,20.0,27.0,33.0,1570.7,0.149
+wnba_0019,Golden State Valkyries,26.04,20.0,26.0,32.0,1558.9,0.12
+wnba_0013,Indiana Fever,24.48,18.0,25.0,31.0,1550.8,0.071
+wnba_0015,Portland Fire,22.73,16.0,23.0,29.0,1508.8,0.037
+wnba_0005,New York Liberty,22.01,16.0,22.0,28.0,1505.5,0.025
+wnba_0020,Toronto Tempo,22.0,16.0,22.0,29.0,1503.0,0.027
+wnba_0009,Dallas Wings,21.81,16.0,22.0,28.0,1474.3,0.021
+wnba_0004,Los Angeles Sparks,20.34,14.0,20.0,27.0,1466.9,0.018
+wnba_0006,Phoenix Mercury,19.8,13.0,20.0,26.0,1489.9,0.013
+wnba_0010,Washington Mystics,19.51,13.0,19.0,26.0,1437.4,0.01
+wnba_0016,Seattle Storm,18.14,12.0,18.0,25.0,1458.3,0.004
+wnba_0017,Chicago Sky,17.36,11.0,17.0,24.0,1405.9,0.004
+wnba_0012,Connecticut Sun,13.05,8.0,13.0,19.0,1364.0,0.001

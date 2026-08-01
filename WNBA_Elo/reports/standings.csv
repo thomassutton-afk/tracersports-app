@@ -1,0 +1,366 @@
+season,rank,team_id,team_name,wins,losses,final_elo
+1997,1,wnba_0003,Houston Comets,18,10,1618.36
+1997,2,wnba_0002,Cleveland Rockers,15,13,1541.43
+1997,3,wnba_0004,Los Angeles Sparks,14,14,1530.52
+1997,4,wnba_0005,New York Liberty,17,11,1525.4
+1997,5,wnba_0006,Phoenix Mercury,16,12,1525.37
+1997,6,wnba_0001,Charlotte Sting,15,13,1505.54
+1997,7,wnba_0007,Sacramento Monarchs,10,18,1410.96
+1997,8,wnba_0008,Utah Starzz,7,21,1342.44
+1998,1,wnba_0003,Houston Comets,27,3,1747.43
+1998,2,wnba_0006,Phoenix Mercury,19,11,1615.88
+1998,3,wnba_0002,Cleveland Rockers,20,10,1572.83
+1998,4,wnba_0005,New York Liberty,18,12,1570.67
+1998,5,wnba_0009,Detroit Shock,17,13,1543.85
+1998,6,wnba_0001,Charlotte Sting,18,12,1507.93
+1998,7,wnba_0004,Los Angeles Sparks,12,18,1474.95
+1998,8,wnba_0007,Sacramento Monarchs,8,22,1365.01
+1998,9,wnba_0008,Utah Starzz,8,22,1339.3
+1998,10,wnba_0010,Washington Mystics,3,27,1261.9
+1999,1,wnba_0003,Houston Comets,26,6,1721.16
+1999,2,wnba_0004,Los Angeles Sparks,20,12,1580.7
+1999,3,wnba_0005,New York Liberty,18,14,1536.63
+1999,4,wnba_0006,Phoenix Mercury,15,17,1532.03
+1999,5,wnba_0007,Sacramento Monarchs,19,13,1531.13
+1999,6,wnba_0001,Charlotte Sting,15,17,1487.04
+1999,7,wnba_0008,Utah Starzz,15,17,1483.16
+1999,8,wnba_0012,Orlando Miracle,15,17,1479.24
+1999,9,wnba_0009,Detroit Shock,15,17,1467.95
+1999,10,wnba_0011,Minnesota Lynx,15,17,1464.92
+1999,11,wnba_0010,Washington Mystics,12,20,1368.57
+1999,12,wnba_0002,Cleveland Rockers,7,25,1347.09
+2000,1,wnba_0003,Houston Comets,27,5,1813.65
+2000,2,wnba_0004,Los Angeles Sparks,28,4,1723.1
+2000,3,wnba_0007,Sacramento Monarchs,21,11,1597.9
+2000,4,wnba_0005,New York Liberty,20,12,1589.84
+2000,5,wnba_0006,Phoenix Mercury,20,12,1560.86
+2000,6,wnba_0008,Utah Starzz,18,14,1552.76
+2000,7,wnba_0002,Cleveland Rockers,17,15,1506.07
+2000,8,wnba_0011,Minnesota Lynx,15,17,1478.19
+2000,9,wnba_0012,Orlando Miracle,16,16,1452.19
+2000,10,wnba_0009,Detroit Shock,14,18,1430.56
+2000,11,wnba_0014,Miami Sol,13,19,1428.87
+2000,12,wnba_0010,Washington Mystics,14,18,1413.13
+2000,13,wnba_0015,Portland Fire,10,22,1402.53
+2000,14,wnba_0013,Indiana Fever,9,23,1388.87
+2000,15,wnba_0001,Charlotte Sting,8,24,1333.85
+2000,16,wnba_0016,Seattle Storm,6,26,1326.68
+2001,1,wnba_0004,Los Angeles Sparks,28,4,1767.75
+2001,2,wnba_0007,Sacramento Monarchs,20,12,1648.74
+2001,3,wnba_0002,Cleveland Rockers,22,10,1586.85
+2001,4,wnba_0001,Charlotte Sting,18,14,1568.41
+2001,5,wnba_0005,New York Liberty,21,11,1564.07
+2001,6,wnba_0003,Houston Comets,19,13,1554.05
+2001,7,wnba_0014,Miami Sol,20,12,1540.18
+2001,8,wnba_0008,Utah Starzz,19,13,1530.48
+2001,9,wnba_0006,Phoenix Mercury,13,19,1468.45
+2001,10,wnba_0012,Orlando Miracle,13,19,1453.78
+2001,11,wnba_0011,Minnesota Lynx,12,20,1452.77
+2001,12,wnba_0013,Indiana Fever,10,22,1388.36
+2001,13,wnba_0009,Detroit Shock,10,22,1376.23
+2001,14,wnba_0010,Washington Mystics,10,22,1375.81
+2001,15,wnba_0015,Portland Fire,11,21,1363.82
+2001,16,wnba_0016,Seattle Storm,10,22,1358.61
+2002,1,wnba_0004,Los Angeles Sparks,25,7,1747.99
+2002,2,wnba_0003,Houston Comets,24,8,1633.16
+2002,3,wnba_0008,Utah Starzz,20,12,1566.85
+2002,4,wnba_0005,New York Liberty,18,14,1540.33
+2002,5,wnba_0007,Sacramento Monarchs,14,18,1521.31
+2002,6,wnba_0001,Charlotte Sting,18,14,1516.43
+2002,7,wnba_0016,Seattle Storm,17,15,1513.23
+2002,8,wnba_0014,Miami Sol,15,17,1492.58
+2002,9,wnba_0012,Orlando Miracle,16,16,1487.77
+2002,10,wnba_0013,Indiana Fever,16,16,1479.85
+2002,11,wnba_0015,Portland Fire,16,16,1478.98
+2002,12,wnba_0010,Washington Mystics,17,15,1469.24
+2002,13,wnba_0002,Cleveland Rockers,10,22,1402.85
+2002,14,wnba_0011,Minnesota Lynx,10,22,1398.6
+2002,15,wnba_0009,Detroit Shock,9,23,1382.28
+2002,16,wnba_0006,Phoenix Mercury,11,21,1367.05
+2003,1,wnba_0009,Detroit Shock,25,9,1638.59
+2003,2,wnba_0004,Los Angeles Sparks,24,10,1624.6
+2003,3,wnba_0003,Houston Comets,20,14,1576.86
+2003,4,wnba_0007,Sacramento Monarchs,19,15,1556.97
+2003,5,wnba_0016,Seattle Storm,18,16,1535.99
+2003,6,wnba_0012,Connecticut Sun,18,16,1518.67
+2003,7,wnba_0005,New York Liberty,16,18,1491.08
+2003,8,wnba_0011,Minnesota Lynx,18,16,1490.78
+2003,9,wnba_0001,Charlotte Sting,18,16,1479.75
+2003,10,wnba_0002,Cleveland Rockers,17,17,1476.11
+2003,11,wnba_0013,Indiana Fever,16,18,1466.03
+2003,12,wnba_0008,San Antonio Silver Stars,12,22,1406.39
+2003,13,wnba_0010,Washington Mystics,9,25,1378.89
+2003,14,wnba_0006,Phoenix Mercury,8,26,1373.57
+2004,1,wnba_0016,Seattle Storm,20,14,1631.32
+2004,2,wnba_0004,Los Angeles Sparks,25,9,1609.61
+2004,3,wnba_0007,Sacramento Monarchs,18,16,1580.19
+2004,4,wnba_0012,Connecticut Sun,18,16,1556.23
+2004,5,wnba_0009,Detroit Shock,17,17,1508.91
+2004,6,wnba_0006,Phoenix Mercury,17,17,1504.0
+2004,7,wnba_0011,Minnesota Lynx,18,16,1478.01
+2004,8,wnba_0005,New York Liberty,18,16,1469.82
+2004,9,wnba_0010,Washington Mystics,17,17,1468.13
+2004,10,wnba_0001,Charlotte Sting,16,18,1449.43
+2004,11,wnba_0013,Indiana Fever,15,19,1445.47
+2004,12,wnba_0003,Houston Comets,13,21,1444.98
+2004,13,wnba_0008,San Antonio Silver Stars,9,25,1372.92
+2005,1,wnba_0007,Sacramento Monarchs,25,9,1707.71
+2005,2,wnba_0012,Connecticut Sun,26,8,1660.04
+2005,3,wnba_0013,Indiana Fever,21,13,1558.89
+2005,4,wnba_0016,Seattle Storm,20,14,1557.45
+2005,5,wnba_0003,Houston Comets,19,15,1544.82
+2005,6,wnba_0006,Phoenix Mercury,16,18,1500.68
+2005,7,wnba_0004,Los Angeles Sparks,17,17,1486.66
+2005,8,wnba_0005,New York Liberty,18,16,1486.32
+2005,9,wnba_0010,Washington Mystics,16,18,1473.22
+2005,10,wnba_0009,Detroit Shock,16,18,1461.74
+2005,11,wnba_0011,Minnesota Lynx,14,20,1426.86
+2005,12,wnba_0001,Charlotte Sting,6,28,1334.89
+2005,13,wnba_0008,San Antonio Silver Stars,7,27,1310.88
+2006,1,wnba_0009,Detroit Shock,23,11,1679.26
+2006,2,wnba_0007,Sacramento Monarchs,21,13,1658.23
+2006,3,wnba_0012,Connecticut Sun,26,8,1646.64
+2006,4,wnba_0004,Los Angeles Sparks,25,9,1587.41
+2006,5,wnba_0006,Phoenix Mercury,18,16,1560.43
+2006,6,wnba_0013,Indiana Fever,21,13,1546.71
+2006,7,wnba_0016,Seattle Storm,18,16,1525.43
+2006,8,wnba_0010,Washington Mystics,18,16,1493.47
+2006,9,wnba_0003,Houston Comets,18,16,1483.86
+2006,10,wnba_0001,Charlotte Sting,11,23,1402.03
+2006,11,wnba_0005,New York Liberty,11,23,1396.45
+2006,12,wnba_0008,San Antonio Silver Stars,13,21,1394.53
+2006,13,wnba_0011,Minnesota Lynx,10,24,1349.84
+2006,14,wnba_0017,Chicago Sky,5,29,1280.23
+2007,1,wnba_0006,Phoenix Mercury,23,11,1691.53
+2007,2,wnba_0009,Detroit Shock,24,10,1597.82
+2007,3,wnba_0013,Indiana Fever,21,13,1567.3
+2007,4,wnba_0012,Connecticut Sun,18,16,1556.1
+2007,5,wnba_0007,Sacramento Monarchs,19,15,1528.02
+2007,6,wnba_0008,San Antonio Silver Stars,20,14,1512.97
+2007,7,wnba_0010,Washington Mystics,16,18,1498.44
+2007,8,wnba_0016,Seattle Storm,17,17,1495.42
+2007,9,wnba_0005,New York Liberty,16,18,1468.96
+2007,10,wnba_0003,Houston Comets,13,21,1452.3
+2007,11,wnba_0017,Chicago Sky,14,20,1424.65
+2007,12,wnba_0011,Minnesota Lynx,10,24,1390.35
+2007,13,wnba_0004,Los Angeles Sparks,10,24,1367.5
+2008,1,wnba_0009,Detroit Shock,22,12,1668.82
+2008,2,wnba_0008,San Antonio Silver Stars,24,10,1570.96
+2008,3,wnba_0004,Los Angeles Sparks,20,14,1569.71
+2008,4,wnba_0016,Seattle Storm,22,12,1557.85
+2008,5,wnba_0012,Connecticut Sun,21,13,1551.14
+2008,6,wnba_0005,New York Liberty,19,15,1535.85
+2008,7,wnba_0007,Sacramento Monarchs,18,16,1525.67
+2008,8,wnba_0006,Phoenix Mercury,16,18,1521.89
+2008,9,wnba_0013,Indiana Fever,17,17,1500.04
+2008,10,wnba_0003,Houston Comets,17,17,1490.69
+2008,11,wnba_0011,Minnesota Lynx,16,18,1479.07
+2008,12,wnba_0017,Chicago Sky,12,22,1425.66
+2008,13,wnba_0010,Washington Mystics,10,24,1339.44
+2008,14,wnba_0018,Atlanta Dream,4,30,1288.89
+2009,1,wnba_0006,Phoenix Mercury,23,11,1641.47
+2009,2,wnba_0009,Detroit Shock,18,16,1586.71
+2009,3,wnba_0004,Los Angeles Sparks,18,16,1569.48
+2009,4,wnba_0013,Indiana Fever,22,12,1567.86
+2009,5,wnba_0016,Seattle Storm,20,14,1532.82
+2009,6,wnba_0018,Atlanta Dream,18,16,1487.1
+2009,7,wnba_0012,Connecticut Sun,16,18,1481.23
+2009,8,wnba_0008,San Antonio Silver Stars,15,19,1479.47
+2009,9,wnba_0005,New York Liberty,13,21,1447.81
+2009,10,wnba_0017,Chicago Sky,16,18,1444.71
+2009,11,wnba_0007,Sacramento Monarchs,12,22,1440.29
+2009,12,wnba_0010,Washington Mystics,16,18,1423.24
+2009,13,wnba_0011,Minnesota Lynx,14,20,1415.13
+2010,1,wnba_0016,Seattle Storm,35,6,1702.53
+2010,2,wnba_0005,New York Liberty,24,15,1598.36
+2010,3,wnba_0013,Indiana Fever,22,15,1580.82
+2010,4,wnba_0018,Atlanta Dream,23,18,1570.99
+2010,5,wnba_0010,Washington Mystics,22,14,1557.63
+2010,6,wnba_0006,Phoenix Mercury,17,21,1516.83
+2010,7,wnba_0012,Connecticut Sun,17,17,1496.71
+2010,8,wnba_0017,Chicago Sky,14,20,1438.75
+2010,9,wnba_0004,Los Angeles Sparks,13,23,1434.35
+2010,10,wnba_0011,Minnesota Lynx,13,21,1429.32
+2010,11,wnba_0008,San Antonio Silver Stars,14,22,1413.93
+2010,12,wnba_0009,Tulsa Shock,6,28,1297.88
+2011,1,wnba_0011,Minnesota Lynx,27,7,1726.36
+2011,2,wnba_0018,Atlanta Dream,20,14,1607.07
+2011,3,wnba_0016,Seattle Storm,21,13,1565.82
+2011,4,wnba_0012,Connecticut Sun,21,13,1556.58
+2011,5,wnba_0005,New York Liberty,19,15,1547.4
+2011,6,wnba_0013,Indiana Fever,21,13,1541.6
+2011,7,wnba_0006,Phoenix Mercury,19,15,1516.83
+2011,8,wnba_0008,San Antonio Silver Stars,18,16,1516.35
+2011,9,wnba_0017,Chicago Sky,14,20,1442.63
+2011,10,wnba_0004,Los Angeles Sparks,15,19,1432.38
+2011,11,wnba_0010,Washington Mystics,6,28,1332.3
+2011,12,wnba_0009,Tulsa Shock,3,31,1233.69
+2012,1,wnba_0013,Indiana Fever,22,12,1688.46
+2012,2,wnba_0011,Minnesota Lynx,27,7,1663.83
+2012,3,wnba_0004,Los Angeles Sparks,24,10,1615.0
+2012,4,wnba_0012,Connecticut Sun,25,9,1607.25
+2012,5,wnba_0018,Atlanta Dream,19,15,1557.37
+2012,6,wnba_0008,San Antonio Silver Stars,21,13,1551.21
+2012,7,wnba_0016,Seattle Storm,16,18,1504.79
+2012,8,wnba_0017,Chicago Sky,14,20,1458.09
+2012,9,wnba_0005,New York Liberty,15,19,1442.72
+2012,10,wnba_0009,Tulsa Shock,9,25,1358.55
+2012,11,wnba_0006,Phoenix Mercury,7,27,1289.14
+2012,12,wnba_0010,Washington Mystics,5,29,1272.48
+2013,1,wnba_0011,Minnesota Lynx,26,8,1752.18
+2013,2,wnba_0004,Los Angeles Sparks,24,10,1623.25
+2013,3,wnba_0017,Chicago Sky,24,10,1577.11
+2013,4,wnba_0013,Indiana Fever,16,18,1535.12
+2013,5,wnba_0006,Phoenix Mercury,19,15,1510.19
+2013,6,wnba_0018,Atlanta Dream,17,17,1505.52
+2013,7,wnba_0016,Seattle Storm,17,17,1491.63
+2013,8,wnba_0010,Washington Mystics,17,17,1447.52
+2013,9,wnba_0008,San Antonio Silver Stars,12,22,1419.68
+2013,10,wnba_0009,Tulsa Shock,11,23,1410.04
+2013,11,wnba_0012,Connecticut Sun,10,24,1383.97
+2013,12,wnba_0005,New York Liberty,11,23,1347.52
+2014,1,wnba_0006,Phoenix Mercury,29,5,1759.11
+2014,2,wnba_0011,Minnesota Lynx,25,9,1654.58
+2014,3,wnba_0004,Los Angeles Sparks,16,18,1514.91
+2014,4,wnba_0018,Atlanta Dream,19,15,1497.03
+2014,5,wnba_0013,Indiana Fever,16,18,1484.88
+2014,6,wnba_0017,Chicago Sky,15,19,1481.63
+2014,7,wnba_0010,Washington Mystics,16,18,1463.62
+2014,8,wnba_0008,San Antonio Stars,16,18,1456.91
+2014,9,wnba_0005,New York Liberty,15,19,1439.83
+2014,10,wnba_0012,Connecticut Sun,13,21,1423.66
+2014,11,wnba_0009,Tulsa Shock,12,22,1416.13
+2014,12,wnba_0016,Seattle Storm,12,22,1410.16
+2015,1,wnba_0011,Minnesota Lynx,22,12,1615.22
+2015,2,wnba_0006,Phoenix Mercury,20,14,1590.4
+2015,3,wnba_0013,Indiana Fever,20,14,1589.54
+2015,4,wnba_0005,New York Liberty,23,11,1564.44
+2015,5,wnba_0017,Chicago Sky,21,13,1551.39
+2015,6,wnba_0010,Washington Mystics,18,16,1517.06
+2015,7,wnba_0004,Los Angeles Sparks,14,20,1493.24
+2015,8,wnba_0018,Atlanta Dream,15,19,1491.02
+2015,9,wnba_0009,Tulsa Shock,18,16,1463.8
+2015,10,wnba_0012,Connecticut Sun,15,19,1428.47
+2015,11,wnba_0016,Seattle Storm,10,24,1385.49
+2015,12,wnba_0008,San Antonio Stars,8,26,1311.57
+2016,1,wnba_0011,Minnesota Lynx,28,6,1706.28
+2016,2,wnba_0004,Los Angeles Sparks,26,8,1668.31
+2016,3,wnba_0006,Phoenix Mercury,16,18,1535.71
+2016,4,wnba_0013,Indiana Fever,17,17,1511.44
+2016,5,wnba_0017,Chicago Sky,18,16,1507.34
+2016,6,wnba_0016,Seattle Storm,16,18,1506.12
+2016,7,wnba_0005,New York Liberty,21,13,1499.26
+2016,8,wnba_0012,Connecticut Sun,14,20,1481.1
+2016,9,wnba_0018,Atlanta Dream,17,17,1478.18
+2016,10,wnba_0010,Washington Mystics,13,21,1449.55
+2016,11,wnba_0009,Dallas Wings,11,23,1360.45
+2016,12,wnba_0008,San Antonio Stars,7,27,1297.35
+2017,1,wnba_0011,Minnesota Lynx,27,7,1744.37
+2017,2,wnba_0004,Los Angeles Sparks,26,8,1705.93
+2017,3,wnba_0005,New York Liberty,22,12,1584.29
+2017,4,wnba_0012,Connecticut Sun,21,13,1547.52
+2017,5,wnba_0006,Phoenix Mercury,18,16,1532.05
+2017,6,wnba_0010,Washington Mystics,18,16,1500.68
+2017,7,wnba_0016,Seattle Storm,15,19,1471.76
+2017,8,wnba_0009,Dallas Wings,16,18,1444.75
+2017,9,wnba_0017,Chicago Sky,12,22,1405.77
+2017,10,wnba_0018,Atlanta Dream,12,22,1397.71
+2017,11,wnba_0008,San Antonio Stars,8,26,1344.82
+2017,12,wnba_0013,Indiana Fever,9,25,1321.05
+2018,1,wnba_0016,Seattle Storm,26,8,1698.34
+2018,2,wnba_0012,Connecticut Sun,21,13,1587.57
+2018,3,wnba_0006,Phoenix Mercury,20,14,1583.95
+2018,4,wnba_0010,Washington Mystics,22,12,1581.16
+2018,5,wnba_0018,Atlanta Dream,23,11,1568.06
+2018,6,wnba_0004,Los Angeles Sparks,19,15,1535.99
+2018,7,wnba_0011,Minnesota Lynx,18,16,1534.03
+2018,8,wnba_0009,Dallas Wings,15,19,1451.53
+2018,9,wnba_0008,Las Vegas Aces,14,20,1423.8
+2018,10,wnba_0017,Chicago Sky,13,21,1401.19
+2018,11,wnba_0005,New York Liberty,7,27,1326.75
+2018,12,wnba_0013,Indiana Fever,6,28,1307.75
+2019,1,wnba_0010,Washington Mystics,26,8,1711.94
+2019,2,wnba_0012,Connecticut Sun,23,11,1636.58
+2019,3,wnba_0008,Las Vegas Aces,21,13,1556.62
+2019,4,wnba_0017,Chicago Sky,20,14,1556.0
+2019,5,wnba_0004,Los Angeles Sparks,22,12,1550.54
+2019,6,wnba_0011,Minnesota Lynx,18,16,1540.07
+2019,7,wnba_0016,Seattle Storm,18,16,1532.26
+2019,8,wnba_0013,Indiana Fever,13,21,1439.17
+2019,9,wnba_0006,Phoenix Mercury,15,19,1436.14
+2019,10,wnba_0009,Dallas Wings,10,24,1380.21
+2019,11,wnba_0018,Atlanta Dream,8,26,1338.44
+2019,12,wnba_0005,New York Liberty,10,24,1322.61
+2020,1,wnba_0016,Seattle Storm,18,4,1760.56
+2020,2,wnba_0008,Las Vegas Aces,18,4,1605.98
+2020,3,wnba_0012,Connecticut Sun,10,12,1581.42
+2020,4,wnba_0004,Los Angeles Sparks,15,7,1555.61
+2020,5,wnba_0011,Minnesota Lynx,14,8,1536.58
+2020,6,wnba_0006,Phoenix Mercury,13,9,1525.12
+2020,7,wnba_0017,Chicago Sky,12,10,1504.22
+2020,8,wnba_0010,Washington Mystics,9,13,1499.94
+2020,9,wnba_0009,Dallas Wings,8,14,1416.1
+2020,10,wnba_0018,Atlanta Dream,7,15,1385.14
+2020,11,wnba_0013,Indiana Fever,6,16,1366.3
+2020,12,wnba_0005,New York Liberty,2,20,1263.61
+2021,1,wnba_0012,Connecticut Sun,27,9,1677.44
+2021,2,wnba_0008,Las Vegas Aces,26,11,1645.15
+2021,3,wnba_0017,Chicago Sky,24,18,1633.96
+2021,4,wnba_0011,Minnesota Lynx,22,11,1600.93
+2021,5,wnba_0016,Seattle Storm,21,12,1581.41
+2021,6,wnba_0006,Phoenix Mercury,25,18,1573.8
+2021,7,wnba_0009,Dallas Wings,14,19,1443.6
+2021,8,wnba_0004,Los Angeles Sparks,12,20,1430.2
+2021,9,wnba_0010,Washington Mystics,12,20,1421.62
+2021,10,wnba_0005,New York Liberty,12,21,1360.48
+2021,11,wnba_0018,Atlanta Dream,8,24,1324.81
+2021,12,wnba_0013,Indiana Fever,6,26,1306.77
+2022,1,wnba_0008,Las Vegas Aces,26,10,1707.49
+2022,2,wnba_0012,Connecticut Sun,25,11,1671.45
+2022,3,wnba_0017,Chicago Sky,26,10,1630.83
+2022,4,wnba_0016,Seattle Storm,22,14,1594.3
+2022,5,wnba_0010,Washington Mystics,22,14,1548.91
+2022,6,wnba_0009,Dallas Wings,18,18,1493.88
+2022,7,wnba_0011,Minnesota Lynx,14,22,1484.17
+2022,8,wnba_0005,New York Liberty,16,20,1470.47
+2022,9,wnba_0006,Phoenix Mercury,15,21,1435.83
+2022,10,wnba_0018,Atlanta Dream,14,22,1382.44
+2022,11,wnba_0004,Los Angeles Sparks,13,23,1354.54
+2022,12,wnba_0013,Indiana Fever,5,31,1226.51
+2023,1,wnba_0008,Las Vegas Aces,34,6,1784.93
+2023,2,wnba_0005,New York Liberty,32,8,1711.45
+2023,3,wnba_0012,Connecticut Sun,27,13,1597.86
+2023,4,wnba_0009,Dallas Wings,22,18,1562.15
+2023,5,wnba_0017,Chicago Sky,18,22,1500.0
+2023,6,wnba_0010,Washington Mystics,19,21,1472.46
+2023,7,wnba_0004,Los Angeles Sparks,17,23,1442.31
+2023,8,wnba_0011,Minnesota Lynx,19,21,1441.67
+2023,9,wnba_0018,Atlanta Dream,19,21,1436.67
+2023,10,wnba_0016,Seattle Storm,11,29,1391.89
+2023,11,wnba_0013,Indiana Fever,13,27,1357.42
+2023,12,wnba_0006,Phoenix Mercury,9,31,1301.94
+2024,1,wnba_0005,New York Liberty,32,8,1744.76
+2024,2,wnba_0008,Las Vegas Aces,27,13,1663.43
+2024,3,wnba_0011,Minnesota Lynx,30,10,1661.16
+2024,4,wnba_0012,Connecticut Sun,28,12,1617.61
+2024,5,wnba_0016,Seattle Storm,25,15,1551.54
+2024,6,wnba_0013,Indiana Fever,20,20,1477.46
+2024,7,wnba_0010,Washington Mystics,14,26,1454.44
+2024,8,wnba_0018,Atlanta Dream,15,25,1425.18
+2024,9,wnba_0006,Phoenix Mercury,19,21,1412.27
+2024,10,wnba_0017,Chicago Sky,13,27,1350.29
+2024,11,wnba_0009,Dallas Wings,9,31,1334.21
+2024,12,wnba_0004,Los Angeles Sparks,8,32,1307.01
+2025,1,wnba_0008,Las Vegas Aces,30,14,1722.12
+2025,2,wnba_0011,Minnesota Lynx,34,10,1665.69
+2025,3,wnba_0018,Atlanta Dream,30,14,1629.52
+2025,4,wnba_0013,Indiana Fever,24,20,1579.69
+2025,5,wnba_0006,Phoenix Mercury,27,17,1570.6
+2025,6,wnba_0005,New York Liberty,27,17,1553.32
+2025,7,wnba_0016,Seattle Storm,23,21,1509.14
+2025,8,wnba_0019,Golden State Valkyries,23,21,1505.83
+2025,9,wnba_0004,Los Angeles Sparks,21,23,1456.42
+2025,10,wnba_0012,Connecticut Sun,11,33,1360.96
+2025,11,wnba_0010,Washington Mystics,16,28,1353.03
+2025,12,wnba_0009,Dallas Wings,10,34,1308.28
+2025,13,wnba_0017,Chicago Sky,10,34,1284.29

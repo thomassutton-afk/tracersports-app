@@ -1,0 +1,922 @@
+season,rank,team_id,team_name,wins,losses,final_elo
+1996,1,nba_0004,Chicago Bulls,72,10,1838.49
+1996,2,nba_0025,Seattle SuperSonics,64,18,1720.4
+1996,3,nba_0027,Utah Jazz,55,27,1689.16
+1996,4,nba_0019,Orlando Magic,60,22,1661.57
+1996,5,nba_0024,San Antonio Spurs,59,23,1632.15
+1996,6,nba_0013,Los Angeles Lakers,53,29,1626.55
+1996,7,nba_0011,Indiana Pacers,52,30,1593.67
+1996,8,nba_0018,New York Knicks,47,35,1567.28
+1996,9,nba_0001,Atlanta Hawks,46,36,1565.35
+1996,10,nba_0022,Portland Trail Blazers,44,38,1560.95
+1996,11,nba_0008,Detroit Pistons,46,36,1546.83
+1996,12,nba_0005,Cleveland Cavaliers,47,35,1543.29
+1996,13,nba_0014,Miami Heat,42,40,1526.28
+1996,14,nba_0010,Houston Rockets,48,34,1516.54
+1996,15,nba_0021,Phoenix Suns,41,41,1512.38
+1996,16,nba_0029,Washington Bullets,39,43,1510.69
+1996,17,nba_0003,Charlotte Hornets,41,41,1497.71
+1996,18,nba_0009,Golden State Warriors,36,46,1459.08
+1996,19,nba_0023,Sacramento Kings,39,43,1444.8
+1996,20,nba_0002,Boston Celtics,33,49,1433.28
+1996,21,nba_0007,Denver Nuggets,35,47,1416.68
+1996,22,nba_0012,Los Angeles Clippers,29,53,1381.96
+1996,23,nba_0016,Minnesota Timberwolves,26,56,1365.11
+1996,24,nba_0017,New Jersey Nets,30,52,1364.65
+1996,25,nba_0006,Dallas Mavericks,26,56,1349.58
+1996,26,nba_0015,Milwaukee Bucks,25,57,1339.82
+1996,27,nba_0026,Toronto Raptors,21,61,1296.69
+1996,28,nba_0020,Philadelphia 76ers,18,64,1284.5
+1996,29,nba_0028,Vancouver Grizzlies,15,67,1254.08
+1997,1,nba_0004,Chicago Bulls,69,13,1828.68
+1997,2,nba_0027,Utah Jazz,64,18,1755.39
+1997,3,nba_0014,Miami Heat,61,21,1672.0
+1997,4,nba_0025,Seattle SuperSonics,57,25,1661.4
+1997,5,nba_0010,Houston Rockets,57,25,1655.51
+1997,6,nba_0018,New York Knicks,57,25,1651.0
+1997,7,nba_0001,Atlanta Hawks,56,26,1634.0
+1997,8,nba_0013,Los Angeles Lakers,56,26,1633.73
+1997,9,nba_0008,Detroit Pistons,54,28,1598.56
+1997,10,nba_0003,Charlotte Hornets,54,28,1585.83
+1997,11,nba_0022,Portland Trail Blazers,49,33,1576.53
+1997,12,nba_0029,Washington Bullets,44,38,1559.59
+1997,13,nba_0019,Orlando Magic,45,37,1558.95
+1997,14,nba_0021,Phoenix Suns,40,42,1536.97
+1997,15,nba_0005,Cleveland Cavaliers,42,40,1523.65
+1997,16,nba_0011,Indiana Pacers,39,43,1520.22
+1997,17,nba_0016,Minnesota Timberwolves,40,42,1450.15
+1997,18,nba_0012,Los Angeles Clippers,36,46,1428.95
+1997,19,nba_0023,Sacramento Kings,34,48,1419.79
+1997,20,nba_0026,Toronto Raptors,30,52,1411.09
+1997,21,nba_0015,Milwaukee Bucks,33,49,1401.86
+1997,22,nba_0009,Golden State Warriors,30,52,1385.5
+1997,23,nba_0017,New Jersey Nets,26,56,1377.58
+1997,24,nba_0020,Philadelphia 76ers,22,60,1305.09
+1997,25,nba_0024,San Antonio Spurs,20,62,1300.27
+1997,26,nba_0006,Dallas Mavericks,24,58,1299.24
+1997,27,nba_0007,Denver Nuggets,21,61,1293.2
+1997,28,nba_0002,Boston Celtics,15,67,1254.08
+1997,29,nba_0028,Vancouver Grizzlies,14,68,1219.67
+1998,1,nba_0004,Chicago Bulls,62,20,1807.2
+1998,2,nba_0027,Utah Jazz,62,20,1753.73
+1998,3,nba_0013,Los Angeles Lakers,61,21,1702.99
+1998,4,nba_0011,Indiana Pacers,58,24,1688.96
+1998,5,nba_0024,San Antonio Spurs,56,26,1644.6
+1998,6,nba_0025,Seattle SuperSonics,61,21,1634.7
+1998,7,nba_0021,Phoenix Suns,56,26,1623.48
+1998,8,nba_0014,Miami Heat,55,27,1611.79
+1998,9,nba_0001,Atlanta Hawks,50,32,1594.52
+1998,10,nba_0003,Charlotte Hornets,51,31,1589.02
+1998,11,nba_0005,Cleveland Cavaliers,47,35,1560.37
+1998,12,nba_0018,New York Knicks,43,39,1545.61
+1998,13,nba_0016,Minnesota Timberwolves,45,37,1526.31
+1998,14,nba_0022,Portland Trail Blazers,46,36,1522.85
+1998,15,nba_0029,Washington Wizards,42,40,1520.31
+1998,16,nba_0008,Detroit Pistons,37,45,1513.23
+1998,17,nba_0019,Orlando Magic,41,41,1508.52
+1998,18,nba_0017,New Jersey Nets,43,39,1506.98
+1998,19,nba_0010,Houston Rockets,41,41,1496.17
+1998,20,nba_0015,Milwaukee Bucks,36,46,1434.21
+1998,21,nba_0002,Boston Celtics,36,46,1429.99
+1998,22,nba_0020,Philadelphia 76ers,31,51,1425.79
+1998,23,nba_0023,Sacramento Kings,27,55,1319.62
+1998,24,nba_0006,Dallas Mavericks,20,62,1297.25
+1998,25,nba_0009,Golden State Warriors,19,63,1282.16
+1998,26,nba_0028,Vancouver Grizzlies,19,63,1252.29
+1998,27,nba_0012,Los Angeles Clippers,17,65,1252.06
+1998,28,nba_0026,Toronto Raptors,16,66,1250.31
+1998,29,nba_0007,Denver Nuggets,11,71,1204.71
+1999,1,nba_0024,San Antonio Spurs,37,13,1779.7
+1999,2,nba_0011,Indiana Pacers,33,17,1658.47
+1999,3,nba_0027,Utah Jazz,37,13,1650.52
+1999,4,nba_0018,New York Knicks,27,23,1629.98
+1999,5,nba_0022,Portland Trail Blazers,35,15,1609.26
+1999,6,nba_0014,Miami Heat,33,17,1608.17
+1999,7,nba_0013,Los Angeles Lakers,31,19,1582.64
+1999,8,nba_0008,Detroit Pistons,29,21,1577.7
+1999,9,nba_0003,Charlotte Hornets,26,24,1563.35
+1999,10,nba_0001,Atlanta Hawks,31,19,1559.82
+1999,11,nba_0019,Orlando Magic,33,17,1558.12
+1999,12,nba_0021,Phoenix Suns,27,23,1545.55
+1999,13,nba_0020,Philadelphia 76ers,28,22,1544.46
+1999,14,nba_0010,Houston Rockets,31,19,1527.42
+1999,15,nba_0015,Milwaukee Bucks,28,22,1512.33
+1999,16,nba_0025,Seattle SuperSonics,25,25,1498.8
+1999,17,nba_0023,Sacramento Kings,27,23,1485.91
+1999,18,nba_0016,Minnesota Timberwolves,25,25,1466.49
+1999,19,nba_0005,Cleveland Cavaliers,22,28,1458.17
+1999,20,nba_0002,Boston Celtics,19,31,1437.68
+1999,21,nba_0026,Toronto Raptors,23,27,1434.82
+1999,22,nba_0017,New Jersey Nets,16,34,1426.45
+1999,23,nba_0029,Washington Wizards,18,32,1417.62
+1999,24,nba_0006,Dallas Mavericks,19,31,1409.84
+1999,25,nba_0009,Golden State Warriors,21,29,1406.43
+1999,26,nba_0004,Chicago Bulls,13,37,1365.14
+1999,27,nba_0007,Denver Nuggets,14,36,1288.91
+1999,28,nba_0012,Los Angeles Clippers,9,41,1271.01
+1999,29,nba_0028,Vancouver Grizzlies,8,42,1225.66
+2000,1,nba_0013,Los Angeles Lakers,67,15,1731.24
+2000,2,nba_0022,Portland Trail Blazers,59,23,1706.74
+2000,3,nba_0011,Indiana Pacers,56,26,1674.95
+2000,4,nba_0024,San Antonio Spurs,53,29,1630.17
+2000,5,nba_0021,Phoenix Suns,53,29,1626.79
+2000,6,nba_0014,Miami Heat,52,30,1605.98
+2000,7,nba_0027,Utah Jazz,55,27,1603.97
+2000,8,nba_0018,New York Knicks,50,32,1593.77
+2000,9,nba_0020,Philadelphia 76ers,49,33,1583.5
+2000,10,nba_0016,Minnesota Timberwolves,50,32,1572.95
+2000,11,nba_0003,Charlotte Hornets,49,33,1571.75
+2000,12,nba_0023,Sacramento Kings,44,38,1541.85
+2000,13,nba_0006,Dallas Mavericks,40,42,1524.35
+2000,14,nba_0015,Milwaukee Bucks,42,40,1522.64
+2000,15,nba_0025,Seattle SuperSonics,45,37,1518.14
+2000,16,nba_0008,Detroit Pistons,42,40,1516.03
+2000,17,nba_0019,Orlando Magic,41,41,1512.85
+2000,18,nba_0026,Toronto Raptors,45,37,1484.27
+2000,19,nba_0010,Houston Rockets,34,48,1470.58
+2000,20,nba_0002,Boston Celtics,35,47,1465.72
+2000,21,nba_0017,New Jersey Nets,31,51,1423.83
+2000,22,nba_0005,Cleveland Cavaliers,32,50,1407.24
+2000,23,nba_0007,Denver Nuggets,35,47,1403.62
+2000,24,nba_0029,Washington Wizards,29,53,1397.75
+2000,25,nba_0001,Atlanta Hawks,28,54,1344.68
+2000,26,nba_0028,Vancouver Grizzlies,22,60,1313.84
+2000,27,nba_0009,Golden State Warriors,19,63,1294.02
+2000,28,nba_0004,Chicago Bulls,17,65,1257.17
+2000,29,nba_0012,Los Angeles Clippers,15,67,1200.98
+2001,1,nba_0013,Los Angeles Lakers,56,26,1805.81
+2001,2,nba_0024,San Antonio Spurs,58,24,1682.36
+2001,3,nba_0023,Sacramento Kings,55,27,1636.11
+2001,4,nba_0006,Dallas Mavericks,53,29,1622.71
+2001,5,nba_0015,Milwaukee Bucks,52,30,1622.61
+2001,6,nba_0020,Philadelphia 76ers,56,26,1597.24
+2001,7,nba_0027,Utah Jazz,53,29,1595.71
+2001,8,nba_0003,Charlotte Hornets,46,36,1592.89
+2001,9,nba_0021,Phoenix Suns,51,31,1591.22
+2001,10,nba_0026,Toronto Raptors,47,35,1575.14
+2001,11,nba_0010,Houston Rockets,45,37,1573.66
+2001,12,nba_0022,Portland Trail Blazers,50,32,1570.25
+2001,13,nba_0016,Minnesota Timberwolves,47,35,1558.81
+2001,14,nba_0025,Seattle SuperSonics,44,38,1542.21
+2001,15,nba_0014,Miami Heat,50,32,1533.19
+2001,16,nba_0018,New York Knicks,48,34,1527.03
+2001,17,nba_0019,Orlando Magic,43,39,1509.66
+2001,18,nba_0011,Indiana Pacers,41,41,1497.63
+2001,19,nba_0007,Denver Nuggets,40,42,1457.27
+2001,20,nba_0002,Boston Celtics,36,46,1451.54
+2001,21,nba_0012,Los Angeles Clippers,31,51,1429.88
+2001,22,nba_0008,Detroit Pistons,32,50,1423.38
+2001,23,nba_0005,Cleveland Cavaliers,30,52,1361.89
+2001,24,nba_0028,Vancouver Grizzlies,23,59,1336.79
+2001,25,nba_0017,New Jersey Nets,26,56,1330.04
+2001,26,nba_0001,Atlanta Hawks,25,57,1329.42
+2001,27,nba_0029,Washington Wizards,19,63,1283.09
+2001,28,nba_0004,Chicago Bulls,15,67,1236.73
+2001,29,nba_0009,Golden State Warriors,17,65,1224.98
+2002,1,nba_0013,Los Angeles Lakers,58,24,1776.38
+2002,2,nba_0023,Sacramento Kings,61,21,1721.56
+2002,3,nba_0024,San Antonio Spurs,58,24,1680.13
+2002,4,nba_0006,Dallas Mavericks,57,25,1670.89
+2002,5,nba_0022,Portland Trail Blazers,49,33,1597.47
+2002,6,nba_0002,Boston Celtics,49,33,1589.81
+2002,7,nba_0017,New Jersey Nets,52,30,1588.47
+2002,8,nba_0025,Seattle SuperSonics,45,37,1577.33
+2002,9,nba_0008,Detroit Pistons,50,32,1549.19
+2002,10,nba_0016,Minnesota Timberwolves,50,32,1548.58
+2002,11,nba_0003,Charlotte Hornets,44,38,1546.83
+2002,12,nba_0027,Utah Jazz,44,38,1546.82
+2002,13,nba_0020,Philadelphia 76ers,43,39,1522.9
+2002,14,nba_0011,Indiana Pacers,42,40,1507.71
+2002,15,nba_0026,Toronto Raptors,42,40,1503.22
+2002,16,nba_0019,Orlando Magic,44,38,1486.8
+2002,17,nba_0012,Los Angeles Clippers,39,43,1477.51
+2002,18,nba_0015,Milwaukee Bucks,41,41,1461.33
+2002,19,nba_0021,Phoenix Suns,36,46,1457.79
+2002,20,nba_0014,Miami Heat,36,46,1452.61
+2002,21,nba_0029,Washington Wizards,37,45,1429.6
+2002,22,nba_0001,Atlanta Hawks,33,49,1409.94
+2002,23,nba_0018,New York Knicks,30,52,1391.97
+2002,24,nba_0005,Cleveland Cavaliers,29,53,1376.82
+2002,25,nba_0010,Houston Rockets,28,54,1376.61
+2002,26,nba_0007,Denver Nuggets,27,55,1367.0
+2002,27,nba_0028,Memphis Grizzlies,23,59,1319.36
+2002,28,nba_0009,Golden State Warriors,21,61,1295.84
+2002,29,nba_0004,Chicago Bulls,21,61,1269.76
+2003,1,nba_0024,San Antonio Spurs,60,22,1775.02
+2003,2,nba_0023,Sacramento Kings,59,23,1695.47
+2003,3,nba_0006,Dallas Mavericks,60,22,1672.04
+2003,4,nba_0013,Los Angeles Lakers,50,32,1660.6
+2003,5,nba_0017,New Jersey Nets,49,33,1626.77
+2003,6,nba_0022,Portland Trail Blazers,50,32,1602.03
+2003,7,nba_0016,Minnesota Timberwolves,51,31,1579.22
+2003,8,nba_0020,Philadelphia 76ers,48,34,1576.08
+2003,9,nba_0008,Detroit Pistons,50,32,1553.02
+2003,10,nba_0003,New Orleans Hornets,47,35,1548.55
+2003,11,nba_0027,Utah Jazz,47,35,1543.26
+2003,12,nba_0021,Phoenix Suns,44,38,1536.57
+2003,13,nba_0010,Houston Rockets,43,39,1530.45
+2003,14,nba_0025,Seattle SuperSonics,40,42,1523.53
+2003,15,nba_0011,Indiana Pacers,48,34,1504.32
+2003,16,nba_0015,Milwaukee Bucks,42,40,1490.13
+2003,17,nba_0019,Orlando Magic,42,40,1487.46
+2003,18,nba_0002,Boston Celtics,44,38,1482.34
+2003,19,nba_0009,Golden State Warriors,38,44,1463.22
+2003,20,nba_0018,New York Knicks,37,45,1455.44
+2003,21,nba_0029,Washington Wizards,37,45,1424.1
+2003,22,nba_0001,Atlanta Hawks,35,47,1423.0
+2003,23,nba_0028,Memphis Grizzlies,28,54,1396.71
+2003,24,nba_0012,Los Angeles Clippers,27,55,1384.18
+2003,25,nba_0004,Chicago Bulls,30,52,1378.68
+2003,26,nba_0014,Miami Heat,25,57,1346.37
+2003,27,nba_0026,Toronto Raptors,24,58,1320.96
+2003,28,nba_0007,Denver Nuggets,17,65,1264.69
+2003,29,nba_0005,Cleveland Cavaliers,17,65,1259.42
+2004,1,nba_0008,Detroit Pistons,54,28,1732.31
+2004,2,nba_0024,San Antonio Spurs,57,25,1717.32
+2004,3,nba_0016,Minnesota Timberwolves,58,24,1670.44
+2004,4,nba_0013,Los Angeles Lakers,56,26,1667.28
+2004,5,nba_0011,Indiana Pacers,61,21,1654.22
+2004,6,nba_0023,Sacramento Kings,55,27,1649.67
+2004,7,nba_0006,Dallas Mavericks,52,30,1625.32
+2004,8,nba_0017,New Jersey Nets,47,35,1577.51
+2004,9,nba_0028,Memphis Grizzlies,50,32,1562.06
+2004,10,nba_0014,Miami Heat,42,40,1541.26
+2004,11,nba_0010,Houston Rockets,45,37,1533.02
+2004,12,nba_0007,Denver Nuggets,43,39,1525.66
+2004,13,nba_0022,Portland Trail Blazers,41,41,1518.84
+2004,14,nba_0027,Utah Jazz,42,40,1500.1
+2004,15,nba_0025,Seattle SuperSonics,37,45,1491.82
+2004,16,nba_0009,Golden State Warriors,37,45,1489.19
+2004,17,nba_0003,New Orleans Hornets,41,41,1472.71
+2004,18,nba_0015,Milwaukee Bucks,41,41,1471.78
+2004,19,nba_0018,New York Knicks,39,43,1443.23
+2004,20,nba_0005,Cleveland Cavaliers,35,47,1421.3
+2004,21,nba_0021,Phoenix Suns,29,53,1417.58
+2004,22,nba_0002,Boston Celtics,36,46,1413.93
+2004,23,nba_0020,Philadelphia 76ers,33,49,1399.92
+2004,24,nba_0001,Atlanta Hawks,28,54,1377.22
+2004,25,nba_0026,Toronto Raptors,33,49,1369.48
+2004,26,nba_0012,Los Angeles Clippers,28,54,1344.93
+2004,27,nba_0029,Washington Wizards,25,57,1318.24
+2004,28,nba_0004,Chicago Bulls,23,59,1302.53
+2004,29,nba_0019,Orlando Magic,21,61,1292.5
+2005,1,nba_0024,San Antonio Spurs,59,23,1723.11
+2005,2,nba_0008,Detroit Pistons,54,28,1706.5
+2005,3,nba_0021,Phoenix Suns,62,20,1695.95
+2005,4,nba_0014,Miami Heat,59,23,1675.59
+2005,5,nba_0006,Dallas Mavericks,58,24,1673.87
+2005,6,nba_0010,Houston Rockets,51,31,1657.66
+2005,7,nba_0007,Denver Nuggets,49,33,1593.16
+2005,8,nba_0025,Seattle SuperSonics,52,30,1581.58
+2005,9,nba_0016,Minnesota Timberwolves,44,38,1561.66
+2005,10,nba_0023,Sacramento Kings,50,32,1555.58
+2005,11,nba_0011,Indiana Pacers,44,38,1547.49
+2005,12,nba_0028,Memphis Grizzlies,45,37,1540.32
+2005,13,nba_0017,New Jersey Nets,42,40,1525.43
+2005,14,nba_0004,Chicago Bulls,47,35,1522.64
+2005,15,nba_0002,Boston Celtics,45,37,1513.94
+2005,16,nba_0009,Golden State Warriors,34,48,1495.68
+2005,17,nba_0020,Philadelphia 76ers,43,39,1493.95
+2005,18,nba_0029,Washington Wizards,45,37,1484.69
+2005,19,nba_0005,Cleveland Cavaliers,42,40,1471.6
+2005,20,nba_0012,Los Angeles Clippers,37,45,1462.78
+2005,21,nba_0013,Los Angeles Lakers,34,48,1417.39
+2005,22,nba_0026,Toronto Raptors,33,49,1411.94
+2005,23,nba_0018,New York Knicks,33,49,1409.05
+2005,24,nba_0019,Orlando Magic,36,46,1375.1
+2005,25,nba_0015,Milwaukee Bucks,30,52,1374.13
+2005,26,nba_0022,Portland Trail Blazers,27,55,1362.46
+2005,27,nba_0027,Utah Jazz,26,56,1354.74
+2005,28,nba_0003,New Orleans Hornets,18,64,1307.37
+2005,29,nba_0030,Charlotte Bobcats,18,64,1298.84
+2005,30,nba_0001,Atlanta Hawks,13,69,1202.92
+2006,1,nba_0024,San Antonio Spurs,63,19,1704.31
+2006,2,nba_0006,Dallas Mavericks,60,22,1703.56
+2006,3,nba_0014,Miami Heat,52,30,1697.19
+2006,4,nba_0008,Detroit Pistons,64,18,1660.41
+2006,5,nba_0021,Phoenix Suns,54,28,1628.23
+2006,6,nba_0012,Los Angeles Clippers,47,35,1589.3
+2006,7,nba_0005,Cleveland Cavaliers,50,32,1583.56
+2006,8,nba_0023,Sacramento Kings,44,38,1578.25
+2006,9,nba_0028,Memphis Grizzlies,49,33,1568.79
+2006,10,nba_0013,Los Angeles Lakers,45,37,1567.04
+2006,11,nba_0017,New Jersey Nets,49,33,1560.55
+2006,12,nba_0029,Washington Wizards,42,40,1532.16
+2006,13,nba_0004,Chicago Bulls,41,41,1521.04
+2006,14,nba_0011,Indiana Pacers,41,41,1496.26
+2006,15,nba_0007,Denver Nuggets,44,38,1487.86
+2006,16,nba_0027,Utah Jazz,41,41,1484.1
+2006,17,nba_0019,Orlando Magic,36,46,1473.18
+2006,18,nba_0025,Seattle SuperSonics,35,47,1470.83
+2006,19,nba_0015,Milwaukee Bucks,40,42,1463.18
+2006,20,nba_0010,Houston Rockets,34,48,1461.62
+2006,21,nba_0020,Philadelphia 76ers,38,44,1441.57
+2006,22,nba_0002,Boston Celtics,33,49,1436.64
+2006,23,nba_0003,New Orleans/Oklahoma City Hornets,38,44,1431.37
+2006,24,nba_0009,Golden State Warriors,34,48,1427.23
+2006,25,nba_0016,Minnesota Timberwolves,33,49,1408.43
+2006,26,nba_0026,Toronto Raptors,27,55,1371.79
+2006,27,nba_0030,Charlotte Bobcats,26,56,1364.84
+2006,28,nba_0001,Atlanta Hawks,26,56,1318.69
+2006,29,nba_0018,New York Knicks,23,59,1301.87
+2006,30,nba_0022,Portland Trail Blazers,21,61,1263.92
+2007,1,nba_0024,San Antonio Spurs,58,24,1761.67
+2007,2,nba_0006,Dallas Mavericks,67,15,1691.59
+2007,3,nba_0021,Phoenix Suns,61,21,1689.45
+2007,4,nba_0008,Detroit Pistons,53,29,1644.19
+2007,5,nba_0005,Cleveland Cavaliers,50,32,1628.48
+2007,6,nba_0004,Chicago Bulls,49,33,1619.98
+2007,7,nba_0027,Utah Jazz,51,31,1602.55
+2007,8,nba_0010,Houston Rockets,52,30,1584.94
+2007,9,nba_0007,Denver Nuggets,45,37,1571.61
+2007,10,nba_0009,Golden State Warriors,42,40,1566.69
+2007,11,nba_0017,New Jersey Nets,41,41,1539.58
+2007,12,nba_0026,Toronto Raptors,47,35,1538.67
+2007,13,nba_0012,Los Angeles Clippers,40,42,1521.09
+2007,14,nba_0014,Miami Heat,44,38,1499.07
+2007,15,nba_0003,New Orleans/Oklahoma City Hornets,39,43,1491.14
+2007,16,nba_0013,Los Angeles Lakers,42,40,1483.16
+2007,17,nba_0019,Orlando Magic,40,42,1477.78
+2007,18,nba_0020,Philadelphia 76ers,35,47,1453.6
+2007,19,nba_0029,Washington Wizards,41,41,1434.87
+2007,20,nba_0030,Charlotte Bobcats,33,49,1429.47
+2007,21,nba_0023,Sacramento Kings,33,49,1426.97
+2007,22,nba_0025,Seattle SuperSonics,31,51,1416.43
+2007,23,nba_0011,Indiana Pacers,35,47,1402.24
+2007,24,nba_0018,New York Knicks,33,49,1386.72
+2007,25,nba_0022,Portland Trail Blazers,32,50,1380.07
+2007,26,nba_0016,Minnesota Timberwolves,32,50,1368.55
+2007,27,nba_0001,Atlanta Hawks,30,52,1360.05
+2007,28,nba_0028,Memphis Grizzlies,22,60,1358.96
+2007,29,nba_0002,Boston Celtics,24,58,1336.33
+2007,30,nba_0015,Milwaukee Bucks,28,54,1330.92
+2008,1,nba_0002,Boston Celtics,66,16,1744.86
+2008,2,nba_0013,Los Angeles Lakers,57,25,1707.32
+2008,3,nba_0024,San Antonio Spurs,56,26,1676.23
+2008,4,nba_0027,Utah Jazz,54,28,1673.04
+2008,5,nba_0008,Detroit Pistons,59,23,1663.84
+2008,6,nba_0003,New Orleans Hornets,56,26,1655.89
+2008,7,nba_0010,Houston Rockets,55,27,1639.31
+2008,8,nba_0021,Phoenix Suns,55,27,1636.48
+2008,9,nba_0019,Orlando Magic,52,30,1606.72
+2008,10,nba_0006,Dallas Mavericks,51,31,1583.26
+2008,11,nba_0007,Denver Nuggets,50,32,1583.04
+2008,12,nba_0009,Golden State Warriors,48,34,1569.17
+2008,13,nba_0005,Cleveland Cavaliers,45,37,1564.11
+2008,14,nba_0020,Philadelphia 76ers,40,42,1501.92
+2008,15,nba_0029,Washington Wizards,43,39,1491.59
+2008,16,nba_0026,Toronto Raptors,41,41,1475.05
+2008,17,nba_0023,Sacramento Kings,38,44,1469.6
+2008,18,nba_0022,Portland Trail Blazers,41,41,1466.32
+2008,19,nba_0001,Atlanta Hawks,37,45,1462.42
+2008,20,nba_0011,Indiana Pacers,36,46,1452.93
+2008,21,nba_0004,Chicago Bulls,33,49,1435.75
+2008,22,nba_0030,Charlotte Bobcats,32,50,1421.38
+2008,23,nba_0017,New Jersey Nets,34,48,1408.98
+2008,24,nba_0016,Minnesota Timberwolves,22,60,1343.64
+2008,25,nba_0012,Los Angeles Clippers,23,59,1321.35
+2008,26,nba_0028,Memphis Grizzlies,22,60,1317.26
+2008,27,nba_0018,New York Knicks,23,59,1294.88
+2008,28,nba_0025,Seattle SuperSonics,20,62,1291.94
+2008,29,nba_0015,Milwaukee Bucks,26,56,1285.81
+2008,30,nba_0014,Miami Heat,15,67,1253.32
+2009,1,nba_0013,Los Angeles Lakers,65,17,1802.43
+2009,2,nba_0005,Cleveland Cavaliers,66,16,1745.37
+2009,3,nba_0019,Orlando Magic,59,23,1686.96
+2009,4,nba_0002,Boston Celtics,62,20,1676.41
+2009,5,nba_0007,Denver Nuggets,54,28,1660.98
+2009,6,nba_0010,Houston Rockets,53,29,1660.49
+2009,7,nba_0022,Portland Trail Blazers,54,28,1623.78
+2009,8,nba_0006,Dallas Mavericks,50,32,1607.3
+2009,9,nba_0024,San Antonio Spurs,54,28,1595.47
+2009,10,nba_0027,Utah Jazz,48,34,1561.62
+2009,11,nba_0021,Phoenix Suns,46,36,1546.58
+2009,12,nba_0004,Chicago Bulls,41,41,1522.86
+2009,13,nba_0001,Atlanta Hawks,47,35,1517.25
+2009,14,nba_0003,New Orleans Hornets,49,33,1508.36
+2009,15,nba_0014,Miami Heat,43,39,1501.83
+2009,16,nba_0020,Philadelphia 76ers,41,41,1483.81
+2009,17,nba_0011,Indiana Pacers,36,46,1476.29
+2009,18,nba_0008,Detroit Pistons,39,43,1460.7
+2009,19,nba_0030,Charlotte Bobcats,35,47,1448.03
+2009,20,nba_0017,New Jersey Nets,34,48,1429.79
+2009,21,nba_0026,Toronto Raptors,33,49,1428.33
+2009,22,nba_0015,Milwaukee Bucks,34,48,1414.82
+2009,23,nba_0009,Golden State Warriors,29,53,1410.37
+2009,24,nba_0018,New York Knicks,32,50,1386.68
+2009,25,nba_0028,Memphis Grizzlies,24,58,1348.36
+2009,26,nba_0025,Oklahoma City Thunder,23,59,1344.74
+2009,27,nba_0016,Minnesota Timberwolves,24,58,1326.42
+2009,28,nba_0029,Washington Wizards,19,63,1295.63
+2009,29,nba_0023,Sacramento Kings,17,65,1271.0
+2009,30,nba_0012,Los Angeles Clippers,19,63,1254.96
+2010,1,nba_0019,Orlando Magic,59,23,1729.41
+2010,2,nba_0013,Los Angeles Lakers,57,25,1720.96
+2010,3,nba_0021,Phoenix Suns,54,28,1681.78
+2010,4,nba_0002,Boston Celtics,50,32,1668.81
+2010,5,nba_0005,Cleveland Cavaliers,61,21,1668.5
+2010,6,nba_0024,San Antonio Spurs,50,32,1616.61
+2010,7,nba_0006,Dallas Mavericks,55,27,1610.83
+2010,8,nba_0027,Utah Jazz,53,29,1608.37
+2010,9,nba_0007,Denver Nuggets,53,29,1605.12
+2010,10,nba_0025,Oklahoma City Thunder,50,32,1591.92
+2010,11,nba_0001,Atlanta Hawks,53,29,1580.96
+2010,12,nba_0022,Portland Trail Blazers,50,32,1576.43
+2010,13,nba_0015,Milwaukee Bucks,46,36,1551.64
+2010,14,nba_0014,Miami Heat,47,35,1550.53
+2010,15,nba_0030,Charlotte Bobcats,44,38,1518.87
+2010,16,nba_0010,Houston Rockets,42,40,1507.72
+2010,17,nba_0004,Chicago Bulls,41,41,1489.12
+2010,18,nba_0028,Memphis Grizzlies,40,42,1457.37
+2010,19,nba_0011,Indiana Pacers,32,50,1455.95
+2010,20,nba_0026,Toronto Raptors,40,42,1443.3
+2010,21,nba_0003,New Orleans Hornets,37,45,1436.14
+2010,22,nba_0009,Golden State Warriors,26,56,1397.4
+2010,23,nba_0018,New York Knicks,29,53,1372.08
+2010,24,nba_0020,Philadelphia 76ers,27,55,1367.07
+2010,25,nba_0008,Detroit Pistons,27,55,1334.99
+2010,26,nba_0029,Washington Wizards,26,56,1334.36
+2010,27,nba_0012,Los Angeles Clippers,29,53,1320.51
+2010,28,nba_0023,Sacramento Kings,25,57,1308.31
+2010,29,nba_0017,New Jersey Nets,12,70,1258.71
+2010,30,nba_0016,Minnesota Timberwolves,15,67,1234.46
+2011,1,nba_0006,Dallas Mavericks,57,25,1755.39
+2011,2,nba_0014,Miami Heat,58,24,1710.55
+2011,3,nba_0004,Chicago Bulls,62,20,1678.74
+2011,4,nba_0025,Oklahoma City Thunder,55,27,1650.7
+2011,5,nba_0013,Los Angeles Lakers,57,25,1636.69
+2011,6,nba_0002,Boston Celtics,56,26,1632.42
+2011,7,nba_0024,San Antonio Spurs,61,21,1623.22
+2011,8,nba_0019,Orlando Magic,52,30,1613.6
+2011,9,nba_0007,Denver Nuggets,50,32,1604.04
+2011,10,nba_0028,Memphis Grizzlies,46,36,1603.99
+2011,11,nba_0022,Portland Trail Blazers,48,34,1561.22
+2011,12,nba_0010,Houston Rockets,43,39,1559.04
+2011,13,nba_0003,New Orleans Hornets,46,36,1514.39
+2011,14,nba_0020,Philadelphia 76ers,41,41,1509.38
+2011,15,nba_0001,Atlanta Hawks,44,38,1496.32
+2011,16,nba_0021,Phoenix Suns,40,42,1495.84
+2011,17,nba_0018,New York Knicks,42,40,1477.46
+2011,18,nba_0009,Golden State Warriors,36,46,1465.27
+2011,19,nba_0015,Milwaukee Bucks,35,47,1461.8
+2011,20,nba_0011,Indiana Pacers,37,45,1457.42
+2011,21,nba_0027,Utah Jazz,39,43,1435.3
+2011,22,nba_0012,Los Angeles Clippers,32,50,1423.06
+2011,23,nba_0030,Charlotte Bobcats,34,48,1405.13
+2011,24,nba_0008,Detroit Pistons,30,52,1385.17
+2011,25,nba_0023,Sacramento Kings,24,58,1380.47
+2011,26,nba_0029,Washington Wizards,23,59,1311.48
+2011,27,nba_0005,Cleveland Cavaliers,19,63,1303.0
+2011,28,nba_0026,Toronto Raptors,22,60,1295.07
+2011,29,nba_0017,New Jersey Nets,24,58,1291.97
+2011,30,nba_0016,Minnesota Timberwolves,17,65,1259.88
+2012,1,nba_0014,Miami Heat,46,20,1736.63
+2012,2,nba_0024,San Antonio Spurs,50,16,1727.34
+2012,3,nba_0025,Oklahoma City Thunder,47,19,1708.45
+2012,4,nba_0004,Chicago Bulls,50,16,1650.38
+2012,5,nba_0002,Boston Celtics,39,27,1619.58
+2012,6,nba_0028,Memphis Grizzlies,41,25,1599.86
+2012,7,nba_0007,Denver Nuggets,38,28,1587.46
+2012,8,nba_0011,Indiana Pacers,42,24,1586.13
+2012,9,nba_0013,Los Angeles Lakers,41,25,1580.42
+2012,10,nba_0012,Los Angeles Clippers,40,26,1565.18
+2012,11,nba_0001,Atlanta Hawks,40,26,1554.14
+2012,12,nba_0020,Philadelphia 76ers,35,31,1545.01
+2012,13,nba_0018,New York Knicks,36,30,1540.98
+2012,14,nba_0006,Dallas Mavericks,36,30,1534.33
+2012,15,nba_0021,Phoenix Suns,33,33,1533.5
+2012,16,nba_0027,Utah Jazz,36,30,1531.1
+2012,17,nba_0010,Houston Rockets,34,32,1495.0
+2012,18,nba_0019,Orlando Magic,37,29,1482.89
+2012,19,nba_0015,Milwaukee Bucks,31,35,1480.31
+2012,20,nba_0022,Portland Trail Blazers,28,38,1433.1
+2012,21,nba_0003,New Orleans Hornets,21,45,1419.57
+2012,22,nba_0008,Detroit Pistons,25,41,1401.68
+2012,23,nba_0009,Golden State Warriors,23,43,1388.81
+2012,24,nba_0026,Toronto Raptors,23,43,1386.8
+2012,25,nba_0029,Washington Wizards,20,46,1376.71
+2012,26,nba_0016,Minnesota Timberwolves,26,40,1376.47
+2012,27,nba_0023,Sacramento Kings,22,44,1374.83
+2012,28,nba_0017,New Jersey Nets,22,44,1318.9
+2012,29,nba_0005,Cleveland Cavaliers,21,45,1301.17
+2012,30,nba_0030,Charlotte Bobcats,7,59,1162.5
+2013,1,nba_0014,Miami Heat,66,16,1769.29
+2013,2,nba_0024,San Antonio Spurs,58,24,1735.4
+2013,3,nba_0025,Oklahoma City Thunder,60,22,1684.84
+2013,4,nba_0007,Denver Nuggets,57,25,1661.52
+2013,5,nba_0028,Memphis Grizzlies,56,26,1658.04
+2013,6,nba_0011,Indiana Pacers,49,32,1620.62
+2013,7,nba_0012,Los Angeles Clippers,56,26,1616.6
+2013,8,nba_0018,New York Knicks,54,28,1609.27
+2013,9,nba_0009,Golden State Warriors,47,35,1568.69
+2013,10,nba_0010,Houston Rockets,45,37,1566.89
+2013,11,nba_0017,Brooklyn Nets,49,33,1549.63
+2013,12,nba_0013,Los Angeles Lakers,45,37,1533.94
+2013,13,nba_0006,Dallas Mavericks,41,41,1531.16
+2013,14,nba_0004,Chicago Bulls,45,37,1526.42
+2013,15,nba_0027,Utah Jazz,43,39,1521.47
+2013,16,nba_0001,Atlanta Hawks,44,38,1485.07
+2013,17,nba_0002,Boston Celtics,41,40,1484.89
+2013,18,nba_0026,Toronto Raptors,34,48,1458.52
+2013,19,nba_0020,Philadelphia 76ers,34,48,1430.74
+2013,20,nba_0016,Minnesota Timberwolves,31,51,1428.21
+2013,21,nba_0015,Milwaukee Bucks,38,44,1423.31
+2013,22,nba_0029,Washington Wizards,29,53,1420.53
+2013,23,nba_0022,Portland Trail Blazers,33,49,1393.83
+2013,24,nba_0023,Sacramento Kings,28,54,1388.9
+2013,25,nba_0003,New Orleans Hornets,27,55,1382.59
+2013,26,nba_0008,Detroit Pistons,29,53,1367.28
+2013,27,nba_0021,Phoenix Suns,25,57,1332.51
+2013,28,nba_0005,Cleveland Cavaliers,24,58,1316.01
+2013,29,nba_0030,Charlotte Bobcats,21,61,1275.48
+2013,30,nba_0019,Orlando Magic,20,62,1257.86
+2014,1,nba_0024,San Antonio Spurs,62,20,1793.96
+2014,2,nba_0025,Oklahoma City Thunder,59,23,1680.18
+2014,3,nba_0012,Los Angeles Clippers,57,25,1668.36
+2014,4,nba_0014,Miami Heat,54,28,1632.6
+2014,5,nba_0010,Houston Rockets,54,28,1620.49
+2014,6,nba_0009,Golden State Warriors,51,31,1619.72
+2014,7,nba_0028,Memphis Grizzlies,50,32,1609.86
+2014,8,nba_0006,Dallas Mavericks,49,33,1605.57
+2014,9,nba_0022,Portland Trail Blazers,54,28,1594.9
+2014,10,nba_0021,Phoenix Suns,48,34,1570.83
+2014,11,nba_0011,Indiana Pacers,56,26,1563.28
+2014,12,nba_0026,Toronto Raptors,48,34,1562.53
+2014,13,nba_0004,Chicago Bulls,48,34,1549.51
+2014,14,nba_0029,Washington Wizards,44,38,1546.18
+2014,15,nba_0017,Brooklyn Nets,44,38,1531.42
+2014,16,nba_0018,New York Knicks,37,45,1518.77
+2014,17,nba_0016,Minnesota Timberwolves,40,42,1511.64
+2014,18,nba_0030,Charlotte Bobcats,43,39,1500.3
+2014,19,nba_0001,Atlanta Hawks,38,44,1467.85
+2014,20,nba_0007,Denver Nuggets,36,46,1460.52
+2014,21,nba_0003,New Orleans Pelicans,34,48,1427.48
+2014,22,nba_0005,Cleveland Cavaliers,33,49,1419.03
+2014,23,nba_0023,Sacramento Kings,28,54,1395.02
+2014,24,nba_0013,Los Angeles Lakers,27,55,1369.67
+2014,25,nba_0008,Detroit Pistons,29,53,1348.37
+2014,26,nba_0027,Utah Jazz,25,57,1330.4
+2014,27,nba_0002,Boston Celtics,25,57,1327.77
+2014,28,nba_0019,Orlando Magic,23,59,1298.03
+2014,29,nba_0015,Milwaukee Bucks,15,67,1248.08
+2014,30,nba_0020,Philadelphia 76ers,19,63,1228.15
+2015,1,nba_0009,Golden State Warriors,67,15,1831.12
+2015,2,nba_0024,San Antonio Spurs,55,27,1709.02
+2015,3,nba_0005,Cleveland Cavaliers,53,29,1692.15
+2015,4,nba_0012,Los Angeles Clippers,56,26,1688.17
+2015,5,nba_0010,Houston Rockets,56,26,1656.51
+2015,6,nba_0028,Memphis Grizzlies,55,27,1628.17
+2015,7,nba_0001,Atlanta Hawks,60,22,1601.68
+2015,8,nba_0025,Oklahoma City Thunder,45,37,1584.01
+2015,9,nba_0004,Chicago Bulls,50,32,1579.47
+2015,10,nba_0022,Portland Trail Blazers,51,31,1563.05
+2015,11,nba_0006,Dallas Mavericks,50,32,1558.34
+2015,12,nba_0029,Washington Wizards,46,36,1541.27
+2015,13,nba_0003,New Orleans Pelicans,45,37,1527.46
+2015,14,nba_0027,Utah Jazz,38,44,1524.67
+2015,15,nba_0002,Boston Celtics,40,42,1499.06
+2015,16,nba_0011,Indiana Pacers,38,44,1498.82
+2015,17,nba_0026,Toronto Raptors,49,33,1496.39
+2015,18,nba_0021,Phoenix Suns,39,43,1474.88
+2015,19,nba_0017,Brooklyn Nets,38,44,1461.38
+2015,20,nba_0014,Miami Heat,37,45,1451.72
+2015,21,nba_0015,Milwaukee Bucks,41,41,1448.28
+2015,22,nba_0008,Detroit Pistons,32,50,1434.47
+2015,23,nba_0007,Denver Nuggets,30,52,1406.35
+2015,24,nba_0030,Charlotte Hornets,33,49,1399.24
+2015,25,nba_0023,Sacramento Kings,29,53,1395.22
+2015,26,nba_0019,Orlando Magic,25,57,1303.06
+2015,27,nba_0013,Los Angeles Lakers,21,61,1285.37
+2015,28,nba_0016,Minnesota Timberwolves,16,66,1258.36
+2015,29,nba_0020,Philadelphia 76ers,18,64,1257.69
+2015,30,nba_0018,New York Knicks,17,65,1247.92
+2016,1,nba_0009,Golden State Warriors,73,9,1779.54
+2016,2,nba_0005,Cleveland Cavaliers,57,25,1775.31
+2016,3,nba_0024,San Antonio Spurs,67,15,1751.37
+2016,4,nba_0025,Oklahoma City Thunder,55,27,1737.07
+2016,5,nba_0012,Los Angeles Clippers,53,29,1613.92
+2016,6,nba_0022,Portland Trail Blazers,44,38,1604.27
+2016,7,nba_0026,Toronto Raptors,56,26,1602.85
+2016,8,nba_0001,Atlanta Hawks,48,34,1586.94
+2016,9,nba_0014,Miami Heat,48,34,1585.49
+2016,10,nba_0002,Boston Celtics,48,34,1551.87
+2016,11,nba_0030,Charlotte Hornets,48,34,1551.73
+2016,12,nba_0011,Indiana Pacers,45,37,1539.42
+2016,13,nba_0010,Houston Rockets,41,41,1530.28
+2016,14,nba_0027,Utah Jazz,40,42,1524.23
+2016,15,nba_0029,Washington Wizards,41,41,1514.07
+2016,16,nba_0006,Dallas Mavericks,42,40,1499.55
+2016,17,nba_0008,Detroit Pistons,44,38,1488.89
+2016,18,nba_0004,Chicago Bulls,42,40,1463.77
+2016,19,nba_0028,Memphis Grizzlies,42,40,1455.85
+2016,20,nba_0019,Orlando Magic,35,47,1425.95
+2016,21,nba_0023,Sacramento Kings,33,49,1415.11
+2016,22,nba_0007,Denver Nuggets,33,49,1413.91
+2016,23,nba_0015,Milwaukee Bucks,33,49,1393.51
+2016,24,nba_0003,New Orleans Pelicans,30,52,1387.74
+2016,25,nba_0016,Minnesota Timberwolves,29,53,1375.84
+2016,26,nba_0018,New York Knicks,32,50,1375.27
+2016,27,nba_0021,Phoenix Suns,23,59,1322.54
+2016,28,nba_0017,Brooklyn Nets,21,61,1285.32
+2016,29,nba_0013,Los Angeles Lakers,17,65,1255.44
+2016,30,nba_0020,Philadelphia 76ers,10,72,1193.99
+2017,1,nba_0009,Golden State Warriors,67,15,1861.64
+2017,2,nba_0005,Cleveland Cavaliers,51,31,1697.74
+2017,3,nba_0024,San Antonio Spurs,61,21,1674.13
+2017,4,nba_0010,Houston Rockets,55,27,1615.22
+2017,5,nba_0012,Los Angeles Clippers,51,31,1612.04
+2017,6,nba_0027,Utah Jazz,51,31,1596.53
+2017,7,nba_0029,Washington Wizards,49,33,1582.99
+2017,8,nba_0002,Boston Celtics,53,29,1557.84
+2017,9,nba_0014,Miami Heat,41,41,1556.94
+2017,10,nba_0026,Toronto Raptors,51,31,1554.37
+2017,11,nba_0025,Oklahoma City Thunder,47,35,1540.15
+2017,12,nba_0007,Denver Nuggets,40,42,1532.42
+2017,13,nba_0022,Portland Trail Blazers,41,41,1527.18
+2017,14,nba_0015,Milwaukee Bucks,42,40,1502.66
+2017,15,nba_0028,Memphis Grizzlies,43,39,1495.13
+2017,16,nba_0011,Indiana Pacers,42,40,1493.36
+2017,17,nba_0004,Chicago Bulls,41,41,1482.3
+2017,18,nba_0001,Atlanta Hawks,43,39,1476.8
+2017,19,nba_0003,New Orleans Pelicans,34,48,1462.46
+2017,20,nba_0030,Charlotte Hornets,36,46,1456.92
+2017,21,nba_0016,Minnesota Timberwolves,31,51,1439.28
+2017,22,nba_0008,Detroit Pistons,37,45,1435.21
+2017,23,nba_0006,Dallas Mavericks,33,49,1424.09
+2017,24,nba_0023,Sacramento Kings,32,50,1392.15
+2017,25,nba_0018,New York Knicks,31,51,1373.71
+2017,26,nba_0019,Orlando Magic,29,53,1347.76
+2017,27,nba_0013,Los Angeles Lakers,26,56,1337.71
+2017,28,nba_0020,Philadelphia 76ers,28,54,1332.55
+2017,29,nba_0017,Brooklyn Nets,20,62,1325.79
+2017,30,nba_0021,Phoenix Suns,24,58,1315.63
+2018,1,nba_0009,Golden State Warriors,58,24,1770.51
+2018,2,nba_0010,Houston Rockets,65,17,1724.38
+2018,3,nba_0027,Utah Jazz,48,34,1645.34
+2018,4,nba_0020,Philadelphia 76ers,52,30,1626.21
+2018,5,nba_0026,Toronto Raptors,59,23,1616.27
+2018,6,nba_0002,Boston Celtics,55,27,1599.63
+2018,7,nba_0025,Oklahoma City Thunder,48,34,1591.08
+2018,8,nba_0003,New Orleans Pelicans,48,34,1588.28
+2018,9,nba_0005,Cleveland Cavaliers,50,32,1588.27
+2018,10,nba_0007,Denver Nuggets,46,36,1576.95
+2018,11,nba_0011,Indiana Pacers,48,34,1573.08
+2018,12,nba_0022,Portland Trail Blazers,49,33,1569.54
+2018,13,nba_0024,San Antonio Spurs,47,35,1552.59
+2018,14,nba_0016,Minnesota Timberwolves,47,35,1546.43
+2018,15,nba_0015,Milwaukee Bucks,44,38,1517.05
+2018,16,nba_0029,Washington Wizards,43,39,1506.4
+2018,17,nba_0012,Los Angeles Clippers,42,40,1506.01
+2018,18,nba_0014,Miami Heat,44,38,1501.09
+2018,19,nba_0008,Detroit Pistons,39,43,1472.01
+2018,20,nba_0030,Charlotte Hornets,36,46,1469.25
+2018,21,nba_0013,Los Angeles Lakers,35,47,1461.6
+2018,22,nba_0017,Brooklyn Nets,28,54,1381.71
+2018,23,nba_0018,New York Knicks,29,53,1362.19
+2018,24,nba_0006,Dallas Mavericks,24,58,1357.31
+2018,25,nba_0023,Sacramento Kings,27,55,1337.77
+2018,26,nba_0001,Atlanta Hawks,24,58,1336.3
+2018,27,nba_0004,Chicago Bulls,27,55,1331.29
+2018,28,nba_0019,Orlando Magic,25,57,1322.25
+2018,29,nba_0028,Memphis Grizzlies,22,60,1304.65
+2018,30,nba_0021,Phoenix Suns,21,61,1268.41
+2019,1,nba_0026,Toronto Raptors,58,24,1745.9
+2019,2,nba_0009,Golden State Warriors,57,25,1699.46
+2019,3,nba_0015,Milwaukee Bucks,60,22,1698.47
+2019,4,nba_0010,Houston Rockets,53,29,1684.35
+2019,5,nba_0022,Portland Trail Blazers,53,29,1630.13
+2019,6,nba_0007,Denver Nuggets,54,28,1617.44
+2019,7,nba_0027,Utah Jazz,50,32,1613.27
+2019,8,nba_0020,Philadelphia 76ers,51,31,1608.48
+2019,9,nba_0002,Boston Celtics,49,33,1596.54
+2019,10,nba_0024,San Antonio Spurs,48,34,1574.7
+2019,11,nba_0025,Oklahoma City Thunder,49,33,1571.52
+2019,12,nba_0012,Los Angeles Clippers,48,34,1535.03
+2019,13,nba_0019,Orlando Magic,42,40,1525.21
+2019,14,nba_0011,Indiana Pacers,48,34,1510.02
+2019,15,nba_0014,Miami Heat,39,43,1491.08
+2019,16,nba_0017,Brooklyn Nets,42,40,1485.72
+2019,17,nba_0030,Charlotte Hornets,39,43,1481.65
+2019,18,nba_0008,Detroit Pistons,41,41,1467.7
+2019,19,nba_0013,Los Angeles Lakers,37,45,1454.88
+2019,20,nba_0016,Minnesota Timberwolves,36,46,1453.06
+2019,21,nba_0023,Sacramento Kings,39,43,1450.2
+2019,22,nba_0006,Dallas Mavericks,33,49,1413.79
+2019,23,nba_0028,Memphis Grizzlies,33,49,1413.41
+2019,24,nba_0029,Washington Wizards,32,50,1404.7
+2019,25,nba_0003,New Orleans Pelicans,33,49,1400.3
+2019,26,nba_0001,Atlanta Hawks,29,53,1380.17
+2019,27,nba_0004,Chicago Bulls,22,60,1293.31
+2019,28,nba_0005,Cleveland Cavaliers,19,63,1288.78
+2019,29,nba_0021,Phoenix Suns,19,63,1262.57
+2019,30,nba_0018,New York Knicks,17,65,1251.42
+2020,1,nba_0013,Los Angeles Lakers,52,19,1719.29
+2020,2,nba_0026,Toronto Raptors,53,19,1698.91
+2020,3,nba_0002,Boston Celtics,48,24,1686.98
+2020,4,nba_0015,Milwaukee Bucks,56,17,1656.0
+2020,5,nba_0012,Los Angeles Clippers,49,23,1643.35
+2020,6,nba_0014,Miami Heat,44,29,1642.97
+2020,7,nba_0007,Denver Nuggets,46,27,1588.94
+2020,8,nba_0010,Houston Rockets,44,28,1571.13
+2020,9,nba_0025,Oklahoma City Thunder,44,28,1567.7
+2020,10,nba_0027,Utah Jazz,44,28,1563.98
+2020,11,nba_0011,Indiana Pacers,45,28,1541.62
+2020,12,nba_0020,Philadelphia 76ers,43,30,1541.08
+2020,13,nba_0006,Dallas Mavericks,43,32,1539.43
+2020,14,nba_0021,Phoenix Suns,34,39,1518.78
+2020,15,nba_0024,San Antonio Spurs,32,39,1517.62
+2020,16,nba_0022,Portland Trail Blazers,35,39,1507.96
+2020,17,nba_0028,Memphis Grizzlies,34,39,1501.27
+2020,18,nba_0023,Sacramento Kings,31,41,1483.46
+2020,19,nba_0019,Orlando Magic,33,40,1480.63
+2020,20,nba_0003,New Orleans Pelicans,30,42,1480.18
+2020,21,nba_0017,Brooklyn Nets,35,37,1473.53
+2020,22,nba_0030,Charlotte Hornets,23,42,1379.67
+2020,23,nba_0029,Washington Wizards,25,47,1364.46
+2020,24,nba_0016,Minnesota Timberwolves,19,45,1346.03
+2020,25,nba_0009,Golden State Warriors,15,50,1339.38
+2020,26,nba_0001,Atlanta Hawks,20,47,1339.07
+2020,27,nba_0004,Chicago Bulls,22,43,1336.55
+2020,28,nba_0018,New York Knicks,21,45,1335.94
+2020,29,nba_0008,Detroit Pistons,20,46,1335.29
+2020,30,nba_0005,Cleveland Cavaliers,19,46,1302.79
+2021,1,nba_0015,Milwaukee Bucks,46,26,1719.61
+2021,2,nba_0021,Phoenix Suns,51,21,1694.54
+2021,3,nba_0012,Los Angeles Clippers,47,25,1669.88
+2021,4,nba_0027,Utah Jazz,52,20,1653.91
+2021,5,nba_0020,Philadelphia 76ers,49,23,1635.75
+2021,6,nba_0017,Brooklyn Nets,48,24,1634.44
+2021,7,nba_0007,Denver Nuggets,47,25,1601.34
+2021,8,nba_0001,Atlanta Hawks,41,31,1582.24
+2021,9,nba_0022,Portland Trail Blazers,42,30,1579.87
+2021,10,nba_0006,Dallas Mavericks,42,30,1566.39
+2021,11,nba_0013,Los Angeles Lakers,42,30,1566.17
+2021,12,nba_0028,Memphis Grizzlies,38,34,1544.57
+2021,13,nba_0018,New York Knicks,41,31,1542.68
+2021,14,nba_0014,Miami Heat,40,32,1521.68
+2021,15,nba_0009,Golden State Warriors,39,33,1517.52
+2021,16,nba_0002,Boston Celtics,36,36,1499.95
+2021,17,nba_0029,Washington Wizards,34,38,1477.01
+2021,18,nba_0011,Indiana Pacers,34,38,1472.87
+2021,19,nba_0004,Chicago Bulls,31,41,1470.48
+2021,20,nba_0003,New Orleans Pelicans,31,41,1463.18
+2021,21,nba_0024,San Antonio Spurs,33,39,1460.82
+2021,22,nba_0023,Sacramento Kings,31,41,1428.9
+2021,23,nba_0026,Toronto Raptors,27,45,1425.78
+2021,24,nba_0030,Charlotte Hornets,33,39,1420.54
+2021,25,nba_0016,Minnesota Timberwolves,23,49,1386.07
+2021,26,nba_0008,Detroit Pistons,20,52,1325.08
+2021,27,nba_0005,Cleveland Cavaliers,22,50,1297.82
+2021,28,nba_0010,Houston Rockets,17,55,1288.29
+2021,29,nba_0019,Orlando Magic,21,51,1284.75
+2021,30,nba_0025,Oklahoma City Thunder,22,50,1268.46
+2022,1,nba_0009,Golden State Warriors,53,29,1722.05
+2022,2,nba_0002,Boston Celtics,51,31,1691.77
+2022,3,nba_0021,Phoenix Suns,64,18,1662.61
+2022,4,nba_0014,Miami Heat,53,29,1647.77
+2022,5,nba_0006,Dallas Mavericks,52,30,1639.75
+2022,6,nba_0028,Memphis Grizzlies,56,26,1639.03
+2022,7,nba_0015,Milwaukee Bucks,51,31,1615.79
+2022,8,nba_0020,Philadelphia 76ers,51,31,1608.27
+2022,9,nba_0026,Toronto Raptors,48,34,1573.95
+2022,10,nba_0027,Utah Jazz,49,33,1568.0
+2022,11,nba_0016,Minnesota Timberwolves,46,36,1561.55
+2022,12,nba_0007,Denver Nuggets,48,34,1547.8
+2022,13,nba_0001,Atlanta Hawks,43,39,1541.77
+2022,14,nba_0003,New Orleans Pelicans,36,46,1524.16
+2022,15,nba_0030,Charlotte Hornets,43,39,1520.41
+2022,16,nba_0017,Brooklyn Nets,44,38,1518.44
+2022,17,nba_0012,Los Angeles Clippers,42,40,1509.52
+2022,18,nba_0018,New York Knicks,37,45,1491.09
+2022,19,nba_0005,Cleveland Cavaliers,44,38,1478.62
+2022,20,nba_0024,San Antonio Spurs,34,48,1463.97
+2022,21,nba_0004,Chicago Bulls,46,36,1456.25
+2022,22,nba_0013,Los Angeles Lakers,33,49,1408.02
+2022,23,nba_0029,Washington Wizards,35,47,1398.36
+2022,24,nba_0023,Sacramento Kings,30,52,1371.47
+2022,25,nba_0011,Indiana Pacers,25,57,1349.31
+2022,26,nba_0008,Detroit Pistons,23,59,1332.69
+2022,27,nba_0019,Orlando Magic,22,60,1300.69
+2022,28,nba_0025,Oklahoma City Thunder,24,58,1294.56
+2022,29,nba_0010,Houston Rockets,20,62,1281.74
+2022,30,nba_0022,Portland Trail Blazers,27,55,1281.33
+2023,1,nba_0007,Denver Nuggets,53,29,1708.2
+2023,2,nba_0002,Boston Celtics,57,25,1670.88
+2023,3,nba_0020,Philadelphia 76ers,54,28,1647.19
+2023,4,nba_0014,Miami Heat,44,38,1596.27
+2023,5,nba_0015,Milwaukee Bucks,58,24,1596.04
+2023,6,nba_0018,New York Knicks,47,35,1591.94
+2023,7,nba_0009,Golden State Warriors,44,38,1574.74
+2023,8,nba_0013,Los Angeles Lakers,43,39,1573.1
+2023,9,nba_0028,Memphis Grizzlies,51,31,1568.28
+2023,10,nba_0005,Cleveland Cavaliers,51,31,1568.2
+2023,11,nba_0021,Phoenix Suns,45,37,1559.69
+2023,12,nba_0023,Sacramento Kings,48,34,1539.33
+2023,13,nba_0026,Toronto Raptors,41,41,1539.12
+2023,14,nba_0004,Chicago Bulls,40,42,1525.19
+2023,15,nba_0001,Atlanta Hawks,41,41,1518.62
+2023,16,nba_0016,Minnesota Timberwolves,42,40,1516.66
+2023,17,nba_0012,Los Angeles Clippers,44,38,1515.21
+2023,18,nba_0003,New Orleans Pelicans,42,40,1508.15
+2023,19,nba_0025,Oklahoma City Thunder,40,42,1499.41
+2023,20,nba_0017,Brooklyn Nets,45,37,1496.81
+2023,21,nba_0006,Dallas Mavericks,38,44,1453.55
+2023,22,nba_0019,Orlando Magic,34,48,1429.58
+2023,23,nba_0027,Utah Jazz,37,45,1425.63
+2023,24,nba_0029,Washington Wizards,35,47,1424.76
+2023,25,nba_0011,Indiana Pacers,35,47,1395.29
+2023,26,nba_0030,Charlotte Hornets,27,55,1368.91
+2023,27,nba_0022,Portland Trail Blazers,33,49,1334.94
+2023,28,nba_0010,Houston Rockets,22,60,1308.48
+2023,29,nba_0024,San Antonio Spurs,22,60,1297.38
+2023,30,nba_0008,Detroit Pistons,17,65,1251.08
+2024,1,nba_0002,Boston Celtics,64,18,1781.31
+2024,2,nba_0006,Dallas Mavericks,50,32,1685.07
+2024,3,nba_0025,Oklahoma City Thunder,57,25,1667.17
+2024,4,nba_0016,Minnesota Timberwolves,56,26,1660.01
+2024,5,nba_0007,Denver Nuggets,57,25,1659.21
+2024,6,nba_0011,Indiana Pacers,47,35,1598.64
+2024,7,nba_0009,Golden State Warriors,46,36,1594.28
+2024,8,nba_0018,New York Knicks,50,32,1587.23
+2024,9,nba_0021,Phoenix Suns,49,33,1584.28
+2024,10,nba_0013,Los Angeles Lakers,47,35,1568.71
+2024,11,nba_0003,New Orleans Pelicans,49,33,1559.33
+2024,12,nba_0023,Sacramento Kings,46,36,1551.48
+2024,13,nba_0014,Miami Heat,46,36,1542.12
+2024,14,nba_0020,Philadelphia 76ers,47,35,1540.23
+2024,15,nba_0015,Milwaukee Bucks,49,33,1538.86
+2024,16,nba_0012,Los Angeles Clippers,51,31,1538.37
+2024,17,nba_0005,Cleveland Cavaliers,48,34,1537.45
+2024,18,nba_0019,Orlando Magic,47,35,1531.67
+2024,19,nba_0010,Houston Rockets,41,41,1503.23
+2024,20,nba_0004,Chicago Bulls,39,43,1470.14
+2024,21,nba_0001,Atlanta Hawks,36,46,1438.19
+2024,22,nba_0017,Brooklyn Nets,32,50,1412.58
+2024,23,nba_0027,Utah Jazz,31,51,1373.08
+2024,24,nba_0024,San Antonio Spurs,22,60,1353.41
+2024,25,nba_0028,Memphis Grizzlies,27,55,1331.77
+2024,26,nba_0026,Toronto Raptors,25,57,1310.4
+2024,27,nba_0030,Charlotte Hornets,21,61,1294.02
+2024,28,nba_0022,Portland Trail Blazers,21,61,1291.29
+2024,29,nba_0029,Washington Wizards,15,67,1252.77
+2024,30,nba_0008,Detroit Pistons,14,68,1247.22
+2025,1,nba_0025,Oklahoma City Thunder,68,14,1784.17
+2025,2,nba_0005,Cleveland Cavaliers,64,18,1697.57
+2025,3,nba_0002,Boston Celtics,61,21,1696.49
+2025,4,nba_0011,Indiana Pacers,50,32,1682.12
+2025,5,nba_0016,Minnesota Timberwolves,49,33,1679.81
+2025,6,nba_0012,Los Angeles Clippers,50,32,1629.34
+2025,7,nba_0007,Denver Nuggets,50,32,1627.87
+2025,8,nba_0018,New York Knicks,51,31,1614.83
+2025,9,nba_0009,Golden State Warriors,48,34,1596.89
+2025,10,nba_0010,Houston Rockets,52,30,1586.53
+2025,11,nba_0015,Milwaukee Bucks,48,34,1566.07
+2025,12,nba_0013,Los Angeles Lakers,50,32,1565.53
+2025,13,nba_0028,Memphis Grizzlies,48,34,1531.66
+2025,14,nba_0008,Detroit Pistons,44,38,1524.84
+2025,15,nba_0019,Orlando Magic,41,41,1497.28
+2025,16,nba_0004,Chicago Bulls,39,43,1485.38
+2025,17,nba_0023,Sacramento Kings,40,42,1483.1
+2025,18,nba_0022,Portland Trail Blazers,36,46,1479.8
+2025,19,nba_0014,Miami Heat,37,45,1475.06
+2025,20,nba_0006,Dallas Mavericks,39,43,1459.78
+2025,21,nba_0001,Atlanta Hawks,40,42,1452.71
+2025,22,nba_0021,Phoenix Suns,36,46,1441.73
+2025,23,nba_0024,San Antonio Spurs,34,48,1414.44
+2025,24,nba_0026,Toronto Raptors,30,52,1388.23
+2025,25,nba_0003,New Orleans Pelicans,21,61,1309.54
+2025,26,nba_0017,Brooklyn Nets,26,56,1298.35
+2025,27,nba_0020,Philadelphia 76ers,24,58,1295.75
+2025,28,nba_0027,Utah Jazz,17,65,1273.89
+2025,29,nba_0030,Charlotte Hornets,19,63,1235.76
+2025,30,nba_0029,Washington Wizards,18,64,1226.12
+2026,1,nba_0018,New York Knicks,53,29,1792.24
+2026,2,nba_0025,Oklahoma City Thunder,64,18,1767.58
+2026,3,nba_0024,San Antonio Spurs,62,20,1753.68
+2026,4,nba_0008,Detroit Pistons,60,22,1661.77
+2026,5,nba_0002,Boston Celtics,56,26,1656.05
+2026,6,nba_0007,Denver Nuggets,54,28,1625.59
+2026,7,nba_0013,Los Angeles Lakers,53,29,1599.08
+2026,8,nba_0005,Cleveland Cavaliers,52,30,1597.4
+2026,9,nba_0030,Charlotte Hornets,44,38,1597.03
+2026,10,nba_0010,Houston Rockets,52,30,1595.42
+2026,11,nba_0016,Minnesota Timberwolves,49,33,1584.03
+2026,12,nba_0019,Orlando Magic,45,37,1548.0
+2026,13,nba_0026,Toronto Raptors,46,36,1546.12
+2026,14,nba_0001,Atlanta Hawks,46,36,1534.15
+2026,15,nba_0012,Los Angeles Clippers,42,40,1532.06
+2026,16,nba_0020,Philadelphia 76ers,45,37,1523.0
+2026,17,nba_0021,Phoenix Suns,45,37,1516.56
+2026,18,nba_0022,Portland Trail Blazers,42,40,1516.1
+2026,19,nba_0014,Miami Heat,43,39,1512.48
+2026,20,nba_0009,Golden State Warriors,37,45,1440.8
+2026,21,nba_0003,New Orleans Pelicans,26,56,1382.39
+2026,22,nba_0015,Milwaukee Bucks,32,50,1361.83
+2026,23,nba_0004,Chicago Bulls,31,51,1344.22
+2026,24,nba_0006,Dallas Mavericks,25,57,1337.71
+2026,25,nba_0011,Indiana Pacers,20,62,1323.63
+2026,26,nba_0023,Sacramento Kings,22,60,1311.32
+2026,27,nba_0028,Memphis Grizzlies,25,57,1299.89
+2026,28,nba_0027,Utah Jazz,22,60,1273.56
+2026,29,nba_0017,Brooklyn Nets,20,62,1259.33
+2026,30,nba_0029,Washington Wizards,17,65,1205.92

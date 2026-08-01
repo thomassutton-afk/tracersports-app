@@ -1,0 +1,307 @@
+# 1995-96 D1 checklist (305/305 downloaded)
+
+- [x] Air Force
+- [x] Akron
+- [x] Alabama
+- [x] Alabama State
+- [x] Alcorn State
+- [x] American
+- [x] Appalachian State
+- [x] Arizona
+- [x] Arizona State
+- [x] Arkansas
+- [x] Arkansas State
+- [x] Army
+- [x] Auburn
+- [x] Austin Peay
+- [x] Ball State
+- [x] Baylor
+- [x] Bethune-Cookman
+- [x] Boise State
+- [x] Boston College
+- [x] Boston University
+- [x] Bowling Green
+- [x] Bradley
+- [x] Brigham Young
+- [x] Brown
+- [x] Bucknell
+- [x] Buffalo
+- [x] Butler
+- [x] Cal Poly
+- [x] Cal State Fullerton
+- [x] Cal State Northridge
+- [x] California
+- [x] Campbell
+- [x] Canisius
+- [x] Centenary (LA)
+- [x] Central Connecticut State
+- [x] Central Michigan
+- [x] Charleston Southern
+- [x] Charlotte
+- [x] Chattanooga
+- [x] Chicago State
+- [x] Cincinnati
+- [x] Clemson
+- [x] Cleveland State
+- [x] Coastal Carolina
+- [x] Colgate
+- [x] College of Charleston
+- [x] Colorado
+- [x] Colorado State
+- [x] Columbia
+- [x] Connecticut
+- [x] Coppin State
+- [x] Cornell
+- [x] Creighton
+- [x] Dartmouth
+- [x] Davidson
+- [x] Dayton
+- [x] Delaware
+- [x] Delaware State
+- [x] DePaul
+- [x] Detroit Mercy
+- [x] Drake
+- [x] Drexel
+- [x] Duke
+- [x] Duquesne
+- [x] East Carolina
+- [x] East Tennessee State
+- [x] Eastern Illinois
+- [x] Eastern Kentucky
+- [x] Eastern Michigan
+- [x] Eastern Washington
+- [x] Evansville
+- [x] Fairfield
+- [x] FDU
+- [x] Florida
+- [x] Florida A&M
+- [x] Florida Atlantic
+- [x] Florida International
+- [x] Florida State
+- [x] Fordham
+- [x] Fresno State
+- [x] Furman
+- [x] George Mason
+- [x] George Washington
+- [x] Georgetown
+- [x] Georgia
+- [x] Georgia Southern
+- [x] Georgia State
+- [x] Georgia Tech
+- [x] Gonzaga
+- [x] Grambling
+- [x] Green Bay
+- [x] Hampton
+- [x] Hartford
+- [x] Harvard
+- [x] Hawaii
+- [x] Hofstra
+- [x] Holy Cross
+- [x] Houston
+- [x] Howard
+- [x] Idaho
+- [x] Idaho State
+- [x] Illinois
+- [x] Illinois State
+- [x] Illinois–Chicago
+- [x] Indiana
+- [x] Indiana State
+- [x] Iona
+- [x] Iowa
+- [x] Iowa State
+- [x] Jackson State
+- [x] Jacksonville
+- [x] Jacksonville State
+- [x] James Madison
+- [x] Kansas
+- [x] Kansas City
+- [x] Kansas State
+- [x] Kent State
+- [x] Kentucky
+- [x] La Salle
+- [x] Lafayette
+- [x] Lamar
+- [x] Lehigh
+- [x] Liberty
+- [x] Little Rock
+- [x] Long Beach State
+- [x] Long Island University
+- [x] Louisiana
+- [x] Louisiana State
+- [x] Louisiana Tech
+- [x] Louisiana–Monroe
+- [x] Louisville
+- [x] Loyola (IL)
+- [x] Loyola (MD)
+- [x] Loyola Marymount
+- [x] Maine
+- [x] Manhattan
+- [x] Marist
+- [x] Marquette
+- [x] Marshall
+- [x] Maryland
+- [x] UMBC
+- [x] Maryland–Eastern Shore
+- [x] Massachusetts
+- [x] McNeese
+- [x] Memphis
+- [x] Mercer
+- [x] Miami (FL)
+- [x] Miami (OH)
+- [x] Michigan
+- [x] Michigan State
+- [x] Middle Tennessee
+- [x] Milwaukee
+- [x] Minnesota
+- [x] Mississippi
+- [x] Mississippi State
+- [x] Mississippi Valley State
+- [x] Missouri
+- [x] Missouri State
+- [x] Monmouth
+- [x] Montana
+- [x] Montana State
+- [x] Morehead State
+- [x] Morgan State
+- [x] Mount St. Mary's
+- [x] Murray State
+- [x] Navy
+- [x] NC State
+- [x] Nebraska
+- [x] Nevada
+- [x] Nevada–Las Vegas
+- [x] New Hampshire
+- [x] New Mexico
+- [x] New Mexico State
+- [x] New Orleans
+- [x] Niagara
+- [x] Nicholls State
+- [x] North Carolina
+- [x] North Carolina A&T
+- [x] North Texas
+- [x] Northeastern
+- [x] Northeastern Illinois
+- [x] Northern Arizona
+- [x] Northern Illinois
+- [x] Northern Iowa
+- [x] Northwestern
+- [x] Northwestern State
+- [x] Notre Dame
+- [x] Ohio
+- [x] Ohio State
+- [x] Oklahoma
+- [x] Oklahoma State
+- [x] Old Dominion
+- [x] Oral Roberts
+- [x] Oregon
+- [x] Oregon State
+- [x] Pacific
+- [x] Penn State
+- [x] Pennsylvania
+- [x] Pepperdine
+- [x] Pittsburgh
+- [x] Portland
+- [x] Prairie View A&M
+- [x] Princeton
+- [x] Providence
+- [x] Purdue
+- [x] Radford
+- [x] Rhode Island
+- [x] Rice
+- [x] Richmond
+- [x] Rider
+- [x] Robert Morris
+- [x] Rutgers
+- [x] Sacramento State
+- [x] Saint Francis (PA)
+- [x] Saint Joseph's
+- [x] Saint Louis
+- [x] Saint Mary's
+- [x] Saint Peter's
+- [x] Sam Houston
+- [x] Samford
+- [x] San Diego
+- [x] San Diego State
+- [x] San Francisco
+- [x] San Jose State
+- [x] Santa Clara
+- [x] Seton Hall
+- [x] Siena
+- [x] South Alabama
+- [x] South Carolina
+- [x] South Carolina State
+- [x] South Florida
+- [x] Southeast Missouri State
+- [x] Southeastern Louisiana
+- [x] Southern
+- [x] Southern California
+- [x] Southern Illinois
+- [x] Southern Methodist
+- [x] Southern Mississippi
+- [x] Southern Utah
+- [x] St. Bonaventure
+- [x] St. Francis Brooklyn
+- [x] St. John's (NY)
+- [x] Stanford
+- [x] Stephen F. Austin
+- [x] Stetson
+- [x] Syracuse
+- [x] Temple
+- [x] Tennessee
+- [x] Tennessee State
+- [x] Tennessee Tech
+- [x] Tennessee–Martin
+- [x] Texas
+- [x] Texas A&M
+- [x] Texas Christian
+- [x] Texas Southern
+- [x] Texas State
+- [x] Texas Tech
+- [x] Texas–Rio Grande Valley
+- [x] The Citadel
+- [x] Toledo
+- [x] Towson
+- [x] Troy
+- [x] Tulane
+- [x] Tulsa
+- [x] UAB
+- [x] UC Irvine
+- [x] UC Santa Barbara
+- [x] UCF
+- [x] UCLA
+- [x] UNC Asheville
+- [x] UNC Greensboro
+- [x] UNC Wilmington
+- [x] UT Arlington
+- [x] Utah
+- [x] Utah State
+- [x] UTEP
+- [x] UTSA
+- [x] Valparaiso
+- [x] Vanderbilt
+- [x] Vermont
+- [x] Villanova
+- [x] Virginia
+- [x] Virginia Commonwealth
+- [x] VMI
+- [x] Virginia Tech
+- [x] Wagner
+- [x] Wake Forest
+- [x] Washington
+- [x] Washington State
+- [x] Weber State
+- [x] West Virginia
+- [x] Western Carolina
+- [x] Western Illinois
+- [x] Western Kentucky
+- [x] Western Michigan
+- [x] Wichita State
+- [x] William & Mary
+- [x] Winthrop
+- [x] Wisconsin
+- [x] Wofford
+- [x] Wright State
+- [x] Wyoming
+- [x] Xavier
+- [x] Yale
+- [x] Youngstown State
