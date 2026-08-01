@@ -80,6 +80,16 @@ CREATE TABLE IF NOT EXISTS games (
     FOREIGN KEY (league, opponent_id) REFERENCES teams(league, team_id)
 );
 
+-- Stable dedup key for exports. game_id comes from SQLite's AUTOINCREMENT
+-- in the local pipeline databases and gets reassigned if the local `games`
+-- table is ever rebuilt from scratch, so it can't be trusted as a durable
+-- identity for a real-world game. This natural key can. COALESCE(round, '')
+-- is required because Postgres treats every NULL as distinct from every
+-- other NULL in a unique index, which would otherwise defeat dedup entirely
+-- for every regular-season game (round is always NULL for type='R').
+CREATE UNIQUE INDEX IF NOT EXISTS idx_games_natural_key
+    ON games (league, season, variant, team_id, date, opponent_id, home_away, type, (COALESCE(round, '')));
+
 CREATE TABLE IF NOT EXISTS standings (
     league              TEXT    NOT NULL,
     season              INTEGER NOT NULL,

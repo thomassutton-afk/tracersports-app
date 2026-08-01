@@ -327,7 +327,15 @@ def write_to_supabase(teams_rows, games_rows, preseason_rows):
         f"""
         INSERT INTO games ({', '.join(GAMES_COLUMNS)}, league, variant)
         VALUES %s
-        ON CONFLICT (game_id, league, variant, team_id) DO NOTHING
+        -- Conflict target is a stable natural key, not game_id. game_id
+        -- comes from SQLite's AUTOINCREMENT and gets reassigned if the
+        -- local `games` table is ever rebuilt from scratch (e.g. a full
+        -- re-import from Results files) - two exports done before/after
+        -- such a rebuild would otherwise insert every game twice under
+        -- different game_ids. This natural key can't drift like that.
+        -- Must exactly match idx_games_natural_key in schema.sql.
+        ON CONFLICT (league, season, variant, team_id, date, opponent_id, home_away, type, (COALESCE(round, '')))
+        DO NOTHING
         """,
         [
             tuple(g[c] for c in GAMES_COLUMNS) + (g["league"], g["variant"])
