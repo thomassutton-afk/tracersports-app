@@ -1,9 +1,14 @@
-WNBA Echo Ratings - Model Accuracy Report
+Elo Model Accuracy Report
 =============================================
+Scope: all seasons
 
-All games             n=6671   accuracy=0.656   brier=0.2168   log_loss=0.6226
-Regular season        n=6199   accuracy=0.653   brier=0.2176   log_loss=0.6242
+All games             n=6883   accuracy=0.656   brier=0.2170   log_loss=0.6232
+Regular season        n=6411   accuracy=0.653   brier=0.2178   log_loss=0.6249
 Playoffs              n= 472   accuracy=0.695   brier=0.2068   log_loss=0.6007
+
+Baselines for context:
+  Coin flip (always 50%):   Brier = 0.2500
+  Always pick home team:    58.7% accuracy
 
 By season:
   1997                  n= 115   accuracy=0.600   brier=0.2217   log_loss=0.6360
@@ -35,15 +40,190 @@ By season:
   2023                  n= 260   accuracy=0.638   brier=0.2133   log_loss=0.6156
   2024                  n= 262   accuracy=0.676   brier=0.2090   log_loss=0.6059
   2025                  n= 310   accuracy=0.661   brier=0.2147   log_loss=0.6179
+  2026                  n= 212   accuracy=0.651   brier=0.2247   log_loss=0.6429
+
+By month:
+  1997-06               n=  17   accuracy=0.588   brier=0.2230   log_loss=0.6361
+  1997-07               n=  50   accuracy=0.580   brier=0.2337   log_loss=0.6629
+  1997-08               n=  48   accuracy=0.625   brier=0.2088   log_loss=0.6080
+  1998-06               n=  42   accuracy=0.762   brier=0.1886   log_loss=0.5616
+  1998-07               n=  64   accuracy=0.734   brier=0.1926   log_loss=0.5696
+  1998-08               n=  51   accuracy=0.784   brier=0.1643   log_loss=0.5029
+  1998-09               n=   1   accuracy=1.000   brier=0.0575   log_loss=0.2741
+  1999-06               n=  50   accuracy=0.680   brier=0.2345   log_loss=0.6636
+  1999-07               n=  83   accuracy=0.602   brier=0.2303   log_loss=0.6501
+  1999-08               n=  67   accuracy=0.627   brier=0.2213   log_loss=0.6321
+  1999-09               n=   3   accuracy=0.667   brier=0.2931   log_loss=0.8351
+  2000-05               n=   7   accuracy=1.000   brier=0.1357   log_loss=0.4549
+  2000-06               n= 104   accuracy=0.596   brier=0.2305   log_loss=0.6500
+  2000-07               n= 106   accuracy=0.717   brier=0.1859   log_loss=0.5532
+  2000-08               n=  55   accuracy=0.782   brier=0.1603   log_loss=0.4929
+  2001-05               n=   7   accuracy=0.571   brier=0.2662   log_loss=0.7270
+  2001-06               n=  93   accuracy=0.624   brier=0.2287   log_loss=0.6448
+  2001-07               n= 100   accuracy=0.710   brier=0.1980   log_loss=0.5791
+  2001-08               n=  73   accuracy=0.671   brier=0.2115   log_loss=0.6038
+  2001-09               n=   1   accuracy=1.000   brier=0.0325   log_loss=0.1987
+  2002-05               n=  10   accuracy=0.700   brier=0.2075   log_loss=0.6027
+  2002-06               n= 100   accuracy=0.670   brier=0.2172   log_loss=0.6222
+  2002-07               n=  96   accuracy=0.615   brier=0.2260   log_loss=0.6407
+  2002-08               n=  67   accuracy=0.642   brier=0.2314   log_loss=0.6576
+  2003-05               n=  18   accuracy=0.611   brier=0.2446   log_loss=0.6849
+  2003-06               n=  73   accuracy=0.685   brier=0.2201   log_loss=0.6351
+  2003-07               n=  73   accuracy=0.740   brier=0.2012   log_loss=0.5944
+  2003-08               n=  82   accuracy=0.634   brier=0.2449   log_loss=0.6861
+  2003-09               n=  11   accuracy=0.818   brier=0.1733   log_loss=0.5303
+  2004-05               n=  24   accuracy=0.500   brier=0.2847   log_loss=0.7691
+  2004-06               n=  68   accuracy=0.588   brier=0.2594   log_loss=0.7189
+  2004-07               n=  73   accuracy=0.671   brier=0.2073   log_loss=0.6021
+  2004-08               n=   3   accuracy=0.667   brier=0.2212   log_loss=0.6252
+  2004-09               n=  64   accuracy=0.562   brier=0.2503   log_loss=0.6956
+  2004-10               n=   8   accuracy=0.875   brier=0.1581   log_loss=0.5027
+  2005-05               n=  23   accuracy=0.478   brier=0.2384   log_loss=0.6635
+  2005-06               n=  65   accuracy=0.708   brier=0.2002   log_loss=0.5866
+  2005-07               n=  65   accuracy=0.538   brier=0.2495   log_loss=0.6892
+  2005-08               n=  72   accuracy=0.833   brier=0.1680   log_loss=0.5194
+  2005-09               n=  13   accuracy=0.692   brier=0.1969   log_loss=0.5756
+  2006-05               n=  26   accuracy=0.538   brier=0.2556   log_loss=0.7106
+  2006-06               n=  83   accuracy=0.723   brier=0.2018   log_loss=0.5912
+  2006-07               n=  83   accuracy=0.663   brier=0.2150   log_loss=0.6140
+  2006-08               n=  61   accuracy=0.721   brier=0.1891   log_loss=0.5659
+  2006-09               n=   4   accuracy=0.750   brier=0.2520   log_loss=0.7034
+  2007-05               n=  24   accuracy=0.625   brier=0.1924   log_loss=0.5693
+  2007-06               n=  73   accuracy=0.562   brier=0.2663   log_loss=0.7316
+  2007-07               n=  73   accuracy=0.658   brier=0.2372   log_loss=0.6729
+  2007-08               n=  64   accuracy=0.625   brier=0.2285   log_loss=0.6506
+  2007-09               n=   8   accuracy=0.625   brier=0.2298   log_loss=0.6502
+  2008-05               n=  31   accuracy=0.613   brier=0.2272   log_loss=0.6490
+  2008-06               n=  74   accuracy=0.635   brier=0.2131   log_loss=0.6141
+  2008-07               n=  79   accuracy=0.633   brier=0.2339   log_loss=0.6637
+  2008-08               n=  14   accuracy=0.571   brier=0.2091   log_loss=0.6069
+  2008-09               n=  58   accuracy=0.707   brier=0.1989   log_loss=0.5915
+  2008-10               n=   3   accuracy=0.333   brier=0.2858   log_loss=0.7640
+  2009-06               n=  55   accuracy=0.636   brier=0.2273   log_loss=0.6509
+  2009-07               n=  61   accuracy=0.639   brier=0.2434   log_loss=0.6810
+  2009-08               n=  73   accuracy=0.603   brier=0.2340   log_loss=0.6620
+  2009-09               n=  49   accuracy=0.653   brier=0.2109   log_loss=0.6107
+  2009-10               n=   4   accuracy=0.500   brier=0.2857   log_loss=0.7704
+  2010-05               n=  32   accuracy=0.500   brier=0.2548   log_loss=0.7048
+  2010-06               n=  57   accuracy=0.702   brier=0.2082   log_loss=0.6050
+  2010-07               n=  58   accuracy=0.655   brier=0.2212   log_loss=0.6311
+  2010-08               n=  65   accuracy=0.646   brier=0.2291   log_loss=0.6481
+  2010-09               n=   8   accuracy=0.875   brier=0.1592   log_loss=0.4979
+  2011-06               n=  51   accuracy=0.608   brier=0.2332   log_loss=0.6586
+  2011-07               n=  57   accuracy=0.667   brier=0.1987   log_loss=0.5803
+  2011-08               n=  69   accuracy=0.681   brier=0.1919   log_loss=0.5670
+  2011-09               n=  43   accuracy=0.744   brier=0.1749   log_loss=0.5252
+  2011-10               n=   3   accuracy=1.000   brier=0.1358   log_loss=0.4517
+  2012-05               n=  22   accuracy=0.682   brier=0.2039   log_loss=0.5930
+  2012-06               n=  58   accuracy=0.707   brier=0.1878   log_loss=0.5544
+  2012-07               n=  31   accuracy=0.677   brier=0.2259   log_loss=0.6401
+  2012-08               n=  39   accuracy=0.692   brier=0.1919   log_loss=0.5670
+  2012-09               n=  62   accuracy=0.742   brier=0.1883   log_loss=0.5640
+  2012-10               n=  11   accuracy=0.727   brier=0.2068   log_loss=0.6042
+  2013-05               n=   9   accuracy=0.556   brier=0.2245   log_loss=0.6388
+  2013-06               n=  52   accuracy=0.615   brier=0.2339   log_loss=0.6618
+  2013-07               n=  45   accuracy=0.622   brier=0.2366   log_loss=0.6697
+  2013-08               n=  67   accuracy=0.627   brier=0.2211   log_loss=0.6362
+  2013-09               n=  45   accuracy=0.622   brier=0.2389   log_loss=0.6721
+  2013-10               n=   3   accuracy=1.000   brier=0.0484   log_loss=0.2387
+  2014-05               n=  31   accuracy=0.677   brier=0.1936   log_loss=0.5677
+  2014-06               n=  63   accuracy=0.492   brier=0.2546   log_loss=0.7003
+  2014-07               n=  68   accuracy=0.662   brier=0.2186   log_loss=0.6224
+  2014-08               n=  54   accuracy=0.574   brier=0.2277   log_loss=0.6447
+  2014-09               n=   6   accuracy=0.833   brier=0.1406   log_loss=0.4400
+  2015-06               n=  56   accuracy=0.554   brier=0.2552   log_loss=0.7038
+  2015-07               n=  54   accuracy=0.704   brier=0.1974   log_loss=0.5827
+  2015-08               n=  66   accuracy=0.727   brier=0.2291   log_loss=0.6523
+  2015-09               n=  44   accuracy=0.636   brier=0.2193   log_loss=0.6237
+  2015-10               n=   5   accuracy=0.600   brier=0.2734   log_loss=0.7436
+  2016-05               n=  33   accuracy=0.515   brier=0.2543   log_loss=0.7019
+  2016-06               n=  63   accuracy=0.667   brier=0.2037   log_loss=0.5909
+  2016-07               n=  50   accuracy=0.660   brier=0.2129   log_loss=0.6108
+  2016-08               n=  14   accuracy=0.571   brier=0.2749   log_loss=0.7516
+  2016-09               n=  52   accuracy=0.654   brier=0.2124   log_loss=0.6112
+  2016-10               n=   8   accuracy=0.500   brier=0.3049   log_loss=0.8150
+  2017-05               n=  33   accuracy=0.697   brier=0.1977   log_loss=0.5782
+  2017-06               n=  51   accuracy=0.725   brier=0.2056   log_loss=0.5997
+  2017-07               n=  55   accuracy=0.727   brier=0.1975   log_loss=0.5826
+  2017-08               n=  54   accuracy=0.593   brier=0.2232   log_loss=0.6319
+  2017-09               n=  24   accuracy=0.792   brier=0.1635   log_loss=0.4975
+  2017-10               n=   2   accuracy=0.500   brier=0.2956   log_loss=0.7916
+  2018-05               n=  27   accuracy=0.556   brier=0.2138   log_loss=0.6124
+  2018-06               n=  67   accuracy=0.597   brier=0.2292   log_loss=0.6480
+  2018-07               n=  62   accuracy=0.565   brier=0.2739   log_loss=0.7629
+  2018-08               n=  58   accuracy=0.741   brier=0.1876   log_loss=0.5562
+  2018-09               n=   7   accuracy=0.714   brier=0.1874   log_loss=0.5630
+  2019-05               n=  11   accuracy=0.818   brier=0.1762   log_loss=0.5364
+  2019-06               n=  61   accuracy=0.574   brier=0.2340   log_loss=0.6595
+  2019-07               n=  48   accuracy=0.646   brier=0.2172   log_loss=0.6259
+  2019-08               n=  65   accuracy=0.708   brier=0.2030   log_loss=0.5930
+  2019-09               n=  31   accuracy=0.774   brier=0.1756   log_loss=0.5243
+  2019-10               n=   4   accuracy=0.500   brier=0.3014   log_loss=0.8049
+  2020-07               n=  18   accuracy=0.556   brier=0.2337   log_loss=0.6594
+  2020-08               n=  77   accuracy=0.714   brier=0.2032   log_loss=0.5967
+  2020-09               n=  49   accuracy=0.714   brier=0.2023   log_loss=0.5899
+  2020-10               n=   3   accuracy=1.000   brier=0.1449   log_loss=0.4787
+  2021-05               n=  37   accuracy=0.432   brier=0.2702   log_loss=0.7331
+  2021-06               n=  59   accuracy=0.695   brier=0.2203   log_loss=0.6329
+  2021-07               n=  23   accuracy=0.609   brier=0.2455   log_loss=0.6833
+  2021-08               n=  39   accuracy=0.769   brier=0.1880   log_loss=0.5605
+  2021-09               n=  42   accuracy=0.786   brier=0.1773   log_loss=0.5333
+  2021-10               n=   9   accuracy=0.444   brier=0.2717   log_loss=0.7385
+  2022-05               n=  55   accuracy=0.564   brier=0.2236   log_loss=0.6336
+  2022-06               n=  64   accuracy=0.641   brier=0.2475   log_loss=0.6944
+  2022-07               n=  62   accuracy=0.661   brier=0.1935   log_loss=0.5680
+  2022-08               n=  49   accuracy=0.735   brier=0.1998   log_loss=0.5901
+  2022-09               n=   9   accuracy=0.444   brier=0.2638   log_loss=0.7210
+  2023-05               n=  24   accuracy=0.583   brier=0.2153   log_loss=0.6155
+  2023-06               n=  66   accuracy=0.576   brier=0.2368   log_loss=0.6665
+  2023-07               n=  60   accuracy=0.717   brier=0.1878   log_loss=0.5601
+  2023-08               n=  65   accuracy=0.585   brier=0.2333   log_loss=0.6592
+  2023-09               n=  40   accuracy=0.750   brier=0.1820   log_loss=0.5501
+  2023-10               n=   5   accuracy=0.600   brier=0.1917   log_loss=0.5706
+  2024-05               n=  43   accuracy=0.651   brier=0.2158   log_loss=0.6184
+  2024-06               n=  65   accuracy=0.723   brier=0.2111   log_loss=0.6061
+  2024-07               n=  40   accuracy=0.625   brier=0.2100   log_loss=0.6039
+  2024-08               n=  41   accuracy=0.585   brier=0.2361   log_loss=0.6639
+  2024-09               n=  61   accuracy=0.754   brier=0.1785   log_loss=0.5487
+  2024-10               n=  12   accuracy=0.583   brier=0.2320   log_loss=0.6582
+  2025-05               n=  40   accuracy=0.725   brier=0.2050   log_loss=0.5962
+  2025-06               n=  68   accuracy=0.588   brier=0.2311   log_loss=0.6496
+  2025-07               n=  65   accuracy=0.631   brier=0.2295   log_loss=0.6522
+  2025-08               n=  84   accuracy=0.690   brier=0.2054   log_loss=0.6049
+  2025-09               n=  49   accuracy=0.673   brier=0.2005   log_loss=0.5774
+  2025-10               n=   4   accuracy=1.000   brier=0.1602   log_loss=0.5067
+  2026-05               n=  63   accuracy=0.508   brier=0.2809   log_loss=0.7665
+  2026-06               n=  81   accuracy=0.778   brier=0.1864   log_loss=0.5600
+  2026-07               n=  68   accuracy=0.632   brier=0.2181   log_loss=0.6272
+
+Calibration (expected win% bucket vs actual win rate):
+  Bucket         Games   Predicted avg   Actual win rate
+  50%-60%        1358           55.4%             54.6%
+  60%-70%        1709           65.1%             62.8%
+  70%-80%        1333           74.6%             71.3%
+  80%-90%         719           84.0%             83.7%
+  90%-101%          79           91.7%             87.3%
+
+10 biggest upsets (lowest pre-game win probability for the winner):
+  2010-08-03  wnba_0009 beat wnba_0016  (84-75, given only 15.1% to win)
+  2024-08-28  wnba_0004 beat wnba_0005  (94-88, given only 15.3% to win)
+  2017-08-06  wnba_0013 beat wnba_0011  (84-82, given only 16.2% to win)
+  2020-08-07  wnba_0005 beat wnba_0010  (74-66, given only 17.1% to win)
+  2011-08-28  wnba_0009 beat wnba_0012  (83-72, given only 18.3% to win)
+  2020-08-23  wnba_0018 beat wnba_0011  (78-75, given only 19.6% to win)
+  2007-08-16  wnba_0011 beat wnba_0009  (87-77, given only 20.1% to win)
+  2012-08-30  wnba_0009 beat wnba_0004  (99-85, given only 20.3% to win)
+  2021-07-03  wnba_0013 beat wnba_0012  (73-67, given only 21.2% to win)
+  2017-07-08  wnba_0017 beat wnba_0011  (100-76, given only 21.5% to win)
 
 Worst 10 predictions (highest log loss - biggest confident misses):
-  2024-09-19  MIN 51-68 LAS  (favored: MIN @ 94.0%, winner: LAS, log_loss=2.818)
-  2006-08-13  IND 73-80 CHI  (favored: IND @ 92.5%, winner: CHI, log_loss=2.594)
-  2018-07-03  MIN 59-71 IND  (favored: MIN @ 92.1%, winner: IND, log_loss=2.535)
-  2025-08-21  NYL 85-91 CHI  (favored: NYL @ 91.1%, winner: CHI, log_loss=2.423)
-  2008-09-11  LAS 72-83 ATL  (favored: LAS @ 91.1%, winner: ATL, log_loss=2.418)
-  2024-09-19  NYL 67-78 ATL  (favored: NYL @ 91.0%, winner: ATL, log_loss=2.409)
-  2023-08-19  UTA 72-78 LAS  (favored: UTA @ 90.6%, winner: LAS, log_loss=2.361)
-  2018-07-20  LAS 76-78 IND  (favored: LAS @ 90.3%, winner: IND, log_loss=2.336)
-  2003-07-30  LAS 62-70 UTA  (favored: LAS @ 90.1%, winner: UTA, log_loss=2.317)
-  2013-08-08  MIN 75-79 WAS  (favored: MIN @ 89.8%, winner: WAS, log_loss=2.284)
+  2024-09-19  wnba_0011 51-68 wnba_0004  (favored: wnba_0011 @ 94.0%, winner: wnba_0004, log_loss=2.818)
+  2006-08-13  wnba_0013 73-80 wnba_0017  (favored: wnba_0013 @ 92.5%, winner: wnba_0017, log_loss=2.594)
+  2018-07-03  wnba_0011 59-71 wnba_0013  (favored: wnba_0011 @ 92.1%, winner: wnba_0013, log_loss=2.535)
+  2025-08-21  wnba_0005 85-91 wnba_0017  (favored: wnba_0005 @ 91.1%, winner: wnba_0017, log_loss=2.423)
+  2008-09-11  wnba_0004 72-83 wnba_0018  (favored: wnba_0004 @ 91.1%, winner: wnba_0018, log_loss=2.418)
+  2024-09-19  wnba_0005 67-78 wnba_0018  (favored: wnba_0005 @ 91.0%, winner: wnba_0018, log_loss=2.409)
+  2023-08-19  wnba_0008 72-78 wnba_0004  (favored: wnba_0008 @ 90.6%, winner: wnba_0004, log_loss=2.361)
+  2026-07-06  wnba_0011 89-90 wnba_0012  (favored: wnba_0011 @ 90.4%, winner: wnba_0012, log_loss=2.348)
+  2018-07-20  wnba_0004 76-78 wnba_0013  (favored: wnba_0004 @ 90.3%, winner: wnba_0013, log_loss=2.336)
+  2003-07-30  wnba_0004 62-70 wnba_0008  (favored: wnba_0004 @ 90.1%, winner: wnba_0008, log_loss=2.317)
