@@ -40,23 +40,34 @@ const VARIANT_LABELS = {
 };
 
 async function fetchStandings(league, season, variant) {
-  const { data, error } = await supabase
-    .from("games")
-    .select("team_id, date, post_gm_rate, rating_change, w, l")
-    .eq("league", league)
-    .eq("season", season)
-    .eq("variant", variant)
-    .order("date", { ascending: true })
-    // Supabase caps results at 1000 rows by default — a full season across
-    // every team (e.g. ~2,460 rows for 30 NBA teams x 82 games) silently
-    // gets truncated without this. 20000 comfortably covers any league's
-    // full season with room to grow.
-    .range(0, 19999);
+  const PAGE_SIZE = 1000; // matches Supabase/PostgREST's typical default Max Rows;
+                           // safe even if the project's cap is raised later, since
+                           // we stop as soon as a page comes back short.
+  let allRows = [];
+  let from = 0;
 
-  if (error) return { standings: [], error };
+  while (true) {
+    const { data, error } = await supabase
+      .from("games")
+      .select("team_id, date, post_gm_rate, rating_change, w, l")
+      .eq("league", league)
+      .eq("season", season)
+      .eq("variant", variant)
+      .order("date", { ascending: true })
+      .range(from, from + PAGE_SIZE - 1);
+
+    if (error) return { standings: [], error };
+
+    allRows = allRows.concat(data ?? []);
+
+    // A short page means we've hit the end of the result set.
+    if (!data || data.length < PAGE_SIZE) break;
+
+    from += PAGE_SIZE;
+  }
 
   const byTeam = {};
-  for (const row of data ?? []) {
+  for (const row of allRows) {
     const t = (byTeam[row.team_id] ??= { team_id: row.team_id, w: 0, l: 0, rating: null, change: null });
     t.w += row.w ?? 0;
     t.l += row.l ?? 0;

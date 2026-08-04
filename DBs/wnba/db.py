@@ -55,15 +55,29 @@ CREATE UNIQUE INDEX IF NOT EXISTS idx_games_unique
 -- score literally cannot reach the rating math - there's no "0-0
 -- tie" failure mode possible, because there's no score column here
 -- to default to 0.
+--
+-- expected_win_home / expected_win_away / *_days_off / rest_adj are
+-- predictions from EloEngine.preview_matchup(), written by
+-- add_season.py right after rebuild_ratings() (see
+-- write_schedule_predictions() below). They are display-only: nothing
+-- in the rating engine ever reads them back, so a bad or stale
+-- prediction can't corrupt real ratings - worst case it's just a
+-- wrong pick shown on the site. NULL until the first prediction pass
+-- has run for that row.
 CREATE TABLE IF NOT EXISTS schedule (
-    schedule_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    date        TEXT NOT NULL,
-    season      INTEGER NOT NULL,
-    type        TEXT NOT NULL CHECK(type IN ('R','P')),
-    round       REAL,
-    home_team   TEXT NOT NULL REFERENCES teams(team_id),
-    away_team   TEXT NOT NULL REFERENCES teams(team_id),
-    neutral     INTEGER NOT NULL DEFAULT 0
+    schedule_id        INTEGER PRIMARY KEY AUTOINCREMENT,
+    date                TEXT NOT NULL,
+    season              INTEGER NOT NULL,
+    type                TEXT NOT NULL CHECK(type IN ('R','P')),
+    round               REAL,
+    home_team           TEXT NOT NULL REFERENCES teams(team_id),
+    away_team           TEXT NOT NULL REFERENCES teams(team_id),
+    neutral             INTEGER NOT NULL DEFAULT 0,
+    expected_win_home   REAL,
+    expected_win_away   REAL,
+    home_days_off       INTEGER,
+    away_days_off       INTEGER,
+    rest_adj            REAL
 );
 
 CREATE UNIQUE INDEX IF NOT EXISTS idx_schedule_unique
@@ -161,6 +175,19 @@ def _migrate(conn: sqlite3.Connection) -> None:
     if "neutral" not in cols:
         conn.execute("ALTER TABLE games ADD COLUMN neutral INTEGER NOT NULL DEFAULT 0")
         conn.commit()
+
+    schedule_cols = {row[1] for row in conn.execute("PRAGMA table_info(schedule)")}
+    new_schedule_cols = {
+        "expected_win_home": "REAL",
+        "expected_win_away": "REAL",
+        "home_days_off": "INTEGER",
+        "away_days_off": "INTEGER",
+        "rest_adj": "REAL",
+    }
+    for col, coltype in new_schedule_cols.items():
+        if col not in schedule_cols:
+            conn.execute(f"ALTER TABLE schedule ADD COLUMN {col} {coltype}")
+    conn.commit()
 
 
 def add_alias(conn: sqlite3.Connection, alias: str, team_id: str, note: str = "") -> None:
@@ -355,6 +382,21 @@ def upcoming_games(conn: sqlite3.Connection, season: int | None = None) -> list[
         d["date"] = datetime.fromisoformat(d["date"]).date()
         out.append(d)
     return out
+
+
+def save_schedule_prediction(conn: sqlite3.Connection, schedule_id: int,
+                              expected_win_home: float, expected_win_away: float,
+                              home_days_off: int | None, away_days_off: int | None,
+                              rest_adj: float | None) -> None:
+    """Write a preview_matchup() result back onto its schedule row.
+    Called from write_schedule_predictions() (add_season.py) for every
+    row returned by upcoming_games() after each rebuild_ratings() pass.
+    Display-only - never read by the rating engine itself."""
+    conn.execute(
+        "UPDATE schedule SET expected_win_home = ?, expected_win_away = ?, "
+        "home_days_off = ?, away_days_off = ?, rest_adj = ? WHERE schedule_id = ?",
+        (expected_win_home, expected_win_away, home_days_off, away_days_off, rest_adj, schedule_id),
+    )
 
 
 def prune_played_schedule_rows(conn: sqlite3.Connection) -> int:

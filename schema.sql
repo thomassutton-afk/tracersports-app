@@ -90,6 +90,39 @@ CREATE TABLE IF NOT EXISTS games (
 CREATE UNIQUE INDEX IF NOT EXISTS idx_games_natural_key
     ON games (league, season, variant, team_id, date, opponent_id, home_away, type, (COALESCE(round, '')));
 
+-- Upcoming (unplayed) games with Elo's predicted winner. Mirrors games'
+-- one-row-per-team-per-game shape (rather than SQLite's one-row-per-game
+-- shape) deliberately, so GamesPanel.jsx can query/render both tables
+-- with the same per-team logic it already has. expected_win_pct here is
+-- ALWAYS this row's team_id's own predicted win probability (i.e. the
+-- home row's expected_win_pct + the away row's expected_win_pct sum to
+-- 1.0), same convention as games.expected_win_pct. No points_for/against/
+-- result/rating_change columns at all — those genuinely don't exist yet
+-- for an unplayed game, unlike games where they're always populated.
+CREATE TABLE IF NOT EXISTS schedule (
+    league              TEXT    NOT NULL,
+    variant             TEXT    NOT NULL,
+    team_id             TEXT    NOT NULL,
+    date                DATE    NOT NULL,
+    season              INTEGER NOT NULL,
+    type                TEXT    NOT NULL,
+    round               TEXT    NOT NULL,
+    opponent_id         TEXT    NOT NULL,
+    home_away           TEXT    NOT NULL,
+    neutral             INTEGER NOT NULL DEFAULT 0,
+    expected_win_pct    FLOAT,
+    days_off            INTEGER,
+    opp_days_off        INTEGER,
+    rest_diff           INTEGER,
+    rest_adj            FLOAT,
+    PRIMARY KEY (league, variant, team_id, date, opponent_id, type, (COALESCE(round, ''))),
+    FOREIGN KEY (league, team_id)     REFERENCES teams(league, team_id),
+    FOREIGN KEY (league, opponent_id) REFERENCES teams(league, team_id)
+);
+
+ALTER TABLE schedule ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Public read access" ON schedule FOR SELECT USING (true);
+
 CREATE TABLE IF NOT EXISTS standings (
     league              TEXT    NOT NULL,
     season              INTEGER NOT NULL,
@@ -116,6 +149,7 @@ CREATE TABLE IF NOT EXISTS standings (
 );
 
 CREATE INDEX IF NOT EXISTS idx_games_league_season_variant     ON games (league, season, variant);
+CREATE INDEX IF NOT EXISTS idx_schedule_league_season_variant  ON schedule (league, season, variant);
 CREATE INDEX IF NOT EXISTS idx_standings_league_season_variant ON standings (league, season, variant);
 CREATE INDEX IF NOT EXISTS idx_preseason_league_season_variant ON preseason_ratings (league, season, variant);
 CREATE INDEX IF NOT EXISTS idx_teams_sport                     ON teams (sport);
