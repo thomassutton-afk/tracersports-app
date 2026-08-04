@@ -46,6 +46,7 @@ from pathlib import Path
 import pandas as pd
 import db
 from rebuild import rebuild_ratings, standings, sanity_checks
+from predict import build_current_engine
 
 DB_PATH = "wnba_elo.db"
 
@@ -220,6 +221,37 @@ def load_file(conn, path: str) -> tuple[dict, set[int], set[str]]:
             seasons, new_teams)
 
 
+def write_schedule_predictions(conn) -> int:
+    """Run every upcoming (unplayed) game through preview_matchup(),
+    using a freshly-rebuilt live engine state, and write the results
+    onto their `schedule` rows. Called right after rebuild_ratings()
+    so predictions always reflect the latest ratings. Display-only -
+    the rating engine itself never reads these back, and nothing here
+    mutates `games` or `ratings`. Returns the number of schedule rows
+    updated."""
+    eng = build_current_engine(conn)
+    upcoming = db.upcoming_games(conn)
+    for g in upcoming:
+        p = eng.preview_matchup(
+            home_team=g["home_team"], away_team=g["away_team"], game_date=g["date"],
+            season=g["season"], type_=g["type"], round_=g["round"], neutral=bool(g["neutral"]),
+        )
+        db.save_schedule_prediction(
+            conn,
+            schedule_id=g["schedule_id"],
+            expected_win_home=p["expected_win_home"],
+            expected_win_away=p["expected_win_away"],
+            home_days_off=p["days_off_home"],
+            away_days_off=p["days_off_away"],
+            # rest_adj_home and rest_adj_away are always exact negatives
+            # of each other (the +/-16 clamp is symmetric both ways), so
+            # storing rest_adj_home alone is sufficient - see schema.
+            rest_adj=p["rest_adj_home"],
+        )
+    conn.commit()
+    return len(upcoming)
+
+
 def main():
     if len(sys.argv) != 2:
         print("Usage: python3 add_season.py /path/to/file.xlsx")
@@ -246,6 +278,10 @@ def main():
 
     rebuild_ratings(conn)
     print("Ratings rebuilt for the full history.\n")
+
+    num_predictions = write_schedule_predictions(conn)
+    if num_predictions:
+        print(f"Updated Elo predictions for {num_predictions} upcoming game(s).\n")
 
     warnings = sanity_checks(conn, seasons)
     if warnings:

@@ -241,6 +241,69 @@ def build_preseason_ratings(games_rows):
     ]
 
 
+SCHEDULE_COLUMNS = [
+    "league", "variant", "team_id", "date", "season", "type", "round",
+    "opponent_id", "home_away", "neutral", "expected_win_pct", "days_off",
+    "opp_days_off", "rest_diff", "rest_adj",
+]
+
+
+def build_schedule(conn, league, id_to_code):
+    """
+    Reads the local `schedule` table (unplayed games with Elo's
+    predictions, if write_schedule_predictions() has run for them) and
+    expands each row into two Supabase rows - one per team - mirroring
+    games' one-row-per-team-per-game shape so GamesPanel.jsx can reuse
+    the same per-team rendering logic for both tables.
+
+    expected_win_pct is always THIS row's team_id's own win probability
+    (home row + away row sum to 1.0), matching games.expected_win_pct's
+    convention. rest_adj is stored once per local schedule row (the
+    home team's value); the away row's is that value negated, since
+    preview_matchup()'s +/-16 clamp is symmetric both ways - see
+    db.py's write_schedule_predictions() docstring.
+    """
+    cur = conn.cursor()
+    cur.execute(
+        "SELECT date, season, type, round, home_team, away_team, neutral, "
+        "expected_win_home, expected_win_away, home_days_off, away_days_off, rest_adj "
+        "FROM schedule"
+    )
+    cols = [d[0] for d in cur.description]
+    rows = []
+    for raw in cur.fetchall():
+        r = dict(zip(cols, raw))
+        home_code = id_to_code.get(r["home_team"], (r["home_team"], None))[0]
+        away_code = id_to_code.get(r["away_team"], (r["away_team"], None))[0]
+
+        rest_diff = (
+            None
+            if r["home_days_off"] is None or r["away_days_off"] is None
+            else r["home_days_off"] - r["away_days_off"]
+        )
+        home_rest_adj = r["rest_adj"]
+        away_rest_adj = None if home_rest_adj is None else -home_rest_adj
+
+        base = dict(
+            league=league, variant=VARIANT, date=r["date"], season=r["season"],
+            type=r["type"], round=r["round"], neutral=r["neutral"],
+        )
+        rows.append(dict(
+            base, team_id=home_code, opponent_id=away_code, home_away="H",
+            expected_win_pct=r["expected_win_home"],
+            days_off=r["home_days_off"], opp_days_off=r["away_days_off"],
+            rest_diff=rest_diff, rest_adj=home_rest_adj,
+        ))
+        rows.append(dict(
+            base, team_id=away_code, opponent_id=home_code, home_away="A",
+            expected_win_pct=r["expected_win_away"],
+            days_off=r["away_days_off"], opp_days_off=r["home_days_off"],
+            rest_diff=None if rest_diff is None else -rest_diff,
+            rest_adj=away_rest_adj,
+        ))
+    return rows
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--league", required=True, choices=list(SPORT_FOR_LEAGUE))
@@ -253,6 +316,7 @@ def main():
     teams_rows = build_teams(conn, args.league, id_to_code)
     games_rows = build_games(conn, args.league, id_to_code)
     preseason_rows = build_preseason_ratings(games_rows)
+    schedule_rows = build_schedule(conn, args.league, id_to_code)
     conn.close()
 
     print(f"League: {args.league}")
@@ -261,6 +325,8 @@ def main():
           f"{sum(1 for t in teams_rows if not t['active'])} historical)")
     print(f"  games:              {len(games_rows)} rows")
     print(f"  preseason_ratings:  {len(preseason_rows)} rows")
+    print(f"  schedule:           {len(schedule_rows)} rows "
+          f"({len(schedule_rows) // 2} upcoming game(s))")
     print()
     print("Sample team rows:")
     for t in teams_rows[:5]:
@@ -269,15 +335,19 @@ def main():
     print("Sample game rows:")
     for g in games_rows[:2]:
         print(" ", g)
+    print()
+    print("Sample schedule rows:")
+    for s in schedule_rows[:2]:
+        print(" ", s)
 
     if args.dry_run:
         print("\n[dry run] No Supabase connection made, nothing written.")
         return
 
-    write_to_supabase(teams_rows, games_rows, preseason_rows)
+    write_to_supabase(args.league, teams_rows, games_rows, preseason_rows, schedule_rows)
 
 
-def write_to_supabase(teams_rows, games_rows, preseason_rows):
+def write_to_supabase(league, teams_rows, games_rows, preseason_rows, schedule_rows):
     import psycopg2
     from psycopg2.extras import execute_values
 
@@ -358,6 +428,40 @@ def write_to_supabase(teams_rows, games_rows, preseason_rows):
         ],
     )
     print(f"Wrote {len(preseason_rows)} preseason rating rows.")
+
+    # `schedule` needs a full sync, not just an insert: unlike `games`
+    # (immutable once played), a schedule row's prediction changes every
+    # time ratings update, AND rows disappear entirely from the local
+    # `schedule` table the moment their game gets a real score (see
+    # prune_played_schedule_rows() in db.py). If we only upserted here,
+    # an already-played game's last prediction would linger in Supabase
+    # forever alongside its now-real result in `games`. So: always
+    # delete anything for this league+variant first (even if there are
+    # zero upcoming games locally right now - that's a valid state,
+    # e.g. end of season, and Supabase should reflect it), then upsert
+    # the current set.
+    cur.execute(
+        "DELETE FROM schedule WHERE league = %s AND variant = %s",
+        (league, VARIANT),
+    )
+    if schedule_rows:
+        execute_values(
+            cur,
+            f"""
+            INSERT INTO schedule ({', '.join(SCHEDULE_COLUMNS)})
+            VALUES %s
+            ON CONFLICT (league, variant, team_id, date, opponent_id, type, (COALESCE(round, '')))
+            DO UPDATE SET
+                expected_win_pct = EXCLUDED.expected_win_pct,
+                days_off = EXCLUDED.days_off,
+                opp_days_off = EXCLUDED.opp_days_off,
+                rest_diff = EXCLUDED.rest_diff,
+                rest_adj = EXCLUDED.rest_adj
+            """,
+            [tuple(s[c] for c in SCHEDULE_COLUMNS) for s in schedule_rows],
+        )
+    print(f"Synced {len(schedule_rows)} schedule rows "
+          f"({len(schedule_rows) // 2} upcoming game(s)).")
 
     conn.commit()
     cur.close()

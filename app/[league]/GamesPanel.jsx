@@ -57,6 +57,31 @@ function pairGameRows(rows) {
       round: row.round,
       type: row.type,
       ot: row.ot || false,
+      upcoming: false,
+    });
+  }
+  return games;
+}
+
+// Unplayed games from `schedule` - no score/rating-change columns exist
+// yet for these, unlike `games` where they're always populated. Mirrors
+// pairGameRows' per-team-row pairing, minus the fields that don't apply.
+function pairScheduleRows(rows) {
+  const seen = new Set();
+  const games = [];
+  for (const row of rows) {
+    if (row.home_away !== "H") continue;
+    const key = `${row.date}_${row.team_id}_${row.opponent_id}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    games.push({
+      date: row.date,
+      home: row.team_id,
+      away: row.opponent_id,
+      winProb: row.expected_win_pct,
+      round: row.round,
+      type: row.type,
+      upcoming: true,
     });
   }
   return games;
@@ -73,6 +98,20 @@ async function getGamesForDate(league, dateStr, season, variant) {
     .eq("variant", variant)
     .eq("date", dateStr);
   return pairGameRows(data || []);
+}
+
+// Fallback for a date with no played games yet - checks `schedule` for
+// upcoming (unplayed) games instead, so a future date shows Elo's pick
+// rather than just "No games on this date".
+async function getScheduledGamesForDate(league, dateStr, season, variant) {
+  const { data } = await supabase
+    .from("schedule")
+    .select("team_id,opponent_id,home_away,date,type,round,expected_win_pct")
+    .eq("league", league)
+    .eq("season", season)
+    .eq("variant", variant)
+    .eq("date", dateStr);
+  return pairScheduleRows(data || []);
 }
 
 async function getLatestGameDate(league, season, variant) {
@@ -114,8 +153,17 @@ export default function GamesPanel({ league, season, variant, leagueConfig }) {
     setLoading(true);
     getGamesForDate(league, selectedDate, season, variant).then((rows) => {
       if (cancelled) return;
-      setGames(rows);
-      setLoading(false);
+      if (rows.length > 0) {
+        setGames(rows);
+        setLoading(false);
+        return;
+      }
+      // No played games this date yet - see if any are on the schedule.
+      getScheduledGamesForDate(league, selectedDate, season, variant).then((upcoming) => {
+        if (cancelled) return;
+        setGames(upcoming);
+        setLoading(false);
+      });
     });
     return () => {
       cancelled = true;
@@ -172,6 +220,48 @@ export default function GamesPanel({ league, season, variant, leagueConfig }) {
       ) : (
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           {games.map((g, i) => {
+            if (g.upcoming) {
+              const homeTeam = leagueConfig.teams[g.home];
+              const awayTeam = leagueConfig.teams[g.away];
+              const homeFav = g.winProb != null && g.winProb >= 0.5;
+              const favPct = g.winProb != null ? Math.round(homeFav ? g.winProb * 100 : (1 - g.winProb) * 100) : null;
+              return (
+                <div key={i} style={{ background: "var(--surface)", border: "1px dashed var(--border2)", borderRadius: 10, padding: "10px 12px" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text3)" }}>
+                    <span>{formatDate(g.date)}</span>
+                    <span style={{ fontWeight: 700, letterSpacing: 0.5 }}>UPCOMING</span>
+                  </div>
+
+                  <div style={{ display: "flex", alignItems: "center", padding: "12px 0 8px" }}>
+                    <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 3 }}>
+                      <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text2)" }}>{g.away}</span>
+                    </div>
+
+                    {awayTeam && <TeamMark team={awayTeam} teamId={g.away} league={league} size={34} />}
+
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 3, padding: "0 8px", flexShrink: 0, minWidth: 44 }}>
+                      <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text3)" }}>@</span>
+                    </div>
+
+                    {homeTeam && <TeamMark team={homeTeam} teamId={g.home} league={league} size={34} />}
+
+                    <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 3 }}>
+                      <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text2)" }}>{g.home}</span>
+                    </div>
+                  </div>
+
+                  {favPct != null && (
+                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 4, borderTop: "1px solid var(--border)", marginTop: 2, paddingTop: 8, fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text2)" }}>
+                      <span>Elo&apos;s pick:</span>
+                      {!homeFav && <span style={{ color: "var(--acc)", fontSize: 10 }}>◀</span>}
+                      <strong>{homeFav ? g.home : g.away} {favPct}%</strong>
+                      {homeFav && <span style={{ color: "var(--acc)", fontSize: 10 }}>▶</span>}
+                    </div>
+                  )}
+                </div>
+              );
+            }
+
             const homeWon = g.homeScore > g.awayScore;
             const isPlayoff = g.type === "P";
             const homeTeam = leagueConfig.teams[g.home];

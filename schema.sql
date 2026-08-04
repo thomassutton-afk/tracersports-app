@@ -115,10 +115,17 @@ CREATE TABLE IF NOT EXISTS schedule (
     opp_days_off        INTEGER,
     rest_diff           INTEGER,
     rest_adj            FLOAT,
-    PRIMARY KEY (league, variant, team_id, date, opponent_id, type, (COALESCE(round, ''))),
     FOREIGN KEY (league, team_id)     REFERENCES teams(league, team_id),
     FOREIGN KEY (league, opponent_id) REFERENCES teams(league, team_id)
 );
+
+-- Postgres PRIMARY KEY/UNIQUE table constraints only accept plain column
+-- names, not expressions - so the natural key (which needs COALESCE(round,
+-- '') to make every regular-season NULL round compare equal, same reason
+-- as idx_games_natural_key above) has to be a separate unique index, not
+-- inlined into a PRIMARY KEY clause.
+CREATE UNIQUE INDEX IF NOT EXISTS idx_schedule_natural_key
+    ON schedule (league, variant, team_id, date, opponent_id, type, (COALESCE(round, '')));
 
 ALTER TABLE schedule ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "Public read access" ON schedule FOR SELECT USING (true);
