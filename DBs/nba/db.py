@@ -1,8 +1,8 @@
-"""SQLite storage for the WNBA Echo Ratings model.
+"""SQLite storage for the NBA Elo model.
 
 TEAM IDENTITY MODEL
 --------------------
-`teams.team_id` is a permanent synthetic ID (e.g. "wnba_0001") assigned
+`teams.team_id` is a permanent synthetic ID (e.g. "nba_0001") assigned
 once to a franchise and never changed, regardless of relocations or
 rebrands. It carries no meaning of its own - it's just a stable peg for
 `games` and `ratings` to reference.
@@ -13,14 +13,16 @@ permanent ID via `resolve_team_id`. No single code is privileged as
 "the real one."
 
 `team_history` tracks which code/name a franchise used during which
-seasons, so you can ask "what was this team called in 1998?" vs "what
-is it called now?" even though both are the same team_id. `teams.team_name`
-remains a simple current-name fallback for convenience/older callers.
+seasons, so you can ask "what was this team called in 1996?" (Seattle
+SuperSonics) vs "in 2010?" (Oklahoma City Thunder) even though both are
+the same team_id. `teams.team_name` remains a simple current-name
+fallback for convenience/older callers.
 """
 from __future__ import annotations
 import sqlite3
 from datetime import date, datetime
 from pathlib import Path
+from typing import Optional
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS teams (
@@ -123,10 +125,10 @@ CREATE TABLE IF NOT EXISTS params (
     value TEXT NOT NULL
 );
 
--- Franchise relocations: maps a team code as it appears in a new
--- season's source file (e.g. "SAS") to the canonical team_id already
--- used in the database for that same continuous franchise (e.g.
--- "UTA"). Rating history carries through unaffected.
+-- Every code a franchise has ever used (current or historical) maps
+-- here to its permanent team_id. Loaders resolve raw source-file codes
+-- through this table; a code with no alias yet is treated as a brand
+-- new franchise (see register_new_team).
 CREATE TABLE IF NOT EXISTS team_aliases (
     alias      TEXT PRIMARY KEY,
     team_id    TEXT NOT NULL REFERENCES teams(team_id),
@@ -190,6 +192,22 @@ def _migrate(conn: sqlite3.Connection) -> None:
     conn.commit()
 
 
+# --------------------------------------------------------------------
+# Franchise identity: synthetic IDs, aliases, era-scoped history
+# --------------------------------------------------------------------
+
+def next_team_id(conn: sqlite3.Connection) -> str:
+    """Generate the next sequential permanent franchise ID, e.g.
+    'nba_0001'. Once assigned, a team_id never changes - relocations
+    and rebrands are handled entirely through aliases/team_history."""
+    row = conn.execute(
+        "SELECT team_id FROM teams WHERE team_id LIKE 'nba\\_%' ESCAPE '\\' "
+        "ORDER BY team_id DESC LIMIT 1"
+    ).fetchone()
+    n = int(row[0].split("_")[1]) + 1 if row else 1
+    return f"nba_{n:04d}"
+
+
 def add_alias(conn: sqlite3.Connection, alias: str, team_id: str, note: str = "") -> None:
     """Register that `alias` (a team code as it appears in a source
     file) refers to the same franchise as the existing `team_id`."""
@@ -201,27 +219,16 @@ def add_alias(conn: sqlite3.Connection, alias: str, team_id: str, note: str = ""
 
 
 def resolve_team_id(conn: sqlite3.Connection, code: str) -> str:
-    """Translate a raw team code from a source file into its canonical
-    team_id, following any registered alias. Returns the code unchanged
-    if no alias exists."""
+    """Translate a raw team code from a source file into its permanent
+    team_id, following the registered alias. Returns the code unchanged
+    if no alias exists yet (caller should register one first - see
+    register_new_team)."""
     row = conn.execute("SELECT team_id FROM team_aliases WHERE alias = ?", (code,)).fetchone()
     return row[0] if row else code
 
 
-def next_team_id(conn: sqlite3.Connection) -> str:
-    """Generate the next sequential permanent franchise ID, e.g.
-    'wnba_0001'. Once assigned, a team_id never changes - relocations
-    and rebrands are handled entirely through aliases/team_history."""
-    row = conn.execute(
-        "SELECT team_id FROM teams WHERE team_id LIKE 'wnba\\_%' ESCAPE '\\' "
-        "ORDER BY team_id DESC LIMIT 1"
-    ).fetchone()
-    n = int(row[0].split("_")[1]) + 1 if row else 1
-    return f"wnba_{n:04d}"
-
-
 def add_team_history(conn: sqlite3.Connection, team_id: str, code: str, name: str,
-                      start_season: int, end_season: int | None = None) -> None:
+                      start_season: int, end_season: Optional[int] = None) -> None:
     conn.execute(
         "INSERT INTO team_history(team_id, code, name, start_season, end_season) "
         "VALUES (?, ?, ?, ?, ?)",
@@ -268,10 +275,10 @@ def rename_current_history(conn: sqlite3.Connection, team_id: str, name: str) ->
 
 
 def display_name(conn: sqlite3.Connection, team_id: str, season: int) -> str:
-    """The name a franchise went by during `season` - e.g. its 1998
-    name vs. its current name, even for the same team_id. Falls back
-    to teams.team_name if no era-specific history row covers that
-    season yet."""
+    """The name a franchise went by during `season` - e.g. 'Seattle
+    SuperSonics' for a given team_id in 1996, 'Oklahoma City Thunder'
+    for the same team_id in 2010. Falls back to teams.team_name if no
+    era-specific history row covers that season yet."""
     row = conn.execute(
         "SELECT name FROM team_history WHERE team_id = ? AND start_season <= ? "
         "AND (end_season IS NULL OR end_season >= ?)",
@@ -302,7 +309,7 @@ def load_resets(conn: sqlite3.Connection) -> set[tuple[str, int]]:
 
 PARAMS_FILE = "active_params.json"
 # Active (tuned) parameters live in this file, deliberately SEPARATE
-# from the database, so deleting/resetting wnba_elo.db can never
+# from the database, so deleting/resetting nba_elo.db can never
 # silently wipe out tuning. If you genuinely want to go back to the
 # original values, use `python3 set_params.py reset` (or delete this
 # file directly) rather than deleting the database.
