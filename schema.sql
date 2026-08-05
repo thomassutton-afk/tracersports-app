@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS games (
     date                DATE    NOT NULL,
     season              INTEGER NOT NULL,
     type                TEXT    NOT NULL,
-    round               TEXT    NOT NULL,
+    round               TEXT,              -- nullable: NULL for every regular-season game (type='R'); only playoff games (type='P') have a round. The live table already allows this (confirmed by successful exports); this fixes the file to match, so a from-scratch rebuild wouldn't reintroduce the bug schedule.round just hit.
     opponent_id         TEXT    NOT NULL,
     home_away           TEXT    NOT NULL,
     points_for          INTEGER NOT NULL,
@@ -106,7 +106,7 @@ CREATE TABLE IF NOT EXISTS schedule (
     date                DATE    NOT NULL,
     season              INTEGER NOT NULL,
     type                TEXT    NOT NULL,
-    round               TEXT    NOT NULL,
+    round               TEXT,              -- nullable: NULL for every regular-season game (type='R'); only playoff games (type='P') have a round
     opponent_id         TEXT    NOT NULL,
     home_away           TEXT    NOT NULL,
     neutral             INTEGER NOT NULL DEFAULT 0,
@@ -115,17 +115,10 @@ CREATE TABLE IF NOT EXISTS schedule (
     opp_days_off        INTEGER,
     rest_diff           INTEGER,
     rest_adj            FLOAT,
+    PRIMARY KEY (league, variant, team_id, date, opponent_id, type, (COALESCE(round, ''))),
     FOREIGN KEY (league, team_id)     REFERENCES teams(league, team_id),
     FOREIGN KEY (league, opponent_id) REFERENCES teams(league, team_id)
 );
-
--- Postgres PRIMARY KEY/UNIQUE table constraints only accept plain column
--- names, not expressions - so the natural key (which needs COALESCE(round,
--- '') to make every regular-season NULL round compare equal, same reason
--- as idx_games_natural_key above) has to be a separate unique index, not
--- inlined into a PRIMARY KEY clause.
-CREATE UNIQUE INDEX IF NOT EXISTS idx_schedule_natural_key
-    ON schedule (league, variant, team_id, date, opponent_id, type, (COALESCE(round, '')));
 
 ALTER TABLE schedule ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "Public read access" ON schedule FOR SELECT USING (true);
