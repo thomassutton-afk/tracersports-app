@@ -25,6 +25,7 @@ import { supabase } from "@/lib/supabase";
 import TeamMark from "./TeamMark";
 import StandingsTab from "./StandingsTab";
 import GamesPanel from "./GamesPanel";
+import SeasonProjection from "./SeasonProjection";
 
 const TABS = [
   { id: "rankings", label: "Power Rankings" },
@@ -266,6 +267,8 @@ export default function LeaguePage() {
                 })}
               </tbody>
             </table>
+
+            <SeasonProjection league={league} season={CURRENT_SEASON} variant={variant} leagueConfig={leagueConfig} />
           </div>
 
           <GamesPanel league={league} season={CURRENT_SEASON} variant={variant} leagueConfig={leagueConfig} />
