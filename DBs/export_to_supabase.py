@@ -419,7 +419,8 @@ def write_to_supabase(teams_rows, games_rows, schedule_rows, preseason_rows, lea
         f"""
         INSERT INTO games ({', '.join(GAMES_COLUMNS)}, league, variant)
         VALUES %s
-        ON CONFLICT (game_id, league, variant, team_id) DO NOTHING
+        ON CONFLICT (league, season, variant, team_id, date, opponent_id, home_away, type, (COALESCE(round, '')))
+        DO NOTHING
         """,
         [
             tuple(g[c] for c in GAMES_COLUMNS) + (g["league"], g["variant"])
