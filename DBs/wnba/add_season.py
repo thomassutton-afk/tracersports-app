@@ -28,7 +28,11 @@ It will:
      the same file is always safe).
   3. Route unplayed games to `schedule` (see above).
   4. Rebuild the full ratings history so everything stays consistent.
-  5. Run a handful of sanity checks and print a standings summary.
+  5. Recompute Elo's predicted winner for every still-upcoming game in
+     `schedule`, using the freshly-rebuilt ratings (see
+     write_schedule_predictions() below) - so picks always reflect
+     today's results, not yesterday's.
+  6. Run a handful of sanity checks and print a standings summary.
 
 Naming a new team:
     New teams get registered with team_name == team_id's original code
@@ -45,8 +49,8 @@ import sys
 from pathlib import Path
 import pandas as pd
 import db
+import predict
 from rebuild import rebuild_ratings, standings, sanity_checks
-from predict import build_current_engine
 
 DB_PATH = "wnba_elo.db"
 
@@ -222,14 +226,26 @@ def load_file(conn, path: str) -> tuple[dict, set[int], set[str]]:
 
 
 def write_schedule_predictions(conn) -> int:
-    """Run every upcoming (unplayed) game through preview_matchup(),
-    using a freshly-rebuilt live engine state, and write the results
-    onto their `schedule` rows. Called right after rebuild_ratings()
-    so predictions always reflect the latest ratings. Display-only -
-    the rating engine itself never reads these back, and nothing here
-    mutates `games` or `ratings`. Returns the number of schedule rows
-    updated."""
-    eng = build_current_engine(conn)
+    """Recompute Elo's pick for every still-upcoming game in `schedule`
+    and write it back onto that row, using whatever ratings are
+    current as of the games `rebuild_ratings()` just processed.
+
+    Deliberately called AFTER rebuild_ratings() in main(), never
+    before - a prediction made against stale ratings would be
+    actively wrong, not just outdated. Purely additive/read-only
+    against `games` and the rating engine: only ever writes to
+    `schedule`'s prediction columns via db.save_schedule_prediction(),
+    so a bug here cannot corrupt real results or ratings, at worst it
+    shows a wrong pick on the site.
+
+    Reuses predict.py's build_current_engine() (replay real games to
+    get each team's live state) rather than re-implementing it - see
+    predict.py's own docstring for why that function is safe to reuse
+    here: it's already read-only and takes no arguments besides conn.
+
+    Returns the number of upcoming games a prediction was written for.
+    """
+    eng = predict.build_current_engine(conn)
     upcoming = db.upcoming_games(conn)
     for g in upcoming:
         p = eng.preview_matchup(
@@ -237,15 +253,15 @@ def write_schedule_predictions(conn) -> int:
             season=g["season"], type_=g["type"], round_=g["round"], neutral=bool(g["neutral"]),
         )
         db.save_schedule_prediction(
-            conn,
-            schedule_id=g["schedule_id"],
+            conn, g["schedule_id"],
             expected_win_home=p["expected_win_home"],
             expected_win_away=p["expected_win_away"],
             home_days_off=p["days_off_home"],
             away_days_off=p["days_off_away"],
-            # rest_adj_home and rest_adj_away are always exact negatives
-            # of each other (the +/-16 clamp is symmetric both ways), so
-            # storing rest_adj_home alone is sufficient - see schema.
+            # Engine's clamp is symmetric (±16 both sides), so
+            # rest_adj_away is always exactly -rest_adj_home - only
+            # the home value needs to be stored. See schema note in
+            # db.py's SCHEMA docstring for the `schedule` table.
             rest_adj=p["rest_adj_home"],
         )
     conn.commit()
@@ -279,9 +295,9 @@ def main():
     rebuild_ratings(conn)
     print("Ratings rebuilt for the full history.\n")
 
-    num_predictions = write_schedule_predictions(conn)
-    if num_predictions:
-        print(f"Updated Elo predictions for {num_predictions} upcoming game(s).\n")
+    n_predicted = write_schedule_predictions(conn)
+    if n_predicted:
+        print(f"Updated Elo predictions for {n_predicted} upcoming game(s) in the schedule.\n")
 
     warnings = sanity_checks(conn, seasons)
     if warnings:

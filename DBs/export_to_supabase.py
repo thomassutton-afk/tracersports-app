@@ -20,21 +20,29 @@ for what it should contain):
 
 WHAT THIS DOES
 --------------
-1. teams        — resolves each opaque team_id (e.g. "nba_0003") to its
-                   CURRENT 3-letter code and full name, using team_history
-                   (the row with end_season IS NULL is "current"). Marks a
-                   team `active` if that current code appears in this
-                   league's live site config (lib/sports/{league}/config.js)
-                   — i.e. it's a team the site actually displays today.
-2. games         — one row per team per game, copied from the `ratings`
-                   table, with team/opponent remapped from opaque IDs to
-                   current codes. Tagged variant='continelo' (Echo) only —
-                   see note below.
-3. preseason_ratings — APPROXIMATED as each team's `pre_rate` from its
-                   first chronological game of a season. This isn't
-                   necessarily identical to a true "preseason" figure if
-                   the source system computes one separately — flagged as
-                   an approximation, not verified against source intent.
+1. teams              — resolves each opaque team_id (e.g. "nba_0003") to its
+                         CURRENT 3-letter code and full name, using team_history
+                         (the row with end_season IS NULL is "current"). Marks a
+                         team `active` if that current code appears in this
+                         league's live site config (lib/sports/{league}/config.js)
+                         — i.e. it's a team the site actually displays today.
+2. games               — one row per team per game, copied from the `ratings`
+                         table, with team/opponent remapped from opaque IDs to
+                         current codes. Tagged variant='continelo' (Echo) only —
+                         see note below.
+3. schedule            — one row per team per UPCOMING (unplayed) game, copied
+                         from the `schedule` table, including Elo's predicted
+                         win probability for each side (written by
+                         add_season.py's write_schedule_predictions(), NOT
+                         computed here — this export just moves it over).
+                         Fully replaced on every run (delete-then-insert per
+                         league/variant, not upserted) — see build_schedule()
+                         docstring for why an upsert alone isn't enough here.
+4. preseason_ratings   — APPROXIMATED as each team's `pre_rate` from its
+                         first chronological game of a season. This isn't
+                         necessarily identical to a true "preseason" figure if
+                         the source system computes one separately — flagged as
+                         an approximation, not verified against source intent.
 
 WHAT THIS DOES NOT DO YET
 --------------------------
@@ -52,7 +60,6 @@ WHAT THIS DOES NOT DO YET
   comes from lib/sports/{league}/config.js at render time, not the
   database — this export only needs to satisfy the FK from games/standings.
 """
-
 import argparse
 import os
 import sqlite3
@@ -132,10 +139,10 @@ def build_teams(conn, league, id_to_code):
                 "team_id": code,
                 "sport": sport,
                 "full_name": full_name,
-                "city": None,  # comes from config.js at render time
-                "nickname": None,  # comes from config.js at render time
-                "conference": None,  # intentional — see module docstring
-                "division": None,  # intentional — see module docstring
+                "city": None,          # comes from config.js at render time
+                "nickname": None,      # comes from config.js at render time
+                "conference": None,    # intentional — see module docstring
+                "division": None,      # intentional — see module docstring
                 "active": code in active_set,
             }
         )
@@ -216,6 +223,80 @@ def build_games(conn, league, id_to_code):
     return rows
 
 
+SCHEDULE_COLUMNS = [
+    "team_id", "date", "season", "type", "round", "opponent_id", "home_away",
+    "neutral", "expected_win_pct", "days_off", "opp_days_off", "rest_diff", "rest_adj",
+]
+
+
+def build_schedule(conn, league, id_to_code):
+    """
+    Mirrors build_games(), but reads from `schedule` (upcoming, unplayed
+    games, with Elo's prediction already written onto them by
+    add_season.py's write_schedule_predictions()) instead of `ratings`.
+    Two rows per game — home + away perspective — same convention as
+    build_games(), so GamesPanel.jsx can render both with shared logic.
+
+    Unlike games (which only ever grows, so an upsert is safe), a game
+    can DISAPPEAR from the local `schedule` table entirely once it's
+    played (add_season.py's prune_played_schedule_rows() deletes it).
+    An upsert alone can't express "this row shouldn't exist anymore" —
+    it only knows how to insert or update, never remove. So the caller
+    (write_to_supabase()) deletes this league/variant's existing
+    schedule rows before inserting this run's fresh set, rather than
+    upserting. `schedule` is small (a handful of upcoming games at any
+    time) and fully recomputed every run, so a full replace is cheap
+    and simpler than trying to diff out exactly which rows to remove.
+    """
+    cur = conn.cursor()
+    cur.execute(
+        "SELECT schedule_id, date, season, type, round, home_team, away_team, "
+        "neutral, expected_win_home, expected_win_away, home_days_off, "
+        "away_days_off, rest_adj FROM schedule"
+    )
+    cols = [d[0] for d in cur.description]
+    rows = []
+    for raw in cur.fetchall():
+        r = dict(zip(cols, raw))
+        home_code = id_to_code.get(r["home_team"], (r["home_team"], None))[0]
+        away_code = id_to_code.get(r["away_team"], (r["away_team"], None))[0]
+        round_ = None if r["round"] is None else str(r["round"])
+
+        home_days_off = r["home_days_off"]
+        away_days_off = r["away_days_off"]
+        rest_diff_home = (
+            None if home_days_off is None or away_days_off is None
+            else home_days_off - away_days_off
+        )
+        # Convention: the stored `rest_adj` column is always the HOME
+        # side's value. engine.py's clamp is symmetric (±16 both
+        # directions), so the away side's is always exactly its
+        # negation — see write_schedule_predictions() in add_season.py.
+        rest_adj_home = r["rest_adj"]
+        rest_adj_away = None if rest_adj_home is None else -rest_adj_home
+
+        base = dict(
+            league=league, variant=VARIANT, date=r["date"], season=r["season"],
+            type=r["type"], round=round_, neutral=r["neutral"],
+        )
+        rows.append({
+            **base,
+            "team_id": home_code, "opponent_id": away_code, "home_away": "H",
+            "expected_win_pct": r["expected_win_home"],
+            "days_off": home_days_off, "opp_days_off": away_days_off,
+            "rest_diff": rest_diff_home, "rest_adj": rest_adj_home,
+        })
+        rows.append({
+            **base,
+            "team_id": away_code, "opponent_id": home_code, "home_away": "A",
+            "expected_win_pct": r["expected_win_away"],
+            "days_off": away_days_off, "opp_days_off": home_days_off,
+            "rest_diff": None if rest_diff_home is None else -rest_diff_home,
+            "rest_adj": rest_adj_away,
+        })
+    return rows
+
+
 def build_preseason_ratings(games_rows):
     """
     APPROXIMATION: uses each team's earliest game of a season as a proxy
@@ -241,69 +322,6 @@ def build_preseason_ratings(games_rows):
     ]
 
 
-SCHEDULE_COLUMNS = [
-    "league", "variant", "team_id", "date", "season", "type", "round",
-    "opponent_id", "home_away", "neutral", "expected_win_pct", "days_off",
-    "opp_days_off", "rest_diff", "rest_adj",
-]
-
-
-def build_schedule(conn, league, id_to_code):
-    """
-    Reads the local `schedule` table (unplayed games with Elo's
-    predictions, if write_schedule_predictions() has run for them) and
-    expands each row into two Supabase rows - one per team - mirroring
-    games' one-row-per-team-per-game shape so GamesPanel.jsx can reuse
-    the same per-team rendering logic for both tables.
-
-    expected_win_pct is always THIS row's team_id's own win probability
-    (home row + away row sum to 1.0), matching games.expected_win_pct's
-    convention. rest_adj is stored once per local schedule row (the
-    home team's value); the away row's is that value negated, since
-    preview_matchup()'s +/-16 clamp is symmetric both ways - see
-    db.py's write_schedule_predictions() docstring.
-    """
-    cur = conn.cursor()
-    cur.execute(
-        "SELECT date, season, type, round, home_team, away_team, neutral, "
-        "expected_win_home, expected_win_away, home_days_off, away_days_off, rest_adj "
-        "FROM schedule"
-    )
-    cols = [d[0] for d in cur.description]
-    rows = []
-    for raw in cur.fetchall():
-        r = dict(zip(cols, raw))
-        home_code = id_to_code.get(r["home_team"], (r["home_team"], None))[0]
-        away_code = id_to_code.get(r["away_team"], (r["away_team"], None))[0]
-
-        rest_diff = (
-            None
-            if r["home_days_off"] is None or r["away_days_off"] is None
-            else r["home_days_off"] - r["away_days_off"]
-        )
-        home_rest_adj = r["rest_adj"]
-        away_rest_adj = None if home_rest_adj is None else -home_rest_adj
-
-        base = dict(
-            league=league, variant=VARIANT, date=r["date"], season=r["season"],
-            type=r["type"], round=r["round"], neutral=r["neutral"],
-        )
-        rows.append(dict(
-            base, team_id=home_code, opponent_id=away_code, home_away="H",
-            expected_win_pct=r["expected_win_home"],
-            days_off=r["home_days_off"], opp_days_off=r["away_days_off"],
-            rest_diff=rest_diff, rest_adj=home_rest_adj,
-        ))
-        rows.append(dict(
-            base, team_id=away_code, opponent_id=home_code, home_away="A",
-            expected_win_pct=r["expected_win_away"],
-            days_off=r["away_days_off"], opp_days_off=r["home_days_off"],
-            rest_diff=None if rest_diff is None else -rest_diff,
-            rest_adj=away_rest_adj,
-        ))
-    return rows
-
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--league", required=True, choices=list(SPORT_FOR_LEAGUE))
@@ -315,39 +333,43 @@ def main():
     id_to_code = resolve_current_codes(conn)
     teams_rows = build_teams(conn, args.league, id_to_code)
     games_rows = build_games(conn, args.league, id_to_code)
-    preseason_rows = build_preseason_ratings(games_rows)
     schedule_rows = build_schedule(conn, args.league, id_to_code)
+    preseason_rows = build_preseason_ratings(games_rows)
     conn.close()
 
     print(f"League: {args.league}")
-    print(f"  teams:              {len(teams_rows)} rows "
+    print(f"  teams: {len(teams_rows)} rows "
           f"({sum(1 for t in teams_rows if t['active'])} active, "
           f"{sum(1 for t in teams_rows if not t['active'])} historical)")
-    print(f"  games:              {len(games_rows)} rows")
-    print(f"  preseason_ratings:  {len(preseason_rows)} rows")
-    print(f"  schedule:           {len(schedule_rows)} rows "
+    print(f"  games: {len(games_rows)} rows")
+    print(f"  schedule: {len(schedule_rows)} rows "
           f"({len(schedule_rows) // 2} upcoming game(s))")
+    print(f"  preseason_ratings: {len(preseason_rows)} rows")
     print()
+
     print("Sample team rows:")
     for t in teams_rows[:5]:
-        print(" ", t)
+        print("  ", t)
     print()
+
     print("Sample game rows:")
     for g in games_rows[:2]:
-        print(" ", g)
+        print("  ", g)
     print()
-    print("Sample schedule rows:")
-    for s in schedule_rows[:2]:
-        print(" ", s)
+
+    if schedule_rows:
+        print("Sample schedule rows:")
+        for s in schedule_rows[:2]:
+            print("  ", s)
 
     if args.dry_run:
         print("\n[dry run] No Supabase connection made, nothing written.")
         return
 
-    write_to_supabase(args.league, teams_rows, games_rows, preseason_rows, schedule_rows)
+    write_to_supabase(teams_rows, games_rows, schedule_rows, preseason_rows, args.league)
 
 
-def write_to_supabase(league, teams_rows, games_rows, preseason_rows, schedule_rows):
+def write_to_supabase(teams_rows, games_rows, schedule_rows, preseason_rows, league):
     import psycopg2
     from psycopg2.extras import execute_values
 
@@ -397,15 +419,7 @@ def write_to_supabase(league, teams_rows, games_rows, preseason_rows, schedule_r
         f"""
         INSERT INTO games ({', '.join(GAMES_COLUMNS)}, league, variant)
         VALUES %s
-        -- Conflict target is a stable natural key, not game_id. game_id
-        -- comes from SQLite's AUTOINCREMENT and gets reassigned if the
-        -- local `games` table is ever rebuilt from scratch (e.g. a full
-        -- re-import from Results files) - two exports done before/after
-        -- such a rebuild would otherwise insert every game twice under
-        -- different game_ids. This natural key can't drift like that.
-        -- Must exactly match idx_games_natural_key in schema.sql.
-        ON CONFLICT (league, season, variant, team_id, date, opponent_id, home_away, type, (COALESCE(round, '')))
-        DO NOTHING
+        ON CONFLICT (game_id, league, variant, team_id) DO NOTHING
         """,
         [
             tuple(g[c] for c in GAMES_COLUMNS) + (g["league"], g["variant"])
@@ -413,6 +427,25 @@ def write_to_supabase(league, teams_rows, games_rows, preseason_rows, schedule_r
         ],
     )
     print(f"Wrote {len(games_rows)} game rows.")
+
+    # schedule is fully replaced, not upserted — see build_schedule()'s
+    # docstring for why an upsert alone can't handle a game leaving the
+    # schedule once it's been played.
+    cur.execute(
+        "DELETE FROM schedule WHERE league = %s AND variant = %s",
+        (league, VARIANT),
+    )
+    if schedule_rows:
+        execute_values(
+            cur,
+            f"INSERT INTO schedule ({', '.join(SCHEDULE_COLUMNS)}, league, variant) VALUES %s",
+            [
+                tuple(s[c] for c in SCHEDULE_COLUMNS) + (s["league"], s["variant"])
+                for s in schedule_rows
+            ],
+        )
+    print(f"Wrote {len(schedule_rows)} schedule rows "
+          f"(replaced this league/variant's prior schedule rows entirely).")
 
     execute_values(
         cur,
@@ -429,40 +462,6 @@ def write_to_supabase(league, teams_rows, games_rows, preseason_rows, schedule_r
     )
     print(f"Wrote {len(preseason_rows)} preseason rating rows.")
 
-    # `schedule` needs a full sync, not just an insert: unlike `games`
-    # (immutable once played), a schedule row's prediction changes every
-    # time ratings update, AND rows disappear entirely from the local
-    # `schedule` table the moment their game gets a real score (see
-    # prune_played_schedule_rows() in db.py). If we only upserted here,
-    # an already-played game's last prediction would linger in Supabase
-    # forever alongside its now-real result in `games`. So: always
-    # delete anything for this league+variant first (even if there are
-    # zero upcoming games locally right now - that's a valid state,
-    # e.g. end of season, and Supabase should reflect it), then upsert
-    # the current set.
-    cur.execute(
-        "DELETE FROM schedule WHERE league = %s AND variant = %s",
-        (league, VARIANT),
-    )
-    if schedule_rows:
-        execute_values(
-            cur,
-            f"""
-            INSERT INTO schedule ({', '.join(SCHEDULE_COLUMNS)})
-            VALUES %s
-            ON CONFLICT (league, variant, team_id, date, opponent_id, type, (COALESCE(round, '')))
-            DO UPDATE SET
-                expected_win_pct = EXCLUDED.expected_win_pct,
-                days_off = EXCLUDED.days_off,
-                opp_days_off = EXCLUDED.opp_days_off,
-                rest_diff = EXCLUDED.rest_diff,
-                rest_adj = EXCLUDED.rest_adj
-            """,
-            [tuple(s[c] for c in SCHEDULE_COLUMNS) for s in schedule_rows],
-        )
-    print(f"Synced {len(schedule_rows)} schedule rows "
-          f"({len(schedule_rows) // 2} upcoming game(s)).")
-
     conn.commit()
     cur.close()
     conn.close()
@@ -474,11 +473,11 @@ if __name__ == "__main__":
 
 # .env file this script expects for a real (non-dry-run) run:
 #
-#   SUPABASE_DB_HOST=db.xxxxxxxxxxxx.supabase.co
-#   SUPABASE_DB_PORT=5432
-#   SUPABASE_DB_NAME=postgres
-#   SUPABASE_DB_USER=postgres
-#   SUPABASE_DB_PASS=your_new_rotated_password
+# SUPABASE_DB_HOST=db.xxxxxxxxxxxx.supabase.co
+# SUPABASE_DB_PORT=5432
+# SUPABASE_DB_NAME=postgres
+# SUPABASE_DB_USER=postgres
+# SUPABASE_DB_PASS=your_new_rotated_password
 #
 # These come from the Supabase project's connection info — NOT your
 # Supabase account login. Load it with `pip install python-dotenv` and
