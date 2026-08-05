@@ -50,6 +50,7 @@ from pathlib import Path
 import pandas as pd
 import db
 import predict
+import simulate_season
 from rebuild import rebuild_ratings, standings, sanity_checks
 
 DB_PATH = "nba_elo.db"
@@ -268,6 +269,45 @@ def write_schedule_predictions(conn) -> int:
     return len(upcoming)
 
 
+def write_season_projection(conn, seasons) -> dict:
+    """Recompute the Monte Carlo season projection (simulate_season.py)
+    for every season touched by this file's run that still has
+    remaining (unplayed) regular-season games, and persist it to
+    `season_projections` for the export script to pick up next.
+
+    Called AFTER rebuild_ratings(), same reasoning as
+    write_schedule_predictions() above - a projection built from stale
+    ratings would be actively wrong. Read-only against `games`/ratings;
+    only ever writes to `season_projections`, so a bug here can't
+    corrupt real results, ratings, or the schedule/prediction data.
+
+    Reuses simulate_season.py's own run_simulation()/summarize() rather
+    than reimplementing them - same reasoning as reusing predict.py's
+    build_current_engine() for schedule predictions. Note this is
+    noticeably heavier than schedule predictions (1000 trials, each
+    deep-copying the full rating engine and replaying every remaining
+    game) - expect this to add real runtime to the daily update, not
+    just a negligible extra step.
+
+    Returns {season: team_count} for seasons a projection was written
+    for. A season with no remaining games (simulate_season returns
+    None) has any stale projection cleared instead, so an old snapshot
+    doesn't linger and look current once a season's actually over.
+    """
+    updated = {}
+    for season in seasons:
+        sim = simulate_season.run_simulation(conn, season, trials=1000)
+        if sim is None:
+            db.clear_season_projection(conn, season)
+            continue
+        summary_rows = simulate_season.summarize(sim, season)
+        db.save_season_projection(
+            conn, season, summary_rows, trials=1000, remaining_games=len(sim["remaining"])
+        )
+        updated[season] = len(summary_rows)
+    return updated
+
+
 def main():
     if len(sys.argv) != 2:
         print("Usage: python3 add_season.py /path/to/file.xlsx")
@@ -298,6 +338,12 @@ def main():
     n_predicted = write_schedule_predictions(conn)
     if n_predicted:
         print(f"Updated Elo predictions for {n_predicted} upcoming game(s) in the schedule.\n")
+
+    projection_updates = write_season_projection(conn, seasons)
+    for season, n_teams in projection_updates.items():
+        print(f"Updated season projection for {season}: {n_teams} team(s).")
+    if projection_updates:
+        print()
 
     warnings = sanity_checks(conn, seasons)
     if warnings:

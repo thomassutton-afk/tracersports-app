@@ -10,6 +10,7 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
 import TeamMark from "./TeamMark";
+import SeasonProjection from "./SeasonProjection";
 
 function shiftDate(dateStr, delta) {
   const [y, m, d] = dateStr.split("-").map(Number);
@@ -371,6 +372,8 @@ export default function GamesPanel({ league, season, variant, leagueConfig }) {
           })}
         </div>
       )}
+
+      <SeasonProjection league={league} season={season} variant={variant} leagueConfig={leagueConfig} />
     </div>
   );
 }

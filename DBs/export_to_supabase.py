@@ -297,6 +297,38 @@ def build_schedule(conn, league, id_to_code):
     return rows
 
 
+PROJECTION_COLUMNS = [
+    "season", "team_id", "avg_wins", "p10_wins", "median_wins", "p90_wins",
+    "avg_rating", "prob_finish_first", "trials", "remaining_games", "computed_at",
+]
+
+
+def build_season_projection(conn, league, id_to_code):
+    """
+    Reads the local season_projections table (written by add_season.py's
+    write_season_projection(), see that function's docstring) and remaps
+    team_id from opaque local IDs to current codes, same as build_games()
+    and build_schedule(). One row per team per season - already fully
+    replaced locally each time it's recomputed, so this just mirrors
+    whatever's currently there; a season with no remaining games has no
+    rows here at all (cleared locally once the season ends).
+    """
+    cur = conn.cursor()
+    cur.execute(f"SELECT {', '.join(PROJECTION_COLUMNS)} FROM season_projections")
+    cols = [d[0] for d in cur.description]
+    rows = []
+    for raw in cur.fetchall():
+        r = dict(zip(cols, raw))
+        code = id_to_code.get(r["team_id"], (r["team_id"], None))[0]
+        rows.append({
+            **{c: r[c] for c in PROJECTION_COLUMNS if c != "team_id"},
+            "team_id": code,
+            "league": league,
+            "variant": VARIANT,
+        })
+    return rows
+
+
 def build_preseason_ratings(games_rows):
     """
     APPROXIMATION: uses each team's earliest game of a season as a proxy
@@ -334,6 +366,7 @@ def main():
     teams_rows = build_teams(conn, args.league, id_to_code)
     games_rows = build_games(conn, args.league, id_to_code)
     schedule_rows = build_schedule(conn, args.league, id_to_code)
+    projection_rows = build_season_projection(conn, args.league, id_to_code)
     preseason_rows = build_preseason_ratings(games_rows)
     conn.close()
 
@@ -344,6 +377,7 @@ def main():
     print(f"  games: {len(games_rows)} rows")
     print(f"  schedule: {len(schedule_rows)} rows "
           f"({len(schedule_rows) // 2} upcoming game(s))")
+    print(f"  season_projections: {len(projection_rows)} rows")
     print(f"  preseason_ratings: {len(preseason_rows)} rows")
     print()
 
@@ -362,14 +396,21 @@ def main():
         for s in schedule_rows[:2]:
             print("  ", s)
 
+    if projection_rows:
+        print("Sample season projection rows:")
+        for p in projection_rows[:2]:
+            print("  ", p)
+
     if args.dry_run:
         print("\n[dry run] No Supabase connection made, nothing written.")
         return
 
-    write_to_supabase(teams_rows, games_rows, schedule_rows, preseason_rows, args.league)
+    write_to_supabase(teams_rows, games_rows, schedule_rows, projection_rows,
+                       preseason_rows, args.league)
 
 
-def write_to_supabase(teams_rows, games_rows, schedule_rows, preseason_rows, league):
+def write_to_supabase(teams_rows, games_rows, schedule_rows, projection_rows,
+                       preseason_rows, league):
     import psycopg2
     from psycopg2.extras import execute_values
 
@@ -447,6 +488,27 @@ def write_to_supabase(teams_rows, games_rows, schedule_rows, preseason_rows, lea
         )
     print(f"Wrote {len(schedule_rows)} schedule rows "
           f"(replaced this league/variant's prior schedule rows entirely).")
+
+    # season_projections is fully replaced too, same reasoning as
+    # schedule - a season that's ended locally has zero rows here, and
+    # that absence needs to actually delete the stale Supabase rows,
+    # not just leave last week's "final" projection sitting there
+    # looking current.
+    cur.execute(
+        "DELETE FROM season_projections WHERE league = %s AND variant = %s",
+        (league, VARIANT),
+    )
+    if projection_rows:
+        execute_values(
+            cur,
+            f"INSERT INTO season_projections ({', '.join(PROJECTION_COLUMNS)}, league, variant) VALUES %s",
+            [
+                tuple(p[c] for c in PROJECTION_COLUMNS) + (p["league"], p["variant"])
+                for p in projection_rows
+            ],
+        )
+    print(f"Wrote {len(projection_rows)} season projection rows "
+          f"(replaced this league/variant's prior projection rows entirely).")
 
     execute_values(
         cur,

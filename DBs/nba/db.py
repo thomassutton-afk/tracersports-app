@@ -85,6 +85,28 @@ CREATE TABLE IF NOT EXISTS schedule (
 CREATE UNIQUE INDEX IF NOT EXISTS idx_schedule_unique
     ON schedule(date, home_team, away_team, type, IFNULL(round, -1));
 
+-- Monte Carlo season projection (simulate_season.py), one row per team
+-- per season. Fully replaced each time it's recomputed (see
+-- save_season_projection below) - this is always a fresh snapshot from
+-- current ratings, never an incremental update, so there's no
+-- reasonable way to "diff" an old projection against a new one, and no
+-- reason to try. computed_at records when a given snapshot was made,
+-- mainly so the site can show "as of" freshness if useful later.
+CREATE TABLE IF NOT EXISTS season_projections (
+    season             INTEGER NOT NULL,
+    team_id            TEXT NOT NULL,
+    avg_wins           REAL,
+    p10_wins           INTEGER,
+    median_wins        INTEGER,
+    p90_wins           INTEGER,
+    avg_rating         REAL,
+    prob_finish_first  REAL,
+    trials             INTEGER,
+    remaining_games    INTEGER,
+    computed_at        TEXT,
+    PRIMARY KEY (season, team_id)
+);
+
 CREATE TABLE IF NOT EXISTS ratings (
     game_id       INTEGER NOT NULL REFERENCES games(game_id),
     team          TEXT NOT NULL,
@@ -404,6 +426,49 @@ def save_schedule_prediction(conn: sqlite3.Connection, schedule_id: int,
         "home_days_off = ?, away_days_off = ?, rest_adj = ? WHERE schedule_id = ?",
         (expected_win_home, expected_win_away, home_days_off, away_days_off, rest_adj, schedule_id),
     )
+
+
+def save_season_projection(conn: sqlite3.Connection, season: int, rows: list[dict],
+                            trials: int, remaining_games: int) -> None:
+    """Fully replace `season`'s projection with a freshly computed set.
+    Like schedule predictions, this is a snapshot recomputed from
+    scratch on every call, not an incremental update - delete-then-
+    insert is simpler and safer than trying to reconcile an old
+    snapshot against a new one. Called from write_season_projection()
+    (add_season.py) after every rebuild_ratings() pass, for every
+    season in this run that still has remaining games (see
+    clear_season_projection for what happens when a season ends)."""
+    from datetime import datetime, timezone
+    now = datetime.now(timezone.utc).isoformat()
+    conn.execute("DELETE FROM season_projections WHERE season = ?", (season,))
+    for r in rows:
+        conn.execute(
+            "INSERT INTO season_projections(season, team_id, avg_wins, p10_wins, "
+            "median_wins, p90_wins, avg_rating, prob_finish_first, trials, "
+            "remaining_games, computed_at) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+            (season, r["team"], r["avg_wins"], r["p10"], r["p50"], r["p90"],
+             r["avg_rating"], r["p_first"], trials, remaining_games, now),
+        )
+    conn.commit()
+
+
+def clear_season_projection(conn: sqlite3.Connection, season: int) -> None:
+    """Remove any projection rows for `season` - called when a season
+    has no remaining games left (simulate_season.run_simulation returns
+    None in that case), so a stale "final" projection from before the
+    season actually ended doesn't linger and look current."""
+    conn.execute("DELETE FROM season_projections WHERE season = ?", (season,))
+    conn.commit()
+
+
+def load_season_projection(conn: sqlite3.Connection, season: int) -> list[dict]:
+    cur = conn.execute(
+        "SELECT season, team_id, avg_wins, p10_wins, median_wins, p90_wins, "
+        "avg_rating, prob_finish_first, trials, remaining_games, computed_at "
+        "FROM season_projections WHERE season = ?", (season,)
+    )
+    cols = [d[0] for d in cur.description]
+    return [dict(zip(cols, row)) for row in cur.fetchall()]
 
 
 def prune_played_schedule_rows(conn: sqlite3.Connection) -> int:

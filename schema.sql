@@ -115,13 +115,48 @@ CREATE TABLE IF NOT EXISTS schedule (
     opp_days_off        INTEGER,
     rest_diff           INTEGER,
     rest_adj            FLOAT,
-    PRIMARY KEY (league, variant, team_id, date, opponent_id, type, (COALESCE(round, ''))),
     FOREIGN KEY (league, team_id)     REFERENCES teams(league, team_id),
     FOREIGN KEY (league, opponent_id) REFERENCES teams(league, team_id)
 );
 
+-- Postgres PRIMARY KEY/UNIQUE table constraints only accept plain column
+-- names, not expressions - so the natural key (which needs COALESCE(round,
+-- '') to make every regular-season NULL round compare equal, same reason
+-- as idx_games_natural_key above) has to be a separate unique index, not
+-- inlined into a PRIMARY KEY clause.
+CREATE UNIQUE INDEX IF NOT EXISTS idx_schedule_natural_key
+    ON schedule (league, variant, team_id, date, opponent_id, type, (COALESCE(round, '')));
+
 ALTER TABLE schedule ENABLE ROW LEVEL SECURITY;
 CREATE POLICY "Public read access" ON schedule FOR SELECT USING (true);
+
+-- Monte Carlo season projection (simulate_season.py), one row per team
+-- per season. Fully replaced on every export (delete-then-insert per
+-- league/variant, not upserted) - same reasoning as `schedule`: this is
+-- always a fresh snapshot from current ratings, and once a season ends
+-- the local season_projections table for that season is cleared
+-- entirely (see db.py's clear_season_projection), so a stale row here
+-- needs to actually disappear, not just stop being updated.
+CREATE TABLE IF NOT EXISTS season_projections (
+    league              TEXT    NOT NULL,
+    season              INTEGER NOT NULL,
+    variant             TEXT    NOT NULL,
+    team_id             TEXT    NOT NULL,
+    avg_wins            FLOAT,
+    p10_wins            INTEGER,
+    median_wins         INTEGER,
+    p90_wins            INTEGER,
+    avg_rating          FLOAT,
+    prob_finish_first   FLOAT,
+    trials              INTEGER,
+    remaining_games     INTEGER,
+    computed_at         TIMESTAMPTZ,
+    PRIMARY KEY (league, season, variant, team_id),
+    FOREIGN KEY (league, team_id) REFERENCES teams(league, team_id)
+);
+
+ALTER TABLE season_projections ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Public read access" ON season_projections FOR SELECT USING (true);
 
 CREATE TABLE IF NOT EXISTS standings (
     league              TEXT    NOT NULL,
@@ -150,6 +185,7 @@ CREATE TABLE IF NOT EXISTS standings (
 
 CREATE INDEX IF NOT EXISTS idx_games_league_season_variant     ON games (league, season, variant);
 CREATE INDEX IF NOT EXISTS idx_schedule_league_season_variant  ON schedule (league, season, variant);
+CREATE INDEX IF NOT EXISTS idx_projections_league_season_variant ON season_projections (league, season, variant);
 CREATE INDEX IF NOT EXISTS idx_standings_league_season_variant ON standings (league, season, variant);
 CREATE INDEX IF NOT EXISTS idx_preseason_league_season_variant ON preseason_ratings (league, season, variant);
 CREATE INDEX IF NOT EXISTS idx_teams_sport                     ON teams (sport);
