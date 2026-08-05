@@ -25,7 +25,6 @@ import { supabase } from "@/lib/supabase";
 import TeamMark from "./TeamMark";
 import StandingsTab from "./StandingsTab";
 import GamesPanel from "./GamesPanel";
-import SeasonProjection from "./SeasonProjection";
 
 const TABS = [
   { id: "rankings", label: "Power Rankings" },
@@ -81,6 +80,23 @@ async function fetchStandings(league, season, variant) {
   return { standings, error: null };
 }
 
+async function fetchProjection(league, season, variant) {
+  const { data, error } = await supabase
+    .from("season_projections")
+    .select("team_id, avg_wins, p10_wins, p90_wins, prob_finish_first, remaining_games")
+    .eq("league", league)
+    .eq("season", season)
+    .eq("variant", variant);
+
+  if (error) return { projByTeam: {}, error };
+
+  const projByTeam = {};
+  for (const row of data ?? []) {
+    projByTeam[row.team_id] = row;
+  }
+  return { projByTeam, error: null };
+}
+
 export default function LeaguePage() {
   const params = useParams();
   const searchParams = useSearchParams();
@@ -88,6 +104,7 @@ export default function LeaguePage() {
   const variant = searchParams.get("variant") || "continelo";
   const [activeTab, setActiveTab] = useState("rankings");
   const [standings, setStandings] = useState([]);
+  const [projByTeam, setProjByTeam] = useState({});
   const [loading, setLoading] = useState(true);
   const [fetchError, setFetchError] = useState(null);
 
@@ -102,9 +119,13 @@ export default function LeaguePage() {
   useEffect(() => {
     if (!leagueConfig) return;
     setLoading(true);
-    fetchStandings(league, CURRENT_SEASON, variant).then(({ standings, error }) => {
-      setStandings(standings);
-      setFetchError(error);
+    Promise.all([
+      fetchStandings(league, CURRENT_SEASON, variant),
+      fetchProjection(league, CURRENT_SEASON, variant),
+    ]).then(([standingsResult, projResult]) => {
+      setStandings(standingsResult.standings);
+      setFetchError(standingsResult.error);
+      setProjByTeam(projResult.projByTeam); // projection errors are non-fatal - table still renders, projection columns just show "—"
       setLoading(false);
     });
   }, [league, leagueConfig, variant]);
@@ -208,6 +229,9 @@ export default function LeaguePage() {
                   <th className="r" style={{ width: 90 }}>Strength</th>
                   <th className="r">Δ Last</th>
                   <th className="r">Record</th>
+                  <th className="r">Proj. W</th>
+                  <th className="r">10th–90th</th>
+                  <th className="r">P(1st)</th>
                 </tr>
               </thead>
               <tbody>
@@ -218,6 +242,7 @@ export default function LeaguePage() {
                   const chgPos = (row.change ?? 0) > 0;
                   // some primaries are pure black (e.g. Nets) — fall back to tertiary so the bar/border isn't invisible
                   const fillColor = team.primary === "#000000" ? team.tertiary : team.primary;
+                  const proj = projByTeam[row.team_id];
                   return (
                     <tr
                       key={row.team_id}
@@ -262,13 +287,29 @@ export default function LeaguePage() {
                       <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text2)" }}>
                         {row.w}–{row.l}
                       </td>
+                      <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text)" }}>
+                        {proj?.avg_wins?.toFixed(1) ?? "—"}
+                      </td>
+                      <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text2)" }}>
+                        {proj ? `${proj.p10_wins}–${proj.p90_wins}` : "—"}
+                      </td>
+                      <td
+                        style={{
+                          textAlign: "right",
+                          padding: "0 16px",
+                          fontFamily: "var(--font-mono)",
+                          fontSize: 12,
+                          fontWeight: proj?.prob_finish_first >= 0.05 ? 700 : 400,
+                          color: proj?.prob_finish_first >= 0.05 ? "var(--acc)" : "var(--text2)",
+                        }}
+                      >
+                        {proj ? `${(proj.prob_finish_first * 100).toFixed(proj.prob_finish_first < 0.01 ? 1 : 0)}%` : "—"}
+                      </td>
                     </tr>
                   );
                 })}
               </tbody>
             </table>
-
-            <SeasonProjection league={league} season={CURRENT_SEASON} variant={variant} leagueConfig={leagueConfig} />
           </div>
 
           <GamesPanel league={league} season={CURRENT_SEASON} variant={variant} leagueConfig={leagueConfig} />
