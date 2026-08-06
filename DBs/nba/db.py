@@ -548,17 +548,27 @@ def load_season_projection(conn: sqlite3.Connection, season: int, variant: str =
 def prune_played_schedule_rows(conn: sqlite3.Connection) -> int:
     """Delete schedule rows that now have a matching completed game in
     `games` (i.e. the result has come in - the schedule placeholder is
-    no longer needed). Returns the number removed."""
+    no longer needed). Returns the number removed.
+
+    Deletes matching schedule_predictions rows FIRST - schedule_predictions
+    has a foreign key on schedule_id, so with foreign_keys=ON (see
+    connect()) deleting a `schedule` row that still has prediction rows
+    pointing at it fails with an IntegrityError. A game can have
+    predictions for multiple variants (echo, pulse, ...) by the time
+    it's played, so this clears all of them for that schedule_id, not
+    just one variant's."""
     before = conn.total_changes
-    conn.execute("""
-        DELETE FROM schedule
+    to_prune = """
+        SELECT schedule_id FROM schedule
         WHERE EXISTS (
             SELECT 1 FROM games g
             WHERE g.date = schedule.date AND g.home_team = schedule.home_team
               AND g.away_team = schedule.away_team AND g.type = schedule.type
               AND IFNULL(g.round, -1) = IFNULL(schedule.round, -1)
         )
-    """)
+    """
+    conn.execute(f"DELETE FROM schedule_predictions WHERE schedule_id IN ({to_prune})")
+    conn.execute(f"DELETE FROM schedule WHERE schedule_id IN ({to_prune})")
     conn.commit()
     return conn.total_changes - before
 
