@@ -17,15 +17,15 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { getAllLeagueIds, getLeagueConfig } from "@/lib/sports/registry";
 
 const VARIANTS = [
-  { id: "continelo", label: "Echo" },
-  { id: "elo", label: "Pulse" },
+  { id: "echo", label: "Echo" },
+  { id: "pulse", label: "Pulse" },
 ];
 
 export default function Nav() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const currentLeague = pathname.split("/")[1]; // "" | "nba" | "wnba" | ...
-  const currentVariant = searchParams.get("variant") || "continelo";
+  const currentVariant = searchParams.get("variant") || "echo";
   const leagueIds = getAllLeagueIds();
 
   return (

@@ -58,14 +58,11 @@ CREATE UNIQUE INDEX IF NOT EXISTS idx_games_unique
 -- tie" failure mode possible, because there's no score column here
 -- to default to 0.
 --
--- expected_win_home / expected_win_away / *_days_off / rest_adj are
--- predictions from EloEngine.preview_matchup(), written by
--- add_season.py right after rebuild_ratings() (see
--- write_schedule_predictions() below). They are display-only: nothing
--- in the rating engine ever reads them back, so a bad or stale
--- prediction can't corrupt real ratings - worst case it's just a
--- wrong pick shown on the site. NULL until the first prediction pass
--- has run for that row.
+-- expected_win_home/expected_win_away/*_days_off/rest_adj columns here
+-- are LEGACY and no longer written to (kept only so an old .db file
+-- doesn't break) - predictions are now per-variant and live in
+-- schedule_predictions below, since Echo and Pulse genuinely predict
+-- different winners once their ratings diverge.
 CREATE TABLE IF NOT EXISTS schedule (
     schedule_id        INTEGER PRIMARY KEY AUTOINCREMENT,
     date                TEXT NOT NULL,
@@ -85,8 +82,27 @@ CREATE TABLE IF NOT EXISTS schedule (
 CREATE UNIQUE INDEX IF NOT EXISTS idx_schedule_unique
     ON schedule(date, home_team, away_team, type, IFNULL(round, -1));
 
+-- Per-variant prediction for an upcoming (unplayed) game in `schedule`.
+-- Split out from `schedule` itself (rather than adding a variant column
+-- there) because the fixture - date/teams/round - is shared across
+-- variants, only the predicted winner differs. Display-only, same as
+-- the legacy columns it replaces: nothing in the rating engine ever
+-- reads this back.
+CREATE TABLE IF NOT EXISTS schedule_predictions (
+    schedule_id        INTEGER NOT NULL REFERENCES schedule(schedule_id),
+    variant             TEXT NOT NULL,
+    expected_win_home   REAL,
+    expected_win_away   REAL,
+    home_days_off       INTEGER,
+    away_days_off       INTEGER,
+    rest_adj            REAL,
+    PRIMARY KEY (schedule_id, variant)
+);
+
 -- Monte Carlo season projection (simulate_season.py), one row per team
--- per season. Fully replaced each time it's recomputed (see
+-- per season per VARIANT - Pulse's projected win totals genuinely
+-- differ from Echo's once ratings diverge, same reasoning as ratings
+-- below. Fully replaced each time it's recomputed (see
 -- save_season_projection below) - this is always a fresh snapshot from
 -- current ratings, never an incremental update, so there's no
 -- reasonable way to "diff" an old projection against a new one, and no
@@ -95,6 +111,7 @@ CREATE UNIQUE INDEX IF NOT EXISTS idx_schedule_unique
 CREATE TABLE IF NOT EXISTS season_projections (
     season             INTEGER NOT NULL,
     team_id            TEXT NOT NULL,
+    variant            TEXT NOT NULL,
     avg_wins           REAL,
     p10_wins           INTEGER,
     median_wins        INTEGER,
@@ -104,12 +121,19 @@ CREATE TABLE IF NOT EXISTS season_projections (
     trials             INTEGER,
     remaining_games    INTEGER,
     computed_at        TEXT,
-    PRIMARY KEY (season, team_id)
+    PRIMARY KEY (season, team_id, variant)
 );
 
+-- One row per team per game per VARIANT (e.g. 'echo', 'pulse') - the
+-- same game produces different ratings/rating_change/etc depending on
+-- which variant computed it, so variant is part of the identity here,
+-- not just a label. rebuild_ratings() clears and rewrites one variant
+-- at a time (db.clear_ratings(conn, variant)), never touching another
+-- variant's rows in the same call.
 CREATE TABLE IF NOT EXISTS ratings (
     game_id       INTEGER NOT NULL REFERENCES games(game_id),
     team          TEXT NOT NULL,
+    variant       TEXT NOT NULL,
     opponent      TEXT NOT NULL,
     home_away     TEXT NOT NULL,
     date          TEXT NOT NULL,
@@ -139,7 +163,7 @@ CREATE TABLE IF NOT EXISTS ratings (
     post_rate     REAL,
     w REAL, l REAL, r1w REAL, r1l REAL, r2w REAL, r2l REAL,
     r3w REAL, r3l REAL, fw REAL, fl REAL,
-    PRIMARY KEY (game_id, team)
+    PRIMARY KEY (game_id, team, variant)
 );
 
 CREATE TABLE IF NOT EXISTS params (
@@ -212,6 +236,27 @@ def _migrate(conn: sqlite3.Connection) -> None:
         if col not in schedule_cols:
             conn.execute(f"ALTER TABLE schedule ADD COLUMN {col} {coltype}")
     conn.commit()
+
+    # Pulse variant support: `ratings` and `season_projections` both
+    # need a `variant` column folded into their primary key. Both
+    # tables are 100% derived/disposable - always fully wiped and
+    # recomputed from `games` (ratings) or recomputed from current
+    # ratings (season_projections), never hand-edited or treated as a
+    # source of truth - so on an old .db file that predates Pulse, the
+    # safe fix is just to drop and recreate them with the new schema.
+    # The very next add_season.py run repopulates both for every
+    # variant, same as any other rebuild.
+    ratings_cols = {row[1] for row in conn.execute("PRAGMA table_info(ratings)")}
+    if ratings_cols and "variant" not in ratings_cols:
+        conn.execute("DROP TABLE ratings")
+        conn.executescript(SCHEMA)
+        conn.commit()
+
+    proj_cols = {row[1] for row in conn.execute("PRAGMA table_info(season_projections)")}
+    if proj_cols and "variant" not in proj_cols:
+        conn.execute("DROP TABLE season_projections")
+        conn.executescript(SCHEMA)
+        conn.commit()
 
 
 # --------------------------------------------------------------------
@@ -413,59 +458,88 @@ def upcoming_games(conn: sqlite3.Connection, season: int | None = None) -> list[
     return out
 
 
-def save_schedule_prediction(conn: sqlite3.Connection, schedule_id: int,
+def save_schedule_prediction(conn: sqlite3.Connection, schedule_id: int, variant: str,
                               expected_win_home: float, expected_win_away: float,
                               home_days_off: int | None, away_days_off: int | None,
                               rest_adj: float | None) -> None:
-    """Write a preview_matchup() result back onto its schedule row.
-    Called from write_schedule_predictions() (add_season.py) for every
-    row returned by upcoming_games() after each rebuild_ratings() pass.
-    Display-only - never read by the rating engine itself."""
+    """Write a preview_matchup() result for one variant into
+    schedule_predictions. Called from write_schedule_predictions()
+    (add_season.py) for every row returned by upcoming_games() after
+    each rebuild_ratings() pass, once per variant. Display-only -
+    never read by the rating engine itself."""
     conn.execute(
-        "UPDATE schedule SET expected_win_home = ?, expected_win_away = ?, "
-        "home_days_off = ?, away_days_off = ?, rest_adj = ? WHERE schedule_id = ?",
-        (expected_win_home, expected_win_away, home_days_off, away_days_off, rest_adj, schedule_id),
+        "INSERT INTO schedule_predictions(schedule_id, variant, expected_win_home, "
+        "expected_win_away, home_days_off, away_days_off, rest_adj) VALUES (?,?,?,?,?,?,?) "
+        "ON CONFLICT(schedule_id, variant) DO UPDATE SET "
+        "expected_win_home=excluded.expected_win_home, "
+        "expected_win_away=excluded.expected_win_away, "
+        "home_days_off=excluded.home_days_off, away_days_off=excluded.away_days_off, "
+        "rest_adj=excluded.rest_adj",
+        (schedule_id, variant, expected_win_home, expected_win_away,
+         home_days_off, away_days_off, rest_adj),
     )
 
 
-def save_season_projection(conn: sqlite3.Connection, season: int, rows: list[dict],
-                            trials: int, remaining_games: int) -> None:
-    """Fully replace `season`'s projection with a freshly computed set.
-    Like schedule predictions, this is a snapshot recomputed from
-    scratch on every call, not an incremental update - delete-then-
-    insert is simpler and safer than trying to reconcile an old
-    snapshot against a new one. Called from write_season_projection()
-    (add_season.py) after every rebuild_ratings() pass, for every
-    season in this run that still has remaining games (see
-    clear_season_projection for what happens when a season ends)."""
+def schedule_with_predictions(conn: sqlite3.Connection, variant: str) -> list[dict]:
+    """Every row in `schedule`, left-joined against that variant's
+    prediction in schedule_predictions (NULL prediction fields if a
+    prediction pass hasn't run yet for this variant/row). Used by
+    export_to_supabase.py's build_schedule() instead of reading
+    `schedule` directly, now that predictions are variant-scoped."""
+    cur = conn.execute(
+        "SELECT s.schedule_id, s.date, s.season, s.type, s.round, s.home_team, "
+        "s.away_team, s.neutral, p.expected_win_home, p.expected_win_away, "
+        "p.home_days_off, p.away_days_off, p.rest_adj "
+        "FROM schedule s LEFT JOIN schedule_predictions p "
+        "ON p.schedule_id = s.schedule_id AND p.variant = ?",
+        (variant,),
+    )
+    cols = [d[0] for d in cur.description]
+    return [dict(zip(cols, row)) for row in cur.fetchall()]
+
+
+def save_season_projection(conn: sqlite3.Connection, season: int, variant: str,
+                            rows: list[dict], trials: int, remaining_games: int) -> None:
+    """Fully replace `season`'s projection FOR THIS VARIANT with a
+    freshly computed set - a different variant's rows for the same
+    season are untouched. Like schedule predictions, this is a
+    snapshot recomputed from scratch on every call, not an incremental
+    update - delete-then-insert is simpler and safer than trying to
+    reconcile an old snapshot against a new one. Called from
+    write_season_projection() (add_season.py) after every
+    rebuild_ratings() pass, for every season/variant combo in this run
+    that still has remaining games (see clear_season_projection for
+    what happens when a season ends)."""
     from datetime import datetime, timezone
     now = datetime.now(timezone.utc).isoformat()
-    conn.execute("DELETE FROM season_projections WHERE season = ?", (season,))
+    conn.execute("DELETE FROM season_projections WHERE season = ? AND variant = ?", (season, variant))
     for r in rows:
         conn.execute(
-            "INSERT INTO season_projections(season, team_id, avg_wins, p10_wins, "
+            "INSERT INTO season_projections(season, team_id, variant, avg_wins, p10_wins, "
             "median_wins, p90_wins, avg_rating, prob_finish_first, trials, "
-            "remaining_games, computed_at) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
-            (season, r["team"], r["avg_wins"], r["p10"], r["p50"], r["p90"],
+            "remaining_games, computed_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+            (season, r["team"], variant, r["avg_wins"], r["p10"], r["p50"], r["p90"],
              r["avg_rating"], r["p_first"], trials, remaining_games, now),
         )
     conn.commit()
 
 
-def clear_season_projection(conn: sqlite3.Connection, season: int) -> None:
-    """Remove any projection rows for `season` - called when a season
-    has no remaining games left (simulate_season.run_simulation returns
-    None in that case), so a stale "final" projection from before the
-    season actually ended doesn't linger and look current."""
-    conn.execute("DELETE FROM season_projections WHERE season = ?", (season,))
+def clear_season_projection(conn: sqlite3.Connection, season: int, variant: str) -> None:
+    """Remove this variant's projection rows for `season` - called when
+    a season has no remaining games left (simulate_season.run_simulation
+    returns None in that case), so a stale "final" projection from
+    before the season actually ended doesn't linger and look current.
+    Only clears the given variant - a different variant's rows for the
+    same season, if any, are untouched."""
+    conn.execute("DELETE FROM season_projections WHERE season = ? AND variant = ?", (season, variant))
     conn.commit()
 
 
-def load_season_projection(conn: sqlite3.Connection, season: int) -> list[dict]:
+def load_season_projection(conn: sqlite3.Connection, season: int, variant: str = "echo") -> list[dict]:
     cur = conn.execute(
-        "SELECT season, team_id, avg_wins, p10_wins, median_wins, p90_wins, "
+        "SELECT season, team_id, variant, avg_wins, p10_wins, median_wins, p90_wins, "
         "avg_rating, prob_finish_first, trials, remaining_games, computed_at "
-        "FROM season_projections WHERE season = ?", (season,)
+        "FROM season_projections WHERE season = ? AND variant = ?", (season, variant)
     )
     cols = [d[0] for d in cur.description]
     return [dict(zip(cols, row)) for row in cur.fetchall()]
@@ -519,12 +593,16 @@ def load_games(conn: sqlite3.Connection) -> list[dict]:
     return out
 
 
-def clear_ratings(conn: sqlite3.Connection) -> None:
-    conn.execute("DELETE FROM ratings")
+def clear_ratings(conn: sqlite3.Connection, variant: str) -> None:
+    """Wipe only this variant's rating rows - a different variant's
+    rows for the same games are untouched, so rebuilding one variant
+    never disturbs the other."""
+    conn.execute("DELETE FROM ratings WHERE variant = ?", (variant,))
 
 
-def save_ratings(conn: sqlite3.Connection, rows: list[dict], game_id_by_row: list[int]) -> None:
-    cols = ["game_id", "team", "opponent", "home_away", "date", "season", "type", "round",
+def save_ratings(conn: sqlite3.Connection, variant: str, rows: list[dict],
+                  game_id_by_row: list[int]) -> None:
+    cols = ["game_id", "team", "variant", "opponent", "home_away", "date", "season", "type", "round",
             "games_played", "days_off", "opp_days_off", "rest_adj", "pre_rate", "opp_pre_rate",
             "expected_win", "points_for", "points_against", "ot", "mov", "result", "accuracy",
             "test", "brier", "mov_mult", "po_mult", "k", "keff", "rating_change", "post_rate",
@@ -534,4 +612,5 @@ def save_ratings(conn: sqlite3.Connection, rows: list[dict], game_id_by_row: lis
     for gid, r in zip(game_id_by_row, rows):
         r = dict(r)
         r["date"] = r["date"].isoformat()
+        r["variant"] = variant
         conn.execute(sql, [gid] + [r[c] for c in cols[1:]])

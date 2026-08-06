@@ -18,25 +18,26 @@ import csv
 import os
 import db
 import engine
+from rebuild import variant_params
 
 DB_PATH = "nba_elo.db"
 OUT_DIR = "reports"
 
 
-def build_current_engine(conn) -> engine.EloEngine:
-    """Replay all real games to get each team's current state, without
-    writing anything back to the database."""
+def build_current_engine(conn, variant: str = "echo") -> engine.EloEngine:
+    """Replay all real games to get each team's current state for ONE
+    variant, without writing anything back to the database."""
     games = db.load_games(conn)
     resets = db.load_resets(conn)
-    params = db.load_active_params(conn) or engine.default_params()
+    params = variant_params(conn, variant)
     eng = engine.EloEngine(params, resets=resets)
     for g in games:
         eng.process_game(g)
     return eng
 
 
-def predict_all(conn, season=None):
-    eng = build_current_engine(conn)
+def predict_all(conn, season=None, variant: str = "echo"):
+    eng = build_current_engine(conn, variant)
     upcoming = db.upcoming_games(conn, season=season)
 
     predictions = []
@@ -68,11 +69,12 @@ def write_csv(predictions, path):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--season", type=int, help="restrict to one season; omit for all upcoming games")
+    parser.add_argument("--variant", default="echo", choices=["echo", "pulse"])
     args = parser.parse_args()
 
     os.makedirs(OUT_DIR, exist_ok=True)
     conn = db.connect(DB_PATH)
-    predictions = predict_all(conn, season=args.season)
+    predictions = predict_all(conn, season=args.season, variant=args.variant)
 
     if not predictions:
         print("No upcoming (unplayed) games found in the schedule"

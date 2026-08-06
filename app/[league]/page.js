@@ -35,8 +35,8 @@ const TABS = [
 const CURRENT_SEASON = 2026;
 
 const VARIANT_LABELS = {
-  continelo: "Echo ratings — carry-forward variant",
-  elo: "Pulse ratings — season-reset variant",
+  echo: "Echo ratings — carry-forward variant",
+  pulse: "Pulse ratings — season-reset variant",
 };
 
 async function fetchStandings(league, season, variant) {
@@ -101,7 +101,7 @@ export default function LeaguePage() {
   const params = useParams();
   const searchParams = useSearchParams();
   const league = params.league;
-  const variant = searchParams.get("variant") || "continelo";
+  const variant = searchParams.get("variant") || "echo";
   const [activeTab, setActiveTab] = useState("rankings");
   const [standings, setStandings] = useState([]);
   const [projByTeam, setProjByTeam] = useState({});

@@ -26,30 +26,28 @@ WHAT THIS DOES
                          team `active` if that current code appears in this
                          league's live site config (lib/sports/{league}/config.js)
                          — i.e. it's a team the site actually displays today.
+                         Variant-independent - written once, not per variant.
 2. games               — one row per team per game, copied from the `ratings`
                          table, with team/opponent remapped from opaque IDs to
-                         current codes. Tagged variant='continelo' (Echo) only —
-                         see note below.
+                         current codes. Written once per entry in VARIANTS
+                         (currently 'echo' and 'pulse'), reading only that
+                         variant's rows from `ratings`.
 3. schedule            — one row per team per UPCOMING (unplayed) game, copied
-                         from the `schedule` table, including Elo's predicted
-                         win probability for each side (written by
-                         add_season.py's write_schedule_predictions(), NOT
-                         computed here — this export just moves it over).
+                         from `schedule` joined against schedule_predictions
+                         for the variant being exported (Elo's predicted win
+                         probability differs by variant once ratings diverge).
                          Fully replaced on every run (delete-then-insert per
                          league/variant, not upserted) — see build_schedule()
                          docstring for why an upsert alone isn't enough here.
 4. preseason_ratings   — APPROXIMATED as each team's `pre_rate` from its
-                         first chronological game of a season. This isn't
-                         necessarily identical to a true "preseason" figure if
-                         the source system computes one separately — flagged as
-                         an approximation, not verified against source intent.
+                         first chronological game of a season, per variant.
+                         This isn't necessarily identical to a true "preseason"
+                         figure if the source system computes one separately —
+                         flagged as an approximation, not verified against
+                         source intent.
 
 WHAT THIS DOES NOT DO YET
 --------------------------
-- No Pulse (reset-each-season) variant — only Echo/continelo exists in the
-  source data right now. Re-run this script against a Pulse-computing
-  version of the engine later to backfill that variant; nothing here needs
-  to change structurally when that happens.
 - No `standings` table population — deferred. The site's Standings tab
   already derives everything it needs from game-level data directly
   (same pattern as StandingsTab.jsx's mock data), so a separately
@@ -91,7 +89,17 @@ SPORT_FOR_LEAGUE = {
     "wnba": "basketball",
 }
 
-VARIANT = "continelo"  # Echo. See module docstring — Pulse doesn't exist yet.
+# Both rating variants this export moves over. 'echo' is the original
+# continuous-carryover model (formerly branded "Continelo" - renamed
+# here and throughout this file's comments/output, though the site's
+# ?variant= query param and any already-written Supabase rows under
+# the old name are a separate cleanup, not touched by this script).
+# 'pulse' resets every team to base rating at the start of each season.
+# Every table this script writes (`ratings`/`schedule_predictions`/
+# `season_projections` locally, `games`/`schedule`/`season_projections`
+# on Supabase) is already variant-scoped, so adding a third variant
+# later is just adding its name here.
+VARIANTS = ("echo", "pulse")
 
 
 def resolve_current_codes(conn):
@@ -159,7 +167,7 @@ GAMES_COLUMNS = [
 ]
 
 
-def build_games(conn, league, id_to_code):
+def build_games(conn, league, id_to_code, variant):
     cur = conn.cursor()
     cur.execute(
         "SELECT game_id, team, opponent, home_away, date, season, type, "
@@ -167,7 +175,7 @@ def build_games(conn, league, id_to_code):
         "opp_pre_rate, expected_win, points_for, points_against, ot, mov, "
         "result, accuracy, brier, mov_mult, po_mult, k, keff, "
         "rating_change, post_rate, w, l, r1w, r1l, r2w, r2l, r3w, r3l, fw, fl "
-        "FROM ratings"
+        "FROM ratings WHERE variant = ?", (variant,)
     )
     cols = [d[0] for d in cur.description]
     rows = []
@@ -179,7 +187,7 @@ def build_games(conn, league, id_to_code):
             {
                 "game_id": str(r["game_id"]),
                 "league": league,
-                "variant": VARIANT,
+                "variant": variant,
                 "team_id": team_code,
                 "date": r["date"],
                 "season": r["season"],
@@ -229,13 +237,14 @@ SCHEDULE_COLUMNS = [
 ]
 
 
-def build_schedule(conn, league, id_to_code):
+def build_schedule(conn, league, id_to_code, variant):
     """
-    Mirrors build_games(), but reads from `schedule` (upcoming, unplayed
-    games, with Elo's prediction already written onto them by
-    add_season.py's write_schedule_predictions()) instead of `ratings`.
-    Two rows per game — home + away perspective — same convention as
-    build_games(), so GamesPanel.jsx can render both with shared logic.
+    Mirrors build_games(), but reads from `schedule` LEFT JOINed against
+    schedule_predictions for this variant (upcoming, unplayed games,
+    with Elo's prediction already written by add_season.py's
+    write_schedule_predictions()) instead of `ratings`. Two rows per
+    game — home + away perspective — same convention as build_games(),
+    so GamesPanel.jsx can render both with shared logic.
 
     Unlike games (which only ever grows, so an upsert is safe), a game
     can DISAPPEAR from the local `schedule` table entirely once it's
@@ -250,9 +259,11 @@ def build_schedule(conn, league, id_to_code):
     """
     cur = conn.cursor()
     cur.execute(
-        "SELECT schedule_id, date, season, type, round, home_team, away_team, "
-        "neutral, expected_win_home, expected_win_away, home_days_off, "
-        "away_days_off, rest_adj FROM schedule"
+        "SELECT s.schedule_id, s.date, s.season, s.type, s.round, s.home_team, "
+        "s.away_team, s.neutral, p.expected_win_home, p.expected_win_away, "
+        "p.home_days_off, p.away_days_off, p.rest_adj "
+        "FROM schedule s LEFT JOIN schedule_predictions p "
+        "ON p.schedule_id = s.schedule_id AND p.variant = ?", (variant,)
     )
     cols = [d[0] for d in cur.description]
     rows = []
@@ -276,7 +287,7 @@ def build_schedule(conn, league, id_to_code):
         rest_adj_away = None if rest_adj_home is None else -rest_adj_home
 
         base = dict(
-            league=league, variant=VARIANT, date=r["date"], season=r["season"],
+            league=league, variant=variant, date=r["date"], season=r["season"],
             type=r["type"], round=round_, neutral=r["neutral"],
         )
         rows.append({
@@ -303,18 +314,22 @@ PROJECTION_COLUMNS = [
 ]
 
 
-def build_season_projection(conn, league, id_to_code):
+def build_season_projection(conn, league, id_to_code, variant):
     """
-    Reads the local season_projections table (written by add_season.py's
-    write_season_projection(), see that function's docstring) and remaps
-    team_id from opaque local IDs to current codes, same as build_games()
-    and build_schedule(). One row per team per season - already fully
-    replaced locally each time it's recomputed, so this just mirrors
-    whatever's currently there; a season with no remaining games has no
-    rows here at all (cleared locally once the season ends).
+    Reads the local season_projections table for ONE variant (written
+    by add_season.py's write_season_projection(), see that function's
+    docstring) and remaps team_id from opaque local IDs to current
+    codes, same as build_games() and build_schedule(). One row per
+    team per season - already fully replaced locally each time it's
+    recomputed, so this just mirrors whatever's currently there; a
+    season with no remaining games has no rows here at all (cleared
+    locally once the season ends).
     """
     cur = conn.cursor()
-    cur.execute(f"SELECT {', '.join(PROJECTION_COLUMNS)} FROM season_projections")
+    cur.execute(
+        f"SELECT {', '.join(PROJECTION_COLUMNS)} FROM season_projections WHERE variant = ?",
+        (variant,)
+    )
     cols = [d[0] for d in cur.description]
     rows = []
     for raw in cur.fetchall():
@@ -324,7 +339,7 @@ def build_season_projection(conn, league, id_to_code):
             **{c: r[c] for c in PROJECTION_COLUMNS if c != "team_id"},
             "team_id": code,
             "league": league,
-            "variant": VARIANT,
+            "variant": variant,
         })
     return rows
 
@@ -363,20 +378,23 @@ def main():
 
     conn = sqlite3.connect(args.db)
     id_to_code = resolve_current_codes(conn)
-    teams_rows = build_teams(conn, args.league, id_to_code)
-    games_rows = build_games(conn, args.league, id_to_code)
-    schedule_rows = build_schedule(conn, args.league, id_to_code)
-    projection_rows = build_season_projection(conn, args.league, id_to_code)
+    teams_rows = build_teams(conn, args.league, id_to_code)  # variant-independent, built once
+
+    games_rows, schedule_rows, projection_rows = [], [], []
+    for variant in VARIANTS:
+        games_rows += build_games(conn, args.league, id_to_code, variant)
+        schedule_rows += build_schedule(conn, args.league, id_to_code, variant)
+        projection_rows += build_season_projection(conn, args.league, id_to_code, variant)
     preseason_rows = build_preseason_ratings(games_rows)
     conn.close()
 
-    print(f"League: {args.league}")
+    print(f"League: {args.league}  (variants: {', '.join(VARIANTS)})")
     print(f"  teams: {len(teams_rows)} rows "
           f"({sum(1 for t in teams_rows if t['active'])} active, "
           f"{sum(1 for t in teams_rows if not t['active'])} historical)")
     print(f"  games: {len(games_rows)} rows")
     print(f"  schedule: {len(schedule_rows)} rows "
-          f"({len(schedule_rows) // 2} upcoming game(s))")
+          f"({len(schedule_rows) // 2 // len(VARIANTS)} upcoming game(s) per variant)")
     print(f"  season_projections: {len(projection_rows)} rows")
     print(f"  preseason_ratings: {len(preseason_rows)} rows")
     print()
@@ -472,11 +490,15 @@ def write_to_supabase(teams_rows, games_rows, schedule_rows, projection_rows,
 
     # schedule is fully replaced, not upserted — see build_schedule()'s
     # docstring for why an upsert alone can't handle a game leaving the
-    # schedule once it's been played.
-    cur.execute(
-        "DELETE FROM schedule WHERE league = %s AND variant = %s",
-        (league, VARIANT),
-    )
+    # schedule once it's been played. Deletes once per variant, since
+    # games_rows/schedule_rows now carry multiple variants combined -
+    # a single DELETE with one variant would leave the other variant's
+    # old rows behind uncleared.
+    for variant in VARIANTS:
+        cur.execute(
+            "DELETE FROM schedule WHERE league = %s AND variant = %s",
+            (league, variant),
+        )
     if schedule_rows:
         execute_values(
             cur,
@@ -487,17 +509,18 @@ def write_to_supabase(teams_rows, games_rows, schedule_rows, projection_rows,
             ],
         )
     print(f"Wrote {len(schedule_rows)} schedule rows "
-          f"(replaced this league/variant's prior schedule rows entirely).")
+          f"(replaced this league's prior schedule rows for every variant).")
 
     # season_projections is fully replaced too, same reasoning as
     # schedule - a season that's ended locally has zero rows here, and
     # that absence needs to actually delete the stale Supabase rows,
     # not just leave last week's "final" projection sitting there
-    # looking current.
-    cur.execute(
-        "DELETE FROM season_projections WHERE league = %s AND variant = %s",
-        (league, VARIANT),
-    )
+    # looking current. Same per-variant loop as schedule above.
+    for variant in VARIANTS:
+        cur.execute(
+            "DELETE FROM season_projections WHERE league = %s AND variant = %s",
+            (league, variant),
+        )
     if projection_rows:
         execute_values(
             cur,
@@ -508,7 +531,7 @@ def write_to_supabase(teams_rows, games_rows, schedule_rows, projection_rows,
             ],
         )
     print(f"Wrote {len(projection_rows)} season projection rows "
-          f"(replaced this league/variant's prior projection rows entirely).")
+          f"(replaced this league's prior projection rows for every variant).")
 
     execute_values(
         cur,

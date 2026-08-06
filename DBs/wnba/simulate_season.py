@@ -30,7 +30,7 @@ import os
 import random
 import db
 import engine
-from rebuild import standings as real_standings
+from rebuild import standings as real_standings, variant_params
 
 DB_PATH = "wnba_elo.db"
 OUT_DIR = "reports"
@@ -44,10 +44,10 @@ def historical_mov_pool(conn) -> list[int]:
     return pool or [10]  # fallback if the database is ever empty
 
 
-def build_current_engine(conn):
+def build_current_engine(conn, variant: str = "echo"):
     games = db.load_games(conn)
     resets = db.load_resets(conn)
-    params = db.load_active_params(conn) or engine.default_params()
+    params = variant_params(conn, variant)
     eng = engine.EloEngine(params, resets=resets)
     for g in games:
         eng.process_game(g)
@@ -92,9 +92,9 @@ def simulate_one_season(base_engine, remaining_games, mov_pool, rng) -> dict:
     return dict(wl=wl, ratings=final_ratings)
 
 
-def run_simulation(conn, season: int, trials: int, seed=None):
+def run_simulation(conn, season: int, variant: str, trials: int, seed=None):
     rng = random.Random(seed)
-    base_engine = build_current_engine(conn)
+    base_engine = build_current_engine(conn, variant)
     mov_pool = historical_mov_pool(conn)
 
     remaining = db.upcoming_games(conn, season=season)
@@ -102,8 +102,11 @@ def run_simulation(conn, season: int, trials: int, seed=None):
         return None
 
     # Current real record so far this season, to add the simulated
-    # remainder on top of.
-    current = {t: (w, l) for t, _, w, l, _ in real_standings(conn, season)}
+    # remainder on top of. Wins/losses are the same across variants
+    # (they're just real results), but final_rating comes from THIS
+    # variant's standings, since a team's simulated starting point
+    # should be Pulse's rating when projecting Pulse, not Echo's.
+    current = {t: (w, l) for t, _, w, l, _ in real_standings(conn, season, variant)}
     team_names = dict(conn.execute("SELECT team_id, team_name FROM teams").fetchall())
 
     results = []  # one dict per trial: team -> (final_wins, final_rating)
@@ -156,9 +159,10 @@ def summarize(sim, season: int):
     return summary_rows
 
 
-def write_outputs(summary_rows, season, trials, remaining_count):
+def write_outputs(summary_rows, season, trials, remaining_count, variant="echo"):
+    label = "Echo" if variant == "echo" else "Pulse"
     lines = [
-        f"WNBA Echo Ratings - Season Projection ({season})",
+        f"WNBA {label} Ratings - Season Projection ({season})",
         "=" * 50,
         f"{trials} trials, {remaining_count} remaining game(s) simulated per trial.",
         "",
@@ -176,11 +180,12 @@ def write_outputs(summary_rows, season, trials, remaining_count):
     lines.append("as the plausible range of outcomes, not a hard floor/ceiling.")
 
     os.makedirs(OUT_DIR, exist_ok=True)
-    txt_path = os.path.join(OUT_DIR, f"season_projection_{season}.txt")
+    suffix = "" if variant == "echo" else f"_{variant}"
+    txt_path = os.path.join(OUT_DIR, f"season_projection_{season}{suffix}.txt")
     with open(txt_path, "w") as f:
         f.write("\n".join(lines) + "\n")
 
-    csv_path = os.path.join(OUT_DIR, f"season_projection_{season}.csv")
+    csv_path = os.path.join(OUT_DIR, f"season_projection_{season}{suffix}.csv")
     with open(csv_path, "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["team", "name", "projected_wins", "p10_wins", "median_wins",
@@ -196,18 +201,20 @@ def write_outputs(summary_rows, season, trials, remaining_count):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--season", type=int, required=True)
+    parser.add_argument("--variant", default="echo", choices=["echo", "pulse"])
     parser.add_argument("--trials", type=int, default=1000)
     parser.add_argument("--seed", type=int, default=None, help="for reproducible results")
     args = parser.parse_args()
 
     conn = db.connect(DB_PATH)
-    sim = run_simulation(conn, args.season, args.trials, seed=args.seed)
+    sim = run_simulation(conn, args.season, args.variant, args.trials, seed=args.seed)
     if sim is None:
         print(f"No remaining (unplayed) games found for season {args.season} - nothing to simulate.")
         return
 
     summary_rows = summarize(sim, args.season)
-    txt_path, csv_path = write_outputs(summary_rows, args.season, args.trials, len(sim["remaining"]))
+    txt_path, csv_path = write_outputs(summary_rows, args.season, args.trials,
+                                        len(sim["remaining"]), args.variant)
 
     print(f"Simulated {args.trials} trials over {len(sim['remaining'])} remaining game(s).\n")
     for row in summary_rows:

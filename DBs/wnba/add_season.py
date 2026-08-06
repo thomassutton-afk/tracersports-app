@@ -51,7 +51,7 @@ import pandas as pd
 import db
 import predict
 import simulate_season
-from rebuild import rebuild_ratings, standings, sanity_checks
+from rebuild import rebuild_ratings, standings, sanity_checks, VARIANTS
 
 DB_PATH = "wnba_elo.db"
 
@@ -226,27 +226,28 @@ def load_file(conn, path: str) -> tuple[dict, set[int], set[str]]:
             seasons, new_teams)
 
 
-def write_schedule_predictions(conn) -> int:
+def write_schedule_predictions(conn, variant: str) -> int:
     """Recompute Elo's pick for every still-upcoming game in `schedule`
-    and write it back onto that row, using whatever ratings are
-    current as of the games `rebuild_ratings()` just processed.
+    and write it into schedule_predictions FOR THIS VARIANT, using
+    whatever ratings are current as of the games `rebuild_ratings()`
+    just processed for this same variant.
 
-    Deliberately called AFTER rebuild_ratings() in main(), never
+    Deliberately called AFTER rebuild_ratings(variant) in main(), never
     before - a prediction made against stale ratings would be
     actively wrong, not just outdated. Purely additive/read-only
     against `games` and the rating engine: only ever writes to
-    `schedule`'s prediction columns via db.save_schedule_prediction(),
-    so a bug here cannot corrupt real results or ratings, at worst it
-    shows a wrong pick on the site.
+    schedule_predictions via db.save_schedule_prediction(), so a bug
+    here cannot corrupt real results or ratings, at worst it shows a
+    wrong pick on the site.
 
     Reuses predict.py's build_current_engine() (replay real games to
     get each team's live state) rather than re-implementing it - see
     predict.py's own docstring for why that function is safe to reuse
-    here: it's already read-only and takes no arguments besides conn.
+    here: it's already read-only.
 
     Returns the number of upcoming games a prediction was written for.
     """
-    eng = predict.build_current_engine(conn)
+    eng = predict.build_current_engine(conn, variant)
     upcoming = db.upcoming_games(conn)
     for g in upcoming:
         p = eng.preview_matchup(
@@ -254,7 +255,7 @@ def write_schedule_predictions(conn) -> int:
             season=g["season"], type_=g["type"], round_=g["round"], neutral=bool(g["neutral"]),
         )
         db.save_schedule_prediction(
-            conn, g["schedule_id"],
+            conn, g["schedule_id"], variant,
             expected_win_home=p["expected_win_home"],
             expected_win_away=p["expected_win_away"],
             home_days_off=p["days_off_home"],
@@ -262,20 +263,20 @@ def write_schedule_predictions(conn) -> int:
             # Engine's clamp is symmetric (±16 both sides), so
             # rest_adj_away is always exactly -rest_adj_home - only
             # the home value needs to be stored. See schema note in
-            # db.py's SCHEMA docstring for the `schedule` table.
+            # db.py's SCHEMA docstring for schedule_predictions.
             rest_adj=p["rest_adj_home"],
         )
     conn.commit()
     return len(upcoming)
 
 
-def write_season_projection(conn, seasons) -> dict:
+def write_season_projection(conn, seasons, variant: str) -> dict:
     """Recompute the Monte Carlo season projection (simulate_season.py)
-    for every season touched by this file's run that still has
-    remaining (unplayed) regular-season games, and persist it to
-    `season_projections` for the export script to pick up next.
+    FOR THIS VARIANT, for every season touched by this file's run that
+    still has remaining (unplayed) regular-season games, and persist
+    it to `season_projections` for the export script to pick up next.
 
-    Called AFTER rebuild_ratings(), same reasoning as
+    Called AFTER rebuild_ratings(variant), same reasoning as
     write_schedule_predictions() above - a projection built from stale
     ratings would be actively wrong. Read-only against `games`/ratings;
     only ever writes to `season_projections`, so a bug here can't
@@ -286,23 +287,24 @@ def write_season_projection(conn, seasons) -> dict:
     build_current_engine() for schedule predictions. Note this is
     noticeably heavier than schedule predictions (1000 trials, each
     deep-copying the full rating engine and replaying every remaining
-    game) - expect this to add real runtime to the daily update, not
-    just a negligible extra step.
+    game) - and this now runs once per variant, so expect roughly
+    double the runtime of a single-variant projection pass.
 
     Returns {season: team_count} for seasons a projection was written
     for. A season with no remaining games (simulate_season returns
-    None) has any stale projection cleared instead, so an old snapshot
-    doesn't linger and look current once a season's actually over.
+    None) has any stale projection for this variant cleared instead,
+    so an old snapshot doesn't linger and look current once a season's
+    actually over.
     """
     updated = {}
     for season in seasons:
-        sim = simulate_season.run_simulation(conn, season, trials=1000)
+        sim = simulate_season.run_simulation(conn, season, variant, trials=1000)
         if sim is None:
-            db.clear_season_projection(conn, season)
+            db.clear_season_projection(conn, season, variant)
             continue
         summary_rows = simulate_season.summarize(sim, season)
         db.save_season_projection(
-            conn, season, summary_rows, trials=1000, remaining_games=len(sim["remaining"])
+            conn, season, variant, summary_rows, trials=1000, remaining_games=len(sim["remaining"])
         )
         updated[season] = len(summary_rows)
     return updated
@@ -332,31 +334,37 @@ def main():
         print(f"Registered new team code(s): {sorted(new_teams)} "
               f"(placeholder names set - rename them, see this script's docstring)")
 
-    rebuild_ratings(conn)
-    print("Ratings rebuilt for the full history.\n")
+    # Raw results are parsed and inserted into `games` exactly once,
+    # above - both variants share that same table, since results don't
+    # differ between them. Everything from here down (ratings,
+    # predictions, projections) is variant-specific and runs once per
+    # entry in VARIANTS, so one command/one file keeps every variant
+    # current together.
+    for variant in VARIANTS:
+        print(f"=== {variant} ===")
+        rebuild_ratings(conn, variant)
+        print(f"Ratings rebuilt for the full history ({variant}).")
 
-    n_predicted = write_schedule_predictions(conn)
-    if n_predicted:
-        print(f"Updated Elo predictions for {n_predicted} upcoming game(s) in the schedule.\n")
+        n_predicted = write_schedule_predictions(conn, variant)
+        if n_predicted:
+            print(f"Updated Elo predictions for {n_predicted} upcoming game(s) ({variant}).")
 
-    projection_updates = write_season_projection(conn, seasons)
-    for season, n_teams in projection_updates.items():
-        print(f"Updated season projection for {season}: {n_teams} team(s).")
-    if projection_updates:
-        print()
+        projection_updates = write_season_projection(conn, seasons, variant)
+        for season, n_teams in projection_updates.items():
+            print(f"Updated season projection for {season} ({variant}): {n_teams} team(s).")
 
-    warnings = sanity_checks(conn, seasons)
-    if warnings:
-        print("WARNINGS:")
-        for w in warnings:
-            print(f"  - {w}")
-    else:
-        print("Sanity checks passed: no NaNs, no missing teams, standings look complete.\n")
+        warnings = sanity_checks(conn, seasons, variant)
+        if warnings:
+            print(f"WARNINGS ({variant}):")
+            for w in warnings:
+                print(f"  - {w}")
+        else:
+            print(f"Sanity checks passed ({variant}): no NaNs, no missing teams, standings look complete.")
 
-    for season in sorted(seasons):
-        print(f"--- {season} standings ---")
-        for team, name, w, l, rating in standings(conn, season):
-            print(f"{name:24s} {w:.0f}-{l:.0f}   Elo {rating:.2f}")
+        for season in sorted(seasons):
+            print(f"--- {season} standings ({variant}) ---")
+            for team, name, w, l, rating in standings(conn, season, variant):
+                print(f"{name:24s} {w:.0f}-{l:.0f}   Elo {rating:.2f}")
         print()
 
 
