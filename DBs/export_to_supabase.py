@@ -495,8 +495,27 @@ def write_to_supabase(teams_rows, games_rows, schedule_rows, projection_rows,
         f"""
         INSERT INTO games ({', '.join(GAMES_COLUMNS)}, league, variant)
         VALUES %s
-        ON CONFLICT (league, season, variant, team_id, date, opponent_id, home_away, type, (COALESCE(round, '')))
-        DO NOTHING
+        -- Unqualified ON CONFLICT DO NOTHING (no target columns) so this
+        -- swallows a conflict against EITHER of the two unique constraints
+        -- games can hit: the natural key (idx_games_natural_key - guards
+        -- against re-exporting the same game twice under a different
+        -- game_id after a local rebuild, see d2b92ec) AND the primary key
+        -- (game_id, league, variant, team_id). Targeting only the natural
+        -- key here caused a crash: when format_round() changed how `round`
+        -- is stringified (see format_round() above), an already-exported
+        -- row's natural key no longer matched (different round string),
+        -- so Postgres attempted a real insert instead of skipping it - and
+        -- that insert then hit the *primary* key, which a natural-key-only
+        -- ON CONFLICT target doesn't cover, raising an unhandled
+        -- UniqueViolation instead of silently no-op'ing like intended.
+        -- Trade-off: a genuine field correction on an existing row (e.g. a
+        -- fixed score, or this round-format change) won't overwrite what's
+        -- already in Supabase - it'll just be skipped. That's the same
+        -- "replace never happens on conflict" behavior this already had,
+        -- just now safe instead of crashing. A one-time backfill UPDATE is
+        -- the right tool if old `round` strings ever need correcting in
+        -- place - see the note in HANDOFF.
+        ON CONFLICT DO NOTHING
         """,
         [
             tuple(g[c] for c in GAMES_COLUMNS) + (g["league"], g["variant"])
