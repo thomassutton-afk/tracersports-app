@@ -1,19 +1,23 @@
 "use client";
 
 /**
- * StandingsTab — league-agnostic conference standings.
+ * StandingsTab — league-agnostic standings.
  *
  * Groups teams into playoff tiers (Auto / Play-In / rest) using each
  * league's own playoffFormat.autoSeeds and playInSeeds — no hardcoded
- * NBA-specific 6/4 split. Division view only renders if the league config
- * says hasDivisions (e.g. NBA yes, WNBA no).
+ * NBA-specific 6/4 split.
  *
- * KNOWN SIMPLIFICATION: seeds/tiers below are computed per-conference, even
- * for leagues whose playoffFormat.type is 'overall-bracket' (e.g. WNBA's
- * actual format is top-8 overall, not top-N per conference). Building true
- * cross-conference seeding is real extra work worth doing once that format
- * is confirmed (wnba/config.js itself flags it as unconfirmed) — this is a
- * reasonable placeholder shape until then, not a final design decision.
+ * View toggle depends on the league's actual playoff shape, not a fixed
+ * pair of options:
+ *   - hasDivisions leagues (NBA): "Conference" (default) / "By Division" —
+ *     seeding is still computed per-conference either way.
+ *   - Conference-having leagues WITHOUT divisions whose real playoff format
+ *     is league-wide, not per-conference (WNBA — top 8 overall, confirmed
+ *     in wnba/config.js): "League" (default) / "Conference". "League" seeds
+ *     Auto/Play-In/Rest across the FULL standings, matching the real format;
+ *     "Conference" is kept as a secondary/browsing view (was previously the
+ *     only view, which is what made WNBA's Auto/Play-In tiers wrong — top-8
+ *     was being computed per-conference instead of league-wide).
  */
 
 import { useState } from "react";
@@ -30,7 +34,8 @@ function sortByRecord(a, b) {
 
 export default function StandingsTab({ leagueConfig, standings }) {
   const hasDivisions = !!leagueConfig.hasDivisions;
-  const [view, setView] = useState("conference");
+  const showLeagueToggle = !hasDivisions && !!leagueConfig.hasConferences;
+  const [view, setView] = useState(showLeagueToggle ? "league" : "conference");
 
   const teamMap = {};
   for (const t of standings) teamMap[t.team_id] = t;
@@ -125,6 +130,51 @@ export default function StandingsTab({ leagueConfig, standings }) {
       </tr>
     </thead>
   );
+
+  function LeagueTable() {
+    const allTeams = [...standings].sort(sortByRecord);
+    const auto = allTeams.slice(0, autoSeeds);
+    const playIn = playInSeeds > 0 ? allTeams.slice(autoSeeds, autoSeeds + playInSeeds) : [];
+    const rest = allTeams.slice(autoSeeds + playInSeeds);
+
+    return (
+      <div style={{ maxWidth: 640, margin: "0 auto" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: "var(--acc)", textTransform: "uppercase", letterSpacing: 2 }}>
+            {leagueConfig.label}
+          </span>
+          <div style={{ flex: 1, height: 1, background: "var(--border)" }} />
+        </div>
+        <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 10, overflow: "hidden" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse" }}>
+            {tableHead()}
+            <tbody>
+              <GroupSep label={`Automatic Playoff Berths · Seeds 1–${autoSeeds}`} color="var(--uo)" />
+              {auto.map((t, i) => (
+                <TeamRow key={t.team_id} t={t} seed={i + 1} />
+              ))}
+              {playIn.length > 0 && (
+                <>
+                  <GroupSep label={`Play-In · Seeds ${autoSeeds + 1}–${autoSeeds + playInSeeds}`} color="var(--ut)" />
+                  {playIn.map((t, i) => (
+                    <TeamRow key={t.team_id} t={t} seed={autoSeeds + i + 1} />
+                  ))}
+                </>
+              )}
+              {rest.length > 0 && (
+                <>
+                  <GroupSep label={`Remaining · Seeds ${autoSeeds + playInSeeds + 1}–${allTeams.length}`} color="var(--acc)" />
+                  {rest.map((t, i) => (
+                    <TeamRow key={t.team_id} t={t} seed={autoSeeds + playInSeeds + i + 1} />
+                  ))}
+                </>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    );
+  }
 
   function ConferenceTable({ confName, confColor }) {
     const cTeams = standings.filter((t) => leagueConfig.teams[t.team_id]?.conf === confName).sort(sortByRecord);
@@ -233,12 +283,18 @@ export default function StandingsTab({ leagueConfig, standings }) {
   return (
     <div>
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 20 }}>
-        {hasDivisions && (
+        {(hasDivisions || showLeagueToggle) && (
           <div style={{ display: "flex", background: "var(--border)", borderRadius: 8, overflow: "hidden", border: "1px solid var(--border2)" }}>
-            {[
-              ["conference", "Conference"],
-              ["division", "By Division"],
-            ].map(([v, l]) => (
+            {(hasDivisions
+              ? [
+                  ["conference", "Conference"],
+                  ["division", "By Division"],
+                ]
+              : [
+                  ["league", "League"],
+                  ["conference", "Conference"],
+                ]
+            ).map(([v, l]) => (
               <button
                 key={v}
                 onClick={() => setView(v)}
@@ -261,11 +317,15 @@ export default function StandingsTab({ leagueConfig, standings }) {
           Sorted by win% · Tiebreak: wins
         </span>
       </div>
-      <div style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
-        {leagueConfig.conferences.map((confName, i) => (
-          <ConferenceTable key={confName} confName={confName} confColor={i === 0 ? "var(--acc)" : "var(--ut)"} />
-        ))}
-      </div>
+      {view === "league" ? (
+        <LeagueTable />
+      ) : (
+        <div style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
+          {leagueConfig.conferences.map((confName, i) => (
+            <ConferenceTable key={confName} confName={confName} confColor={i === 0 ? "var(--acc)" : "var(--ut)"} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

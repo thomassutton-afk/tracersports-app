@@ -140,6 +140,13 @@ export default function LeaguePage() {
   const [loading, setLoading] = useState(true);
   const [fetchError, setFetchError] = useState(null);
 
+  // No season_projections rows exist once a season's finished (simulate_season
+  // has nothing left to project over remaining games) - this is empty for a
+  // completed NBA season and populated for an in-progress WNBA season right
+  // now, and flips back automatically once a new season's projections start
+  // getting written, no manual toggle needed.
+  const hasProjections = Object.keys(projByTeam).length > 0;
+
   let leagueConfig;
   let configError = null;
   try {
@@ -267,9 +274,13 @@ export default function LeaguePage() {
                   <th className="r" style={{ width: 90 }}>Strength</th>
                   <th className="r">Δ Last</th>
                   <th className="r">Record</th>
-                  <th className="r">Proj. W</th>
-                  <th className="r">10th–90th</th>
-                  <th className="r">P(1st)</th>
+                  {hasProjections && (
+                    <>
+                      <th className="r">Proj. W</th>
+                      <th className="r">10th–90th</th>
+                      <th className="r">P(1st)</th>
+                    </>
+                  )}
                 </tr>
               </thead>
               <tbody>
@@ -325,24 +336,28 @@ export default function LeaguePage() {
                       <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text2)" }}>
                         {row.w}–{row.l}
                       </td>
-                      <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text)" }}>
-                        {proj?.avg_wins?.toFixed(1) ?? "—"}
-                      </td>
-                      <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text2)" }}>
-                        {proj ? `${proj.p10_wins}–${proj.p90_wins}` : "—"}
-                      </td>
-                      <td
-                        style={{
-                          textAlign: "right",
-                          padding: "0 16px",
-                          fontFamily: "var(--font-mono)",
-                          fontSize: 12,
-                          fontWeight: proj?.prob_finish_first >= 0.05 ? 700 : 400,
-                          color: proj?.prob_finish_first >= 0.05 ? "var(--acc)" : "var(--text2)",
-                        }}
-                      >
-                        {proj ? `${(proj.prob_finish_first * 100).toFixed(proj.prob_finish_first < 0.01 ? 1 : 0)}%` : "—"}
-                      </td>
+                      {hasProjections && (
+                        <>
+                          <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text)" }}>
+                            {proj?.avg_wins?.toFixed(1) ?? "—"}
+                          </td>
+                          <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text2)" }}>
+                            {proj ? `${proj.p10_wins}–${proj.p90_wins}` : "—"}
+                          </td>
+                          <td
+                            style={{
+                              textAlign: "right",
+                              padding: "0 16px",
+                              fontFamily: "var(--font-mono)",
+                              fontSize: 12,
+                              fontWeight: proj?.prob_finish_first >= 0.05 ? 700 : 400,
+                              color: proj?.prob_finish_first >= 0.05 ? "var(--acc)" : "var(--text2)",
+                            }}
+                          >
+                            {proj ? `${(proj.prob_finish_first * 100).toFixed(proj.prob_finish_first < 0.01 ? 1 : 0)}%` : "—"}
+                          </td>
+                        </>
+                      )}
                     </tr>
                   );
                 })}
