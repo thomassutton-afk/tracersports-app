@@ -13,9 +13,11 @@
  * are per-game results (1/0), not running totals, so they must be summed,
  * not read off the latest row.
  *
- * Playoff Bracket tab is still a placeholder — each league's bracket format
- * differs enough (NBA: conference bracket + play-in; WNBA: top-8 overall)
- * that it's its own task.
+ * Playoff Bracket tab: live for conference-bracket leagues (NBA) via
+ * BracketTab.jsx. Overall-bracket leagues (WNBA: top-8, no conferences)
+ * still show a placeholder — that format needs its own component, not a
+ * variant of BracketTab, since the whole layout assumes two conferences
+ * funneling into a Finals column.
  */
 
 import { useState, useEffect } from "react";
@@ -25,6 +27,8 @@ import { supabase } from "@/lib/supabase";
 import TeamMark from "./TeamMark";
 import StandingsTab from "./StandingsTab";
 import GamesPanel from "./GamesPanel";
+import BracketTab from "./BracketTab";
+import OverallBracketTab from "./OverallBracketTab";
 
 const TABS = [
   { id: "rankings", label: "Power Rankings" },
@@ -80,6 +84,33 @@ async function fetchStandings(league, season, variant) {
   return { standings, error: null };
 }
 
+async function fetchPlayoffGames(league, season, variant) {
+  const PAGE_SIZE = 1000;
+  let allRows = [];
+  let from = 0;
+
+  while (true) {
+    const { data, error } = await supabase
+      .from("games")
+      .select("team_id, round, result, post_gm_rate, opponent_id, home_away, points_for, points_against, date, game_id")
+      .eq("league", league)
+      .eq("season", season)
+      .eq("variant", variant)
+      .eq("type", "P")
+      .neq("round", "0.1") // excludes in-season tournament games (round=0.1); games.round is TEXT in Postgres, so compare as a string, not a number
+      .order("date", { ascending: true })
+      .range(from, from + PAGE_SIZE - 1);
+
+    if (error) return { poGames: [], error };
+
+    allRows = allRows.concat(data ?? []);
+    if (!data || data.length < PAGE_SIZE) break;
+    from += PAGE_SIZE;
+  }
+
+  return { poGames: allRows, error: null };
+}
+
 async function fetchProjection(league, season, variant) {
   const { data, error } = await supabase
     .from("season_projections")
@@ -105,6 +136,7 @@ export default function LeaguePage() {
   const [activeTab, setActiveTab] = useState("rankings");
   const [standings, setStandings] = useState([]);
   const [projByTeam, setProjByTeam] = useState({});
+  const [poGames, setPoGames] = useState([]);
   const [loading, setLoading] = useState(true);
   const [fetchError, setFetchError] = useState(null);
 
@@ -122,10 +154,16 @@ export default function LeaguePage() {
     Promise.all([
       fetchStandings(league, CURRENT_SEASON, variant),
       fetchProjection(league, CURRENT_SEASON, variant),
-    ]).then(([standingsResult, projResult]) => {
+      // Only conference-bracket leagues (NBA) need actual playoff game rows
+      // right now — OverallBracketTab (WNBA) projects off standings alone.
+      leagueConfig.playoffFormat?.type === "conference-bracket"
+        ? fetchPlayoffGames(league, CURRENT_SEASON, variant)
+        : Promise.resolve({ poGames: [], error: null }),
+    ]).then(([standingsResult, projResult, poResult]) => {
       setStandings(standingsResult.standings);
       setFetchError(standingsResult.error);
       setProjByTeam(projResult.projByTeam); // projection errors are non-fatal - table still renders, projection columns just show "—"
+      setPoGames(poResult.poGames); // playoff-fetch errors are non-fatal - bracket tab just renders empty/TBD
       setLoading(false);
     });
   }, [league, leagueConfig, variant]);
@@ -324,8 +362,20 @@ export default function LeaguePage() {
       )}
 
       {activeTab === "bracket" && (
-        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "4rem 2rem", textAlign: "center", color: "var(--text3)", fontFamily: "var(--font-mono)", fontSize: 13 }}>
-          Playoff Bracket — coming soon
+        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "1.5rem 2rem 4rem" }}>
+          {leagueConfig.playoffFormat?.type === "conference-bracket" ? (
+            <div style={{ overflowX: "auto" }}>
+              <BracketTab poGames={poGames} standings={standings} leagueConfig={leagueConfig} season={CURRENT_SEASON} />
+            </div>
+          ) : leagueConfig.playoffFormat?.type === "overall-bracket" ? (
+            <div style={{ overflowX: "auto" }}>
+              <OverallBracketTab standings={standings} leagueConfig={leagueConfig} season={CURRENT_SEASON} />
+            </div>
+          ) : (
+            <div style={{ padding: "2.5rem 0", textAlign: "center", color: "var(--text3)", fontFamily: "var(--font-mono)", fontSize: 13 }}>
+              Playoff Bracket — coming soon
+            </div>
+          )}
         </div>
       )}
     </div>

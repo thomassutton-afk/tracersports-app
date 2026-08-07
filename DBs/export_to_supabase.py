@@ -102,6 +102,23 @@ SPORT_FOR_LEAGUE = {
 VARIANTS = ("echo", "pulse")
 
 
+def format_round(round_val):
+    """
+    games.round and schedule.round are TEXT columns on Supabase, but the
+    source SQLite columns are REAL (e.g. 1.0, 2.0, 0.5, 0.1). Stringifying
+    a Python float directly produces trailing-.0 strings ("1.0", "2.0")
+    for whole-number rounds, which then fail to match the roundLabels
+    config keys ('1', '2', '3', '4') and any app-side string comparisons
+    that expect the plain integer form. Fractional rounds (0.5 = play-in,
+    0.1 = in-season tournament) are left as-is since they're not whole
+    numbers and their config keys already include the decimal.
+    """
+    if round_val is None:
+        return None
+    f = float(round_val)
+    return str(int(f)) if f == int(f) else str(f)
+
+
 def resolve_current_codes(conn):
     """
     Returns {team_id: (current_code, full_name)} for every team_id in the
@@ -192,7 +209,7 @@ def build_games(conn, league, id_to_code, variant):
                 "date": r["date"],
                 "season": r["season"],
                 "type": r["type"],
-                "round": r["round"],
+                "round": format_round(r["round"]),
                 "opponent_id": opp_code,
                 "home_away": r["home_away"],
                 "points_for": r["points_for"],
@@ -271,7 +288,7 @@ def build_schedule(conn, league, id_to_code, variant):
         r = dict(zip(cols, raw))
         home_code = id_to_code.get(r["home_team"], (r["home_team"], None))[0]
         away_code = id_to_code.get(r["away_team"], (r["away_team"], None))[0]
-        round_ = None if r["round"] is None else str(r["round"])
+        round_ = format_round(r["round"])
 
         home_days_off = r["home_days_off"]
         away_days_off = r["away_days_off"]
