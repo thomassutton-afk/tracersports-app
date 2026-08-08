@@ -24,6 +24,7 @@ import { useState, useEffect } from "react";
 import { useParams, useSearchParams } from "next/navigation";
 import { getLeagueConfig } from "@/lib/sports/registry";
 import { supabase } from "@/lib/supabase";
+import { getCurrentSeason } from "@/lib/gamesData";
 import TeamMark from "./TeamMark";
 import StandingsTab from "./StandingsTab";
 import GamesPanel from "./GamesPanel";
@@ -35,8 +36,6 @@ const TABS = [
   { id: "standings", label: "Standings" },
   { id: "bracket", label: "Playoff Bracket" },
 ];
-
-const CURRENT_SEASON = 2026;
 
 const VARIANT_LABELS = {
   echo: "Echo ratings — carry-forward variant",
@@ -134,6 +133,7 @@ export default function LeaguePage() {
   const league = params.league;
   const variant = searchParams.get("variant") || "echo";
   const [activeTab, setActiveTab] = useState("rankings");
+  const [season, setSeason] = useState(null);
   const [standings, setStandings] = useState([]);
   const [projByTeam, setProjByTeam] = useState({});
   const [poGames, setPoGames] = useState([]);
@@ -155,16 +155,27 @@ export default function LeaguePage() {
     configError = e.message;
   }
 
+  // Resolve "current season" from real data (latest season with games)
+  // rather than a hardcoded year, so this self-corrects the moment a new
+  // season starts writing rows - no manual bump needed each year.
   useEffect(() => {
     if (!leagueConfig) return;
+    setSeason(null);
+    getCurrentSeason(league).then(({ season: resolved }) => {
+      setSeason(resolved);
+    });
+  }, [league, leagueConfig]);
+
+  useEffect(() => {
+    if (!leagueConfig || season === null) return;
     setLoading(true);
     Promise.all([
-      fetchStandings(league, CURRENT_SEASON, variant),
-      fetchProjection(league, CURRENT_SEASON, variant),
+      fetchStandings(league, season, variant),
+      fetchProjection(league, season, variant),
       // Only conference-bracket leagues (NBA) need actual playoff game rows
       // right now — OverallBracketTab (WNBA) projects off standings alone.
       leagueConfig.playoffFormat?.type === "conference-bracket"
-        ? fetchPlayoffGames(league, CURRENT_SEASON, variant)
+        ? fetchPlayoffGames(league, season, variant)
         : Promise.resolve({ poGames: [], error: null }),
     ]).then(([standingsResult, projResult, poResult]) => {
       setStandings(standingsResult.standings);
@@ -173,7 +184,7 @@ export default function LeaguePage() {
       setPoGames(poResult.poGames); // playoff-fetch errors are non-fatal - bracket tab just renders empty/TBD
       setLoading(false);
     });
-  }, [league, leagueConfig, variant]);
+  }, [league, leagueConfig, variant, season]);
 
   if (configError) {
     return (
@@ -203,7 +214,7 @@ export default function LeaguePage() {
   if (standings.length === 0) {
     return (
       <div style={{ padding: 40, fontFamily: "var(--font-mono)", color: "var(--text3)", fontSize: 13 }}>
-        No data yet for {leagueConfig.label} season {CURRENT_SEASON}.
+        No data yet for {leagueConfig.label} season {season}.
       </div>
     );
   }
@@ -216,7 +227,7 @@ export default function LeaguePage() {
       <div className="hero">
         <div>
           <div className="hero-label">
-            {leagueConfig.seasonLabel(CURRENT_SEASON)} Season
+            {leagueConfig.seasonLabel(season)} Season
           </div>
           <div className="hero-heading">Dashboard</div>
           <div className="hero-sub">
@@ -365,7 +376,7 @@ export default function LeaguePage() {
             </table>
           </div>
 
-          <GamesPanel league={league} season={CURRENT_SEASON} variant={variant} leagueConfig={leagueConfig} />
+          <GamesPanel league={league} season={season} variant={variant} leagueConfig={leagueConfig} />
         </div>
         </div>
       )}
@@ -380,11 +391,11 @@ export default function LeaguePage() {
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "1.5rem 2rem 4rem" }}>
           {leagueConfig.playoffFormat?.type === "conference-bracket" ? (
             <div style={{ overflowX: "auto" }}>
-              <BracketTab poGames={poGames} standings={standings} leagueConfig={leagueConfig} season={CURRENT_SEASON} />
+              <BracketTab poGames={poGames} standings={standings} leagueConfig={leagueConfig} season={season} />
             </div>
           ) : leagueConfig.playoffFormat?.type === "overall-bracket" ? (
             <div style={{ overflowX: "auto" }}>
-              <OverallBracketTab standings={standings} leagueConfig={leagueConfig} season={CURRENT_SEASON} />
+              <OverallBracketTab standings={standings} leagueConfig={leagueConfig} season={season} />
             </div>
           ) : (
             <div style={{ padding: "2.5rem 0", textAlign: "center", color: "var(--text3)", fontFamily: "var(--font-mono)", fontSize: 13 }}>

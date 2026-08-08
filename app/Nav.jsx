@@ -1,15 +1,15 @@
 "use client";
 
 /**
- * Shared site nav — brand mark, league switcher, and Echo/Pulse variant
- * toggle. All three are shared chrome, live in the URL (league as a path
+ * Shared site nav — brand mark, page links, league switcher, and Echo/Pulse
+ * variant toggle. All shared chrome lives in the URL (league as a path
  * segment, variant as a ?variant= search param) so any page can read the
  * current selection without needing a separate state-management layer.
  *
- * Season/All-Time/Teams/About links are intentionally NOT here yet — those
- * pages don't exist in this new structure yet. Add them back in, league-aware
- * (e.g. `/${league}/season/2026`), as each page gets built. Don't add dead
- * links ahead of real pages.
+ * Dashboard/Season are league-aware (built from currentLeague, so they follow
+ * whichever league is active); About is league-agnostic. All-Time and Team
+ * pages aren't built yet — don't add dead links ahead of real pages; add
+ * them here once they exist.
  */
 
 import Link from "next/link";
@@ -24,9 +24,17 @@ const VARIANTS = [
 export default function Nav() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const currentLeague = pathname.split("/")[1]; // "" | "nba" | "wnba" | ...
+  const currentLeague = pathname.split("/")[1]; // "" | "nba" | "wnba" | "about" | ...
   const currentVariant = searchParams.get("variant") || "echo";
   const leagueIds = getAllLeagueIds();
+
+  // Dashboard/Season links need *some* league to point at even when the
+  // current route isn't a league route (homepage, About) — falls back to
+  // the first registered league rather than hardcoding "nba", so this
+  // still makes sense if the registry's league order ever changes.
+  const navLeague = leagueIds.includes(currentLeague) ? currentLeague : leagueIds[0];
+  const onSeasonPage = pathname.endsWith("/season");
+  const onDashboard = leagueIds.includes(currentLeague) && !onSeasonPage;
 
   return (
     <>
@@ -40,7 +48,26 @@ export default function Nav() {
           </span>
         </Link>
 
-        <div className="nav-links" />
+        <div className="nav-links">
+          <Link
+            href={`/${navLeague}?variant=${currentVariant}`}
+            className={`nav-link${onDashboard ? " active" : ""}`}
+          >
+            Dashboard
+          </Link>
+          <Link
+            href={`/${navLeague}/season?variant=${currentVariant}`}
+            className={`nav-link${onSeasonPage ? " active" : ""}`}
+          >
+            Season
+          </Link>
+          <Link
+            href="/about"
+            className={`nav-link${pathname === "/about" ? " active" : ""}`}
+          >
+            About
+          </Link>
+        </div>
 
         <div className="nav-right">
           <div className="variant-toggle">
