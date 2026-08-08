@@ -14,10 +14,11 @@
  *
  * NOT YET WIRED FOR LIVE PLAYOFF GAMES. Once WNBA playoffs actually start,
  * this will need updating to pull real `type='P'` games and track series
- * wins the same way BracketTab.jsx does for the NBA — deliberately left out
- * of this pass because WNBA's actual series length per round (best-of-3?
- * best-of-5?) isn't confirmed anywhere in wnba/config.js yet, and that's
- * not a detail worth guessing at.
+ * wins the same way BracketTab.jsx does for the NBA. Series length per
+ * round is now confirmed in wnba/config.js (playoffFormat.winsNeeded:
+ * best-of-3 Round 1, best-of-5 Semis, best-of-7 Finals) — that was the
+ * blocking unknown, so this is ready to build whenever real playoff games
+ * exist to track.
  */
 
 import TeamMark from "./TeamMark";
