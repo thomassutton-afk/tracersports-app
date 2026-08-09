@@ -136,6 +136,19 @@ def revive(conn, current_code: str, season: int, name: str | None):
     print("Ratings rebuilt.")
 
 
+def set_colors(conn, current_code: str, season: int, primary: str, secondary: str, tertiary: str):
+    team_id = _resolve_or_die(conn, current_code)
+    ok = db.set_era_colors(conn, team_id, season, primary, secondary, tertiary)
+    conn.commit()
+    if not ok:
+        print(f"No team_history era for '{current_code}' (team_id '{team_id}') starts exactly "
+              f"at season {season}. Run 'franchise.py status' to see each era's real "
+              f"start_season - colors are set on a specific era, not a season range.")
+        sys.exit(1)
+    print(f"Set colors for '{current_code}' (team_id '{team_id}') era starting {season}: "
+          f"primary={primary} secondary={secondary} tertiary={tertiary}")
+
+
 def list_status(conn):
     print("Teams:")
     for tid, name in conn.execute("SELECT team_id, team_name FROM teams ORDER BY team_id"):
@@ -146,16 +159,18 @@ def list_status(conn):
         print("  (none)")
     for alias, tid, note in rows:
         print(f"  {alias:6s} -> {tid:10s} {note or ''}")
-    print("\nEra history (team_id: code/name valid seasons):")
+    print("\nEra history (team_id: code/name valid seasons, colors if set):")
     rows = conn.execute(
-        "SELECT team_id, code, name, start_season, end_season FROM team_history "
+        "SELECT team_id, code, name, start_season, end_season, "
+        "primary_color, secondary_color, tertiary_color FROM team_history "
         "ORDER BY team_id, start_season"
     ).fetchall()
     if not rows:
         print("  (none)")
-    for tid, code, name, start, end in rows:
+    for tid, code, name, start, end, pri, sec, ter in rows:
         end_label = end if end is not None else "present"
-        print(f"  {tid:10s} {code:6s} {name:24s} {start}-{end_label}")
+        colors = f"  colors: {pri}/{sec}/{ter}" if pri else ""
+        print(f"  {tid:10s} {code:6s} {name:24s} {start}-{end_label}{colors}")
     print("\nForced resets (team_id, season -> base rating):")
     rows = conn.execute("SELECT team_id, season, note FROM franchise_resets ORDER BY season").fetchall()
     if not rows:
@@ -185,6 +200,15 @@ def main():
     rv.add_argument("--season", type=int, required=True)
     rv.add_argument("--name", help="new display name")
 
+    sc = sub.add_parser("set-colors")
+    sc.add_argument("--current-code", required=True, help="the code this team is CURRENTLY known by")
+    sc.add_argument("--season", type=int, required=True,
+                     help="the era's start_season (see 'status') - identifies which era row "
+                          "to color, since a code alone can be ambiguous across eras")
+    sc.add_argument("--primary", required=True, help="hex color, e.g. '#00653A'")
+    sc.add_argument("--secondary", required=True, help="hex color")
+    sc.add_argument("--tertiary", required=True, help="hex color")
+
     sub.add_parser("status")
 
     args = p.parse_args()
@@ -196,6 +220,8 @@ def main():
         rename(conn, args.current_code, args.name)
     elif args.cmd == "revive":
         revive(conn, args.current_code, args.season, args.name)
+    elif args.cmd == "set-colors":
+        set_colors(conn, args.current_code, args.season, args.primary, args.secondary, args.tertiary)
     elif args.cmd == "status":
         list_status(conn)
 

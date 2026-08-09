@@ -41,7 +41,7 @@ function todayET() {
   }).format(new Date());
 }
 
-async function fetchTopTeams(league, season, variant, count = 3) {
+async function fetchTopTeams(league: string, season: number, variant: string, count = 3) {
   const { data, error } = await supabase
     .from("games")
     .select("team_id, date, post_gm_rate")
@@ -53,7 +53,7 @@ async function fetchTopTeams(league, season, variant, count = 3) {
 
   if (error || !data) return [];
 
-  const latestByTeam = {};
+  const latestByTeam: Record<string, number> = {};
   for (const row of data) {
     if (!(row.team_id in latestByTeam)) {
       latestByTeam[row.team_id] = row.post_gm_rate;
@@ -66,7 +66,7 @@ async function fetchTopTeams(league, season, variant, count = 3) {
     .slice(0, count);
 }
 
-function TodayGameCard({ leagueId, leagueConfig, game }) {
+function TodayGameCard({ leagueId, leagueConfig, game }: { leagueId: string; leagueConfig: any; game: any }) {
   const homeTeam = leagueConfig.teams[game.home];
   const awayTeam = leagueConfig.teams[game.away];
   const homeFav = game.winProb != null && game.winProb >= 0.5;
@@ -123,8 +123,8 @@ export default async function Home() {
       ])
     ),
   ]);
-  const topTeamsByLeague = Object.fromEntries(topTeamsEntries);
-  const todaysGamesByLeague = Object.fromEntries(todaysGamesEntries);
+  const topTeamsByLeague: Record<string, any[]> = Object.fromEntries(topTeamsEntries);
+  const todaysGamesByLeague: Record<string, any[]> = Object.fromEntries(todaysGamesEntries);
   const hasAnyGamesToday = Object.values(todaysGamesByLeague).some((games) => games.length > 0);
 
   return (
@@ -190,7 +190,7 @@ export default async function Home() {
           <div style={{ display: "flex", gap: 12, overflowX: "auto", paddingBottom: 4 }}>
             {allLeagueIds.flatMap((leagueId) =>
               (todaysGamesByLeague[leagueId] || []).map((game, i) => (
-                <TodayGameCard key={`${leagueId}-${i}`} leagueId={leagueId} leagueConfig={LEAGUES[leagueId]} game={game} />
+                <TodayGameCard key={`${leagueId}-${i}`} leagueId={leagueId} leagueConfig={(LEAGUES as any)[leagueId]} game={game} />
               ))
             )}
           </div>
@@ -216,7 +216,7 @@ export default async function Home() {
           </div>
           <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
             {sport.leagues.map((leagueId) => {
-              const config = LEAGUES[leagueId];
+              const config = (LEAGUES as any)[leagueId];
               const topTeams = topTeamsByLeague[leagueId] || [];
               return (
                 <Link key={leagueId} href={`/${leagueId}?variant=echo`} className="league-card">

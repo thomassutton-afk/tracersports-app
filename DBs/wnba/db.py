@@ -256,6 +256,20 @@ def _migrate(conn: sqlite3.Connection) -> None:
         conn.executescript(SCHEMA)
         conn.commit()
 
+    # Era-specific colors: nullable by design. A row with no colors set
+    # just means nobody's populated that era's colors yet - callers fall
+    # back to the current identity's colors (from config.js), not an
+    # error. Kept on team_history itself (not a separate lookup keyed by
+    # code) because code alone isn't a stable key - e.g. 'San Antonio
+    # Silver Stars' (2003-2013) and 'San Antonio Stars' (2014-2017) are
+    # two different team_history rows sharing the code 'SAS'; only
+    # (team_id, start_season) uniquely identifies an era.
+    history_cols = {row[1] for row in conn.execute("PRAGMA table_info(team_history)")}
+    for col in ("primary_color", "secondary_color", "tertiary_color"):
+        if col not in history_cols:
+            conn.execute(f"ALTER TABLE team_history ADD COLUMN {col} TEXT")
+    conn.commit()
+
 
 def add_alias(conn: sqlite3.Connection, alias: str, team_id: str, note: str = "") -> None:
     """Register that `alias` (a team code as it appears in a source
@@ -348,6 +362,41 @@ def display_name(conn: sqlite3.Connection, team_id: str, season: int) -> str:
         return row[0]
     row = conn.execute("SELECT team_name FROM teams WHERE team_id = ?", (team_id,)).fetchone()
     return row[0] if row else team_id
+
+
+def era_info(conn: sqlite3.Connection, team_id: str, season: int) -> dict | None:
+    """Everything about the era covering `season`: code, name, and
+    (possibly None) colors. Returns None if no team_history row covers
+    that season - caller should fall back to teams.team_name/config.js
+    current colors in that case, same as display_name()'s fallback."""
+    row = conn.execute(
+        "SELECT code, name, primary_color, secondary_color, tertiary_color "
+        "FROM team_history WHERE team_id = ? AND start_season <= ? "
+        "AND (end_season IS NULL OR end_season >= ?)",
+        (team_id, season, season),
+    ).fetchone()
+    if not row:
+        return None
+    return {
+        "code": row[0], "name": row[1],
+        "primary": row[2], "secondary": row[3], "tertiary": row[4],
+    }
+
+
+def set_era_colors(conn: sqlite3.Connection, team_id: str, start_season: int,
+                    primary: str, secondary: str, tertiary: str) -> bool:
+    """Set colors on the specific team_history era row identified by
+    (team_id, start_season) - the primary key, so this always targets
+    exactly one era even when multiple rows share the same code.
+    Returns True if a row was updated, False if no era starts at that
+    exact season (check franchise.py status for the real start_season)."""
+    before = conn.total_changes
+    conn.execute(
+        "UPDATE team_history SET primary_color = ?, secondary_color = ?, tertiary_color = ? "
+        "WHERE team_id = ? AND start_season = ?",
+        (primary, secondary, tertiary, team_id, start_season),
+    )
+    return conn.total_changes > before
 
 
 def add_reset(conn: sqlite3.Connection, team_id: str, season: int, note: str = "") -> None:

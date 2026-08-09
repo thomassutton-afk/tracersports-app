@@ -13,10 +13,14 @@
  *     for now; old page's data came from ad-hoc client-side reduction of
  *     raw game rows, portable, just a second chunk of work on top of this.
  *   - Game Log tab — same story, plus pagination UI.
- *   - Historical team identities/logos (SEA→OKC, VAN→MEM, NJN→BRK, etc.) —
- *     the old page's DISPLAY_IDENTITIES/FRANCHISE_ABBRS system. Real gap:
- *     a 2001 Seattle SuperSonics row currently displays as "OKC" via
- *     leagueConfig, not "SEA". Worth its own pass once this ships.
+ *
+ * Era-correct name/code/colors (e.g. a 1996 game shows "Seattle
+ * SuperSonics" rather than "Oklahoma City Thunder") come from
+ * lib/historicalIdentity.js, backed by the real team_history table —
+ * same mechanism All-Time Rankings uses (see that page's header comment),
+ * not a separate one. Falls back to the current team's name/colors from
+ * config.js whenever an era has no history row or no colors backfilled
+ * yet, which is the common case.
  *
  * Season selector is local page state, not a route segment or a Nav.jsx
  * control — kept deliberately out of the shared Nav component so someone
@@ -37,7 +41,13 @@ import {
   fetchSeasonPlayoffGames,
   tallyPlayoffResults,
 } from "@/lib/gamesData";
-import TeamMark from "../TeamMark";
+import {
+  fetchTeamHistory,
+  getDisplayIdentity,
+  fetchLogoIndex,
+  resolveHistoricalLogoPath,
+} from "@/lib/historicalIdentity";
+import HistoricalTeamMark from "../HistoricalTeamMark";
 
 const VARIANT_LABELS = {
   echo: "Echo ratings — carry-forward variant",
@@ -62,6 +72,8 @@ export default function SeasonPage() {
   const [preseasonByTeam, setPreseasonByTeam] = useState({});
   const [accuracy, setAccuracy] = useState(null);
   const [poByTeam, setPoByTeam] = useState({});
+  const [historyByTeam, setHistoryByTeam] = useState({});
+  const [logoIndex, setLogoIndex] = useState({});
   const [loading, setLoading] = useState(true);
   const [fetchError, setFetchError] = useState(null);
   const [activeTab, setActiveTab] = useState("standings");
@@ -74,6 +86,14 @@ export default function SeasonPage() {
   } catch (e) {
     configError = e.message;
   }
+
+  // Team history + logo index — independent of season/variant, fetched
+  // once per league, same as All-Time Rankings does with this exact data.
+  useEffect(() => {
+    if (!leagueConfig) return;
+    fetchTeamHistory(league).then(({ byTeam }) => setHistoryByTeam(byTeam));
+    fetchLogoIndex(league).then(setLogoIndex);
+  }, [league, leagueConfig]);
 
   // Season list + default to the most recent season, once per league.
   useEffect(() => {
@@ -296,8 +316,17 @@ export default function SeasonPage() {
                   {sorted.map((row, i) => {
                     const team = leagueConfig.teams[row.team_id];
                     if (!team) return null;
+                    // Era-correct name/colors when this season's identity
+                    // differs from the team's current one (e.g. 1996 shows
+                    // "Seattle SuperSonics" instead of "Oklahoma City
+                    // Thunder") - falls back to the current team's own
+                    // name/colors internally within getDisplayIdentity
+                    // whenever there's no history row or no colors
+                    // backfilled yet for the matched era.
+                    const identity = getDisplayIdentity(row.team_id, season, historyByTeam, leagueConfig);
+                    const logoPath = resolveHistoricalLogoPath(row.team_id, season, historyByTeam, logoIndex);
                     const barPct = maxRating > minRating ? ((row.finalRating - minRating) / (maxRating - minRating)) * 100 : 50;
-                    const fillColor = team.primary === "#000000" ? team.tertiary : team.primary;
+                    const fillColor = identity.primary === "#000000" ? identity.tertiary : identity.primary;
                     const po = playoffLabel(row.team_id);
                     const preseason = preseasonByTeam[row.team_id];
                     return (
@@ -314,8 +343,15 @@ export default function SeasonPage() {
                         </td>
                         <td style={{ padding: "10px 8px" }}>
                           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                            <TeamMark team={team} teamId={row.team_id} league={league} />
-                            <span style={{ fontSize: 13, fontWeight: 700, color: team.secondary }}>{team.name}</span>
+                            <HistoricalTeamMark
+                              logoPath={logoPath}
+                              currentLogoTeamId={row.team_id}
+                              league={league}
+                              abbr={identity.code}
+                              color={fillColor}
+                              size={28}
+                            />
+                            <span style={{ fontSize: 13, fontWeight: 700, color: identity.secondary }}>{identity.name}</span>
                           </div>
                         </td>
                         {showPreseason && (

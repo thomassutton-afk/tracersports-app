@@ -6,10 +6,10 @@
  * segment, variant as a ?variant= search param) so any page can read the
  * current selection without needing a separate state-management layer.
  *
- * Dashboard/Season are league-aware (built from currentLeague, so they follow
- * whichever league is active); About is league-agnostic. All-Time and Team
- * pages aren't built yet — don't add dead links ahead of real pages; add
- * them here once they exist.
+ * Dashboard/Season/All-Time are league-aware (built from currentLeague, so
+ * they follow whichever league is active); About is league-agnostic. Team
+ * page isn't built yet — don't add a dead link ahead of a real page; add
+ * it here once it exists.
  */
 
 import Link from "next/link";
@@ -34,7 +34,8 @@ export default function Nav() {
   // still makes sense if the registry's league order ever changes.
   const navLeague = leagueIds.includes(currentLeague) ? currentLeague : leagueIds[0];
   const onSeasonPage = pathname.endsWith("/season");
-  const onDashboard = leagueIds.includes(currentLeague) && !onSeasonPage;
+  const onAllTimePage = pathname.endsWith("/all-time");
+  const onDashboard = leagueIds.includes(currentLeague) && !onSeasonPage && !onAllTimePage;
 
   return (
     <>
@@ -60,6 +61,12 @@ export default function Nav() {
             className={`nav-link${onSeasonPage ? " active" : ""}`}
           >
             Season
+          </Link>
+          <Link
+            href={`/${navLeague}/all-time?variant=${currentVariant}`}
+            className={`nav-link${onAllTimePage ? " active" : ""}`}
+          >
+            All-Time
           </Link>
           <Link
             href="/about"

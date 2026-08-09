@@ -18,6 +18,36 @@ CREATE TABLE IF NOT EXISTS teams (
     PRIMARY KEY (league, team_id)
 );
 
+-- Franchise identity history — e.g. Seattle SuperSonics (1996-2008) -> OKC
+-- Thunder (2009-present), Utah Starzz -> San Antonio -> Las Vegas Aces.
+-- team_id is always the CURRENT code (same one every other table uses);
+-- `code`/`name`/`start_season`/`end_season` describe one era of that
+-- franchise's identity. end_season IS NULL means "current" (still that
+-- name today) — note a folded/dissolved franchise (e.g. WNBA's Houston
+-- Comets) also has end_season NULL here since it never became something
+-- else; `active` on the `teams` row above is what actually distinguishes
+-- "still playing" from "folded", not this table.
+-- Powers season-aware historical names/abbreviations/logos on the
+-- All-Time and Team pages. Static reference data — effectively never
+-- changes except when a real relocation/rename happens.
+CREATE TABLE IF NOT EXISTS team_history (
+    league          TEXT NOT NULL,
+    team_id         TEXT NOT NULL,
+    code            TEXT NOT NULL,
+    name            TEXT NOT NULL,
+    start_season    INTEGER NOT NULL,
+    end_season      INTEGER,
+    -- Frequently NULL — most eras don't have colors backfilled yet (see
+    -- DBs/seed_historical_colors.py). Callers fall back to the current
+    -- team's colors from config.js in that case, same fallback shape as
+    -- name/code falling back to the current identity.
+    primary_color   TEXT,
+    secondary_color TEXT,
+    tertiary_color  TEXT,
+    PRIMARY KEY (league, team_id, code, start_season),
+    FOREIGN KEY (league, team_id) REFERENCES teams(league, team_id)
+);
+
 CREATE TABLE IF NOT EXISTS seasons (
     league      TEXT NOT NULL,
     season      INTEGER NOT NULL,
@@ -189,3 +219,4 @@ CREATE INDEX IF NOT EXISTS idx_projections_league_season_variant ON season_proje
 CREATE INDEX IF NOT EXISTS idx_standings_league_season_variant ON standings (league, season, variant);
 CREATE INDEX IF NOT EXISTS idx_preseason_league_season_variant ON preseason_ratings (league, season, variant);
 CREATE INDEX IF NOT EXISTS idx_teams_sport                     ON teams (sport);
+CREATE INDEX IF NOT EXISTS idx_team_history_league_team         ON team_history (league, team_id);

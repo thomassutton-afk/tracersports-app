@@ -174,6 +174,54 @@ def build_teams(conn, league, id_to_code):
     return rows
 
 
+TEAM_HISTORY_COLUMNS = [
+    "league", "team_id", "code", "name", "start_season", "end_season",
+    "primary_color", "secondary_color", "tertiary_color",
+]
+
+
+def build_team_history(conn, league, id_to_code):
+    """
+    Franchise identity history (e.g. Seattle SuperSonics 1996-2008 -> OKC
+    2009-present) — source of truth is the local team_history table, keyed
+    to the CURRENT code (same team_id every other exported table uses) so
+    the frontend can join on it directly. This is what powers season-aware
+    historical names/abbreviations/logos on the All-Time and Team pages —
+    deliberately not a hand-maintained JS map (the old site's
+    DISPLAY_IDENTITIES/FRANCHISE_ABBRS), since this data already exists,
+    is per-league (not NBA-only — WNBA has real relocations too, e.g.
+    Utah Starzz -> San Antonio -> Las Vegas Aces), and won't drift from
+    whatever's actually in the database.
+
+    primary/secondary/tertiary colors are frequently NULL — most eras
+    don't have colors backfilled yet (see DBs/seed_historical_colors.py
+    and db.py's set_era_colors/franchise.py's set-colors command). Callers
+    fall back to the current team's colors from config.js in that case,
+    same fallback shape as name/code falling back to the current identity.
+    """
+    cur = conn.cursor()
+    cur.execute(
+        "SELECT team_id, code, name, start_season, end_season, "
+        "primary_color, secondary_color, tertiary_color "
+        "FROM team_history ORDER BY team_id, start_season"
+    )
+    rows = []
+    for team_id, code, name, start, end, pri, sec, ter in cur.fetchall():
+        current_code = id_to_code.get(team_id, (team_id, None))[0]
+        rows.append({
+            "league": league,
+            "team_id": current_code,
+            "code": code,
+            "name": name,
+            "start_season": start,
+            "end_season": end,
+            "primary_color": pri,
+            "secondary_color": sec,
+            "tertiary_color": ter,
+        })
+    return rows
+
+
 GAMES_COLUMNS = [
     "game_id", "team_id", "date", "season", "type", "round", "opponent_id",
     "home_away", "points_for", "points_against", "ot", "days_off",
@@ -396,6 +444,7 @@ def main():
     conn = sqlite3.connect(args.db)
     id_to_code = resolve_current_codes(conn)
     teams_rows = build_teams(conn, args.league, id_to_code)  # variant-independent, built once
+    team_history_rows = build_team_history(conn, args.league, id_to_code)  # also variant-independent
 
     games_rows, schedule_rows, projection_rows = [], [], []
     for variant in VARIANTS:
@@ -409,6 +458,7 @@ def main():
     print(f"  teams: {len(teams_rows)} rows "
           f"({sum(1 for t in teams_rows if t['active'])} active, "
           f"{sum(1 for t in teams_rows if not t['active'])} historical)")
+    print(f"  team_history: {len(team_history_rows)} rows")
     print(f"  games: {len(games_rows)} rows")
     print(f"  schedule: {len(schedule_rows)} rows "
           f"({len(schedule_rows) // 2 // len(VARIANTS)} upcoming game(s) per variant)")
@@ -440,12 +490,12 @@ def main():
         print("\n[dry run] No Supabase connection made, nothing written.")
         return
 
-    write_to_supabase(teams_rows, games_rows, schedule_rows, projection_rows,
-                       preseason_rows, args.league)
+    write_to_supabase(teams_rows, team_history_rows, games_rows, schedule_rows,
+                       projection_rows, preseason_rows, args.league)
 
 
-def write_to_supabase(teams_rows, games_rows, schedule_rows, projection_rows,
-                       preseason_rows, league):
+def write_to_supabase(teams_rows, team_history_rows, games_rows, schedule_rows,
+                       projection_rows, preseason_rows, league):
     import psycopg2
     from psycopg2.extras import execute_values
 
@@ -489,6 +539,20 @@ def write_to_supabase(teams_rows, games_rows, schedule_rows, projection_rows,
         ],
     )
     print(f"Wrote {len(teams_rows)} team rows.")
+
+    if team_history_rows:
+        execute_values(
+            cur,
+            f"""
+            INSERT INTO team_history ({', '.join(TEAM_HISTORY_COLUMNS)})
+            VALUES %s
+            ON CONFLICT (league, team_id, code, start_season) DO UPDATE SET
+                name = EXCLUDED.name,
+                end_season = EXCLUDED.end_season
+            """,
+            [tuple(h[c] for c in TEAM_HISTORY_COLUMNS) for h in team_history_rows],
+        )
+    print(f"Wrote {len(team_history_rows)} team_history rows.")
 
     execute_values(
         cur,
