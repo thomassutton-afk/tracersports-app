@@ -17,12 +17,11 @@
  * lib/historicalIdentity.js, backed by the real team_history table rather
  * than a hand-maintained map — see that file's header comment.
  *
- * Team name links intentionally have no href yet — the Team page (next
- * piece of work) is what they'll point to. Not adding a dead link ahead
- * of a real page, same principle Nav.jsx already follows.
+ * Team names link to the Team page (app/[league]/team/[teamId]/page.js).
  */
 
 import { useState, useEffect, useMemo } from "react";
+import Link from "next/link";
 import { useParams, useSearchParams } from "next/navigation";
 import { getLeagueConfig } from "@/lib/sports/registry";
 import {
@@ -404,7 +403,10 @@ export default function AllTimeRankingsPage() {
                           {overallRank}
                         </td>
                         <td style={{ padding: "9px 8px" }}>
-                          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                          <Link
+                            href={`/${league}/team/${row.team_id}?variant=${variant}`}
+                            style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}
+                          >
                             <div style={{ width: 34, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                               <HistoricalTeamMark
                                 logoPath={row.logoPath}
@@ -428,7 +430,7 @@ export default function AllTimeRankingsPage() {
                                 )}
                               </div>
                             </div>
-                          </div>
+                          </Link>
                         </td>
                         {showPreseason && (
                           <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text3)" }}>

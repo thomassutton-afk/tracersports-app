@@ -30,6 +30,7 @@
  */
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { useParams, useSearchParams } from "next/navigation";
 import { getLeagueConfig } from "@/lib/sports/registry";
 import {
@@ -342,7 +343,10 @@ export default function SeasonPage() {
                           {i + 1}
                         </td>
                         <td style={{ padding: "10px 8px" }}>
-                          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                          <Link
+                            href={`/${league}/team/${row.team_id}?variant=${variant}`}
+                            style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}
+                          >
                             <HistoricalTeamMark
                               logoPath={logoPath}
                               currentLogoTeamId={row.team_id}
@@ -352,7 +356,7 @@ export default function SeasonPage() {
                               size={28}
                             />
                             <span style={{ fontSize: 13, fontWeight: 700, color: identity.secondary }}>{identity.name}</span>
-                          </div>
+                          </Link>
                         </td>
                         {showPreseason && (
                           <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text2)" }}>
