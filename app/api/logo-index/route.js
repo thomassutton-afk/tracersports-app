@@ -7,18 +7,14 @@
  * on purpose (same as the old site): drop a new logo file in, it shows up,
  * no manifest to hand-edit.
  *
- * League scoping / a real collision risk worth knowing about: several
- * abbreviations exist in BOTH NBA and WNBA (DAL, DET, ORL, UTA, WAS, ATL,
- * CHI, IND, MIN, PHX, POR, TOR...). The 117 files already in
- * public/logos/historical/ today are all NBA and are stored flat (no
- * subfolder) — that's fine as long as WNBA has zero historical logos, but
- * the moment a WNBA file with a colliding code lands in that same flat
- * folder, a query for that code could resolve to the wrong league's team.
- * This route checks for a league subfolder (public/logos/historical/{league}/)
- * FIRST and only falls back to the flat folder if that subfolder doesn't
- * exist — so: NBA's existing flat files need no changes, but any future
- * WNBA historical logos should go in public/logos/historical/wnba/ rather
- * than flat, to stay collision-safe.
+ * League scoping: several abbreviations exist in BOTH NBA and WNBA (DAL,
+ * DET, ORL, UTA, WAS, ATL, CHI, IND, MIN, PHX, POR, TOR...), so historical
+ * logos are stored per league — public/logos/historical/nba/ and
+ * public/logos/historical/wnba/ — rather than flat, to keep those from
+ * resolving to the wrong league's team. This route checks the league
+ * subfolder first and only falls back to the flat top-level folder if
+ * that subfolder doesn't exist, for backward compatibility with anything
+ * ever dropped in flat.
  */
 import { readdir } from "fs/promises";
 import path from "path";

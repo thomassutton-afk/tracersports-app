@@ -324,7 +324,7 @@ export default function SeasonPage() {
                     // whenever there's no history row or no colors
                     // backfilled yet for the matched era.
                     const identity = getDisplayIdentity(row.team_id, season, historyByTeam, leagueConfig);
-                    const logoPath = resolveHistoricalLogoPath(row.team_id, season, historyByTeam, logoIndex);
+                    const logoPath = resolveHistoricalLogoPath(row.team_id, season, historyByTeam, logoIndex, league);
                     const barPct = maxRating > minRating ? ((row.finalRating - minRating) / (maxRating - minRating)) * 100 : 50;
                     const fillColor = identity.primary === "#000000" ? identity.tertiary : identity.primary;
                     const po = playoffLabel(row.team_id);

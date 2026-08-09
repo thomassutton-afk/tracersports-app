@@ -170,7 +170,7 @@ export default function AllTimeRankingsPage() {
       const key = `${row.team_id}-${row.season}`;
       const po = poByTeamSeason[key];
       const identity = getDisplayIdentity(row.team_id, row.season, historyByTeam, leagueConfig);
-      const logoPath = resolveHistoricalLogoPath(row.team_id, row.season, historyByTeam, logoIndex);
+      const logoPath = resolveHistoricalLogoPath(row.team_id, row.season, historyByTeam, logoIndex, league);
       const preseasonElo = preseasonByTeamSeason[key] ?? null;
       const ratingDelta =
         row.finalRating != null && row.rsRating != null ? row.finalRating - row.rsRating : null;

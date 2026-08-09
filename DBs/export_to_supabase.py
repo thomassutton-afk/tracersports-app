@@ -548,7 +548,10 @@ def write_to_supabase(teams_rows, team_history_rows, games_rows, schedule_rows,
             VALUES %s
             ON CONFLICT (league, team_id, code, start_season) DO UPDATE SET
                 name = EXCLUDED.name,
-                end_season = EXCLUDED.end_season
+                end_season = EXCLUDED.end_season,
+                primary_color = EXCLUDED.primary_color,
+                secondary_color = EXCLUDED.secondary_color,
+                tertiary_color = EXCLUDED.tertiary_color
             """,
             [tuple(h[c] for c in TEAM_HISTORY_COLUMNS) for h in team_history_rows],
         )
