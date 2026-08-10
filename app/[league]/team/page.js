@@ -18,10 +18,20 @@
  * something a Team page itself ever redirects back to.
  */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useSearchParams, useRouter } from "next/navigation";
 import { getLeagueConfig } from "@/lib/sports/registry";
 import TeamMark from "../TeamMark";
+import HistoricalTeamMark from "../HistoricalTeamMark";
+import { fetchLogoIndex, resolveHistoricalLogoPath } from "@/lib/historicalIdentity";
+
+// Folded franchises (e.g. WNBA's Sting/Rockers/Comets/Sol/Monarchs) never
+// got a "current" logo under /logos/{league}/{code}.png — TeamMark 404s on
+// them and falls back to the plain text badge. They DO have files under
+// /logos/historical/{league}/{code}_{year}.png though, so for the Former
+// Teams grid we resolve each one's most recent historical file instead
+// (season passed as Infinity picks the latest year on file for that code).
+const FAR_FUTURE_SEASON = 9999;
 
 export default function TeamSelectorPage() {
   const params = useParams();
@@ -31,6 +41,17 @@ export default function TeamSelectorPage() {
   const variant = searchParams.get("variant") || "echo";
 
   const [selected, setSelected] = useState("");
+  const [logoIndex, setLogoIndex] = useState(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchLogoIndex(league).then((idx) => {
+      if (!cancelled) setLogoIndex(idx);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [league]);
 
   let leagueConfig;
   let configError = null;
@@ -104,7 +125,14 @@ export default function TeamSelectorPage() {
             <div className="section-label" style={{ marginTop: 32 }}>
               Former Teams
             </div>
-            <TeamGrid teamIds={formerIds} teams={leagueConfig.teams} league={league} onSelect={goToTeam} muted />
+            <TeamGrid
+              teamIds={formerIds}
+              teams={leagueConfig.teams}
+              league={league}
+              onSelect={goToTeam}
+              muted
+              logoIndex={logoIndex}
+            />
           </>
         )}
       </div>
@@ -112,7 +140,7 @@ export default function TeamSelectorPage() {
   );
 }
 
-function TeamGrid({ teamIds, teams, league, onSelect, muted = false }) {
+function TeamGrid({ teamIds, teams, league, onSelect, muted = false, logoIndex = null }) {
   return (
     <div
       style={{
@@ -126,6 +154,12 @@ function TeamGrid({ teamIds, teams, league, onSelect, muted = false }) {
         // some primaries are pure black (e.g. Nets) — fall back to tertiary,
         // same convention as the dashboard rankings table (page.js ~line 305)
         const fillColor = team.primary === "#000000" ? team.tertiary : team.primary;
+        // Folded teams have no current-logo file — resolve their last
+        // historical logo instead once the index has loaded (null until then,
+        // which HistoricalTeamMark treats the same as "no match", i.e. badge).
+        const historicalLogoPath = muted
+          ? resolveHistoricalLogoPath(id, FAR_FUTURE_SEASON, {}, logoIndex ?? {}, league)
+          : null;
         return (
           <button
             key={id}
@@ -144,7 +178,18 @@ function TeamGrid({ teamIds, teams, league, onSelect, muted = false }) {
               fontFamily: "inherit",
             }}
           >
-            <TeamMark team={team} teamId={id} league={league} size={32} />
+            {muted ? (
+              <HistoricalTeamMark
+                logoPath={historicalLogoPath}
+                currentLogoTeamId={id}
+                league={league}
+                abbr={id}
+                color={team.secondary}
+                size={32}
+              />
+            ) : (
+              <TeamMark team={team} teamId={id} league={league} size={32} />
+            )}
             <div>
               <div style={{ fontSize: 13, fontWeight: 700, color: team.secondary }}>{team.name}</div>
               <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: team.secondary, opacity: 0.7, letterSpacing: 0.5 }}>
