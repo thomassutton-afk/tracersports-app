@@ -26,8 +26,9 @@ LOGOS_DIR = r"C:\Users\tjsut\tracersports-app\public\logos"
 # Raise this if edges look jagged; lower it if too much color is removed.
 THRESHOLD = 240
 
-# Process files in these subfolders (set to ["."] to do root folder only)
-SUBFOLDERS = ["current", "historical", "nba", "wnba"]
+# The script now walks LOGOS_DIR recursively, so every PNG in every
+# subfolder (and sub-subfolder, no matter how deeply nested) gets processed.
+# No folder list to maintain anymore.
 
 # ── Core function ─────────────────────────────────────────────────────────────
 
@@ -91,25 +92,33 @@ def remove_white_background(path, threshold=240):
 # ── Runner ────────────────────────────────────────────────────────────────────
 
 def process_folder(folder_path, threshold):
+    """
+    Recursively walks folder_path and processes every PNG found,
+    no matter how deeply nested in subfolders.
+    """
     modified = 0
     skipped = 0
     errors = 0
 
-    png_files = [f for f in os.listdir(folder_path) if f.lower().endswith(".png")]
-    print(f"\n  {len(png_files)} PNG files found in {folder_path}")
+    for root, dirs, files in os.walk(folder_path):
+        png_files = [f for f in files if f.lower().endswith(".png")]
+        if not png_files:
+            continue
 
-    for filename in sorted(png_files):
-        filepath = os.path.join(folder_path, filename)
-        try:
-            was_changed = remove_white_background(filepath, threshold)
-            if was_changed:
-                print(f"    ✓ Fixed: {filename}")
-                modified += 1
-            else:
-                skipped += 1
-        except Exception as e:
-            print(f"    ✗ Error on {filename}: {e}")
-            errors += 1
+        print(f"\n  {len(png_files)} PNG files found in {root}")
+
+        for filename in sorted(png_files):
+            filepath = os.path.join(root, filename)
+            try:
+                was_changed = remove_white_background(filepath, threshold)
+                if was_changed:
+                    print(f"    ✓ Fixed: {filename}")
+                    modified += 1
+                else:
+                    skipped += 1
+            except Exception as e:
+                print(f"    ✗ Error on {filename}: {e}")
+                errors += 1
 
     return modified, skipped, errors
 
@@ -123,19 +132,7 @@ def main():
         print("Update the LOGOS_DIR variable at the top of the script.")
         return
 
-    total_modified = 0
-    total_skipped = 0
-    total_errors = 0
-
-    for subfolder in SUBFOLDERS:
-        folder_path = os.path.join(LOGOS_DIR, subfolder)
-        if not os.path.isdir(folder_path):
-            print(f"\n  Skipping '{subfolder}' — folder not found")
-            continue
-        m, s, e = process_folder(folder_path, THRESHOLD)
-        total_modified += m
-        total_skipped += s
-        total_errors += e
+    total_modified, total_skipped, total_errors = process_folder(LOGOS_DIR, THRESHOLD)
 
     print(f"\n{'─'*40}")
     print(f"Done. Modified: {total_modified} | Already transparent: {total_skipped} | Errors: {total_errors}")
