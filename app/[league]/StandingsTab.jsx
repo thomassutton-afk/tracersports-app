@@ -22,17 +22,208 @@
 
 import { useState } from "react";
 import TeamMark from "./TeamMark";
+import tiebreakerOverrides from "@/lib/sports/tiebreakerOverrides.json";
 
 function winPct(t) {
   const gp = t.w + t.l;
   return gp === 0 ? 0 : t.w / gp;
 }
 
-function sortByRecord(a, b) {
-  return winPct(b) - winPct(a) || b.w - a.w;
+/**
+ * Real-rule tiebreaker ranking, mirroring the NBA's actual documented
+ * procedures (see DBs/tiebreakers.py for the source-of-truth writeup and
+ * the identical algorithm run at export time). Kept in sync manually with
+ * that file — if the criteria ever change, update both.
+ *
+ * A tie that survives every real criterion falls back to
+ * lib/sports/tiebreakerOverrides.json (written by DBs/tiebreakers.py's
+ * interactive cmd.exe prompt when TJ resolves one). If a tie has NO
+ * override on file, the two teams keep their incidental order and get
+ * flagged with a warning badge in the table — this should be rare, since
+ * the export-time check is meant to catch it first.
+ */
+function recordVs(teamId, opponentSet, gamesByTeam) {
+  const rows = (gamesByTeam[teamId] || []).filter((g) => opponentSet.has(g.opponent_id));
+  if (rows.length === 0) return null;
+  const wins = rows.filter((g) => (g.points_for ?? 0) > (g.points_against ?? 0)).length;
+  return wins / rows.length;
 }
 
-export default function StandingsTab({ leagueConfig, standings }) {
+function scoreGroupRecord(teamId, group, ctx) {
+  const others = new Set(group.filter((id) => id !== teamId));
+  return recordVs(teamId, others, ctx.gamesByTeam);
+}
+function scoreDivisionLeader(teamId, group, ctx) {
+  if (!ctx.hasDivisions) return null;
+  return ctx.divisionLeaders.has(teamId) ? 1 : 0;
+}
+function scoreDivisionRecord(teamId, group, ctx) {
+  if (!ctx.hasDivisions) return null;
+  const divisions = new Set(group.map((id) => ctx.records[id]?.division));
+  if (divisions.size !== 1 || divisions.has(null) || divisions.has(undefined)) return null;
+  const div = ctx.records[teamId]?.division;
+  const opponents = new Set(Object.keys(ctx.records).filter((id) => ctx.records[id].division === div));
+  return recordVs(teamId, opponents, ctx.gamesByTeam);
+}
+function scoreConferenceRecord(teamId, group, ctx) {
+  if (!ctx.hasConferences) return null;
+  const conf = ctx.records[teamId]?.conference;
+  if (conf == null) return null;
+  const opponents = new Set(Object.keys(ctx.records).filter((id) => ctx.records[id].conference === conf));
+  return recordVs(teamId, opponents, ctx.gamesByTeam);
+}
+function scorePointDiff(teamId, group, ctx) {
+  return ctx.records[teamId]?.pointDiff ?? 0;
+}
+
+// Peels a group of teams tied on overall win% down into ordered clusters,
+// using the real criteria in the correct order for the group's current
+// size, restarting the criteria list on any subgroup still tied after a
+// criterion — matching the NBA's official "restart with remaining teams"
+// wording. A returned cluster of length 1 is a fully resolved rank; a
+// cluster of length 2+ is genuinely unresolved by every real criterion.
+function peel(group, ctx) {
+  if (group.length <= 1) return [group];
+
+  const criteria =
+    group.length === 2
+      ? [scoreGroupRecord, scoreDivisionLeader, scoreDivisionRecord, scoreConferenceRecord, scorePointDiff]
+      : [scoreDivisionLeader, scoreGroupRecord, scoreDivisionRecord, scoreConferenceRecord, scorePointDiff];
+
+  for (const scoreFn of criteria) {
+    const scores = {};
+    for (const id of group) scores[id] = scoreFn(id, group, ctx);
+    if (Object.values(scores).some((v) => v === null || v === undefined)) continue;
+    const uniqueScores = new Set(Object.values(scores));
+    if (uniqueScores.size === 1) continue;
+
+    const orderedScores = [...uniqueScores].sort((a, b) => b - a);
+    const result = [];
+    for (const s of orderedScores) {
+      const subgroup = group.filter((id) => scores[id] === s);
+      if (subgroup.length === 1) result.push(subgroup);
+      else result.push(...peel(subgroup, ctx));
+    }
+    return result;
+  }
+  return [group]; // every criterion exhausted, still fully tied
+}
+
+function pairKey(a, b) {
+  return [a, b].sort().join("|");
+}
+
+function findOverride(overrides, a, b) {
+  for (const o of overrides) {
+    if (o.above === a && o.below === b) return 1;
+    if (o.above === b && o.below === a) return -1;
+  }
+  return 0;
+}
+
+function resolveWithOverrides(cluster, ctx) {
+  if (cluster.length === 2) {
+    const [a, b] = cluster;
+    const dir = findOverride(ctx.overrides, a, b);
+    if (dir === 1) return [a, b];
+    if (dir === -1) return [b, a];
+    ctx.unresolved.add(pairKey(a, b));
+    ctx.flaggedIds.add(a);
+    ctx.flaggedIds.add(b);
+    return cluster; // no override yet — incidental order, flagged in the UI
+  }
+  // 3+ unresolved cluster: order what pairwise overrides we have, flag any pair still missing one
+  const sorted = [...cluster].sort((x, y) => {
+    const dir = findOverride(ctx.overrides, x, y);
+    return dir === 1 ? -1 : dir === -1 ? 1 : 0;
+  });
+  for (let i = 0; i < sorted.length; i++) {
+    for (let j = i + 1; j < sorted.length; j++) {
+      if (findOverride(ctx.overrides, sorted[i], sorted[j]) === 0) {
+        ctx.unresolved.add(pairKey(sorted[i], sorted[j]));
+        ctx.flaggedIds.add(sorted[i]);
+        ctx.flaggedIds.add(sorted[j]);
+      }
+    }
+  }
+  return sorted;
+}
+
+// Ranks a list of team_ids (any subset — full league, one conference, one
+// division) using real tiebreaker criteria instead of the old "wins" tiebreak.
+function rankTeams(ids, ctx) {
+  const byPct = new Map();
+  for (const id of ids) {
+    const pct = (ctx.records[id]?.winPct ?? 0).toFixed(10);
+    if (!byPct.has(pct)) byPct.set(pct, []);
+    byPct.get(pct).push(id);
+  }
+  const buckets = [...byPct.entries()].sort((a, b) => Number(b[0]) - Number(a[0]));
+  const result = [];
+  for (const [, group] of buckets) {
+    for (const cluster of peel(group, ctx)) {
+      result.push(...(cluster.length <= 1 ? cluster : resolveWithOverrides(cluster, ctx)));
+    }
+  }
+  return result;
+}
+
+function buildContext(standings, games, leagueConfig, season, variant) {
+  const gamesByTeam = {};
+  for (const g of games) {
+    (gamesByTeam[g.team_id] ??= []).push(g);
+  }
+  const records = {};
+  for (const t of standings) {
+    const team = leagueConfig.teams[t.team_id];
+    const pointDiff = (gamesByTeam[t.team_id] || []).reduce(
+      (sum, g) => sum + ((g.points_for ?? 0) - (g.points_against ?? 0)),
+      0
+    );
+    records[t.team_id] = {
+      winPct: winPct(t),
+      pointDiff,
+      conference: team?.conf ?? null,
+      division: team?.div ?? null,
+    };
+  }
+  const hasDivisions = !!leagueConfig.hasDivisions;
+  const divisionLeaders = new Set();
+  if (hasDivisions) {
+    const byDiv = {};
+    for (const [tid, r] of Object.entries(records)) {
+      if (r.division == null) continue;
+      (byDiv[r.division] ??= []).push(tid);
+    }
+    for (const teamIds of Object.values(byDiv)) {
+      let best = teamIds[0];
+      for (const tid of teamIds) {
+        const cur = records[tid];
+        const bestRec = records[best];
+        if (cur.winPct > bestRec.winPct || (cur.winPct === bestRec.winPct && cur.pointDiff > bestRec.pointDiff)) {
+          best = tid;
+        }
+      }
+      divisionLeaders.add(best);
+    }
+  }
+  const overrides = tiebreakerOverrides.filter(
+    (o) => o.league === leagueConfig.id && o.season === season && o.variant === variant
+  );
+  return {
+    gamesByTeam,
+    records,
+    hasDivisions,
+    hasConferences: !!leagueConfig.hasConferences,
+    divisionLeaders,
+    overrides,
+    unresolved: new Set(),
+    flaggedIds: new Set(),
+  };
+}
+
+export default function StandingsTab({ leagueConfig, standings, games = [], season, variant }) {
+  const ctx = buildContext(standings, games, leagueConfig, season, variant);
   const hasDivisions = !!leagueConfig.hasDivisions;
   const showLeagueToggle = !hasDivisions && !!leagueConfig.hasConferences;
   const [view, setView] = useState(showLeagueToggle ? "league" : "conference");
@@ -59,6 +250,14 @@ export default function StandingsTab({ leagueConfig, standings }) {
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <TeamMark team={team} teamId={t.team_id} league={leagueConfig.id} size={24} />
             <span style={{ fontSize: 12, fontWeight: 600, color: "var(--text)" }}>{team.name}</span>
+            {ctx.flaggedIds.has(t.team_id) && (
+              <span
+                title="Tied on every real tiebreaker criterion — needs a manual override in lib/sports/tiebreakerOverrides.json"
+                style={{ fontSize: 11, color: "#b45309", cursor: "help" }}
+              >
+                ⚠
+              </span>
+            )}
           </div>
         </td>
         <td style={{ padding: "0 8px", fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: 600, textAlign: "right" }}>{t.w}</td>
@@ -132,7 +331,7 @@ export default function StandingsTab({ leagueConfig, standings }) {
   );
 
   function LeagueTable() {
-    const allTeams = [...standings].sort(sortByRecord);
+    const allTeams = rankTeams(standings.map((t) => t.team_id), ctx).map((id) => teamMap[id]).filter(Boolean);
     const auto = allTeams.slice(0, autoSeeds);
     const playIn = playInSeeds > 0 ? allTeams.slice(autoSeeds, autoSeeds + playInSeeds) : [];
     const rest = allTeams.slice(autoSeeds + playInSeeds);
@@ -177,7 +376,8 @@ export default function StandingsTab({ leagueConfig, standings }) {
   }
 
   function ConferenceTable({ confName, confColor }) {
-    const cTeams = standings.filter((t) => leagueConfig.teams[t.team_id]?.conf === confName).sort(sortByRecord);
+    const cTeamIds = standings.filter((t) => leagueConfig.teams[t.team_id]?.conf === confName).map((t) => t.team_id);
+    const cTeams = rankTeams(cTeamIds, ctx).map((id) => teamMap[id]).filter(Boolean);
     const auto = cTeams.slice(0, autoSeeds);
     const playIn = playInSeeds > 0 ? cTeams.slice(autoSeeds, autoSeeds + playInSeeds) : [];
     const rest = cTeams.slice(autoSeeds + playInSeeds);
@@ -239,7 +439,7 @@ export default function StandingsTab({ leagueConfig, standings }) {
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
           {Object.entries(divisions).map(([divName, teamIds]) => {
-            const sorted = teamIds.map((id) => teamMap[id]).filter(Boolean).sort(sortByRecord);
+            const sorted = rankTeams(teamIds.filter((id) => teamMap[id]), ctx).map((id) => teamMap[id]).filter(Boolean);
             return (
               <div key={divName} style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 10, overflow: "hidden" }}>
                 <div style={{ padding: "5px 10px", background: "var(--bg)", borderBottom: "1px solid var(--border)" }}>
@@ -265,7 +465,7 @@ export default function StandingsTab({ leagueConfig, standings }) {
 
   if (!leagueConfig.hasConferences) {
     // Fallback for a future league with no conferences at all — one flat table.
-    const sorted = [...standings].sort(sortByRecord);
+    const sorted = rankTeams(standings.map((t) => t.team_id), ctx).map((id) => teamMap[id]).filter(Boolean);
     return (
       <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 10, overflow: "hidden" }}>
         <table style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -314,7 +514,7 @@ export default function StandingsTab({ leagueConfig, standings }) {
           </div>
         )}
         <span style={{ marginLeft: "auto", fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text3)" }}>
-          Sorted by win% · Tiebreak: wins
+          Sorted by win% · NBA-style tiebreakers
         </span>
       </div>
       {view === "league" ? (

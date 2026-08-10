@@ -54,14 +54,19 @@ async function fetchStandings(league, season, variant) {
   while (true) {
     const { data, error } = await supabase
       .from("games")
-      .select("team_id, date, post_gm_rate, rating_change, w, l")
+      // opponent_id/home_away/points_for/points_against/type are pulled
+      // alongside the original columns so StandingsTab can run the real
+      // NBA-style tiebreaker criteria (head-to-head, division/conference
+      // record, point differential) client-side, matching the same logic
+      // DBs/tiebreakers.py already runs at export time.
+      .select("team_id, date, post_gm_rate, rating_change, w, l, opponent_id, home_away, points_for, points_against, type")
       .eq("league", league)
       .eq("season", season)
       .eq("variant", variant)
       .order("date", { ascending: true })
       .range(from, from + PAGE_SIZE - 1);
 
-    if (error) return { standings: [], error };
+    if (error) return { standings: [], games: [], error };
 
     allRows = allRows.concat(data ?? []);
 
@@ -82,7 +87,16 @@ async function fetchStandings(league, season, variant) {
   }
 
   const standings = Object.values(byTeam).sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
-  return { standings, error: null };
+  // Regular-season-only rows, trimmed to just what the tiebreaker math needs.
+  const games = allRows
+    .filter((row) => row.type === "R")
+    .map((row) => ({
+      team_id: row.team_id,
+      opponent_id: row.opponent_id,
+      points_for: row.points_for,
+      points_against: row.points_against,
+    }));
+  return { standings, games, error: null };
 }
 
 async function fetchPlayoffGames(league, season, variant) {
@@ -164,6 +178,7 @@ export default function LeaguePage() {
   const [activeTab, setActiveTab] = useState("rankings");
   const [season, setSeason] = useState(null);
   const [standings, setStandings] = useState([]);
+  const [standingsGames, setStandingsGames] = useState([]);
   const [projByTeam, setProjByTeam] = useState({});
   const [poGames, setPoGames] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -208,6 +223,7 @@ export default function LeaguePage() {
         : Promise.resolve({ poGames: [], error: null }),
     ]).then(([standingsResult, projResult, poResult]) => {
       setStandings(standingsResult.standings);
+      setStandingsGames(standingsResult.games);
       setFetchError(standingsResult.error);
       setProjByTeam(projResult.projByTeam); // projection errors are non-fatal - table still renders, projection columns just show "—"
       setPoGames(poResult.poGames); // playoff-fetch errors are non-fatal - bracket tab just renders empty/TBD
@@ -413,7 +429,7 @@ export default function LeaguePage() {
 
       {activeTab === "standings" && (
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "1.5rem 2rem 4rem" }}>
-          <StandingsTab leagueConfig={leagueConfig} standings={standings} />
+          <StandingsTab leagueConfig={leagueConfig} standings={standings} games={standingsGames} season={season} variant={variant} />
         </div>
       )}
 

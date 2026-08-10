@@ -63,6 +63,8 @@ import os
 import sqlite3
 import sys
 
+from tiebreakers import check_tiebreakers
+
 try:
     from dotenv import load_dotenv
     load_dotenv()
@@ -445,10 +447,18 @@ def main():
     id_to_code = resolve_current_codes(conn)
     teams_rows = build_teams(conn, args.league, id_to_code)  # variant-independent, built once
     team_history_rows = build_team_history(conn, args.league, id_to_code)  # also variant-independent
+    name_by_code = {t["team_id"]: t["full_name"] for t in teams_rows}
 
     games_rows, schedule_rows, projection_rows = [], [], []
     for variant in VARIANTS:
-        games_rows += build_games(conn, args.league, id_to_code, variant)
+        variant_games = build_games(conn, args.league, id_to_code, variant)
+        # Real-rule standings tiebreaker check, before anything is written —
+        # prompts right here in the terminal if two teams are still tied
+        # after every real criterion (see tiebreakers.py for the full
+        # procedure). Runs on every export, dry-run or not, since a tie is
+        # a tie regardless of whether this run pushes to Supabase.
+        check_tiebreakers(variant_games, args.league, variant, name_by_code, interactive=True)
+        games_rows += variant_games
         schedule_rows += build_schedule(conn, args.league, id_to_code, variant)
         projection_rows += build_season_projection(conn, args.league, id_to_code, variant)
     preseason_rows = build_preseason_ratings(games_rows)
