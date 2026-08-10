@@ -8,11 +8,14 @@
  * TEAM_COLORS dict) and to only query tables that actually exist and are
  * populated in the new schema.
  *
- * Deliberately NOT built out in this pass — real work, tracked separately:
- *   - Rating Chart tab (heatmap + head-to-head) — shows as "coming soon"
- *     for now; old page's data came from ad-hoc client-side reduction of
- *     raw game rows, portable, just a second chunk of work on top of this.
- *   - Game Log tab — same story, plus pagination UI.
+ * Rating Chart (Heatmap + Head-to-Head) and Game Log tabs live in
+ * SeasonRatingChart.jsx and SeasonGameLog.jsx respectively — both ported
+ * from reference/old-site/SeasonPage.jsx, restyled onto this app's CSS
+ * variable tokens and made league-agnostic the same way this file is.
+ * The Rating Chart reuses this page's own season-wide game rows (already
+ * fetched for standings) rather than a second query; the Game Log fetches
+ * its own full-detail rows since it needs columns (opponent, score, OT,
+ * etc.) the standings fetch doesn't pull.
  *
  * Era-correct name/code/colors (e.g. a 1996 game shows "Seattle
  * SuperSonics" rather than "Oklahoma City Thunder") come from
@@ -49,6 +52,8 @@ import {
   resolveHistoricalLogoPath,
 } from "@/lib/historicalIdentity";
 import HistoricalTeamMark from "../HistoricalTeamMark";
+import SeasonRatingChart from "../SeasonRatingChart";
+import SeasonGameLog from "../SeasonGameLog";
 import Footer from "@/components/Footer";
 
 const VARIANT_LABELS = {
@@ -71,6 +76,7 @@ export default function SeasonPage() {
   const [seasons, setSeasons] = useState([]);
   const [season, setSeason] = useState(null);
   const [rows, setRows] = useState([]);
+  const [rawRows, setRawRows] = useState([]);
   const [preseasonByTeam, setPreseasonByTeam] = useState({});
   const [accuracy, setAccuracy] = useState(null);
   const [poByTeam, setPoByTeam] = useState({});
@@ -121,10 +127,12 @@ export default function SeasonPage() {
       if (gamesResult.error) {
         setFetchError(gamesResult.error);
         setRows([]);
+        setRawRows([]);
         setAccuracy(null);
       } else {
         setFetchError(null);
         setRows(buildSeasonStandingsRows(gamesResult.rows));
+        setRawRows(gamesResult.rows);
         setAccuracy(buildSeasonAccuracy(gamesResult.rows));
       }
       setPreseasonByTeam(preseasonResult.byTeam);
@@ -289,10 +297,14 @@ export default function SeasonPage() {
       </div>
 
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "1.5rem 2rem 4rem" }}>
-        {activeTab !== "standings" ? (
-          <div style={{ padding: "60px 0", textAlign: "center", color: "var(--text3)", fontFamily: "var(--font-mono)", fontSize: 13 }}>
-            {TABS.find((t) => t.id === activeTab).label} — coming soon.
-          </div>
+        {activeTab === "chart" ? (
+          loading ? (
+            <div style={{ padding: "40px 0", textAlign: "center", color: "var(--text3)", fontFamily: "var(--font-mono)", fontSize: 13 }}>Loading…</div>
+          ) : (
+            <SeasonRatingChart rawRows={rawRows} standingsRows={rows} poByTeam={poByTeam} season={season} leagueConfig={leagueConfig} historyByTeam={historyByTeam} league={league} />
+          )
+        ) : activeTab === "gamelog" ? (
+          <SeasonGameLog league={league} season={season} variant={variant} leagueConfig={leagueConfig} historyByTeam={historyByTeam} logoIndex={logoIndex} />
         ) : loading ? (
           <div style={{ padding: "40px 0", textAlign: "center", color: "var(--text3)", fontFamily: "var(--font-mono)", fontSize: 13 }}>
             Loading…
