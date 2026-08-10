@@ -129,6 +129,33 @@ async function fetchProjection(league, season, variant) {
   return { projByTeam, error: null };
 }
 
+// Header cell styling ported from the old site's TH helper (reference/old-site/Dashboard.jsx
+// ~line 330) — mono, small, uppercase, muted. The "ratings-table"/".r" classNames below never
+// had matching CSS defined, so headers were rendering as plain bold browser defaults; this
+// replaces that with real styling instead of adding the missing CSS rules.
+function Th({ children, align = "right", style }) {
+  return (
+    <th
+      style={{
+        fontFamily: "var(--font-mono)",
+        fontSize: 9,
+        fontWeight: 500,
+        color: "var(--text3)",
+        textTransform: "uppercase",
+        letterSpacing: 1.2,
+        padding: "7px 8px",
+        textAlign: align,
+        whiteSpace: "nowrap",
+        background: "var(--surface)",
+        borderBottom: "2px solid var(--border)",
+        ...style,
+      }}
+    >
+      {children}
+    </th>
+  );
+}
+
 export default function LeaguePage() {
   const params = useParams();
   const searchParams = useSearchParams();
@@ -281,17 +308,17 @@ export default function LeaguePage() {
             <table className="ratings-table">
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>Team</th>
-                  <th className="r">Rating</th>
-                  <th className="r" style={{ width: 90 }}>Strength</th>
-                  <th className="r">Δ Last</th>
-                  <th className="r">Record</th>
+                  <Th align="left">#</Th>
+                  <Th align="left">Team</Th>
+                  <Th>Rating</Th>
+                  <Th style={{ width: 90 }}>Strength</Th>
+                  <Th>Δ Last</Th>
+                  <Th>Record</Th>
                   {hasProjections && (
                     <>
-                      <th className="r">Proj. W</th>
-                      <th className="r">10th–90th</th>
-                      <th className="r">P(1st)</th>
+                      <Th>Proj. W</Th>
+                      <Th>10th–90th</Th>
+                      <Th>P(1st)</Th>
                     </>
                   )}
                 </tr>
