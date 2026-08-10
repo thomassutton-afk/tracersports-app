@@ -49,6 +49,7 @@ import {
   resolveHistoricalLogoPath,
 } from "@/lib/historicalIdentity";
 import HistoricalTeamMark from "../HistoricalTeamMark";
+import Footer from "@/components/Footer";
 
 const VARIANT_LABELS = {
   echo: "Echo ratings — carry-forward variant",
@@ -79,6 +80,8 @@ export default function SeasonPage() {
   const [fetchError, setFetchError] = useState(null);
   const [activeTab, setActiveTab] = useState("standings");
   const [confFilter, setConfFilter] = useState("all");
+  const [sortCol, setSortCol] = useState("finalRating");
+  const [sortDir, setSortDir] = useState("desc");
 
   let leagueConfig;
   let configError = null;
@@ -147,7 +150,38 @@ export default function SeasonPage() {
     const team = leagueConfig.teams[r.team_id];
     return team?.conf === confFilter;
   });
-  const sorted = [...filtered].sort((a, b) => (b.finalRating ?? 0) - (a.finalRating ?? 0));
+
+  // "#" always reflects final-rating rank, independent of the column
+  // sort the table is currently displayed in — same fixed-rank-vs-sorted-
+  // order split the All-Time page uses (see its overallRankMap).
+  const rankByTeam = {};
+  [...filtered]
+    .sort((a, b) => (b.finalRating ?? 0) - (a.finalRating ?? 0))
+    .forEach((r, i) => {
+      rankByTeam[r.team_id] = i + 1;
+    });
+
+  function sortValue(row, col) {
+    if (col === "preseasonElo") return preseasonByTeam[row.team_id];
+    return row[col];
+  }
+
+  const sorted = [...filtered].sort((a, b) => {
+    const dir = sortDir === "asc" ? 1 : -1;
+    const av = sortValue(a, sortCol) ?? (sortDir === "asc" ? Infinity : -Infinity);
+    const bv = sortValue(b, sortCol) ?? (sortDir === "asc" ? Infinity : -Infinity);
+    if (typeof av === "string") return dir * av.localeCompare(bv);
+    return dir * (av - bv);
+  });
+
+  function handleSort(col) {
+    if (sortCol === col) setSortDir((d) => (d === "asc" ? "desc" : "asc"));
+    else {
+      setSortCol(col);
+      setSortDir(col === "team_id" ? "asc" : "desc");
+    }
+  }
+
   const ratings = sorted.map((r) => r.finalRating ?? 0);
   const maxRating = ratings.length ? Math.max(...ratings) : 0;
   const minRating = ratings.length ? Math.min(...ratings) : 0;
@@ -273,9 +307,9 @@ export default function SeasonPage() {
           </div>
         ) : (
           <>
-            {hasConferences && (
-              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16, flexWrap: "wrap" }}>
-                {["all", ...leagueConfig.conferences].map((c) => (
+            <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16, flexWrap: "wrap" }}>
+              {hasConferences &&
+                ["all", ...leagueConfig.conferences].map((c) => (
                   <button
                     key={c}
                     onClick={() => setConfFilter(c)}
@@ -293,28 +327,29 @@ export default function SeasonPage() {
                     {c === "all" ? `All ${rows.length}` : c}
                   </button>
                 ))}
-                <span style={{ marginLeft: "auto", fontSize: 10, color: "var(--text3)", fontFamily: "var(--font-mono)" }}>
-                  Click column headers to sort
-                </span>
-              </div>
-            )}
+              <span style={{ marginLeft: "auto", fontSize: 10, color: "var(--text3)", fontFamily: "var(--font-mono)" }}>
+                Click column headers to sort
+              </span>
+            </div>
 
             <div style={{ overflowX: "auto", borderRadius: 12, border: "1px solid var(--border)", background: "var(--surface)" }}>
               <table style={{ width: "100%", borderCollapse: "collapse" }}>
                 <thead>
                   <tr>
-                    <th style={thStyle("right")}>#</th>
-                    <th style={thStyle("left")}>Team</th>
-                    {showPreseason && <th style={thStyle("right")}>Pre-Season</th>}
-                    <th style={thStyle("right")}>RS Record</th>
-                    <th style={thStyle("right")}>RS Rating</th>
+                    <th style={{ ...thStyle("right"), width: 36 }}>#</th>
+                    <Th col="team_id" label="Team" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} align="left" />
+                    {showPreseason && (
+                      <Th col="preseasonElo" label="Pre-Season" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
+                    )}
+                    <Th col="rsW" label="RS Record" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
+                    <Th col="rsRating" label="RS Rating" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
                     <th style={{ ...thStyle("right"), width: 90 }}>Strength</th>
                     <th style={thStyle("left")}>Playoffs</th>
-                    <th style={thStyle("right")}>Final Rating</th>
+                    <Th col="finalRating" label="Final Rating" sortCol={sortCol} sortDir={sortDir} onSort={handleSort} />
                   </tr>
                 </thead>
                 <tbody>
-                  {sorted.map((row, i) => {
+                  {sorted.map((row) => {
                     const team = leagueConfig.teams[row.team_id];
                     if (!team) return null;
                     // Era-correct name/colors when this season's identity
@@ -340,7 +375,7 @@ export default function SeasonPage() {
                         }}
                       >
                         <td style={{ textAlign: "right", padding: "0 10px 0 6px", fontFamily: "var(--font-mono)", fontSize: 13, fontWeight: 700, color: "#fff", width: 36 }}>
-                          {i + 1}
+                          {rankByTeam[row.team_id]}
                         </td>
                         <td style={{ padding: "10px 8px" }}>
                           <Link
@@ -402,6 +437,8 @@ export default function SeasonPage() {
           </>
         )}
       </div>
+
+      <Footer />
     </div>
   );
 }
@@ -420,4 +457,27 @@ function thStyle(align) {
     background: "var(--surface)",
     borderBottom: "2px solid var(--border)",
   };
+}
+
+// Sortable column header — same component/behavior as the All-Time page's
+// Th (click to sort, ↑/↓/↕ indicator), ported here so Season Page's table
+// supports the same column sorting.
+function Th({ col, label, sortCol, sortDir, onSort, align = "right" }) {
+  const active = sortCol === col;
+  return (
+    <th
+      onClick={() => onSort(col)}
+      style={{
+        ...thStyle(align),
+        color: active ? "var(--acc)" : "var(--text3)",
+        cursor: "pointer",
+        userSelect: "none",
+      }}
+    >
+      {label}
+      <span style={{ marginLeft: 3, color: active ? "var(--acc)" : "var(--border2)" }}>
+        {active ? (sortDir === "asc" ? "↑" : "↓") : "↕"}
+      </span>
+    </th>
+  );
 }

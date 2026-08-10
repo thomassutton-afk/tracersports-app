@@ -30,6 +30,7 @@ import StandingsTab from "./StandingsTab";
 import GamesPanel from "./GamesPanel";
 import BracketTab from "./BracketTab";
 import OverallBracketTab from "./OverallBracketTab";
+import Footer from "@/components/Footer";
 
 const TABS = [
   { id: "rankings", label: "Power Rankings" },
@@ -404,6 +405,8 @@ export default function LeaguePage() {
           )}
         </div>
       )}
+
+      <Footer />
     </div>
   );
 }

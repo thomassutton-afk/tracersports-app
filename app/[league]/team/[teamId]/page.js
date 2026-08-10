@@ -36,6 +36,7 @@ import {
   resolveHistoricalLogoPath,
 } from "@/lib/historicalIdentity";
 import HistoricalTeamMark from "../../HistoricalTeamMark";
+import Footer from "@/components/Footer";
 import AllTimeChart from "../../AllTimeChart";
 
 const VARIANT_LABELS = {
@@ -538,6 +539,8 @@ export default function TeamPage() {
           </>
         )}
       </div>
+
+      <Footer />
     </div>
   );
 }

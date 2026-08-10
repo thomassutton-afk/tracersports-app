@@ -38,6 +38,7 @@ import {
   resolveHistoricalLogoPath,
 } from "@/lib/historicalIdentity";
 import HistoricalTeamMark from "../HistoricalTeamMark";
+import Footer from "@/components/Footer";
 
 const VARIANT_LABELS = {
   echo: "Echo carry-forward variant",
@@ -73,7 +74,11 @@ function buildDepthFilters(leagueConfig) {
   ];
   for (const r of roundNumbers) {
     if (r === 1) continue;
-    filters.push({ id: `round${r}`, label: `Reached ${roundLabels[String(r)] ?? `Round ${r}`}` });
+    // Old-site wording: label describes the round just won (r-1), not the
+    // round reached (r) — e.g. reaching Conf. Semis (round 2) is phrased
+    // "Won Round 1", matching reference/old-site/AllTimeRankings.jsx.
+    const priorRoundLabel = roundLabels[String(r - 1)] ?? `Round ${r - 1}`;
+    filters.push({ id: `round${r}`, label: `Won ${priorRoundLabel}` });
   }
   filters.push({ id: "champion", label: "Champions Only" });
   return filters;
@@ -507,6 +512,8 @@ export default function AllTimeRankingsPage() {
           </>
         )}
       </div>
+
+      <Footer />
     </div>
   );
 }
