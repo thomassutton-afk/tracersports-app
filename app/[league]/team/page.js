@@ -50,6 +50,10 @@ export default function TeamSelectorPage() {
   }
 
   const teamIds = Object.keys(leagueConfig.teams).sort();
+  // Folded franchises (WNBA only, e.g. Sting/Rockers/Comets/Sol/Monarchs)
+  // get grouped into a separate "Former Teams" section below the active grid.
+  const activeIds = teamIds.filter((id) => !leagueConfig.teams[id].folded);
+  const formerIds = teamIds.filter((id) => leagueConfig.teams[id].folded);
 
   function goToTeam(teamId) {
     if (!teamId) return;
@@ -93,44 +97,63 @@ export default function TeamSelectorPage() {
       </div>
 
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "1.5rem 2rem 4rem" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
-            gap: 12,
-          }}
-        >
-          {teamIds.map((id) => {
-            const team = leagueConfig.teams[id];
-            return (
-              <button
-                key={id}
-                onClick={() => goToTeam(id)}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 12,
-                  padding: "14px 16px",
-                  borderRadius: 12,
-                  border: "1px solid var(--border)",
-                  background: "var(--surface)",
-                  cursor: "pointer",
-                  textAlign: "left",
-                  fontFamily: "inherit",
-                }}
-              >
-                <TeamMark team={team} teamId={id} league={league} size={32} />
-                <div>
-                  <div style={{ fontSize: 13, fontWeight: 700, color: team.secondary }}>{team.name}</div>
-                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text3)", letterSpacing: 0.5 }}>
-                    {id}
-                  </div>
-                </div>
-              </button>
-            );
-          })}
-        </div>
+        <TeamGrid teamIds={activeIds} teams={leagueConfig.teams} league={league} onSelect={goToTeam} />
+
+        {formerIds.length > 0 && (
+          <>
+            <div className="section-label" style={{ marginTop: 32 }}>
+              Former Teams
+            </div>
+            <TeamGrid teamIds={formerIds} teams={leagueConfig.teams} league={league} onSelect={goToTeam} muted />
+          </>
+        )}
       </div>
+    </div>
+  );
+}
+
+function TeamGrid({ teamIds, teams, league, onSelect, muted = false }) {
+  return (
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
+        gap: 12,
+      }}
+    >
+      {teamIds.map((id) => {
+        const team = teams[id];
+        // some primaries are pure black (e.g. Nets) — fall back to tertiary,
+        // same convention as the dashboard rankings table (page.js ~line 305)
+        const fillColor = team.primary === "#000000" ? team.tertiary : team.primary;
+        return (
+          <button
+            key={id}
+            onClick={() => onSelect(id)}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+              padding: "14px 16px",
+              borderRadius: 12,
+              border: "1px solid var(--border)",
+              background: fillColor,
+              opacity: muted ? 0.75 : 1,
+              cursor: "pointer",
+              textAlign: "left",
+              fontFamily: "inherit",
+            }}
+          >
+            <TeamMark team={team} teamId={id} league={league} size={32} />
+            <div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: team.secondary }}>{team.name}</div>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: team.secondary, opacity: 0.7, letterSpacing: 0.5 }}>
+                {id}
+              </div>
+            </div>
+          </button>
+        );
+      })}
     </div>
   );
 }
