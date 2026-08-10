@@ -24,6 +24,7 @@ import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { useParams, useSearchParams } from "next/navigation";
 import { getLeagueConfig } from "@/lib/sports/registry";
+import { getFillColor } from "@/lib/teamColors";
 import {
   fetchAllTimeTeamGames,
   fetchAllTimePreseasonRatings,
@@ -391,7 +392,7 @@ export default function AllTimeRankingsPage() {
                   {pageRows.map((row) => {
                     const overallRank = overallRankMap[`${row.team_id}-${row.season}`];
                     const isChamp = row.po?.champion;
-                    const fillColor = row.identity.primary === "#000000" ? row.identity.tertiary : row.identity.primary;
+                    const fillColor = getFillColor(row.identity);
                     const po = playoffBadge(row);
 
                     return (

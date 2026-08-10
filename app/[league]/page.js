@@ -23,6 +23,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useSearchParams } from "next/navigation";
 import { getLeagueConfig } from "@/lib/sports/registry";
+import { getFillColor } from "@/lib/teamColors";
 import { supabase } from "@/lib/supabase";
 import { getCurrentSeason } from "@/lib/gamesData";
 import TeamMark from "./TeamMark";
@@ -301,8 +302,9 @@ export default function LeaguePage() {
                   if (!team) return null; // defensive: skip any team_id not in this league's config
                   const barPct = maxRating > minRating ? ((row.rating - minRating) / (maxRating - minRating)) * 100 : 50;
                   const chgPos = (row.change ?? 0) > 0;
-                  // some primaries are pure black (e.g. Nets) — fall back to tertiary so the bar/border isn't invisible
-                  const fillColor = team.primary === "#000000" ? team.tertiary : team.primary;
+                  // black/near-black primaries (Nets, Aces) fall back to tertiary so the bar/border isn't invisible —
+                  // see lib/teamColors.js for why this uses luminance, not a string match
+                  const fillColor = getFillColor(team);
                   const proj = projByTeam[row.team_id];
                   return (
                     <tr

@@ -36,6 +36,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useParams, useSearchParams } from "next/navigation";
 import { getLeagueConfig } from "@/lib/sports/registry";
+import { getFillColor } from "@/lib/teamColors";
 import {
   getAvailableSeasons,
   fetchSeasonTeamGames,
@@ -374,7 +375,7 @@ export default function SeasonPage() {
                     const identity = getDisplayIdentity(row.team_id, season, historyByTeam, leagueConfig);
                     const logoPath = resolveHistoricalLogoPath(row.team_id, season, historyByTeam, logoIndex, league);
                     const barPct = maxRating > minRating ? ((row.finalRating - minRating) / (maxRating - minRating)) * 100 : 50;
-                    const fillColor = identity.primary === "#000000" ? identity.tertiary : identity.primary;
+                    const fillColor = getFillColor(identity);
                     const po = playoffLabel(row.team_id);
                     const preseason = preseasonByTeam[row.team_id];
                     return (

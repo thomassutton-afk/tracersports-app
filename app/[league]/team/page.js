@@ -24,6 +24,7 @@ import { getLeagueConfig } from "@/lib/sports/registry";
 import TeamMark from "../TeamMark";
 import HistoricalTeamMark from "../HistoricalTeamMark";
 import { fetchLogoIndex, resolveHistoricalLogoPath } from "@/lib/historicalIdentity";
+import { getFillColor } from "@/lib/teamColors";
 
 // Folded franchises (e.g. WNBA's Sting/Rockers/Comets/Sol/Monarchs) never
 // got a "current" logo under /logos/{league}/{code}.png — TeamMark 404s on
@@ -151,9 +152,9 @@ function TeamGrid({ teamIds, teams, league, onSelect, muted = false, logoIndex =
     >
       {teamIds.map((id) => {
         const team = teams[id];
-        // some primaries are pure black (e.g. Nets) — fall back to tertiary,
-        // same convention as the dashboard rankings table (page.js ~line 305)
-        const fillColor = team.primary === "#000000" ? team.tertiary : team.primary;
+        // black/near-black primaries (Nets, Aces) fall back to tertiary —
+        // see lib/teamColors.js for why this uses luminance, not a string match
+        const fillColor = getFillColor(team);
         // Folded teams have no current-logo file — resolve their last
         // historical logo instead once the index has loaded (null until then,
         // which HistoricalTeamMark treats the same as "no match", i.e. badge).

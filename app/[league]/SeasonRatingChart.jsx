@@ -26,6 +26,7 @@
 import { useState, useMemo } from "react";
 import { buildWeeklySnapshots, ratingColor, RATING_COLOR_STOPS } from "@/lib/gamesData";
 import { getDisplayIdentity } from "@/lib/historicalIdentity";
+import { getFillColor } from "@/lib/teamColors";
 
 const filterBtnStyle = (active) => ({
   fontFamily: "var(--font-mono)",
@@ -229,7 +230,7 @@ function RatingHeatmap({ seriesData, season, leagueConfig, historyByTeam }) {
       {seriesData.map(({ team }) => {
         const snaps = snapshots[team] || [];
         const identity = getDisplayIdentity(team, season, historyByTeam, leagueConfig);
-        const teamColor = identity.primary === "#000000" ? identity.tertiary || identity.primary : identity.primary;
+        const teamColor = getFillColor(identity);
         const openingRating = snaps[0]?.rating;
         const closingRating = snaps.at(-1)?.rating;
         const seasonChange = closingRating != null && openingRating != null ? Math.round(closingRating - openingRating) : null;
@@ -423,7 +424,7 @@ function H2HChart({ seriesData, season, leagueConfig, historyByTeam, width = 820
         {seriesData.map(({ team }) => {
           const snaps = snapshots[team] || [];
           const identity = getDisplayIdentity(team, season, historyByTeam, leagueConfig);
-          const color = identity.primary === "#000000" ? identity.tertiary || identity.primary : identity.primary;
+          const color = getFillColor(identity);
           const isHov = hovered === team;
           const dimmed = hovered && !isHov;
           const pts = snaps.map((p) => `${pad.left + xS(p.date)},${pad.top + yS(p.rating)}`).join(" ");
@@ -462,7 +463,7 @@ function H2HChart({ seriesData, season, leagueConfig, historyByTeam, width = 820
       <div style={{ display: "flex", gap: 20, marginTop: 14, borderTop: "1px solid var(--border)", paddingTop: 12, flexWrap: "wrap" }}>
         {seriesData.map(({ team }) => {
           const identity = getDisplayIdentity(team, season, historyByTeam, leagueConfig);
-          const color = identity.primary === "#000000" ? identity.tertiary || identity.primary : identity.primary;
+          const color = getFillColor(identity);
           const snaps = snapshots[team] || [];
           const change = snaps.length > 1 ? Math.round((snaps.at(-1)?.rating ?? 0) - (snaps[0]?.rating ?? 0)) : null;
           const isHov = hovered === team;

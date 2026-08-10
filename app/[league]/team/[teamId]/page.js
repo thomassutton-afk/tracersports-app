@@ -18,6 +18,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { useParams, useSearchParams, useRouter } from "next/navigation";
 import { getLeagueConfig } from "@/lib/sports/registry";
+import { getFillColor } from "@/lib/teamColors";
 import {
   fetchTeamChartPoints,
   fetchTeamAllSeasonsGames,
@@ -157,7 +158,7 @@ export default function TeamPage() {
 
   const showPreseason = variant === "echo";
   const roundLabels = leagueConfig.engine?.roundLabels ?? {};
-  const fillColor = team.primary === "#000000" ? team.tertiary : team.primary;
+  const fillColor = getFillColor(team);
 
   // Enrich season rows with identity/logo/playoff summary, sorted newest-first
   const seasonRows = useMemo(() => {
