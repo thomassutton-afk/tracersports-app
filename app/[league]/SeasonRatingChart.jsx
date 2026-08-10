@@ -51,7 +51,7 @@ const selectStyle = {
 
 export default function SeasonRatingChart({ rawRows, standingsRows, poByTeam, season, leagueConfig, historyByTeam, league }) {
   const [mode, setMode] = useState("heatmap"); // heatmap | h2h
-  const [filter, setFilter] = useState("playoffs"); // playoffs | <conference> | all
+  const [filter, setFilter] = useState("all"); // playoffs | <conference> | all
   const [h2hTeam1, setH2hTeam1] = useState(null);
   const [h2hTeam2, setH2hTeam2] = useState(null);
 
