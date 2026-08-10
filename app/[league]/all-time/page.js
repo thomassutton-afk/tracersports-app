@@ -390,7 +390,6 @@ export default function AllTimeRankingsPage() {
                 <tbody>
                   {pageRows.map((row) => {
                     const overallRank = overallRankMap[`${row.team_id}-${row.season}`];
-                    const team = leagueConfig.teams[row.team_id];
                     const isChamp = row.po?.champion;
                     const fillColor = row.identity.primary === "#000000" ? row.identity.tertiary : row.identity.primary;
                     const po = playoffBadge(row);
@@ -428,11 +427,6 @@ export default function AllTimeRankingsPage() {
                               </div>
                               <div style={{ fontSize: 13, fontWeight: 700, color: row.identity.secondary, lineHeight: 1.2 }}>
                                 {row.identity.name}
-                                {row.identity.code !== row.team_id && (
-                                  <div style={{ fontSize: 10, color: "rgba(255,255,255,0.6)", fontStyle: "italic", fontWeight: 400, marginTop: 1 }}>
-                                    now: {team.name}
-                                  </div>
-                                )}
                               </div>
                             </div>
                           </Link>

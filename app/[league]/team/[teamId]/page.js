@@ -368,7 +368,7 @@ export default function TeamPage() {
                               <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                                 <HistoricalTeamMark logoPath={row.logoPath} currentLogoTeamId={teamId} league={league} abbr={row.identity.code} color={row.identity.primary || fillColor} size={24} />
                                 <span style={identityBadgeStyle(row.identity.primary || fillColor)}>{row.identity.code}</span>
-                                {row.identity.code !== teamId && <span style={{ fontSize: 11, color: "var(--text3)", fontStyle: "italic" }}>{row.identity.name}</span>}
+                                <span style={{ fontSize: 11, color: "var(--text3)", fontStyle: "italic" }}>{row.identity.name}</span>
                               </div>
                             </td>
                             {showPreseason && (
