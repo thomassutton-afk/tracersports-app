@@ -304,7 +304,7 @@ export default function TeamPage() {
                   Franchise Identities
                 </span>
                 {identityEras.map((era) => (
-                  <span key={era.code} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <span key={`${era.code}-${era.start_season}`} style={{ display: "flex", alignItems: "center", gap: 8 }}>
                     <span style={identityBadgeStyle(era.primary || fillColor)}>{era.code}</span>
                     <span style={{ fontSize: 12, color: "var(--text2)" }}>
                       {era.name} ({leagueConfig.seasonLabel(era.start_season)}

@@ -6,10 +6,9 @@
  * segment, variant as a ?variant= search param) so any page can read the
  * current selection without needing a separate state-management layer.
  *
- * Dashboard/Season/All-Time are league-aware (built from currentLeague, so
- * they follow whichever league is active); About is league-agnostic. Team
- * page isn't built yet — don't add a dead link ahead of a real page; add
- * it here once it exists.
+ * Dashboard/Season/All-Time/Teams are league-aware (built from
+ * currentLeague, so they follow whichever league is active); About is
+ * league-agnostic.
  */
 
 import Link from "next/link";
@@ -35,7 +34,8 @@ export default function Nav() {
   const navLeague = leagueIds.includes(currentLeague) ? currentLeague : leagueIds[0];
   const onSeasonPage = pathname.endsWith("/season");
   const onAllTimePage = pathname.endsWith("/all-time");
-  const onDashboard = leagueIds.includes(currentLeague) && !onSeasonPage && !onAllTimePage;
+  const onTeamPage = pathname.endsWith("/team") || pathname.includes("/team/");
+  const onDashboard = leagueIds.includes(currentLeague) && !onSeasonPage && !onAllTimePage && !onTeamPage;
 
   return (
     <>
@@ -67,6 +67,12 @@ export default function Nav() {
             className={`nav-link${onAllTimePage ? " active" : ""}`}
           >
             All-Time
+          </Link>
+          <Link
+            href={`/${navLeague}/team?variant=${currentVariant}`}
+            className={`nav-link${onTeamPage ? " active" : ""}`}
+          >
+            Teams
           </Link>
           <Link
             href="/about"
