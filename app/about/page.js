@@ -147,13 +147,23 @@ export default function AboutPage() {
                 <tbody>
                   {["NBA", "WNBA", "Combined"].map((label) => {
                     const row = table[label];
+                    // Combined Brier is deliberately omitted, not just
+                    // hidden with CSS - averaging a proper-scoring-rule
+                    // metric across two SEPARATELY tuned models (NBA and
+                    // WNBA have different engine params) doesn't measure
+                    // anything either model actually has. Accuracy % is
+                    // fine to combine (it's just "fraction of all games
+                    // picked correctly"); Brier isn't, since it's a
+                    // calibration measure and pooling two different
+                    // models' calibration together isn't a real quantity.
+                    const isCombined = label === "Combined";
                     return (
-                      <tr key={label} style={label === "Combined" ? S.trTotal : undefined}>
+                      <tr key={label} style={isCombined ? S.trTotal : undefined}>
                         <td style={S.td("left")}>{label}</td>
                         <td style={S.td("right")}>{row.echo ? `${row.echo.pct}%` : "—"}</td>
-                        <td style={S.td("right")}>{row.echo?.brier ?? "—"}</td>
+                        <td style={S.td("right")}>{isCombined ? "—" : row.echo?.brier ?? "—"}</td>
                         <td style={S.td("right")}>{row.pulse ? `${row.pulse.pct}%` : "—"}</td>
-                        <td style={S.td("right")}>{row.pulse?.brier ?? "—"}</td>
+                        <td style={S.td("right")}>{isCombined ? "—" : row.pulse?.brier ?? "—"}</td>
                         <td style={S.td("right")}>{Number(row.echo?.n ?? 0).toLocaleString()}</td>
                       </tr>
                     );
