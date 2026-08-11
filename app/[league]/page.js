@@ -147,7 +147,7 @@ async function fetchProjection(league, season, variant) {
 // ~line 330) — mono, small, uppercase, muted. The "ratings-table"/".r" classNames below never
 // had matching CSS defined, so headers were rendering as plain bold browser defaults; this
 // replaces that with real styling instead of adding the missing CSS rules.
-function Th({ children, align = "right", style }) {
+function Th({ children, align = "center", style }) {
   return (
     <th
       style={{
@@ -327,7 +327,7 @@ export default function LeaguePage() {
                   <Th align="left">#</Th>
                   <Th align="left">Team</Th>
                   <Th>Rating</Th>
-                  <Th style={{ width: 90 }}>Strength</Th>
+                  <Th align="right" style={{ width: 90 }}>Strength</Th>
                   <Th>Δ Last</Th>
                   <Th>Record</Th>
                   {hasProjections && (
@@ -366,7 +366,7 @@ export default function LeaguePage() {
                           <span style={{ fontSize: 13, fontWeight: 700, color: team.secondary }}>{team.name}</span>
                         </div>
                       </td>
-                      <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 14, fontWeight: 700, color: "var(--text)" }}>
+                      <td style={{ textAlign: "center", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 14, fontWeight: 700, color: "var(--text)" }}>
                         {row.rating?.toFixed(1) ?? "—"}
                       </td>
                       <td style={{ padding: "0 8px", width: 130 }}>
@@ -374,7 +374,7 @@ export default function LeaguePage() {
                           <div style={{ width: `${barPct}%`, height: 4, borderRadius: 2, background: fillColor }} />
                         </div>
                       </td>
-                      <td style={{ textAlign: "right", padding: "0 12px" }}>
+                      <td style={{ textAlign: "center", padding: "0 12px" }}>
                         <span
                           style={{
                             fontFamily: "var(--font-mono)",
@@ -390,25 +390,25 @@ export default function LeaguePage() {
                           {row.change?.toFixed(1) ?? "—"}
                         </span>
                       </td>
-                      <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text2)" }}>
+                      <td style={{ textAlign: "center", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text2)" }}>
                         {row.w}–{row.l}
                       </td>
                       {hasProjections && (
                         <>
-                          <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text)" }}>
+                          <td style={{ textAlign: "center", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text)" }}>
                             {proj?.avg_wins?.toFixed(1) ?? "—"}
                           </td>
-                          <td style={{ textAlign: "right", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text2)" }}>
+                          <td style={{ textAlign: "center", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text2)" }}>
                             {proj ? `${proj.p10_wins}–${proj.p90_wins}` : "—"}
                           </td>
                           <td
                             style={{
-                              textAlign: "right",
+                              textAlign: "center",
                               padding: "0 16px",
                               fontFamily: "var(--font-mono)",
                               fontSize: 12,
                               fontWeight: proj?.prob_finish_first >= 0.05 ? 700 : 400,
-                              color: proj?.prob_finish_first >= 0.05 ? "var(--acc)" : "var(--text2)",
+                              color: proj?.prob_finish_first >= 0.05 ? "var(--text)" : "var(--text2)",
                             }}
                           >
                             {proj ? `${(proj.prob_finish_first * 100).toFixed(proj.prob_finish_first < 0.01 ? 1 : 0)}%` : "—"}
