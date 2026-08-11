@@ -2,21 +2,32 @@
 Real-rule standings tiebreakers, run at export time (from cmd.exe, via
 export_to_supabase.py) rather than silently in the browser.
 
-Implements the NBA's actual documented tiebreaker procedures:
-  2 teams tied:   head-to-head -> division leader -> division record
-                  -> conference record -> point differential
-  3+ teams tied:  division leader -> combined record among tied teams
-                  -> division record -> conference record -> point diff
-  (source: NBA_Tiebreaker_Procedures.pdf, ak-static-int.nba.com)
+Implements each league's actual documented tiebreaker procedure — see
+_criteria_for() for the exact source-confirmed order used per league:
 
-Applied to WNBA too, with the division-specific steps skipped (WNBA has
-conferences but no divisions — see team_divisions.py).
+  NBA  (NBA_Tiebreaker_Procedures.pdf, ak-static-int.nba.com)
+    2 teams tied:   head-to-head -> division leader -> division record
+                    -> conference record -> point differential
+    3+ teams tied:  division leader -> combined record among tied teams
+                    -> division record -> conference record -> point diff
+
+  WNBA (wnba.com/webview/standings, "Tiebreak Procedure")
+    Same order regardless of group size (no divisions, no conference-
+    record step):
+      head-to-head/combined record among tied teams
+      -> win% vs. all teams that finished the season .500 or better
+      -> point differential in head-to-head games only
+      -> point differential against all opponents
+
+Both leagues restart the criteria list from the top on any subgroup
+still tied after a criterion resolves some (but not all) of the group —
+matching each league's official "restart" wording.
 
 Deliberately NOT implemented (extremely rare in practice, and each adds
 real complexity for almost no real-world payoff):
-  - "Record vs. playoff-eligible teams" criteria (circular — depends on
-    who's in the playoff picture, which is the thing being determined)
-  - The NBA's random-drawing fallback (doesn't make sense for a website)
+  - "Record vs. playoff-eligible teams" (NBA) — circular, depends on who's
+    in the playoff picture, which is the thing being determined
+  - Either league's random-drawing fallback (doesn't apply to a website)
 Ties that survive every real criterion above fall through to the manual
 override system below instead.
 
@@ -82,12 +93,13 @@ def _find_override(overrides, league, season, variant, a, b):
 
 
 class _Ctx:
-    def __init__(self, records, games_by_team, has_divisions, has_conferences, division_leaders):
+    def __init__(self, records, games_by_team, has_divisions, has_conferences, division_leaders, league):
         self.records = records
         self.games_by_team = games_by_team
         self.has_divisions = has_divisions
         self.has_conferences = has_conferences
         self.division_leaders = division_leaders
+        self.league = league
 
 
 def _record_vs(team_id, opponents, games_by_team):
@@ -136,6 +148,43 @@ def _score_point_diff(team_id, group, ctx):
     return ctx.records[team_id]["point_diff"]
 
 
+def _score_vs_500_teams(team_id, group, ctx):
+    """WNBA step 2: win pct against every team that finished the season
+    .500 or better. This is a fixed bar (not "playoff-eligible teams",
+    which would be circular), so it's safe to compute directly."""
+    opponents = {t for t, r in ctx.records.items() if r["win_pct"] >= 0.5} - {team_id}
+    return _record_vs(team_id, opponents, ctx.games_by_team)
+
+
+def _score_h2h_point_diff(team_id, group, ctx):
+    """WNBA step 3: point differential in games against the other tied
+    team(s) only — distinct from the season-wide point diff in step 4."""
+    others = set(group) - {team_id}
+    rows = [g for g in ctx.games_by_team[team_id] if g["opponent_id"] in others]
+    if not rows:
+        return None
+    return sum((r["points_for"] or 0) - (r["points_against"] or 0) for r in rows)
+
+
+def _criteria_for(league, group_size):
+    """
+    Real, source-confirmed rule sets:
+      NBA  (ak-static-int.nba.com NBA_Tiebreaker_Procedures.pdf) — order
+           differs between 2-team and 3+-team ties.
+      WNBA (wnba.com/webview/standings, "Tiebreak Procedure") — one order
+           regardless of group size; no divisions, no conference-record
+           step, but adds a ".500 teams" step and a head-to-head-only
+           point-diff step the NBA doesn't have.
+    """
+    if league == "wnba":
+        return [_score_group_record, _score_vs_500_teams, _score_h2h_point_diff, _score_point_diff]
+    if group_size == 2:
+        return [_score_group_record, _score_division_leader, _score_division_record,
+                _score_conference_record, _score_point_diff]
+    return [_score_division_leader, _score_group_record, _score_division_record,
+            _score_conference_record, _score_point_diff]
+
+
 def _peel(group, ctx):
     """
     Resolves a group of teams tied on overall win%, using the real criteria
@@ -151,13 +200,7 @@ def _peel(group, ctx):
     if len(group) <= 1:
         return [group]
 
-    criteria = (
-        [_score_group_record, _score_division_leader, _score_division_record,
-         _score_conference_record, _score_point_diff]
-        if len(group) == 2
-        else [_score_division_leader, _score_group_record, _score_division_record,
-              _score_conference_record, _score_point_diff]
-    )
+    criteria = _criteria_for(ctx.league, len(group))
 
     for score_fn in criteria:
         scores = {tid: score_fn(tid, group, ctx) for tid in group}
@@ -281,7 +324,7 @@ def check_tiebreakers(games_rows, league, variant, name_by_code, interactive=Tru
     has_divisions = LEAGUE_HAS_DIVISIONS.get(league, False)
     has_conferences = LEAGUE_HAS_CONFERENCES.get(league, False)
     division_leaders = _compute_division_leaders(records, has_divisions)
-    ctx = _Ctx(records, games_by_team, has_divisions, has_conferences, division_leaders)
+    ctx = _Ctx(records, games_by_team, has_divisions, has_conferences, division_leaders, league)
 
     by_pct = defaultdict(list)
     for tid, r in records.items():

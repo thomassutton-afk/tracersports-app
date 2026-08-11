@@ -30,10 +30,14 @@ function winPct(t) {
 }
 
 /**
- * Real-rule tiebreaker ranking, mirroring the NBA's actual documented
+ * Real-rule tiebreaker ranking, mirroring each league's actual documented
  * procedures (see DBs/tiebreakers.py for the source-of-truth writeup and
- * the identical algorithm run at export time). Kept in sync manually with
- * that file — if the criteria ever change, update both.
+ * the identical algorithm run at export time — kept in sync manually).
+ *
+ *   NBA:  2-team order differs from 3+-team order (see criteriaFor below).
+ *   WNBA: single order regardless of group size; no divisions, no
+ *         conference-record step, but adds a ".500 teams" step and a
+ *         head-to-head-only point-diff step the NBA doesn't have.
  *
  * A tie that survives every real criterion falls back to
  * lib/sports/tiebreakerOverrides.json (written by DBs/tiebreakers.py's
@@ -75,6 +79,39 @@ function scoreConferenceRecord(teamId, group, ctx) {
 function scorePointDiff(teamId, group, ctx) {
   return ctx.records[teamId]?.pointDiff ?? 0;
 }
+function scoreVs500Teams(teamId, group, ctx) {
+  // WNBA step 2: win pct vs. every team that finished the season .500+.
+  // A fixed bar (not "playoff-eligible teams"), so safe to compute directly.
+  const opponents = new Set(
+    Object.keys(ctx.records).filter((id) => (ctx.records[id]?.winPct ?? 0) >= 0.5)
+  );
+  opponents.delete(teamId);
+  return recordVs(teamId, opponents, ctx.gamesByTeam);
+}
+function scoreH2HPointDiff(teamId, group, ctx) {
+  // WNBA step 3: point differential in games against the other tied
+  // team(s) only — distinct from the season-wide total in step 4.
+  const others = new Set(group.filter((id) => id !== teamId));
+  const rows = (ctx.gamesByTeam[teamId] || []).filter((g) => others.has(g.opponent_id));
+  if (rows.length === 0) return null;
+  return rows.reduce((sum, g) => sum + ((g.points_for ?? 0) - (g.points_against ?? 0)), 0);
+}
+
+// Real, source-confirmed rule sets per league:
+//   NBA  (NBA_Tiebreaker_Procedures.pdf, ak-static-int.nba.com) — order
+//        differs between 2-team and 3+-team ties.
+//   WNBA (wnba.com/webview/standings, "Tiebreak Procedure") — one order
+//        regardless of group size; no divisions, no conference-record
+//        step, but adds a ".500 teams" step and a head-to-head-only
+//        point-diff step the NBA doesn't have.
+function criteriaFor(league, groupSize) {
+  if (league === "wnba") {
+    return [scoreGroupRecord, scoreVs500Teams, scoreH2HPointDiff, scorePointDiff];
+  }
+  return groupSize === 2
+    ? [scoreGroupRecord, scoreDivisionLeader, scoreDivisionRecord, scoreConferenceRecord, scorePointDiff]
+    : [scoreDivisionLeader, scoreGroupRecord, scoreDivisionRecord, scoreConferenceRecord, scorePointDiff];
+}
 
 // Peels a group of teams tied on overall win% down into ordered clusters,
 // using the real criteria in the correct order for the group's current
@@ -85,10 +122,7 @@ function scorePointDiff(teamId, group, ctx) {
 function peel(group, ctx) {
   if (group.length <= 1) return [group];
 
-  const criteria =
-    group.length === 2
-      ? [scoreGroupRecord, scoreDivisionLeader, scoreDivisionRecord, scoreConferenceRecord, scorePointDiff]
-      : [scoreDivisionLeader, scoreGroupRecord, scoreDivisionRecord, scoreConferenceRecord, scorePointDiff];
+  const criteria = criteriaFor(ctx.league, group.length);
 
   for (const scoreFn of criteria) {
     const scores = {};
@@ -217,6 +251,7 @@ function buildContext(standings, games, leagueConfig, season, variant) {
     hasConferences: !!leagueConfig.hasConferences,
     divisionLeaders,
     overrides,
+    league: leagueConfig.id,
     unresolved: new Set(),
     flaggedIds: new Set(),
   };
