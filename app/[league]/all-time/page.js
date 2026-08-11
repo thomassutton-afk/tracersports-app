@@ -166,7 +166,6 @@ export default function AllTimeRankingsPage() {
 
   const showPreseason = variant === "echo";
   const depthFilters = buildDepthFilters(leagueConfig);
-  const roundLabels = leagueConfig.engine?.roundLabels ?? {};
 
   // Enrich raw rows with derived fields once — playoff summary, delta,
   // historical identity, logo path — before filtering/sorting/paginating.
@@ -190,7 +189,7 @@ export default function AllTimeRankingsPage() {
     else if (depth === "champion") out = out.filter((r) => r.po?.champion);
     else if (depth.startsWith("round")) {
       const need = Number(depth.replace("round", ""));
-      out = out.filter((r) => r.po?.highestRound != null && r.po.highestRound >= need);
+      out = out.filter((r) => r.po?.effectiveHighestRound != null && r.po.effectiveHighestRound >= need);
     }
 
     out = out.filter((r) => inDecade(r.season, decade));
@@ -243,8 +242,7 @@ export default function AllTimeRankingsPage() {
     const po = row.po;
     if (!po || po.highestRound === null) return null;
     const rec = po.rounds[String(po.highestRound)];
-    const label = roundLabels[String(po.highestRound)] ?? `Round ${po.highestRound}`;
-    return { label, w: rec?.w ?? 0, l: rec?.l ?? 0, champion: po.champion };
+    return { label: po.roundLabel, w: rec?.w ?? 0, l: rec?.l ?? 0, champion: po.champion };
   }
 
   return (

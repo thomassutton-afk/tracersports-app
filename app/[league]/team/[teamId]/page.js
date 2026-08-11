@@ -27,6 +27,8 @@ import {
   fetchTeamGameLog,
   buildAllTimeRows,
   tallyPlayoffResults,
+  getSeasonMaxRounds,
+  getSeasonRoundDelta,
   formatDate,
   roundLabel,
 } from "@/lib/gamesData";
@@ -157,7 +159,16 @@ export default function TeamPage() {
   }
 
   const showPreseason = variant === "echo";
-  const roundLabels = leagueConfig.engine?.roundLabels ?? {};
+  // Game Log spans every season this team has played - unlike the Season
+  // Page (single season, one delta) or All-Time page (delta baked into
+  // each row's own tallyPlayoffResults output), here each row can be a
+  // DIFFERENT season, so this needs a per-season delta map instead of one
+  // number. Derived from this team's own already-loaded games (filtering
+  // to its playoff rows) - no extra fetch needed.
+  const { seasonMaxRound: teamSeasonMaxRound, configuredMax: teamConfiguredMax } = useMemo(
+    () => getSeasonMaxRounds(games.filter((g) => g.type === "P"), leagueConfig),
+    [games, leagueConfig]
+  );
   const fillColor = getFillColor(team);
 
   // Enrich season rows with identity/logo/playoff summary, sorted newest-first
@@ -195,8 +206,7 @@ export default function TeamPage() {
   function playoffBadge(po) {
     if (!po || po.highestRound === null) return null;
     const rec = po.rounds[String(po.highestRound)];
-    const label = roundLabels[String(po.highestRound)] ?? `Round ${po.highestRound}`;
-    return { label, w: rec?.w ?? 0, l: rec?.l ?? 0, champion: po.champion };
+    return { label: po.roundLabel, w: rec?.w ?? 0, l: rec?.l ?? 0, champion: po.champion };
   }
 
   return (
@@ -470,7 +480,7 @@ export default function TeamPage() {
                       {pagedGames.map((g) => {
                         const won = g.result === 1;
                         const isPlayoff = g.type === "P";
-                        const label = roundLabel(g.round, g.type, leagueConfig);
+                        const label = roundLabel(g.round, g.type, leagueConfig, getSeasonRoundDelta(g.season, teamSeasonMaxRound, teamConfiguredMax));
                         const oppColor = leagueConfig.teams[g.opponent_id]?.primary ?? "var(--text3)";
 
                         return (

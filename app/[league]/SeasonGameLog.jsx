@@ -55,7 +55,7 @@ function chgStr(n) {
   return n == null ? "—" : (n > 0 ? "+" : "") + Number(n).toFixed(1);
 }
 
-export default function SeasonGameLog({ league, season, variant, leagueConfig, historyByTeam, logoIndex }) {
+export default function SeasonGameLog({ league, season, variant, leagueConfig, historyByTeam, logoIndex, roundDelta = 0 }) {
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
   const [typeFilter, setTypeFilter] = useState("all"); // all | R | P
@@ -115,7 +115,7 @@ export default function SeasonGameLog({ league, season, variant, leagueConfig, h
                 {pagedGames.map((g) => {
                   const homeWon = g.homeScore > g.awayScore;
                   const isPlayoff = g.type === "P";
-                  const label = roundLabel(g.round, g.type, leagueConfig);
+                  const label = roundLabel(g.round, g.type, leagueConfig, roundDelta);
                   const homeId = getDisplayIdentity(g.home, season, historyByTeam, leagueConfig);
                   const awayId = getDisplayIdentity(g.away, season, historyByTeam, leagueConfig);
                   const homeLogo = resolveHistoricalLogoPath(g.home, season, historyByTeam, logoIndex, league);

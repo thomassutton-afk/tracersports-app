@@ -45,6 +45,8 @@ import {
   buildSeasonAccuracy,
   fetchSeasonPlayoffGames,
   tallyPlayoffResults,
+  getSeasonMaxRounds,
+  getSeasonRoundDelta,
 } from "@/lib/gamesData";
 import {
   fetchTeamHistory,
@@ -81,6 +83,7 @@ export default function SeasonPage() {
   const [preseasonByTeam, setPreseasonByTeam] = useState({});
   const [accuracy, setAccuracy] = useState(null);
   const [poByTeam, setPoByTeam] = useState({});
+  const [roundDelta, setRoundDelta] = useState(0);
   const [historyByTeam, setHistoryByTeam] = useState({});
   const [logoIndex, setLogoIndex] = useState({});
   const [loading, setLoading] = useState(true);
@@ -138,6 +141,8 @@ export default function SeasonPage() {
       }
       setPreseasonByTeam(preseasonResult.byTeam);
       setPoByTeam(tallyPlayoffResults(poResult.poGames, leagueConfig));
+      const { seasonMaxRound, configuredMax } = getSeasonMaxRounds(poResult.poGames, leagueConfig);
+      setRoundDelta(getSeasonRoundDelta(season, seasonMaxRound, configuredMax));
       setLoading(false);
     });
   }, [league, leagueConfig, variant, season]);
@@ -194,7 +199,6 @@ export default function SeasonPage() {
   const ratings = sorted.map((r) => r.finalRating ?? 0);
   const maxRating = ratings.length ? Math.max(...ratings) : 0;
   const minRating = ratings.length ? Math.min(...ratings) : 0;
-  const roundLabels = leagueConfig?.engine?.roundLabels ?? {};
   const isCurrentSeason = seasons.length > 0 && season === seasons[0];
   const hasPlayoffData = Object.keys(poByTeam).length > 0;
 
@@ -202,8 +206,7 @@ export default function SeasonPage() {
     const po = poByTeam[teamId];
     if (!po || po.highestRound === null) return null;
     const rec = po.rounds[String(po.highestRound)];
-    const label = roundLabels[String(po.highestRound)] ?? `Round ${po.highestRound}`;
-    return { label, w: rec?.w ?? 0, l: rec?.l ?? 0, champion: po.champion };
+    return { label: po.roundLabel, w: rec?.w ?? 0, l: rec?.l ?? 0, champion: po.champion };
   }
 
   return (
@@ -305,7 +308,7 @@ export default function SeasonPage() {
             <SeasonRatingChart rawRows={rawRows} standingsRows={rows} poByTeam={poByTeam} season={season} leagueConfig={leagueConfig} historyByTeam={historyByTeam} league={league} />
           )
         ) : activeTab === "gamelog" ? (
-          <SeasonGameLog league={league} season={season} variant={variant} leagueConfig={leagueConfig} historyByTeam={historyByTeam} logoIndex={logoIndex} />
+          <SeasonGameLog league={league} season={season} variant={variant} leagueConfig={leagueConfig} historyByTeam={historyByTeam} logoIndex={logoIndex} roundDelta={roundDelta} />
         ) : loading ? (
           <div style={{ padding: "40px 0", textAlign: "center", color: "var(--text3)", fontFamily: "var(--font-mono)", fontSize: 13 }}>
             Loading…
