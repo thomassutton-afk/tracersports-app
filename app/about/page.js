@@ -16,8 +16,10 @@
  *     league-agnostic.
  */
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import { fetchLeagueAccuracy, buildSeasonAccuracy } from "@/lib/gamesData";
 
 function Section({ title, eyebrow, children }) {
   return (
@@ -29,7 +31,48 @@ function Section({ title, eyebrow, children }) {
   );
 }
 
+// Live, all-time (every season on record, no date cutoff) accuracy across
+// both leagues and both rating variants, plus a Combined row merging NBA
+// and WNBA's raw rows together before recomputing (not an average of the
+// two percentages, which would over-weight whichever league has fewer
+// games) - requested directly to replace the previous hardcoded/static
+// "66.8%" copy, which never updated as new games were added.
+function useAllTimeAccuracyTable() {
+  const [table, setTable] = useState(null); // { NBA: {echo, pulse}, WNBA: {...}, Combined: {...} }
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const [nbaEcho, nbaPulse, wnbaEcho, wnbaPulse] = await Promise.all([
+        fetchLeagueAccuracy("nba", "echo"),
+        fetchLeagueAccuracy("nba", "pulse"),
+        fetchLeagueAccuracy("wnba", "echo"),
+        fetchLeagueAccuracy("wnba", "pulse"),
+      ]);
+      if (cancelled) return;
+
+      setTable({
+        NBA: { echo: buildSeasonAccuracy(nbaEcho.rows), pulse: buildSeasonAccuracy(nbaPulse.rows) },
+        WNBA: { echo: buildSeasonAccuracy(wnbaEcho.rows), pulse: buildSeasonAccuracy(wnbaPulse.rows) },
+        Combined: {
+          echo: buildSeasonAccuracy([...nbaEcho.rows, ...wnbaEcho.rows]),
+          pulse: buildSeasonAccuracy([...nbaPulse.rows, ...wnbaPulse.rows]),
+        },
+      });
+      setLoading(false);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  return { table, loading };
+}
+
 export default function AboutPage() {
+  const { table, loading } = useAllTimeAccuracyTable();
+
   return (
     <div>
       <div className="hero">
@@ -80,22 +123,45 @@ export default function AboutPage() {
 
         <Section title="How accurate is it?">
           <p style={S.body}>
-            Going back to the 1995–96 season, the TRACER Echo rating has correctly
-            predicted the winner in 66.8% of games, with a Brier score of 0.209. After
-            finishing the system, I tested it against the now-defunct NBA Elo ratings that
-            used to be available on FiveThirtyEight. Echo beat the FiveThirtyEight model on
-            accuracy, a result confirmed by significance testing.
+            The table below is computed live, straight off every game on record for each
+            league — not a fixed snapshot, so it moves as new games get added. After
+            finishing the system, I tested the NBA Echo rating against the now-defunct NBA
+            Elo ratings that used to be available on FiveThirtyEight. Echo beat the
+            FiveThirtyEight model on accuracy, a result confirmed by significance testing.
           </p>
-          <div style={S.metricsRow}>
-            <div style={S.metricCard}>
-              <div style={S.metricVal}>66.8%</div>
-              <div style={S.metricLabel}>Accuracy</div>
+          {loading ? (
+            <div style={S.tableLoading}>Loading live accuracy…</div>
+          ) : (
+            <div style={S.tableWrap}>
+              <table style={S.table}>
+                <thead>
+                  <tr>
+                    <th style={S.th("left")}>League</th>
+                    <th style={S.th("right")}>Echo Accuracy</th>
+                    <th style={S.th("right")}>Echo Brier</th>
+                    <th style={S.th("right")}>Pulse Accuracy</th>
+                    <th style={S.th("right")}>Pulse Brier</th>
+                    <th style={S.th("right")}>Games</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {["NBA", "WNBA", "Combined"].map((label) => {
+                    const row = table[label];
+                    return (
+                      <tr key={label} style={label === "Combined" ? S.trTotal : undefined}>
+                        <td style={S.td("left")}>{label}</td>
+                        <td style={S.td("right")}>{row.echo ? `${row.echo.pct}%` : "—"}</td>
+                        <td style={S.td("right")}>{row.echo?.brier ?? "—"}</td>
+                        <td style={S.td("right")}>{row.pulse ? `${row.pulse.pct}%` : "—"}</td>
+                        <td style={S.td("right")}>{row.pulse?.brier ?? "—"}</td>
+                        <td style={S.td("right")}>{Number(row.echo?.n ?? 0).toLocaleString()}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
             </div>
-            <div style={S.metricCard}>
-              <div style={S.metricVal}>0.209</div>
-              <div style={S.metricLabel}>Brier Score</div>
-            </div>
-          </div>
+          )}
         </Section>
 
         <div style={S.divider} />
@@ -167,17 +233,35 @@ const S = {
   divider: { height: 1, background: "var(--border)", marginTop: "2rem" },
   link: { color: "var(--acc)", textDecoration: "underline" },
 
-  metricsRow: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, margin: "0.5rem 0 1rem", maxWidth: 400 },
-  metricCard: { background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 12, padding: "16px 20px" },
-  metricVal: { fontFamily: "var(--font-mono)", fontSize: 28, fontWeight: 600, color: "var(--acc)", lineHeight: 1 },
-  metricLabel: {
+  tableWrap: { overflowX: "auto", border: "1px solid var(--border)", borderRadius: 12, margin: "0.5rem 0 1rem" },
+  table: { width: "100%", borderCollapse: "collapse", background: "var(--surface)" },
+  th: (align) => ({
     fontFamily: "var(--font-mono)",
-    fontSize: 11,
+    fontSize: 10,
     fontWeight: 500,
     color: "var(--text3)",
     textTransform: "uppercase",
     letterSpacing: 1,
-    margin: "6px 0 0",
+    padding: "10px 14px",
+    textAlign: align,
+    whiteSpace: "nowrap",
+    borderBottom: "2px solid var(--border)",
+  }),
+  td: (align) => ({
+    fontFamily: "var(--font-mono)",
+    fontSize: 13,
+    color: "var(--text)",
+    padding: "10px 14px",
+    textAlign: align,
+    whiteSpace: "nowrap",
+  }),
+  trTotal: { borderTop: "1px solid var(--border)", fontWeight: 700 },
+  tableLoading: {
+    fontFamily: "var(--font-mono)",
+    fontSize: 13,
+    color: "var(--text3)",
+    padding: "24px 0",
+    margin: "0.5rem 0 1rem",
   },
 
   ctaRow: { display: "flex", gap: 12, marginTop: "3rem", paddingTop: "2rem", borderTop: "1px solid var(--border)" },
