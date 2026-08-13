@@ -87,14 +87,152 @@ NBA_COLORS = [
     ("nba_0030", 2005, "#1B365D", "#E35205", "#8D9093"),  # Bobcats Blue / Orange / Silver
     # --- Washington Bullets (1996-1997) -> Washington Wizards ---
     ("nba_0029", 1996, "#D50032", "#003DA5", "#FFFFFF"),  # Red / Blue / White
-    # --- Washington Wizards (1998-present) - INTENTIONALLY NOT SET ---
-    # This row currently spans 1998-2011 (Slate Blue/Black/Bronze-or-Gold)
-    # AND 2011-present (Red/Navy/Silver, presumably what config.js already
-    # has). Left NULL rather than guessing wrong for 13 years of one era or
-    # the other - split this one before setting colors:
-    #   python3 franchise.py relocate --current-code WAS --alias WAS --name "Washington Wizards" --season 2011
-    #   python3 franchise.py set-colors --current-code WAS --season 1998 --primary "#236192" --secondary "#010101" --tertiary "#896C4C"
-    # (2011-present row stays NULL, served by config.js as normal)
+    # --- Washington Wizards (1998-present) ---
+    # Bullets/Wizards rename split (1996/1998) only - the color-only split
+    # within the Wizards row (1998-2011 vs 2012-present) is handled in
+    # NBA_CURRENT30_COLORS below, now that split_color_eras.py has created
+    # that row.
+]
+
+# NBA eras for franchises that have NEVER relocated or renamed (same code,
+# same name, since at least 1996) but DID have real color/logo changes.
+# These rows didn't exist until split_color_eras.py ran - see that script
+# for the season-numbering methodology (every "Recommended" shorthand year
+# in the doc needs +1 to become the correct start_season; this list already
+# has that applied, do not re-derive from the doc's shorthand directly).
+# Same rule as above: each team's CURRENT (most recent, still-open) era is
+# intentionally left unset here, served by config.js as the single source
+# of truth. "3 colors" are a deliberate visual-distinctiveness pick out of
+# whatever TruColor listed (sometimes 4-6) - see individual comments.
+NBA_CURRENT30_COLORS = [
+    # --- Atlanta Hawks ---
+    ("nba_0001", 1996, "#C8102E", "#010101", "#FFC72C"),  # Red / Black / Yellow
+    ("nba_0001", 2008, "#0C2340", "#C8102E", "#B1B3B3"),  # Navy / Red / Silver
+    ("nba_0001", 2016, "#C8102E", "#25282A", "#C4D600"),  # Torch Red / Granite Gray / Volt Green
+    # 2021-present intentionally left NULL
+
+    # --- Cleveland Cavaliers ---
+    # 1996 era start uses the doc's documented 1994-95 date (TJ flagged
+    # 1997 from memory, likely tracking the Shawn Kemp trade's visibility,
+    # not the actual color change - doc's date used here, override if you
+    # find a source confirming 1997).
+    ("nba_0005", 1996, "#010101", "#5C88DA", "#E35205"),  # Black / Blue / Orange
+    ("nba_0005", 2004, "#9D2235", "#8C714C", "#041E42"),  # Wine / Metallic Gold / Navy
+    ("nba_0005", 2011, "#6F263D", "#FFB81C", "#041E42"),  # Wine / Gold / Navy
+    # 2023-present intentionally left NULL
+
+    # --- Dallas Mavericks ---
+    ("nba_0006", 1996, "#002855", "#00843D", "#FFFFFF"),  # Blue / Green / White
+    ("nba_0006", 2002, "#041E42", "#0057B7", "#8D9093"),  # Navy / Light Royal / Silver
+    # 2018-present intentionally left NULL
+
+    # --- Denver Nuggets ---
+    ("nba_0007", 1996, "#041E42", "#9D2235", "#896C4C"),  # Navy / Red / Metallic Gold
+    ("nba_0007", 2004, "#418FDE", "#041E42", "#FFC72C"),  # Light Blue / Navy / Yellow Gold
+    # 2019-present intentionally left NULL
+
+    # --- Detroit Pistons ---
+    ("nba_0008", 1996, "#006271", "#9D2235", "#FFA400"),  # Green ("Teal Era") / Red / Yellow
+    ("nba_0008", 2002, "#003DA5", "#D50032", "#8D9093"),  # Royal Blue / Red / Silver
+    # 2021-present intentionally left NULL
+
+    # --- Golden State Warriors ---
+    ("nba_0009", 1996, "#002F6C", "#FFCD00", "#FFFFFF"),  # Blue / Gold / White
+    ("nba_0009", 1998, "#041E42", "#BE3A34", "#00A9E0"),  # Midnight Blue / Golden Gate Orange / Sky Blue
+    # 2011-present intentionally left NULL
+
+    # --- Houston Rockets ---
+    ("nba_0010", 1996, "#041E42", "#BA0C2F", "#2C7AA1"),  # Midnight Blue / Rockets Red / Mercury Blue
+    ("nba_0010", 2004, "#BA0C2F", "#010101", "#8D9093"),  # Red / Black / Silver
+    ("nba_0010", 2020, "#BA0C2F", "#010101", "#373A36"),  # Red / Black / Anthracite
+    # 2027-present intentionally left NULL
+
+    # --- Indiana Pacers ---
+    ("nba_0011", 1996, "#041E42", "#FFCD00", "#FFFFFF"),  # Navy / Gold / White
+    ("nba_0011", 2011, "#041E42", "#FFC72C", "#B1B3B3"),  # Navy / Gold / Cool Gray
+    # 2026-present intentionally left NULL
+
+    # --- LA Clippers ---
+    ("nba_0012", 1996, "#D50032", "#003DA5", "#FFFFFF"),  # Red / Blue / White
+    ("nba_0012", 2001, "#D50032", "#003DA5", "#B1B3B3"),  # Red / Royal Blue / Gray
+    ("nba_0012", 2016, "#D50032", "#003DA5", "#010101"),  # Red / Royal Blue / Black
+    # 2025-present intentionally left NULL
+
+    # --- LA Lakers ---
+    ("nba_0013", 1996, "#9063CD", "#FFC72C", "#FFFFFF"),  # Royal Purple / Gold / White
+    # 2000-present intentionally left NULL
+
+    # --- Memphis Grizzlies - additional split beyond the Vancouver-palette
+    # entry already in NBA_COLORS above (that entry covers 1996-2001 as
+    # VAN; this covers the post-relocation 2002-04 holdover era before the
+    # Memphis Midnight Blue rebrand) ---
+    ("nba_0028", 2002, "#00B2A9", "#C8102E", "#8F654D"),  # Turquoise / Red / Bronze (Vancouver-palette holdover)
+    # 2005-present intentionally left NULL
+
+    # --- Miami Heat ---
+    ("nba_0014", 1996, "#2C2A29", "#DF192C", "#F2672C"),  # Black / Red / Orange
+    # 2000-present intentionally left NULL
+
+    # --- Milwaukee Bucks ---
+    ("nba_0015", 1996, "#702F8A", "#2C5234", "#8D9093"),  # Purple / Hunter Green / Silver
+    ("nba_0015", 2007, "#2C5234", "#A6192E", "#8D9093"),  # Hunter Green / Dark Red / Silver
+    # 2016-present intentionally left NULL
+
+    # --- Minnesota Timberwolves ---
+    # First row is a single season (1995-96 only) before the 1996-97 slate
+    # blue rebrand - per TJ's note this and the 2008 shade-tweak row are
+    # really one continuous era, using the longer/dominant 1996-2008
+    # sub-era's Green value (#00843D) rather than the later Tree Green.
+    ("nba_0016", 1996, "#0032A0", "#009A44", "#8D9093"),  # Royal Blue / Kelly Green / Silver
+    ("nba_0016", 1997, "#236192", "#010101", "#00843D"),  # Slate Blue / Black / Green
+    ("nba_0016", 2018, "#0C2340", "#236192", "#78BE21"),  # Midnight Blue / Lake Blue / Aurora Green
+    # 2027-present intentionally left NULL
+
+    # --- Orlando Magic ---
+    ("nba_0019", 1996, "#010101", "#007FC5", "#8D9093"),  # Magic Black / Electric Blue / Quick Silver
+    ("nba_0019", 1999, "#0057B7", "#010101", "#8D9093"),  # Light Royal / Black / Silver
+    # 2026-present intentionally left NULL
+
+    # --- Philadelphia 76ers ---
+    ("nba_0020", 1996, "#D50032", "#002F6C", "#FFFFFF"),  # Red / Blue / White
+    ("nba_0020", 1998, "#010101", "#D50032", "#896C4C"),  # Black / Red / Gold
+    ("nba_0020", 2010, "#D50032", "#003DA5", "#B1B3B3"),  # Red / Royal Blue / Silver
+    # 2023-present intentionally left NULL
+
+    # --- Phoenix Suns ---
+    ("nba_0021", 1996, "#5F249F", "#FE5000", "#FF6900"),  # Purple / Orange / Yellow (gradient era)
+    ("nba_0021", 2001, "#582C83", "#CB6015", "#5B6770"),  # Purple / Burnt Orange / Gray
+    # 2018-present intentionally left NULL
+
+    # --- Sacramento Kings ---
+    ("nba_0023", 1996, "#010101", "#753BBD", "#8D9093"),  # Black / Purple / Silver
+    # 2017-present intentionally left NULL
+
+    # --- Toronto Raptors ---
+    # FLAGGED FOR YOUR CALL: split_color_eras.py used the "purple carried
+    # through 2008" reading (era1 = 1996-2008) rather than the doc's own
+    # "1995-2006" bullet header, since the header conflicts with its own
+    # description and with the raw row boundary for era 2. If you actually
+    # want the header taken literally, era 1 should end at 2007 instead -
+    # that would require re-running split_color_eras.py with season 2007
+    # in place of 2009 before this entry would apply correctly.
+    ("nba_0026", 1996, "#753BBD", "#BA0C2F", "#010101"),  # Purple / Raptor Red / Black
+    ("nba_0026", 2009, "#BA0C2F", "#010101", "#8D9093"),  # Red / Black / Silver
+    # 2021-present intentionally left NULL
+
+    # --- Utah Jazz ---
+    ("nba_0027", 1996, "#753BBD", "#006271", "#954E4C"),  # Purple / Green / Copper (mountain-logo era)
+    ("nba_0027", 2005, "#0C2340", "#418FDE", "#582C83"),  # Utah Blue / Jazz Blue / Purple
+    ("nba_0027", 2011, "#0C2340", "#2C5234", "#FFA400"),  # Navy / Dark Green / Dark Yellow
+    ("nba_0027", 2023, "#010101", "#FBE122", "#DBE2E9"),  # Black Key / Spotlight Yellow / Light Gray
+    # 2026-present intentionally left NULL
+
+    # --- Washington Wizards - additional split beyond the Bullets/Wizards
+    # rename entry already in NBA_COLORS above (that entry covers the
+    # 1996-97 Bullets season; this covers the Wizards' slate-blue era
+    # before the 2012 red/navy/silver rebrand) ---
+    ("nba_0029", 1998, "#236192", "#010101", "#8F654D"),  # Slate Blue / Black / Bronze
+    # 2012-present intentionally left NULL
 ]
 
 # WNBA eras - only the franchises that relocated/renamed but are STILL
@@ -160,7 +298,11 @@ def main():
         sys.exit(1)
 
     conn = db.connect(db_path)
-    rows = NBA_COLORS if args.league == "nba" else WNBA_COLORS
+    # NBA_CURRENT30_COLORS requires split_color_eras.py --league nba to
+    # have already been run - those rows don't exist otherwise, and any
+    # entry here will just print as SKIPPED (harmless, but check
+    # franchise.py status if you weren't expecting that).
+    rows = NBA_COLORS + NBA_CURRENT30_COLORS if args.league == "nba" else WNBA_COLORS
 
     applied, skipped = 0, 0
     for team_id, start_season, primary, secondary, tertiary in rows:
