@@ -1,0 +1,535 @@
+Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT
+2004-09-09,2004,Reg,RS,New England Patriots,Indianapolis Colts,H,27,24,Unknown
+2004-09-09,2004,Reg,RS,Indianapolis Colts,New England Patriots,A,24,27,Unknown
+2004-09-11,2004,Reg,RS,Tennessee Titans,Miami Dolphins,A,17,7,Unknown
+2004-09-11,2004,Reg,RS,Miami Dolphins,Tennessee Titans,H,7,17,Unknown
+2004-09-12,2004,Reg,RS,Jacksonville Jaguars,Buffalo Bills,A,13,10,Unknown
+2004-09-12,2004,Reg,RS,Buffalo Bills,Jacksonville Jaguars,H,10,13,Unknown
+2004-09-12,2004,Reg,RS,St. Louis Rams,Arizona Cardinals,H,17,10,Unknown
+2004-09-12,2004,Reg,RS,Arizona Cardinals,St. Louis Rams,A,10,17,Unknown
+2004-09-12,2004,Reg,RS,Pittsburgh Steelers,Oakland Raiders,H,24,21,Unknown
+2004-09-12,2004,Reg,RS,Oakland Raiders,Pittsburgh Steelers,A,21,24,Unknown
+2004-09-12,2004,Reg,RS,Detroit Lions,Chicago Bears,A,20,16,Unknown
+2004-09-12,2004,Reg,RS,Chicago Bears,Detroit Lions,H,16,20,Unknown
+2004-09-12,2004,Reg,RS,San Diego Chargers,Houston Texans,A,27,20,Unknown
+2004-09-12,2004,Reg,RS,Houston Texans,San Diego Chargers,H,20,27,Unknown
+2004-09-12,2004,Reg,RS,Seattle Seahawks,New Orleans Saints,A,21,7,Unknown
+2004-09-12,2004,Reg,RS,New Orleans Saints,Seattle Seahawks,H,7,21,Unknown
+2004-09-12,2004,Reg,RS,Washington Redskins,Tampa Bay Buccaneers,H,16,10,Unknown
+2004-09-12,2004,Reg,RS,Tampa Bay Buccaneers,Washington Redskins,A,10,16,Unknown
+2004-09-12,2004,Reg,RS,New York Jets,Cincinnati Bengals,H,31,24,Unknown
+2004-09-12,2004,Reg,RS,Cincinnati Bengals,New York Jets,A,24,31,Unknown
+2004-09-12,2004,Reg,RS,Cleveland Browns,Baltimore Ravens,H,20,3,Unknown
+2004-09-12,2004,Reg,RS,Baltimore Ravens,Cleveland Browns,A,3,20,Unknown
+2004-09-12,2004,Reg,RS,Minnesota Vikings,Dallas Cowboys,H,35,17,Unknown
+2004-09-12,2004,Reg,RS,Dallas Cowboys,Minnesota Vikings,A,17,35,Unknown
+2004-09-12,2004,Reg,RS,Atlanta Falcons,San Francisco 49ers,A,21,19,Unknown
+2004-09-12,2004,Reg,RS,San Francisco 49ers,Atlanta Falcons,H,19,21,Unknown
+2004-09-12,2004,Reg,RS,Philadelphia Eagles,New York Giants,H,31,17,Unknown
+2004-09-12,2004,Reg,RS,New York Giants,Philadelphia Eagles,A,17,31,Unknown
+2004-09-12,2004,Reg,RS,Denver Broncos,Kansas City Chiefs,H,34,24,Unknown
+2004-09-12,2004,Reg,RS,Kansas City Chiefs,Denver Broncos,A,24,34,Unknown
+2004-09-13,2004,Reg,RS,Green Bay Packers,Carolina Panthers,A,24,14,Unknown
+2004-09-13,2004,Reg,RS,Carolina Panthers,Green Bay Packers,H,14,24,Unknown
+2004-09-19,2004,Reg,RS,Carolina Panthers,Kansas City Chiefs,A,28,17,Unknown
+2004-09-19,2004,Reg,RS,Kansas City Chiefs,Carolina Panthers,H,17,28,Unknown
+2004-09-19,2004,Reg,RS,Chicago Bears,Green Bay Packers,A,21,10,Unknown
+2004-09-19,2004,Reg,RS,Green Bay Packers,Chicago Bears,H,10,21,Unknown
+2004-09-19,2004,Reg,RS,Indianapolis Colts,Tennessee Titans,A,31,17,Unknown
+2004-09-19,2004,Reg,RS,Tennessee Titans,Indianapolis Colts,H,17,31,Unknown
+2004-09-19,2004,Reg,RS,Jacksonville Jaguars,Denver Broncos,H,7,6,Unknown
+2004-09-19,2004,Reg,RS,Denver Broncos,Jacksonville Jaguars,A,6,7,Unknown
+2004-09-19,2004,Reg,RS,Baltimore Ravens,Pittsburgh Steelers,H,30,13,Unknown
+2004-09-19,2004,Reg,RS,Pittsburgh Steelers,Baltimore Ravens,A,13,30,Unknown
+2004-09-19,2004,Reg,RS,Atlanta Falcons,St. Louis Rams,H,34,17,Unknown
+2004-09-19,2004,Reg,RS,St. Louis Rams,Atlanta Falcons,A,17,34,Unknown
+2004-09-19,2004,Reg,RS,New Orleans Saints,San Francisco 49ers,H,30,27,Unknown
+2004-09-19,2004,Reg,RS,San Francisco 49ers,New Orleans Saints,A,27,30,Unknown
+2004-09-19,2004,Reg,RS,Detroit Lions,Houston Texans,H,28,16,Unknown
+2004-09-19,2004,Reg,RS,Houston Texans,Detroit Lions,A,16,28,Unknown
+2004-09-19,2004,Reg,RS,New York Giants,Washington Redskins,H,20,14,Unknown
+2004-09-19,2004,Reg,RS,Washington Redskins,New York Giants,A,14,20,Unknown
+2004-09-19,2004,Reg,RS,Seattle Seahawks,Tampa Bay Buccaneers,A,10,6,Unknown
+2004-09-19,2004,Reg,RS,Tampa Bay Buccaneers,Seattle Seahawks,H,6,10,Unknown
+2004-09-19,2004,Reg,RS,Oakland Raiders,Buffalo Bills,H,13,10,Unknown
+2004-09-19,2004,Reg,RS,Buffalo Bills,Oakland Raiders,A,10,13,Unknown
+2004-09-19,2004,Reg,RS,Dallas Cowboys,Cleveland Browns,H,19,12,Unknown
+2004-09-19,2004,Reg,RS,Cleveland Browns,Dallas Cowboys,A,12,19,Unknown
+2004-09-19,2004,Reg,RS,New York Jets,San Diego Chargers,A,34,28,Unknown
+2004-09-19,2004,Reg,RS,San Diego Chargers,New York Jets,H,28,34,Unknown
+2004-09-19,2004,Reg,RS,New England Patriots,Arizona Cardinals,A,23,12,Unknown
+2004-09-19,2004,Reg,RS,Arizona Cardinals,New England Patriots,H,12,23,Unknown
+2004-09-19,2004,Reg,RS,Cincinnati Bengals,Miami Dolphins,H,16,13,Unknown
+2004-09-19,2004,Reg,RS,Miami Dolphins,Cincinnati Bengals,A,13,16,Unknown
+2004-09-20,2004,Reg,RS,Philadelphia Eagles,Minnesota Vikings,H,27,16,Unknown
+2004-09-20,2004,Reg,RS,Minnesota Vikings,Philadelphia Eagles,A,16,27,Unknown
+2004-09-26,2004,Reg,RS,Minnesota Vikings,Chicago Bears,H,27,22,Unknown
+2004-09-26,2004,Reg,RS,Chicago Bears,Minnesota Vikings,A,22,27,Unknown
+2004-09-26,2004,Reg,RS,Houston Texans,Kansas City Chiefs,A,24,21,Unknown
+2004-09-26,2004,Reg,RS,Kansas City Chiefs,Houston Texans,H,21,24,Unknown
+2004-09-26,2004,Reg,RS,Baltimore Ravens,Cincinnati Bengals,A,23,9,Unknown
+2004-09-26,2004,Reg,RS,Cincinnati Bengals,Baltimore Ravens,H,9,23,Unknown
+2004-09-26,2004,Reg,RS,New York Giants,Cleveland Browns,H,27,10,Unknown
+2004-09-26,2004,Reg,RS,Cleveland Browns,New York Giants,A,10,27,Unknown
+2004-09-26,2004,Reg,RS,Jacksonville Jaguars,Tennessee Titans,A,15,12,Unknown
+2004-09-26,2004,Reg,RS,Tennessee Titans,Jacksonville Jaguars,H,12,15,Unknown
+2004-09-26,2004,Reg,RS,New Orleans Saints,St. Louis Rams,A,28,25,Unknown
+2004-09-26,2004,Reg,RS,St. Louis Rams,New Orleans Saints,H,25,28,Unknown
+2004-09-26,2004,Reg,RS,Philadelphia Eagles,Detroit Lions,A,30,13,Unknown
+2004-09-26,2004,Reg,RS,Detroit Lions,Philadelphia Eagles,H,13,30,Unknown
+2004-09-26,2004,Reg,RS,Atlanta Falcons,Arizona Cardinals,H,6,3,Unknown
+2004-09-26,2004,Reg,RS,Arizona Cardinals,Atlanta Falcons,A,3,6,Unknown
+2004-09-26,2004,Reg,RS,Denver Broncos,San Diego Chargers,H,23,13,Unknown
+2004-09-26,2004,Reg,RS,San Diego Chargers,Denver Broncos,A,13,23,Unknown
+2004-09-26,2004,Reg,RS,Indianapolis Colts,Green Bay Packers,H,45,31,Unknown
+2004-09-26,2004,Reg,RS,Green Bay Packers,Indianapolis Colts,A,31,45,Unknown
+2004-09-26,2004,Reg,RS,Seattle Seahawks,San Francisco 49ers,H,34,0,Unknown
+2004-09-26,2004,Reg,RS,San Francisco 49ers,Seattle Seahawks,A,0,34,Unknown
+2004-09-26,2004,Reg,RS,Oakland Raiders,Tampa Bay Buccaneers,H,30,20,Unknown
+2004-09-26,2004,Reg,RS,Tampa Bay Buccaneers,Oakland Raiders,A,20,30,Unknown
+2004-09-26,2004,Reg,RS,Pittsburgh Steelers,Miami Dolphins,A,13,3,Unknown
+2004-09-26,2004,Reg,RS,Miami Dolphins,Pittsburgh Steelers,H,3,13,Unknown
+2004-09-27,2004,Reg,RS,Dallas Cowboys,Washington Redskins,A,21,18,Unknown
+2004-09-27,2004,Reg,RS,Washington Redskins,Dallas Cowboys,H,18,21,Unknown
+2004-10-03,2004,Reg,RS,Pittsburgh Steelers,Cincinnati Bengals,H,28,17,Unknown
+2004-10-03,2004,Reg,RS,Cincinnati Bengals,Pittsburgh Steelers,A,17,28,Unknown
+2004-10-03,2004,Reg,RS,New England Patriots,Buffalo Bills,A,31,17,Unknown
+2004-10-03,2004,Reg,RS,Buffalo Bills,New England Patriots,H,17,31,Unknown
+2004-10-03,2004,Reg,RS,Cleveland Browns,Washington Redskins,H,17,13,Unknown
+2004-10-03,2004,Reg,RS,Washington Redskins,Cleveland Browns,A,13,17,Unknown
+2004-10-03,2004,Reg,RS,Indianapolis Colts,Jacksonville Jaguars,A,24,17,Unknown
+2004-10-03,2004,Reg,RS,Jacksonville Jaguars,Indianapolis Colts,H,17,24,Unknown
+2004-10-03,2004,Reg,RS,New York Giants,Green Bay Packers,A,14,7,Unknown
+2004-10-03,2004,Reg,RS,Green Bay Packers,New York Giants,H,7,14,Unknown
+2004-10-03,2004,Reg,RS,Houston Texans,Oakland Raiders,H,30,17,Unknown
+2004-10-03,2004,Reg,RS,Oakland Raiders,Houston Texans,A,17,30,Unknown
+2004-10-03,2004,Reg,RS,Philadelphia Eagles,Chicago Bears,A,19,9,Unknown
+2004-10-03,2004,Reg,RS,Chicago Bears,Philadelphia Eagles,H,9,19,Unknown
+2004-10-03,2004,Reg,RS,Atlanta Falcons,Carolina Panthers,A,27,10,Unknown
+2004-10-03,2004,Reg,RS,Carolina Panthers,Atlanta Falcons,H,10,27,Unknown
+2004-10-03,2004,Reg,RS,Arizona Cardinals,New Orleans Saints,H,34,10,Unknown
+2004-10-03,2004,Reg,RS,New Orleans Saints,Arizona Cardinals,A,10,34,Unknown
+2004-10-03,2004,Reg,RS,Denver Broncos,Tampa Bay Buccaneers,A,16,13,Unknown
+2004-10-03,2004,Reg,RS,Tampa Bay Buccaneers,Denver Broncos,H,13,16,Unknown
+2004-10-03,2004,Reg,RS,New York Jets,Miami Dolphins,A,17,9,Unknown
+2004-10-03,2004,Reg,RS,Miami Dolphins,New York Jets,H,9,17,Unknown
+2004-10-03,2004,Reg,RS,San Diego Chargers,Tennessee Titans,H,38,17,Unknown
+2004-10-03,2004,Reg,RS,Tennessee Titans,San Diego Chargers,A,17,38,Unknown
+2004-10-03,2004,Reg,RS,St. Louis Rams,San Francisco 49ers,A,24,14,Unknown
+2004-10-03,2004,Reg,RS,San Francisco 49ers,St. Louis Rams,H,14,24,Unknown
+2004-10-04,2004,Reg,RS,Kansas City Chiefs,Baltimore Ravens,A,27,24,Unknown
+2004-10-04,2004,Reg,RS,Baltimore Ravens,Kansas City Chiefs,H,24,27,Unknown
+2004-10-10,2004,Reg,RS,Indianapolis Colts,Oakland Raiders,H,35,14,Unknown
+2004-10-10,2004,Reg,RS,Oakland Raiders,Indianapolis Colts,A,14,35,Unknown
+2004-10-10,2004,Reg,RS,Pittsburgh Steelers,Cleveland Browns,H,34,23,Unknown
+2004-10-10,2004,Reg,RS,Cleveland Browns,Pittsburgh Steelers,A,23,34,Unknown
+2004-10-10,2004,Reg,RS,Minnesota Vikings,Houston Texans,A,34,28,Unknown
+2004-10-10,2004,Reg,RS,Houston Texans,Minnesota Vikings,H,28,34,Unknown
+2004-10-10,2004,Reg,RS,New England Patriots,Miami Dolphins,H,24,10,Unknown
+2004-10-10,2004,Reg,RS,Miami Dolphins,New England Patriots,A,10,24,Unknown
+2004-10-10,2004,Reg,RS,New York Giants,Dallas Cowboys,A,26,10,Unknown
+2004-10-10,2004,Reg,RS,Dallas Cowboys,New York Giants,H,10,26,Unknown
+2004-10-10,2004,Reg,RS,Tampa Bay Buccaneers,New Orleans Saints,A,20,17,Unknown
+2004-10-10,2004,Reg,RS,New Orleans Saints,Tampa Bay Buccaneers,H,17,20,Unknown
+2004-10-10,2004,Reg,RS,Detroit Lions,Atlanta Falcons,A,17,10,Unknown
+2004-10-10,2004,Reg,RS,Atlanta Falcons,Detroit Lions,H,10,17,Unknown
+2004-10-10,2004,Reg,RS,San Diego Chargers,Jacksonville Jaguars,H,34,21,Unknown
+2004-10-10,2004,Reg,RS,Jacksonville Jaguars,San Diego Chargers,A,21,34,Unknown
+2004-10-10,2004,Reg,RS,New York Jets,Buffalo Bills,H,16,14,Unknown
+2004-10-10,2004,Reg,RS,Buffalo Bills,New York Jets,A,14,16,Unknown
+2004-10-10,2004,Reg,RS,Denver Broncos,Carolina Panthers,H,20,17,Unknown
+2004-10-10,2004,Reg,RS,Carolina Panthers,Denver Broncos,A,17,20,Unknown
+2004-10-10,2004,Reg,RS,San Francisco 49ers,Arizona Cardinals,H,31,28,Unknown
+2004-10-10,2004,Reg,RS,Arizona Cardinals,San Francisco 49ers,A,28,31,Unknown
+2004-10-10,2004,Reg,RS,St. Louis Rams,Seattle Seahawks,A,33,27,Unknown
+2004-10-10,2004,Reg,RS,Seattle Seahawks,St. Louis Rams,H,27,33,Unknown
+2004-10-10,2004,Reg,RS,Baltimore Ravens,Washington Redskins,A,17,10,Unknown
+2004-10-10,2004,Reg,RS,Washington Redskins,Baltimore Ravens,H,10,17,Unknown
+2004-10-11,2004,Reg,RS,Tennessee Titans,Green Bay Packers,A,48,27,Unknown
+2004-10-11,2004,Reg,RS,Green Bay Packers,Tennessee Titans,H,27,48,Unknown
+2004-10-17,2004,Reg,RS,Buffalo Bills,Miami Dolphins,H,20,13,Unknown
+2004-10-17,2004,Reg,RS,Miami Dolphins,Buffalo Bills,A,13,20,Unknown
+2004-10-17,2004,Reg,RS,New England Patriots,Seattle Seahawks,H,30,20,Unknown
+2004-10-17,2004,Reg,RS,Seattle Seahawks,New England Patriots,A,20,30,Unknown
+2004-10-17,2004,Reg,RS,Atlanta Falcons,San Diego Chargers,H,21,20,Unknown
+2004-10-17,2004,Reg,RS,San Diego Chargers,Atlanta Falcons,A,20,21,Unknown
+2004-10-17,2004,Reg,RS,Houston Texans,Tennessee Titans,A,20,10,Unknown
+2004-10-17,2004,Reg,RS,Tennessee Titans,Houston Texans,H,10,20,Unknown
+2004-10-17,2004,Reg,RS,Jacksonville Jaguars,Kansas City Chiefs,H,22,16,Unknown
+2004-10-17,2004,Reg,RS,Kansas City Chiefs,Jacksonville Jaguars,A,16,22,Unknown
+2004-10-17,2004,Reg,RS,Washington Redskins,Chicago Bears,A,13,10,Unknown
+2004-10-17,2004,Reg,RS,Chicago Bears,Washington Redskins,H,10,13,Unknown
+2004-10-17,2004,Reg,RS,Cleveland Browns,Cincinnati Bengals,H,34,17,Unknown
+2004-10-17,2004,Reg,RS,Cincinnati Bengals,Cleveland Browns,A,17,34,Unknown
+2004-10-17,2004,Reg,RS,Green Bay Packers,Detroit Lions,A,38,10,Unknown
+2004-10-17,2004,Reg,RS,Detroit Lions,Green Bay Packers,H,10,38,Unknown
+2004-10-17,2004,Reg,RS,New York Jets,San Francisco 49ers,H,22,14,Unknown
+2004-10-17,2004,Reg,RS,San Francisco 49ers,New York Jets,A,14,22,Unknown
+2004-10-17,2004,Reg,RS,Philadelphia Eagles,Carolina Panthers,H,30,8,Unknown
+2004-10-17,2004,Reg,RS,Carolina Panthers,Philadelphia Eagles,A,8,30,Unknown
+2004-10-17,2004,Reg,RS,Pittsburgh Steelers,Dallas Cowboys,A,24,20,Unknown
+2004-10-17,2004,Reg,RS,Dallas Cowboys,Pittsburgh Steelers,H,20,24,Unknown
+2004-10-17,2004,Reg,RS,Denver Broncos,Oakland Raiders,A,31,3,Unknown
+2004-10-17,2004,Reg,RS,Oakland Raiders,Denver Broncos,H,3,31,Unknown
+2004-10-17,2004,Reg,RS,Minnesota Vikings,New Orleans Saints,A,38,31,Unknown
+2004-10-17,2004,Reg,RS,New Orleans Saints,Minnesota Vikings,H,31,38,Unknown
+2004-10-18,2004,Reg,RS,St. Louis Rams,Tampa Bay Buccaneers,H,28,21,Unknown
+2004-10-18,2004,Reg,RS,Tampa Bay Buccaneers,St. Louis Rams,A,21,28,Unknown
+2004-10-24,2004,Reg,RS,Jacksonville Jaguars,Indianapolis Colts,A,27,24,Unknown
+2004-10-24,2004,Reg,RS,Indianapolis Colts,Jacksonville Jaguars,H,24,27,Unknown
+2004-10-24,2004,Reg,RS,Minnesota Vikings,Tennessee Titans,H,20,3,Unknown
+2004-10-24,2004,Reg,RS,Tennessee Titans,Minnesota Vikings,A,3,20,Unknown
+2004-10-24,2004,Reg,RS,Kansas City Chiefs,Atlanta Falcons,H,56,10,Unknown
+2004-10-24,2004,Reg,RS,Atlanta Falcons,Kansas City Chiefs,A,10,56,Unknown
+2004-10-24,2004,Reg,RS,Baltimore Ravens,Buffalo Bills,H,20,6,Unknown
+2004-10-24,2004,Reg,RS,Buffalo Bills,Baltimore Ravens,A,6,20,Unknown
+2004-10-24,2004,Reg,RS,San Diego Chargers,Carolina Panthers,A,17,6,Unknown
+2004-10-24,2004,Reg,RS,Carolina Panthers,San Diego Chargers,H,6,17,Unknown
+2004-10-24,2004,Reg,RS,Tampa Bay Buccaneers,Chicago Bears,H,19,7,Unknown
+2004-10-24,2004,Reg,RS,Chicago Bears,Tampa Bay Buccaneers,A,7,19,Unknown
+2004-10-24,2004,Reg,RS,Miami Dolphins,St. Louis Rams,H,31,14,Unknown
+2004-10-24,2004,Reg,RS,St. Louis Rams,Miami Dolphins,A,14,31,Unknown
+2004-10-24,2004,Reg,RS,Detroit Lions,New York Giants,A,28,13,Unknown
+2004-10-24,2004,Reg,RS,New York Giants,Detroit Lions,H,13,28,Unknown
+2004-10-24,2004,Reg,RS,Philadelphia Eagles,Cleveland Browns,A,34,31,Unknown
+2004-10-24,2004,Reg,RS,Cleveland Browns,Philadelphia Eagles,H,31,34,Unknown
+2004-10-24,2004,Reg,RS,New England Patriots,New York Jets,H,13,7,Unknown
+2004-10-24,2004,Reg,RS,New York Jets,New England Patriots,A,7,13,Unknown
+2004-10-24,2004,Reg,RS,Green Bay Packers,Dallas Cowboys,H,41,20,Unknown
+2004-10-24,2004,Reg,RS,Dallas Cowboys,Green Bay Packers,A,20,41,Unknown
+2004-10-24,2004,Reg,RS,New Orleans Saints,Oakland Raiders,A,31,26,Unknown
+2004-10-24,2004,Reg,RS,Oakland Raiders,New Orleans Saints,H,26,31,Unknown
+2004-10-24,2004,Reg,RS,Arizona Cardinals,Seattle Seahawks,H,25,17,Unknown
+2004-10-24,2004,Reg,RS,Seattle Seahawks,Arizona Cardinals,A,17,25,Unknown
+2004-10-25,2004,Reg,RS,Cincinnati Bengals,Denver Broncos,H,23,10,Unknown
+2004-10-25,2004,Reg,RS,Denver Broncos,Cincinnati Bengals,A,10,23,Unknown
+2004-10-31,2004,Reg,RS,Kansas City Chiefs,Indianapolis Colts,H,45,35,Unknown
+2004-10-31,2004,Reg,RS,Indianapolis Colts,Kansas City Chiefs,A,35,45,Unknown
+2004-10-31,2004,Reg,RS,New York Giants,Minnesota Vikings,A,34,13,Unknown
+2004-10-31,2004,Reg,RS,Minnesota Vikings,New York Giants,H,13,34,Unknown
+2004-10-31,2004,Reg,RS,Buffalo Bills,Arizona Cardinals,H,38,14,Unknown
+2004-10-31,2004,Reg,RS,Arizona Cardinals,Buffalo Bills,A,14,38,Unknown
+2004-10-31,2004,Reg,RS,Houston Texans,Jacksonville Jaguars,H,20,6,Unknown
+2004-10-31,2004,Reg,RS,Jacksonville Jaguars,Houston Texans,A,6,20,Unknown
+2004-10-31,2004,Reg,RS,Tennessee Titans,Cincinnati Bengals,H,27,20,Unknown
+2004-10-31,2004,Reg,RS,Cincinnati Bengals,Tennessee Titans,A,20,27,Unknown
+2004-10-31,2004,Reg,RS,Dallas Cowboys,Detroit Lions,H,31,21,Unknown
+2004-10-31,2004,Reg,RS,Detroit Lions,Dallas Cowboys,A,21,31,Unknown
+2004-10-31,2004,Reg,RS,Philadelphia Eagles,Baltimore Ravens,H,15,10,Unknown
+2004-10-31,2004,Reg,RS,Baltimore Ravens,Philadelphia Eagles,A,10,15,Unknown
+2004-10-31,2004,Reg,RS,Green Bay Packers,Washington Redskins,A,28,14,Unknown
+2004-10-31,2004,Reg,RS,Washington Redskins,Green Bay Packers,H,14,28,Unknown
+2004-10-31,2004,Reg,RS,Atlanta Falcons,Denver Broncos,A,41,28,Unknown
+2004-10-31,2004,Reg,RS,Denver Broncos,Atlanta Falcons,H,28,41,Unknown
+2004-10-31,2004,Reg,RS,Seattle Seahawks,Carolina Panthers,H,23,17,Unknown
+2004-10-31,2004,Reg,RS,Carolina Panthers,Seattle Seahawks,A,17,23,Unknown
+2004-10-31,2004,Reg,RS,Pittsburgh Steelers,New England Patriots,H,34,20,Unknown
+2004-10-31,2004,Reg,RS,New England Patriots,Pittsburgh Steelers,A,20,34,Unknown
+2004-10-31,2004,Reg,RS,San Diego Chargers,Oakland Raiders,H,42,14,Unknown
+2004-10-31,2004,Reg,RS,Oakland Raiders,San Diego Chargers,A,14,42,Unknown
+2004-10-31,2004,Reg,RS,Chicago Bears,San Francisco 49ers,H,23,13,Unknown
+2004-10-31,2004,Reg,RS,San Francisco 49ers,Chicago Bears,A,13,23,Unknown
+2004-11-01,2004,Reg,RS,New York Jets,Miami Dolphins,H,41,14,Unknown
+2004-11-01,2004,Reg,RS,Miami Dolphins,New York Jets,A,14,41,Unknown
+2004-11-07,2004,Reg,RS,Tampa Bay Buccaneers,Kansas City Chiefs,H,34,31,Unknown
+2004-11-07,2004,Reg,RS,Kansas City Chiefs,Tampa Bay Buccaneers,A,31,34,Unknown
+2004-11-07,2004,Reg,RS,Buffalo Bills,New York Jets,H,22,17,Unknown
+2004-11-07,2004,Reg,RS,New York Jets,Buffalo Bills,A,17,22,Unknown
+2004-11-07,2004,Reg,RS,Oakland Raiders,Carolina Panthers,A,27,24,Unknown
+2004-11-07,2004,Reg,RS,Carolina Panthers,Oakland Raiders,H,24,27,Unknown
+2004-11-07,2004,Reg,RS,Cincinnati Bengals,Dallas Cowboys,H,26,3,Unknown
+2004-11-07,2004,Reg,RS,Dallas Cowboys,Cincinnati Bengals,A,3,26,Unknown
+2004-11-07,2004,Reg,RS,Arizona Cardinals,Miami Dolphins,A,24,23,Unknown
+2004-11-07,2004,Reg,RS,Miami Dolphins,Arizona Cardinals,H,23,24,Unknown
+2004-11-07,2004,Reg,RS,Pittsburgh Steelers,Philadelphia Eagles,H,27,3,Unknown
+2004-11-07,2004,Reg,RS,Philadelphia Eagles,Pittsburgh Steelers,A,3,27,Unknown
+2004-11-07,2004,Reg,RS,Washington Redskins,Detroit Lions,A,17,10,Unknown
+2004-11-07,2004,Reg,RS,Detroit Lions,Washington Redskins,H,10,17,Unknown
+2004-11-07,2004,Reg,RS,San Diego Chargers,New Orleans Saints,H,43,17,Unknown
+2004-11-07,2004,Reg,RS,New Orleans Saints,San Diego Chargers,A,17,43,Unknown
+2004-11-07,2004,Reg,RS,Seattle Seahawks,San Francisco 49ers,A,42,27,Unknown
+2004-11-07,2004,Reg,RS,San Francisco 49ers,Seattle Seahawks,H,27,42,Unknown
+2004-11-07,2004,Reg,RS,Chicago Bears,New York Giants,A,28,21,Unknown
+2004-11-07,2004,Reg,RS,New York Giants,Chicago Bears,H,21,28,Unknown
+2004-11-07,2004,Reg,RS,New England Patriots,St. Louis Rams,A,40,22,Unknown
+2004-11-07,2004,Reg,RS,St. Louis Rams,New England Patriots,H,22,40,Unknown
+2004-11-07,2004,Reg,RS,Denver Broncos,Houston Texans,H,31,13,Unknown
+2004-11-07,2004,Reg,RS,Houston Texans,Denver Broncos,A,13,31,Unknown
+2004-11-07,2004,Reg,RS,Baltimore Ravens,Cleveland Browns,H,27,13,Unknown
+2004-11-07,2004,Reg,RS,Cleveland Browns,Baltimore Ravens,A,13,27,Unknown
+2004-11-08,2004,Reg,RS,Indianapolis Colts,Minnesota Vikings,H,31,28,Unknown
+2004-11-08,2004,Reg,RS,Minnesota Vikings,Indianapolis Colts,A,28,31,Unknown
+2004-11-14,2004,Reg,RS,Indianapolis Colts,Houston Texans,H,49,14,Unknown
+2004-11-14,2004,Reg,RS,Houston Texans,Indianapolis Colts,A,14,49,Unknown
+2004-11-14,2004,Reg,RS,New Orleans Saints,Kansas City Chiefs,H,27,20,Unknown
+2004-11-14,2004,Reg,RS,Kansas City Chiefs,New Orleans Saints,A,20,27,Unknown
+2004-11-14,2004,Reg,RS,Baltimore Ravens,New York Jets,A,20,17,Unknown
+2004-11-14,2004,Reg,RS,New York Jets,Baltimore Ravens,H,17,20,Unknown
+2004-11-14,2004,Reg,RS,St. Louis Rams,Seattle Seahawks,H,23,12,Unknown
+2004-11-14,2004,Reg,RS,Seattle Seahawks,St. Louis Rams,A,12,23,Unknown
+2004-11-14,2004,Reg,RS,Chicago Bears,Tennessee Titans,A,19,17,Unknown
+2004-11-14,2004,Reg,RS,Tennessee Titans,Chicago Bears,H,17,19,Unknown
+2004-11-14,2004,Reg,RS,Pittsburgh Steelers,Cleveland Browns,A,24,10,Unknown
+2004-11-14,2004,Reg,RS,Cleveland Browns,Pittsburgh Steelers,H,10,24,Unknown
+2004-11-14,2004,Reg,RS,Jacksonville Jaguars,Detroit Lions,H,23,17,Unknown
+2004-11-14,2004,Reg,RS,Detroit Lions,Jacksonville Jaguars,A,17,23,Unknown
+2004-11-14,2004,Reg,RS,Atlanta Falcons,Tampa Bay Buccaneers,H,24,14,Unknown
+2004-11-14,2004,Reg,RS,Tampa Bay Buccaneers,Atlanta Falcons,A,14,24,Unknown
+2004-11-14,2004,Reg,RS,Cincinnati Bengals,Washington Redskins,A,17,10,Unknown
+2004-11-14,2004,Reg,RS,Washington Redskins,Cincinnati Bengals,H,10,17,Unknown
+2004-11-14,2004,Reg,RS,Carolina Panthers,San Francisco 49ers,A,37,27,Unknown
+2004-11-14,2004,Reg,RS,San Francisco 49ers,Carolina Panthers,H,27,37,Unknown
+2004-11-14,2004,Reg,RS,Arizona Cardinals,New York Giants,H,17,14,Unknown
+2004-11-14,2004,Reg,RS,New York Giants,Arizona Cardinals,A,14,17,Unknown
+2004-11-14,2004,Reg,RS,Green Bay Packers,Minnesota Vikings,H,34,31,Unknown
+2004-11-14,2004,Reg,RS,Minnesota Vikings,Green Bay Packers,A,31,34,Unknown
+2004-11-14,2004,Reg,RS,New England Patriots,Buffalo Bills,H,29,6,Unknown
+2004-11-14,2004,Reg,RS,Buffalo Bills,New England Patriots,A,6,29,Unknown
+2004-11-15,2004,Reg,RS,Philadelphia Eagles,Dallas Cowboys,A,49,21,Unknown
+2004-11-15,2004,Reg,RS,Dallas Cowboys,Philadelphia Eagles,H,21,49,Unknown
+2004-11-21,2004,Reg,RS,Minnesota Vikings,Detroit Lions,H,22,19,Unknown
+2004-11-21,2004,Reg,RS,Detroit Lions,Minnesota Vikings,A,19,22,Unknown
+2004-11-21,2004,Reg,RS,Tampa Bay Buccaneers,San Francisco 49ers,H,35,3,Unknown
+2004-11-21,2004,Reg,RS,San Francisco 49ers,Tampa Bay Buccaneers,A,3,35,Unknown
+2004-11-21,2004,Reg,RS,Buffalo Bills,St. Louis Rams,H,37,17,Unknown
+2004-11-21,2004,Reg,RS,St. Louis Rams,Buffalo Bills,A,17,37,Unknown
+2004-11-21,2004,Reg,RS,Indianapolis Colts,Chicago Bears,A,41,10,Unknown
+2004-11-21,2004,Reg,RS,Chicago Bears,Indianapolis Colts,H,10,41,Unknown
+2004-11-21,2004,Reg,RS,New York Jets,Cleveland Browns,A,10,7,Unknown
+2004-11-21,2004,Reg,RS,Cleveland Browns,New York Jets,H,7,10,Unknown
+2004-11-21,2004,Reg,RS,Baltimore Ravens,Dallas Cowboys,H,30,10,Unknown
+2004-11-21,2004,Reg,RS,Dallas Cowboys,Baltimore Ravens,A,10,30,Unknown
+2004-11-21,2004,Reg,RS,Tennessee Titans,Jacksonville Jaguars,A,18,15,Unknown
+2004-11-21,2004,Reg,RS,Jacksonville Jaguars,Tennessee Titans,H,15,18,Unknown
+2004-11-21,2004,Reg,RS,Pittsburgh Steelers,Cincinnati Bengals,A,19,14,Unknown
+2004-11-21,2004,Reg,RS,Cincinnati Bengals,Pittsburgh Steelers,H,14,19,Unknown
+2004-11-21,2004,Reg,RS,Denver Broncos,New Orleans Saints,A,34,13,Unknown
+2004-11-21,2004,Reg,RS,New Orleans Saints,Denver Broncos,H,13,34,Unknown
+2004-11-21,2004,Reg,RS,Carolina Panthers,Arizona Cardinals,H,35,10,Unknown
+2004-11-21,2004,Reg,RS,Arizona Cardinals,Carolina Panthers,A,10,35,Unknown
+2004-11-21,2004,Reg,RS,San Diego Chargers,Oakland Raiders,A,23,17,Unknown
+2004-11-21,2004,Reg,RS,Oakland Raiders,San Diego Chargers,H,17,23,Unknown
+2004-11-21,2004,Reg,RS,Seattle Seahawks,Miami Dolphins,H,24,17,Unknown
+2004-11-21,2004,Reg,RS,Miami Dolphins,Seattle Seahawks,A,17,24,Unknown
+2004-11-21,2004,Reg,RS,Atlanta Falcons,New York Giants,A,14,10,Unknown
+2004-11-21,2004,Reg,RS,New York Giants,Atlanta Falcons,H,10,14,Unknown
+2004-11-21,2004,Reg,RS,Philadelphia Eagles,Washington Redskins,H,28,6,Unknown
+2004-11-21,2004,Reg,RS,Washington Redskins,Philadelphia Eagles,A,6,28,Unknown
+2004-11-21,2004,Reg,RS,Green Bay Packers,Houston Texans,A,16,13,Unknown
+2004-11-21,2004,Reg,RS,Houston Texans,Green Bay Packers,H,13,16,Unknown
+2004-11-22,2004,Reg,RS,New England Patriots,Kansas City Chiefs,A,27,19,Unknown
+2004-11-22,2004,Reg,RS,Kansas City Chiefs,New England Patriots,H,19,27,Unknown
+2004-11-25,2004,Reg,RS,Indianapolis Colts,Detroit Lions,A,41,9,Unknown
+2004-11-25,2004,Reg,RS,Detroit Lions,Indianapolis Colts,H,9,41,Unknown
+2004-11-25,2004,Reg,RS,Dallas Cowboys,Chicago Bears,H,21,7,Unknown
+2004-11-25,2004,Reg,RS,Chicago Bears,Dallas Cowboys,A,7,21,Unknown
+2004-11-28,2004,Reg,RS,Minnesota Vikings,Jacksonville Jaguars,H,27,16,Unknown
+2004-11-28,2004,Reg,RS,Jacksonville Jaguars,Minnesota Vikings,A,16,27,Unknown
+2004-11-28,2004,Reg,RS,San Diego Chargers,Kansas City Chiefs,A,34,31,Unknown
+2004-11-28,2004,Reg,RS,Kansas City Chiefs,San Diego Chargers,H,31,34,Unknown
+2004-11-28,2004,Reg,RS,Cincinnati Bengals,Cleveland Browns,H,58,48,Unknown
+2004-11-28,2004,Reg,RS,Cleveland Browns,Cincinnati Bengals,A,48,58,Unknown
+2004-11-28,2004,Reg,RS,Pittsburgh Steelers,Washington Redskins,H,16,7,Unknown
+2004-11-28,2004,Reg,RS,Washington Redskins,Pittsburgh Steelers,A,7,16,Unknown
+2004-11-28,2004,Reg,RS,Philadelphia Eagles,New York Giants,A,27,6,Unknown
+2004-11-28,2004,Reg,RS,New York Giants,Philadelphia Eagles,H,6,27,Unknown
+2004-11-28,2004,Reg,RS,Carolina Panthers,Tampa Bay Buccaneers,H,21,14,Unknown
+2004-11-28,2004,Reg,RS,Tampa Bay Buccaneers,Carolina Panthers,A,14,21,Unknown
+2004-11-28,2004,Reg,RS,Houston Texans,Tennessee Titans,H,31,21,Unknown
+2004-11-28,2004,Reg,RS,Tennessee Titans,Houston Texans,A,21,31,Unknown
+2004-11-28,2004,Reg,RS,Atlanta Falcons,New Orleans Saints,H,24,21,Unknown
+2004-11-28,2004,Reg,RS,New Orleans Saints,Atlanta Falcons,A,21,24,Unknown
+2004-11-28,2004,Reg,RS,Miami Dolphins,San Francisco 49ers,A,24,17,Unknown
+2004-11-28,2004,Reg,RS,San Francisco 49ers,Miami Dolphins,H,17,24,Unknown
+2004-11-28,2004,Reg,RS,Buffalo Bills,Seattle Seahawks,A,38,9,Unknown
+2004-11-28,2004,Reg,RS,Seattle Seahawks,Buffalo Bills,H,9,38,Unknown
+2004-11-28,2004,Reg,RS,New York Jets,Arizona Cardinals,A,13,3,Unknown
+2004-11-28,2004,Reg,RS,Arizona Cardinals,New York Jets,H,3,13,Unknown
+2004-11-28,2004,Reg,RS,New England Patriots,Baltimore Ravens,H,24,3,Unknown
+2004-11-28,2004,Reg,RS,Baltimore Ravens,New England Patriots,A,3,24,Unknown
+2004-11-28,2004,Reg,RS,Oakland Raiders,Denver Broncos,A,25,24,Unknown
+2004-11-28,2004,Reg,RS,Denver Broncos,Oakland Raiders,H,24,25,Unknown
+2004-11-29,2004,Reg,RS,Green Bay Packers,St. Louis Rams,H,45,17,Unknown
+2004-11-29,2004,Reg,RS,St. Louis Rams,Green Bay Packers,A,17,45,Unknown
+2004-12-05,2004,Reg,RS,Tampa Bay Buccaneers,Atlanta Falcons,H,27,0,Unknown
+2004-12-05,2004,Reg,RS,Atlanta Falcons,Tampa Bay Buccaneers,A,0,27,Unknown
+2004-12-05,2004,Reg,RS,Cincinnati Bengals,Baltimore Ravens,A,27,26,Unknown
+2004-12-05,2004,Reg,RS,Baltimore Ravens,Cincinnati Bengals,H,26,27,Unknown
+2004-12-05,2004,Reg,RS,New England Patriots,Cleveland Browns,A,42,15,Unknown
+2004-12-05,2004,Reg,RS,Cleveland Browns,New England Patriots,H,15,42,Unknown
+2004-12-05,2004,Reg,RS,Indianapolis Colts,Tennessee Titans,H,51,24,Unknown
+2004-12-05,2004,Reg,RS,Tennessee Titans,Indianapolis Colts,A,24,51,Unknown
+2004-12-05,2004,Reg,RS,St. Louis Rams,San Francisco 49ers,H,16,6,Unknown
+2004-12-05,2004,Reg,RS,San Francisco 49ers,St. Louis Rams,A,6,16,Unknown
+2004-12-05,2004,Reg,RS,Buffalo Bills,Miami Dolphins,A,42,32,Unknown
+2004-12-05,2004,Reg,RS,Miami Dolphins,Buffalo Bills,H,32,42,Unknown
+2004-12-05,2004,Reg,RS,Carolina Panthers,New Orleans Saints,A,32,21,Unknown
+2004-12-05,2004,Reg,RS,New Orleans Saints,Carolina Panthers,H,21,32,Unknown
+2004-12-05,2004,Reg,RS,Chicago Bears,Minnesota Vikings,H,24,14,Unknown
+2004-12-05,2004,Reg,RS,Minnesota Vikings,Chicago Bears,A,14,24,Unknown
+2004-12-05,2004,Reg,RS,Detroit Lions,Arizona Cardinals,H,26,12,Unknown
+2004-12-05,2004,Reg,RS,Arizona Cardinals,Detroit Lions,A,12,26,Unknown
+2004-12-05,2004,Reg,RS,New York Jets,Houston Texans,H,29,7,Unknown
+2004-12-05,2004,Reg,RS,Houston Texans,New York Jets,A,7,29,Unknown
+2004-12-05,2004,Reg,RS,San Diego Chargers,Denver Broncos,H,20,17,Unknown
+2004-12-05,2004,Reg,RS,Denver Broncos,San Diego Chargers,A,17,20,Unknown
+2004-12-05,2004,Reg,RS,Kansas City Chiefs,Oakland Raiders,A,34,27,Unknown
+2004-12-05,2004,Reg,RS,Oakland Raiders,Kansas City Chiefs,H,27,34,Unknown
+2004-12-05,2004,Reg,RS,Philadelphia Eagles,Green Bay Packers,H,47,17,Unknown
+2004-12-05,2004,Reg,RS,Green Bay Packers,Philadelphia Eagles,A,17,47,Unknown
+2004-12-05,2004,Reg,RS,Washington Redskins,New York Giants,H,31,7,Unknown
+2004-12-05,2004,Reg,RS,New York Giants,Washington Redskins,A,7,31,Unknown
+2004-12-05,2004,Reg,RS,Pittsburgh Steelers,Jacksonville Jaguars,A,17,16,Unknown
+2004-12-05,2004,Reg,RS,Jacksonville Jaguars,Pittsburgh Steelers,H,16,17,Unknown
+2004-12-06,2004,Reg,RS,Dallas Cowboys,Seattle Seahawks,A,43,39,Unknown
+2004-12-06,2004,Reg,RS,Seattle Seahawks,Dallas Cowboys,H,39,43,Unknown
+2004-12-12,2004,Reg,RS,Seattle Seahawks,Minnesota Vikings,A,27,23,Unknown
+2004-12-12,2004,Reg,RS,Minnesota Vikings,Seattle Seahawks,H,23,27,Unknown
+2004-12-12,2004,Reg,RS,Baltimore Ravens,New York Giants,H,37,14,Unknown
+2004-12-12,2004,Reg,RS,New York Giants,Baltimore Ravens,A,14,37,Unknown
+2004-12-12,2004,Reg,RS,Buffalo Bills,Cleveland Browns,H,37,7,Unknown
+2004-12-12,2004,Reg,RS,Cleveland Browns,Buffalo Bills,A,7,37,Unknown
+2004-12-12,2004,Reg,RS,New England Patriots,Cincinnati Bengals,H,35,28,Unknown
+2004-12-12,2004,Reg,RS,Cincinnati Bengals,New England Patriots,A,28,35,Unknown
+2004-12-12,2004,Reg,RS,Indianapolis Colts,Houston Texans,A,23,14,Unknown
+2004-12-12,2004,Reg,RS,Houston Texans,Indianapolis Colts,H,14,23,Unknown
+2004-12-12,2004,Reg,RS,Atlanta Falcons,Oakland Raiders,H,35,10,Unknown
+2004-12-12,2004,Reg,RS,Oakland Raiders,Atlanta Falcons,A,10,35,Unknown
+2004-12-12,2004,Reg,RS,Jacksonville Jaguars,Chicago Bears,H,22,3,Unknown
+2004-12-12,2004,Reg,RS,Chicago Bears,Jacksonville Jaguars,A,3,22,Unknown
+2004-12-12,2004,Reg,RS,New Orleans Saints,Dallas Cowboys,A,27,13,Unknown
+2004-12-12,2004,Reg,RS,Dallas Cowboys,New Orleans Saints,H,13,27,Unknown
+2004-12-12,2004,Reg,RS,Denver Broncos,Miami Dolphins,H,20,17,Unknown
+2004-12-12,2004,Reg,RS,Miami Dolphins,Denver Broncos,A,17,20,Unknown
+2004-12-12,2004,Reg,RS,Pittsburgh Steelers,New York Jets,H,17,6,Unknown
+2004-12-12,2004,Reg,RS,New York Jets,Pittsburgh Steelers,A,6,17,Unknown
+2004-12-12,2004,Reg,RS,Carolina Panthers,St. Louis Rams,H,20,7,Unknown
+2004-12-12,2004,Reg,RS,St. Louis Rams,Carolina Panthers,A,7,20,Unknown
+2004-12-12,2004,Reg,RS,San Francisco 49ers,Arizona Cardinals,A,31,28,Unknown
+2004-12-12,2004,Reg,RS,Arizona Cardinals,San Francisco 49ers,H,28,31,Unknown
+2004-12-12,2004,Reg,RS,Green Bay Packers,Detroit Lions,H,16,13,Unknown
+2004-12-12,2004,Reg,RS,Detroit Lions,Green Bay Packers,A,13,16,Unknown
+2004-12-12,2004,Reg,RS,San Diego Chargers,Tampa Bay Buccaneers,H,31,24,Unknown
+2004-12-12,2004,Reg,RS,Tampa Bay Buccaneers,San Diego Chargers,A,24,31,Unknown
+2004-12-12,2004,Reg,RS,Philadelphia Eagles,Washington Redskins,A,17,14,Unknown
+2004-12-12,2004,Reg,RS,Washington Redskins,Philadelphia Eagles,H,14,17,Unknown
+2004-12-13,2004,Reg,RS,Kansas City Chiefs,Tennessee Titans,A,49,38,Unknown
+2004-12-13,2004,Reg,RS,Tennessee Titans,Kansas City Chiefs,H,38,49,Unknown
+2004-12-18,2004,Reg,RS,Pittsburgh Steelers,New York Giants,A,33,30,Unknown
+2004-12-18,2004,Reg,RS,New York Giants,Pittsburgh Steelers,H,30,33,Unknown
+2004-12-18,2004,Reg,RS,Washington Redskins,San Francisco 49ers,A,26,16,Unknown
+2004-12-18,2004,Reg,RS,San Francisco 49ers,Washington Redskins,H,16,26,Unknown
+2004-12-18,2004,Reg,RS,Atlanta Falcons,Carolina Panthers,H,34,31,Unknown
+2004-12-18,2004,Reg,RS,Carolina Panthers,Atlanta Falcons,A,31,34,Unknown
+2004-12-19,2004,Reg,RS,Kansas City Chiefs,Denver Broncos,H,45,17,Unknown
+2004-12-19,2004,Reg,RS,Denver Broncos,Kansas City Chiefs,A,17,45,Unknown
+2004-12-19,2004,Reg,RS,Houston Texans,Chicago Bears,A,24,5,Unknown
+2004-12-19,2004,Reg,RS,Chicago Bears,Houston Texans,H,5,24,Unknown
+2004-12-19,2004,Reg,RS,Philadelphia Eagles,Dallas Cowboys,H,12,7,Unknown
+2004-12-19,2004,Reg,RS,Dallas Cowboys,Philadelphia Eagles,A,7,12,Unknown
+2004-12-19,2004,Reg,RS,New York Jets,Seattle Seahawks,H,37,14,Unknown
+2004-12-19,2004,Reg,RS,Seattle Seahawks,New York Jets,A,14,37,Unknown
+2004-12-19,2004,Reg,RS,Buffalo Bills,Cincinnati Bengals,A,33,17,Unknown
+2004-12-19,2004,Reg,RS,Cincinnati Bengals,Buffalo Bills,H,17,33,Unknown
+2004-12-19,2004,Reg,RS,San Diego Chargers,Cleveland Browns,A,21,0,Unknown
+2004-12-19,2004,Reg,RS,Cleveland Browns,San Diego Chargers,H,0,21,Unknown
+2004-12-19,2004,Reg,RS,Minnesota Vikings,Detroit Lions,A,28,27,Unknown
+2004-12-19,2004,Reg,RS,Detroit Lions,Minnesota Vikings,H,27,28,Unknown
+2004-12-19,2004,Reg,RS,Arizona Cardinals,St. Louis Rams,H,31,7,Unknown
+2004-12-19,2004,Reg,RS,St. Louis Rams,Arizona Cardinals,A,7,31,Unknown
+2004-12-19,2004,Reg,RS,New Orleans Saints,Tampa Bay Buccaneers,A,21,17,Unknown
+2004-12-19,2004,Reg,RS,Tampa Bay Buccaneers,New Orleans Saints,H,17,21,Unknown
+2004-12-19,2004,Reg,RS,Jacksonville Jaguars,Green Bay Packers,A,28,25,Unknown
+2004-12-19,2004,Reg,RS,Green Bay Packers,Jacksonville Jaguars,H,25,28,Unknown
+2004-12-19,2004,Reg,RS,Oakland Raiders,Tennessee Titans,H,40,35,Unknown
+2004-12-19,2004,Reg,RS,Tennessee Titans,Oakland Raiders,A,35,40,Unknown
+2004-12-19,2004,Reg,RS,Indianapolis Colts,Baltimore Ravens,H,20,10,Unknown
+2004-12-19,2004,Reg,RS,Baltimore Ravens,Indianapolis Colts,A,10,20,Unknown
+2004-12-20,2004,Reg,RS,Miami Dolphins,New England Patriots,H,29,28,Unknown
+2004-12-20,2004,Reg,RS,New England Patriots,Miami Dolphins,A,28,29,Unknown
+2004-12-24,2004,Reg,RS,Green Bay Packers,Minnesota Vikings,A,34,31,Unknown
+2004-12-24,2004,Reg,RS,Minnesota Vikings,Green Bay Packers,H,31,34,Unknown
+2004-12-25,2004,Reg,RS,Kansas City Chiefs,Oakland Raiders,H,31,30,Unknown
+2004-12-25,2004,Reg,RS,Oakland Raiders,Kansas City Chiefs,A,30,31,Unknown
+2004-12-25,2004,Reg,RS,Denver Broncos,Tennessee Titans,A,37,16,Unknown
+2004-12-25,2004,Reg,RS,Tennessee Titans,Denver Broncos,H,16,37,Unknown
+2004-12-26,2004,Reg,RS,Indianapolis Colts,San Diego Chargers,H,34,31,Unknown
+2004-12-26,2004,Reg,RS,San Diego Chargers,Indianapolis Colts,A,31,34,Unknown
+2004-12-26,2004,Reg,RS,Pittsburgh Steelers,Baltimore Ravens,H,20,7,Unknown
+2004-12-26,2004,Reg,RS,Baltimore Ravens,Pittsburgh Steelers,A,7,20,Unknown
+2004-12-26,2004,Reg,RS,New Orleans Saints,Atlanta Falcons,H,26,13,Unknown
+2004-12-26,2004,Reg,RS,Atlanta Falcons,New Orleans Saints,A,13,26,Unknown
+2004-12-26,2004,Reg,RS,Detroit Lions,Chicago Bears,H,19,13,Unknown
+2004-12-26,2004,Reg,RS,Chicago Bears,Detroit Lions,A,13,19,Unknown
+2004-12-26,2004,Reg,RS,Cincinnati Bengals,New York Giants,H,23,22,Unknown
+2004-12-26,2004,Reg,RS,New York Giants,Cincinnati Bengals,A,22,23,Unknown
+2004-12-26,2004,Reg,RS,Houston Texans,Jacksonville Jaguars,A,21,0,Unknown
+2004-12-26,2004,Reg,RS,Jacksonville Jaguars,Houston Texans,H,0,21,Unknown
+2004-12-26,2004,Reg,RS,New England Patriots,New York Jets,A,23,7,Unknown
+2004-12-26,2004,Reg,RS,New York Jets,New England Patriots,H,7,23,Unknown
+2004-12-26,2004,Reg,RS,Buffalo Bills,San Francisco 49ers,A,41,7,Unknown
+2004-12-26,2004,Reg,RS,San Francisco 49ers,Buffalo Bills,H,7,41,Unknown
+2004-12-26,2004,Reg,RS,Carolina Panthers,Tampa Bay Buccaneers,A,37,20,Unknown
+2004-12-26,2004,Reg,RS,Tampa Bay Buccaneers,Carolina Panthers,H,20,37,Unknown
+2004-12-26,2004,Reg,RS,Dallas Cowboys,Washington Redskins,H,13,10,Unknown
+2004-12-26,2004,Reg,RS,Washington Redskins,Dallas Cowboys,A,10,13,Unknown
+2004-12-26,2004,Reg,RS,Seattle Seahawks,Arizona Cardinals,H,24,21,Unknown
+2004-12-26,2004,Reg,RS,Arizona Cardinals,Seattle Seahawks,A,21,24,Unknown
+2004-12-26,2004,Reg,RS,Miami Dolphins,Cleveland Browns,H,10,7,Unknown
+2004-12-26,2004,Reg,RS,Cleveland Browns,Miami Dolphins,A,7,10,Unknown
+2004-12-27,2004,Reg,RS,St. Louis Rams,Philadelphia Eagles,H,20,7,Unknown
+2004-12-27,2004,Reg,RS,Philadelphia Eagles,St. Louis Rams,A,7,20,Unknown
+2005-01-02,2004,Reg,RS,Pittsburgh Steelers,Buffalo Bills,A,29,24,Unknown
+2005-01-02,2004,Reg,RS,Buffalo Bills,Pittsburgh Steelers,H,24,29,Unknown
+2005-01-02,2004,Reg,RS,New Orleans Saints,Carolina Panthers,A,21,18,Unknown
+2005-01-02,2004,Reg,RS,Carolina Panthers,New Orleans Saints,H,18,21,Unknown
+2005-01-02,2004,Reg,RS,Cleveland Browns,Houston Texans,A,22,14,Unknown
+2005-01-02,2004,Reg,RS,Houston Texans,Cleveland Browns,H,14,22,Unknown
+2005-01-02,2004,Reg,RS,Baltimore Ravens,Miami Dolphins,H,30,23,Unknown
+2005-01-02,2004,Reg,RS,Miami Dolphins,Baltimore Ravens,A,23,30,Unknown
+2005-01-02,2004,Reg,RS,New England Patriots,San Francisco 49ers,H,21,7,Unknown
+2005-01-02,2004,Reg,RS,San Francisco 49ers,New England Patriots,A,7,21,Unknown
+2005-01-02,2004,Reg,RS,St. Louis Rams,New York Jets,H,32,29,Unknown
+2005-01-02,2004,Reg,RS,New York Jets,St. Louis Rams,A,29,32,Unknown
+2005-01-02,2004,Reg,RS,Green Bay Packers,Chicago Bears,A,31,14,Unknown
+2005-01-02,2004,Reg,RS,Chicago Bears,Green Bay Packers,H,14,31,Unknown
+2005-01-02,2004,Reg,RS,Tennessee Titans,Detroit Lions,H,24,19,Unknown
+2005-01-02,2004,Reg,RS,Detroit Lions,Tennessee Titans,A,19,24,Unknown
+2005-01-02,2004,Reg,RS,Washington Redskins,Minnesota Vikings,H,21,18,Unknown
+2005-01-02,2004,Reg,RS,Minnesota Vikings,Washington Redskins,A,18,21,Unknown
+2005-01-02,2004,Reg,RS,Cincinnati Bengals,Philadelphia Eagles,A,38,10,Unknown
+2005-01-02,2004,Reg,RS,Philadelphia Eagles,Cincinnati Bengals,H,10,38,Unknown
+2005-01-02,2004,Reg,RS,Seattle Seahawks,Atlanta Falcons,H,28,26,Unknown
+2005-01-02,2004,Reg,RS,Atlanta Falcons,Seattle Seahawks,A,26,28,Unknown
+2005-01-02,2004,Reg,RS,Arizona Cardinals,Tampa Bay Buccaneers,H,12,7,Unknown
+2005-01-02,2004,Reg,RS,Tampa Bay Buccaneers,Arizona Cardinals,A,7,12,Unknown
+2005-01-02,2004,Reg,RS,Denver Broncos,Indianapolis Colts,H,33,14,Unknown
+2005-01-02,2004,Reg,RS,Indianapolis Colts,Denver Broncos,A,14,33,Unknown
+2005-01-02,2004,Reg,RS,Jacksonville Jaguars,Oakland Raiders,A,13,6,Unknown
+2005-01-02,2004,Reg,RS,Oakland Raiders,Jacksonville Jaguars,H,6,13,Unknown
+2005-01-02,2004,Reg,RS,San Diego Chargers,Kansas City Chiefs,H,24,17,Unknown
+2005-01-02,2004,Reg,RS,Kansas City Chiefs,San Diego Chargers,A,17,24,Unknown
+2005-01-02,2004,Reg,RS,New York Giants,Dallas Cowboys,H,28,24,Unknown
+2005-01-02,2004,Reg,RS,Dallas Cowboys,New York Giants,A,24,28,Unknown
+2005-01-08,2004,Playoff,1,St. Louis Rams,Seattle Seahawks,A,27,20,Unknown
+2005-01-08,2004,Playoff,1,Seattle Seahawks,St. Louis Rams,H,20,27,Unknown
+2005-01-08,2004,Playoff,1,New York Jets,San Diego Chargers,A,20,17,Unknown
+2005-01-08,2004,Playoff,1,San Diego Chargers,New York Jets,H,17,20,Unknown
+2005-01-09,2004,Playoff,1,Indianapolis Colts,Denver Broncos,H,49,24,Unknown
+2005-01-09,2004,Playoff,1,Denver Broncos,Indianapolis Colts,A,24,49,Unknown
+2005-01-09,2004,Playoff,1,Minnesota Vikings,Green Bay Packers,A,31,17,Unknown
+2005-01-09,2004,Playoff,1,Green Bay Packers,Minnesota Vikings,H,17,31,Unknown
+2005-01-15,2004,Playoff,2,Pittsburgh Steelers,New York Jets,H,20,17,Unknown
+2005-01-15,2004,Playoff,2,New York Jets,Pittsburgh Steelers,A,17,20,Unknown
+2005-01-15,2004,Playoff,2,Atlanta Falcons,St. Louis Rams,H,47,17,Unknown
+2005-01-15,2004,Playoff,2,St. Louis Rams,Atlanta Falcons,A,17,47,Unknown
+2005-01-16,2004,Playoff,2,Philadelphia Eagles,Minnesota Vikings,H,27,14,Unknown
+2005-01-16,2004,Playoff,2,Minnesota Vikings,Philadelphia Eagles,A,14,27,Unknown
+2005-01-16,2004,Playoff,2,New England Patriots,Indianapolis Colts,H,20,3,Unknown
+2005-01-16,2004,Playoff,2,Indianapolis Colts,New England Patriots,A,3,20,Unknown
+2005-01-23,2004,Playoff,3,Philadelphia Eagles,Atlanta Falcons,H,27,10,Unknown
+2005-01-23,2004,Playoff,3,Atlanta Falcons,Philadelphia Eagles,A,10,27,Unknown
+2005-01-23,2004,Playoff,3,New England Patriots,Pittsburgh Steelers,A,41,27,Unknown
+2005-01-23,2004,Playoff,3,Pittsburgh Steelers,New England Patriots,H,27,41,Unknown
+2005-02-06,2004,Playoff,4,New England Patriots,Philadelphia Eagles,N,24,21,Unknown
+2005-02-06,2004,Playoff,4,Philadelphia Eagles,New England Patriots,N,21,24,Unknown

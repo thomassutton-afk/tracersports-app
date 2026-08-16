@@ -1,0 +1,503 @@
+Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT
+1997-08-31,1997,Reg,RS,Detroit Lions,Atlanta Falcons,H,28,17,Unknown
+1997-08-31,1997,Reg,RS,Atlanta Falcons,Detroit Lions,A,17,28,Unknown
+1997-08-31,1997,Reg,RS,Minnesota Vikings,Buffalo Bills,A,34,13,Unknown
+1997-08-31,1997,Reg,RS,Buffalo Bills,Minnesota Vikings,H,13,34,Unknown
+1997-08-31,1997,Reg,RS,Cincinnati Bengals,Arizona Cardinals,H,24,21,Unknown
+1997-08-31,1997,Reg,RS,Arizona Cardinals,Cincinnati Bengals,A,21,24,Unknown
+1997-08-31,1997,Reg,RS,Miami Dolphins,Indianapolis Colts,H,16,10,Unknown
+1997-08-31,1997,Reg,RS,Indianapolis Colts,Miami Dolphins,A,10,16,Unknown
+1997-08-31,1997,Reg,RS,Dallas Cowboys,Pittsburgh Steelers,A,37,7,Unknown
+1997-08-31,1997,Reg,RS,Pittsburgh Steelers,Dallas Cowboys,H,7,37,Unknown
+1997-08-31,1997,Reg,RS,St. Louis Rams,New Orleans Saints,H,38,24,Unknown
+1997-08-31,1997,Reg,RS,New Orleans Saints,St. Louis Rams,A,24,38,Unknown
+1997-08-31,1997,Reg,RS,New England Patriots,San Diego Chargers,H,41,7,Unknown
+1997-08-31,1997,Reg,RS,San Diego Chargers,New England Patriots,A,7,41,Unknown
+1997-08-31,1997,Reg,RS,New York Giants,Philadelphia Eagles,H,31,17,Unknown
+1997-08-31,1997,Reg,RS,Philadelphia Eagles,New York Giants,A,17,31,Unknown
+1997-08-31,1997,Reg,RS,Tennessee Oilers,Oakland Raiders,H,24,21,Unknown
+1997-08-31,1997,Reg,RS,Oakland Raiders,Tennessee Oilers,A,21,24,Unknown
+1997-08-31,1997,Reg,RS,Denver Broncos,Kansas City Chiefs,H,19,3,Unknown
+1997-08-31,1997,Reg,RS,Kansas City Chiefs,Denver Broncos,A,3,19,Unknown
+1997-08-31,1997,Reg,RS,Jacksonville Jaguars,Baltimore Ravens,A,28,27,Unknown
+1997-08-31,1997,Reg,RS,Baltimore Ravens,Jacksonville Jaguars,H,27,28,Unknown
+1997-08-31,1997,Reg,RS,New York Jets,Seattle Seahawks,A,41,3,Unknown
+1997-08-31,1997,Reg,RS,Seattle Seahawks,New York Jets,H,3,41,Unknown
+1997-08-31,1997,Reg,RS,Tampa Bay Buccaneers,San Francisco 49ers,H,13,6,Unknown
+1997-08-31,1997,Reg,RS,San Francisco 49ers,Tampa Bay Buccaneers,A,6,13,Unknown
+1997-08-31,1997,Reg,RS,Washington Redskins,Carolina Panthers,A,24,10,Unknown
+1997-08-31,1997,Reg,RS,Carolina Panthers,Washington Redskins,H,10,24,Unknown
+1997-09-01,1997,Reg,RS,Green Bay Packers,Chicago Bears,H,38,24,Unknown
+1997-09-01,1997,Reg,RS,Chicago Bears,Green Bay Packers,A,24,38,Unknown
+1997-09-07,1997,Reg,RS,Carolina Panthers,Atlanta Falcons,A,9,6,Unknown
+1997-09-07,1997,Reg,RS,Atlanta Falcons,Carolina Panthers,H,6,9,Unknown
+1997-09-07,1997,Reg,RS,Buffalo Bills,New York Jets,A,28,22,Unknown
+1997-09-07,1997,Reg,RS,New York Jets,Buffalo Bills,H,22,28,Unknown
+1997-09-07,1997,Reg,RS,Minnesota Vikings,Chicago Bears,A,27,24,Unknown
+1997-09-07,1997,Reg,RS,Chicago Bears,Minnesota Vikings,H,24,27,Unknown
+1997-09-07,1997,Reg,RS,Baltimore Ravens,Cincinnati Bengals,H,23,10,Unknown
+1997-09-07,1997,Reg,RS,Cincinnati Bengals,Baltimore Ravens,A,10,23,Unknown
+1997-09-07,1997,Reg,RS,New England Patriots,Indianapolis Colts,A,31,6,Unknown
+1997-09-07,1997,Reg,RS,Indianapolis Colts,New England Patriots,H,6,31,Unknown
+1997-09-07,1997,Reg,RS,Tampa Bay Buccaneers,Detroit Lions,A,24,17,Unknown
+1997-09-07,1997,Reg,RS,Detroit Lions,Tampa Bay Buccaneers,H,17,24,Unknown
+1997-09-07,1997,Reg,RS,Miami Dolphins,Tennessee Oilers,H,16,13,Unknown
+1997-09-07,1997,Reg,RS,Tennessee Oilers,Miami Dolphins,A,13,16,Unknown
+1997-09-07,1997,Reg,RS,San Diego Chargers,New Orleans Saints,A,20,6,Unknown
+1997-09-07,1997,Reg,RS,New Orleans Saints,San Diego Chargers,H,6,20,Unknown
+1997-09-07,1997,Reg,RS,Pittsburgh Steelers,Washington Redskins,H,14,13,Unknown
+1997-09-07,1997,Reg,RS,Washington Redskins,Pittsburgh Steelers,A,13,14,Unknown
+1997-09-07,1997,Reg,RS,San Francisco 49ers,St. Louis Rams,A,15,12,Unknown
+1997-09-07,1997,Reg,RS,St. Louis Rams,San Francisco 49ers,H,12,15,Unknown
+1997-09-07,1997,Reg,RS,Denver Broncos,Seattle Seahawks,A,35,14,Unknown
+1997-09-07,1997,Reg,RS,Seattle Seahawks,Denver Broncos,H,14,35,Unknown
+1997-09-07,1997,Reg,RS,Philadelphia Eagles,Green Bay Packers,H,10,9,Unknown
+1997-09-07,1997,Reg,RS,Green Bay Packers,Philadelphia Eagles,A,9,10,Unknown
+1997-09-07,1997,Reg,RS,Jacksonville Jaguars,New York Giants,H,40,13,Unknown
+1997-09-07,1997,Reg,RS,New York Giants,Jacksonville Jaguars,A,13,40,Unknown
+1997-09-07,1997,Reg,RS,Arizona Cardinals,Dallas Cowboys,H,25,22,Unknown
+1997-09-07,1997,Reg,RS,Dallas Cowboys,Arizona Cardinals,A,22,25,Unknown
+1997-09-08,1997,Reg,RS,Kansas City Chiefs,Oakland Raiders,A,28,27,Unknown
+1997-09-08,1997,Reg,RS,Oakland Raiders,Kansas City Chiefs,H,27,28,Unknown
+1997-09-14,1997,Reg,RS,Oakland Raiders,Atlanta Falcons,A,36,31,Unknown
+1997-09-14,1997,Reg,RS,Atlanta Falcons,Oakland Raiders,H,31,36,Unknown
+1997-09-14,1997,Reg,RS,Kansas City Chiefs,Buffalo Bills,H,22,16,Unknown
+1997-09-14,1997,Reg,RS,Buffalo Bills,Kansas City Chiefs,A,16,22,Unknown
+1997-09-14,1997,Reg,RS,Detroit Lions,Chicago Bears,A,32,7,Unknown
+1997-09-14,1997,Reg,RS,Chicago Bears,Detroit Lions,H,7,32,Unknown
+1997-09-14,1997,Reg,RS,Washington Redskins,Arizona Cardinals,H,19,13,Unknown
+1997-09-14,1997,Reg,RS,Arizona Cardinals,Washington Redskins,A,13,19,Unknown
+1997-09-14,1997,Reg,RS,Green Bay Packers,Miami Dolphins,H,23,18,Unknown
+1997-09-14,1997,Reg,RS,Miami Dolphins,Green Bay Packers,A,18,23,Unknown
+1997-09-14,1997,Reg,RS,Tampa Bay Buccaneers,Minnesota Vikings,A,28,14,Unknown
+1997-09-14,1997,Reg,RS,Minnesota Vikings,Tampa Bay Buccaneers,H,14,28,Unknown
+1997-09-14,1997,Reg,RS,Baltimore Ravens,New York Giants,A,24,23,Unknown
+1997-09-14,1997,Reg,RS,New York Giants,Baltimore Ravens,H,23,24,Unknown
+1997-09-14,1997,Reg,RS,Carolina Panthers,San Diego Chargers,A,26,7,Unknown
+1997-09-14,1997,Reg,RS,San Diego Chargers,Carolina Panthers,H,7,26,Unknown
+1997-09-14,1997,Reg,RS,Seattle Seahawks,Indianapolis Colts,A,31,3,Unknown
+1997-09-14,1997,Reg,RS,Indianapolis Colts,Seattle Seahawks,H,3,31,Unknown
+1997-09-14,1997,Reg,RS,Denver Broncos,St. Louis Rams,H,35,14,Unknown
+1997-09-14,1997,Reg,RS,St. Louis Rams,Denver Broncos,A,14,35,Unknown
+1997-09-14,1997,Reg,RS,San Francisco 49ers,New Orleans Saints,H,33,7,Unknown
+1997-09-14,1997,Reg,RS,New Orleans Saints,San Francisco 49ers,A,7,33,Unknown
+1997-09-14,1997,Reg,RS,New England Patriots,New York Jets,H,27,24,Unknown
+1997-09-14,1997,Reg,RS,New York Jets,New England Patriots,A,24,27,Unknown
+1997-09-15,1997,Reg,RS,Dallas Cowboys,Philadelphia Eagles,H,21,20,Unknown
+1997-09-15,1997,Reg,RS,Philadelphia Eagles,Dallas Cowboys,A,20,21,Unknown
+1997-09-21,1997,Reg,RS,Baltimore Ravens,Tennessee Oilers,A,36,10,Unknown
+1997-09-21,1997,Reg,RS,Tennessee Oilers,Baltimore Ravens,H,10,36,Unknown
+1997-09-21,1997,Reg,RS,Kansas City Chiefs,Carolina Panthers,A,35,14,Unknown
+1997-09-21,1997,Reg,RS,Carolina Panthers,Kansas City Chiefs,H,14,35,Unknown
+1997-09-21,1997,Reg,RS,New England Patriots,Chicago Bears,H,31,3,Unknown
+1997-09-21,1997,Reg,RS,Chicago Bears,New England Patriots,A,3,31,Unknown
+1997-09-21,1997,Reg,RS,New Orleans Saints,Detroit Lions,H,35,17,Unknown
+1997-09-21,1997,Reg,RS,Detroit Lions,New Orleans Saints,A,17,35,Unknown
+1997-09-21,1997,Reg,RS,Green Bay Packers,Minnesota Vikings,H,38,32,Unknown
+1997-09-21,1997,Reg,RS,Minnesota Vikings,Green Bay Packers,A,32,38,Unknown
+1997-09-21,1997,Reg,RS,New York Jets,Oakland Raiders,H,23,22,Unknown
+1997-09-21,1997,Reg,RS,Oakland Raiders,New York Jets,A,22,23,Unknown
+1997-09-21,1997,Reg,RS,Denver Broncos,Cincinnati Bengals,H,38,20,Unknown
+1997-09-21,1997,Reg,RS,Cincinnati Bengals,Denver Broncos,A,20,38,Unknown
+1997-09-21,1997,Reg,RS,San Francisco 49ers,Atlanta Falcons,H,34,7,Unknown
+1997-09-21,1997,Reg,RS,Atlanta Falcons,San Francisco 49ers,A,7,34,Unknown
+1997-09-21,1997,Reg,RS,Buffalo Bills,Indianapolis Colts,H,37,35,Unknown
+1997-09-21,1997,Reg,RS,Indianapolis Colts,Buffalo Bills,A,35,37,Unknown
+1997-09-21,1997,Reg,RS,St. Louis Rams,New York Giants,H,13,3,Unknown
+1997-09-21,1997,Reg,RS,New York Giants,St. Louis Rams,A,3,13,Unknown
+1997-09-21,1997,Reg,RS,Seattle Seahawks,San Diego Chargers,H,26,22,Unknown
+1997-09-21,1997,Reg,RS,San Diego Chargers,Seattle Seahawks,A,22,26,Unknown
+1997-09-21,1997,Reg,RS,Tampa Bay Buccaneers,Miami Dolphins,H,31,21,Unknown
+1997-09-21,1997,Reg,RS,Miami Dolphins,Tampa Bay Buccaneers,A,21,31,Unknown
+1997-09-22,1997,Reg,RS,Jacksonville Jaguars,Pittsburgh Steelers,H,30,21,Unknown
+1997-09-22,1997,Reg,RS,Pittsburgh Steelers,Jacksonville Jaguars,A,21,30,Unknown
+1997-09-28,1997,Reg,RS,Tampa Bay Buccaneers,Arizona Cardinals,H,19,18,Unknown
+1997-09-28,1997,Reg,RS,Arizona Cardinals,Tampa Bay Buccaneers,A,18,19,Unknown
+1997-09-28,1997,Reg,RS,Washington Redskins,Jacksonville Jaguars,H,24,12,Unknown
+1997-09-28,1997,Reg,RS,Jacksonville Jaguars,Washington Redskins,A,12,24,Unknown
+1997-09-28,1997,Reg,RS,Pittsburgh Steelers,Tennessee Oilers,H,37,24,Unknown
+1997-09-28,1997,Reg,RS,Tennessee Oilers,Pittsburgh Steelers,A,24,37,Unknown
+1997-09-28,1997,Reg,RS,Denver Broncos,Atlanta Falcons,A,29,21,Unknown
+1997-09-28,1997,Reg,RS,Atlanta Falcons,Denver Broncos,H,21,29,Unknown
+1997-09-28,1997,Reg,RS,Detroit Lions,Green Bay Packers,H,26,15,Unknown
+1997-09-28,1997,Reg,RS,Green Bay Packers,Detroit Lions,A,15,26,Unknown
+1997-09-28,1997,Reg,RS,New York Giants,New Orleans Saints,H,14,9,Unknown
+1997-09-28,1997,Reg,RS,New Orleans Saints,New York Giants,A,9,14,Unknown
+1997-09-28,1997,Reg,RS,New York Jets,Cincinnati Bengals,A,31,14,Unknown
+1997-09-28,1997,Reg,RS,Cincinnati Bengals,New York Jets,H,14,31,Unknown
+1997-09-28,1997,Reg,RS,Dallas Cowboys,Chicago Bears,H,27,3,Unknown
+1997-09-28,1997,Reg,RS,Chicago Bears,Dallas Cowboys,A,3,27,Unknown
+1997-09-28,1997,Reg,RS,Kansas City Chiefs,Seattle Seahawks,H,20,17,Unknown
+1997-09-28,1997,Reg,RS,Seattle Seahawks,Kansas City Chiefs,A,17,20,Unknown
+1997-09-28,1997,Reg,RS,Oakland Raiders,St. Louis Rams,H,35,17,Unknown
+1997-09-28,1997,Reg,RS,St. Louis Rams,Oakland Raiders,A,17,35,Unknown
+1997-09-28,1997,Reg,RS,San Diego Chargers,Baltimore Ravens,H,21,17,Unknown
+1997-09-28,1997,Reg,RS,Baltimore Ravens,San Diego Chargers,A,17,21,Unknown
+1997-09-28,1997,Reg,RS,Minnesota Vikings,Philadelphia Eagles,H,28,19,Unknown
+1997-09-28,1997,Reg,RS,Philadelphia Eagles,Minnesota Vikings,A,19,28,Unknown
+1997-09-29,1997,Reg,RS,San Francisco 49ers,Carolina Panthers,A,34,21,Unknown
+1997-09-29,1997,Reg,RS,Carolina Panthers,San Francisco 49ers,H,21,34,Unknown
+1997-10-05,1997,Reg,RS,Buffalo Bills,Detroit Lions,H,22,13,Unknown
+1997-10-05,1997,Reg,RS,Detroit Lions,Buffalo Bills,A,13,22,Unknown
+1997-10-05,1997,Reg,RS,Jacksonville Jaguars,Cincinnati Bengals,H,21,13,Unknown
+1997-10-05,1997,Reg,RS,Cincinnati Bengals,Jacksonville Jaguars,A,13,21,Unknown
+1997-10-05,1997,Reg,RS,New York Giants,Dallas Cowboys,H,20,17,Unknown
+1997-10-05,1997,Reg,RS,Dallas Cowboys,New York Giants,A,17,20,Unknown
+1997-10-05,1997,Reg,RS,Philadelphia Eagles,Washington Redskins,H,24,10,Unknown
+1997-10-05,1997,Reg,RS,Washington Redskins,Philadelphia Eagles,A,10,24,Unknown
+1997-10-05,1997,Reg,RS,Pittsburgh Steelers,Baltimore Ravens,A,42,34,Unknown
+1997-10-05,1997,Reg,RS,Baltimore Ravens,Pittsburgh Steelers,H,34,42,Unknown
+1997-10-05,1997,Reg,RS,Green Bay Packers,Tampa Bay Buccaneers,H,21,16,Unknown
+1997-10-05,1997,Reg,RS,Tampa Bay Buccaneers,Green Bay Packers,A,16,21,Unknown
+1997-10-05,1997,Reg,RS,Miami Dolphins,Kansas City Chiefs,H,17,14,Unknown
+1997-10-05,1997,Reg,RS,Kansas City Chiefs,Miami Dolphins,A,14,17,Unknown
+1997-10-05,1997,Reg,RS,New York Jets,Indianapolis Colts,A,16,12,Unknown
+1997-10-05,1997,Reg,RS,Indianapolis Colts,New York Jets,H,12,16,Unknown
+1997-10-05,1997,Reg,RS,Minnesota Vikings,Arizona Cardinals,A,20,19,Unknown
+1997-10-05,1997,Reg,RS,Arizona Cardinals,Minnesota Vikings,H,19,20,Unknown
+1997-10-05,1997,Reg,RS,Seattle Seahawks,Tennessee Oilers,H,16,13,Unknown
+1997-10-05,1997,Reg,RS,Tennessee Oilers,Seattle Seahawks,A,13,16,Unknown
+1997-10-05,1997,Reg,RS,San Diego Chargers,Oakland Raiders,A,25,10,Unknown
+1997-10-05,1997,Reg,RS,Oakland Raiders,San Diego Chargers,H,10,25,Unknown
+1997-10-05,1997,Reg,RS,New Orleans Saints,Chicago Bears,A,20,17,Unknown
+1997-10-05,1997,Reg,RS,Chicago Bears,New Orleans Saints,H,17,20,Unknown
+1997-10-06,1997,Reg,RS,Denver Broncos,New England Patriots,H,34,13,Unknown
+1997-10-06,1997,Reg,RS,New England Patriots,Denver Broncos,A,13,34,Unknown
+1997-10-12,1997,Reg,RS,Atlanta Falcons,New Orleans Saints,A,23,17,Unknown
+1997-10-12,1997,Reg,RS,New Orleans Saints,Atlanta Falcons,H,17,23,Unknown
+1997-10-12,1997,Reg,RS,New England Patriots,Buffalo Bills,H,33,6,Unknown
+1997-10-12,1997,Reg,RS,Buffalo Bills,New England Patriots,A,6,33,Unknown
+1997-10-12,1997,Reg,RS,Tennessee Oilers,Cincinnati Bengals,H,30,7,Unknown
+1997-10-12,1997,Reg,RS,Cincinnati Bengals,Tennessee Oilers,A,7,30,Unknown
+1997-10-12,1997,Reg,RS,Jacksonville Jaguars,Philadelphia Eagles,H,38,21,Unknown
+1997-10-12,1997,Reg,RS,Philadelphia Eagles,Jacksonville Jaguars,A,21,38,Unknown
+1997-10-12,1997,Reg,RS,Miami Dolphins,New York Jets,A,31,20,Unknown
+1997-10-12,1997,Reg,RS,New York Jets,Miami Dolphins,H,20,31,Unknown
+1997-10-12,1997,Reg,RS,Green Bay Packers,Chicago Bears,A,24,23,Unknown
+1997-10-12,1997,Reg,RS,Chicago Bears,Green Bay Packers,H,23,24,Unknown
+1997-10-12,1997,Reg,RS,Detroit Lions,Tampa Bay Buccaneers,A,27,9,Unknown
+1997-10-12,1997,Reg,RS,Tampa Bay Buccaneers,Detroit Lions,H,9,27,Unknown
+1997-10-12,1997,Reg,RS,Minnesota Vikings,Carolina Panthers,H,21,14,Unknown
+1997-10-12,1997,Reg,RS,Carolina Panthers,Minnesota Vikings,A,14,21,Unknown
+1997-10-12,1997,Reg,RS,New York Giants,Arizona Cardinals,A,27,13,Unknown
+1997-10-12,1997,Reg,RS,Arizona Cardinals,New York Giants,H,13,27,Unknown
+1997-10-12,1997,Reg,RS,San Francisco 49ers,St. Louis Rams,H,30,10,Unknown
+1997-10-12,1997,Reg,RS,St. Louis Rams,San Francisco 49ers,A,10,30,Unknown
+1997-10-12,1997,Reg,RS,Pittsburgh Steelers,Indianapolis Colts,H,24,22,Unknown
+1997-10-12,1997,Reg,RS,Indianapolis Colts,Pittsburgh Steelers,A,22,24,Unknown
+1997-10-13,1997,Reg,RS,Washington Redskins,Dallas Cowboys,H,21,16,Unknown
+1997-10-13,1997,Reg,RS,Dallas Cowboys,Washington Redskins,A,16,21,Unknown
+1997-10-16,1997,Reg,RS,Kansas City Chiefs,San Diego Chargers,H,31,3,Unknown
+1997-10-16,1997,Reg,RS,San Diego Chargers,Kansas City Chiefs,A,3,31,Unknown
+1997-10-19,1997,Reg,RS,San Francisco 49ers,Atlanta Falcons,A,35,28,Unknown
+1997-10-19,1997,Reg,RS,Atlanta Falcons,San Francisco 49ers,H,28,35,Unknown
+1997-10-19,1997,Reg,RS,Carolina Panthers,New Orleans Saints,A,13,0,Unknown
+1997-10-19,1997,Reg,RS,New Orleans Saints,Carolina Panthers,H,0,13,Unknown
+1997-10-19,1997,Reg,RS,Philadelphia Eagles,Arizona Cardinals,H,13,10,Unknown
+1997-10-19,1997,Reg,RS,Arizona Cardinals,Philadelphia Eagles,A,10,13,Unknown
+1997-10-19,1997,Reg,RS,Dallas Cowboys,Jacksonville Jaguars,H,26,22,Unknown
+1997-10-19,1997,Reg,RS,Jacksonville Jaguars,Dallas Cowboys,A,22,26,Unknown
+1997-10-19,1997,Reg,RS,New York Jets,New England Patriots,H,24,19,Unknown
+1997-10-19,1997,Reg,RS,New England Patriots,New York Jets,A,19,24,Unknown
+1997-10-19,1997,Reg,RS,Tennessee Oilers,Washington Redskins,H,28,14,Unknown
+1997-10-19,1997,Reg,RS,Washington Redskins,Tennessee Oilers,A,14,28,Unknown
+1997-10-19,1997,Reg,RS,Seattle Seahawks,St. Louis Rams,A,17,9,Unknown
+1997-10-19,1997,Reg,RS,St. Louis Rams,Seattle Seahawks,H,9,17,Unknown
+1997-10-19,1997,Reg,RS,Pittsburgh Steelers,Cincinnati Bengals,A,26,10,Unknown
+1997-10-19,1997,Reg,RS,Cincinnati Bengals,Pittsburgh Steelers,H,10,26,Unknown
+1997-10-19,1997,Reg,RS,Oakland Raiders,Denver Broncos,H,28,25,Unknown
+1997-10-19,1997,Reg,RS,Denver Broncos,Oakland Raiders,A,25,28,Unknown
+1997-10-19,1997,Reg,RS,Miami Dolphins,Baltimore Ravens,A,24,13,Unknown
+1997-10-19,1997,Reg,RS,Baltimore Ravens,Miami Dolphins,H,13,24,Unknown
+1997-10-19,1997,Reg,RS,New York Giants,Detroit Lions,A,26,20,Unknown
+1997-10-19,1997,Reg,RS,Detroit Lions,New York Giants,H,20,26,Unknown
+1997-10-20,1997,Reg,RS,Buffalo Bills,Indianapolis Colts,A,9,6,Unknown
+1997-10-20,1997,Reg,RS,Indianapolis Colts,Buffalo Bills,H,6,9,Unknown
+1997-10-26,1997,Reg,RS,Denver Broncos,Buffalo Bills,A,23,20,Unknown
+1997-10-26,1997,Reg,RS,Buffalo Bills,Denver Broncos,H,20,23,Unknown
+1997-10-26,1997,Reg,RS,New York Giants,Cincinnati Bengals,H,29,27,Unknown
+1997-10-26,1997,Reg,RS,Cincinnati Bengals,New York Giants,A,27,29,Unknown
+1997-10-26,1997,Reg,RS,Philadelphia Eagles,Dallas Cowboys,H,13,12,Unknown
+1997-10-26,1997,Reg,RS,Dallas Cowboys,Philadelphia Eagles,A,12,13,Unknown
+1997-10-26,1997,Reg,RS,Kansas City Chiefs,St. Louis Rams,A,28,20,Unknown
+1997-10-26,1997,Reg,RS,St. Louis Rams,Kansas City Chiefs,H,20,28,Unknown
+1997-10-26,1997,Reg,RS,Baltimore Ravens,Washington Redskins,A,20,17,Unknown
+1997-10-26,1997,Reg,RS,Washington Redskins,Baltimore Ravens,H,17,20,Unknown
+1997-10-26,1997,Reg,RS,San Francisco 49ers,New Orleans Saints,A,23,0,Unknown
+1997-10-26,1997,Reg,RS,New Orleans Saints,San Francisco 49ers,H,0,23,Unknown
+1997-10-26,1997,Reg,RS,San Diego Chargers,Indianapolis Colts,H,35,19,Unknown
+1997-10-26,1997,Reg,RS,Indianapolis Colts,San Diego Chargers,A,19,35,Unknown
+1997-10-26,1997,Reg,RS,Tennessee Oilers,Arizona Cardinals,A,41,14,Unknown
+1997-10-26,1997,Reg,RS,Arizona Cardinals,Tennessee Oilers,H,14,41,Unknown
+1997-10-26,1997,Reg,RS,Pittsburgh Steelers,Jacksonville Jaguars,H,23,17,Unknown
+1997-10-26,1997,Reg,RS,Jacksonville Jaguars,Pittsburgh Steelers,A,17,23,Unknown
+1997-10-26,1997,Reg,RS,Minnesota Vikings,Tampa Bay Buccaneers,A,10,6,Unknown
+1997-10-26,1997,Reg,RS,Tampa Bay Buccaneers,Minnesota Vikings,H,6,10,Unknown
+1997-10-26,1997,Reg,RS,Seattle Seahawks,Oakland Raiders,H,45,34,Unknown
+1997-10-26,1997,Reg,RS,Oakland Raiders,Seattle Seahawks,A,34,45,Unknown
+1997-10-26,1997,Reg,RS,Carolina Panthers,Atlanta Falcons,H,21,12,Unknown
+1997-10-26,1997,Reg,RS,Atlanta Falcons,Carolina Panthers,A,12,21,Unknown
+1997-10-27,1997,Reg,RS,Chicago Bears,Miami Dolphins,A,36,33,Unknown
+1997-10-27,1997,Reg,RS,Miami Dolphins,Chicago Bears,H,33,36,Unknown
+1997-10-27,1997,Reg,RS,Green Bay Packers,New England Patriots,A,28,10,Unknown
+1997-10-27,1997,Reg,RS,New England Patriots,Green Bay Packers,H,10,28,Unknown
+1997-11-02,1997,Reg,RS,Atlanta Falcons,St. Louis Rams,H,34,31,Unknown
+1997-11-02,1997,Reg,RS,St. Louis Rams,Atlanta Falcons,A,31,34,Unknown
+1997-11-02,1997,Reg,RS,Buffalo Bills,Miami Dolphins,H,9,6,Unknown
+1997-11-02,1997,Reg,RS,Miami Dolphins,Buffalo Bills,A,6,9,Unknown
+1997-11-02,1997,Reg,RS,Carolina Panthers,Oakland Raiders,H,38,14,Unknown
+1997-11-02,1997,Reg,RS,Oakland Raiders,Carolina Panthers,A,14,38,Unknown
+1997-11-02,1997,Reg,RS,Washington Redskins,Chicago Bears,A,31,8,Unknown
+1997-11-02,1997,Reg,RS,Chicago Bears,Washington Redskins,H,8,31,Unknown
+1997-11-02,1997,Reg,RS,Cincinnati Bengals,San Diego Chargers,H,38,31,Unknown
+1997-11-02,1997,Reg,RS,San Diego Chargers,Cincinnati Bengals,A,31,38,Unknown
+1997-11-02,1997,Reg,RS,Tampa Bay Buccaneers,Indianapolis Colts,A,31,28,Unknown
+1997-11-02,1997,Reg,RS,Indianapolis Colts,Tampa Bay Buccaneers,H,28,31,Unknown
+1997-11-02,1997,Reg,RS,Minnesota Vikings,New England Patriots,H,23,18,Unknown
+1997-11-02,1997,Reg,RS,New England Patriots,Minnesota Vikings,A,18,23,Unknown
+1997-11-02,1997,Reg,RS,New York Jets,Baltimore Ravens,H,19,16,Unknown
+1997-11-02,1997,Reg,RS,Baltimore Ravens,New York Jets,A,16,19,Unknown
+1997-11-02,1997,Reg,RS,Arizona Cardinals,Philadelphia Eagles,H,31,21,Unknown
+1997-11-02,1997,Reg,RS,Philadelphia Eagles,Arizona Cardinals,A,21,31,Unknown
+1997-11-02,1997,Reg,RS,San Francisco 49ers,Dallas Cowboys,H,17,10,Unknown
+1997-11-02,1997,Reg,RS,Dallas Cowboys,San Francisco 49ers,A,10,17,Unknown
+1997-11-02,1997,Reg,RS,Denver Broncos,Seattle Seahawks,H,30,27,Unknown
+1997-11-02,1997,Reg,RS,Seattle Seahawks,Denver Broncos,A,27,30,Unknown
+1997-11-02,1997,Reg,RS,Jacksonville Jaguars,Tennessee Oilers,A,30,24,Unknown
+1997-11-02,1997,Reg,RS,Tennessee Oilers,Jacksonville Jaguars,H,24,30,Unknown
+1997-11-02,1997,Reg,RS,Green Bay Packers,Detroit Lions,H,20,10,Unknown
+1997-11-02,1997,Reg,RS,Detroit Lions,Green Bay Packers,A,10,20,Unknown
+1997-11-03,1997,Reg,RS,Kansas City Chiefs,Pittsburgh Steelers,H,13,10,Unknown
+1997-11-03,1997,Reg,RS,Pittsburgh Steelers,Kansas City Chiefs,A,10,13,Unknown
+1997-11-09,1997,Reg,RS,Tampa Bay Buccaneers,Atlanta Falcons,A,31,10,Unknown
+1997-11-09,1997,Reg,RS,Atlanta Falcons,Tampa Bay Buccaneers,H,10,31,Unknown
+1997-11-09,1997,Reg,RS,Minnesota Vikings,Chicago Bears,H,29,22,Unknown
+1997-11-09,1997,Reg,RS,Chicago Bears,Minnesota Vikings,A,22,29,Unknown
+1997-11-09,1997,Reg,RS,Cincinnati Bengals,Indianapolis Colts,A,28,13,Unknown
+1997-11-09,1997,Reg,RS,Indianapolis Colts,Cincinnati Bengals,H,13,28,Unknown
+1997-11-09,1997,Reg,RS,Dallas Cowboys,Arizona Cardinals,H,24,6,Unknown
+1997-11-09,1997,Reg,RS,Arizona Cardinals,Dallas Cowboys,A,6,24,Unknown
+1997-11-09,1997,Reg,RS,Washington Redskins,Detroit Lions,H,30,7,Unknown
+1997-11-09,1997,Reg,RS,Detroit Lions,Washington Redskins,A,7,30,Unknown
+1997-11-09,1997,Reg,RS,Green Bay Packers,St. Louis Rams,H,17,7,Unknown
+1997-11-09,1997,Reg,RS,St. Louis Rams,Green Bay Packers,A,7,17,Unknown
+1997-11-09,1997,Reg,RS,Jacksonville Jaguars,Kansas City Chiefs,H,24,10,Unknown
+1997-11-09,1997,Reg,RS,Kansas City Chiefs,Jacksonville Jaguars,A,10,24,Unknown
+1997-11-09,1997,Reg,RS,Miami Dolphins,New York Jets,H,24,17,Unknown
+1997-11-09,1997,Reg,RS,New York Jets,Miami Dolphins,A,17,24,Unknown
+1997-11-09,1997,Reg,RS,New England Patriots,Buffalo Bills,A,31,10,Unknown
+1997-11-09,1997,Reg,RS,Buffalo Bills,New England Patriots,H,10,31,Unknown
+1997-11-09,1997,Reg,RS,Denver Broncos,Carolina Panthers,H,34,0,Unknown
+1997-11-09,1997,Reg,RS,Carolina Panthers,Denver Broncos,A,0,34,Unknown
+1997-11-09,1997,Reg,RS,New Orleans Saints,Oakland Raiders,A,13,10,Unknown
+1997-11-09,1997,Reg,RS,Oakland Raiders,New Orleans Saints,H,10,13,Unknown
+1997-11-09,1997,Reg,RS,Tennessee Oilers,New York Giants,H,10,6,Unknown
+1997-11-09,1997,Reg,RS,New York Giants,Tennessee Oilers,A,6,10,Unknown
+1997-11-09,1997,Reg,RS,Seattle Seahawks,San Diego Chargers,A,37,31,Unknown
+1997-11-09,1997,Reg,RS,San Diego Chargers,Seattle Seahawks,H,31,37,Unknown
+1997-11-09,1997,Reg,RS,Pittsburgh Steelers,Baltimore Ravens,H,37,0,Unknown
+1997-11-09,1997,Reg,RS,Baltimore Ravens,Pittsburgh Steelers,A,0,37,Unknown
+1997-11-10,1997,Reg,RS,San Francisco 49ers,Philadelphia Eagles,A,24,12,Unknown
+1997-11-10,1997,Reg,RS,Philadelphia Eagles,San Francisco 49ers,H,12,24,Unknown
+1997-11-16,1997,Reg,RS,Atlanta Falcons,St. Louis Rams,A,27,21,Unknown
+1997-11-16,1997,Reg,RS,St. Louis Rams,Atlanta Falcons,H,21,27,Unknown
+1997-11-16,1997,Reg,RS,Pittsburgh Steelers,Cincinnati Bengals,H,20,3,Unknown
+1997-11-16,1997,Reg,RS,Cincinnati Bengals,Pittsburgh Steelers,A,3,20,Unknown
+1997-11-16,1997,Reg,RS,Indianapolis Colts,Green Bay Packers,H,41,38,Unknown
+1997-11-16,1997,Reg,RS,Green Bay Packers,Indianapolis Colts,A,38,41,Unknown
+1997-11-16,1997,Reg,RS,New York Giants,Arizona Cardinals,H,19,10,Unknown
+1997-11-16,1997,Reg,RS,Arizona Cardinals,New York Giants,A,10,19,Unknown
+1997-11-16,1997,Reg,RS,Kansas City Chiefs,Denver Broncos,H,24,22,Unknown
+1997-11-16,1997,Reg,RS,Denver Broncos,Kansas City Chiefs,A,22,24,Unknown
+1997-11-16,1997,Reg,RS,Detroit Lions,Minnesota Vikings,H,38,15,Unknown
+1997-11-16,1997,Reg,RS,Minnesota Vikings,Detroit Lions,A,15,38,Unknown
+1997-11-16,1997,Reg,RS,Jacksonville Jaguars,Tennessee Oilers,H,17,9,Unknown
+1997-11-16,1997,Reg,RS,Tennessee Oilers,Jacksonville Jaguars,A,9,17,Unknown
+1997-11-16,1997,Reg,RS,New Orleans Saints,Seattle Seahawks,H,20,17,Unknown
+1997-11-16,1997,Reg,RS,Seattle Seahawks,New Orleans Saints,A,17,20,Unknown
+1997-11-16,1997,Reg,RS,Tampa Bay Buccaneers,New England Patriots,H,27,7,Unknown
+1997-11-16,1997,Reg,RS,New England Patriots,Tampa Bay Buccaneers,A,7,27,Unknown
+1997-11-16,1997,Reg,RS,Baltimore Ravens,Philadelphia Eagles,H,10,10,Unknown
+1997-11-16,1997,Reg,RS,Philadelphia Eagles,Baltimore Ravens,A,10,10,Unknown
+1997-11-16,1997,Reg,RS,San Francisco 49ers,Carolina Panthers,H,27,19,Unknown
+1997-11-16,1997,Reg,RS,Carolina Panthers,San Francisco 49ers,A,19,27,Unknown
+1997-11-16,1997,Reg,RS,New York Jets,Chicago Bears,A,23,15,Unknown
+1997-11-16,1997,Reg,RS,Chicago Bears,New York Jets,H,15,23,Unknown
+1997-11-16,1997,Reg,RS,Dallas Cowboys,Washington Redskins,H,17,14,Unknown
+1997-11-16,1997,Reg,RS,Washington Redskins,Dallas Cowboys,A,14,17,Unknown
+1997-11-16,1997,Reg,RS,Oakland Raiders,San Diego Chargers,A,38,13,Unknown
+1997-11-16,1997,Reg,RS,San Diego Chargers,Oakland Raiders,H,13,38,Unknown
+1997-11-17,1997,Reg,RS,Miami Dolphins,Buffalo Bills,H,30,13,Unknown
+1997-11-17,1997,Reg,RS,Buffalo Bills,Miami Dolphins,A,13,30,Unknown
+1997-11-23,1997,Reg,RS,Atlanta Falcons,New Orleans Saints,H,20,3,Unknown
+1997-11-23,1997,Reg,RS,New Orleans Saints,Atlanta Falcons,A,3,20,Unknown
+1997-11-23,1997,Reg,RS,Tennessee Oilers,Buffalo Bills,H,31,14,Unknown
+1997-11-23,1997,Reg,RS,Buffalo Bills,Tennessee Oilers,A,14,31,Unknown
+1997-11-23,1997,Reg,RS,Chicago Bears,Tampa Bay Buccaneers,H,13,7,Unknown
+1997-11-23,1997,Reg,RS,Tampa Bay Buccaneers,Chicago Bears,A,7,13,Unknown
+1997-11-23,1997,Reg,RS,Detroit Lions,Indianapolis Colts,H,32,10,Unknown
+1997-11-23,1997,Reg,RS,Indianapolis Colts,Detroit Lions,A,10,32,Unknown
+1997-11-23,1997,Reg,RS,Arizona Cardinals,Baltimore Ravens,A,16,13,Unknown
+1997-11-23,1997,Reg,RS,Baltimore Ravens,Arizona Cardinals,H,13,16,Unknown
+1997-11-23,1997,Reg,RS,Green Bay Packers,Dallas Cowboys,H,45,17,Unknown
+1997-11-23,1997,Reg,RS,Dallas Cowboys,Green Bay Packers,A,17,45,Unknown
+1997-11-23,1997,Reg,RS,New England Patriots,Miami Dolphins,H,27,24,Unknown
+1997-11-23,1997,Reg,RS,Miami Dolphins,New England Patriots,A,24,27,Unknown
+1997-11-23,1997,Reg,RS,New York Jets,Minnesota Vikings,H,23,21,Unknown
+1997-11-23,1997,Reg,RS,Minnesota Vikings,New York Jets,A,21,23,Unknown
+1997-11-23,1997,Reg,RS,Philadelphia Eagles,Pittsburgh Steelers,H,23,20,Unknown
+1997-11-23,1997,Reg,RS,Pittsburgh Steelers,Philadelphia Eagles,A,20,23,Unknown
+1997-11-23,1997,Reg,RS,Carolina Panthers,St. Louis Rams,A,16,10,Unknown
+1997-11-23,1997,Reg,RS,St. Louis Rams,Carolina Panthers,H,10,16,Unknown
+1997-11-23,1997,Reg,RS,Cincinnati Bengals,Jacksonville Jaguars,H,31,26,Unknown
+1997-11-23,1997,Reg,RS,Jacksonville Jaguars,Cincinnati Bengals,A,26,31,Unknown
+1997-11-23,1997,Reg,RS,Kansas City Chiefs,Seattle Seahawks,A,19,14,Unknown
+1997-11-23,1997,Reg,RS,Seattle Seahawks,Kansas City Chiefs,H,14,19,Unknown
+1997-11-23,1997,Reg,RS,San Francisco 49ers,San Diego Chargers,H,17,10,Unknown
+1997-11-23,1997,Reg,RS,San Diego Chargers,San Francisco 49ers,A,10,17,Unknown
+1997-11-23,1997,Reg,RS,Washington Redskins,New York Giants,H,7,7,Unknown
+1997-11-23,1997,Reg,RS,New York Giants,Washington Redskins,A,7,7,Unknown
+1997-11-24,1997,Reg,RS,Denver Broncos,Oakland Raiders,H,31,3,Unknown
+1997-11-24,1997,Reg,RS,Oakland Raiders,Denver Broncos,A,3,31,Unknown
+1997-11-27,1997,Reg,RS,Detroit Lions,Chicago Bears,H,55,20,Unknown
+1997-11-27,1997,Reg,RS,Chicago Bears,Detroit Lions,A,20,55,Unknown
+1997-11-27,1997,Reg,RS,Tennessee Oilers,Dallas Cowboys,A,27,14,Unknown
+1997-11-27,1997,Reg,RS,Dallas Cowboys,Tennessee Oilers,H,14,27,Unknown
+1997-11-30,1997,Reg,RS,Buffalo Bills,New York Jets,H,20,10,Unknown
+1997-11-30,1997,Reg,RS,New York Jets,Buffalo Bills,A,10,20,Unknown
+1997-11-30,1997,Reg,RS,New Orleans Saints,Carolina Panthers,A,16,13,Unknown
+1997-11-30,1997,Reg,RS,Carolina Panthers,New Orleans Saints,H,13,16,Unknown
+1997-11-30,1997,Reg,RS,Philadelphia Eagles,Cincinnati Bengals,H,44,42,Unknown
+1997-11-30,1997,Reg,RS,Cincinnati Bengals,Philadelphia Eagles,A,42,44,Unknown
+1997-11-30,1997,Reg,RS,New England Patriots,Indianapolis Colts,H,20,17,Unknown
+1997-11-30,1997,Reg,RS,Indianapolis Colts,New England Patriots,A,17,20,Unknown
+1997-11-30,1997,Reg,RS,Jacksonville Jaguars,Baltimore Ravens,H,29,27,Unknown
+1997-11-30,1997,Reg,RS,Baltimore Ravens,Jacksonville Jaguars,A,27,29,Unknown
+1997-11-30,1997,Reg,RS,Kansas City Chiefs,San Francisco 49ers,H,44,9,Unknown
+1997-11-30,1997,Reg,RS,San Francisco 49ers,Kansas City Chiefs,A,9,44,Unknown
+1997-11-30,1997,Reg,RS,St. Louis Rams,Washington Redskins,A,23,20,Unknown
+1997-11-30,1997,Reg,RS,Washington Redskins,St. Louis Rams,H,20,23,Unknown
+1997-11-30,1997,Reg,RS,Atlanta Falcons,Seattle Seahawks,A,24,17,Unknown
+1997-11-30,1997,Reg,RS,Seattle Seahawks,Atlanta Falcons,H,17,24,Unknown
+1997-11-30,1997,Reg,RS,Pittsburgh Steelers,Arizona Cardinals,A,26,20,Unknown
+1997-11-30,1997,Reg,RS,Arizona Cardinals,Pittsburgh Steelers,H,20,26,Unknown
+1997-11-30,1997,Reg,RS,Miami Dolphins,Oakland Raiders,A,34,16,Unknown
+1997-11-30,1997,Reg,RS,Oakland Raiders,Miami Dolphins,H,16,34,Unknown
+1997-11-30,1997,Reg,RS,Tampa Bay Buccaneers,New York Giants,A,20,8,Unknown
+1997-11-30,1997,Reg,RS,New York Giants,Tampa Bay Buccaneers,H,8,20,Unknown
+1997-11-30,1997,Reg,RS,Denver Broncos,San Diego Chargers,A,38,28,Unknown
+1997-11-30,1997,Reg,RS,San Diego Chargers,Denver Broncos,H,28,38,Unknown
+1997-12-01,1997,Reg,RS,Green Bay Packers,Minnesota Vikings,A,27,11,Unknown
+1997-12-01,1997,Reg,RS,Minnesota Vikings,Green Bay Packers,H,11,27,Unknown
+1997-12-04,1997,Reg,RS,Cincinnati Bengals,Tennessee Oilers,H,41,14,Unknown
+1997-12-04,1997,Reg,RS,Tennessee Oilers,Cincinnati Bengals,A,14,41,Unknown
+1997-12-07,1997,Reg,RS,Chicago Bears,Buffalo Bills,H,20,3,Unknown
+1997-12-07,1997,Reg,RS,Buffalo Bills,Chicago Bears,A,3,20,Unknown
+1997-12-07,1997,Reg,RS,Pittsburgh Steelers,Denver Broncos,H,35,24,Unknown
+1997-12-07,1997,Reg,RS,Denver Broncos,Pittsburgh Steelers,A,24,35,Unknown
+1997-12-07,1997,Reg,RS,Green Bay Packers,Tampa Bay Buccaneers,A,17,6,Unknown
+1997-12-07,1997,Reg,RS,Tampa Bay Buccaneers,Green Bay Packers,H,6,17,Unknown
+1997-12-07,1997,Reg,RS,New England Patriots,Jacksonville Jaguars,A,26,20,Unknown
+1997-12-07,1997,Reg,RS,Jacksonville Jaguars,New England Patriots,H,20,26,Unknown
+1997-12-07,1997,Reg,RS,Kansas City Chiefs,Oakland Raiders,H,30,0,Unknown
+1997-12-07,1997,Reg,RS,Oakland Raiders,Kansas City Chiefs,A,0,30,Unknown
+1997-12-07,1997,Reg,RS,St. Louis Rams,New Orleans Saints,A,34,27,Unknown
+1997-12-07,1997,Reg,RS,New Orleans Saints,St. Louis Rams,H,27,34,Unknown
+1997-12-07,1997,Reg,RS,New York Giants,Philadelphia Eagles,A,31,21,Unknown
+1997-12-07,1997,Reg,RS,Philadelphia Eagles,New York Giants,H,21,31,Unknown
+1997-12-07,1997,Reg,RS,Baltimore Ravens,Seattle Seahawks,H,31,24,Unknown
+1997-12-07,1997,Reg,RS,Seattle Seahawks,Baltimore Ravens,A,24,31,Unknown
+1997-12-07,1997,Reg,RS,Atlanta Falcons,San Diego Chargers,A,14,3,Unknown
+1997-12-07,1997,Reg,RS,San Diego Chargers,Atlanta Falcons,H,3,14,Unknown
+1997-12-07,1997,Reg,RS,Indianapolis Colts,New York Jets,A,22,14,Unknown
+1997-12-07,1997,Reg,RS,New York Jets,Indianapolis Colts,H,14,22,Unknown
+1997-12-07,1997,Reg,RS,Washington Redskins,Arizona Cardinals,A,38,28,Unknown
+1997-12-07,1997,Reg,RS,Arizona Cardinals,Washington Redskins,H,28,38,Unknown
+1997-12-07,1997,Reg,RS,San Francisco 49ers,Minnesota Vikings,H,28,17,Unknown
+1997-12-07,1997,Reg,RS,Minnesota Vikings,San Francisco 49ers,A,17,28,Unknown
+1997-12-07,1997,Reg,RS,Miami Dolphins,Detroit Lions,H,33,30,Unknown
+1997-12-07,1997,Reg,RS,Detroit Lions,Miami Dolphins,A,30,33,Unknown
+1997-12-08,1997,Reg,RS,Carolina Panthers,Dallas Cowboys,A,23,13,Unknown
+1997-12-08,1997,Reg,RS,Dallas Cowboys,Carolina Panthers,H,13,23,Unknown
+1997-12-13,1997,Reg,RS,New York Giants,Washington Redskins,H,30,10,Unknown
+1997-12-13,1997,Reg,RS,Washington Redskins,New York Giants,A,10,30,Unknown
+1997-12-13,1997,Reg,RS,Pittsburgh Steelers,New England Patriots,A,24,21,Unknown
+1997-12-13,1997,Reg,RS,New England Patriots,Pittsburgh Steelers,H,21,24,Unknown
+1997-12-14,1997,Reg,RS,Atlanta Falcons,Philadelphia Eagles,H,20,17,Unknown
+1997-12-14,1997,Reg,RS,Philadelphia Eagles,Atlanta Falcons,A,17,20,Unknown
+1997-12-14,1997,Reg,RS,Jacksonville Jaguars,Buffalo Bills,A,20,14,Unknown
+1997-12-14,1997,Reg,RS,Buffalo Bills,Jacksonville Jaguars,H,14,20,Unknown
+1997-12-14,1997,Reg,RS,Cincinnati Bengals,Dallas Cowboys,H,31,24,Unknown
+1997-12-14,1997,Reg,RS,Dallas Cowboys,Cincinnati Bengals,A,24,31,Unknown
+1997-12-14,1997,Reg,RS,Indianapolis Colts,Miami Dolphins,H,41,0,Unknown
+1997-12-14,1997,Reg,RS,Miami Dolphins,Indianapolis Colts,A,0,41,Unknown
+1997-12-14,1997,Reg,RS,Detroit Lions,Minnesota Vikings,A,14,13,Unknown
+1997-12-14,1997,Reg,RS,Minnesota Vikings,Detroit Lions,H,13,14,Unknown
+1997-12-14,1997,Reg,RS,New York Jets,Tampa Bay Buccaneers,H,31,0,Unknown
+1997-12-14,1997,Reg,RS,Tampa Bay Buccaneers,New York Jets,A,0,31,Unknown
+1997-12-14,1997,Reg,RS,Baltimore Ravens,Tennessee Oilers,H,21,19,Unknown
+1997-12-14,1997,Reg,RS,Tennessee Oilers,Baltimore Ravens,A,19,21,Unknown
+1997-12-14,1997,Reg,RS,Green Bay Packers,Carolina Panthers,A,31,10,Unknown
+1997-12-14,1997,Reg,RS,Carolina Panthers,Green Bay Packers,H,10,31,Unknown
+1997-12-14,1997,Reg,RS,New Orleans Saints,Arizona Cardinals,H,27,10,Unknown
+1997-12-14,1997,Reg,RS,Arizona Cardinals,New Orleans Saints,A,10,27,Unknown
+1997-12-14,1997,Reg,RS,Kansas City Chiefs,San Diego Chargers,A,29,7,Unknown
+1997-12-14,1997,Reg,RS,San Diego Chargers,Kansas City Chiefs,H,7,29,Unknown
+1997-12-14,1997,Reg,RS,Seattle Seahawks,Oakland Raiders,A,22,21,Unknown
+1997-12-14,1997,Reg,RS,Oakland Raiders,Seattle Seahawks,H,21,22,Unknown
+1997-12-14,1997,Reg,RS,Chicago Bears,St. Louis Rams,A,13,10,Unknown
+1997-12-14,1997,Reg,RS,St. Louis Rams,Chicago Bears,H,10,13,Unknown
+1997-12-15,1997,Reg,RS,San Francisco 49ers,Denver Broncos,H,34,17,Unknown
+1997-12-15,1997,Reg,RS,Denver Broncos,San Francisco 49ers,A,17,34,Unknown
+1997-12-20,1997,Reg,RS,Green Bay Packers,Buffalo Bills,H,31,21,Unknown
+1997-12-20,1997,Reg,RS,Buffalo Bills,Green Bay Packers,A,21,31,Unknown
+1997-12-20,1997,Reg,RS,St. Louis Rams,Carolina Panthers,A,30,18,Unknown
+1997-12-20,1997,Reg,RS,Carolina Panthers,St. Louis Rams,H,18,30,Unknown
+1997-12-21,1997,Reg,RS,Tampa Bay Buccaneers,Chicago Bears,H,31,15,Unknown
+1997-12-21,1997,Reg,RS,Chicago Bears,Tampa Bay Buccaneers,A,15,31,Unknown
+1997-12-21,1997,Reg,RS,Cincinnati Bengals,Baltimore Ravens,H,16,14,Unknown
+1997-12-21,1997,Reg,RS,Baltimore Ravens,Cincinnati Bengals,A,14,16,Unknown
+1997-12-21,1997,Reg,RS,Minnesota Vikings,Indianapolis Colts,H,39,28,Unknown
+1997-12-21,1997,Reg,RS,Indianapolis Colts,Minnesota Vikings,A,28,39,Unknown
+1997-12-21,1997,Reg,RS,New York Giants,Dallas Cowboys,A,20,7,Unknown
+1997-12-21,1997,Reg,RS,Dallas Cowboys,New York Giants,H,7,20,Unknown
+1997-12-21,1997,Reg,RS,Kansas City Chiefs,New Orleans Saints,H,25,13,Unknown
+1997-12-21,1997,Reg,RS,New Orleans Saints,Kansas City Chiefs,A,13,25,Unknown
+1997-12-21,1997,Reg,RS,Tennessee Oilers,Pittsburgh Steelers,H,16,6,Unknown
+1997-12-21,1997,Reg,RS,Pittsburgh Steelers,Tennessee Oilers,A,6,16,Unknown
+1997-12-21,1997,Reg,RS,Washington Redskins,Philadelphia Eagles,H,35,32,Unknown
+1997-12-21,1997,Reg,RS,Philadelphia Eagles,Washington Redskins,A,32,35,Unknown
+1997-12-21,1997,Reg,RS,Arizona Cardinals,Atlanta Falcons,H,29,26,Unknown
+1997-12-21,1997,Reg,RS,Atlanta Falcons,Arizona Cardinals,A,26,29,Unknown
+1997-12-21,1997,Reg,RS,Denver Broncos,San Diego Chargers,H,38,3,Unknown
+1997-12-21,1997,Reg,RS,San Diego Chargers,Denver Broncos,A,3,38,Unknown
+1997-12-21,1997,Reg,RS,Detroit Lions,New York Jets,H,13,10,Unknown
+1997-12-21,1997,Reg,RS,New York Jets,Detroit Lions,A,10,13,Unknown
+1997-12-21,1997,Reg,RS,Jacksonville Jaguars,Oakland Raiders,A,20,9,Unknown
+1997-12-21,1997,Reg,RS,Oakland Raiders,Jacksonville Jaguars,H,9,20,Unknown
+1997-12-21,1997,Reg,RS,Seattle Seahawks,San Francisco 49ers,H,38,9,Unknown
+1997-12-21,1997,Reg,RS,San Francisco 49ers,Seattle Seahawks,A,9,38,Unknown
+1997-12-22,1997,Reg,RS,New England Patriots,Miami Dolphins,A,14,12,Unknown
+1997-12-22,1997,Reg,RS,Miami Dolphins,New England Patriots,H,12,14,Unknown
+1997-12-27,1997,Playoff,1,Minnesota Vikings,New York Giants,A,23,22,Unknown
+1997-12-27,1997,Playoff,1,New York Giants,Minnesota Vikings,H,22,23,Unknown
+1997-12-27,1997,Playoff,1,Denver Broncos,Jacksonville Jaguars,H,42,17,Unknown
+1997-12-27,1997,Playoff,1,Jacksonville Jaguars,Denver Broncos,A,17,42,Unknown
+1997-12-28,1997,Playoff,1,New England Patriots,Miami Dolphins,H,17,3,Unknown
+1997-12-28,1997,Playoff,1,Miami Dolphins,New England Patriots,A,3,17,Unknown
+1997-12-28,1997,Playoff,1,Tampa Bay Buccaneers,Detroit Lions,H,20,10,Unknown
+1997-12-28,1997,Playoff,1,Detroit Lions,Tampa Bay Buccaneers,A,10,20,Unknown
+1998-01-03,1997,Playoff,2,Pittsburgh Steelers,New England Patriots,H,7,6,Unknown
+1998-01-03,1997,Playoff,2,New England Patriots,Pittsburgh Steelers,A,6,7,Unknown
+1998-01-03,1997,Playoff,2,San Francisco 49ers,Minnesota Vikings,H,38,22,Unknown
+1998-01-03,1997,Playoff,2,Minnesota Vikings,San Francisco 49ers,A,22,38,Unknown
+1998-01-04,1997,Playoff,2,Green Bay Packers,Tampa Bay Buccaneers,H,21,7,Unknown
+1998-01-04,1997,Playoff,2,Tampa Bay Buccaneers,Green Bay Packers,A,7,21,Unknown
+1998-01-04,1997,Playoff,2,Denver Broncos,Kansas City Chiefs,A,14,10,Unknown
+1998-01-04,1997,Playoff,2,Kansas City Chiefs,Denver Broncos,H,10,14,Unknown
+1998-01-11,1997,Playoff,3,Denver Broncos,Pittsburgh Steelers,A,24,21,Unknown
+1998-01-11,1997,Playoff,3,Pittsburgh Steelers,Denver Broncos,H,21,24,Unknown
+1998-01-11,1997,Playoff,3,Green Bay Packers,San Francisco 49ers,A,23,10,Unknown
+1998-01-11,1997,Playoff,3,San Francisco 49ers,Green Bay Packers,H,10,23,Unknown
+1998-01-25,1997,Playoff,4,Denver Broncos,Green Bay Packers,N,31,24,Unknown
+1998-01-25,1997,Playoff,4,Green Bay Packers,Denver Broncos,N,24,31,Unknown

@@ -1,0 +1,535 @@
+Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT
+2015-09-10,2015,Reg,RS,New England Patriots,Pittsburgh Steelers,H,28,21,Unknown
+2015-09-10,2015,Reg,RS,Pittsburgh Steelers,New England Patriots,A,21,28,Unknown
+2015-09-13,2015,Reg,RS,Green Bay Packers,Chicago Bears,A,31,23,Unknown
+2015-09-13,2015,Reg,RS,Chicago Bears,Green Bay Packers,H,23,31,Unknown
+2015-09-13,2015,Reg,RS,St. Louis Rams,Seattle Seahawks,H,34,31,Unknown
+2015-09-13,2015,Reg,RS,Seattle Seahawks,St. Louis Rams,A,31,34,Unknown
+2015-09-13,2015,Reg,RS,Kansas City Chiefs,Houston Texans,A,27,20,Unknown
+2015-09-13,2015,Reg,RS,Houston Texans,Kansas City Chiefs,H,20,27,Unknown
+2015-09-13,2015,Reg,RS,Miami Dolphins,Washington Redskins,A,17,10,Unknown
+2015-09-13,2015,Reg,RS,Washington Redskins,Miami Dolphins,H,10,17,Unknown
+2015-09-13,2015,Reg,RS,Buffalo Bills,Indianapolis Colts,H,27,14,Unknown
+2015-09-13,2015,Reg,RS,Indianapolis Colts,Buffalo Bills,A,14,27,Unknown
+2015-09-13,2015,Reg,RS,Carolina Panthers,Jacksonville Jaguars,A,20,9,Unknown
+2015-09-13,2015,Reg,RS,Jacksonville Jaguars,Carolina Panthers,H,9,20,Unknown
+2015-09-13,2015,Reg,RS,New York Jets,Cleveland Browns,H,31,10,Unknown
+2015-09-13,2015,Reg,RS,Cleveland Browns,New York Jets,A,10,31,Unknown
+2015-09-13,2015,Reg,RS,Arizona Cardinals,New Orleans Saints,H,31,19,Unknown
+2015-09-13,2015,Reg,RS,New Orleans Saints,Arizona Cardinals,A,19,31,Unknown
+2015-09-13,2015,Reg,RS,San Diego Chargers,Detroit Lions,H,33,28,Unknown
+2015-09-13,2015,Reg,RS,Detroit Lions,San Diego Chargers,A,28,33,Unknown
+2015-09-13,2015,Reg,RS,Cincinnati Bengals,Oakland Raiders,A,33,13,Unknown
+2015-09-13,2015,Reg,RS,Oakland Raiders,Cincinnati Bengals,H,13,33,Unknown
+2015-09-13,2015,Reg,RS,Denver Broncos,Baltimore Ravens,H,19,13,Unknown
+2015-09-13,2015,Reg,RS,Baltimore Ravens,Denver Broncos,A,13,19,Unknown
+2015-09-13,2015,Reg,RS,Tennessee Titans,Tampa Bay Buccaneers,A,42,14,Unknown
+2015-09-13,2015,Reg,RS,Tampa Bay Buccaneers,Tennessee Titans,H,14,42,Unknown
+2015-09-13,2015,Reg,RS,Dallas Cowboys,New York Giants,H,27,26,Unknown
+2015-09-13,2015,Reg,RS,New York Giants,Dallas Cowboys,A,26,27,Unknown
+2015-09-14,2015,Reg,RS,Atlanta Falcons,Philadelphia Eagles,H,26,24,Unknown
+2015-09-14,2015,Reg,RS,Philadelphia Eagles,Atlanta Falcons,A,24,26,Unknown
+2015-09-14,2015,Reg,RS,San Francisco 49ers,Minnesota Vikings,H,20,3,Unknown
+2015-09-14,2015,Reg,RS,Minnesota Vikings,San Francisco 49ers,A,3,20,Unknown
+2015-09-17,2015,Reg,RS,Denver Broncos,Kansas City Chiefs,A,31,24,Unknown
+2015-09-17,2015,Reg,RS,Kansas City Chiefs,Denver Broncos,H,24,31,Unknown
+2015-09-20,2015,Reg,RS,Arizona Cardinals,Chicago Bears,A,48,23,Unknown
+2015-09-20,2015,Reg,RS,Chicago Bears,Arizona Cardinals,H,23,48,Unknown
+2015-09-20,2015,Reg,RS,Atlanta Falcons,New York Giants,A,24,20,Unknown
+2015-09-20,2015,Reg,RS,New York Giants,Atlanta Falcons,H,20,24,Unknown
+2015-09-20,2015,Reg,RS,New England Patriots,Buffalo Bills,A,40,32,Unknown
+2015-09-20,2015,Reg,RS,Buffalo Bills,New England Patriots,H,32,40,Unknown
+2015-09-20,2015,Reg,RS,Carolina Panthers,Houston Texans,H,24,17,Unknown
+2015-09-20,2015,Reg,RS,Houston Texans,Carolina Panthers,A,17,24,Unknown
+2015-09-20,2015,Reg,RS,Cleveland Browns,Tennessee Titans,H,28,14,Unknown
+2015-09-20,2015,Reg,RS,Tennessee Titans,Cleveland Browns,A,14,28,Unknown
+2015-09-20,2015,Reg,RS,Tampa Bay Buccaneers,New Orleans Saints,A,26,19,Unknown
+2015-09-20,2015,Reg,RS,New Orleans Saints,Tampa Bay Buccaneers,H,19,26,Unknown
+2015-09-20,2015,Reg,RS,Pittsburgh Steelers,San Francisco 49ers,H,43,18,Unknown
+2015-09-20,2015,Reg,RS,San Francisco 49ers,Pittsburgh Steelers,A,18,43,Unknown
+2015-09-20,2015,Reg,RS,Cincinnati Bengals,San Diego Chargers,H,24,19,Unknown
+2015-09-20,2015,Reg,RS,San Diego Chargers,Cincinnati Bengals,A,19,24,Unknown
+2015-09-20,2015,Reg,RS,Minnesota Vikings,Detroit Lions,H,26,16,Unknown
+2015-09-20,2015,Reg,RS,Detroit Lions,Minnesota Vikings,A,16,26,Unknown
+2015-09-20,2015,Reg,RS,Washington Redskins,St. Louis Rams,H,24,10,Unknown
+2015-09-20,2015,Reg,RS,St. Louis Rams,Washington Redskins,A,10,24,Unknown
+2015-09-20,2015,Reg,RS,Jacksonville Jaguars,Miami Dolphins,H,23,20,Unknown
+2015-09-20,2015,Reg,RS,Miami Dolphins,Jacksonville Jaguars,A,20,23,Unknown
+2015-09-20,2015,Reg,RS,Oakland Raiders,Baltimore Ravens,H,37,33,Unknown
+2015-09-20,2015,Reg,RS,Baltimore Ravens,Oakland Raiders,A,33,37,Unknown
+2015-09-20,2015,Reg,RS,Dallas Cowboys,Philadelphia Eagles,A,20,10,Unknown
+2015-09-20,2015,Reg,RS,Philadelphia Eagles,Dallas Cowboys,H,10,20,Unknown
+2015-09-20,2015,Reg,RS,Green Bay Packers,Seattle Seahawks,H,27,17,Unknown
+2015-09-20,2015,Reg,RS,Seattle Seahawks,Green Bay Packers,A,17,27,Unknown
+2015-09-21,2015,Reg,RS,New York Jets,Indianapolis Colts,A,20,7,Unknown
+2015-09-21,2015,Reg,RS,Indianapolis Colts,New York Jets,H,7,20,Unknown
+2015-09-24,2015,Reg,RS,New York Giants,Washington Redskins,H,32,21,Unknown
+2015-09-24,2015,Reg,RS,Washington Redskins,New York Giants,A,21,32,Unknown
+2015-09-27,2015,Reg,RS,Pittsburgh Steelers,St. Louis Rams,A,12,6,Unknown
+2015-09-27,2015,Reg,RS,St. Louis Rams,Pittsburgh Steelers,H,6,12,Unknown
+2015-09-27,2015,Reg,RS,Cincinnati Bengals,Baltimore Ravens,A,28,24,Unknown
+2015-09-27,2015,Reg,RS,Baltimore Ravens,Cincinnati Bengals,H,24,28,Unknown
+2015-09-27,2015,Reg,RS,Oakland Raiders,Cleveland Browns,A,27,20,Unknown
+2015-09-27,2015,Reg,RS,Cleveland Browns,Oakland Raiders,H,20,27,Unknown
+2015-09-27,2015,Reg,RS,Minnesota Vikings,San Diego Chargers,H,31,14,Unknown
+2015-09-27,2015,Reg,RS,San Diego Chargers,Minnesota Vikings,A,14,31,Unknown
+2015-09-27,2015,Reg,RS,Atlanta Falcons,Dallas Cowboys,A,39,28,Unknown
+2015-09-27,2015,Reg,RS,Dallas Cowboys,Atlanta Falcons,H,28,39,Unknown
+2015-09-27,2015,Reg,RS,Carolina Panthers,New Orleans Saints,H,27,22,Unknown
+2015-09-27,2015,Reg,RS,New Orleans Saints,Carolina Panthers,A,22,27,Unknown
+2015-09-27,2015,Reg,RS,Indianapolis Colts,Tennessee Titans,A,35,33,Unknown
+2015-09-27,2015,Reg,RS,Tennessee Titans,Indianapolis Colts,H,33,35,Unknown
+2015-09-27,2015,Reg,RS,Houston Texans,Tampa Bay Buccaneers,H,19,9,Unknown
+2015-09-27,2015,Reg,RS,Tampa Bay Buccaneers,Houston Texans,A,9,19,Unknown
+2015-09-27,2015,Reg,RS,Philadelphia Eagles,New York Jets,A,24,17,Unknown
+2015-09-27,2015,Reg,RS,New York Jets,Philadelphia Eagles,H,17,24,Unknown
+2015-09-27,2015,Reg,RS,New England Patriots,Jacksonville Jaguars,H,51,17,Unknown
+2015-09-27,2015,Reg,RS,Jacksonville Jaguars,New England Patriots,A,17,51,Unknown
+2015-09-27,2015,Reg,RS,Arizona Cardinals,San Francisco 49ers,H,47,7,Unknown
+2015-09-27,2015,Reg,RS,San Francisco 49ers,Arizona Cardinals,A,7,47,Unknown
+2015-09-27,2015,Reg,RS,Buffalo Bills,Miami Dolphins,A,41,14,Unknown
+2015-09-27,2015,Reg,RS,Miami Dolphins,Buffalo Bills,H,14,41,Unknown
+2015-09-27,2015,Reg,RS,Seattle Seahawks,Chicago Bears,H,26,0,Unknown
+2015-09-27,2015,Reg,RS,Chicago Bears,Seattle Seahawks,A,0,26,Unknown
+2015-09-27,2015,Reg,RS,Denver Broncos,Detroit Lions,A,24,12,Unknown
+2015-09-27,2015,Reg,RS,Detroit Lions,Denver Broncos,H,12,24,Unknown
+2015-09-28,2015,Reg,RS,Green Bay Packers,Kansas City Chiefs,H,38,28,Unknown
+2015-09-28,2015,Reg,RS,Kansas City Chiefs,Green Bay Packers,A,28,38,Unknown
+2015-10-01,2015,Reg,RS,Baltimore Ravens,Pittsburgh Steelers,A,23,20,Unknown
+2015-10-01,2015,Reg,RS,Pittsburgh Steelers,Baltimore Ravens,H,20,23,Unknown
+2015-10-04,2015,Reg,RS,New York Jets,Miami Dolphins,A,27,14,Unknown
+2015-10-04,2015,Reg,RS,Miami Dolphins,New York Jets,H,14,27,Unknown
+2015-10-04,2015,Reg,RS,Atlanta Falcons,Houston Texans,H,48,21,Unknown
+2015-10-04,2015,Reg,RS,Houston Texans,Atlanta Falcons,A,21,48,Unknown
+2015-10-04,2015,Reg,RS,New York Giants,Buffalo Bills,A,24,10,Unknown
+2015-10-04,2015,Reg,RS,Buffalo Bills,New York Giants,H,10,24,Unknown
+2015-10-04,2015,Reg,RS,Chicago Bears,Oakland Raiders,H,22,20,Unknown
+2015-10-04,2015,Reg,RS,Oakland Raiders,Chicago Bears,A,20,22,Unknown
+2015-10-04,2015,Reg,RS,Indianapolis Colts,Jacksonville Jaguars,H,16,13,Unknown
+2015-10-04,2015,Reg,RS,Jacksonville Jaguars,Indianapolis Colts,A,13,16,Unknown
+2015-10-04,2015,Reg,RS,Carolina Panthers,Tampa Bay Buccaneers,A,37,23,Unknown
+2015-10-04,2015,Reg,RS,Tampa Bay Buccaneers,Carolina Panthers,H,23,37,Unknown
+2015-10-04,2015,Reg,RS,Cincinnati Bengals,Kansas City Chiefs,H,36,21,Unknown
+2015-10-04,2015,Reg,RS,Kansas City Chiefs,Cincinnati Bengals,A,21,36,Unknown
+2015-10-04,2015,Reg,RS,Washington Redskins,Philadelphia Eagles,H,23,20,Unknown
+2015-10-04,2015,Reg,RS,Philadelphia Eagles,Washington Redskins,A,20,23,Unknown
+2015-10-04,2015,Reg,RS,San Diego Chargers,Cleveland Browns,H,30,27,Unknown
+2015-10-04,2015,Reg,RS,Cleveland Browns,San Diego Chargers,A,27,30,Unknown
+2015-10-04,2015,Reg,RS,St. Louis Rams,Arizona Cardinals,A,24,22,Unknown
+2015-10-04,2015,Reg,RS,Arizona Cardinals,St. Louis Rams,H,22,24,Unknown
+2015-10-04,2015,Reg,RS,Denver Broncos,Minnesota Vikings,H,23,20,Unknown
+2015-10-04,2015,Reg,RS,Minnesota Vikings,Denver Broncos,A,20,23,Unknown
+2015-10-04,2015,Reg,RS,Green Bay Packers,San Francisco 49ers,A,17,3,Unknown
+2015-10-04,2015,Reg,RS,San Francisco 49ers,Green Bay Packers,H,3,17,Unknown
+2015-10-04,2015,Reg,RS,New Orleans Saints,Dallas Cowboys,H,26,20,Unknown
+2015-10-04,2015,Reg,RS,Dallas Cowboys,New Orleans Saints,A,20,26,Unknown
+2015-10-05,2015,Reg,RS,Seattle Seahawks,Detroit Lions,H,13,10,Unknown
+2015-10-05,2015,Reg,RS,Detroit Lions,Seattle Seahawks,A,10,13,Unknown
+2015-10-08,2015,Reg,RS,Indianapolis Colts,Houston Texans,A,27,20,Unknown
+2015-10-08,2015,Reg,RS,Houston Texans,Indianapolis Colts,H,20,27,Unknown
+2015-10-11,2015,Reg,RS,Atlanta Falcons,Washington Redskins,H,25,19,Unknown
+2015-10-11,2015,Reg,RS,Washington Redskins,Atlanta Falcons,A,19,25,Unknown
+2015-10-11,2015,Reg,RS,Chicago Bears,Kansas City Chiefs,A,18,17,Unknown
+2015-10-11,2015,Reg,RS,Kansas City Chiefs,Chicago Bears,H,17,18,Unknown
+2015-10-11,2015,Reg,RS,Cleveland Browns,Baltimore Ravens,A,33,30,Unknown
+2015-10-11,2015,Reg,RS,Baltimore Ravens,Cleveland Browns,H,30,33,Unknown
+2015-10-11,2015,Reg,RS,Green Bay Packers,St. Louis Rams,H,24,10,Unknown
+2015-10-11,2015,Reg,RS,St. Louis Rams,Green Bay Packers,A,10,24,Unknown
+2015-10-11,2015,Reg,RS,Tampa Bay Buccaneers,Jacksonville Jaguars,H,38,31,Unknown
+2015-10-11,2015,Reg,RS,Jacksonville Jaguars,Tampa Bay Buccaneers,A,31,38,Unknown
+2015-10-11,2015,Reg,RS,Buffalo Bills,Tennessee Titans,A,14,13,Unknown
+2015-10-11,2015,Reg,RS,Tennessee Titans,Buffalo Bills,H,13,14,Unknown
+2015-10-11,2015,Reg,RS,Cincinnati Bengals,Seattle Seahawks,H,27,24,Unknown
+2015-10-11,2015,Reg,RS,Seattle Seahawks,Cincinnati Bengals,A,24,27,Unknown
+2015-10-11,2015,Reg,RS,Philadelphia Eagles,New Orleans Saints,H,39,17,Unknown
+2015-10-11,2015,Reg,RS,New Orleans Saints,Philadelphia Eagles,A,17,39,Unknown
+2015-10-11,2015,Reg,RS,Arizona Cardinals,Detroit Lions,A,42,17,Unknown
+2015-10-11,2015,Reg,RS,Detroit Lions,Arizona Cardinals,H,17,42,Unknown
+2015-10-11,2015,Reg,RS,New England Patriots,Dallas Cowboys,A,30,6,Unknown
+2015-10-11,2015,Reg,RS,Dallas Cowboys,New England Patriots,H,6,30,Unknown
+2015-10-11,2015,Reg,RS,Denver Broncos,Oakland Raiders,A,16,10,Unknown
+2015-10-11,2015,Reg,RS,Oakland Raiders,Denver Broncos,H,10,16,Unknown
+2015-10-11,2015,Reg,RS,New York Giants,San Francisco 49ers,H,30,27,Unknown
+2015-10-11,2015,Reg,RS,San Francisco 49ers,New York Giants,A,27,30,Unknown
+2015-10-12,2015,Reg,RS,Pittsburgh Steelers,San Diego Chargers,A,24,20,Unknown
+2015-10-12,2015,Reg,RS,San Diego Chargers,Pittsburgh Steelers,H,20,24,Unknown
+2015-10-15,2015,Reg,RS,New Orleans Saints,Atlanta Falcons,H,31,21,Unknown
+2015-10-15,2015,Reg,RS,Atlanta Falcons,New Orleans Saints,A,21,31,Unknown
+2015-10-18,2015,Reg,RS,New York Jets,Washington Redskins,H,34,20,Unknown
+2015-10-18,2015,Reg,RS,Washington Redskins,New York Jets,A,20,34,Unknown
+2015-10-18,2015,Reg,RS,Cincinnati Bengals,Buffalo Bills,A,34,21,Unknown
+2015-10-18,2015,Reg,RS,Buffalo Bills,Cincinnati Bengals,H,21,34,Unknown
+2015-10-18,2015,Reg,RS,Detroit Lions,Chicago Bears,H,37,34,Unknown
+2015-10-18,2015,Reg,RS,Chicago Bears,Detroit Lions,A,34,37,Unknown
+2015-10-18,2015,Reg,RS,Denver Broncos,Cleveland Browns,A,26,23,Unknown
+2015-10-18,2015,Reg,RS,Cleveland Browns,Denver Broncos,H,23,26,Unknown
+2015-10-18,2015,Reg,RS,Houston Texans,Jacksonville Jaguars,A,31,20,Unknown
+2015-10-18,2015,Reg,RS,Jacksonville Jaguars,Houston Texans,H,20,31,Unknown
+2015-10-18,2015,Reg,RS,Minnesota Vikings,Kansas City Chiefs,H,16,10,Unknown
+2015-10-18,2015,Reg,RS,Kansas City Chiefs,Minnesota Vikings,A,10,16,Unknown
+2015-10-18,2015,Reg,RS,Miami Dolphins,Tennessee Titans,A,38,10,Unknown
+2015-10-18,2015,Reg,RS,Tennessee Titans,Miami Dolphins,H,10,38,Unknown
+2015-10-18,2015,Reg,RS,Pittsburgh Steelers,Arizona Cardinals,H,25,13,Unknown
+2015-10-18,2015,Reg,RS,Arizona Cardinals,Pittsburgh Steelers,A,13,25,Unknown
+2015-10-18,2015,Reg,RS,Carolina Panthers,Seattle Seahawks,A,27,23,Unknown
+2015-10-18,2015,Reg,RS,Seattle Seahawks,Carolina Panthers,H,23,27,Unknown
+2015-10-18,2015,Reg,RS,Green Bay Packers,San Diego Chargers,H,27,20,Unknown
+2015-10-18,2015,Reg,RS,San Diego Chargers,Green Bay Packers,A,20,27,Unknown
+2015-10-18,2015,Reg,RS,San Francisco 49ers,Baltimore Ravens,H,25,20,Unknown
+2015-10-18,2015,Reg,RS,Baltimore Ravens,San Francisco 49ers,A,20,25,Unknown
+2015-10-18,2015,Reg,RS,New England Patriots,Indianapolis Colts,A,34,27,Unknown
+2015-10-18,2015,Reg,RS,Indianapolis Colts,New England Patriots,H,27,34,Unknown
+2015-10-19,2015,Reg,RS,Philadelphia Eagles,New York Giants,H,27,7,Unknown
+2015-10-19,2015,Reg,RS,New York Giants,Philadelphia Eagles,A,7,27,Unknown
+2015-10-22,2015,Reg,RS,Seattle Seahawks,San Francisco 49ers,A,20,3,Unknown
+2015-10-22,2015,Reg,RS,San Francisco 49ers,Seattle Seahawks,H,3,20,Unknown
+2015-10-25,2015,Reg,RS,Jacksonville Jaguars,Buffalo Bills,H,34,31,Unknown
+2015-10-25,2015,Reg,RS,Buffalo Bills,Jacksonville Jaguars,A,31,34,Unknown
+2015-10-25,2015,Reg,RS,St. Louis Rams,Cleveland Browns,H,24,6,Unknown
+2015-10-25,2015,Reg,RS,Cleveland Browns,St. Louis Rams,A,6,24,Unknown
+2015-10-25,2015,Reg,RS,New England Patriots,New York Jets,H,30,23,Unknown
+2015-10-25,2015,Reg,RS,New York Jets,New England Patriots,A,23,30,Unknown
+2015-10-25,2015,Reg,RS,Atlanta Falcons,Tennessee Titans,A,10,7,Unknown
+2015-10-25,2015,Reg,RS,Tennessee Titans,Atlanta Falcons,H,7,10,Unknown
+2015-10-25,2015,Reg,RS,Minnesota Vikings,Detroit Lions,A,28,19,Unknown
+2015-10-25,2015,Reg,RS,Detroit Lions,Minnesota Vikings,H,19,28,Unknown
+2015-10-25,2015,Reg,RS,Miami Dolphins,Houston Texans,H,44,26,Unknown
+2015-10-25,2015,Reg,RS,Houston Texans,Miami Dolphins,A,26,44,Unknown
+2015-10-25,2015,Reg,RS,New Orleans Saints,Indianapolis Colts,A,27,21,Unknown
+2015-10-25,2015,Reg,RS,Indianapolis Colts,New Orleans Saints,H,21,27,Unknown
+2015-10-25,2015,Reg,RS,Kansas City Chiefs,Pittsburgh Steelers,H,23,13,Unknown
+2015-10-25,2015,Reg,RS,Pittsburgh Steelers,Kansas City Chiefs,A,13,23,Unknown
+2015-10-25,2015,Reg,RS,Washington Redskins,Tampa Bay Buccaneers,H,31,30,Unknown
+2015-10-25,2015,Reg,RS,Tampa Bay Buccaneers,Washington Redskins,A,30,31,Unknown
+2015-10-25,2015,Reg,RS,Oakland Raiders,San Diego Chargers,A,37,29,Unknown
+2015-10-25,2015,Reg,RS,San Diego Chargers,Oakland Raiders,H,29,37,Unknown
+2015-10-25,2015,Reg,RS,New York Giants,Dallas Cowboys,H,27,20,Unknown
+2015-10-25,2015,Reg,RS,Dallas Cowboys,New York Giants,A,20,27,Unknown
+2015-10-25,2015,Reg,RS,Carolina Panthers,Philadelphia Eagles,H,27,16,Unknown
+2015-10-25,2015,Reg,RS,Philadelphia Eagles,Carolina Panthers,A,16,27,Unknown
+2015-10-26,2015,Reg,RS,Arizona Cardinals,Baltimore Ravens,H,26,18,Unknown
+2015-10-26,2015,Reg,RS,Baltimore Ravens,Arizona Cardinals,A,18,26,Unknown
+2015-10-29,2015,Reg,RS,New England Patriots,Miami Dolphins,H,36,7,Unknown
+2015-10-29,2015,Reg,RS,Miami Dolphins,New England Patriots,A,7,36,Unknown
+2015-11-01,2015,Reg,RS,Kansas City Chiefs,Detroit Lions,H,45,10,Unknown
+2015-11-01,2015,Reg,RS,Detroit Lions,Kansas City Chiefs,A,10,45,Unknown
+2015-11-01,2015,Reg,RS,Minnesota Vikings,Chicago Bears,A,23,20,Unknown
+2015-11-01,2015,Reg,RS,Chicago Bears,Minnesota Vikings,H,20,23,Unknown
+2015-11-01,2015,Reg,RS,St. Louis Rams,San Francisco 49ers,H,27,6,Unknown
+2015-11-01,2015,Reg,RS,San Francisco 49ers,St. Louis Rams,A,6,27,Unknown
+2015-11-01,2015,Reg,RS,Cincinnati Bengals,Pittsburgh Steelers,A,16,10,Unknown
+2015-11-01,2015,Reg,RS,Pittsburgh Steelers,Cincinnati Bengals,H,10,16,Unknown
+2015-11-01,2015,Reg,RS,Tampa Bay Buccaneers,Atlanta Falcons,A,23,20,Unknown
+2015-11-01,2015,Reg,RS,Atlanta Falcons,Tampa Bay Buccaneers,H,20,23,Unknown
+2015-11-01,2015,Reg,RS,Arizona Cardinals,Cleveland Browns,A,34,20,Unknown
+2015-11-01,2015,Reg,RS,Cleveland Browns,Arizona Cardinals,H,20,34,Unknown
+2015-11-01,2015,Reg,RS,Houston Texans,Tennessee Titans,H,20,6,Unknown
+2015-11-01,2015,Reg,RS,Tennessee Titans,Houston Texans,A,6,20,Unknown
+2015-11-01,2015,Reg,RS,New Orleans Saints,New York Giants,H,52,49,Unknown
+2015-11-01,2015,Reg,RS,New York Giants,New Orleans Saints,A,49,52,Unknown
+2015-11-01,2015,Reg,RS,Baltimore Ravens,San Diego Chargers,H,29,26,Unknown
+2015-11-01,2015,Reg,RS,San Diego Chargers,Baltimore Ravens,A,26,29,Unknown
+2015-11-01,2015,Reg,RS,Oakland Raiders,New York Jets,H,34,20,Unknown
+2015-11-01,2015,Reg,RS,New York Jets,Oakland Raiders,A,20,34,Unknown
+2015-11-01,2015,Reg,RS,Seattle Seahawks,Dallas Cowboys,A,13,12,Unknown
+2015-11-01,2015,Reg,RS,Dallas Cowboys,Seattle Seahawks,H,12,13,Unknown
+2015-11-01,2015,Reg,RS,Denver Broncos,Green Bay Packers,H,29,10,Unknown
+2015-11-01,2015,Reg,RS,Green Bay Packers,Denver Broncos,A,10,29,Unknown
+2015-11-02,2015,Reg,RS,Carolina Panthers,Indianapolis Colts,H,29,26,Unknown
+2015-11-02,2015,Reg,RS,Indianapolis Colts,Carolina Panthers,A,26,29,Unknown
+2015-11-05,2015,Reg,RS,Cincinnati Bengals,Cleveland Browns,H,31,10,Unknown
+2015-11-05,2015,Reg,RS,Cleveland Browns,Cincinnati Bengals,A,10,31,Unknown
+2015-11-08,2015,Reg,RS,Buffalo Bills,Miami Dolphins,H,33,17,Unknown
+2015-11-08,2015,Reg,RS,Miami Dolphins,Buffalo Bills,A,17,33,Unknown
+2015-11-08,2015,Reg,RS,New York Jets,Jacksonville Jaguars,H,28,23,Unknown
+2015-11-08,2015,Reg,RS,Jacksonville Jaguars,New York Jets,A,23,28,Unknown
+2015-11-08,2015,Reg,RS,Minnesota Vikings,St. Louis Rams,H,21,18,Unknown
+2015-11-08,2015,Reg,RS,St. Louis Rams,Minnesota Vikings,A,18,21,Unknown
+2015-11-08,2015,Reg,RS,New England Patriots,Washington Redskins,H,27,10,Unknown
+2015-11-08,2015,Reg,RS,Washington Redskins,New England Patriots,A,10,27,Unknown
+2015-11-08,2015,Reg,RS,Tennessee Titans,New Orleans Saints,A,34,28,Unknown
+2015-11-08,2015,Reg,RS,New Orleans Saints,Tennessee Titans,H,28,34,Unknown
+2015-11-08,2015,Reg,RS,Pittsburgh Steelers,Oakland Raiders,H,38,35,Unknown
+2015-11-08,2015,Reg,RS,Oakland Raiders,Pittsburgh Steelers,A,35,38,Unknown
+2015-11-08,2015,Reg,RS,Carolina Panthers,Green Bay Packers,H,37,29,Unknown
+2015-11-08,2015,Reg,RS,Green Bay Packers,Carolina Panthers,A,29,37,Unknown
+2015-11-08,2015,Reg,RS,San Francisco 49ers,Atlanta Falcons,H,17,16,Unknown
+2015-11-08,2015,Reg,RS,Atlanta Falcons,San Francisco 49ers,A,16,17,Unknown
+2015-11-08,2015,Reg,RS,New York Giants,Tampa Bay Buccaneers,A,32,18,Unknown
+2015-11-08,2015,Reg,RS,Tampa Bay Buccaneers,New York Giants,H,18,32,Unknown
+2015-11-08,2015,Reg,RS,Indianapolis Colts,Denver Broncos,H,27,24,Unknown
+2015-11-08,2015,Reg,RS,Denver Broncos,Indianapolis Colts,A,24,27,Unknown
+2015-11-08,2015,Reg,RS,Philadelphia Eagles,Dallas Cowboys,A,33,27,Unknown
+2015-11-08,2015,Reg,RS,Dallas Cowboys,Philadelphia Eagles,H,27,33,Unknown
+2015-11-09,2015,Reg,RS,Chicago Bears,San Diego Chargers,A,22,19,Unknown
+2015-11-09,2015,Reg,RS,San Diego Chargers,Chicago Bears,H,19,22,Unknown
+2015-11-12,2015,Reg,RS,Buffalo Bills,New York Jets,A,22,17,Unknown
+2015-11-12,2015,Reg,RS,New York Jets,Buffalo Bills,H,17,22,Unknown
+2015-11-15,2015,Reg,RS,Chicago Bears,St. Louis Rams,A,37,13,Unknown
+2015-11-15,2015,Reg,RS,St. Louis Rams,Chicago Bears,H,13,37,Unknown
+2015-11-15,2015,Reg,RS,Carolina Panthers,Tennessee Titans,A,27,10,Unknown
+2015-11-15,2015,Reg,RS,Tennessee Titans,Carolina Panthers,H,10,27,Unknown
+2015-11-15,2015,Reg,RS,Detroit Lions,Green Bay Packers,A,18,16,Unknown
+2015-11-15,2015,Reg,RS,Green Bay Packers,Detroit Lions,H,16,18,Unknown
+2015-11-15,2015,Reg,RS,Pittsburgh Steelers,Cleveland Browns,H,30,9,Unknown
+2015-11-15,2015,Reg,RS,Cleveland Browns,Pittsburgh Steelers,A,9,30,Unknown
+2015-11-15,2015,Reg,RS,Tampa Bay Buccaneers,Dallas Cowboys,H,10,6,Unknown
+2015-11-15,2015,Reg,RS,Dallas Cowboys,Tampa Bay Buccaneers,A,6,10,Unknown
+2015-11-15,2015,Reg,RS,Jacksonville Jaguars,Baltimore Ravens,A,22,20,Unknown
+2015-11-15,2015,Reg,RS,Baltimore Ravens,Jacksonville Jaguars,H,20,22,Unknown
+2015-11-15,2015,Reg,RS,Miami Dolphins,Philadelphia Eagles,A,20,19,Unknown
+2015-11-15,2015,Reg,RS,Philadelphia Eagles,Miami Dolphins,H,19,20,Unknown
+2015-11-15,2015,Reg,RS,Washington Redskins,New Orleans Saints,H,47,14,Unknown
+2015-11-15,2015,Reg,RS,New Orleans Saints,Washington Redskins,A,14,47,Unknown
+2015-11-15,2015,Reg,RS,Minnesota Vikings,Oakland Raiders,A,30,14,Unknown
+2015-11-15,2015,Reg,RS,Oakland Raiders,Minnesota Vikings,H,14,30,Unknown
+2015-11-15,2015,Reg,RS,Kansas City Chiefs,Denver Broncos,A,29,13,Unknown
+2015-11-15,2015,Reg,RS,Denver Broncos,Kansas City Chiefs,H,13,29,Unknown
+2015-11-15,2015,Reg,RS,New England Patriots,New York Giants,A,27,26,Unknown
+2015-11-15,2015,Reg,RS,New York Giants,New England Patriots,H,26,27,Unknown
+2015-11-15,2015,Reg,RS,Arizona Cardinals,Seattle Seahawks,A,39,32,Unknown
+2015-11-15,2015,Reg,RS,Seattle Seahawks,Arizona Cardinals,H,32,39,Unknown
+2015-11-16,2015,Reg,RS,Houston Texans,Cincinnati Bengals,A,10,6,Unknown
+2015-11-16,2015,Reg,RS,Cincinnati Bengals,Houston Texans,H,6,10,Unknown
+2015-11-19,2015,Reg,RS,Jacksonville Jaguars,Tennessee Titans,H,19,13,Unknown
+2015-11-19,2015,Reg,RS,Tennessee Titans,Jacksonville Jaguars,A,13,19,Unknown
+2015-11-22,2015,Reg,RS,Indianapolis Colts,Atlanta Falcons,A,24,21,Unknown
+2015-11-22,2015,Reg,RS,Atlanta Falcons,Indianapolis Colts,H,21,24,Unknown
+2015-11-22,2015,Reg,RS,Carolina Panthers,Washington Redskins,H,44,16,Unknown
+2015-11-22,2015,Reg,RS,Washington Redskins,Carolina Panthers,A,16,44,Unknown
+2015-11-22,2015,Reg,RS,Denver Broncos,Chicago Bears,A,17,15,Unknown
+2015-11-22,2015,Reg,RS,Chicago Bears,Denver Broncos,H,15,17,Unknown
+2015-11-22,2015,Reg,RS,Detroit Lions,Oakland Raiders,H,18,13,Unknown
+2015-11-22,2015,Reg,RS,Oakland Raiders,Detroit Lions,A,13,18,Unknown
+2015-11-22,2015,Reg,RS,Tampa Bay Buccaneers,Philadelphia Eagles,A,45,17,Unknown
+2015-11-22,2015,Reg,RS,Philadelphia Eagles,Tampa Bay Buccaneers,H,17,45,Unknown
+2015-11-22,2015,Reg,RS,Baltimore Ravens,St. Louis Rams,H,16,13,Unknown
+2015-11-22,2015,Reg,RS,St. Louis Rams,Baltimore Ravens,A,13,16,Unknown
+2015-11-22,2015,Reg,RS,Dallas Cowboys,Miami Dolphins,A,24,14,Unknown
+2015-11-22,2015,Reg,RS,Miami Dolphins,Dallas Cowboys,H,14,24,Unknown
+2015-11-22,2015,Reg,RS,Houston Texans,New York Jets,H,24,17,Unknown
+2015-11-22,2015,Reg,RS,New York Jets,Houston Texans,A,17,24,Unknown
+2015-11-22,2015,Reg,RS,Kansas City Chiefs,San Diego Chargers,A,33,3,Unknown
+2015-11-22,2015,Reg,RS,San Diego Chargers,Kansas City Chiefs,H,3,33,Unknown
+2015-11-22,2015,Reg,RS,Green Bay Packers,Minnesota Vikings,A,30,13,Unknown
+2015-11-22,2015,Reg,RS,Minnesota Vikings,Green Bay Packers,H,13,30,Unknown
+2015-11-22,2015,Reg,RS,Seattle Seahawks,San Francisco 49ers,H,29,13,Unknown
+2015-11-22,2015,Reg,RS,San Francisco 49ers,Seattle Seahawks,A,13,29,Unknown
+2015-11-22,2015,Reg,RS,Arizona Cardinals,Cincinnati Bengals,H,34,31,Unknown
+2015-11-22,2015,Reg,RS,Cincinnati Bengals,Arizona Cardinals,A,31,34,Unknown
+2015-11-23,2015,Reg,RS,New England Patriots,Buffalo Bills,H,20,13,Unknown
+2015-11-23,2015,Reg,RS,Buffalo Bills,New England Patriots,A,13,20,Unknown
+2015-11-26,2015,Reg,RS,Detroit Lions,Philadelphia Eagles,H,45,14,Unknown
+2015-11-26,2015,Reg,RS,Philadelphia Eagles,Detroit Lions,A,14,45,Unknown
+2015-11-26,2015,Reg,RS,Carolina Panthers,Dallas Cowboys,A,33,14,Unknown
+2015-11-26,2015,Reg,RS,Dallas Cowboys,Carolina Panthers,H,14,33,Unknown
+2015-11-26,2015,Reg,RS,Chicago Bears,Green Bay Packers,A,17,13,Unknown
+2015-11-26,2015,Reg,RS,Green Bay Packers,Chicago Bears,H,13,17,Unknown
+2015-11-29,2015,Reg,RS,Minnesota Vikings,Atlanta Falcons,A,20,10,Unknown
+2015-11-29,2015,Reg,RS,Atlanta Falcons,Minnesota Vikings,H,10,20,Unknown
+2015-11-29,2015,Reg,RS,Cincinnati Bengals,St. Louis Rams,H,31,7,Unknown
+2015-11-29,2015,Reg,RS,St. Louis Rams,Cincinnati Bengals,A,7,31,Unknown
+2015-11-29,2015,Reg,RS,Indianapolis Colts,Tampa Bay Buccaneers,H,25,12,Unknown
+2015-11-29,2015,Reg,RS,Tampa Bay Buccaneers,Indianapolis Colts,A,12,25,Unknown
+2015-11-29,2015,Reg,RS,Houston Texans,New Orleans Saints,H,24,6,Unknown
+2015-11-29,2015,Reg,RS,New Orleans Saints,Houston Texans,A,6,24,Unknown
+2015-11-29,2015,Reg,RS,New York Jets,Miami Dolphins,H,38,20,Unknown
+2015-11-29,2015,Reg,RS,Miami Dolphins,New York Jets,A,20,38,Unknown
+2015-11-29,2015,Reg,RS,Oakland Raiders,Tennessee Titans,A,24,21,Unknown
+2015-11-29,2015,Reg,RS,Tennessee Titans,Oakland Raiders,H,21,24,Unknown
+2015-11-29,2015,Reg,RS,Kansas City Chiefs,Buffalo Bills,H,30,22,Unknown
+2015-11-29,2015,Reg,RS,Buffalo Bills,Kansas City Chiefs,A,22,30,Unknown
+2015-11-29,2015,Reg,RS,San Diego Chargers,Jacksonville Jaguars,A,31,25,Unknown
+2015-11-29,2015,Reg,RS,Jacksonville Jaguars,San Diego Chargers,H,25,31,Unknown
+2015-11-29,2015,Reg,RS,Washington Redskins,New York Giants,H,20,14,Unknown
+2015-11-29,2015,Reg,RS,New York Giants,Washington Redskins,A,14,20,Unknown
+2015-11-29,2015,Reg,RS,Arizona Cardinals,San Francisco 49ers,A,19,13,Unknown
+2015-11-29,2015,Reg,RS,San Francisco 49ers,Arizona Cardinals,H,13,19,Unknown
+2015-11-29,2015,Reg,RS,Seattle Seahawks,Pittsburgh Steelers,H,39,30,Unknown
+2015-11-29,2015,Reg,RS,Pittsburgh Steelers,Seattle Seahawks,A,30,39,Unknown
+2015-11-29,2015,Reg,RS,Denver Broncos,New England Patriots,H,30,24,Unknown
+2015-11-29,2015,Reg,RS,New England Patriots,Denver Broncos,A,24,30,Unknown
+2015-11-30,2015,Reg,RS,Baltimore Ravens,Cleveland Browns,A,33,27,Unknown
+2015-11-30,2015,Reg,RS,Cleveland Browns,Baltimore Ravens,H,27,33,Unknown
+2015-12-03,2015,Reg,RS,Green Bay Packers,Detroit Lions,A,27,23,Unknown
+2015-12-03,2015,Reg,RS,Detroit Lions,Green Bay Packers,H,23,27,Unknown
+2015-12-06,2015,Reg,RS,Arizona Cardinals,St. Louis Rams,A,27,3,Unknown
+2015-12-06,2015,Reg,RS,St. Louis Rams,Arizona Cardinals,H,3,27,Unknown
+2015-12-06,2015,Reg,RS,Buffalo Bills,Houston Texans,H,30,21,Unknown
+2015-12-06,2015,Reg,RS,Houston Texans,Buffalo Bills,A,21,30,Unknown
+2015-12-06,2015,Reg,RS,San Francisco 49ers,Chicago Bears,A,26,20,Unknown
+2015-12-06,2015,Reg,RS,Chicago Bears,San Francisco 49ers,H,20,26,Unknown
+2015-12-06,2015,Reg,RS,Tennessee Titans,Jacksonville Jaguars,H,42,39,Unknown
+2015-12-06,2015,Reg,RS,Jacksonville Jaguars,Tennessee Titans,A,39,42,Unknown
+2015-12-06,2015,Reg,RS,Seattle Seahawks,Minnesota Vikings,A,38,7,Unknown
+2015-12-06,2015,Reg,RS,Minnesota Vikings,Seattle Seahawks,H,7,38,Unknown
+2015-12-06,2015,Reg,RS,Tampa Bay Buccaneers,Atlanta Falcons,H,23,19,Unknown
+2015-12-06,2015,Reg,RS,Atlanta Falcons,Tampa Bay Buccaneers,A,19,23,Unknown
+2015-12-06,2015,Reg,RS,Cincinnati Bengals,Cleveland Browns,A,37,3,Unknown
+2015-12-06,2015,Reg,RS,Cleveland Browns,Cincinnati Bengals,H,3,37,Unknown
+2015-12-06,2015,Reg,RS,Miami Dolphins,Baltimore Ravens,H,15,13,Unknown
+2015-12-06,2015,Reg,RS,Baltimore Ravens,Miami Dolphins,A,13,15,Unknown
+2015-12-06,2015,Reg,RS,New York Jets,New York Giants,A,23,20,Unknown
+2015-12-06,2015,Reg,RS,New York Giants,New York Jets,H,20,23,Unknown
+2015-12-06,2015,Reg,RS,Denver Broncos,San Diego Chargers,A,17,3,Unknown
+2015-12-06,2015,Reg,RS,San Diego Chargers,Denver Broncos,H,3,17,Unknown
+2015-12-06,2015,Reg,RS,Kansas City Chiefs,Oakland Raiders,A,34,20,Unknown
+2015-12-06,2015,Reg,RS,Oakland Raiders,Kansas City Chiefs,H,20,34,Unknown
+2015-12-06,2015,Reg,RS,Carolina Panthers,New Orleans Saints,A,41,38,Unknown
+2015-12-06,2015,Reg,RS,New Orleans Saints,Carolina Panthers,H,38,41,Unknown
+2015-12-06,2015,Reg,RS,Philadelphia Eagles,New England Patriots,A,35,28,Unknown
+2015-12-06,2015,Reg,RS,New England Patriots,Philadelphia Eagles,H,28,35,Unknown
+2015-12-06,2015,Reg,RS,Pittsburgh Steelers,Indianapolis Colts,H,45,10,Unknown
+2015-12-06,2015,Reg,RS,Indianapolis Colts,Pittsburgh Steelers,A,10,45,Unknown
+2015-12-07,2015,Reg,RS,Dallas Cowboys,Washington Redskins,A,19,16,Unknown
+2015-12-07,2015,Reg,RS,Washington Redskins,Dallas Cowboys,H,16,19,Unknown
+2015-12-10,2015,Reg,RS,Arizona Cardinals,Minnesota Vikings,H,23,20,Unknown
+2015-12-10,2015,Reg,RS,Minnesota Vikings,Arizona Cardinals,A,20,23,Unknown
+2015-12-13,2015,Reg,RS,Philadelphia Eagles,Buffalo Bills,H,23,20,Unknown
+2015-12-13,2015,Reg,RS,Buffalo Bills,Philadelphia Eagles,A,20,23,Unknown
+2015-12-13,2015,Reg,RS,Washington Redskins,Chicago Bears,A,24,21,Unknown
+2015-12-13,2015,Reg,RS,Chicago Bears,Washington Redskins,H,21,24,Unknown
+2015-12-13,2015,Reg,RS,Pittsburgh Steelers,Cincinnati Bengals,A,33,20,Unknown
+2015-12-13,2015,Reg,RS,Cincinnati Bengals,Pittsburgh Steelers,H,20,33,Unknown
+2015-12-13,2015,Reg,RS,Cleveland Browns,San Francisco 49ers,H,24,10,Unknown
+2015-12-13,2015,Reg,RS,San Francisco 49ers,Cleveland Browns,A,10,24,Unknown
+2015-12-13,2015,Reg,RS,Jacksonville Jaguars,Indianapolis Colts,H,51,16,Unknown
+2015-12-13,2015,Reg,RS,Indianapolis Colts,Jacksonville Jaguars,A,16,51,Unknown
+2015-12-13,2015,Reg,RS,St. Louis Rams,Detroit Lions,H,21,14,Unknown
+2015-12-13,2015,Reg,RS,Detroit Lions,St. Louis Rams,A,14,21,Unknown
+2015-12-13,2015,Reg,RS,New Orleans Saints,Tampa Bay Buccaneers,A,24,17,Unknown
+2015-12-13,2015,Reg,RS,Tampa Bay Buccaneers,New Orleans Saints,H,17,24,Unknown
+2015-12-13,2015,Reg,RS,New York Jets,Tennessee Titans,H,30,8,Unknown
+2015-12-13,2015,Reg,RS,Tennessee Titans,New York Jets,A,8,30,Unknown
+2015-12-13,2015,Reg,RS,Seattle Seahawks,Baltimore Ravens,A,35,6,Unknown
+2015-12-13,2015,Reg,RS,Baltimore Ravens,Seattle Seahawks,H,6,35,Unknown
+2015-12-13,2015,Reg,RS,Carolina Panthers,Atlanta Falcons,H,38,0,Unknown
+2015-12-13,2015,Reg,RS,Atlanta Falcons,Carolina Panthers,A,0,38,Unknown
+2015-12-13,2015,Reg,RS,Kansas City Chiefs,San Diego Chargers,H,10,3,Unknown
+2015-12-13,2015,Reg,RS,San Diego Chargers,Kansas City Chiefs,A,3,10,Unknown
+2015-12-13,2015,Reg,RS,Oakland Raiders,Denver Broncos,A,15,12,Unknown
+2015-12-13,2015,Reg,RS,Denver Broncos,Oakland Raiders,H,12,15,Unknown
+2015-12-13,2015,Reg,RS,Green Bay Packers,Dallas Cowboys,H,28,7,Unknown
+2015-12-13,2015,Reg,RS,Dallas Cowboys,Green Bay Packers,A,7,28,Unknown
+2015-12-13,2015,Reg,RS,New England Patriots,Houston Texans,A,27,6,Unknown
+2015-12-13,2015,Reg,RS,Houston Texans,New England Patriots,H,6,27,Unknown
+2015-12-14,2015,Reg,RS,New York Giants,Miami Dolphins,A,31,24,Unknown
+2015-12-14,2015,Reg,RS,Miami Dolphins,New York Giants,H,24,31,Unknown
+2015-12-17,2015,Reg,RS,St. Louis Rams,Tampa Bay Buccaneers,H,31,23,Unknown
+2015-12-17,2015,Reg,RS,Tampa Bay Buccaneers,St. Louis Rams,A,23,31,Unknown
+2015-12-19,2015,Reg,RS,New York Jets,Dallas Cowboys,A,19,16,Unknown
+2015-12-19,2015,Reg,RS,Dallas Cowboys,New York Jets,H,16,19,Unknown
+2015-12-20,2015,Reg,RS,Atlanta Falcons,Jacksonville Jaguars,A,23,17,Unknown
+2015-12-20,2015,Reg,RS,Jacksonville Jaguars,Atlanta Falcons,H,17,23,Unknown
+2015-12-20,2015,Reg,RS,Carolina Panthers,New York Giants,A,38,35,Unknown
+2015-12-20,2015,Reg,RS,New York Giants,Carolina Panthers,H,35,38,Unknown
+2015-12-20,2015,Reg,RS,Minnesota Vikings,Chicago Bears,H,38,17,Unknown
+2015-12-20,2015,Reg,RS,Chicago Bears,Minnesota Vikings,A,17,38,Unknown
+2015-12-20,2015,Reg,RS,Houston Texans,Indianapolis Colts,A,16,10,Unknown
+2015-12-20,2015,Reg,RS,Indianapolis Colts,Houston Texans,H,10,16,Unknown
+2015-12-20,2015,Reg,RS,Kansas City Chiefs,Baltimore Ravens,A,34,14,Unknown
+2015-12-20,2015,Reg,RS,Baltimore Ravens,Kansas City Chiefs,H,14,34,Unknown
+2015-12-20,2015,Reg,RS,New England Patriots,Tennessee Titans,H,33,16,Unknown
+2015-12-20,2015,Reg,RS,Tennessee Titans,New England Patriots,A,16,33,Unknown
+2015-12-20,2015,Reg,RS,Washington Redskins,Buffalo Bills,H,35,25,Unknown
+2015-12-20,2015,Reg,RS,Buffalo Bills,Washington Redskins,A,25,35,Unknown
+2015-12-20,2015,Reg,RS,Green Bay Packers,Oakland Raiders,A,30,20,Unknown
+2015-12-20,2015,Reg,RS,Oakland Raiders,Green Bay Packers,H,20,30,Unknown
+2015-12-20,2015,Reg,RS,Seattle Seahawks,Cleveland Browns,H,30,13,Unknown
+2015-12-20,2015,Reg,RS,Cleveland Browns,Seattle Seahawks,A,13,30,Unknown
+2015-12-20,2015,Reg,RS,Cincinnati Bengals,San Francisco 49ers,A,24,14,Unknown
+2015-12-20,2015,Reg,RS,San Francisco 49ers,Cincinnati Bengals,H,14,24,Unknown
+2015-12-20,2015,Reg,RS,Pittsburgh Steelers,Denver Broncos,H,34,27,Unknown
+2015-12-20,2015,Reg,RS,Denver Broncos,Pittsburgh Steelers,A,27,34,Unknown
+2015-12-20,2015,Reg,RS,San Diego Chargers,Miami Dolphins,H,30,14,Unknown
+2015-12-20,2015,Reg,RS,Miami Dolphins,San Diego Chargers,A,14,30,Unknown
+2015-12-20,2015,Reg,RS,Arizona Cardinals,Philadelphia Eagles,A,40,17,Unknown
+2015-12-20,2015,Reg,RS,Philadelphia Eagles,Arizona Cardinals,H,17,40,Unknown
+2015-12-21,2015,Reg,RS,Detroit Lions,New Orleans Saints,A,35,27,Unknown
+2015-12-21,2015,Reg,RS,New Orleans Saints,Detroit Lions,H,27,35,Unknown
+2015-12-24,2015,Reg,RS,Oakland Raiders,San Diego Chargers,H,23,20,Unknown
+2015-12-24,2015,Reg,RS,San Diego Chargers,Oakland Raiders,A,20,23,Unknown
+2015-12-26,2015,Reg,RS,Washington Redskins,Philadelphia Eagles,A,38,24,Unknown
+2015-12-26,2015,Reg,RS,Philadelphia Eagles,Washington Redskins,H,24,38,Unknown
+2015-12-27,2015,Reg,RS,Atlanta Falcons,Carolina Panthers,H,20,13,Unknown
+2015-12-27,2015,Reg,RS,Carolina Panthers,Atlanta Falcons,A,13,20,Unknown
+2015-12-27,2015,Reg,RS,Buffalo Bills,Dallas Cowboys,H,16,6,Unknown
+2015-12-27,2015,Reg,RS,Dallas Cowboys,Buffalo Bills,A,6,16,Unknown
+2015-12-27,2015,Reg,RS,Indianapolis Colts,Miami Dolphins,A,18,12,Unknown
+2015-12-27,2015,Reg,RS,Miami Dolphins,Indianapolis Colts,H,12,18,Unknown
+2015-12-27,2015,Reg,RS,Houston Texans,Tennessee Titans,A,34,6,Unknown
+2015-12-27,2015,Reg,RS,Tennessee Titans,Houston Texans,H,6,34,Unknown
+2015-12-27,2015,Reg,RS,New York Jets,New England Patriots,H,26,20,Unknown
+2015-12-27,2015,Reg,RS,New England Patriots,New York Jets,A,20,26,Unknown
+2015-12-27,2015,Reg,RS,Baltimore Ravens,Pittsburgh Steelers,H,20,17,Unknown
+2015-12-27,2015,Reg,RS,Pittsburgh Steelers,Baltimore Ravens,A,17,20,Unknown
+2015-12-27,2015,Reg,RS,Chicago Bears,Tampa Bay Buccaneers,A,26,21,Unknown
+2015-12-27,2015,Reg,RS,Tampa Bay Buccaneers,Chicago Bears,H,21,26,Unknown
+2015-12-27,2015,Reg,RS,Kansas City Chiefs,Cleveland Browns,H,17,13,Unknown
+2015-12-27,2015,Reg,RS,Cleveland Browns,Kansas City Chiefs,A,13,17,Unknown
+2015-12-27,2015,Reg,RS,Detroit Lions,San Francisco 49ers,H,32,17,Unknown
+2015-12-27,2015,Reg,RS,San Francisco 49ers,Detroit Lions,A,17,32,Unknown
+2015-12-27,2015,Reg,RS,New Orleans Saints,Jacksonville Jaguars,H,38,27,Unknown
+2015-12-27,2015,Reg,RS,Jacksonville Jaguars,New Orleans Saints,A,27,38,Unknown
+2015-12-27,2015,Reg,RS,Arizona Cardinals,Green Bay Packers,H,38,8,Unknown
+2015-12-27,2015,Reg,RS,Green Bay Packers,Arizona Cardinals,A,8,38,Unknown
+2015-12-27,2015,Reg,RS,St. Louis Rams,Seattle Seahawks,A,23,17,Unknown
+2015-12-27,2015,Reg,RS,Seattle Seahawks,St. Louis Rams,H,17,23,Unknown
+2015-12-27,2015,Reg,RS,Minnesota Vikings,New York Giants,H,49,17,Unknown
+2015-12-27,2015,Reg,RS,New York Giants,Minnesota Vikings,A,17,49,Unknown
+2015-12-28,2015,Reg,RS,Denver Broncos,Cincinnati Bengals,H,20,17,Unknown
+2015-12-28,2015,Reg,RS,Cincinnati Bengals,Denver Broncos,A,17,20,Unknown
+2016-01-03,2015,Reg,RS,New Orleans Saints,Atlanta Falcons,A,20,17,Unknown
+2016-01-03,2015,Reg,RS,Atlanta Falcons,New Orleans Saints,H,17,20,Unknown
+2016-01-03,2015,Reg,RS,Buffalo Bills,New York Jets,H,22,17,Unknown
+2016-01-03,2015,Reg,RS,New York Jets,Buffalo Bills,A,17,22,Unknown
+2016-01-03,2015,Reg,RS,Detroit Lions,Chicago Bears,A,24,20,Unknown
+2016-01-03,2015,Reg,RS,Chicago Bears,Detroit Lions,H,20,24,Unknown
+2016-01-03,2015,Reg,RS,Cincinnati Bengals,Baltimore Ravens,H,24,16,Unknown
+2016-01-03,2015,Reg,RS,Baltimore Ravens,Cincinnati Bengals,A,16,24,Unknown
+2016-01-03,2015,Reg,RS,Pittsburgh Steelers,Cleveland Browns,A,28,12,Unknown
+2016-01-03,2015,Reg,RS,Cleveland Browns,Pittsburgh Steelers,H,12,28,Unknown
+2016-01-03,2015,Reg,RS,Indianapolis Colts,Tennessee Titans,H,30,24,Unknown
+2016-01-03,2015,Reg,RS,Tennessee Titans,Indianapolis Colts,A,24,30,Unknown
+2016-01-03,2015,Reg,RS,Houston Texans,Jacksonville Jaguars,H,30,6,Unknown
+2016-01-03,2015,Reg,RS,Jacksonville Jaguars,Houston Texans,A,6,30,Unknown
+2016-01-03,2015,Reg,RS,Miami Dolphins,New England Patriots,H,20,10,Unknown
+2016-01-03,2015,Reg,RS,New England Patriots,Miami Dolphins,A,10,20,Unknown
+2016-01-03,2015,Reg,RS,Washington Redskins,Dallas Cowboys,A,34,23,Unknown
+2016-01-03,2015,Reg,RS,Dallas Cowboys,Washington Redskins,H,23,34,Unknown
+2016-01-03,2015,Reg,RS,Philadelphia Eagles,New York Giants,A,35,30,Unknown
+2016-01-03,2015,Reg,RS,New York Giants,Philadelphia Eagles,H,30,35,Unknown
+2016-01-03,2015,Reg,RS,Carolina Panthers,Tampa Bay Buccaneers,H,38,10,Unknown
+2016-01-03,2015,Reg,RS,Tampa Bay Buccaneers,Carolina Panthers,A,10,38,Unknown
+2016-01-03,2015,Reg,RS,Seattle Seahawks,Arizona Cardinals,A,36,6,Unknown
+2016-01-03,2015,Reg,RS,Arizona Cardinals,Seattle Seahawks,H,6,36,Unknown
+2016-01-03,2015,Reg,RS,Denver Broncos,San Diego Chargers,H,27,20,Unknown
+2016-01-03,2015,Reg,RS,San Diego Chargers,Denver Broncos,A,20,27,Unknown
+2016-01-03,2015,Reg,RS,San Francisco 49ers,St. Louis Rams,H,19,16,Unknown
+2016-01-03,2015,Reg,RS,St. Louis Rams,San Francisco 49ers,A,16,19,Unknown
+2016-01-03,2015,Reg,RS,Kansas City Chiefs,Oakland Raiders,H,23,17,Unknown
+2016-01-03,2015,Reg,RS,Oakland Raiders,Kansas City Chiefs,A,17,23,Unknown
+2016-01-03,2015,Reg,RS,Minnesota Vikings,Green Bay Packers,A,20,13,Unknown
+2016-01-03,2015,Reg,RS,Green Bay Packers,Minnesota Vikings,H,13,20,Unknown
+2016-01-09,2015,Playoff,1,Kansas City Chiefs,Houston Texans,A,30,0,Unknown
+2016-01-09,2015,Playoff,1,Houston Texans,Kansas City Chiefs,H,0,30,Unknown
+2016-01-09,2015,Playoff,1,Pittsburgh Steelers,Cincinnati Bengals,A,18,16,Unknown
+2016-01-09,2015,Playoff,1,Cincinnati Bengals,Pittsburgh Steelers,H,16,18,Unknown
+2016-01-10,2015,Playoff,1,Seattle Seahawks,Minnesota Vikings,A,10,9,Unknown
+2016-01-10,2015,Playoff,1,Minnesota Vikings,Seattle Seahawks,H,9,10,Unknown
+2016-01-10,2015,Playoff,1,Green Bay Packers,Washington Redskins,A,35,18,Unknown
+2016-01-10,2015,Playoff,1,Washington Redskins,Green Bay Packers,H,18,35,Unknown
+2016-01-16,2015,Playoff,2,New England Patriots,Kansas City Chiefs,H,27,20,Unknown
+2016-01-16,2015,Playoff,2,Kansas City Chiefs,New England Patriots,A,20,27,Unknown
+2016-01-16,2015,Playoff,2,Arizona Cardinals,Green Bay Packers,H,26,20,Unknown
+2016-01-16,2015,Playoff,2,Green Bay Packers,Arizona Cardinals,A,20,26,Unknown
+2016-01-17,2015,Playoff,2,Carolina Panthers,Seattle Seahawks,H,31,24,Unknown
+2016-01-17,2015,Playoff,2,Seattle Seahawks,Carolina Panthers,A,24,31,Unknown
+2016-01-17,2015,Playoff,2,Denver Broncos,Pittsburgh Steelers,H,23,16,Unknown
+2016-01-17,2015,Playoff,2,Pittsburgh Steelers,Denver Broncos,A,16,23,Unknown
+2016-01-24,2015,Playoff,3,Denver Broncos,New England Patriots,H,20,18,Unknown
+2016-01-24,2015,Playoff,3,New England Patriots,Denver Broncos,A,18,20,Unknown
+2016-01-24,2015,Playoff,3,Carolina Panthers,Arizona Cardinals,H,49,15,Unknown
+2016-01-24,2015,Playoff,3,Arizona Cardinals,Carolina Panthers,A,15,49,Unknown
+2016-02-07,2015,Playoff,4,Denver Broncos,Carolina Panthers,N,24,10,Unknown
+2016-02-07,2015,Playoff,4,Carolina Panthers,Denver Broncos,N,10,24,Unknown
