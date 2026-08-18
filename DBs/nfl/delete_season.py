@@ -15,7 +15,7 @@ import argparse
 import db
 from rebuild import rebuild_ratings, VARIANTS
 
-DB_PATH = "wnba_elo.db"
+DB_PATH = "nfl_elo.db"
 
 
 def preview(conn, seasons):
