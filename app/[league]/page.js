@@ -31,6 +31,7 @@ import StandingsTab from "./StandingsTab";
 import GamesPanel from "./GamesPanel";
 import BracketTab from "./BracketTab";
 import OverallBracketTab from "./OverallBracketTab";
+import NflBracketTab from "./NflBracketTab";
 import Footer from "@/components/Footer";
 
 const TABS = [
@@ -438,6 +439,10 @@ export default function LeaguePage() {
           {leagueConfig.playoffFormat?.type === "conference-bracket" ? (
             <div style={{ overflowX: "auto" }}>
               <BracketTab poGames={poGames} standings={standings} leagueConfig={leagueConfig} season={season} />
+            </div>
+          ) : leagueConfig.playoffFormat?.type === "conference-bracket-bye" ? (
+            <div style={{ overflowX: "auto" }}>
+              <NflBracketTab poGames={poGames} standings={standings} leagueConfig={leagueConfig} season={season} />
             </div>
           ) : leagueConfig.playoffFormat?.type === "overall-bracket" ? (
             <div style={{ overflowX: "auto" }}>
