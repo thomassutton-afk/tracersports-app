@@ -25,6 +25,7 @@
  */
 
 import TeamMark from "./TeamMark";
+import { displayAbbr } from "../../lib/logoFilenameOverrides";
 
 const mono = "var(--font-mono)";
 const serif = "var(--font-display)";
@@ -79,15 +80,62 @@ export default function NflBracketTab({ poGames, standings, leagueConfig, season
   const conferences = leagueConfig.conferences || [];
   const [confA, confB] = conferences; // e.g. ['AFC', 'NFC']
 
-  const teamsIn = (confName) => standings.filter((t) => teams[t.team_id]?.conf === confName).sort(standingsSort);
-  const aSeeded = teamsIn(confA);
-  const bSeeded = teamsIn(confB);
-  const seedMap = {};
-  aSeeded.forEach((t, i) => { seedMap[t.team_id] = i + 1; });
-  bSeeded.forEach((t, i) => { seedMap[t.team_id] = i + 1; });
-
   const matches = buildMatches(poGames);
   const isConf = (confName) => (m) => teams[m.t1]?.conf === confName && teams[m.t2]?.conf === confName;
+
+  // Seed NUMBERS (the "#" badge) follow real NFL rules: the 4 division
+  // winners get seeds 1-4 (ranked among themselves by record), then the
+  // best 3 remaining teams get seeds 5-7 as wildcards — this is NOT the
+  // same as "top 7 teams by win%" (a division winner can have a worse
+  // overall record than a non-division-winner and still outrank them).
+  //
+  // Who actually MADE the playoffs, though, is read from the real games
+  // themselves (poGames) rather than re-derived from win/loss alone —
+  // ties within a division come down to real tiebreakers (head-to-head,
+  // division record, etc.) this component doesn't have access to, so
+  // trying to independently recompute the field risked seeding a team
+  // that didn't actually make it (exactly what happened before this
+  // fix: naive win%-sort put Detroit in over Carolina, who's the real
+  // division winner in this data). Using real participants as ground
+  // truth for WHO, and standings only for the ORDER among them, can't
+  // produce that failure mode.
+  function computeSeeds(confName) {
+    const confTeams = standings.filter((t) => teams[t.team_id]?.conf === confName);
+    const realParticipants = new Set();
+    const wcParticipants = new Set();
+    for (const m of matches) {
+      if (!isConf(confName)(m)) continue;
+      if (["WC", "DV", "CC", "SB"].includes(m.round)) { realParticipants.add(m.t1); realParticipants.add(m.t2); }
+      if (m.round === "WC") { wcParticipants.add(m.t1); wcParticipants.add(m.t2); }
+    }
+    const played = confTeams.filter((t) => realParticipants.has(t.team_id));
+    // The real bye team is ground truth, not a tiebreak guess: only the
+    // true #1 seed skips Wild Card weekend, so whichever real
+    // participant never appears in a WC game for this conference IS
+    // seed 1 — this matters when two division winners are tied on
+    // record (e.g. both 14-3), since win%/wins alone can't break that
+    // tie correctly without real NFL tiebreaker data (head-to-head,
+    // division record, etc.) this component doesn't have.
+    const byeTeam = played.find((t) => !wcParticipants.has(t.team_id));
+
+    const byDiv = {};
+    for (const t of played) {
+      const div = teams[t.team_id]?.div;
+      (byDiv[div] ||= []).push(t);
+    }
+    const winners = Object.values(byDiv).map((list) => [...list].sort(standingsSort)[0]);
+    const winnerIds = new Set(winners.map((w) => w.team_id));
+    const wildcards = played.filter((t) => !winnerIds.has(t.team_id)).sort(standingsSort);
+
+    const restOfWinners = winners.filter((w) => w.team_id !== byeTeam?.team_id).sort(standingsSort);
+    const orderedWinners = byeTeam ? [byeTeam, ...restOfWinners] : winners.sort(standingsSort);
+    return orderedWinners.concat(wildcards).slice(0, 7);
+  }
+
+  const seedMap = {};
+  computeSeeds(confA).forEach((t, i) => { seedMap[t.team_id] = i + 1; });
+  computeSeeds(confB).forEach((t, i) => { seedMap[t.team_id] = i + 1; });
+
   const minSeed = (m) => Math.min(seedMap[m.t1] ?? 99, seedMap[m.t2] ?? 99);
   const byRound = (rnd, pred) => matches.filter((m) => m.round === rnd && pred(m)).sort((x, y) => minSeed(x) - minSeed(y));
 
@@ -109,18 +157,28 @@ export default function NflBracketTab({ poGames, standings, leagueConfig, season
   const CARD_GAP = 10;
   const WC_H = CARD_H * 3 + CARD_GAP * 2;
 
-  // Divisional cards center over whichever Wild Card game(s) feed them.
-  // Since the #1 seed's bye means Divisional isn't a clean "pair adjacent
-  // WC games" reduction the way NBA's R1->R2 is, each DV card is instead
-  // positioned by its own minimum seed's rank among the conference's DV
-  // games — the lower-seeded matchup (i.e. the one the #1 seed is in)
-  // renders first/top, same ordering rule used for every round here.
-  const DV_GAP = 28;
-  const dvTop = (i) => i * (CARD_H + DV_GAP);
-  const DV_H = aDV.length ? dvTop(aDV.length - 1) + CARD_H : CARD_H;
+  // Divisional cards spread across the FULL Wild Card column height,
+  // matching how NBA's Round 2 cards fill their column edge-to-edge
+  // rather than clustering — first card top-aligned, second bottom-
+  // aligned, matching the same "fill available height" convention
+  // BracketTab.jsx uses (see its r2Top formula), even though NFL's
+  // bye means there isn't a clean "2 WC games merge into 1 DV game"
+  // pairing to center against the way NBA's R1->R2 has.
+  const dvTop = (i) => (aDV.length > 1 ? i * (WC_H - CARD_H) : (WC_H - CARD_H) / 2);
 
   const ccTop = (WC_H - CARD_H) / 2;
-  const BRACKET_H = Math.max(WC_H, CARD_H);
+
+  // The Super Bowl card sits BELOW the Conference Championship row,
+  // not vertically centered in the whole bracket the way ccTop is —
+  // matching NBA's actual finals-card placement (BracketTab.jsx's
+  // `cfBottomEdge + 20`, i.e. below Conf Finals, not centered in
+  // Round 1's full height). Centering it instead (this component's
+  // original approach) left the champion banner and the score card
+  // competing for the same vertical space near the middle, which is
+  // exactly why they visibly overlapped — this frees the whole upper
+  // portion of the column for the banner instead.
+  const sbTop = ccTop + CARD_H + 20;
+  const BRACKET_H = WC_H;
 
   const CW = { wc: 152, dv: 152, cc: 152, sb: 202 };
 
@@ -151,7 +209,7 @@ export default function NflBracketTab({ poGames, standings, leagueConfig, season
             background: "transparent", letterSpacing: 0.3,
           }}
         >
-          {abbr}
+          {displayAbbr(abbr)}
         </div>
         <div style={{ flex: 1 }} />
         {score != null && (
@@ -198,7 +256,7 @@ export default function NflBracketTab({ poGames, standings, leagueConfig, season
       </div>,
       <div key="dv" style={{ width: CW.dv, flexShrink: 0, height: BRACKET_H, position: "relative" }}>
         {[0, 1].map((i) => (
-          <div key={i} style={{ position: "absolute", top: dvTop(i) + (BRACKET_H - DV_H) / 2, left: 0, right: 0 }}>
+          <div key={i} style={{ position: "absolute", top: dvTop(i), left: 0, right: 0 }}>
             <MatchCard m={dv[i] || null} w={CW.dv} />
           </div>
         ))}
@@ -218,7 +276,7 @@ export default function NflBracketTab({ poGames, standings, leagueConfig, season
           </span>
           <div style={{ flex: 1, height: 1, background: `${confColor}30` }} />
         </div>
-        <div style={{ display: "flex", alignItems: "flex-start", gap: 6, flexDirection: mirror ? "row-reverse" : "row" }}>
+        <div style={{ display: "flex", alignItems: "flex-start", gap: 6 }}>
           {mirror ? [...cols].reverse() : cols}
         </div>
       </div>
@@ -247,7 +305,7 @@ export default function NflBracketTab({ poGames, standings, leagueConfig, season
         <div style={{ display: "flex", gap: 6, alignItems: "flex-start", position: "relative" }}>
           <ConfBracket wc={aWC} dv={aDV} cc={aCC} confColor="rgba(191,45,45,0.9)" confName={confA} mirror={false} />
 
-          <div style={{ flexShrink: 0, width: CW.sb, alignSelf: "stretch", position: "relative", minHeight: BRACKET_H }}>
+          <div style={{ flexShrink: 0, width: CW.sb, alignSelf: "stretch", position: "relative", minHeight: Math.max(BRACKET_H, sbTop + CARD_H) }}>
             {champion && (
               <div style={{ position: "absolute", top: 0, left: 0, right: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-start", gap: 8 }}>
                 <TeamMark team={teams[champion]} teamId={champion} league={leagueConfig.id} size={64} />
@@ -261,7 +319,7 @@ export default function NflBracketTab({ poGames, standings, leagueConfig, season
                 </div>
               </div>
             )}
-            <div style={{ position: "absolute", top: ccTop, left: 0, right: 0 }}>
+            <div style={{ position: "absolute", top: sbTop, left: 0, right: 0 }}>
               <MatchCard m={sb || null} w={CW.sb} />
             </div>
           </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { logoFileName } from "../../lib/logoFilenameOverrides";
+import { logoFileName, displayAbbr } from "../../lib/logoFilenameOverrides";
 
 /**
  * TeamMark — league-agnostic replacement for the old single-league
@@ -20,7 +20,7 @@ import { logoFileName } from "../../lib/logoFilenameOverrides";
 export default function TeamMark({ team, teamId, league, size = 28 }) {
   const [errored, setErrored] = useState(false);
   const color = team.primary || "#663399";
-  const abbr = teamId || team.abbr || team.id || (team.nickname ? team.nickname.slice(0, 3).toUpperCase() : "??");
+  const abbr = displayAbbr(teamId || team.abbr || team.id || (team.nickname ? team.nickname.slice(0, 3).toUpperCase() : "??"));
   const canLoadImage = !!(teamId && league);
   const fileName = logoFileName(teamId);
 

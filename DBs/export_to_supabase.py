@@ -253,7 +253,7 @@ GAMES_COLUMNS = [
     "opp_days_off", "rest_diff", "rest_adj", "pre_gm_rate", "opp_pre_gm_rate",
     "expected_win_pct", "mov", "result", "accuracy", "brier", "mov_mult",
     "games_played", "k", "po_mult", "k_eff", "rating_change", "post_gm_rate",
-    "w", "l", "r1w", "r1l", "r2w", "r2l", "r3w", "r3l", "fw", "fl",
+    "w", "l", "t", "r1w", "r1l", "r2w", "r2l", "r3w", "r3l", "fw", "fl",
 ]
 
 
@@ -264,7 +264,7 @@ def build_games(conn, league, id_to_code, variant):
         "round, games_played, days_off, opp_days_off, rest_adj, pre_rate, "
         "opp_pre_rate, expected_win, points_for, points_against, ot, mov, "
         "result, accuracy, brier, mov_mult, po_mult, k, keff, "
-        "rating_change, post_rate, w, l, r1w, r1l, r2w, r2l, r3w, r3l, fw, fl "
+        "rating_change, post_rate, w, l, t, r1w, r1l, r2w, r2l, r3w, r3l, fw, fl "
         "FROM ratings WHERE variant = ?", (variant,)
     )
     cols = [d[0] for d in cur.description]
@@ -312,6 +312,7 @@ def build_games(conn, league, id_to_code, variant):
                 "post_gm_rate": r["post_rate"],
                 "w": r["w"],
                 "l": r["l"],
+                "t": r["t"],
                 "r1w": r["r1w"], "r1l": r["r1l"],
                 "r2w": r["r2w"], "r2l": r["r2l"],
                 "r3w": r["r3w"], "r3l": r["r3l"],

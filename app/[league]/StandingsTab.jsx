@@ -24,9 +24,15 @@ import { useState } from "react";
 import TeamMark from "./TeamMark";
 import tiebreakerOverrides from "@/lib/sports/tiebreakerOverrides.json";
 
+// Standard win% formula: a tie counts as half a win and half a loss,
+// not zero games — omitting ties entirely (as if they never happened)
+// understates games played and skews the percentage. Leagues that
+// never have ties (t always 0/undefined) get the exact same result
+// either way, so this is safe for all leagues, not NFL-specific.
 function winPct(t) {
-  const gp = t.w + t.l;
-  return gp === 0 ? 0 : t.w / gp;
+  const ties = t.t ?? 0;
+  const gp = t.w + t.l + ties;
+  return gp === 0 ? 0 : (t.w + ties * 0.5) / gp;
 }
 
 /**
@@ -297,6 +303,9 @@ export default function StandingsTab({ leagueConfig, standings, games = [], seas
         </td>
         <td style={{ padding: "0 8px", fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: 600, textAlign: "right" }}>{t.w}</td>
         <td style={{ padding: "0 8px", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text2)", textAlign: "right" }}>{t.l}</td>
+        {leagueConfig.hasTies && (
+          <td style={{ padding: "0 8px", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text2)", textAlign: "right" }}>{t.t ?? 0}</td>
+        )}
         <td style={{ padding: "0 8px", fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text2)", textAlign: "right" }}>
           {(winPct(t) * 100).toFixed(1)}%
         </td>
@@ -317,7 +326,7 @@ export default function StandingsTab({ leagueConfig, standings, games = [], seas
   function GroupSep({ label, color }) {
     return (
       <tr>
-        <td colSpan={5} style={{ padding: 0 }}>
+        <td colSpan={colCount} style={{ padding: 0 }}>
           <div
             style={{
               display: "flex",
@@ -339,10 +348,13 @@ export default function StandingsTab({ leagueConfig, standings, games = [], seas
     );
   }
 
+  const columnLabels = leagueConfig.hasTies ? ["#", "Team", "W", "L", "T", "Pct", "Rating"] : ["#", "Team", "W", "L", "Pct", "Rating"];
+  const colCount = columnLabels.length;
+
   const tableHead = () => (
     <thead>
       <tr>
-        {["#", "Team", "W", "L", "Pct", "Rating"].map((label, i) => (
+        {columnLabels.map((label, i) => (
           <th
             key={label}
             style={{

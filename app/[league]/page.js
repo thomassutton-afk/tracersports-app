@@ -60,7 +60,7 @@ async function fetchStandings(league, season, variant) {
       // NBA-style tiebreaker criteria (head-to-head, division/conference
       // record, point differential) client-side, matching the same logic
       // DBs/tiebreakers.py already runs at export time.
-      .select("team_id, date, post_gm_rate, rating_change, w, l, opponent_id, home_away, points_for, points_against, type")
+      .select("team_id, date, post_gm_rate, rating_change, w, l, t, opponent_id, home_away, points_for, points_against, type")
       .eq("league", league)
       .eq("season", season)
       .eq("variant", variant)
@@ -79,9 +79,10 @@ async function fetchStandings(league, season, variant) {
 
   const byTeam = {};
   for (const row of allRows) {
-    const t = (byTeam[row.team_id] ??= { team_id: row.team_id, w: 0, l: 0, rating: null, change: null });
+    const t = (byTeam[row.team_id] ??= { team_id: row.team_id, w: 0, l: 0, t: 0, rating: null, change: null });
     t.w += row.w ?? 0;
     t.l += row.l ?? 0;
+    t.t += row.t ?? 0;
     // rows are date-ascending, so the last one we see is the latest
     t.rating = row.post_gm_rate;
     t.change = row.rating_change;
@@ -217,9 +218,12 @@ export default function LeaguePage() {
     Promise.all([
       fetchStandings(league, season, variant),
       fetchProjection(league, season, variant),
-      // Only conference-bracket leagues (NBA) need actual playoff game rows
-      // right now — OverallBracketTab (WNBA) projects off standings alone.
-      leagueConfig.playoffFormat?.type === "conference-bracket"
+      // Only conference-bracket-shaped leagues need actual playoff game
+      // rows right now — OverallBracketTab (WNBA) projects off standings
+      // alone. Covers both conference-bracket (NBA) and
+      // conference-bracket-bye (NFL) — same underlying data shape
+      // (poGames), just rendered by a different component.
+      ["conference-bracket", "conference-bracket-bye"].includes(leagueConfig.playoffFormat?.type)
         ? fetchPlayoffGames(league, season, variant)
         : Promise.resolve({ poGames: [], error: null }),
     ]).then(([standingsResult, projResult, poResult]) => {
