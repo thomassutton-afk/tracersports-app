@@ -446,7 +446,7 @@ export default function LeaguePage() {
             </div>
           ) : leagueConfig.playoffFormat?.type === "conference-bracket-bye" ? (
             <div style={{ overflowX: "auto" }}>
-              <NflBracketTab poGames={poGames} standings={standings} leagueConfig={leagueConfig} season={season} />
+              <NflBracketTab poGames={poGames} standings={standings} games={standingsGames} leagueConfig={leagueConfig} season={season} variant={variant} />
             </div>
           ) : leagueConfig.playoffFormat?.type === "overall-bracket" ? (
             <div style={{ overflowX: "auto" }}>

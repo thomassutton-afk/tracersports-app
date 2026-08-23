@@ -26,6 +26,8 @@
 
 import TeamMark from "./TeamMark";
 import { displayAbbr } from "../../lib/logoFilenameOverrides";
+import { rankTeams, buildContext } from "../../lib/tiebreakers";
+import tiebreakerOverrides from "../../lib/sports/tiebreakerOverrides.json";
 
 const mono = "var(--font-mono)";
 const serif = "var(--font-display)";
@@ -36,16 +38,6 @@ const C = {
   text2: "var(--text2)",
   text3: "var(--text3)",
 };
-
-function winPct(t) {
-  return t.w / (t.w + t.l || 1);
-}
-
-function standingsSort(a, b) {
-  const pa = winPct(a), pb = winPct(b);
-  if (Math.abs(pa - pb) > 0.0001) return pb - pa;
-  return b.w - a.w;
-}
 
 // One row per (round, team-pair) — NFL playoff games are single-elimination,
 // so unlike BracketTab.jsx's series win-tallying, a "match" here is complete
@@ -69,7 +61,7 @@ function buildMatches(poGames) {
   return Object.values(map);
 }
 
-export default function NflBracketTab({ poGames, standings, leagueConfig, season }) {
+export default function NflBracketTab({ poGames, standings, games = [], leagueConfig, season, variant }) {
   const teams = leagueConfig.teams;
   const tc = (abbr) => teams[abbr]?.primary || "#663399";
   const ts = (abbr) => teams[abbr]?.secondary || tc(abbr);
@@ -83,22 +75,29 @@ export default function NflBracketTab({ poGames, standings, leagueConfig, season
   const matches = buildMatches(poGames);
   const isConf = (confName) => (m) => teams[m.t1]?.conf === confName && teams[m.t2]?.conf === confName;
 
+  // Real tiebreaker context, shared with StandingsTab.jsx (lib/tiebreakers.js)
+  // rather than a plain win%/wins sort — used below for both picking each
+  // division's winner and ordering the non-bye winners into seeds 2-4.
+  // Wildcard order (seeds 5-7) and the #1 seed still come from ground
+  // truth (the real games), which is even more reliable than a computed
+  // tiebreaker — see the comments at those two spots below for why.
+  const ctx = buildContext(standings, games, leagueConfig, season, variant, tiebreakerOverrides);
+
   // Seed NUMBERS (the "#" badge) follow real NFL rules: the 4 division
-  // winners get seeds 1-4 (ranked among themselves by record), then the
-  // best 3 remaining teams get seeds 5-7 as wildcards — this is NOT the
-  // same as "top 7 teams by win%" (a division winner can have a worse
-  // overall record than a non-division-winner and still outrank them).
+  // winners get seeds 1-4 (ranked among themselves by real tiebreaker
+  // criteria), then the best 3 remaining teams get seeds 5-7 as
+  // wildcards — this is NOT the same as "top 7 teams by win%" (a
+  // division winner can have a worse overall record than a non-division-
+  // winner and still outrank them).
   //
   // Who actually MADE the playoffs, though, is read from the real games
   // themselves (poGames) rather than re-derived from win/loss alone —
-  // ties within a division come down to real tiebreakers (head-to-head,
-  // division record, etc.) this component doesn't have access to, so
   // trying to independently recompute the field risked seeding a team
   // that didn't actually make it (exactly what happened before this
   // fix: naive win%-sort put Detroit in over Carolina, who's the real
   // division winner in this data). Using real participants as ground
-  // truth for WHO, and standings only for the ORDER among them, can't
-  // produce that failure mode.
+  // truth for WHO, and rankTeams (real criteria) only for the ORDER
+  // among them, can't produce that failure mode.
   function computeSeeds(confName) {
     const confTeams = standings.filter((t) => teams[t.team_id]?.conf === confName);
     const realParticipants = new Set();
@@ -113,9 +112,8 @@ export default function NflBracketTab({ poGames, standings, leagueConfig, season
     // true #1 seed skips Wild Card weekend, so whichever real
     // participant never appears in a WC game for this conference IS
     // seed 1 — this matters when two division winners are tied on
-    // record (e.g. both 14-3), since win%/wins alone can't break that
-    // tie correctly without real NFL tiebreaker data (head-to-head,
-    // division record, etc.) this component doesn't have.
+    // record (e.g. both 14-3), since even the real tiebreaker criteria
+    // are worth double-checking against ground truth where it exists.
     const byeTeam = played.find((t) => !wcParticipants.has(t.team_id));
 
     const byDiv = {};
@@ -123,13 +121,59 @@ export default function NflBracketTab({ poGames, standings, leagueConfig, season
       const div = teams[t.team_id]?.div;
       (byDiv[div] ||= []).push(t);
     }
-    const winners = Object.values(byDiv).map((list) => [...list].sort(standingsSort)[0]);
+    // Division winner = whichever team ranks first among the OTHER real
+    // playoff teams sharing that division, per rankTeams' real criteria
+    // (not a plain sort — two teams within a division can themselves be
+    // tied, same failure mode as the winners-vs-winners tie below).
+    const winners = Object.values(byDiv).map((list) => {
+      const ranked = rankTeams(list.map((t) => t.team_id), ctx);
+      return list.find((t) => t.team_id === ranked[0]);
+    });
     const winnerIds = new Set(winners.map((w) => w.team_id));
-    const wildcards = played.filter((t) => !winnerIds.has(t.team_id)).sort(standingsSort);
+    const wildcards = played.filter((t) => !winnerIds.has(t.team_id));
 
-    const restOfWinners = winners.filter((w) => w.team_id !== byeTeam?.team_id).sort(standingsSort);
-    const orderedWinners = byeTeam ? [byeTeam, ...restOfWinners] : winners.sort(standingsSort);
-    return orderedWinners.concat(wildcards).slice(0, 7);
+    // Seeds 2-4 among the non-bye winners: real tiebreaker criteria, not
+    // a plain sort — this is the exact spot that silently mis-seeded
+    // Chicago/Philadelphia (both real 11-6 ties) before this fix. It
+    // happened to still display the right order by luck (arbitrary sort
+    // stability), which is exactly why ground truth alone wasn't enough
+    // here the way it was for the bye and wildcard tiers below.
+    const restOfWinnerIds = rankTeams(
+      winners.filter((w) => w.team_id !== byeTeam?.team_id).map((w) => w.team_id),
+      ctx
+    );
+    const restOfWinners = restOfWinnerIds.map((id) => winners.find((w) => w.team_id === id));
+    const orderedWinners = byeTeam ? [byeTeam, ...restOfWinners] : restOfWinners;
+
+    // Wildcard ORDER (which of the 3 gets seed 5 vs 6 vs 7) comes from
+    // the real Wild Card pairing, not a plain record sort — two
+    // wildcards tied on record (e.g. both 12-5) have no real tiebreak
+    // available from win/loss alone, and guessing produced exactly this
+    // failure mode before: Buffalo/Houston and SF/LA Rams were each a
+    // real 12-5 tie, and a plain sort put them in the wrong order
+    // relative to the real bracket. NFL Wild Card pairings are fixed
+    // (2-seed plays 7, 3-seed plays 6, 4-seed plays 5), and the real
+    // games in poGames already show who actually played whom — so a
+    // wildcard's seed is fully determined by which already-known
+    // winner (seeds 2-4) it played, no independent ranking needed.
+    const seedForWinnerRank = { 2: 7, 3: 6, 4: 5 };
+    const wcMatchesForConf = matches.filter((m) => m.round === "WC" && isConf(confName)(m));
+    const orderedWildcards = [];
+    restOfWinners.forEach((winner, i) => {
+      const winnerRank = i + 2; // restOfWinners[0] is seed 2, etc.
+      const wcGame = wcMatchesForConf.find((m) => m.t1 === winner.team_id || m.t2 === winner.team_id);
+      const oppId = wcGame ? (wcGame.t1 === winner.team_id ? wcGame.t2 : wcGame.t1) : null;
+      const opp = wildcards.find((w) => w.team_id === oppId);
+      if (opp) orderedWildcards[seedForWinnerRank[winnerRank] - 5] = opp;
+    });
+    // Any wildcard whose real WC game wasn't found (shouldn't happen in
+    // practice) falls back to record order rather than being dropped.
+    const placed = new Set(orderedWildcards.filter(Boolean).map((w) => w.team_id));
+    const leftoverIds = rankTeams(wildcards.filter((w) => !placed.has(w.team_id)).map((w) => w.team_id), ctx);
+    const leftover = leftoverIds.map((id) => wildcards.find((w) => w.team_id === id));
+    const finalWildcards = [0, 1, 2].map((i) => orderedWildcards[i] ?? leftover.shift());
+
+    return orderedWinners.concat(finalWildcards.filter(Boolean)).slice(0, 7);
   }
 
   const seedMap = {};
