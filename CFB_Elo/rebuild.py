@@ -30,6 +30,15 @@ DB-free. Until `team_conference_history` is actually populated (a
 separate, not-yet-built loading process), every lookup resolves to
 None and every game is scored as "not a conference/division game" -
 that's an expected, harmless starting state, not a bug.
+
+FBS ANNOTATION - `_annotate_conferences()` also attaches home_is_fbs/
+away_is_fbs via db.is_fbs(), for engine.py's FCS HANDLING (see its
+module docstring). Until load_conference_membership.py has been run
+for a season, every team in it looks non-FBS - unlike the conference
+annotation above, this is NOT a harmless default: it means every team
+that season gets treated as a fixed-rating FCS opponent (no persisted
+rating at all) until that catches up. load_conference_membership.py
+now triggers its own rebuild specifically because of this.
 """
 import db
 import engine
@@ -58,26 +67,36 @@ def variant_params(conn, variant: str, season: int) -> dict:
 
 
 def _annotate_conferences(conn, games: list[dict]) -> None:
-    """Attach home_conf/away_conf/home_div/away_div to every game dict,
-    IN PLACE, via db.conference_for_season() - see this module's
-    docstring. Cached per (team_id, season) within this call so a
-    program's conference isn't re-queried for every game it plays that
-    season."""
-    cache: dict[tuple[str, int], dict | None] = {}
+    """Attach home_conf/away_conf/home_div/away_div AND home_is_fbs/
+    away_is_fbs to every game dict, IN PLACE, via
+    db.conference_for_season()/db.is_fbs() - see this module's
+    docstring and engine.py's FCS HANDLING section. Cached per
+    (team_id, season) within this call so a program's conference/FBS
+    status isn't re-queried for every game it plays that season."""
+    conf_cache: dict[tuple[str, int], dict | None] = {}
+    fbs_cache: dict[tuple[str, int], bool] = {}
 
-    def lookup(team_id: str, season: int) -> dict | None:
+    def lookup_conf(team_id: str, season: int) -> dict | None:
         key = (team_id, season)
-        if key not in cache:
-            cache[key] = db.conference_for_season(conn, team_id, season)
-        return cache[key]
+        if key not in conf_cache:
+            conf_cache[key] = db.conference_for_season(conn, team_id, season)
+        return conf_cache[key]
+
+    def lookup_fbs(team_id: str, season: int) -> bool:
+        key = (team_id, season)
+        if key not in fbs_cache:
+            fbs_cache[key] = db.is_fbs(conn, team_id, season)
+        return fbs_cache[key]
 
     for g in games:
-        home_era = lookup(g["home_team"], g["season"])
-        away_era = lookup(g["away_team"], g["season"])
+        home_era = lookup_conf(g["home_team"], g["season"])
+        away_era = lookup_conf(g["away_team"], g["season"])
         g["home_conf"] = home_era["conference"] if home_era else None
         g["home_div"] = home_era["division"] if home_era else None
         g["away_conf"] = away_era["conference"] if away_era else None
         g["away_div"] = away_era["division"] if away_era else None
+        g["home_is_fbs"] = lookup_fbs(g["home_team"], g["season"])
+        g["away_is_fbs"] = lookup_fbs(g["away_team"], g["season"])
 
 
 def _week_buckets(games: list[dict]) -> dict[tuple[int, int], list[dict]]:
@@ -158,7 +177,8 @@ def build_current_engine(conn, variant: str = "echo", resets=None, params=None) 
                  home_code=g["home_code"], away_code=g["away_code"],
                  home_pts=g["home_pts"], away_pts=g["away_pts"], ot=g["ot"], neutral=g["neutral"],
                  home_conf=g["home_conf"], away_conf=g["away_conf"],
-                 home_div=g["home_div"], away_div=g["away_div"])
+                 home_div=g["home_div"], away_div=g["away_div"],
+                 home_is_fbs=g["home_is_fbs"], away_is_fbs=g["away_is_fbs"])
             for g in week_games
         ]
         eng.process_week(game_dicts)
@@ -202,14 +222,20 @@ def rebuild_ratings(conn, variant: str, params: dict | None = None) -> None:
                  home_code=g["home_code"], away_code=g["away_code"],
                  home_pts=g["home_pts"], away_pts=g["away_pts"], ot=g["ot"], neutral=g["neutral"],
                  home_conf=g["home_conf"], away_conf=g["away_conf"],
-                 home_div=g["home_div"], away_div=g["away_div"])
+                 home_div=g["home_div"], away_div=g["away_div"],
+                 home_is_fbs=g["home_is_fbs"], away_is_fbs=g["away_is_fbs"])
             for g in week_games
         ]
         results = eng.process_week(game_dicts)
+        # Each game now produces 0, 1, or 2 rows (see engine.py's
+        # process_week docstring - a non-FBS side never gets a row),
+        # so game_ids has to track actual row count per game rather
+        # than assuming 2 the way NFL_Elo's version could.
+        rows = []
         game_ids = []
-        for g in week_games:
-            game_ids.extend([g["game_id"], g["game_id"]])
-        rows = [row for pair in results for row in pair]
+        for g, row_list in zip(week_games, results):
+            rows.extend(row_list)
+            game_ids.extend([g["game_id"]] * len(row_list))
         db.save_ratings(conn, variant, rows, game_ids)
 
     conn.commit()
@@ -243,8 +269,11 @@ def standings(conn, season: int, variant: str = "echo"):
 
 def sanity_checks(conn, seasons, variant: str = "echo") -> list[str]:
     """Basic health checks for a set of seasons, for ONE variant: no
-    NaN ratings, no team missing win/loss/tie totals, no team that
-    played games but has no standings row."""
+    NaN ratings, no team missing win/loss/tie totals, no FBS team that
+    played games but has no standings row. A non-FBS opponent
+    (db.is_fbs() False for that season) is EXPECTED to have no
+    standings row at all - see engine.py's FCS HANDLING - so it's
+    excluded from that last check rather than flagged as a bug."""
     warnings = []
     for season in seasons:
         rows = standings(conn, season, variant)
@@ -260,6 +289,6 @@ def sanity_checks(conn, seasons, variant: str = "echo") -> list[str]:
         ).fetchall()
         standings_teams = {r[0] for r in rows}
         for (tid,) in game_teams:
-            if tid not in standings_teams:
+            if tid not in standings_teams and db.is_fbs(conn, tid, season):
                 warnings.append(f"Season {season}: {tid} played games but has no standings row.")
     return warnings

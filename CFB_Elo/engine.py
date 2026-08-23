@@ -40,9 +40,28 @@ a hardcoded dict. A team with no conference on file for that season
 home_conf/away_conf of None, which this module treats as "not a
 conference or division game" - never an error.
 
-preview_matchup() (a single unplayed game) is unaffected by weekly
-batching - it just wants each team's most recently recorded rating,
-same idea as NFL_Elo's preview.
+FCS HANDLING - genuinely new, no NFL_Elo equivalent (the NFL has no
+lower-division opponents at all). CFB has 130+ programs and regularly
+schedules FCS/lower-division opponents as early-season "buy games." Since this dataset only ever
+covers FBS schedules, an FCS opponent NEVER has an FCS-vs-FCS game in
+it - only the occasional lopsided game against an FBS team. Tracking
+an FCS opponent's OWN rating off that thin, biased sample would be
+close to pure noise, and a rename mid-transition (a real case: Texas
+A&M-Commerce became "East Texas A&M" while remaining FCS the whole
+time) can silently split one program across two team_ids with no way
+to tell they're the same school - a real problem if either side were
+being tracked continuously. Instead, ANY team not recorded as FBS for
+a given season (via `fbs_membership` - see db.py) is treated as a
+fixed-strength opponent: process_week() substitutes a single tunable
+`fcs_rating` constant for that side's rating, uses it only to compute
+the FBS side's expected outcome and rating change, and never creates,
+updates, or persists a TeamState or a ratings row for it. The FBS
+opponent's own win/loss and rating update are entirely unaffected -
+beating an FCS team still counts as a normal win, using this fixed
+number as the opponent strength input. `fcs_rating` is a single global
+constant, not a per-team rating - see BASELINE_PARAMS below; use
+cfb_tune_engine.py to find a reasonable value once real games are
+loaded.
 """
 from __future__ import annotations
 from dataclasses import dataclass, field
@@ -61,13 +80,16 @@ BASELINE_PARAMS = dict(
     div_game_mult=1.1,
     conf_game_mult=1.02,
     playoff_round_mult={},  # empty until postseason round labels are classified (deferred)
+    fcs_rating=1200.0,      # fixed opponent strength for any non-FBS team - see FCS HANDLING above
 )
 # UNTUNED STARTING POINT - these are NFL_Elo's exact validated values,
-# copied over as a starting point ONLY. CFB has much higher score
-# variance (60-3 games are common) and total roster turnover on a
-# 4-5 year cycle with no draft-based parity mechanism, so alpha/kmax/hfa
-# in particular should be expected to need real tuning against CFB data
-# via cfb_tune_engine.py before these numbers mean anything for CFB.
+# copied over as a starting point ONLY (fcs_rating has no NFL_Elo
+# equivalent at all - 1200 is a rough guess, well below `base`, not a
+# validated number). CFB has much higher score variance (60-3 games
+# are common) and total roster turnover on a 4-5 year cycle with no
+# draft-based parity mechanism, so alpha/kmax/hfa/fcs_rating should all
+# be expected to need real tuning against CFB data via
+# cfb_tune_engine.py before these numbers mean anything for CFB.
 # Never mutate this dict in place - use default_params() for a mutable
 # copy.
 DEFAULT_PARAMS = BASELINE_PARAMS
@@ -257,10 +279,17 @@ class EloEngine:
         away_div (resolved by the caller via db.conference_for_season -
         see this module's docstring) drive conference/division game
         classification; omitted or None on either side just means "not
-        a conference/division game."
+        a conference/division game." Optional home_is_fbs/away_is_fbs
+        (resolved by the caller via db.is_fbs() - see rebuild.py's
+        `_annotate_conferences`) drive FCS HANDLING above; omitted on
+        either side defaults to True (treated as FBS), so existing
+        callers that don't set these keep tracking every team normally.
 
-        Returns one [row_home, row_away] list per game, in the same
-        order as week_games.
+        Returns one row list per game, in the same order as week_games -
+        [row_home, row_away] when both sides are FBS, a single-element
+        list when only one side is, or [] if neither side is (no
+        rating row is ever produced for a non-FBS side - see FCS
+        HANDLING above).
         """
         if not week_games:
             return []
@@ -269,10 +298,22 @@ class EloEngine:
         # --- Snapshot phase: enter-season + pre-game rating/rest/games
         # played for every team playing this week, all off the SAME
         # starting state - none of this week's results are visible yet.
+        # A non-FBS team gets NO TeamState at all - its "pre" rating is
+        # just the fixed fcs_rating constant, with no rest/games-played
+        # tracking, since we never persist anything for it.
         pre = {}
         for g in week_games:
-            for team_id in (g["home_team"], g["away_team"]):
+            for team_id, is_fbs in (
+                (g["home_team"], g.get("home_is_fbs", True)),
+                (g["away_team"], g.get("away_is_fbs", True)),
+            ):
                 if team_id in pre:
+                    continue
+                if not is_fbs:
+                    pre[team_id] = dict(
+                        rating=self.params["fcs_rating"], days_off=None,
+                        games_played=0, is_fbs=False,
+                    )
                     continue
                 state = self._get_or_init_team(team_id)
                 self._enter_season(state, season, team_id)
@@ -280,6 +321,7 @@ class EloEngine:
                     rating=state.rating,
                     days_off=self._days_off(state, g["date"]),
                     games_played=state.games_played_in_season,
+                    is_fbs=True,
                 )
 
         # --- Compute phase: every game's math uses ONLY the snapshot
@@ -369,10 +411,20 @@ class EloEngine:
                             g["away_pts"], g["home_pts"], games_played_away,
                             days_off_away, days_off_home, k_away, keff_away,
                             change_away, post_away)
-            results.append([row_home, row_away])
 
-            deferred.append((home_id, post_home, g["date"], games_played_home))
-            deferred.append((away_id, post_away, g["date"], games_played_away))
+            # A non-FBS side gets NO row and NO persisted rating update
+            # (see FCS HANDLING in the module docstring) - its "pre"
+            # rating was already the fixed fcs_rating constant, used
+            # only to compute the FBS side's expected outcome/change
+            # above; nothing about it is ever tracked or saved.
+            game_rows = []
+            if pre[home_id]["is_fbs"]:
+                game_rows.append(row_home)
+                deferred.append((home_id, post_home, g["date"], games_played_home))
+            if pre[away_id]["is_fbs"]:
+                game_rows.append(row_away)
+                deferred.append((away_id, post_away, g["date"], games_played_away))
+            results.append(game_rows)
 
         # --- Apply phase: commit every update only now, after the
         # whole week's math has been computed off the shared snapshot.
@@ -405,15 +457,30 @@ class EloEngine:
     def preview_matchup(self, home_team: str, away_team: str, game_date: date, season: int,
                          type_: str = "R", round_: Optional[str] = None,
                          home_code: Optional[str] = None, away_code: Optional[str] = None,
-                         neutral: bool = False) -> dict:
+                         neutral: bool = False, home_is_fbs: bool = True,
+                         away_is_fbs: bool = True) -> dict:
         """Predict the outcome of a game that HASN'T been played yet,
         using each team's current rating as-is - does not mutate any
         engine state, and does not require (or use) a score. Unaffected
         by weekly batching: previewing doesn't need to know what week
-        it is, just each team's most recently recorded state."""
+        it is, just each team's most recently recorded state.
+
+        home_is_fbs/away_is_fbs default to True for backward
+        compatibility with callers that don't look this up - pass
+        False (via db.is_fbs()) for a side known to be a non-FBS
+        opponent, so its preview rating is the fixed fcs_rating
+        constant (see FCS HANDLING in the module docstring) rather
+        than incorrectly falling back to `base` the way an untracked
+        team normally would."""
         params = self.params
-        home = self.teams.get(home_team) or TeamState(rating=params["base"])
-        away = self.teams.get(away_team) or TeamState(rating=params["base"])
+        if home_is_fbs:
+            home = self.teams.get(home_team) or TeamState(rating=params["base"])
+        else:
+            home = TeamState(rating=params["fcs_rating"])
+        if away_is_fbs:
+            away = self.teams.get(away_team) or TeamState(rating=params["base"])
+        else:
+            away = TeamState(rating=params["fcs_rating"])
 
         home_rating, home_last_date, home_gp = self._preview_season_entry(home, season, home_team)
         away_rating, away_last_date, away_gp = self._preview_season_entry(away, season, away_team)

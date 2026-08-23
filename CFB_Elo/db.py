@@ -262,6 +262,29 @@ CREATE TABLE IF NOT EXISTS team_conference_history (
     end_season   INTEGER,
     PRIMARY KEY (team_id, start_season)
 );
+
+-- CFB-SPECIFIC: which programs are FBS in which season. Populated by
+-- load_conference_membership.py for EVERY school row in that season's
+-- Standings export - including independents (Conf='Ind'), which get
+-- a row here even though they deliberately get NO row in
+-- team_conference_history (see that table's comment above - an
+-- "Independent" conference string would falsely match two
+-- independents against each other as a conference game). This table
+-- is what actually answers "is this team FBS this season" - a team
+-- with no team_conference_history era could still be a real FBS
+-- independent, so that table alone can't be used for this check.
+-- A team_id with NO row here for a given season is treated as an FCS
+-- (or lower-division) opponent by engine.py - see its module
+-- docstring on FCS HANDLING. IMPORTANT: this only becomes accurate
+-- for a season once load_conference_membership.py has actually been
+-- run for it - a season loaded via add_season.py but not yet run
+-- through the conference loader will have EVERY team look FCS until
+-- that catches up, since this table simply has no rows for it yet.
+CREATE TABLE IF NOT EXISTS fbs_membership (
+    team_id TEXT NOT NULL REFERENCES teams(team_id),
+    season  INTEGER NOT NULL,
+    PRIMARY KEY (team_id, season)
+);
 """
 
 
@@ -581,7 +604,8 @@ def conference_for_season(conn: sqlite3.Connection, team_id: str,
     None if no era covers that season (independent, FCS opponent with
     no conference on file, etc.) - engine.py treats None as "not a
     conference or division game" for this team, same as an unaffiliated
-    program."""
+    program. NOTE: this is NOT the right check for "is this team FBS" -
+    a real FBS independent also has no era here. Use is_fbs() for that."""
     row = conn.execute(
         "SELECT conference, division FROM team_conference_history "
         "WHERE team_id = ? AND start_season <= ? "
@@ -591,6 +615,30 @@ def conference_for_season(conn: sqlite3.Connection, team_id: str,
     if not row:
         return None
     return {"conference": row[0], "division": row[1]}
+
+
+def set_fbs_membership(conn: sqlite3.Connection, team_id: str, season: int) -> None:
+    """Record that team_id was FBS during `season` - called for every
+    resolved school row in a season's Standings export, independents
+    included (see fbs_membership's schema comment)."""
+    conn.execute(
+        "INSERT OR IGNORE INTO fbs_membership(team_id, season) VALUES (?, ?)",
+        (team_id, season),
+    )
+
+
+def is_fbs(conn: sqlite3.Connection, team_id: str, season: int) -> bool:
+    """Whether team_id is known to be FBS for `season`. False means
+    either a genuine FCS/lower-division opponent, OR that
+    load_conference_membership.py simply hasn't been run for this
+    season yet - see fbs_membership's schema comment. engine.py treats
+    False as "use the fixed FCS rating, don't persist a rating row" -
+    see its module docstring."""
+    row = conn.execute(
+        "SELECT 1 FROM fbs_membership WHERE team_id = ? AND season = ?",
+        (team_id, season),
+    ).fetchone()
+    return row is not None
 
 
 def add_reset(conn: sqlite3.Connection, team_id: str, season: int, note: str = "") -> None:

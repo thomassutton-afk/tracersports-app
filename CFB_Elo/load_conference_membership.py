@@ -3,10 +3,13 @@ load_conference_membership.py
 
 Loads one season's conference-standings export from Sports-Reference
 (the "School, Conf, W-L, ..." table - only School and Conf actually
-matter here) into `team_conference_history`. This is the missing piece
-flagged in engine.py/rebuild.py's docstrings: until this has been run
-for a season, every game that season scores as "not a conference/
-division game," which is a safe default but not an accurate one.
+matter here) into `team_conference_history` AND `fbs_membership`. This
+is the missing piece flagged in engine.py/rebuild.py's docstrings:
+until this has been run for a season, every game that season scores as
+"not a conference/division game" for conf_game/div_game purposes, AND
+- more importantly now - every team that season is treated as an FCS
+opponent (fixed rating, no persisted rating row) by engine.py, since
+fbs_membership simply has no rows for it yet. See FBS MEMBERSHIP below.
 
 Usage:
     python3 load_conference_membership.py standings_2025.csv --season 2025
@@ -17,24 +20,17 @@ WHAT THIS DOES:
     value into conference="Sun Belt", division="East"/"West". A plain
     conference name with no parenthetical stays as conference=Conf,
     division=None.
-  - Treats "Ind" (independent) as NO conference at all - no
-    team_conference_history row is written for that team-season. This
-    is deliberate: two independents playing each other must NOT read
-    as a conference game, which a literal conference="Independent"
-    placeholder string would cause (both teams would share that
-    string and false-positive as "same conference"). No row at all is
-    what makes db.conference_for_season() correctly return None for
-    them - see engine.py's module docstring on that convention.
   - Resolves each School name to a team_id by slugifying it the SAME
     way normalize_sr_games.py does, then looking it up through the
     existing team_aliases table. Sports-Reference's standings exports
     use shorter common names ("BYU", "USC", "Ole Miss", "UTEP", "LSU",
-    "SMU", "Pitt", "UCF") that DON'T match the fuller formal names its
-    schedule/score exports use ("Brigham Young", "Southern
-    California", "Mississippi", "Texas-El Paso", "Louisiana State",
-    "Southern Methodist", "Pittsburgh", "Central Florida") -
-    KNOWN_ALIASES below seeds the common mismatches identified so far.
-    Anything that STILL doesn't resolve is written to
+    "SMU", "Pitt", "UCF", "UAB", "UTSA") that DON'T match the fuller
+    formal names its schedule/score exports use ("Brigham Young",
+    "Southern California", "Mississippi", "Texas-El Paso", "Louisiana
+    State", "Southern Methodist", "Pittsburgh", "Central Florida",
+    "Alabama-Birmingham", "Texas-San Antonio") - KNOWN_ALIASES below
+    seeds the mismatches identified so far. Anything that STILL
+    doesn't resolve is written to
     reports/unresolved_conference_teams_{season}.csv instead of being
     silently treated as a new team - resolve_team_id() only ever
     follows an EXISTING alias (see db.py), it never registers one, so
@@ -42,21 +38,43 @@ WHAT THIS DOES:
     forking one real program into two different database rows. Review
     that file each time it's non-empty and either add an entry to
     KNOWN_ALIASES or register a real alias via db.add_alias() before
-    re-running.
-  - For a team that DOES resolve: uses db.set_conference_era(), which
-    is safe to call in ANY order (not just chronological) - see its
-    docstring in db.py. If its currently-open conference era already
-    matches this season's conference/division, nothing happens
-    (avoids opening a redundant new era every single season for a
-    program that never moves).
+    re-running. This check now applies to EVERY school in the file,
+    independents included - an unresolved independent used to be
+    silently skipped entirely before it ever reached the resolution
+    check, which was a real gap.
 
-WHAT THIS DOES NOT DO:
-  - No FBS/FCS filtering, no rating impact whatsoever - this only ever
-    touches team_conference_history, never `games`/`ratings`. Run
-    rebuild.py afterward only if you want existing rating rows'
-    conf_game/div_game flags to reflect this immediately; otherwise
-    it applies automatically the next time ratings get rebuilt for any
-    other reason.
+FBS MEMBERSHIP - every school that resolves gets an fbs_membership row
+for this season, INCLUDING independents (Conf="Ind"). This is
+deliberately separate from the conference-era logic below: an
+independent still needs to be recognized as FBS (so it isn't treated
+as a fixed-rating FCS opponent), even though it correctly gets NO
+team_conference_history row.
+
+CONFERENCE ERA - "Ind" (independent) gets NO team_conference_history
+row at all. This is deliberate: two independents playing each other
+must NOT read as a conference game, which a literal
+conference="Independent" placeholder string would cause (both teams
+would share that string and false-positive as "same conference"). No
+row at all is what makes db.conference_for_season() correctly return
+None for them - see engine.py's module docstring on that convention.
+For every other school: uses db.set_conference_era(), which is safe to
+call in ANY order (not just chronological) - see its docstring in
+db.py.
+
+REBUILD - unlike before FCS handling existed, this NOW triggers a full
+ratings rebuild (both variants) after loading, since fbs_membership
+directly changes which side of a game gets a real persisted rating -
+this is no longer a display-only table the way team_conference_history
+alone was. Expect this script to take noticeably longer than it used
+to.
+
+ORDERING STILL MATTERS: run this AFTER add_season.py has loaded a
+season's games, same as before. But now, until you run THIS script for
+a given season, every team in it looks FCS (fixed rating, not
+persisted) to the rating engine - not just "not a conference game."
+Don't be alarmed if a freshly add_season.py-loaded season's standings
+look strange before you've run this for it; that's expected and gets
+corrected by the rebuild this script triggers.
 """
 import argparse
 import os
@@ -66,6 +84,7 @@ import sys
 import pandas as pd
 
 import db
+from rebuild import rebuild_ratings, VARIANTS
 
 # Seeded from known Sports-Reference naming discrepancies between its
 # standings/conference exports (shorter common names) and its
@@ -131,10 +150,7 @@ def load(conn, path: str, season: int) -> tuple[int, int, list[tuple[str, str]]]
     for _, r in df.iterrows():
         school = str(r["School"]).strip()
         conf_raw = str(r["Conf"]).strip()
-        if conf_raw in ("Ind", "Independent", "", "nan"):
-            continue  # true independents get no conference row at all
-
-        conference, division = split_conf_div(conf_raw)
+        is_independent = conf_raw in ("Ind", "Independent", "", "nan")
 
         slug = slugify(school)
         slug = KNOWN_ALIASES.get(slug, slug)
@@ -144,6 +160,14 @@ def load(conn, path: str, season: int) -> tuple[int, int, list[tuple[str, str]]]
             unresolved.append((school, slug))
             continue
 
+        # FBS membership is recorded for EVERY resolved school this
+        # season, independents included - see FBS MEMBERSHIP above.
+        db.set_fbs_membership(conn, team_id, season)
+
+        if is_independent:
+            continue  # no team_conference_history row - see CONFERENCE ERA above
+
+        conference, division = split_conf_div(conf_raw)
         result = db.set_conference_era(conn, team_id, conference, season, division=division)
         if result == "unchanged":
             unchanged += 1
@@ -178,8 +202,14 @@ def main():
               f"wrote {out_path}. Each of these needs to already exist (via an add_season.py "
               f"load of a season file that includes them) AND either slugify to a matching code "
               f"on its own or get an entry added to KNOWN_ALIASES in this script, before its "
-              f"conference can be recorded.")
+              f"conference AND its FBS status can be recorded.")
+
+    print("Rebuilding ratings so FBS/FCS classification takes effect...")
+    for variant in VARIANTS:
+        rebuild_ratings(conn, variant)
+    print(f"Ratings rebuilt ({', '.join(VARIANTS)}).")
 
 
 if __name__ == "__main__":
     main()
+
