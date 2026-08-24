@@ -99,6 +99,141 @@ def _annotate_conferences(conn, games: list[dict]) -> None:
         g["away_is_fbs"] = lookup_fbs(g["away_team"], g["season"])
 
 
+def _season_fbs_teams(games: list[dict]) -> dict[int, set[str]]:
+    """Every FBS team_id (per each game's home_is_fbs/away_is_fbs
+    annotation) known to play each season - the roster
+    apply_season_entry() needs to know who requires a SEASON-ENTRY
+    target. Built once from the full, already-annotated `games` list
+    rather than re-querying per season boundary."""
+    by_season: dict[int, set[str]] = {}
+    for g in games:
+        s = by_season.setdefault(g["season"], set())
+        if g["home_is_fbs"]:
+            s.add(g["home_team"])
+        if g["away_is_fbs"]:
+            s.add(g["away_team"])
+    return by_season
+
+
+def apply_season_entry(conn, eng: "engine.EloEngine", season: int,
+                        season_team_ids: set[str], is_first_season: bool = False) -> None:
+    """Apply the SEASON-ENTRY algorithm (see engine.py's module
+    docstring) for every team in `season_team_ids`, mutating `eng` in
+    place. Must be called ONCE per (eng, season) pair, before that
+    season's first process_week() call - Step C below computes off a
+    snapshot of the just-regressed returning teams, so calling this
+    twice for the same season would compute it from an already-shifted
+    state the second time.
+
+    Implements the four-step process from engine.py's SEASON-ENTRY
+    docstring:
+      A) group every RETURNING team's current (pre-regression) rating
+         by its LAST season's conference (or power/midmajor tier, for
+         a returning independent).
+      B) average each group, then regress every returning team toward
+         its own group's average.
+      C) recompute conference averages using THIS season's membership,
+         but ONLY from the now-regressed returning teams (never from
+         a team also debuting this same season, to avoid circularity
+         between multiple teams debuting into the same conference the
+         same year).
+      D) for every team never tracked before (a true debut, or a
+         former fixed-rating FCS opponent), assign 0.5*fcs_rating +
+         0.5*(its new conference's Step C average, or the overall FBS
+         average if that conference has no returning members yet).
+
+    `is_first_season=True` (the very first season this engine instance
+    has ever processed ANY game for) skips the Step D blend entirely -
+    every team is "new" simultaneously at that point, so there's no
+    genuine "graduated from FCS" signal to blend against; they all
+    just start flat at `base`, same as NFL_Elo's original behavior for
+    a from-scratch database."""
+    last_season = season - 1
+
+    returning = [tid for tid in season_team_ids if tid in eng.teams]
+    debuting = [tid for tid in season_team_ids if tid not in eng.teams]
+
+    def _avg(values: list[float], fallback: float) -> float:
+        return sum(values) / len(values) if values else fallback
+
+    if is_first_season:
+        for tid in debuting:
+            eng.induct_new_team(tid, season, eng.params["base"])
+        return
+
+    # --- Step A: group returning teams' CURRENT (pre-regression)
+    # ratings by last season's conference, or power/midmajor tier for
+    # a returning independent. A team with a TeamState that WASN'T
+    # actually FBS last season (a gap/demotion year) has a stale
+    # rating with no honest "last conference" to regress from - treat
+    # it as a fresh debut (Step D) instead of Step A/B.
+    last_conf_groups: dict[str, list[float]] = {}
+    last_tier_groups: dict[str, list[float]] = {"power": [], "midmajor": []}
+    last_conf_of: dict[str, "str | None"] = {}
+    stale_gap = []
+    for tid in returning:
+        if not db.is_fbs(conn, tid, last_season):
+            stale_gap.append(tid)
+            continue
+        era = db.conference_for_season(conn, tid, last_season)
+        last_conf_of[tid] = era["conference"] if era else None
+        if era:
+            last_conf_groups.setdefault(era["conference"], []).append(eng.teams[tid].rating)
+        else:
+            last_tier_groups[db.independent_tier(tid)].append(eng.teams[tid].rating)
+    returning = [tid for tid in returning if tid not in stale_gap]
+    debuting = debuting + stale_gap
+
+    overall_fbs_avg = _avg(
+        [r for group in last_conf_groups.values() for r in group]
+        + last_tier_groups["power"] + last_tier_groups["midmajor"],
+        eng.params["base"],
+    )
+    last_conf_avg = {c: _avg(v, overall_fbs_avg) for c, v in last_conf_groups.items()}
+    last_tier_avg = {t: _avg(v, overall_fbs_avg) for t, v in last_tier_groups.items()}
+
+    # --- Step B: regress every returning team toward ITS group's average.
+    for tid in returning:
+        conf = last_conf_of.get(tid)
+        target = last_conf_avg[conf] if conf else last_tier_avg[db.independent_tier(tid)]
+        eng.regress_returning_team(tid, season, target)
+
+    # --- Step C: recompute conference/tier averages using THIS
+    # season's membership, from the now-regressed returning teams only
+    # (a team debuting THIS season never contributes to its own
+    # conference's Step C average - see docstring above on avoiding
+    # circularity).
+    new_conf_groups: dict[str, list[float]] = {}
+    new_tier_groups: dict[str, list[float]] = {"power": [], "midmajor": []}
+    for tid in returning:
+        era = db.conference_for_season(conn, tid, season)
+        if era:
+            new_conf_groups.setdefault(era["conference"], []).append(eng.teams[tid].rating)
+        elif db.is_fbs(conn, tid, season):
+            new_tier_groups[db.independent_tier(tid)].append(eng.teams[tid].rating)
+
+    overall_fbs_avg_now = _avg(
+        [r for group in new_conf_groups.values() for r in group]
+        + new_tier_groups["power"] + new_tier_groups["midmajor"],
+        overall_fbs_avg,
+    )
+    new_conf_avg = {c: _avg(v, overall_fbs_avg_now) for c, v in new_conf_groups.items()}
+    new_tier_avg = {t: _avg(v, overall_fbs_avg_now) for t, v in new_tier_groups.items()}
+
+    # --- Step D: induct every never-tracked team at a 50/50 blend of
+    # fcs_rating and its NEW conference's (or tier's) Step C average.
+    for tid in debuting:
+        era = db.conference_for_season(conn, tid, season)
+        if era:
+            conf_target = new_conf_avg.get(era["conference"], overall_fbs_avg_now)
+        elif db.is_fbs(conn, tid, season):
+            conf_target = new_tier_avg.get(db.independent_tier(tid), overall_fbs_avg_now)
+        else:
+            conf_target = overall_fbs_avg_now
+        blended = 0.5 * eng.params["fcs_rating"] + 0.5 * conf_target
+        eng.induct_new_team(tid, season, blended)
+
+
 def _week_buckets(games: list[dict]) -> dict[tuple[int, int], list[dict]]:
     """Group games into (season, week), anchored to that season's own
     opener - NOT a fixed calendar date, since the season opener's
@@ -147,6 +282,7 @@ def build_current_engine(conn, variant: str = "echo", resets=None, params=None) 
     _annotate_conferences(conn, games)
     resets = resets if resets is not None else db.load_resets(conn)
     use_schedule = params is None
+    season_rosters = _season_fbs_teams(games)
 
     if games:
         seed_season = games[0]["season"]
@@ -165,10 +301,17 @@ def build_current_engine(conn, variant: str = "echo", resets=None, params=None) 
 
     weeks = _week_buckets(games)
     current_season = games[0]["season"] if games else None
+    first_season = current_season
+    if current_season is not None:
+        apply_season_entry(conn, eng, current_season, season_rosters.get(current_season, set()),
+                            is_first_season=(current_season == first_season))
     for key in sorted(weeks):
         season = key[0]
-        if use_schedule and season != current_season:
-            eng.params = variant_params(conn, variant, season)
+        if season != current_season:
+            if use_schedule:
+                eng.params = variant_params(conn, variant, season)
+            apply_season_entry(conn, eng, season, season_rosters.get(season, set()),
+                                is_first_season=(season == first_season))
             current_season = season
         week_games = sorted(weeks[key], key=lambda g: g["date"])
         game_dicts = [
@@ -198,6 +341,7 @@ def rebuild_ratings(conn, variant: str, params: dict | None = None) -> None:
         conn.commit()
         return
     _annotate_conferences(conn, games)
+    season_rosters = _season_fbs_teams(games)
 
     resets = db.load_resets(conn)
     use_schedule = params is None
@@ -210,10 +354,16 @@ def rebuild_ratings(conn, variant: str, params: dict | None = None) -> None:
 
     db.clear_ratings(conn, variant)
     current_season = games[0]["season"]
+    first_season = current_season
+    apply_season_entry(conn, eng, current_season, season_rosters.get(current_season, set()),
+                        is_first_season=True)
     for key in sorted(weeks):
         season = key[0]
-        if use_schedule and season != current_season:
-            eng.params = variant_params(conn, variant, season)
+        if season != current_season:
+            if use_schedule:
+                eng.params = variant_params(conn, variant, season)
+            apply_season_entry(conn, eng, season, season_rosters.get(season, set()),
+                                is_first_season=(season == first_season))
             current_season = season
         week_games = sorted(weeks[key], key=lambda g: g["date"])
         game_dicts = [

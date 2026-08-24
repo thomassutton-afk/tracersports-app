@@ -40,9 +40,53 @@ a hardcoded dict. A team with no conference on file for that season
 home_conf/away_conf of None, which this module treats as "not a
 conference or division game" - never an error.
 
+SEASON-ENTRY - genuinely new, no NFL_Elo equivalent (NFL_Elo blends
+every team toward the SAME flat `base` constant between seasons). CFB
+programs sit at wildly different competitive tiers that roughly track
+their conference, so this engine blends toward a CONFERENCE (or
+power/midmajor tier, for independents) average instead of one shared
+number. This engine stays completely DB-free, same as everywhere else
+in this module - the caller (rebuild.py) does every database lookup
+and hands this engine two already-resolved things per season, via
+regress_returning_team()/induct_new_team() below, called ONCE per
+season boundary before that season's first process_week():
+  - For a team already tracked (played FBS before): regress toward
+    the average rating of every team that shared ITS conference LAST
+    season (not this season - see rebuild.py's `_compute_season_targets`
+    for why realignment year handling falls out of this naturally). An
+    independent draws from the power or midmajor tier pool instead
+    (Notre Dame -> power; every other independent -> midmajor).
+  - For a team never tracked before (a true FBS debut, OR a former
+    FCS opponent - fixed-rating, never persisted - becoming FBS for
+    the first time): no prior rating exists to blend from, so it
+    starts at a 50/50 blend of the fixed fcs_rating constant and its
+    NEW conference's average (computed from that conference's
+    already-resolved RETURNING members only, to avoid circularity
+    between multiple teams debuting into the same conference the same
+    season).
+`base` (1500) is now only a fallback: the very first loaded season has
+no prior-season data to compute any average from, and a conference
+with zero already-resolved members to reference at all (its every
+member is debuting the same season) falls back to the overall FBS
+average.
+
+POSTSEASON - PHASE 1 of a larger deferred effort (see add_season.py's
+normalizer docstring). Only conference championship games are
+currently classified (Round=="CCG"), via a dedicated
+conf_championship_mult - bowl/CFP-round classification is still fully
+deferred, since the postseason FORMAT itself changed multiple times
+across 1996-2025 (no unified system pre-1998, BCS 1998-2013, 4-team
+CFP 2014-2023, 12-team CFP 2024+) and needs real era-branching logic
+that doesn't exist yet. NFL_Elo's playoff_round_mult mechanism is left
+in place but empty/unused for now - it only ever applies to type='P'
+games, and every CFB game (CCGs included) is still type='R' by design
+(see add_season.py's docstring on why postseason isn't reclassified
+as type='P' yet).
+
 FCS HANDLING - genuinely new, no NFL_Elo equivalent (the NFL has no
 lower-division opponents at all). CFB has 130+ programs and regularly
-schedules FCS/lower-division opponents as early-season "buy games." Since this dataset only ever
+schedules FCS/lower-division opponents as early-season "buy games."
+Since this dataset only ever
 covers FBS schedules, an FCS opponent NEVER has an FCS-vs-FCS game in
 it - only the occasional lopsided game against an FBS team. Tracking
 an FCS opponent's OWN rating off that thin, biased sample would be
@@ -70,26 +114,34 @@ from typing import Optional
 
 
 BASELINE_PARAMS = dict(
-    alpha=0.3,             # season-to-season carry-over weight
-    base=1500.0,           # league-average / expansion-team rating
+    alpha=0.3,             # season-to-season carry-over weight (blended against a
+                            # conference/tier average now, not a flat constant - see
+                            # SEASON-ENTRY above)
+    base=1500.0,           # fallback only: used for the very first loaded season (no
+                            # prior-season data exists yet to compute any average from)
     hfa=72.0,               # home field advantage, in Elo points
     kmax=46.0,
     k_floor=36.2,           # floor K decays to by the last game of the regular season
     rest_minor=6.0,         # applied for a 1-4 day rest differential (short week)
     rest_major=24.0,        # applied for a 6+ day rest differential (bye week+)
-    div_game_mult=1.1,
-    conf_game_mult=1.02,
-    playoff_round_mult={},  # empty until postseason round labels are classified (deferred)
+    conf_game_mult=1.1,     # any conference game, division or not - see SEASON-ENTRY
+                            # docstring section on why div_game_mult was dropped
+    conf_championship_mult=1.0,  # Phase 1 postseason bump for Round=="CCG" - untuned,
+                                  # 1.0 is a no-op placeholder until this is tuned for real
+    playoff_round_mult={},  # empty until further postseason round labels are classified
+                             # (deferred - see add_season.py's normalizer docstring)
     fcs_rating=1200.0,      # fixed opponent strength for any non-FBS team - see FCS HANDLING above
 )
 # UNTUNED STARTING POINT - these are NFL_Elo's exact validated values,
-# copied over as a starting point ONLY (fcs_rating has no NFL_Elo
-# equivalent at all - 1200 is a rough guess, well below `base`, not a
-# validated number). CFB has much higher score variance (60-3 games
-# are common) and total roster turnover on a 4-5 year cycle with no
-# draft-based parity mechanism, so alpha/kmax/hfa/fcs_rating should all
-# be expected to need real tuning against CFB data via
-# cfb_tune_engine.py before these numbers mean anything for CFB.
+# copied over as a starting point ONLY (fcs_rating and
+# conf_championship_mult have no NFL_Elo equivalent at all - rough
+# guesses, not validated numbers; conf_game_mult reuses NFL_Elo's old
+# div_game_mult value as its starting point - see SEASON-ENTRY above).
+# CFB has much higher score variance (60-3 games are common) and total
+# roster turnover on a 4-5 year cycle with no draft-based parity
+# mechanism, so alpha/kmax/hfa/fcs_rating/conf_game_mult should all be
+# expected to need real tuning against CFB data via cfb_tune_engine.py
+# before these numbers mean anything for CFB.
 # Never mutate this dict in place - use default_params() for a mutable
 # copy.
 DEFAULT_PARAMS = BASELINE_PARAMS
@@ -164,6 +216,17 @@ def _po_mult(game_type: str, round_: Optional[str], params: dict) -> float:
     return params["playoff_round_mult"].get(round_, 1.0)
 
 
+def _ccg_mult(round_: Optional[str], params: dict) -> float:
+    """Conference championship bump - Phase 1 of postseason handling
+    (see this module's POSTSEASON docstring section). Unlike NFL_Elo's
+    playoff_round_mult, this fires regardless of `type` - CCGs are
+    still type='R' in this dataset (see add_season.py's docstring on
+    why postseason games aren't reclassified as type='P' yet)."""
+    if round_ == "CCG":
+        return params["conf_championship_mult"]
+    return 1.0
+
+
 # ----------------------------------------------------------------------
 # Conference/division game classification. Unlike NFL_Elo, there is NO
 # static table here - see this module's docstring (CONFERENCE/DIVISION
@@ -208,48 +271,45 @@ class EloEngine:
         # same brand), but kept for parity with NFL/NBA/WNBA.
         self.resets = resets or set()
 
-    def _get_or_init_team(self, team_id: str) -> TeamState:
-        if team_id not in self.teams:
-            self.teams[team_id] = TeamState(rating=self.params["base"])
-        return self.teams[team_id]
-
-    def _enter_season(self, state: TeamState, season: int, team_id: str) -> None:
-        """Apply season-to-season regression to the mean the first time
-        we see a team in a new season - or a hard reset to base rating
-        if this (team_id, season) is a registered revival.
-
-        This must only run ONCE per team per season - it's called at
-        the top of every process_week(), so without this guard a
-        (team_id, season) reset would fire before every single week
-        that season, wiping out the team's rating each time instead of
-        just at the season opener.
-        """
+    def regress_returning_team(self, team_id: str, season: int, target: float) -> None:
+        """Apply season-to-season regression toward `target` for a team
+        that's ALREADY tracked (has an existing TeamState) - see
+        SEASON-ENTRY in the module docstring for how the caller
+        (rebuild.py) computes `target` (last season's conference/tier
+        average, never a flat shared constant). Idempotent per season -
+        a second call for the same (team_id, season) is a no-op, same
+        guard NFL_Elo's _enter_season used. Must be called for every
+        already-tracked team BEFORE process_week() runs for that
+        season's games - process_week() itself no longer does this
+        lazily (see its docstring)."""
+        state = self.teams[team_id]
         if state.last_season == season:
-            # Already entered this season - nothing to do. This guard
-            # has to come first, before the reset check below, or the
-            # reset would re-apply on every week of the season.
             return
-
         if (team_id, season) in self.resets:
             state.rating = self.params["base"]
             state.last_season = season
             state.games_played_in_season = 0
             state.last_game_date = None
             return
-        if state.last_season is None:
-            # Brand new team - starts flat at base (equivalent to the
-            # alpha blend collapsing to `base` when prior rating == base).
-            state.last_season = season
-            state.games_played_in_season = 0
-            return
-        alpha, base = self.params["alpha"], self.params["base"]
-        state.rating = alpha * state.rating + (1 - alpha) * base
+        alpha = self.params["alpha"]
+        state.rating = alpha * state.rating + (1 - alpha) * target
         state.last_season = season
         state.games_played_in_season = 0
         # Rest days are scoped to a single season: a team's first game
         # of a new season has no prior-game date to compare against,
         # matching the "no rest adjustment on a season opener" rule.
         state.last_game_date = None
+
+    def induct_new_team(self, team_id: str, season: int, rating: float) -> None:
+        """Create a fresh TeamState for a team never tracked before -
+        a true FBS debut, or a former fixed-rating FCS opponent
+        becoming FBS for the first time (see SEASON-ENTRY in the
+        module docstring). No alpha-blending here: `rating` (the
+        caller's 50/50 fcs_rating/conference-average blend) IS the
+        starting point outright, since there's no real prior rating to
+        blend against. Must be called before process_week() runs for
+        that season's games, same as regress_returning_team()."""
+        self.teams[team_id] = TeamState(rating=rating, last_season=season, games_played_in_season=0)
 
     def _days_off(self, state: TeamState, game_date: date) -> Optional[int]:
         """Raw calendar-day gap since the team's last game this season
@@ -295,12 +355,18 @@ class EloEngine:
             return []
         season = week_games[0]["season"]
 
-        # --- Snapshot phase: enter-season + pre-game rating/rest/games
-        # played for every team playing this week, all off the SAME
-        # starting state - none of this week's results are visible yet.
-        # A non-FBS team gets NO TeamState at all - its "pre" rating is
+        # --- Snapshot phase: pre-game rating/rest/games played for
+        # every team playing this week, all off the SAME starting
+        # state - none of this week's results are visible yet. A
+        # non-FBS team gets NO TeamState at all - its "pre" rating is
         # just the fixed fcs_rating constant, with no rest/games-played
-        # tracking, since we never persist anything for it.
+        # tracking, since we never persist anything for it. Every FBS
+        # team MUST already have a TeamState by this point - season
+        # entry (regress_returning_team()/induct_new_team()) is the
+        # caller's (rebuild.py's) job, done ONCE for the whole season
+        # before its first week ever reaches this method - see
+        # SEASON-ENTRY in the module docstring for why this can no
+        # longer happen lazily, team-by-team, the way NFL_Elo's did.
         pre = {}
         for g in week_games:
             for team_id, is_fbs in (
@@ -315,8 +381,13 @@ class EloEngine:
                         games_played=0, is_fbs=False,
                     )
                     continue
-                state = self._get_or_init_team(team_id)
-                self._enter_season(state, season, team_id)
+                if team_id not in self.teams:
+                    raise KeyError(
+                        f"{team_id!r} has no TeamState entering season {season} - "
+                        f"the caller must call regress_returning_team()/induct_new_team() "
+                        f"for every FBS team before process_week() runs for that season."
+                    )
+                state = self.teams[team_id]
                 pre[team_id] = dict(
                     rating=state.rating,
                     days_off=self._days_off(state, g["date"]),
@@ -355,13 +426,21 @@ class EloEngine:
             mov_mult = ((abs(mov) + 3) ** 0.8) / (7.5 + 0.006 * abs(pre_home - pre_away)) * ot_mult
 
             po_mult = _po_mult(g["type"], g.get("round"), params)
+            ccg_mult = _ccg_mult(g.get("round"), params)
             games_played_home = pre[home_id]["games_played"] + 1
             games_played_away = pre[away_id]["games_played"] + 1
             k_home = _decayed_k(games_played_home, season, params)
             k_away = _decayed_k(games_played_away, season, params)
 
-            group_mult = (params["div_game_mult"] if div_g else 1) * \
-                         (params["conf_game_mult"] if conf_g else 1) * po_mult
+            # NOTE: div_g is still computed and stored on every row (see
+            # `row()` below) for potential future display purposes, but
+            # no longer moves the K-multiplier - CFB's remaining
+            # divisions are largely vestigial post-realignment, and a
+            # conference game is a conference game regardless of which
+            # (if any) division either side is in. See engine.py's
+            # module docstring on this collapse from NFL_Elo's separate
+            # div_game_mult/conf_game_mult pair.
+            group_mult = (params["conf_game_mult"] if conf_g else 1) * po_mult * ccg_mult
             keff_home = k_home * group_mult
             keff_away = k_away * group_mult
 
@@ -440,10 +519,24 @@ class EloEngine:
         return {t: s.rating for t, s in self.teams.items()}
 
     def _preview_season_entry(self, state: TeamState, season: int, team_id: str):
-        """Read-only version of _enter_season: returns what a team's
-        rating/last_game_date/games_played WOULD be entering `season`,
-        without mutating anything. Used for previewing a game that
-        hasn't been played yet."""
+        """Read-only preview of what a team's rating/last_game_date/
+        games_played WOULD be entering `season`, without mutating
+        anything - used for previewing a game that hasn't been played
+        yet.
+
+        KNOWN SIMPLIFICATION: unlike the real regress_returning_team()/
+        induct_new_team() (see SEASON-ENTRY in the module docstring),
+        this still blends toward the flat `base` constant, not a
+        conference/tier average - correctly reproducing that average
+        here would need database access this method intentionally
+        doesn't have. In practice this only matters when previewing a
+        season's very first games before ANY of its real results have
+        been loaded/rebuilt yet (once even one real game of a season
+        has been processed, every team's state.last_season already
+        reflects the real regress_returning_team()/induct_new_team()
+        call rebuild.py made for that season, and this method's
+        state.last_season == season branch below just returns that
+        real value untouched)."""
         if state.last_season == season:
             return state.rating, state.last_game_date, state.games_played_in_season
 

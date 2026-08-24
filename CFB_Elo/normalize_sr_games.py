@@ -38,11 +38,19 @@ WHAT THIS DOES:
     under, even for games played in January/February of the following
     calendar year (bowl games) - date.month <= 6 means "belongs to
     last year's season."
-  - Type is ALWAYS 'R' and Round is ALWAYS blank for every game,
-    including bowls and conference championships - postseason
-    classification (CFP rounds, bowl tiers) is a DEFERRED, separate
-    process (see add_season.py's module docstring); for now every game
-    counts toward ratings/standings identically, as instructed.
+  - Type is ALWAYS 'R' for every game, including bowls and conference
+    championships - postseason games are NOT reclassified as type='P'.
+    Round is "CCG" for conference championship games (identified by
+    "Championship" appearing in Notes, e.g. "SEC Championship (Atlanta
+    GA)" - reliable across every era regardless of exact conference
+    name) and None for everything else, bowls included - bowl/CFP-round
+    classification is Phase 2, deferred, since the postseason FORMAT
+    itself changed multiple times across 1996-2025 (no unified system
+    pre-1998, BCS 1998-2013, 4-team CFP 2014-2023, 12-team CFP 2024+)
+    and needs real era-branching logic that doesn't exist yet. The raw
+    Notes text is carried through to the output CSV regardless, so
+    Phase 2 can classify bowls later without re-running this
+    normalizer against the original raw file again.
   - OT is hardcoded to 0 for every row - this source format carries no
     overtime flag. Revisit if/when a source with real OT data is added.
 
@@ -166,22 +174,38 @@ def normalize(path: str) -> pd.DataFrame:
         win_pts = int(r["Pts"])
         lose_pts = int(r[loser_pts_col])
 
+        # PHASE 1 POSTSEASON (see this module's docstring): a
+        # conference championship game is reliably identifiable by
+        # "Championship" appearing in Notes, regardless of era or
+        # exact conference name - e.g. "SEC Championship (Atlanta GA)",
+        # "Big 12 Championship (St. Louis MO)". Everything else in
+        # Notes (bowl names) is left unclassified (Round=None) for now -
+        # bowl/CFP-round classification is Phase 2, deferred, since the
+        # postseason FORMAT itself changed multiple times across
+        # 1996-2025 and needs real era-branching logic that doesn't
+        # exist yet. The raw Notes text is still carried through to the
+        # output CSV either way, so Phase 2 can classify bowls later
+        # without needing to re-run this normalizer against the
+        # original raw file again.
+        notes = str(r["Notes"]).strip() if "Notes" in df.columns and pd.notna(r["Notes"]) else ""
+        round_ = "CCG" if re.search(r"\bChampionship\b", notes) else None
+
         rows.append(dict(
-            Date=date_str, Season=season, Type="R", Round=None,
+            Date=date_str, Season=season, Type="R", Round=round_,
             Team=winner_code, Opp=loser_code, HomeAway=winner_ha,
             PointsFor=win_pts, PointsAgainst=lose_pts, OT=0,
-            TeamAPRank=winner_rank, OppAPRank=loser_rank,
+            TeamAPRank=winner_rank, OppAPRank=loser_rank, Notes=notes,
         ))
         rows.append(dict(
-            Date=date_str, Season=season, Type="R", Round=None,
+            Date=date_str, Season=season, Type="R", Round=round_,
             Team=loser_code, Opp=winner_code, HomeAway=loser_ha,
             PointsFor=lose_pts, PointsAgainst=win_pts, OT=0,
-            TeamAPRank=loser_rank, OppAPRank=winner_rank,
+            TeamAPRank=loser_rank, OppAPRank=winner_rank, Notes=notes,
         ))
 
     return pd.DataFrame(rows, columns=[
         "Date", "Season", "Type", "Round", "Team", "Opp", "HomeAway",
-        "PointsFor", "PointsAgainst", "OT", "TeamAPRank", "OppAPRank",
+        "PointsFor", "PointsAgainst", "OT", "TeamAPRank", "OppAPRank", "Notes",
     ])
 
 

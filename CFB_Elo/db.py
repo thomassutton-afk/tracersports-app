@@ -285,6 +285,21 @@ CREATE TABLE IF NOT EXISTS fbs_membership (
     season  INTEGER NOT NULL,
     PRIMARY KEY (team_id, season)
 );
+
+-- CFB-SPECIFIC: which conferences count as "power" vs "midmajor" in a
+-- given season - used ONLY for bucketing FBS INDEPENDENTS (who have
+-- no literal conference of their own) into a peer-group average for
+-- SEASON-ENTRY purposes (see engine.py's module docstring). Every
+-- conference NOT covered by a row here defaults to "midmajor" - see
+-- db.py's tier_for_conference(). end_season NULL means "still power
+-- as of the present."
+CREATE TABLE IF NOT EXISTS conference_tier (
+    conference   TEXT NOT NULL,
+    start_season INTEGER NOT NULL,
+    end_season   INTEGER,
+    tier         TEXT NOT NULL CHECK(tier IN ('power', 'midmajor')),
+    PRIMARY KEY (conference, start_season)
+);
 """
 
 
@@ -293,6 +308,14 @@ def connect(db_path: str) -> sqlite3.Connection:
     conn.execute("PRAGMA foreign_keys = ON;")
     conn.executescript(SCHEMA)
     _migrate(conn)
+    # Auto-seed the power-conference eras exactly once - harmless to
+    # check on every connect() (a single indexed lookup), and means no
+    # one has to remember a separate one-time setup step before
+    # SEASON-ENTRY math can work. seed_conference_tiers() itself is
+    # idempotent (INSERT OR REPLACE), so this is safe even if it's
+    # somehow already been seeded.
+    if not conn.execute("SELECT 1 FROM conference_tier LIMIT 1").fetchone():
+        seed_conference_tiers(conn)
     return conn
 
 
@@ -639,6 +662,73 @@ def is_fbs(conn: sqlite3.Connection, team_id: str, season: int) -> bool:
         (team_id, season),
     ).fetchone()
     return row is not None
+
+
+# CFB-SPECIFIC: FBS independents have no conference to draw a
+# SEASON-ENTRY average from (see engine.py's module docstring), so
+# each one is manually bucketed into the power or midmajor tier pool
+# instead. Notre Dame is the one enduring power-independent; every
+# other independent (historically UConn, UMass, Army before joining
+# the AAC, etc.) defaults to midmajor. Extend this if a genuinely
+# power-caliber program goes independent again in the future.
+INDEPENDENT_TIER = {
+    "notre-dame": "power",
+}
+
+
+def independent_tier(team_id: str) -> str:
+    """Which tier pool an FBS independent draws its SEASON-ENTRY
+    average from - see INDEPENDENT_TIER above. Defaults to midmajor
+    for anything not explicitly listed."""
+    return INDEPENDENT_TIER.get(team_id, "midmajor")
+
+
+def set_conference_tier(conn: sqlite3.Connection, conference: str, tier: str,
+                         start_season: int, end_season: Optional[int] = None) -> None:
+    """Register a conference as power/midmajor for a range of seasons -
+    see conference_tier's schema comment. Used by seed_conference_tiers()
+    below and by anyone hand-correcting an era later."""
+    conn.execute(
+        "INSERT OR REPLACE INTO conference_tier(conference, start_season, end_season, tier) "
+        "VALUES (?, ?, ?, ?)",
+        (conference, start_season, end_season, tier),
+    )
+
+
+def tier_for_conference(conn: sqlite3.Connection, conference: str, season: int) -> str:
+    """"power" or "midmajor" for `conference` during `season`. Defaults
+    to "midmajor" if no row covers it - see conference_tier's schema
+    comment. Conference NAME matching only (not team_id-based), since
+    tier is a property of the conference brand/era, not any specific
+    member."""
+    row = conn.execute(
+        "SELECT tier FROM conference_tier WHERE conference = ? AND start_season <= ? "
+        "AND (end_season IS NULL OR end_season >= ?)",
+        (conference, season, season),
+    ).fetchone()
+    return row[0] if row else "midmajor"
+
+
+def seed_conference_tiers(conn: sqlite3.Connection) -> None:
+    """One-time seed of the well-known power-conference eras across
+    1996-present. Safe to re-run (INSERT OR REPLACE via
+    set_conference_tier). This is a STARTING POINT, not an exhaustive
+    or definitive history - conference names/tiers before 1996, or any
+    edge case not listed here, default to "midmajor" via
+    tier_for_conference()'s fallback. Extend/correct via
+    set_conference_tier() directly as gaps turn up."""
+    # Conferences that have been power-tier for this dataset's ENTIRE
+    # 1996-present range and show no sign of stopping.
+    for conf in ("SEC", "Big Ten", "ACC", "Big 12"):
+        set_conference_tier(conn, conf, "power", 1996, end_season=None)
+    # The Pac-12 was power-tier through its 2023 dissolution (most
+    # members left for the Big Ten/Big 12/ACC in 2024).
+    set_conference_tier(conn, "Pac-12", "power", 1996, end_season=2023)
+    # The old football-playing Big East was power-tier through its
+    # 2012 season, before splitting into the American (a midmajor
+    # conference in this scheme) in 2013.
+    set_conference_tier(conn, "Big East", "power", 1996, end_season=2012)
+    conn.commit()
 
 
 def add_reset(conn: sqlite3.Connection, team_id: str, season: int, note: str = "") -> None:
