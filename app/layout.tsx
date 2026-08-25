@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import "./globals.css";
 import Nav from "./Nav";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "TRACER Sports",
@@ -21,6 +22,7 @@ export default function RootLayout({
           <Nav />
         </Suspense>
         {children}
+        <Analytics />
       </body>
     </html>
   );

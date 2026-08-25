@@ -39,17 +39,18 @@ import engine
 import rebuild
 
 
-def load_games_as_dicts(db_path: str) -> list[dict]:
+def load_games_as_dicts(db_path: str):
     """Reuses db.load_games() + rebuild._annotate_conferences() so this
     tuner sees EXACTLY the same conf/div/FBS annotations production
     rebuilds use - a hand-rolled reimplementation here risked silently
     drifting out of sync with rebuild.py, the same trap NFL_Elo's
     original nfl_tune.py fell into with the Elo formula itself (see
-    this module's docstring)."""
+    this module's docstring). Returns (conn, games) - `conn` is needed
+    downstream by run_engine() to call rebuild.apply_season_entry()."""
     conn = db.connect(db_path)
     games = db.load_games(conn)
     rebuild._annotate_conferences(conn, games)
-    return games
+    return conn, games
 
 
 def games_to_weeks(games: list[dict]) -> list[list[dict]]:
@@ -65,8 +66,16 @@ def log_loss_of(rows: list[dict]) -> float:
     return sum(r["test"] for r in home_rows) / len(home_rows)
 
 
-def run_engine(weeks: list[list[dict]], alpha: float, kmax: float, hfa: float,
-               fcs_rating: float, resets: set | None = None) -> list[dict]:
+def run_engine(conn, weeks: list[list[dict]], season_rosters: dict[int, set], first_season: int,
+               alpha: float, kmax: float, hfa: float, fcs_rating: float,
+               resets: set | None = None) -> list[dict]:
+    """Replays every week via the REAL engine.process_week(), calling
+    rebuild.apply_season_entry() at each season boundary FIRST - as of
+    the conference-average SEASON-ENTRY rewrite (see engine.py's module
+    docstring), process_week() requires every FBS team to already have
+    a TeamState before it runs; skipping this step isn't just
+    inaccurate, it now raises KeyError on the first game of any team's
+    first season."""
     params = engine.default_params()
     params["alpha"] = alpha
     params["kmax"] = kmax
@@ -74,13 +83,20 @@ def run_engine(weeks: list[list[dict]], alpha: float, kmax: float, hfa: float,
     params["fcs_rating"] = fcs_rating
     eng = engine.EloEngine(params, resets=resets)
     all_rows = []
+    current_season = None
     for wk_games in weeks:
+        season = wk_games[0]["season"]
+        if season != current_season:
+            rebuild.apply_season_entry(conn, eng, season, season_rosters.get(season, set()),
+                                        is_first_season=(season == first_season))
+            current_season = season
         for row_list in eng.process_week(wk_games):
             all_rows.extend(row_list)
     return all_rows
 
 
-def coordinate_ascent_engine(weeks: list[list[dict]], rounds: int = 3,
+def coordinate_ascent_engine(conn, weeks: list[list[dict]], season_rosters: dict[int, set],
+                              first_season: int, rounds: int = 3,
                               start=(0.3, 46.0, 55.0, 1200.0)) -> dict:
     alpha, kmax, hfa, fcs_rating = start
     # UNTUNED STARTING RANGES - alpha/kmax/hfa copied from NFL_Elo's
@@ -91,12 +107,12 @@ def coordinate_ascent_engine(weeks: list[list[dict]], rounds: int = 3,
     # kmax/hfa in particular sits well outside these bounds; widen any
     # of these if the coordinate ascent keeps landing on a range edge.
     alpha_range = [round(0.1 * i, 2) for i in range(1, 10)]
-    kmax_range = list(range(20, 71, 2))
+    kmax_range = list(range(20, 141, 2))
     hfa_range = list(range(0, 121, 4))
     fcs_range = list(range(900, 1500, 25))
 
     def score(a, k, h, f):
-        rows = run_engine(weeks, a, k, h, f)
+        rows = run_engine(conn, weeks, season_rosters, first_season, a, k, h, f)
         return log_loss_of(rows)
 
     best_ll = score(alpha, kmax, hfa, fcs_rating)
@@ -145,16 +161,18 @@ def coordinate_ascent_engine(weeks: list[list[dict]], rounds: int = 3,
 
 if __name__ == "__main__":
     db_path = sys.argv[1] if len(sys.argv) > 1 else "cfb_elo.db"
-    games = load_games_as_dicts(db_path)
+    conn, games = load_games_as_dicts(db_path)
     weeks = games_to_weeks(games)
+    season_rosters = rebuild._season_fbs_teams(games)
+    first_season = games[0]["season"] if games else None
     print(f"Loaded {len(games):,} games across {len(weeks)} team-weeks\n")
 
-    tuned = coordinate_ascent_engine(weeks, rounds=3)
+    tuned = coordinate_ascent_engine(conn, weeks, season_rosters, first_season, rounds=3)
     print(f"Engine-faithful full-history tune: alpha={tuned['alpha']} "
           f"kmax={tuned['kmax']} hfa={tuned['hfa']} fcs_rating={tuned['fcs_rating']}  "
           f"log_loss={tuned['train_log_loss']:.4f}")
 
-    baseline_rows = run_engine(weeks, 0.3, 46.0, 72.0, 1200.0)
+    baseline_rows = run_engine(conn, weeks, season_rosters, first_season, 0.3, 46.0, 72.0, 1200.0)
     print(f"Untuned starting point, run against CFB data for comparison only "
           f"(alpha=0.3 kmax=46 hfa=72 fcs_rating=1200): "
           f"log_loss={log_loss_of(baseline_rows):.4f}")

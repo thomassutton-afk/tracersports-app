@@ -23,7 +23,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useSearchParams } from "next/navigation";
 import { getLeagueConfig } from "@/lib/sports/registry";
-import { getFillColor } from "@/lib/teamColors";
+import { getFillColor, getTextColor } from "@/lib/teamColors";
 import { supabase } from "@/lib/supabase";
 import { getCurrentSeason } from "@/lib/gamesData";
 import TeamMark from "./TeamMark";
@@ -368,7 +368,7 @@ export default function LeaguePage() {
                       <td style={{ padding: "10px 8px" }}>
                         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                           <TeamMark team={team} teamId={row.team_id} league={league} />
-                          <span style={{ fontSize: 13, fontWeight: 700, color: team.secondary }}>{team.name}</span>
+                          <span style={{ fontSize: 13, fontWeight: 700, color: getTextColor(team) }}>{team.name}</span>
                         </div>
                       </td>
                       <td style={{ textAlign: "center", padding: "0 16px", fontFamily: "var(--font-mono)", fontSize: 14, fontWeight: 700, color: "var(--text)" }}>

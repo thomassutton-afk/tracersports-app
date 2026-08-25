@@ -24,7 +24,7 @@ import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { useParams, useSearchParams } from "next/navigation";
 import { getLeagueConfig } from "@/lib/sports/registry";
-import { getFillColor } from "@/lib/teamColors";
+import { getFillColor, getTextColor } from "@/lib/teamColors";
 import {
   fetchAllTimeTeamGames,
   fetchAllTimePreseasonRatings,
@@ -419,10 +419,10 @@ export default function AllTimeRankingsPage() {
                               />
                             </div>
                             <div>
-                              <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, fontWeight: 600, color: row.identity.secondary, opacity: 0.75, letterSpacing: 0.3, marginBottom: 2 }}>
+                              <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, fontWeight: 600, color: getTextColor(row.identity), opacity: 0.75, letterSpacing: 0.3, marginBottom: 2 }}>
                                 {leagueConfig.seasonLabel(row.season)}
                               </div>
-                              <div style={{ fontSize: 13, fontWeight: 700, color: row.identity.secondary, lineHeight: 1.2 }}>
+                              <div style={{ fontSize: 13, fontWeight: 700, color: getTextColor(row.identity), lineHeight: 1.2 }}>
                                 {row.identity.name}
                               </div>
                             </div>
