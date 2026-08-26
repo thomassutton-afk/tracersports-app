@@ -1,0 +1,160 @@
+Season: 1996
+
+Conference: Big Sky
+
+Montana 14-1
+Northern Arizona 9-3
+Cal State Northridge 7-4
+Weber State 7-4
+Eastern Washington 6-5
+Montana State 6-5
+Idaho State 4-7
+Sacramento State 1-10
+Portland State 3-8
+
+Conference: Gateway
+
+Northern Iowa 12-2
+Western Illinois 9-3
+Missouri State 7-4
+Indiana State 6-5
+Southern Illinois 5-6
+Illinois State 3-8
+
+Conference: Ivy
+
+Dartmouth 10-0
+Columbia 8-2
+Brown 5-5
+Cornell 4-6
+Penn 5-5
+Harvard 4-6
+Princeton 3-7
+Yale 2-8
+
+Conference: MAAC
+
+Duquesne 10-1
+Georgetown 7-3
+Marist 7-3
+St. John's 6-4
+Canisius 5-4
+Saint Peter's 2-7
+Siena 2-7
+Fairfield 1-8
+Iona 1-9
+
+Conference: MEAC
+
+Florida A&M 9-3
+Howard 10-2
+North Carolina A&T 8-3
+South Carolina State 4-6
+Hampton 5-6
+Morgan State 4-7
+Delaware State 3-8
+Bethune-Cookman 2-9
+
+Conference: Northeast
+
+Robert Morris 9-2
+Monmouth 7-3
+Central Connecticut 3-7
+Wagner 5-5
+Saint Francis (PA) 3-7
+
+Conference: OVC
+
+Murray State 11-2
+Eastern Illinois 8-4
+Eastern Kentucky 6-5
+Middle Tennessee 6-5
+Tennessee Tech 5-6
+Tennessee State 4-7
+SE Missouri State 3-8
+Austin Peay 1-10
+Tennessee-Martin 1-10
+
+Conference: Patriot
+
+Bucknell 6-5
+Colgate 6-5
+Lehigh 5-6
+Lafayette 5-5
+Fordham 2-8
+Holy Cross 2-9
+
+Conference: Pioneer
+
+Dayton 11-0
+Drake 8-3
+Evansville 5-5
+Butler 3-7
+San Diego 4-6
+Valparaiso 4-6
+
+Conference: Southern
+
+Marshall 15-0
+East Tennessee State 10-3
+Furman 9-4
+Appalachian State 7-4
+The Citadel 4-7
+Georgia Southern 4-7
+VMI 3-8
+Chattanooga 3-8
+Western Carolina 4-7
+
+Conference: Southland
+
+Troy 12-2
+Nicholls State 8-4
+Stephen F. Austin 7-4
+Northwestern State 6-5
+Sam Houston State 4-7
+Texas State 5-6
+McNeese State 3-8
+
+Conference: SWAC
+
+Jackson State 10-2
+Southern 7-5
+Mississippi Valley State 7-4
+Texas Southern 7-4
+Alcorn State 4-7
+Grambling State 3-8
+Alabama State 3-8
+Prairie View A&M 0-11
+
+Conference: Yankee
+
+New Hampshire 8-3
+Maine 7-4
+UMass 6-5
+Connecticut 4-6
+Rhode Island 4-6
+Boston University 1-10
+William & Mary 10-3
+Villanova 8-4
+Delaware 8-4
+James Madison 7-4
+Northeastern 6-5
+Richmond 2-9
+
+Conference: 1-AA Independents
+
+Buffalo 8-3
+Youngstown State 8-3
+Saint Mary's 7-3
+Western Kentucky 7-4
+Davidson 6-4
+Towson 6-4
+Samford 6-5
+Wofford 6-5
+Cal Poly 5-6
+Hofstra 5-6
+Liberty 5-6
+Southern Utah 4-7
+Charleston Southern 2-8
+Morehead State 2-8
+Jacksonville State 1-9

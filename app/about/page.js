@@ -44,17 +44,24 @@ function useAllTimeAccuracyTable() {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      const [nbaEcho, nbaPulse, wnbaEcho, wnbaPulse] = await Promise.all([
+      const [nbaEcho, nbaPulse, wnbaEcho, wnbaPulse, nflEcho, nflPulse] = await Promise.all([
         fetchLeagueAccuracy("nba", "echo"),
         fetchLeagueAccuracy("nba", "pulse"),
         fetchLeagueAccuracy("wnba", "echo"),
         fetchLeagueAccuracy("wnba", "pulse"),
+        fetchLeagueAccuracy("nfl", "echo"),
+        fetchLeagueAccuracy("nfl", "pulse"),
       ]);
       if (cancelled) return;
 
       setTable({
         NBA: { echo: buildSeasonAccuracy(nbaEcho.rows), pulse: buildSeasonAccuracy(nbaPulse.rows) },
         WNBA: { echo: buildSeasonAccuracy(wnbaEcho.rows), pulse: buildSeasonAccuracy(wnbaPulse.rows) },
+        NFL: { echo: buildSeasonAccuracy(nflEcho.rows), pulse: buildSeasonAccuracy(nflPulse.rows) },
+        // Combined is intentionally NBA+WNBA only, not +NFL — kept as-is
+        // pending a call on whether pooling a different sport's game-level
+        // accuracy into one "Combined" number is meaningful. Flagged for
+        // TJ, not decided here.
         Combined: {
           echo: buildSeasonAccuracy([...nbaEcho.rows, ...wnbaEcho.rows]),
           pulse: buildSeasonAccuracy([...nbaPulse.rows, ...wnbaPulse.rows]),
@@ -145,7 +152,7 @@ export default function AboutPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {["NBA", "WNBA", "Combined"].map((label) => {
+                  {["NBA", "WNBA", "NFL", "Combined"].map((label) => {
                     const row = table[label];
                     // Combined Brier is deliberately omitted, not just
                     // hidden with CSS - averaging a proper-scoring-rule

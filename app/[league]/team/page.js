@@ -193,9 +193,6 @@ function TeamGrid({ teamIds, teams, league, onSelect, muted = false, logoIndex =
             )}
             <div>
               <div style={{ fontSize: 13, fontWeight: 700, color: getTextColor(team) }}>{team.name}</div>
-              <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: getTextColor(team), opacity: 0.7, letterSpacing: 0.5 }}>
-                {id}
-              </div>
             </div>
           </button>
         );
