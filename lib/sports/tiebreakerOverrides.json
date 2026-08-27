@@ -1,1 +1,1038 @@
-[]
+[
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "SD",
+    "below": "DET"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "SF",
+    "below": "CHI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "SF",
+    "below": "TB"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "SF",
+    "below": "IND"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "SF",
+    "below": "JAX"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "SF",
+    "below": "MIN"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "SF",
+    "below": "OAK"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "SF",
+    "below": "WAS"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "SF",
+    "below": "ATL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CHI",
+    "below": "TB"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CHI",
+    "below": "IND"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CHI",
+    "below": "JAX"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CHI",
+    "below": "MIN"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CHI",
+    "below": "OAK"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CHI",
+    "below": "WAS"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CHI",
+    "below": "ATL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "TB",
+    "below": "IND"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "TB",
+    "below": "JAX"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "TB",
+    "below": "MIN"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "TB",
+    "below": "OAK"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "TB",
+    "below": "WAS"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "TB",
+    "below": "ATL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "IND",
+    "below": "JAX"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "IND",
+    "below": "MIN"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "IND",
+    "below": "OAK"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "IND",
+    "below": "WAS"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "IND",
+    "below": "ATL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "JAX",
+    "below": "MIN"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "JAX",
+    "below": "OAK"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "JAX",
+    "below": "WAS"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "JAX",
+    "below": "ATL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "MIN",
+    "below": "OAK"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "MIN",
+    "below": "WAS"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "MIN",
+    "below": "ATL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "OAK",
+    "below": "WAS"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "OAK",
+    "below": "ATL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "WAS",
+    "below": "ATL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "STL",
+    "below": "CAR"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "STL",
+    "below": "CIN"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "STL",
+    "below": "BAL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "STL",
+    "below": "CLE"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "STL",
+    "below": "GB"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "STL",
+    "below": "MIA"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "STL",
+    "below": "PHI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "STL",
+    "below": "PIT"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CAR",
+    "below": "CIN"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CAR",
+    "below": "BAL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CAR",
+    "below": "CLE"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CAR",
+    "below": "GB"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CAR",
+    "below": "MIA"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CAR",
+    "below": "PHI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CAR",
+    "below": "PIT"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CIN",
+    "below": "BAL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CIN",
+    "below": "CLE"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CIN",
+    "below": "GB"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CIN",
+    "below": "MIA"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CIN",
+    "below": "PHI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CIN",
+    "below": "PIT"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "BAL",
+    "below": "CLE"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "BAL",
+    "below": "GB"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "BAL",
+    "below": "MIA"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "BAL",
+    "below": "PHI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "BAL",
+    "below": "PIT"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CLE",
+    "below": "GB"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CLE",
+    "below": "MIA"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CLE",
+    "below": "PHI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "CLE",
+    "below": "PIT"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "GB",
+    "below": "MIA"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "GB",
+    "below": "PHI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "GB",
+    "below": "PIT"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "MIA",
+    "below": "PHI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "MIA",
+    "below": "PIT"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "PHI",
+    "below": "PIT"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "NO",
+    "below": "ARI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "DET",
+    "below": "SD"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "SF",
+    "below": "CHI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "SF",
+    "below": "TB"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "SF",
+    "below": "IND"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "SF",
+    "below": "JAX"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "SF",
+    "below": "MIN"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "SF",
+    "below": "OAK"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "SF",
+    "below": "WAS"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "SF",
+    "below": "ATL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CHI",
+    "below": "TB"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CHI",
+    "below": "IND"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CHI",
+    "below": "JAX"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CHI",
+    "below": "MIN"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CHI",
+    "below": "OAK"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CHI",
+    "below": "WAS"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CHI",
+    "below": "ATL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "TB",
+    "below": "IND"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "TB",
+    "below": "JAX"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "TB",
+    "below": "MIN"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "TB",
+    "below": "OAK"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "TB",
+    "below": "WAS"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "TB",
+    "below": "ATL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "IND",
+    "below": "JAX"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "IND",
+    "below": "MIN"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "IND",
+    "below": "OAK"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "IND",
+    "below": "WAS"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "IND",
+    "below": "ATL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "JAX",
+    "below": "MIN"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "JAX",
+    "below": "OAK"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "JAX",
+    "below": "WAS"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "JAX",
+    "below": "ATL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "MIN",
+    "below": "OAK"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "MIN",
+    "below": "WAS"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "MIN",
+    "below": "ATL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "OAK",
+    "below": "WAS"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "OAK",
+    "below": "ATL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "WAS",
+    "below": "ATL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "STL",
+    "below": "CAR"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "STL",
+    "below": "CIN"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "STL",
+    "below": "BAL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "STL",
+    "below": "CLE"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "STL",
+    "below": "GB"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "STL",
+    "below": "MIA"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "STL",
+    "below": "PHI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "STL",
+    "below": "PIT"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CAR",
+    "below": "CIN"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CAR",
+    "below": "BAL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CAR",
+    "below": "CLE"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CAR",
+    "below": "GB"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CAR",
+    "below": "MIA"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CAR",
+    "below": "PHI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CAR",
+    "below": "PIT"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CIN",
+    "below": "BAL"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CIN",
+    "below": "CLE"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CIN",
+    "below": "GB"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CIN",
+    "below": "MIA"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CIN",
+    "below": "PHI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CIN",
+    "below": "PIT"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "BAL",
+    "below": "CLE"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "BAL",
+    "below": "GB"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "BAL",
+    "below": "MIA"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "BAL",
+    "below": "PHI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "BAL",
+    "below": "PIT"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CLE",
+    "below": "GB"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CLE",
+    "below": "MIA"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CLE",
+    "below": "PHI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "CLE",
+    "below": "PIT"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "GB",
+    "below": "MIA"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "GB",
+    "below": "PHI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "GB",
+    "below": "PIT"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "MIA",
+    "below": "PHI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "MIA",
+    "below": "PIT"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "PHI",
+    "below": "PIT"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "NO",
+    "below": "ARI"
+  }
+]
