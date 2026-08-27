@@ -1230,5 +1230,19 @@
     "variant": "pulse",
     "above": "CLE",
     "below": "ARI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "STL",
+    "below": "JAX"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "STL",
+    "below": "JAX"
   }
 ]
