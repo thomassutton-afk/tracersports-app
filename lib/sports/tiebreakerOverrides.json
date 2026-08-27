@@ -1034,5 +1034,33 @@
     "variant": "pulse",
     "above": "NO",
     "below": "ARI"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "DAL",
+    "below": "HOU"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "echo",
+    "above": "DEN",
+    "below": "NYJ"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "DAL",
+    "below": "HOU"
+  },
+  {
+    "league": "nfl",
+    "season": 2026,
+    "variant": "pulse",
+    "above": "DEN",
+    "below": "NYJ"
   }
 ]
