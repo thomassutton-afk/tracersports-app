@@ -88,7 +88,6 @@ export default function TeamSelectorPage() {
         <div>
           <div className="hero-label">Franchise History</div>
           <div className="hero-heading">Teams</div>
-          <div className="hero-sub">Pick a team to see its full {leagueConfig.label} history</div>
         </div>
         <select
           value={selected}

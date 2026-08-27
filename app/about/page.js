@@ -86,7 +86,6 @@ export default function AboutPage() {
         <div>
           <div className="hero-label">Methodology</div>
           <div className="hero-heading">About TRACER</div>
-          <div className="hero-sub">A quick rundown of how it works, and who built it</div>
         </div>
       </div>
 

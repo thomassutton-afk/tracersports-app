@@ -164,20 +164,6 @@ export default async function Home() {
         >
           TRACER
         </h1>
-        <p
-          style={{
-            fontFamily: "var(--font-body)",
-            fontSize: 14,
-            fontWeight: 300,
-            color: "var(--text2)",
-            marginTop: 8,
-            maxWidth: 440,
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
-        >
-          Echo (carry-forward) and Pulse (season-reset) ratings, side by side.
-        </p>
       </div>
 
       {hasAnyGamesToday && (
