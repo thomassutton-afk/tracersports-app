@@ -134,7 +134,7 @@ TEAM_CONF_DIV_PRE2002 = {
     "OAK": ("AFC", "West"), "PHI": ("NFC", "East"), "PIT": ("AFC", "Central"),
     "SD": ("AFC", "West"), "SEA": ("AFC", "West"), "SF": ("NFC", "West"),
     "STL": ("NFC", "West"), "TB": ("NFC", "Central"), "TEN": ("AFC", "Central"),
-    "WAS": ("NFC", "East"),
+    "WAS": ("NFC", "East"), "HOO": ("AFC", "Central")
 }
 
 TEAM_CONF_DIV_2002_PLUS = {
@@ -148,7 +148,8 @@ TEAM_CONF_DIV_2002_PLUS = {
     "NYJ": ("AFC", "East"), "OAK": ("AFC", "West"), "PHI": ("NFC", "East"),
     "PIT": ("AFC", "North"), "SD": ("AFC", "West"), "SEA": ("NFC", "West"),
     "SF": ("NFC", "West"), "STL": ("NFC", "West"), "TB": ("NFC", "South"),
-    "TEN": ("AFC", "South"), "WAS": ("NFC", "East"),
+    "TEN": ("AFC", "South"), "WAS": ("NFC", "East"),"LAR": ("NFC", "West"),
+    "LAC": ("AFC", "West"), "LV": ("AFC", "West"),"WFT": ("NFC", "East")
 }
 
 
