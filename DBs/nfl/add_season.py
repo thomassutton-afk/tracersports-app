@@ -54,6 +54,9 @@ import predict
 import simulate_season
 from rebuild import rebuild_ratings, standings, sanity_checks, VARIANTS
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # DBs/ - for social_card.py
+import social_card
+
 DB_PATH = "nfl_elo.db"
 
 
@@ -340,6 +343,15 @@ def main():
                 record = f"{w:.0f}-{l:.0f}" + (f"-{t:.0f}" if t else "")
                 print(f"{name:24s} {record:>8s}   Elo {rating:.2f}")
         print()
+
+    # Instagram card for the next upcoming slate, always off Echo (the
+    # site's default variant) regardless of which variant just ran above -
+    # see social_card.py's own docstring for why that's safe. None means
+    # there's genuinely nothing upcoming to post (e.g. offseason), not
+    # an error.
+    card_path = social_card.generate_next_slate_card(conn, "nfl")
+    if card_path:
+        print(f"Saved Instagram card for the next slate: {card_path}")
 
 
 if __name__ == "__main__":
