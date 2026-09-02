@@ -34,14 +34,31 @@ def build_current_engine(conn, resets=None, params=None) -> engine.EloEngine:
     each team's current state - without writing anything back to the
     database. Shared by rebuild_ratings() (which also saves the
     per-game rows) and by predict.py/simulate_season.py (which only
-    need the resulting ratings, not another database write)."""
+    need the resulting ratings, not another database write).
+
+    If `params` is explicitly passed, it's used for the ENTIRE replay,
+    same as before (predict.py/simulate_season.py rely on being able to
+    force one fixed param set for a what-if run). If `params` is left
+    None (the normal case), this instead looks up db.params_for_season()
+    at each season boundary - see retune_season.py/db.py's
+    param_schedule.json. If no schedule file exists yet, params_for_season
+    falls back to active_params.json / the engine baseline, exactly like
+    before - so nothing changes here until a schedule is actually saved."""
     games = db.load_games(conn)
     resets = resets if resets is not None else db.load_resets(conn)
-    params = params if params is not None else (db.load_active_params(conn) or engine.default_params())
-    eng = engine.EloEngine(params, resets=resets)
+    use_schedule = params is None
+    eng = engine.EloEngine(
+        params if not use_schedule else db.params_for_season(conn, games[0]["season"]),
+        resets=resets,
+    )
 
     weeks = _week_buckets(games)
+    current_season = games[0]["season"] if games else None
     for key in sorted(weeks):
+        season = key[0]
+        if use_schedule and season != current_season:
+            eng.params = db.params_for_season(conn, season)
+            current_season = season
         week_games = sorted(weeks[key], key=lambda g: g["date"])
         game_dicts = [
             dict(date=g["date"], season=g["season"], type=g["type"], round=g["round"],
@@ -63,13 +80,17 @@ def rebuild_ratings(conn) -> None:
         return
 
     resets = db.load_resets(conn)
-    params = db.load_active_params(conn) or engine.default_params()
-    eng = engine.EloEngine(params, resets=resets)
+    eng = engine.EloEngine(db.params_for_season(conn, games[0]["season"]), resets=resets)
 
     weeks = _week_buckets(games)
 
     db.clear_ratings(conn)
+    current_season = games[0]["season"]
     for key in sorted(weeks):
+        season = key[0]
+        if season != current_season:
+            eng.params = db.params_for_season(conn, season)
+            current_season = season
         week_games = sorted(weeks[key], key=lambda g: g["date"])
         game_dicts = [
             dict(date=g["date"], season=g["season"], type=g["type"], round=g["round"],

@@ -325,6 +325,73 @@ def load_active_params(conn: sqlite3.Connection) -> Optional[dict]:
         return json.load(f)
 
 
+SCHEDULE_FILE = "param_schedule.json"
+# A per-season override of alpha/kmax/hfa (see nfl_tune_engine.py /
+# nfl_reconstruct_engine.py). Deliberately a SEPARATE file from
+# active_params.json rather than a new shape inside it, so a system that
+# doesn't know about scheduling yet (or a person hand-editing
+# active_params.json) can't accidentally desync the two. If this file
+# exists, rebuild.py should prefer it over active_params.json and swap
+# eng.params at each season boundary; if it doesn't exist, nothing about
+# current behavior changes.
+
+
+def save_param_schedule(conn: sqlite3.Connection, schedule: dict[int, dict]) -> None:
+    """Persist a season -> {alpha, kmax, hfa} schedule. `schedule` keys
+    are ints (seasons); JSON needs string keys, so this round-trips them
+    through str() on save and int() on load."""
+    import json
+    with open(SCHEDULE_FILE, "w") as f:
+        json.dump({str(season): params for season, params in schedule.items()}, f, indent=2)
+
+
+def load_param_schedule(conn: sqlite3.Connection) -> Optional[dict[int, dict]]:
+    """Returns the persisted season -> {alpha, kmax, hfa} schedule, or
+    None if no schedule file exists yet (caller should fall back to
+    load_active_params()/baseline - see PARAMS_FILE note above)."""
+    import json
+    import os
+    if not os.path.exists(SCHEDULE_FILE):
+        return None
+    with open(SCHEDULE_FILE) as f:
+        raw = json.load(f)
+    return {int(season): params for season, params in raw.items()}
+
+
+def params_for_season(conn: sqlite3.Connection, season: int) -> dict:
+    """The single lookup rebuild.py needs at each season boundary: the
+    schedule's entry for this season if one exists (merged onto the
+    engine baseline, so only alpha/kmax/hfa are overridden and
+    everything else - k_floor, rest adjustments, div/conf/playoff
+    multipliers - stays at the validated baseline); otherwise the most
+    recently locked EARLIER season in the schedule (e.g. an unplayed
+    season with a schedule uploaded via add_season.py but not yet
+    retuned inherits last season's numbers, not the original stale
+    baseline - a season with no games yet and no schedule entry is a
+    far more common case than "the schedule file itself is missing",
+    and defaulting all the way back to hfa=72/kmax=46 for it would be
+    a much worse failure mode than defaulting to last season's already
+    -corrected values); otherwise falls back to active_params.json;
+    otherwise the engine's own baseline."""
+    import engine
+    schedule = load_param_schedule(conn)
+    base = engine.default_params()
+    if schedule:
+        if season in schedule:
+            base.update({k: v for k, v in schedule[season].items() if k in ("alpha", "kmax", "hfa")})
+            return base
+        earlier = [s for s in schedule if s < season]
+        if earlier:
+            nearest = max(earlier)
+            base.update({k: v for k, v in schedule[nearest].items() if k in ("alpha", "kmax", "hfa")})
+            return base
+    active = load_active_params(conn)
+    if active:
+        base.update({k: v for k, v in active.items() if k in base})
+        return base
+    return base
+
+
 def upsert_team(conn: sqlite3.Connection, team_id: str, team_name: str) -> None:
     conn.execute(
         "INSERT INTO teams(team_id, team_name) VALUES (?, ?) "
