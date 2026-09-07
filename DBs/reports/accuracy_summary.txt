@@ -1,0 +1,122 @@
+Elo Model Accuracy Report
+=============================================
+Scope: all seasons
+
+All games             n=7228   accuracy=0.677   brier=0.2081   log_loss=0.6033
+Regular season        n=6754   accuracy=0.676   brier=0.2086   log_loss=0.6045
+Playoffs              n= 474   accuracy=0.694   brier=0.2004   log_loss=0.5874
+
+Baselines for context:
+  Coin flip (always 50%):   Brier = 0.2500
+  Always pick home team:    64.5% accuracy
+
+By season:
+  1947                  n= 700   accuracy=0.657   brier=0.2146   log_loss=0.6177
+  1948                  n= 430   accuracy=0.630   brier=0.2305   log_loss=0.6532
+  1949                  n= 760   accuracy=0.679   brier=0.2044   log_loss=0.5944
+  1950                  n=1186   accuracy=0.706   brier=0.1890   log_loss=0.5595
+  1951                  n= 760   accuracy=0.697   brier=0.2045   log_loss=0.5972
+  1952                  n= 710   accuracy=0.718   brier=0.1997   log_loss=0.5857
+  1953                  n= 750   accuracy=0.725   brier=0.1851   log_loss=0.5513
+  1954                  n= 692   accuracy=0.662   brier=0.2119   log_loss=0.6112
+  1955                  n= 618   accuracy=0.646   brier=0.2271   log_loss=0.6477
+  1956                  n= 622   accuracy=0.595   brier=0.2447   log_loss=0.6849
+
+By month:
+  1946-11               n= 130   accuracy=0.615   brier=0.2257   log_loss=0.6419
+  1946-12               n= 126   accuracy=0.587   brier=0.2210   log_loss=0.6308
+  1947-01               n= 134   accuracy=0.627   brier=0.2411   log_loss=0.6748
+  1947-02               n= 138   accuracy=0.710   brier=0.1981   log_loss=0.5812
+  1947-03               n= 134   accuracy=0.731   brier=0.1825   log_loss=0.5483
+  1947-04               n=  38   accuracy=0.684   brier=0.2343   log_loss=0.6683
+  1947-11               n=  64   accuracy=0.516   brier=0.2663   log_loss=0.7311
+  1947-12               n=  82   accuracy=0.561   brier=0.2455   log_loss=0.6816
+  1948-01               n=  96   accuracy=0.594   brier=0.2381   log_loss=0.6705
+  1948-02               n=  86   accuracy=0.733   brier=0.1992   log_loss=0.5888
+  1948-03               n=  76   accuracy=0.684   brier=0.2234   log_loss=0.6349
+  1948-04               n=  26   accuracy=0.769   brier=0.1922   log_loss=0.5741
+  1948-11               n= 142   accuracy=0.655   brier=0.2180   log_loss=0.6253
+  1948-12               n= 152   accuracy=0.691   brier=0.1943   log_loss=0.5754
+  1949-01               n= 168   accuracy=0.690   brier=0.2066   log_loss=0.6005
+  1949-02               n= 148   accuracy=0.635   brier=0.2149   log_loss=0.6156
+  1949-03               n= 136   accuracy=0.721   brier=0.1909   log_loss=0.5616
+  1949-04               n=  14   accuracy=0.714   brier=0.1680   log_loss=0.5106
+  1949-10               n=   2   accuracy=1.000   brier=0.1455   log_loss=0.4803
+  1949-11               n= 238   accuracy=0.664   brier=0.2040   log_loss=0.5950
+  1949-12               n= 244   accuracy=0.742   brier=0.1859   log_loss=0.5555
+  1950-01               n= 248   accuracy=0.722   brier=0.1841   log_loss=0.5480
+  1950-02               n= 232   accuracy=0.647   brier=0.2080   log_loss=0.6001
+  1950-03               n= 202   accuracy=0.767   brier=0.1616   log_loss=0.4957
+  1950-04               n=  20   accuracy=0.600   brier=0.1666   log_loss=0.5081
+  1950-10               n=   2   accuracy=1.000   brier=0.0980   log_loss=0.3674
+  1950-11               n= 162   accuracy=0.722   brier=0.2064   log_loss=0.6032
+  1950-12               n= 152   accuracy=0.658   brier=0.2189   log_loss=0.6290
+  1951-01               n= 158   accuracy=0.677   brier=0.1974   log_loss=0.5794
+  1951-02               n= 146   accuracy=0.699   brier=0.2057   log_loss=0.5989
+  1951-03               n= 118   accuracy=0.720   brier=0.1942   log_loss=0.5746
+  1951-04               n=  22   accuracy=0.773   brier=0.1990   log_loss=0.5903
+  1951-11               n= 130   accuracy=0.700   brier=0.2011   log_loss=0.5890
+  1951-12               n= 148   accuracy=0.682   brier=0.2110   log_loss=0.6104
+  1952-01               n= 146   accuracy=0.760   brier=0.1824   log_loss=0.5490
+  1952-02               n= 148   accuracy=0.696   brier=0.2091   log_loss=0.6047
+  1952-03               n= 112   accuracy=0.750   brier=0.1920   log_loss=0.5684
+  1952-04               n=  26   accuracy=0.769   brier=0.2044   log_loss=0.6000
+  1952-10               n=   2   accuracy=0.000   brier=0.3397   log_loss=0.8753
+  1952-11               n= 146   accuracy=0.774   brier=0.1810   log_loss=0.5462
+  1952-12               n= 146   accuracy=0.774   brier=0.1641   log_loss=0.5054
+  1953-01               n= 158   accuracy=0.665   brier=0.2097   log_loss=0.6052
+  1953-02               n= 156   accuracy=0.744   brier=0.1658   log_loss=0.5084
+  1953-03               n= 128   accuracy=0.727   brier=0.1942   log_loss=0.5688
+  1953-04               n=  14   accuracy=0.286   brier=0.2786   log_loss=0.7485
+  1953-10               n=   8   accuracy=0.625   brier=0.2318   log_loss=0.6562
+  1953-11               n= 132   accuracy=0.652   brier=0.2116   log_loss=0.6111
+  1953-12               n= 126   accuracy=0.659   brier=0.2168   log_loss=0.6228
+  1954-01               n= 148   accuracy=0.709   brier=0.1969   log_loss=0.5810
+  1954-02               n= 156   accuracy=0.583   brier=0.2397   log_loss=0.6699
+  1954-03               n= 110   accuracy=0.764   brier=0.1740   log_loss=0.5273
+  1954-04               n=  12   accuracy=0.333   brier=0.3201   log_loss=0.8388
+  1954-10               n=  10   accuracy=0.600   brier=0.2434   log_loss=0.6803
+  1954-11               n=  80   accuracy=0.688   brier=0.2127   log_loss=0.6162
+  1954-12               n= 126   accuracy=0.603   brier=0.2305   log_loss=0.6504
+  1955-01               n= 152   accuracy=0.651   brier=0.2351   log_loss=0.6682
+  1955-02               n= 142   accuracy=0.655   brier=0.2254   log_loss=0.6438
+  1955-03               n=  96   accuracy=0.625   brier=0.2310   log_loss=0.6572
+  1955-04               n=  12   accuracy=0.833   brier=0.1633   log_loss=0.5128
+  1955-11               n=  92   accuracy=0.663   brier=0.2226   log_loss=0.6373
+  1955-12               n= 118   accuracy=0.627   brier=0.2343   log_loss=0.6630
+  1956-01               n= 154   accuracy=0.506   brier=0.2653   log_loss=0.7278
+  1956-02               n= 140   accuracy=0.571   brier=0.2592   log_loss=0.7161
+  1956-03               n= 110   accuracy=0.645   brier=0.2328   log_loss=0.6614
+  1956-04               n=   8   accuracy=0.750   brier=0.1625   log_loss=0.5055
+
+Calibration (expected win% bucket vs actual win rate):
+  Bucket         Games   Predicted avg   Actual win rate
+  50%-60%        1637           55.5%             58.8%
+  60%-70%        2063           64.9%             69.1%
+  70%-80%        1344           74.4%             78.3%
+  80%-90%         578           84.3%             88.4%
+  90%-101%          53           91.5%             96.2%
+
+10 biggest upsets (lowest pre-game win probability for the winner):
+  1950-02-21  nba_0024 beat nba_0021  (89-78, given only 16.7% to win)
+  1950-02-21  nba_0024 beat nba_0021  (89-78, given only 17.0% to win)
+  1953-12-25  nba_0012 beat nba_0015  (88-78, given only 17.5% to win)
+  1953-02-28  nba_0012 beat nba_0021  (77-74, given only 18.6% to win)
+  1949-02-03  nba_0008 beat nba_0016  (88-80, given only 18.8% to win)
+  1954-01-23  nba_0012 beat nba_0021  (98-91, given only 21.1% to win)
+  1953-02-28  nba_0012 beat nba_0021  (77-74, given only 21.1% to win)
+  1950-01-10  nba_0023 beat nba_0021  (86-84, given only 21.5% to win)
+  1954-02-12  nba_0022 beat nba_0015  (71-62, given only 21.6% to win)
+  1949-01-22  nba_0008 beat nba_0012  (89-86, given only 21.6% to win)
+
+Worst 10 predictions (highest log loss - biggest confident misses):
+  1953-02-17  nba_0015 70-74 nba_0012  (favored: nba_0015 @ 93.0%, winner: nba_0012, log_loss=2.664)
+  1953-02-17  nba_0015 70-74 nba_0012  (favored: nba_0015 @ 91.5%, winner: nba_0012, log_loss=2.469)
+  1954-01-16  nba_0015 58-64 nba_0022  (favored: nba_0015 @ 89.4%, winner: nba_0022, log_loss=2.242)
+  1948-12-29  nba_0012 88-98 nba_0008  (favored: nba_0012 @ 89.3%, winner: nba_0008, log_loss=2.233)
+  1953-01-18  nba_0015 70-83 nba_0022  (favored: nba_0015 @ 89.2%, winner: nba_0022, log_loss=2.229)
+  1949-01-27  nba_0012 89-95 nba_0008  (favored: nba_0012 @ 89.2%, winner: nba_0008, log_loss=2.225)
+  1948-02-15  nba_0002 79-85 nba_0008  (favored: nba_0002 @ 89.0%, winner: nba_0008, log_loss=2.211)
+  1948-12-07  nba_0016 89-90 nba_0008  (favored: nba_0016 @ 88.0%, winner: nba_0008, log_loss=2.119)
+  1948-02-15  nba_0002 79-85 nba_0008  (favored: nba_0002 @ 87.4%, winner: nba_0008, log_loss=2.068)
+  1948-01-22  nba_0002 50-56 nba_0008  (favored: nba_0002 @ 87.2%, winner: nba_0008, log_loss=2.057)
