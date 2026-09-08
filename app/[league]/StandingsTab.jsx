@@ -52,7 +52,23 @@ export default function StandingsTab({ leagueConfig, standings, games = [], seas
         <td style={{ padding: "9px 8px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <TeamMark team={team} teamId={t.team_id} league={leagueConfig.id} size={24} />
-            <span style={{ fontSize: 12, fontWeight: 600, color: "var(--text)" }}>{team.name}</span>
+            <span className="desktop-only" style={{ fontSize: 12, fontWeight: 600, color: "var(--text)" }}>{team.name}</span>
+            <span
+              className="mobile-only-inline"
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: 10,
+                fontWeight: 700,
+                padding: "2px 6px",
+                borderRadius: 3,
+                border: `1.5px solid ${team.primary}`,
+                color: team.primary,
+                background: `${team.primary}20`,
+                letterSpacing: 0.3,
+              }}
+            >
+              {t.team_id}
+            </span>
             {ctx.flaggedIds.has(t.team_id) && (
               <span
                 title="Tied on every real tiebreaker criterion — needs a manual override in lib/sports/tiebreakerOverrides.json"
@@ -153,7 +169,7 @@ export default function StandingsTab({ leagueConfig, standings, games = [], seas
           </span>
           <div style={{ flex: 1, height: 1, background: "var(--border)" }} />
         </div>
-        <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 10, overflow: "hidden" }}>
+        <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 10, overflow: "auto" }}>
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
             {tableHead()}
             <tbody>
@@ -200,7 +216,7 @@ export default function StandingsTab({ leagueConfig, standings, games = [], seas
             </span>
             <div style={{ flex: 1, height: 1, background: "var(--border)" }} />
           </div>
-          <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 10, overflow: "hidden" }}>
+          <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 10, overflow: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse" }}>
               {tableHead()}
               <tbody>
@@ -250,7 +266,7 @@ export default function StandingsTab({ leagueConfig, standings, games = [], seas
           {Object.entries(divisions).map(([divName, teamIds]) => {
             const sorted = rankTeams(teamIds.filter((id) => teamMap[id]), ctx).map((id) => teamMap[id]).filter(Boolean);
             return (
-              <div key={divName} style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 10, overflow: "hidden" }}>
+              <div key={divName} style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 10, overflow: "auto" }}>
                 <div style={{ padding: "5px 10px", background: "var(--bg)", borderBottom: "1px solid var(--border)" }}>
                   <span style={{ fontFamily: "var(--font-mono)", fontSize: 9, fontWeight: 700, color: confColor, textTransform: "uppercase", letterSpacing: 1.5 }}>
                     {divName} Division
@@ -276,7 +292,7 @@ export default function StandingsTab({ leagueConfig, standings, games = [], seas
     // Fallback for a future league with no conferences at all — one flat table.
     const sorted = rankTeams(standings.map((t) => t.team_id), ctx).map((id) => teamMap[id]).filter(Boolean);
     return (
-      <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 10, overflow: "hidden" }}>
+      <div style={{ background: "var(--surface)", border: "1px solid var(--border)", borderRadius: 10, overflow: "auto" }}>
         <table style={{ width: "100%", borderCollapse: "collapse" }}>
           {tableHead()}
           <tbody>
@@ -291,7 +307,7 @@ export default function StandingsTab({ leagueConfig, standings, games = [], seas
 
   return (
     <div>
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 20 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 20, flexWrap: "wrap" }}>
         {(hasDivisions || showLeagueToggle) && (
           <div style={{ display: "flex", background: "var(--border)", borderRadius: 8, overflow: "hidden", border: "1px solid var(--border2)" }}>
             {(hasDivisions
@@ -329,7 +345,7 @@ export default function StandingsTab({ leagueConfig, standings, games = [], seas
       {view === "league" ? (
         <LeagueTable />
       ) : (
-        <div style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
+        <div className="standings-conf-row">
           {leagueConfig.conferences.map((confName, i) => (
             <ConferenceTable key={confName} confName={confName} confColor={i === 0 ? "var(--acc)" : "var(--ut)"} />
           ))}
