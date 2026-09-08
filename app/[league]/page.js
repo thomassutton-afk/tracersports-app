@@ -35,9 +35,9 @@ import NflBracketTab from "./NflBracketTab";
 import Footer from "@/components/Footer";
 
 const TABS = [
-  { id: "rankings", label: "Power Rankings" },
-  { id: "standings", label: "Standings" },
-  { id: "bracket", label: "Playoff Bracket" },
+  { id: "rankings", label: "Power Rankings", shortLabel: "Rankings" },
+  { id: "standings", label: "Standings", shortLabel: "Standings" },
+  { id: "bracket", label: "Playoff Bracket", shortLabel: "Bracket" },
 ];
 
 async function fetchStandings(league, season, variant) {
@@ -93,6 +93,32 @@ async function fetchStandings(league, season, variant) {
       points_for: row.points_for,
       points_against: row.points_against,
     }));
+
+  // Zero games back means either a bad league/season, or - much more
+  // commonly - a season whose schedule is loaded but hasn't kicked off
+  // yet. Rather than showing "No data yet", fall back to preseason_ratings
+  // (populated even pre-kickoff, see export_to_supabase.py's
+  // build_future_preseason_ratings) so the Dashboard can still show a
+  // real projected power ranking, just with 0-0 records and no
+  // week-over-week change yet (both fields the table already renders as
+  // "—"/0 when null, same as a missing season-projection row).
+  if (standings.length === 0) {
+    const { data: preseasonRows, error: preseasonError } = await supabase
+      .from("preseason_ratings")
+      .select("team_id, preseason_elo")
+      .eq("league", league)
+      .eq("season", season)
+      .eq("variant", variant);
+
+    if (preseasonError) return { standings: [], games: [], error: preseasonError };
+
+    const preseasonStandings = (preseasonRows ?? [])
+      .map((row) => ({ team_id: row.team_id, w: 0, l: 0, t: 0, rating: row.preseason_elo, change: null }))
+      .sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
+
+    return { standings: preseasonStandings, games: [], error: null };
+  }
+
   return { standings, games, error: null };
 }
 
@@ -172,6 +198,7 @@ export default function LeaguePage() {
   const searchParams = useSearchParams();
   const league = params.league;
   const variant = searchParams.get("variant") || "echo";
+  const seasonParam = searchParams.get("season");
   const [activeTab, setActiveTab] = useState("rankings");
   const [season, setSeason] = useState(null);
   const [standings, setStandings] = useState([]);
@@ -199,13 +226,24 @@ export default function LeaguePage() {
   // Resolve "current season" from real data (latest season with games)
   // rather than a hardcoded year, so this self-corrects the moment a new
   // season starts writing rows - no manual bump needed each year.
+  //
+  // ?season=YYYY in the URL overrides this - e.g. for previewing next
+  // year's preseason rankings (fetchStandings()'s preseason_ratings
+  // fallback below already handles a season with zero games; this is
+  // just what lets a person deliberately land on one before
+  // getCurrentSeason() would pick it on its own). Leaving the param off
+  // keeps today's exact behavior - nothing changes for a normal visit.
   useEffect(() => {
     if (!leagueConfig) return;
+    if (seasonParam) {
+      setSeason(Number(seasonParam));
+      return;
+    }
     setSeason(null);
     getCurrentSeason(league).then(({ season: resolved }) => {
       setSeason(resolved);
     });
-  }, [league, leagueConfig]);
+  }, [league, leagueConfig, seasonParam]);
 
   useEffect(() => {
     if (!leagueConfig || season === null) return;
@@ -279,28 +317,13 @@ export default function LeaguePage() {
         </div>
       </div>
 
-      <div
-        style={{
-          borderBottom: "1px solid var(--border)",
-          background: "var(--surface)",
-          display: "flex",
-          maxWidth: 1280,
-          margin: "0 auto",
-          padding: "0 2rem",
-        }}
-      >
+      <div className="tab-bar">
         {TABS.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
+            className="tab-btn"
             style={{
-              fontSize: 13,
-              fontFamily: "var(--font-mono)",
-              padding: "12px 20px",
-              cursor: "pointer",
-              background: "none",
-              border: "none",
-              marginBottom: -1,
               borderBottom:
                 activeTab === tab.id
                   ? "2px solid var(--acc)"
@@ -309,17 +332,18 @@ export default function LeaguePage() {
               fontWeight: activeTab === tab.id ? 600 : 400,
             }}
           >
-            {tab.label}
+            <span className="desktop-only">{tab.label}</span>
+            <span className="mobile-only-inline">{tab.shortLabel}</span>
           </button>
         ))}
       </div>
 
       {activeTab === "rankings" && (
-        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "1.5rem 2rem 4rem" }}>
+        <div className="page-container">
         <div className="main-grid">
           <div className="left-col">
             <div className="section-label">Current Ratings</div>
-            <table className="ratings-table">
+            <table className="ratings-table desktop-only">
               <thead>
                 <tr>
                   <Th align="left">#</Th>
@@ -418,6 +442,36 @@ export default function LeaguePage() {
                 })}
               </tbody>
             </table>
+
+            {/* Mobile replacement for the table above — same core fields
+                (rank, team, rating, record); Δ Last and projections are
+                dropped here since they're the least glanceable on a phone. */}
+            <div className="ratings-cards mobile-only">
+              {standings.map((row, i) => {
+                const team = leagueConfig.teams[row.team_id];
+                if (!team) return null;
+                const fillColor = getFillColor(team);
+                return (
+                  <div
+                    key={row.team_id}
+                    className="rating-card"
+                    style={{ borderLeft: `4px solid ${fillColor}` }}
+                  >
+                    <div className="rating-card-rank">{i + 1}</div>
+                    <TeamMark team={team} teamId={row.team_id} league={league} size={26} />
+                    <div className="rating-card-name">
+                      {team.name}
+                    </div>
+                    <div className="rating-card-stats">
+                      <div className="rating-card-rating">{row.rating?.toFixed(1) ?? "—"}</div>
+                      <div className="rating-card-record">
+                        {row.w}–{row.l}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
           <GamesPanel league={league} season={season} variant={variant} leagueConfig={leagueConfig} />
@@ -426,13 +480,13 @@ export default function LeaguePage() {
       )}
 
       {activeTab === "standings" && (
-        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "1.5rem 2rem 4rem" }}>
+        <div className="page-container">
           <StandingsTab leagueConfig={leagueConfig} standings={standings} games={standingsGames} season={season} variant={variant} />
         </div>
       )}
 
       {activeTab === "bracket" && (
-        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "1.5rem 2rem 4rem" }}>
+        <div className="page-container">
           {leagueConfig.playoffFormat?.type === "conference-bracket" ? (
             <div style={{ overflowX: "auto" }}>
               <BracketTab poGames={poGames} standings={standings} leagueConfig={leagueConfig} season={season} />
