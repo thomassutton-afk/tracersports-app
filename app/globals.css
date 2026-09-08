@@ -218,6 +218,299 @@ body {
 }
 .right-col { padding: 1.5rem 0 2rem 1.5rem; }
 
+/* Shared page chrome — tab bar + content wrapper reused across dashboard tabs */
+.tab-bar {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.page-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 4rem;
+}
+.home-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+}
+.team-list-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 4rem;
+}
+.about-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+.accuracy-strip {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  display: flex;
+  gap: 18px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text3);
+  flex-wrap: wrap;
+}
+.season-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 4rem;
+}
+.at-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 12px 0;
+}
+.at-filter-divider {
+  width: 1px;
+  height: 28px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+.at-search-input {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 5px 12px;
+  border: 1px solid var(--border2);
+  border-radius: 20px;
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  width: 160px;
+}
+.team-stats-row {
+  display: flex;
+  gap: 0;
+}
+.summary-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.standings-conf-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.standings-table-scroll {
+  overflow-x: auto;
+}
+.bracket-scroll {
+  overflow-x: auto;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* MOBILE BRACKET — round-by-round view replacing the horizontal-scroll
+   desktop bracket entirely on mobile (scrolling a multi-column diagram
+   sideways on a phone reads poorly no matter how it's tuned). Shared
+   across BracketTab / NflBracketTab / OverallBracketTab since the visual
+   language (round tabs, matchup cards) doesn't depend on league format. */
+.mobile-bracket-round-tabs {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+.mobile-bracket-round-btn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 16px;
+  border: 1px solid var(--border2);
+  background: transparent;
+  color: var(--text2);
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.mobile-bracket-round-btn.active {
+  background: var(--acc);
+  color: #fff;
+  border-color: var(--acc);
+}
+.mobile-bracket-group-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 14px 0 6px;
+}
+.mobile-matchup-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--surface);
+  margin-bottom: 10px;
+}
+.mobile-matchup-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+}
+.mobile-matchup-divider {
+  height: 1px;
+  background: var(--border);
+}
+.mobile-matchup-name {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text);
+}
+.mobile-matchup-seed {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text3);
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.mobile-matchup-score {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
+  min-width: 20px;
+  text-align: right;
+  color: var(--text);
+}
+.mobile-bracket-tbd {
+  padding: 16px;
+  text-align: center;
+  color: var(--text3);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  border: 1px dashed var(--border2);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.mobile-bracket-champion {
+  text-align: center;
+  padding: 18px 16px;
+  border-radius: 10px;
+  background: var(--acc-dim);
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.tab-btn {
+  font-size: 13px;
+  font-family: var(--font-mono);
+  padding: 12px 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-bottom: -1px;
+}
+
+/* Utility toggles — reused wherever a component needs a genuinely different
+   markup structure on mobile vs desktop, not just a CSS-only reflow. Both
+   variants stay in the DOM; the media query below decides which renders.
+   -inline variant is for text/spans that should stay inline when shown
+   (e.g. tab labels); the plain variant is for block/flex containers
+   (e.g. the ratings-cards list). */
+.desktop-only { display: revert; }
+.mobile-only { display: none; }
+.mobile-only-inline { display: none; }
+
+@media (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1.25rem;
+  }
+  .left-col {
+    padding: 1.25rem 0 1.5rem;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .right-col {
+    padding: 1.5rem 0 2rem;
+  }
+  .hero {
+    padding: 1.25rem 1.25rem 1rem;
+  }
+  .tab-bar {
+    padding: 0 1.25rem;
+    overflow-x: auto;
+  }
+  .tab-btn {
+    padding: 12px 10px;
+    font-size: 12px;
+  }
+  .page-container {
+    padding: 1.25rem 1.25rem 3rem;
+  }
+  .home-wrap {
+    padding: 2rem 1.25rem 3rem;
+  }
+  .team-list-wrap {
+    padding: 1.25rem 1.25rem 3rem;
+  }
+  .about-wrap {
+    padding: 0 1.25rem 3rem;
+  }
+  .accuracy-strip {
+    padding: 0.5rem 1.25rem;
+  }
+  .season-content {
+    padding: 1.25rem 1.25rem 3rem;
+  }
+  .at-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 12px 0;
+  }
+  .at-filter-divider {
+    display: none;
+  }
+  .at-search-input {
+    width: 100%;
+  }
+  .team-stats-row {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+  .summary-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .standings-conf-row {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .standings-conf-row > div {
+    width: 100%;
+  }
+  .desktop-only { display: none; }
+  .mobile-only { display: flex; }
+  .mobile-only-inline { display: inline; }
+}
+
 /* SECTION LABEL */
 .section-label {
   font-family: var(--font-mono);
@@ -248,6 +541,7 @@ body {
   align-items: flex-end;
   justify-content: space-between;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 .hero-label {
   font-family: var(--font-mono);
@@ -288,6 +582,78 @@ body {
   letter-spacing: 1px;
   margin-top: 4px;
   font-family: var(--font-mono);
+}
+
+/* RATING CARDS — mobile-only replacement for the desktop ratings-table.
+   Same data as the table's core columns (rank, team, rating, record) in a
+   stacked card instead of table cells; Δ Last and projections are dropped
+   here since they're the least glanceable on a small screen. */
+.ratings-cards { flex-direction: column; gap: 8px; }
+.rating-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.rating-card-rank {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text3);
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.rating-card-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.rating-card > .rating-card-name {
+  flex: 1;
+}
+.rating-card-name {
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  color: var(--text);
+}
+.rating-card-sub {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rating-card-stats {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.rating-card-rating {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  min-width: 38px;
+  text-align: right;
+}
+.rating-card-record {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text2);
+  min-width: 40px;
+  text-align: right;
 }
 
 /* HOMEPAGE — sport/league picker cards */
