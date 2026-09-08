@@ -49,3 +49,5 @@ __pycache__/
 reports/
 
 social_posts/
+
+~$*.xlsx
