@@ -89,7 +89,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div style={S.contentWrap}>
+      <div className="about-wrap">
         <Section title="What is TRACER?">
           <p style={S.body}>
             TRACER is an Elo-based rating system for the NBA, calculating a single number
@@ -138,7 +138,8 @@ export default function AboutPage() {
           {loading ? (
             <div style={S.tableLoading}>Loading live accuracy…</div>
           ) : (
-            <div style={S.tableWrap}>
+            <>
+            <div style={S.tableWrap} className="desktop-only">
               <table style={S.table}>
                 <thead>
                   <tr>
@@ -177,6 +178,50 @@ export default function AboutPage() {
                 </tbody>
               </table>
             </div>
+
+            {/* Mobile replacement — the desktop table is ~790px wide even
+                with overflow-x scroll available, which on a phone shows
+                maybe two columns before hitting a wall with no visual hint
+                there's more. Only 4 rows exist, so a card each is simpler
+                than forcing horizontal scroll on a data table this small. */}
+            <div className="mobile-only" style={{ flexDirection: "column", gap: 10, margin: "0.5rem 0 1rem" }}>
+              {["NBA", "WNBA", "NFL", "Combined"].map((label) => {
+                const row = table[label];
+                const isCombined = label === "Combined";
+                return (
+                  <div
+                    key={label}
+                    style={{
+                      border: "1px solid var(--border)",
+                      borderRadius: 10,
+                      padding: "12px 14px",
+                      background: isCombined ? "var(--surface2)" : "var(--surface)",
+                    }}
+                  >
+                    <div style={{ fontFamily: "var(--font-mono)", fontSize: 13, fontWeight: 700, marginBottom: 8 }}>{label}</div>
+                    <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text2)", marginBottom: 4 }}>
+                      <span>Echo</span>
+                      <span>
+                        {row.echo ? `${row.echo.pct}%` : "—"}
+                        {!isCombined && row.echo?.brier != null ? ` · Brier ${row.echo.brier}` : ""}
+                      </span>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text2)", marginBottom: 4 }}>
+                      <span>Pulse</span>
+                      <span>
+                        {row.pulse ? `${row.pulse.pct}%` : "—"}
+                        {!isCombined && row.pulse?.brier != null ? ` · Brier ${row.pulse.brier}` : ""}
+                      </span>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--text3)" }}>
+                      <span>Games</span>
+                      <span>{Number(row.echo?.n ?? 0).toLocaleString()}</span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            </>
           )}
         </Section>
 
@@ -225,8 +270,6 @@ export default function AboutPage() {
 }
 
 const S = {
-  contentWrap: { maxWidth: 760, margin: "0 auto", padding: "0 2rem 4rem" },
-
   section: { padding: "3rem 0 0" },
   eyebrow: {
     fontFamily: "var(--font-mono)",
