@@ -321,7 +321,8 @@ def build_current_engine(conn, variant: str = "echo", resets=None, params=None) 
                  home_pts=g["home_pts"], away_pts=g["away_pts"], ot=g["ot"], neutral=g["neutral"],
                  home_conf=g["home_conf"], away_conf=g["away_conf"],
                  home_div=g["home_div"], away_div=g["away_div"],
-                 home_is_fbs=g["home_is_fbs"], away_is_fbs=g["away_is_fbs"])
+                 home_is_fbs=g["home_is_fbs"], away_is_fbs=g["away_is_fbs"],
+                 home_ap_rank=g.get("home_ap_rank"), away_ap_rank=g.get("away_ap_rank"))
             for g in week_games
         ]
         eng.process_week(game_dicts)
@@ -373,7 +374,8 @@ def rebuild_ratings(conn, variant: str, params: dict | None = None) -> None:
                  home_pts=g["home_pts"], away_pts=g["away_pts"], ot=g["ot"], neutral=g["neutral"],
                  home_conf=g["home_conf"], away_conf=g["away_conf"],
                  home_div=g["home_div"], away_div=g["away_div"],
-                 home_is_fbs=g["home_is_fbs"], away_is_fbs=g["away_is_fbs"])
+                 home_is_fbs=g["home_is_fbs"], away_is_fbs=g["away_is_fbs"],
+                 home_ap_rank=g.get("home_ap_rank"), away_ap_rank=g.get("away_ap_rank"))
             for g in week_games
         ]
         results = eng.process_week(game_dicts)

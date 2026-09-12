@@ -70,18 +70,42 @@ with zero already-resolved members to reference at all (its every
 member is debuting the same season) falls back to the overall FBS
 average.
 
-POSTSEASON - PHASE 1 of a larger deferred effort (see add_season.py's
-normalizer docstring). Only conference championship games are
-currently classified (Round=="CCG"), via a dedicated
-conf_championship_mult - bowl/CFP-round classification is still fully
-deferred, since the postseason FORMAT itself changed multiple times
-across 1996-2025 (no unified system pre-1998, BCS 1998-2013, 4-team
-CFP 2014-2023, 12-team CFP 2024+) and needs real era-branching logic
-that doesn't exist yet. NFL_Elo's playoff_round_mult mechanism is left
-in place but empty/unused for now - it only ever applies to type='P'
-games, and every CFB game (CCGs included) is still type='R' by design
-(see add_season.py's docstring on why postseason isn't reclassified
-as type='P' yet).
+POSTSEASON - PHASE 2 (see normalize_sr_games.py's docstring for the
+full era-by-era classification rationale). Round now takes values
+"CCG", "NC", "CFP-R1", "CFP-QF", "CFP-SF", and "BOWL", in addition to
+None (regular season). Two separate multiplier mechanisms apply them,
+both firing regardless of `type` - every CFB game, postseason
+included, is still type='R' by design (see normalize_sr_games.py's
+docstring on why postseason isn't reclassified as type='P'), which
+means NFL_Elo's inherited playoff_round_mult mechanism (_po_mult
+below) is permanently INERT for CFB - it only ever fires for type='P'
+games, which never happens here. It's kept only for structural parity
+with NFL_Elo; CFB's real postseason-round bump lives in the separate
+postseason_round_mult dict/_postseason_mult() function instead:
+  - _ccg_mult / conf_championship_mult: unchanged from Phase 1, for
+    Round=="CCG".
+  - _postseason_mult / postseason_round_mult: a CCG-style (type-
+    agnostic) parallel to playoff_round_mult, keyed by "NC"/"CFP-R1"/
+    "CFP-QF"/"CFP-SF".
+  - _bowl_mult / bowl_mult + bowl_rank_*: for Round=="BOWL" only.
+    Deliberately NOT a hardcoded "major bowl" name list (which would
+    need the same era-branching the rest of this effort was trying to
+    avoid) - instead scores bowl importance directly off the two
+    teams' own AP ranks (home_ap_rank/away_ap_rank, now actually READ
+    here for the first time - db.py's module docstring previously
+    described these as display-only/never read by the engine; that's
+    now only true outside the "BOWL" round). Both
+    teams ranked -> bonus decays EXPONENTIALLY off the best possible
+    combined rank (home_ap_rank + away_ap_rank, 3..49); exactly one
+    team ranked -> a much smaller bump on a compressed exponential
+    scale (deliberately small: a lone ranked team in a bowl is rare
+    and rarely a highly-ranked one); neither ranked -> flat bowl_mult
+    only.
+All of postseason_round_mult, bowl_rank_bonus_max, and
+bowl_one_ranked_bonus_max default to 0.0/empty (no-op) in
+BASELINE_PARAMS, same "untuned placeholder" convention as
+conf_championship_mult - real values need cfb_tune_engine.py against
+loaded postseason data.
 
 FCS HANDLING - genuinely new, no NFL_Elo equivalent (the NFL has no
 lower-division opponents at all). CFB has 130+ programs and regularly
@@ -108,6 +132,7 @@ cfb_tune_engine.py to find a reasonable value once real games are
 loaded.
 """
 from __future__ import annotations
+import math
 from dataclasses import dataclass, field
 from datetime import date
 from typing import Optional
@@ -126,10 +151,22 @@ BASELINE_PARAMS = dict(
     rest_major=24.0,        # applied for a 6+ day rest differential (bye week+)
     conf_game_mult=1.1,     # any conference game, division or not - see SEASON-ENTRY
                             # docstring section on why div_game_mult was dropped
-    conf_championship_mult=1.0,  # Phase 1 postseason bump for Round=="CCG" - untuned,
+    conf_championship_mult=1.0,  # postseason bump for Round=="CCG" - untuned,
                                   # 1.0 is a no-op placeholder until this is tuned for real
-    playoff_round_mult={},  # empty until further postseason round labels are classified
-                             # (deferred - see add_season.py's normalizer docstring)
+    playoff_round_mult={},  # inherited from NFL_Elo, permanently inert for CFB - see
+                             # POSTSEASON above; postseason_round_mult is CFB's real equivalent
+    postseason_round_mult={},  # bump for Round in ("NC","CFP-R1","CFP-QF","CFP-SF") - see
+                                # POSTSEASON above. Empty/no-op until tuned.
+    bowl_mult=1.0,          # base bump for any Round=="BOWL" game - untuned no-op placeholder
+    bowl_rank_bonus_max=0.0,   # extra multiplier at the best possible combined AP rank (3) for
+                                # a two-ranked-team bowl, decaying to ~0 by the worst (49) - see
+                                # POSTSEASON above. 0.0 is a no-op until tuned for real.
+    bowl_rank_decay=0.08,      # exponential decay rate for the two-ranked-team falloff (shape
+                                # placeholder - irrelevant while bowl_rank_bonus_max is 0.0)
+    bowl_one_ranked_bonus_max=0.0,  # much smaller, compressed-scale bump when exactly one team
+                                      # is ranked - see POSTSEASON above. Also a no-op until tuned.
+    bowl_one_ranked_decay=0.05,      # decay rate for the one-ranked-team falloff (shape
+                                       # placeholder, same as bowl_rank_decay above)
     fcs_rating=1200.0,      # fixed opponent strength for any non-FBS team - see FCS HANDLING above
 )
 # UNTUNED STARTING POINT - these are NFL_Elo's exact validated values,
@@ -149,9 +186,14 @@ DEFAULT_PARAMS = BASELINE_PARAMS
 
 def default_params() -> dict:
     """A safe, independent mutable copy of the original baseline
-    parameters (including a fresh copy of the nested playoff_round_mult
-    dict), to build tuned parameter sets from."""
-    return {**BASELINE_PARAMS, "playoff_round_mult": dict(BASELINE_PARAMS["playoff_round_mult"])}
+    parameters (including fresh copies of the nested playoff_round_mult
+    and postseason_round_mult dicts), to build tuned parameter sets
+    from."""
+    return {
+        **BASELINE_PARAMS,
+        "playoff_round_mult": dict(BASELINE_PARAMS["playoff_round_mult"]),
+        "postseason_round_mult": dict(BASELINE_PARAMS["postseason_round_mult"]),
+    }
 
 
 def week_from_date(d: date, season_start: date) -> int:
@@ -217,14 +259,55 @@ def _po_mult(game_type: str, round_: Optional[str], params: dict) -> float:
 
 
 def _ccg_mult(round_: Optional[str], params: dict) -> float:
-    """Conference championship bump - Phase 1 of postseason handling
-    (see this module's POSTSEASON docstring section). Unlike NFL_Elo's
-    playoff_round_mult, this fires regardless of `type` - CCGs are
-    still type='R' in this dataset (see add_season.py's docstring on
-    why postseason games aren't reclassified as type='P' yet)."""
+    """Conference championship bump (see this module's POSTSEASON
+    docstring section). Unlike NFL_Elo's playoff_round_mult, this
+    fires regardless of `type` - CCGs are still type='R' in this
+    dataset (see normalize_sr_games.py's docstring on why postseason
+    games aren't reclassified as type='P')."""
     if round_ == "CCG":
         return params["conf_championship_mult"]
     return 1.0
+
+
+def _postseason_mult(round_: Optional[str], params: dict) -> float:
+    """National championship / CFP-bracket bump (see this module's
+    POSTSEASON docstring section) - a CCG-style, type-agnostic
+    parallel to NFL_Elo's playoff_round_mult, needed because that
+    mechanism (_po_mult above) only ever fires for type='P' games and
+    every CFB game stays type='R' by design."""
+    return params["postseason_round_mult"].get(round_, 1.0)
+
+
+def _bowl_mult(round_: Optional[str], home_ap_rank: Optional[int],
+               away_ap_rank: Optional[int], params: dict) -> float:
+    """Rank-based bowl-importance bump for Round=="BOWL" games only
+    (see this module's POSTSEASON docstring section for the full
+    rationale - deliberately rank-driven rather than a hardcoded
+    per-era "major bowl" name list).
+
+    Combined rank (home_ap_rank + away_ap_rank) ranges from 3 (the two
+    best possible teams, #1 and #2) to 49 (the two worst possible
+    ranked teams, #24 and #25) when both teams are ranked - the bonus
+    decays exponentially off the best-possible end of that range, so a
+    top-5-vs-top-5 bowl is disproportionately more major than a linear
+    falloff would give it. Exactly one team ranked gets a much
+    smaller, compressed-scale bump (this tier is rare and rarely
+    involves a highly-ranked team anyway). Neither team ranked -> the
+    flat bowl_mult base only."""
+    if round_ != "BOWL":
+        return 1.0
+    base = params["bowl_mult"]
+    home_ranked = home_ap_rank is not None
+    away_ranked = away_ap_rank is not None
+    if home_ranked and away_ranked:
+        combined = home_ap_rank + away_ap_rank  # 3 (best) .. 49 (worst)
+        bonus = params["bowl_rank_bonus_max"] * math.exp(-params["bowl_rank_decay"] * (combined - 3))
+        return base + bonus
+    if home_ranked or away_ranked:
+        rank = home_ap_rank if home_ranked else away_ap_rank
+        bonus = params["bowl_one_ranked_bonus_max"] * math.exp(-params["bowl_one_ranked_decay"] * (rank - 1))
+        return base + bonus
+    return base
 
 
 # ----------------------------------------------------------------------
@@ -425,8 +508,10 @@ class EloEngine:
             ot_mult = 0.7 if g.get("ot") else 1.0
             mov_mult = ((abs(mov) + 3) ** 0.8) / (7.5 + 0.006 * abs(pre_home - pre_away)) * ot_mult
 
-            po_mult = _po_mult(g["type"], g.get("round"), params)
+            po_mult = _po_mult(g["type"], g.get("round"), params)  # always 1.0 for CFB - see POSTSEASON docstring
             ccg_mult = _ccg_mult(g.get("round"), params)
+            postseason_mult = _postseason_mult(g.get("round"), params)
+            bowl_mult = _bowl_mult(g.get("round"), g.get("home_ap_rank"), g.get("away_ap_rank"), params)
             games_played_home = pre[home_id]["games_played"] + 1
             games_played_away = pre[away_id]["games_played"] + 1
             k_home = _decayed_k(games_played_home, season, params)
@@ -440,7 +525,7 @@ class EloEngine:
             # (if any) division either side is in. See engine.py's
             # module docstring on this collapse from NFL_Elo's separate
             # div_game_mult/conf_game_mult pair.
-            group_mult = (params["conf_game_mult"] if conf_g else 1) * po_mult * ccg_mult
+            group_mult = (params["conf_game_mult"] if conf_g else 1) * po_mult * ccg_mult * postseason_mult * bowl_mult
             keff_home = k_home * group_mult
             keff_away = k_away * group_mult
 

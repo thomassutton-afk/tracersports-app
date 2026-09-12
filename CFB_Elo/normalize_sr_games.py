@@ -40,17 +40,45 @@ WHAT THIS DOES:
     last year's season."
   - Type is ALWAYS 'R' for every game, including bowls and conference
     championships - postseason games are NOT reclassified as type='P'.
-    Round is "CCG" for conference championship games (identified by
-    "Championship" appearing in Notes, e.g. "SEC Championship (Atlanta
-    GA)" - reliable across every era regardless of exact conference
-    name) and None for everything else, bowls included - bowl/CFP-round
-    classification is Phase 2, deferred, since the postseason FORMAT
-    itself changed multiple times across 1996-2025 (no unified system
-    pre-1998, BCS 1998-2013, 4-team CFP 2014-2023, 12-team CFP 2024+)
-    and needs real era-branching logic that doesn't exist yet. The raw
-    Notes text is carried through to the output CSV regardless, so
-    Phase 2 can classify bowls later without re-running this
-    normalizer against the original raw file again.
+    Round classification (PHASE 2 - see classify_round() below) is
+    era-branched, since the postseason FORMAT itself changed multiple
+    times across 1996-2025 (no unified system pre-1998, BCS 1998-2013,
+    4-team CFP 2014-2023, 12-team CFP 2024+):
+      - "NC" (national championship): explicit in Notes from 2006
+        onward ("BCS Championship" 2006-2013, "College Football
+        Playoff National Championship" 2014+). For 1998-2005, the BCS
+        title game was just whichever of Rose/Sugar/Orange/Fiesta was
+        that year's designated host in the normal rotation, with NO
+        distinguishing text in Notes - see BCS_EMBEDDED_TITLE_BOWL,
+        cross-referenced against BCS history and confirmed directly
+        against the 1998 and 2000 raw files.
+      - "CFP-R1" (12-team first round): explicit in Notes from 2024
+        onward ("College Football Playoff - First Round").
+      - "CFP-SF" (semifinal): explicit host-bowl-pair-by-season lookup
+        (CFP_SEMIFINAL_PAIR) - the semifinal bowls are NEVER named as
+        such in Notes (just the host bowl's normal name), in either
+        the 4-team (2014-2023) or 12-team (2024+) era.
+      - "CFP-QF" (12-team quarterfinal, 2024+ only): whichever New
+        Year's Six bowl isn't that season's semifinal host - also
+        never explicitly named as a quarterfinal in Notes.
+      - "CCG" (conference championship): "Championship" appearing in
+        Notes, e.g. "SEC Championship (Atlanta GA)" - reliable across
+        every era regardless of exact conference name, but ONLY once
+        NC is ruled out first (both "BCS Championship" and "College
+        Football Playoff National Championship" also contain the
+        word "Championship").
+      - "BOWL" (every other bowl, non-playoff): "Bowl" appearing in
+        Notes. Deliberately NOT split into a hardcoded "major bowl"
+        list - the engine instead scores a BOWL game's importance
+        directly off the two teams' own AP ranks (TeamAPRank/
+        OppAPRank, already carried through below), which needs no
+        era-branching and better reflects that a mediocre edition of
+        a historically major bowl isn't actually more important than
+        an elite matchup in a smaller one.
+      - None: regular season.
+    The raw Notes text is carried through to the output CSV regardless
+    of era, so this classification can be revised later without
+    re-running this normalizer against the original raw file again.
   - OT is hardcoded to 0 for every row - this source format carries no
     overtime flag. Revisit if/when a source with real OT data is added.
 
@@ -71,6 +99,106 @@ import sys
 import pandas as pd
 
 RANK_RE = re.compile(r"^\((\d+)\)\s*(.+)$")
+
+# PHASE 2 POSTSEASON LOOKUP TABLES - see module docstring. Static
+# historical fact, not derived from the data itself, so these are
+# plain constants rather than something computed per-file.
+
+# 1998-2005: the BCS title game WAS one of the four rotating bowls
+# (no standalone game existed yet), and Notes carries no marker
+# distinguishing it from a non-title edition of that same bowl in a
+# different year. Confirmed directly against the 1998 (Fiesta) and
+# 2000 (Orange) raw files; the remaining years follow the same
+# well-documented Rose/Sugar/Orange/Fiesta rotation.
+BCS_EMBEDDED_TITLE_BOWL = {
+    1998: "Fiesta", 1999: "Sugar", 2000: "Orange", 2001: "Rose",
+    2002: "Fiesta", 2003: "Sugar", 2004: "Orange", 2005: "Rose",
+}
+
+# 2014-2025: the two CFP semifinal host bowls each season, on a
+# 3-year cycle. Never marked as "semifinal" in Notes in either the
+# 4-team (2014-2023) or 12-team (2024+) era - just the host bowl's
+# ordinary name. 2024 and 2025 confirmed directly against this
+# dataset's own raw files; 2014-2023 confirmed against independent
+# sources following the same cycle.
+CFP_SEMIFINAL_PAIR = {
+    2014: ("Rose", "Sugar"), 2015: ("Orange", "Cotton"), 2016: ("Fiesta", "Peach"),
+    2017: ("Rose", "Sugar"), 2018: ("Orange", "Cotton"), 2019: ("Fiesta", "Peach"),
+    2020: ("Rose", "Sugar"), 2021: ("Orange", "Cotton"), 2022: ("Fiesta", "Peach"),
+    2023: ("Rose", "Sugar"), 2024: ("Orange", "Cotton"), 2025: ("Fiesta", "Peach"),
+}
+
+# The New Year's Six bowls - used only to detect a 12-team-era (2024+)
+# quarterfinal (whichever of these isn't hosting that year's
+# semifinal - see CFP_SEMIFINAL_PAIR).
+NY6_BOWLS = ("Rose", "Sugar", "Orange", "Cotton", "Fiesta", "Peach")
+
+
+def classify_round(notes: str, season: int) -> "str | None":
+    """PHASE 2 postseason round classification - see module docstring
+    for the full era-by-era rationale. Order matters: NC must be ruled
+    out before the CCG check, since both "BCS Championship" and
+    "College Football Playoff National Championship" contain the word
+    "Championship" too."""
+    if not notes:
+        return None
+
+    if "BCS Championship" in notes or "College Football Playoff National Championship" in notes:
+        return "NC"
+    embedded_host = BCS_EMBEDDED_TITLE_BOWL.get(season)
+    if embedded_host and f"{embedded_host} Bowl" in notes:
+        return "NC"
+
+    if "College Football Playoff - First Round" in notes:
+        return "CFP-R1"
+
+    sf_pair = CFP_SEMIFINAL_PAIR.get(season)
+    if sf_pair and any(f"{b} Bowl" in notes for b in sf_pair):
+        return "CFP-SF"
+
+    if season >= 2024 and any(f"{b} Bowl" in notes for b in NY6_BOWLS):
+        return "CFP-QF"
+
+    if re.search(r"\bChampionship\b", notes):
+        return "CCG"
+
+    if re.search(r"\bBowl\b", notes):
+        return "BOWL"
+
+    return None
+
+
+def dedupe_raw_rows(df: pd.DataFrame) -> pd.DataFrame:
+    """Sports-Reference occasionally emits two rows for the same real
+    game with different Notes text: one copy carrying the actual bowl/
+    event name, the other just a generic venue name (or blank). Left
+    alone, this used to dedupe by accident (every game had Round=None
+    regardless of which copy survived) - but now that Round
+    classification can differ between the two copies (one recognizes
+    a bowl/event name, the other doesn't), keeping both would let them
+    collide on DIFFERENT (date, home, away, type, round) keys and
+    double-insert into the DB, double-counting that game's Elo impact.
+    Confirmed against 8 real cases across 1996-2025 (six bowl games
+    plus the 2010 SEC Championship Game). Groups by (Date, Winner,
+    Loser) and keeps whichever copy's Notes actually names a
+    recognizable event, dropping the other."""
+    def informativeness(notes: str) -> int:
+        if not notes:
+            return 0
+        if re.search(r"\bBowl\b|\bChampionship\b|Playoff|BCS", notes):
+            return 2
+        return 1
+
+    working = df.copy()
+    working["_info"] = working["Notes"].fillna("").astype(str).map(informativeness)
+    working = working.sort_values("_info", ascending=False)
+    before = len(working)
+    working = working.drop_duplicates(subset=["Date", "Winner", "Loser"], keep="first")
+    dropped = before - len(working)
+    if dropped:
+        print(f"NOTE: dropped {dropped} duplicate raw row(s) (same date/winner/loser, "
+              f"kept whichever copy's Notes named a recognizable bowl/championship).")
+    return working.drop(columns=["_info"]).sort_index()
 
 
 def parse_team(raw: str) -> tuple[str, "int | None"]:
@@ -154,6 +282,12 @@ def normalize(path: str) -> pd.DataFrame:
             print(f"  {sr['Date'].date()}: {sr['Winner']} vs {sr['Loser']}")
     df = df[df["Pts"].notna() & df[loser_pts_col].notna()].copy()
 
+    # Sports-Reference source-data dedup (see dedupe_raw_rows' docstring) -
+    # must happen before classification, not after, since it's exactly
+    # the classification differing between two copies of the same game
+    # that creates the double-count risk.
+    df = dedupe_raw_rows(df)
+
     rows = []
     for _, r in df.iterrows():
         season = season_for_date(r["Date"])
@@ -174,21 +308,10 @@ def normalize(path: str) -> pd.DataFrame:
         win_pts = int(r["Pts"])
         lose_pts = int(r[loser_pts_col])
 
-        # PHASE 1 POSTSEASON (see this module's docstring): a
-        # conference championship game is reliably identifiable by
-        # "Championship" appearing in Notes, regardless of era or
-        # exact conference name - e.g. "SEC Championship (Atlanta GA)",
-        # "Big 12 Championship (St. Louis MO)". Everything else in
-        # Notes (bowl names) is left unclassified (Round=None) for now -
-        # bowl/CFP-round classification is Phase 2, deferred, since the
-        # postseason FORMAT itself changed multiple times across
-        # 1996-2025 and needs real era-branching logic that doesn't
-        # exist yet. The raw Notes text is still carried through to the
-        # output CSV either way, so Phase 2 can classify bowls later
-        # without needing to re-run this normalizer against the
-        # original raw file again.
+        # PHASE 2 POSTSEASON (see this module's docstring and
+        # classify_round() above for the full era-by-era rationale).
         notes = str(r["Notes"]).strip() if "Notes" in df.columns and pd.notna(r["Notes"]) else ""
-        round_ = "CCG" if re.search(r"\bChampionship\b", notes) else None
+        round_ = classify_round(notes, season)
 
         rows.append(dict(
             Date=date_str, Season=season, Type="R", Round=round_,

@@ -34,7 +34,10 @@ CFB-SPECIFIC SCHEMA ADDITIONS
   to work off game data without a database round-trip.
 - `games`/`schedule` also carry nullable `home_ap_rank`/`away_ap_rank`
   (the AP poll rank at kickoff, parsed from source data like
-  "(11) Penn State"). Display-only - the Elo engine never reads these.
+  "(11) Penn State"). Display-only for most games - the Elo engine
+  only reads these for Round=="BOWL" games, to score bowl importance
+  by participants' rank instead of a hardcoded bowl-name list (see
+  engine.py's POSTSEASON docstring section / _bowl_mult).
 - `ratings` carries `conf_game`/`div_game` (whether this was a
   conference/division matchup) and `t` (ties), on top of the same
   columns NBA/WNBA use - same as NFL_Elo. Note division games are far
