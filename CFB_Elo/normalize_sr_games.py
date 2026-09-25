@@ -268,19 +268,44 @@ def normalize(path: str) -> pd.DataFrame:
     loser_pts_col = "Pts.1" if "Pts.1" in df.columns else "Pts"
 
     # A row with a real matchup but NO score (blank Pts on either side)
-    # is a postponed, cancelled, or forfeited game that never actually
-    # got played - Sports-Reference still lists it, but there's no
-    # result to record. Skip these rather than crashing; they're
-    # genuinely rare (a handful across 30 seasons), not a sign
-    # something's wrong with the file.
-    n_no_score = (df["Pts"].isna() | df[loser_pts_col].isna()).sum()
-    if n_no_score:
-        skipped = df[df["Pts"].isna() | df[loser_pts_col].isna()]
-        print(f"WARNING: skipping {n_no_score} row(s) with no final score "
+    # falls into one of two buckets, distinguished by date:
+    #   - UPCOMING: the game's date is today or in the future (or within
+    #     RECENT_UNSCORED_BUFFER_DAYS just past, since Sports-Reference
+    #     can take a day to post a final score) - a legitimate game that
+    #     just hasn't been played yet. These rows are KEPT, with
+    #     PointsFor/PointsAgainst left blank; add_season.py already
+    #     knows a scoreless row belongs in `schedule`, not `games`, so
+    #     nothing further is needed here.
+    #   - STALE: the date is further in the past than the buffer and it
+    #     STILL has no score - a postponed, cancelled, or forfeited game
+    #     that never actually happened. Drop these, same as always;
+    #     they're genuinely rare (a handful across 30 seasons). This
+    #     distinction matters: unlike an upcoming game, a stale
+    #     cancellation will never get a real result to match against, so
+    #     letting it through to `schedule` would leave it showing up as
+    #     an "upcoming game" forever (db.upcoming_games() does no date
+    #     filtering of its own).
+    RECENT_UNSCORED_BUFFER_DAYS = 3
+    no_score = df["Pts"].isna() | df[loser_pts_col].isna()
+    cutoff = pd.Timestamp.now().normalize() - pd.Timedelta(days=RECENT_UNSCORED_BUFFER_DAYS)
+    is_upcoming = no_score & (df["Date"] >= cutoff)
+    is_stale = no_score & (df["Date"] < cutoff)
+
+    n_upcoming = is_upcoming.sum()
+    if n_upcoming:
+        print(f"NOTE: {n_upcoming} row(s) with no final score are upcoming/unplayed "
+              f"games - keeping them (routed to the schedule table downstream):")
+        for _, sr in df[is_upcoming].iterrows():
+            print(f"  {sr['Date'].date()}: {sr['Winner']} vs {sr['Loser']}")
+
+    n_stale = is_stale.sum()
+    if n_stale:
+        skipped = df[is_stale]
+        print(f"WARNING: skipping {n_stale} row(s) with no final score "
               f"(likely postponed/cancelled games):")
         for _, sr in skipped.iterrows():
             print(f"  {sr['Date'].date()}: {sr['Winner']} vs {sr['Loser']}")
-    df = df[df["Pts"].notna() & df[loser_pts_col].notna()].copy()
+    df = df[~is_stale].copy()
 
     # Sports-Reference source-data dedup (see dedupe_raw_rows' docstring) -
     # must happen before classification, not after, since it's exactly
@@ -305,8 +330,9 @@ def normalize(path: str) -> pd.DataFrame:
             winner_ha, loser_ha = "H", "A"
 
         date_str = r["Date"].date().isoformat()
-        win_pts = int(r["Pts"])
-        lose_pts = int(r[loser_pts_col])
+        has_score = pd.notna(r["Pts"]) and pd.notna(r[loser_pts_col])
+        win_pts = int(r["Pts"]) if has_score else None
+        lose_pts = int(r[loser_pts_col]) if has_score else None
 
         # PHASE 2 POSTSEASON (see this module's docstring and
         # classify_round() above for the full era-by-era rationale).

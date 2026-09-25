@@ -1735,87 +1735,87 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2023-12-02,2023,R,,appalachian-state,troy,A,23,49,0,,,
 2023-12-09,2023,R,,army,navy,N,17,11,0,,,
 2023-12-09,2023,R,,navy,army,N,11,17,0,,,
-2023-12-16,2023,R,,appalachian-state,miami-oh,N,13,9,0,,,Cure Bowl
-2023-12-16,2023,R,,miami-oh,appalachian-state,N,9,13,0,,,Cure Bowl
-2023-12-16,2023,R,,fresno-state,new-mexico-state,N,37,10,0,,,New Mexico Bowl
-2023-12-16,2023,R,,new-mexico-state,fresno-state,N,10,37,0,,,New Mexico Bowl
-2023-12-16,2023,R,,jacksonville-state,louisiana,N,34,31,0,,,New Orleans Bowl
-2023-12-16,2023,R,,louisiana,jacksonville-state,N,31,34,0,,,New Orleans Bowl
-2023-12-16,2023,R,,ohio,georgia-southern,N,41,21,0,,,Myrtle Beach Bowl
-2023-12-16,2023,R,,georgia-southern,ohio,N,21,41,0,,,Myrtle Beach Bowl
-2023-12-16,2023,R,,texas-tech,california,N,34,14,0,,,Independence Bowl
-2023-12-16,2023,R,,california,texas-tech,N,14,34,0,,,Independence Bowl
-2023-12-16,2023,R,,ucla,boise-state,N,35,22,0,,,LA Bowl
-2023-12-16,2023,R,,boise-state,ucla,N,22,35,0,,,LA Bowl
-2023-12-18,2023,R,,western-kentucky,old-dominion,N,38,35,0,,,Famous Toastery Bowl
-2023-12-18,2023,R,,old-dominion,western-kentucky,N,35,38,0,,,Famous Toastery Bowl
-2023-12-19,2023,R,,texas-san-antonio,marshall,N,35,17,0,,,Frisco Bowl
-2023-12-19,2023,R,,marshall,texas-san-antonio,N,17,35,0,,,Frisco Bowl
-2023-12-21,2023,R,,south-florida,syracuse,N,45,0,0,,,Boca Raton Bowl
-2023-12-21,2023,R,,syracuse,south-florida,N,0,45,0,,,Boca Raton Bowl
-2023-12-22,2023,R,,georgia-tech,central-florida,N,30,17,0,,,Gasparilla Bowl
-2023-12-22,2023,R,,central-florida,georgia-tech,N,17,30,0,,,Gasparilla Bowl
-2023-12-23,2023,R,,air-force,james-madison,N,31,21,0,,24.0,Armed Forces Bowl
-2023-12-23,2023,R,,james-madison,air-force,N,21,31,0,24.0,,Armed Forces Bowl
-2023-12-23,2023,R,,coastal-carolina,san-jose-state,N,24,14,0,,,Hawaii Bowl
-2023-12-23,2023,R,,san-jose-state,coastal-carolina,N,14,24,0,,,Hawaii Bowl
-2023-12-23,2023,R,,duke,troy,N,17,10,0,,,Birmingham Bowl
-2023-12-23,2023,R,,troy,duke,N,10,17,0,,,Birmingham Bowl
-2023-12-23,2023,R,,georgia-state,utah-state,N,45,22,0,,,Famous Idaho Potato Bowl
-2023-12-23,2023,R,,utah-state,georgia-state,N,22,45,0,,,Famous Idaho Potato Bowl
-2023-12-23,2023,R,,northern-illinois,arkansas-state,N,21,19,0,,,Camellia Bowl
-2023-12-23,2023,R,,arkansas-state,northern-illinois,N,19,21,0,,,Camellia Bowl
-2023-12-23,2023,R,,northwestern,utah,N,14,7,0,,,Las Vegas Bowl
-2023-12-23,2023,R,,utah,northwestern,N,7,14,0,,,Las Vegas Bowl
-2023-12-23,2023,R,,south-alabama,eastern-michigan,H,59,10,0,,,68 Ventures Bowl
-2023-12-23,2023,R,,eastern-michigan,south-alabama,A,10,59,0,,,68 Ventures Bowl
-2023-12-26,2023,R,,kansas,nevada-las-vegas,N,49,36,0,,,Guaranteed Rate Bowl
-2023-12-26,2023,R,,nevada-las-vegas,kansas,N,36,49,0,,,Guaranteed Rate Bowl
-2023-12-26,2023,R,,minnesota,bowling-green,N,30,24,0,,,Quick Lane Bowl
-2023-12-26,2023,R,,bowling-green,minnesota,N,24,30,0,,,Quick Lane Bowl
-2023-12-26,2023,R,,texas-state,rice,N,45,21,0,,,First Responder Bowl
-2023-12-26,2023,R,,rice,texas-state,N,21,45,0,,,First Responder Bowl
-2023-12-27,2023,R,,oklahoma-state,texas-a-m,N,31,23,0,22.0,,Texas Bowl
-2023-12-27,2023,R,,texas-a-m,oklahoma-state,N,23,31,0,,22.0,Texas Bowl
-2023-12-27,2023,R,,southern-california,louisville,N,42,28,0,,16.0,Holiday Bowl
-2023-12-27,2023,R,,louisville,southern-california,N,28,42,0,16.0,,Holiday Bowl
-2023-12-27,2023,R,,virginia-tech,tulane,N,41,20,0,,23.0,Military Bowl
-2023-12-27,2023,R,,tulane,virginia-tech,N,20,41,0,23.0,,Military Bowl
-2023-12-27,2023,R,,west-virginia,north-carolina,N,30,10,0,,,Duke's Mayo Bowl
-2023-12-27,2023,R,,north-carolina,west-virginia,N,10,30,0,,,Duke's Mayo Bowl
-2023-12-28,2023,R,,arizona,oklahoma,N,38,24,0,14.0,12.0,Alamo Bowl
-2023-12-28,2023,R,,oklahoma,arizona,N,24,38,0,12.0,14.0,Alamo Bowl
-2023-12-28,2023,R,,boston-college,southern-methodist,N,23,14,0,,17.0,Fenway Bowl
-2023-12-28,2023,R,,southern-methodist,boston-college,N,14,23,0,17.0,,Fenway Bowl
-2023-12-28,2023,R,,kansas-state,north-carolina-state,N,28,19,0,,19.0,Pop-Tarts Bowl
-2023-12-28,2023,R,,north-carolina-state,kansas-state,N,19,28,0,19.0,,Pop-Tarts Bowl
-2023-12-28,2023,R,,rutgers,miami-fl,N,31,24,0,,,Pinstripe Bowl
-2023-12-28,2023,R,,miami-fl,rutgers,N,24,31,0,,,Pinstripe Bowl
-2023-12-29,2023,R,,clemson,kentucky,N,38,35,0,,,Gator Bowl
-2023-12-29,2023,R,,kentucky,clemson,N,35,38,0,,,Gator Bowl
-2023-12-29,2023,R,,memphis,iowa-state,H,36,26,0,,,Liberty Bowl
-2023-12-29,2023,R,,iowa-state,memphis,A,26,36,0,,,Liberty Bowl
-2023-12-29,2023,R,,missouri,ohio-state,N,14,3,0,9.0,7.0,Cotton Bowl
-2023-12-29,2023,R,,ohio-state,missouri,N,3,14,0,7.0,9.0,Cotton Bowl
-2023-12-29,2023,R,,notre-dame,oregon-state,N,40,8,0,15.0,21.0,Sun Bowl
-2023-12-29,2023,R,,oregon-state,notre-dame,N,8,40,0,21.0,15.0,Sun Bowl
-2023-12-30,2023,R,,georgia,florida-state,N,63,3,0,6.0,4.0,Orange Bowl
-2023-12-30,2023,R,,florida-state,georgia,N,3,63,0,4.0,6.0,Orange Bowl
-2023-12-30,2023,R,,maryland,auburn,N,31,13,0,,,Music City Bowl
-2023-12-30,2023,R,,auburn,maryland,N,13,31,0,,,Music City Bowl
-2023-12-30,2023,R,,mississippi,penn-state,N,38,25,0,11.0,10.0,Peach Bowl
-2023-12-30,2023,R,,penn-state,mississippi,N,25,38,0,10.0,11.0,Peach Bowl
-2023-12-30,2023,R,,wyoming,toledo,N,16,15,0,,,Arizona Bowl
-2023-12-30,2023,R,,toledo,wyoming,N,15,16,0,,,Arizona Bowl
-2024-01-01,2023,R,,louisiana-state,wisconsin,N,35,31,0,13.0,,ReliaQuest Bowl
-2024-01-01,2023,R,,wisconsin,louisiana-state,N,31,35,0,,13.0,ReliaQuest Bowl
-2024-01-01,2023,R,,michigan,alabama,N,27,20,0,1.0,5.0,Rose Bowl
-2024-01-01,2023,R,,alabama,michigan,N,20,27,0,5.0,1.0,Rose Bowl
-2024-01-01,2023,R,,oregon,liberty,N,45,6,0,8.0,18.0,Fiesta Bowl
-2024-01-01,2023,R,,liberty,oregon,N,6,45,0,18.0,8.0,Fiesta Bowl
-2024-01-01,2023,R,,tennessee,iowa,N,35,0,0,25.0,20.0,Citrus Bowl
-2024-01-01,2023,R,,iowa,tennessee,N,0,35,0,20.0,25.0,Citrus Bowl
-2024-01-01,2023,R,,washington,texas,N,37,31,0,2.0,3.0,Sugar Bowl
-2024-01-01,2023,R,,texas,washington,N,31,37,0,3.0,2.0,Sugar Bowl
-2024-01-08,2023,R,CCG,michigan,washington,N,34,13,0,1.0,2.0,College Football Playoff National Championship
-2024-01-08,2023,R,CCG,washington,michigan,N,13,34,0,2.0,1.0,College Football Playoff National Championship
+2023-12-16,2023,R,BOWL,appalachian-state,miami-oh,N,13,9,0,,,Cure Bowl
+2023-12-16,2023,R,BOWL,miami-oh,appalachian-state,N,9,13,0,,,Cure Bowl
+2023-12-16,2023,R,BOWL,fresno-state,new-mexico-state,N,37,10,0,,,New Mexico Bowl
+2023-12-16,2023,R,BOWL,new-mexico-state,fresno-state,N,10,37,0,,,New Mexico Bowl
+2023-12-16,2023,R,BOWL,jacksonville-state,louisiana,N,34,31,0,,,New Orleans Bowl
+2023-12-16,2023,R,BOWL,louisiana,jacksonville-state,N,31,34,0,,,New Orleans Bowl
+2023-12-16,2023,R,BOWL,ohio,georgia-southern,N,41,21,0,,,Myrtle Beach Bowl
+2023-12-16,2023,R,BOWL,georgia-southern,ohio,N,21,41,0,,,Myrtle Beach Bowl
+2023-12-16,2023,R,BOWL,texas-tech,california,N,34,14,0,,,Independence Bowl
+2023-12-16,2023,R,BOWL,california,texas-tech,N,14,34,0,,,Independence Bowl
+2023-12-16,2023,R,BOWL,ucla,boise-state,N,35,22,0,,,LA Bowl
+2023-12-16,2023,R,BOWL,boise-state,ucla,N,22,35,0,,,LA Bowl
+2023-12-18,2023,R,BOWL,western-kentucky,old-dominion,N,38,35,0,,,Famous Toastery Bowl
+2023-12-18,2023,R,BOWL,old-dominion,western-kentucky,N,35,38,0,,,Famous Toastery Bowl
+2023-12-19,2023,R,BOWL,texas-san-antonio,marshall,N,35,17,0,,,Frisco Bowl
+2023-12-19,2023,R,BOWL,marshall,texas-san-antonio,N,17,35,0,,,Frisco Bowl
+2023-12-21,2023,R,BOWL,south-florida,syracuse,N,45,0,0,,,Boca Raton Bowl
+2023-12-21,2023,R,BOWL,syracuse,south-florida,N,0,45,0,,,Boca Raton Bowl
+2023-12-22,2023,R,BOWL,georgia-tech,central-florida,N,30,17,0,,,Gasparilla Bowl
+2023-12-22,2023,R,BOWL,central-florida,georgia-tech,N,17,30,0,,,Gasparilla Bowl
+2023-12-23,2023,R,BOWL,air-force,james-madison,N,31,21,0,,24.0,Armed Forces Bowl
+2023-12-23,2023,R,BOWL,james-madison,air-force,N,21,31,0,24.0,,Armed Forces Bowl
+2023-12-23,2023,R,BOWL,coastal-carolina,san-jose-state,N,24,14,0,,,Hawaii Bowl
+2023-12-23,2023,R,BOWL,san-jose-state,coastal-carolina,N,14,24,0,,,Hawaii Bowl
+2023-12-23,2023,R,BOWL,duke,troy,N,17,10,0,,,Birmingham Bowl
+2023-12-23,2023,R,BOWL,troy,duke,N,10,17,0,,,Birmingham Bowl
+2023-12-23,2023,R,BOWL,georgia-state,utah-state,N,45,22,0,,,Famous Idaho Potato Bowl
+2023-12-23,2023,R,BOWL,utah-state,georgia-state,N,22,45,0,,,Famous Idaho Potato Bowl
+2023-12-23,2023,R,BOWL,northern-illinois,arkansas-state,N,21,19,0,,,Camellia Bowl
+2023-12-23,2023,R,BOWL,arkansas-state,northern-illinois,N,19,21,0,,,Camellia Bowl
+2023-12-23,2023,R,BOWL,northwestern,utah,N,14,7,0,,,Las Vegas Bowl
+2023-12-23,2023,R,BOWL,utah,northwestern,N,7,14,0,,,Las Vegas Bowl
+2023-12-23,2023,R,BOWL,south-alabama,eastern-michigan,H,59,10,0,,,68 Ventures Bowl
+2023-12-23,2023,R,BOWL,eastern-michigan,south-alabama,A,10,59,0,,,68 Ventures Bowl
+2023-12-26,2023,R,BOWL,kansas,nevada-las-vegas,N,49,36,0,,,Guaranteed Rate Bowl
+2023-12-26,2023,R,BOWL,nevada-las-vegas,kansas,N,36,49,0,,,Guaranteed Rate Bowl
+2023-12-26,2023,R,BOWL,minnesota,bowling-green,N,30,24,0,,,Quick Lane Bowl
+2023-12-26,2023,R,BOWL,bowling-green,minnesota,N,24,30,0,,,Quick Lane Bowl
+2023-12-26,2023,R,BOWL,texas-state,rice,N,45,21,0,,,First Responder Bowl
+2023-12-26,2023,R,BOWL,rice,texas-state,N,21,45,0,,,First Responder Bowl
+2023-12-27,2023,R,BOWL,oklahoma-state,texas-a-m,N,31,23,0,22.0,,Texas Bowl
+2023-12-27,2023,R,BOWL,texas-a-m,oklahoma-state,N,23,31,0,,22.0,Texas Bowl
+2023-12-27,2023,R,BOWL,southern-california,louisville,N,42,28,0,,16.0,Holiday Bowl
+2023-12-27,2023,R,BOWL,louisville,southern-california,N,28,42,0,16.0,,Holiday Bowl
+2023-12-27,2023,R,BOWL,virginia-tech,tulane,N,41,20,0,,23.0,Military Bowl
+2023-12-27,2023,R,BOWL,tulane,virginia-tech,N,20,41,0,23.0,,Military Bowl
+2023-12-27,2023,R,BOWL,west-virginia,north-carolina,N,30,10,0,,,Duke's Mayo Bowl
+2023-12-27,2023,R,BOWL,north-carolina,west-virginia,N,10,30,0,,,Duke's Mayo Bowl
+2023-12-28,2023,R,BOWL,arizona,oklahoma,N,38,24,0,14.0,12.0,Alamo Bowl
+2023-12-28,2023,R,BOWL,oklahoma,arizona,N,24,38,0,12.0,14.0,Alamo Bowl
+2023-12-28,2023,R,BOWL,boston-college,southern-methodist,N,23,14,0,,17.0,Fenway Bowl
+2023-12-28,2023,R,BOWL,southern-methodist,boston-college,N,14,23,0,17.0,,Fenway Bowl
+2023-12-28,2023,R,BOWL,kansas-state,north-carolina-state,N,28,19,0,,19.0,Pop-Tarts Bowl
+2023-12-28,2023,R,BOWL,north-carolina-state,kansas-state,N,19,28,0,19.0,,Pop-Tarts Bowl
+2023-12-28,2023,R,BOWL,rutgers,miami-fl,N,31,24,0,,,Pinstripe Bowl
+2023-12-28,2023,R,BOWL,miami-fl,rutgers,N,24,31,0,,,Pinstripe Bowl
+2023-12-29,2023,R,BOWL,clemson,kentucky,N,38,35,0,,,Gator Bowl
+2023-12-29,2023,R,BOWL,kentucky,clemson,N,35,38,0,,,Gator Bowl
+2023-12-29,2023,R,BOWL,memphis,iowa-state,H,36,26,0,,,Liberty Bowl
+2023-12-29,2023,R,BOWL,iowa-state,memphis,A,26,36,0,,,Liberty Bowl
+2023-12-29,2023,R,BOWL,missouri,ohio-state,N,14,3,0,9.0,7.0,Cotton Bowl
+2023-12-29,2023,R,BOWL,ohio-state,missouri,N,3,14,0,7.0,9.0,Cotton Bowl
+2023-12-29,2023,R,BOWL,notre-dame,oregon-state,N,40,8,0,15.0,21.0,Sun Bowl
+2023-12-29,2023,R,BOWL,oregon-state,notre-dame,N,8,40,0,21.0,15.0,Sun Bowl
+2023-12-30,2023,R,BOWL,georgia,florida-state,N,63,3,0,6.0,4.0,Orange Bowl
+2023-12-30,2023,R,BOWL,florida-state,georgia,N,3,63,0,4.0,6.0,Orange Bowl
+2023-12-30,2023,R,BOWL,maryland,auburn,N,31,13,0,,,Music City Bowl
+2023-12-30,2023,R,BOWL,auburn,maryland,N,13,31,0,,,Music City Bowl
+2023-12-30,2023,R,BOWL,mississippi,penn-state,N,38,25,0,11.0,10.0,Peach Bowl
+2023-12-30,2023,R,BOWL,penn-state,mississippi,N,25,38,0,10.0,11.0,Peach Bowl
+2023-12-30,2023,R,BOWL,wyoming,toledo,N,16,15,0,,,Arizona Bowl
+2023-12-30,2023,R,BOWL,toledo,wyoming,N,15,16,0,,,Arizona Bowl
+2024-01-01,2023,R,BOWL,louisiana-state,wisconsin,N,35,31,0,13.0,,ReliaQuest Bowl
+2024-01-01,2023,R,BOWL,wisconsin,louisiana-state,N,31,35,0,,13.0,ReliaQuest Bowl
+2024-01-01,2023,R,CFP-SF,michigan,alabama,N,27,20,0,1.0,5.0,Rose Bowl
+2024-01-01,2023,R,CFP-SF,alabama,michigan,N,20,27,0,5.0,1.0,Rose Bowl
+2024-01-01,2023,R,BOWL,oregon,liberty,N,45,6,0,8.0,18.0,Fiesta Bowl
+2024-01-01,2023,R,BOWL,liberty,oregon,N,6,45,0,18.0,8.0,Fiesta Bowl
+2024-01-01,2023,R,BOWL,tennessee,iowa,N,35,0,0,25.0,20.0,Citrus Bowl
+2024-01-01,2023,R,BOWL,iowa,tennessee,N,0,35,0,20.0,25.0,Citrus Bowl
+2024-01-01,2023,R,CFP-SF,washington,texas,N,37,31,0,2.0,3.0,Sugar Bowl
+2024-01-01,2023,R,CFP-SF,texas,washington,N,31,37,0,3.0,2.0,Sugar Bowl
+2024-01-08,2023,R,NC,michigan,washington,N,34,13,0,1.0,2.0,College Football Playoff National Championship
+2024-01-08,2023,R,NC,washington,michigan,N,13,34,0,2.0,1.0,College Football Playoff National Championship

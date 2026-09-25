@@ -1745,95 +1745,95 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2024-12-07,2024,R,,penn-state,oregon,N,37,45,0,3.0,1.0,
 2024-12-14,2024,R,,navy,army,N,31,13,0,,19.0,
 2024-12-14,2024,R,,army,navy,N,13,31,0,19.0,,
-2024-12-14,2024,R,,south-alabama,western-michigan,N,30,23,0,,,Salute to Veterans Bowl
-2024-12-14,2024,R,,western-michigan,south-alabama,N,23,30,0,,,Salute to Veterans Bowl
-2024-12-17,2024,R,,memphis,west-virginia,N,42,37,0,25.0,,Frisco Bowl
-2024-12-17,2024,R,,west-virginia,memphis,N,37,42,0,,25.0,Frisco Bowl
-2024-12-18,2024,R,,james-madison,western-kentucky,N,27,17,0,,,Boca Raton Bowl
-2024-12-18,2024,R,,western-kentucky,james-madison,N,17,27,0,,,Boca Raton Bowl
-2024-12-18,2024,R,,nevada-las-vegas,california,N,24,13,0,24.0,,LA Bowl
-2024-12-18,2024,R,,california,nevada-las-vegas,N,13,24,0,,24.0,LA Bowl
-2024-12-19,2024,R,,sam-houston,georgia-southern,N,31,26,0,,,New Orleans Bowl
-2024-12-19,2024,R,,georgia-southern,sam-houston,N,26,31,0,,,New Orleans Bowl
-2024-12-20,2024,R,,florida,tulane,N,33,8,0,,,Union Home Mortgage Gasparilla Bowl
-2024-12-20,2024,R,,tulane,florida,N,8,33,0,,,Union Home Mortgage Gasparilla Bowl
-2024-12-20,2024,R,,notre-dame,indiana,H,27,17,0,3.0,9.0,College Football Playoff - First Round
-2024-12-20,2024,R,,indiana,notre-dame,A,17,27,0,9.0,3.0,College Football Playoff - First Round
-2024-12-20,2024,R,,ohio,jacksonville-state,N,30,27,0,,,Cure Bowl
-2024-12-20,2024,R,,jacksonville-state,ohio,N,27,30,0,,,Cure Bowl
-2024-12-21,2024,R,,ohio-state,tennessee,H,42,17,0,6.0,7.0,College Football Playoff - First Round
-2024-12-21,2024,R,,tennessee,ohio-state,A,17,42,0,7.0,6.0,College Football Playoff - First Round
-2024-12-21,2024,R,,penn-state,southern-methodist,H,38,10,0,5.0,12.0,College Football Playoff - First Round
-2024-12-21,2024,R,,southern-methodist,penn-state,A,10,38,0,12.0,5.0,College Football Playoff - First Round
-2024-12-21,2024,R,,texas,clemson,H,38,24,0,4.0,13.0,College Football Playoff - First Round
-2024-12-21,2024,R,,clemson,texas,A,24,38,0,13.0,4.0,College Football Playoff - First Round
-2024-12-23,2024,R,,northern-illinois,fresno-state,N,28,20,0,,,Famous Idaho Potato Bowl
-2024-12-23,2024,R,,fresno-state,northern-illinois,N,20,28,0,,,Famous Idaho Potato Bowl
-2024-12-23,2024,R,,texas-san-antonio,coastal-carolina,A,44,15,0,,,Myrtle Beach Bowl
-2024-12-23,2024,R,,coastal-carolina,texas-san-antonio,H,15,44,0,,,Myrtle Beach Bowl
-2024-12-24,2024,R,,south-florida,san-jose-state,N,41,39,0,,,Hawaii Bowl
-2024-12-24,2024,R,,san-jose-state,south-florida,N,39,41,0,,,Hawaii Bowl
-2024-12-26,2024,R,,arkansas-state,bowling-green,N,38,31,0,,,68 Ventures Bowl
-2024-12-26,2024,R,,bowling-green,arkansas-state,N,31,38,0,,,68 Ventures Bowl
-2024-12-26,2024,R,,kansas-state,rutgers,N,44,41,0,,,Rate Bowl
-2024-12-26,2024,R,,rutgers,kansas-state,N,41,44,0,,,Rate Bowl
-2024-12-26,2024,R,,toledo,pittsburgh,N,48,46,0,,,GameAbove Sports Bowl
-2024-12-26,2024,R,,pittsburgh,toledo,N,46,48,0,,,GameAbove Sports Bowl
-2024-12-27,2024,R,,arkansas,texas-tech,N,39,26,0,,,Liberty Bowl
-2024-12-27,2024,R,,texas-tech,arkansas,N,26,39,0,,,Liberty Bowl
-2024-12-27,2024,R,,navy,oklahoma,N,21,20,0,,,Armed Forces Bowl
-2024-12-27,2024,R,,oklahoma,navy,N,20,21,0,,,Armed Forces Bowl
-2024-12-27,2024,R,,southern-california,texas-a-m,N,35,31,0,,,Las Vegas Bowl
-2024-12-27,2024,R,,texas-a-m,southern-california,N,31,35,0,,,Las Vegas Bowl
-2024-12-27,2024,R,,syracuse,washington-state,N,52,35,0,22.0,,Holiday Bowl
-2024-12-27,2024,R,,washington-state,syracuse,N,35,52,0,,22.0,Holiday Bowl
-2024-12-27,2024,R,,vanderbilt,georgia-tech,N,35,27,0,,,Birmingham Bowl
-2024-12-27,2024,R,,georgia-tech,vanderbilt,N,27,35,0,,,Birmingham Bowl
-2024-12-28,2024,R,,army,louisiana-tech,N,27,6,0,19.0,,Independence Bowl
-2024-12-28,2024,R,,louisiana-tech,army,N,6,27,0,,19.0,Independence Bowl
-2024-12-28,2024,R,,brigham-young,colorado,N,36,14,0,17.0,20.0,Alamo Bowl
-2024-12-28,2024,R,,colorado,brigham-young,N,14,36,0,20.0,17.0,Alamo Bowl
-2024-12-28,2024,R,,connecticut,north-carolina,N,27,14,0,,,Fenway Bowl
-2024-12-28,2024,R,,north-carolina,connecticut,N,14,27,0,,,Fenway Bowl
-2024-12-28,2024,R,,east-carolina,north-carolina-state,N,26,21,0,,,Military Bowl
-2024-12-28,2024,R,,north-carolina-state,east-carolina,N,21,26,0,,,Military Bowl
-2024-12-28,2024,R,,iowa-state,miami-fl,N,42,41,0,18.0,15.0,Pop-Tarts Bowl
-2024-12-28,2024,R,,miami-fl,iowa-state,N,41,42,0,15.0,18.0,Pop-Tarts Bowl
-2024-12-28,2024,R,,miami-oh,colorado-state,N,43,17,0,,,Arizona Bowl
-2024-12-28,2024,R,,colorado-state,miami-oh,N,17,43,0,,,Arizona Bowl
-2024-12-28,2024,R,,nebraska,boston-college,N,20,15,0,,,Pinstripe Bowl
-2024-12-28,2024,R,,boston-college,nebraska,N,15,20,0,,,Pinstripe Bowl
-2024-12-28,2024,R,,texas-christian,louisiana,N,34,3,0,,,New Mexico Bowl
-2024-12-28,2024,R,,louisiana,texas-christian,N,3,34,0,,,New Mexico Bowl
-2024-12-30,2024,R,,missouri,iowa,N,27,24,0,23.0,,Music City Bowl
-2024-12-30,2024,R,,iowa,missouri,N,24,27,0,,23.0,Music City Bowl
-2024-12-31,2024,R,,illinois,south-carolina,N,21,17,0,21.0,14.0,Citrus Bowl
-2024-12-31,2024,R,,south-carolina,illinois,N,17,21,0,14.0,21.0,Citrus Bowl
-2024-12-31,2024,R,,louisiana-state,baylor,N,44,31,0,,,Texas Bowl
-2024-12-31,2024,R,,baylor,louisiana-state,N,31,44,0,,,Texas Bowl
-2024-12-31,2024,R,,louisville,washington,N,35,34,0,,,Sun Bowl
-2024-12-31,2024,R,,washington,louisville,N,34,35,0,,,Sun Bowl
-2024-12-31,2024,R,,michigan,alabama,N,19,13,0,,11.0,ReliaQuest Bowl
-2024-12-31,2024,R,,alabama,michigan,N,13,19,0,11.0,,ReliaQuest Bowl
-2024-12-31,2024,R,,penn-state,boise-state,N,31,14,0,5.0,8.0,Fiesta Bowl
-2024-12-31,2024,R,,boise-state,penn-state,N,14,31,0,8.0,5.0,Fiesta Bowl
-2025-01-01,2024,R,,ohio-state,oregon,N,41,21,0,6.0,1.0,Rose Bowl
-2025-01-01,2024,R,,oregon,ohio-state,N,21,41,0,1.0,6.0,Rose Bowl
-2025-01-01,2024,R,,texas,arizona-state,N,39,31,0,4.0,10.0,Peach Bowl
-2025-01-01,2024,R,,arizona-state,texas,N,31,39,0,10.0,4.0,Peach Bowl
-2025-01-02,2024,R,,mississippi,duke,N,52,20,0,16.0,,Gator Bowl
-2025-01-02,2024,R,,duke,mississippi,N,20,52,0,,16.0,Gator Bowl
-2025-01-02,2024,R,,notre-dame,georgia,N,23,10,0,3.0,2.0,Sugar Bowl
-2025-01-02,2024,R,,georgia,notre-dame,N,10,23,0,2.0,3.0,Sugar Bowl
-2025-01-03,2024,R,,minnesota,virginia-tech,N,24,10,0,,,Duke's Mayo Bowl
-2025-01-03,2024,R,,virginia-tech,minnesota,N,10,24,0,,,Duke's Mayo Bowl
-2025-01-03,2024,R,,texas-state,north-texas,N,30,28,0,,,First Responder Bowl
-2025-01-03,2024,R,,north-texas,texas-state,N,28,30,0,,,First Responder Bowl
-2025-01-04,2024,R,,buffalo,liberty,N,26,7,0,,,Bahamas Bowl
-2025-01-04,2024,R,,liberty,buffalo,N,7,26,0,,,Bahamas Bowl
-2025-01-09,2024,R,,notre-dame,penn-state,N,27,24,0,3.0,5.0,Orange Bowl
-2025-01-09,2024,R,,penn-state,notre-dame,N,24,27,0,5.0,3.0,Orange Bowl
-2025-01-10,2024,R,,ohio-state,texas,N,28,14,0,6.0,4.0,Cotton Bowl
-2025-01-10,2024,R,,texas,ohio-state,N,14,28,0,4.0,6.0,Cotton Bowl
-2025-01-20,2024,R,CCG,ohio-state,notre-dame,N,34,23,0,6.0,3.0,College Football Playoff National Championship
-2025-01-20,2024,R,CCG,notre-dame,ohio-state,N,23,34,0,3.0,6.0,College Football Playoff National Championship
+2024-12-14,2024,R,BOWL,south-alabama,western-michigan,N,30,23,0,,,Salute to Veterans Bowl
+2024-12-14,2024,R,BOWL,western-michigan,south-alabama,N,23,30,0,,,Salute to Veterans Bowl
+2024-12-17,2024,R,BOWL,memphis,west-virginia,N,42,37,0,25.0,,Frisco Bowl
+2024-12-17,2024,R,BOWL,west-virginia,memphis,N,37,42,0,,25.0,Frisco Bowl
+2024-12-18,2024,R,BOWL,james-madison,western-kentucky,N,27,17,0,,,Boca Raton Bowl
+2024-12-18,2024,R,BOWL,western-kentucky,james-madison,N,17,27,0,,,Boca Raton Bowl
+2024-12-18,2024,R,BOWL,nevada-las-vegas,california,N,24,13,0,24.0,,LA Bowl
+2024-12-18,2024,R,BOWL,california,nevada-las-vegas,N,13,24,0,,24.0,LA Bowl
+2024-12-19,2024,R,BOWL,sam-houston,georgia-southern,N,31,26,0,,,New Orleans Bowl
+2024-12-19,2024,R,BOWL,georgia-southern,sam-houston,N,26,31,0,,,New Orleans Bowl
+2024-12-20,2024,R,BOWL,florida,tulane,N,33,8,0,,,Union Home Mortgage Gasparilla Bowl
+2024-12-20,2024,R,BOWL,tulane,florida,N,8,33,0,,,Union Home Mortgage Gasparilla Bowl
+2024-12-20,2024,R,CFP-R1,notre-dame,indiana,H,27,17,0,3.0,9.0,College Football Playoff - First Round
+2024-12-20,2024,R,CFP-R1,indiana,notre-dame,A,17,27,0,9.0,3.0,College Football Playoff - First Round
+2024-12-20,2024,R,BOWL,ohio,jacksonville-state,N,30,27,0,,,Cure Bowl
+2024-12-20,2024,R,BOWL,jacksonville-state,ohio,N,27,30,0,,,Cure Bowl
+2024-12-21,2024,R,CFP-R1,ohio-state,tennessee,H,42,17,0,6.0,7.0,College Football Playoff - First Round
+2024-12-21,2024,R,CFP-R1,tennessee,ohio-state,A,17,42,0,7.0,6.0,College Football Playoff - First Round
+2024-12-21,2024,R,CFP-R1,penn-state,southern-methodist,H,38,10,0,5.0,12.0,College Football Playoff - First Round
+2024-12-21,2024,R,CFP-R1,southern-methodist,penn-state,A,10,38,0,12.0,5.0,College Football Playoff - First Round
+2024-12-21,2024,R,CFP-R1,texas,clemson,H,38,24,0,4.0,13.0,College Football Playoff - First Round
+2024-12-21,2024,R,CFP-R1,clemson,texas,A,24,38,0,13.0,4.0,College Football Playoff - First Round
+2024-12-23,2024,R,BOWL,northern-illinois,fresno-state,N,28,20,0,,,Famous Idaho Potato Bowl
+2024-12-23,2024,R,BOWL,fresno-state,northern-illinois,N,20,28,0,,,Famous Idaho Potato Bowl
+2024-12-23,2024,R,BOWL,texas-san-antonio,coastal-carolina,A,44,15,0,,,Myrtle Beach Bowl
+2024-12-23,2024,R,BOWL,coastal-carolina,texas-san-antonio,H,15,44,0,,,Myrtle Beach Bowl
+2024-12-24,2024,R,BOWL,south-florida,san-jose-state,N,41,39,0,,,Hawaii Bowl
+2024-12-24,2024,R,BOWL,san-jose-state,south-florida,N,39,41,0,,,Hawaii Bowl
+2024-12-26,2024,R,BOWL,arkansas-state,bowling-green,N,38,31,0,,,68 Ventures Bowl
+2024-12-26,2024,R,BOWL,bowling-green,arkansas-state,N,31,38,0,,,68 Ventures Bowl
+2024-12-26,2024,R,BOWL,kansas-state,rutgers,N,44,41,0,,,Rate Bowl
+2024-12-26,2024,R,BOWL,rutgers,kansas-state,N,41,44,0,,,Rate Bowl
+2024-12-26,2024,R,BOWL,toledo,pittsburgh,N,48,46,0,,,GameAbove Sports Bowl
+2024-12-26,2024,R,BOWL,pittsburgh,toledo,N,46,48,0,,,GameAbove Sports Bowl
+2024-12-27,2024,R,BOWL,arkansas,texas-tech,N,39,26,0,,,Liberty Bowl
+2024-12-27,2024,R,BOWL,texas-tech,arkansas,N,26,39,0,,,Liberty Bowl
+2024-12-27,2024,R,BOWL,navy,oklahoma,N,21,20,0,,,Armed Forces Bowl
+2024-12-27,2024,R,BOWL,oklahoma,navy,N,20,21,0,,,Armed Forces Bowl
+2024-12-27,2024,R,BOWL,southern-california,texas-a-m,N,35,31,0,,,Las Vegas Bowl
+2024-12-27,2024,R,BOWL,texas-a-m,southern-california,N,31,35,0,,,Las Vegas Bowl
+2024-12-27,2024,R,BOWL,syracuse,washington-state,N,52,35,0,22.0,,Holiday Bowl
+2024-12-27,2024,R,BOWL,washington-state,syracuse,N,35,52,0,,22.0,Holiday Bowl
+2024-12-27,2024,R,BOWL,vanderbilt,georgia-tech,N,35,27,0,,,Birmingham Bowl
+2024-12-27,2024,R,BOWL,georgia-tech,vanderbilt,N,27,35,0,,,Birmingham Bowl
+2024-12-28,2024,R,BOWL,army,louisiana-tech,N,27,6,0,19.0,,Independence Bowl
+2024-12-28,2024,R,BOWL,louisiana-tech,army,N,6,27,0,,19.0,Independence Bowl
+2024-12-28,2024,R,BOWL,brigham-young,colorado,N,36,14,0,17.0,20.0,Alamo Bowl
+2024-12-28,2024,R,BOWL,colorado,brigham-young,N,14,36,0,20.0,17.0,Alamo Bowl
+2024-12-28,2024,R,BOWL,connecticut,north-carolina,N,27,14,0,,,Fenway Bowl
+2024-12-28,2024,R,BOWL,north-carolina,connecticut,N,14,27,0,,,Fenway Bowl
+2024-12-28,2024,R,BOWL,east-carolina,north-carolina-state,N,26,21,0,,,Military Bowl
+2024-12-28,2024,R,BOWL,north-carolina-state,east-carolina,N,21,26,0,,,Military Bowl
+2024-12-28,2024,R,BOWL,iowa-state,miami-fl,N,42,41,0,18.0,15.0,Pop-Tarts Bowl
+2024-12-28,2024,R,BOWL,miami-fl,iowa-state,N,41,42,0,15.0,18.0,Pop-Tarts Bowl
+2024-12-28,2024,R,BOWL,miami-oh,colorado-state,N,43,17,0,,,Arizona Bowl
+2024-12-28,2024,R,BOWL,colorado-state,miami-oh,N,17,43,0,,,Arizona Bowl
+2024-12-28,2024,R,BOWL,nebraska,boston-college,N,20,15,0,,,Pinstripe Bowl
+2024-12-28,2024,R,BOWL,boston-college,nebraska,N,15,20,0,,,Pinstripe Bowl
+2024-12-28,2024,R,BOWL,texas-christian,louisiana,N,34,3,0,,,New Mexico Bowl
+2024-12-28,2024,R,BOWL,louisiana,texas-christian,N,3,34,0,,,New Mexico Bowl
+2024-12-30,2024,R,BOWL,missouri,iowa,N,27,24,0,23.0,,Music City Bowl
+2024-12-30,2024,R,BOWL,iowa,missouri,N,24,27,0,,23.0,Music City Bowl
+2024-12-31,2024,R,BOWL,illinois,south-carolina,N,21,17,0,21.0,14.0,Citrus Bowl
+2024-12-31,2024,R,BOWL,south-carolina,illinois,N,17,21,0,14.0,21.0,Citrus Bowl
+2024-12-31,2024,R,BOWL,louisiana-state,baylor,N,44,31,0,,,Texas Bowl
+2024-12-31,2024,R,BOWL,baylor,louisiana-state,N,31,44,0,,,Texas Bowl
+2024-12-31,2024,R,BOWL,louisville,washington,N,35,34,0,,,Sun Bowl
+2024-12-31,2024,R,BOWL,washington,louisville,N,34,35,0,,,Sun Bowl
+2024-12-31,2024,R,BOWL,michigan,alabama,N,19,13,0,,11.0,ReliaQuest Bowl
+2024-12-31,2024,R,BOWL,alabama,michigan,N,13,19,0,11.0,,ReliaQuest Bowl
+2024-12-31,2024,R,CFP-QF,penn-state,boise-state,N,31,14,0,5.0,8.0,Fiesta Bowl
+2024-12-31,2024,R,CFP-QF,boise-state,penn-state,N,14,31,0,8.0,5.0,Fiesta Bowl
+2025-01-01,2024,R,CFP-QF,ohio-state,oregon,N,41,21,0,6.0,1.0,Rose Bowl
+2025-01-01,2024,R,CFP-QF,oregon,ohio-state,N,21,41,0,1.0,6.0,Rose Bowl
+2025-01-01,2024,R,CFP-QF,texas,arizona-state,N,39,31,0,4.0,10.0,Peach Bowl
+2025-01-01,2024,R,CFP-QF,arizona-state,texas,N,31,39,0,10.0,4.0,Peach Bowl
+2025-01-02,2024,R,BOWL,mississippi,duke,N,52,20,0,16.0,,Gator Bowl
+2025-01-02,2024,R,BOWL,duke,mississippi,N,20,52,0,,16.0,Gator Bowl
+2025-01-02,2024,R,CFP-QF,notre-dame,georgia,N,23,10,0,3.0,2.0,Sugar Bowl
+2025-01-02,2024,R,CFP-QF,georgia,notre-dame,N,10,23,0,2.0,3.0,Sugar Bowl
+2025-01-03,2024,R,BOWL,minnesota,virginia-tech,N,24,10,0,,,Duke's Mayo Bowl
+2025-01-03,2024,R,BOWL,virginia-tech,minnesota,N,10,24,0,,,Duke's Mayo Bowl
+2025-01-03,2024,R,BOWL,texas-state,north-texas,N,30,28,0,,,First Responder Bowl
+2025-01-03,2024,R,BOWL,north-texas,texas-state,N,28,30,0,,,First Responder Bowl
+2025-01-04,2024,R,BOWL,buffalo,liberty,N,26,7,0,,,Bahamas Bowl
+2025-01-04,2024,R,BOWL,liberty,buffalo,N,7,26,0,,,Bahamas Bowl
+2025-01-09,2024,R,CFP-SF,notre-dame,penn-state,N,27,24,0,3.0,5.0,Orange Bowl
+2025-01-09,2024,R,CFP-SF,penn-state,notre-dame,N,24,27,0,5.0,3.0,Orange Bowl
+2025-01-10,2024,R,CFP-SF,ohio-state,texas,N,28,14,0,6.0,4.0,Cotton Bowl
+2025-01-10,2024,R,CFP-SF,texas,ohio-state,N,14,28,0,4.0,6.0,Cotton Bowl
+2025-01-20,2024,R,NC,ohio-state,notre-dame,N,34,23,0,6.0,3.0,College Football Playoff National Championship
+2025-01-20,2024,R,NC,notre-dame,ohio-state,N,23,34,0,3.0,6.0,College Football Playoff National Championship

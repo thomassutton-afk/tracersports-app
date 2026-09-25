@@ -25,8 +25,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-08-31,2017,R,,holy-cross,connecticut,A,20,27,0,,,Pratt & Whitney Stadium at Rentschler Field - East Hartford Connecticut
 2017-08-31,2017,R,,idaho,sacramento-state,H,28,6,0,,,Kibbie-Asui Activity Center - Moscow Idaho
 2017-08-31,2017,R,,sacramento-state,idaho,A,6,28,0,,,Kibbie-Asui Activity Center - Moscow Idaho
-2017-08-31,2017,R,,memphis,louisiana-monroe,H,37,29,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2017-08-31,2017,R,,louisiana-monroe,memphis,A,29,37,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2017-08-31,2017,R,BOWL,memphis,louisiana-monroe,H,37,29,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2017-08-31,2017,R,BOWL,louisiana-monroe,memphis,A,29,37,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2017-08-31,2017,R,,minnesota,buffalo,H,17,7,0,,,TCF Bank Stadium - Minneapolis Minnesota
 2017-08-31,2017,R,,buffalo,minnesota,A,7,17,0,,,TCF Bank Stadium - Minneapolis Minnesota
 2017-08-31,2017,R,,ohio-state,indiana,A,49,21,0,2.0,,"Memorial Stadium ""The Rock"" - Bloomington Indiana"
@@ -35,8 +35,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-08-31,2017,R,,tulsa,oklahoma-state,A,24,59,0,,10.0,Boone Pickens Stadium - Stillwater Oklahoma
 2017-08-31,2017,R,,tennessee-state,georgia-state,A,17,10,0,,,Georgia State Stadium - Atlanta Georgia
 2017-08-31,2017,R,,georgia-state,tennessee-state,H,10,17,0,,,Georgia State Stadium - Atlanta Georgia
-2017-08-31,2017,R,,toledo,elon,H,47,13,0,,,Glass Bowl - Toledo Ohio
-2017-08-31,2017,R,,elon,toledo,A,13,47,0,,,Glass Bowl - Toledo Ohio
+2017-08-31,2017,R,BOWL,toledo,elon,H,47,13,0,,,Glass Bowl - Toledo Ohio
+2017-08-31,2017,R,BOWL,elon,toledo,A,13,47,0,,,Glass Bowl - Toledo Ohio
 2017-08-31,2017,R,,utah,north-dakota,H,37,16,0,,,Rice-Eccles Stadium - Salt Lake City Utah
 2017-08-31,2017,R,,north-dakota,utah,A,16,37,0,,,Rice-Eccles Stadium - Salt Lake City Utah
 2017-08-31,2017,R,,wake-forest,presbyterian,H,51,7,0,,,BB&T Field - Winston-Salem North Carolina
@@ -177,8 +177,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-09-02,2017,R,,montana-state,washington-state,A,0,31,0,,24.0,Martin Stadium - Pullman Washington
 2017-09-02,2017,R,,western-kentucky,eastern-kentucky,H,31,17,0,,,Houchens Industries-L.T. Smith Stadium - Bowling Green Kentucky
 2017-09-02,2017,R,,eastern-kentucky,western-kentucky,A,17,31,0,,,Houchens Industries-L.T. Smith Stadium - Bowling Green Kentucky
-2017-09-03,2017,R,,ucla,texas-a-m,H,45,44,0,,,Rose Bowl - Pasadena California
-2017-09-03,2017,R,,texas-a-m,ucla,A,44,45,0,,,Rose Bowl - Pasadena California
+2017-09-03,2017,R,CFP-SF,ucla,texas-a-m,H,45,44,0,,,Rose Bowl - Pasadena California
+2017-09-03,2017,R,CFP-SF,texas-a-m,ucla,A,44,45,0,,,Rose Bowl - Pasadena California
 2017-09-03,2017,R,,virginia-tech,west-virginia,N,31,24,0,21.0,22.0,FedEx Field - Landover Maryland
 2017-09-03,2017,R,,west-virginia,virginia-tech,N,24,31,0,22.0,21.0,FedEx Field - Landover Maryland
 2017-09-04,2017,R,,tennessee,georgia-tech,N,42,41,0,25.0,,Mercedes-Benz Stadium - Atlanta Georgia
@@ -273,8 +273,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-09-09,2017,R,,nebraska,oregon,A,35,42,0,,,Autzen Stadium - Eugene Oregon
 2017-09-09,2017,R,,penn-state,pittsburgh,H,33,14,0,4.0,,Beaver Stadium - University Park Pennsylvania
 2017-09-09,2017,R,,pittsburgh,penn-state,A,14,33,0,,4.0,Beaver Stadium - University Park Pennsylvania
-2017-09-09,2017,R,,rice,texas-el-paso,A,31,14,0,,,Sun Bowl - El Paso Texas
-2017-09-09,2017,R,,texas-el-paso,rice,H,14,31,0,,,Sun Bowl - El Paso Texas
+2017-09-09,2017,R,BOWL,rice,texas-el-paso,A,31,14,0,,,Sun Bowl - El Paso Texas
+2017-09-09,2017,R,BOWL,texas-el-paso,rice,H,14,31,0,,,Sun Bowl - El Paso Texas
 2017-09-09,2017,R,,san-diego-state,arizona-state,A,30,20,0,,,Sun Devil Stadium - Tempe Arizona
 2017-09-09,2017,R,,arizona-state,san-diego-state,H,20,30,0,,,Sun Devil Stadium - Tempe Arizona
 2017-09-09,2017,R,,south-carolina,missouri,A,31,13,0,,,Memorial Stadium/Faurot Field - Columbia Missouri
@@ -305,8 +305,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-09-09,2017,R,,alabama-state,troy,A,7,34,0,,,Veterans Memorial Stadium - Troy Alabama
 2017-09-09,2017,R,,tulsa,louisiana,H,66,42,0,,,H.A. Chapman Stadium - Tulsa Oklahoma
 2017-09-09,2017,R,,louisiana,tulsa,A,42,66,0,,,H.A. Chapman Stadium - Tulsa Oklahoma
-2017-09-09,2017,R,,ucla,hawaii,H,56,23,0,,,Rose Bowl - Pasadena California
-2017-09-09,2017,R,,hawaii,ucla,A,23,56,0,,,Rose Bowl - Pasadena California
+2017-09-09,2017,R,CFP-SF,ucla,hawaii,H,56,23,0,,,Rose Bowl - Pasadena California
+2017-09-09,2017,R,CFP-SF,hawaii,ucla,A,23,56,0,,,Rose Bowl - Pasadena California
 2017-09-09,2017,R,,utah,brigham-young,A,19,13,0,,,LaVell Edwards Stadium - Provo Utah
 2017-09-09,2017,R,,brigham-young,utah,H,13,19,0,,,LaVell Edwards Stadium - Provo Utah
 2017-09-09,2017,R,,vanderbilt,alabama-a-m,H,42,0,0,,,Vanderbilt Stadium - Nashville Tennessee
@@ -327,8 +327,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-09-09,2017,R,,gardner-webb,wyoming,A,0,27,0,,,Jonah Field War Memorial Stadium - Laramie Wyoming
 2017-09-14,2017,R,,boise-state,new-mexico,H,28,14,0,,,Albertsons Stadium - Boise Idaho
 2017-09-14,2017,R,,new-mexico,boise-state,A,14,28,0,,,Albertsons Stadium - Boise Idaho
-2017-09-15,2017,R,,arizona,texas-el-paso,A,63,16,0,,,Sun Bowl - El Paso Texas
-2017-09-15,2017,R,,texas-el-paso,arizona,H,16,63,0,,,Sun Bowl - El Paso Texas
+2017-09-15,2017,R,BOWL,arizona,texas-el-paso,A,63,16,0,,,Sun Bowl - El Paso Texas
+2017-09-15,2017,R,BOWL,texas-el-paso,arizona,H,16,63,0,,,Sun Bowl - El Paso Texas
 2017-09-15,2017,R,,south-florida,illinois,H,47,23,0,22.0,,Raymond James Stadium - Tampa Florida
 2017-09-15,2017,R,,illinois,south-florida,A,23,47,0,,22.0,Raymond James Stadium - Tampa Florida
 2017-09-15,2017,R,,temple,massachusetts,H,29,21,0,,,Lincoln Financial Field - Philadelphia Pennsylvania
@@ -379,8 +379,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-09-16,2017,R,,western-kentucky,louisiana-tech,H,22,23,0,,,Houchens Industries-L.T. Smith Stadium - Bowling Green Kentucky
 2017-09-16,2017,R,,marshall,kent-state,H,21,0,0,,,Joan C. Edwards Stadium - Huntington West Virginia
 2017-09-16,2017,R,,kent-state,marshall,A,0,21,0,,,Joan C. Edwards Stadium - Huntington West Virginia
-2017-09-16,2017,R,,memphis,ucla,H,48,45,0,,25.0,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2017-09-16,2017,R,,ucla,memphis,A,45,48,0,25.0,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2017-09-16,2017,R,BOWL,memphis,ucla,H,48,45,0,,25.0,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2017-09-16,2017,R,BOWL,ucla,memphis,A,45,48,0,25.0,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2017-09-16,2017,R,,michigan,air-force,H,29,13,0,7.0,,Michigan Stadium - Ann Arbor Michigan
 2017-09-16,2017,R,,air-force,michigan,A,13,29,0,,7.0,Michigan Stadium - Ann Arbor Michigan
 2017-09-16,2017,R,,minnesota,middle-tennessee-state,H,34,3,0,,,TCF Bank Stadium - Minneapolis Minnesota
@@ -433,8 +433,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-09-16,2017,R,,arizona-state,texas-tech,A,45,52,0,,,Jones AT&T Stadium - Lubbock Texas
 2017-09-16,2017,R,,texas-san-antonio,southern,H,51,17,0,,,Alamodome - San Antonio Texas
 2017-09-16,2017,R,,southern,texas-san-antonio,A,17,51,0,,,Alamodome - San Antonio Texas
-2017-09-16,2017,R,,toledo,tulsa,H,54,51,0,,,Glass Bowl - Toledo Ohio
-2017-09-16,2017,R,,tulsa,toledo,A,51,54,0,,,Glass Bowl - Toledo Ohio
+2017-09-16,2017,R,BOWL,toledo,tulsa,H,54,51,0,,,Glass Bowl - Toledo Ohio
+2017-09-16,2017,R,BOWL,tulsa,toledo,A,51,54,0,,,Glass Bowl - Toledo Ohio
 2017-09-16,2017,R,,troy,new-mexico-state,A,27,24,0,,,Aggie Memorial Stadium - Las Cruces New Mexico
 2017-09-16,2017,R,,new-mexico-state,troy,H,24,27,0,,,Aggie Memorial Stadium - Las Cruces New Mexico
 2017-09-16,2017,R,,utah,san-jose-state,H,54,16,0,,,Rice-Eccles Stadium - Salt Lake City Utah
@@ -499,8 +499,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-09-23,2017,R,,louisiana,louisiana-monroe,H,50,56,0,,,Cajun Field - Lafayette Louisiana
 2017-09-23,2017,R,,louisville,kent-state,H,42,3,0,19.0,,Papa John's Cardinal Stadium - Louisville Kentucky
 2017-09-23,2017,R,,kent-state,louisville,A,3,42,0,,19.0,Papa John's Cardinal Stadium - Louisville Kentucky
-2017-09-23,2017,R,,memphis,southern-illinois,H,44,31,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2017-09-23,2017,R,,southern-illinois,memphis,A,31,44,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2017-09-23,2017,R,BOWL,memphis,southern-illinois,H,44,31,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2017-09-23,2017,R,BOWL,southern-illinois,memphis,A,31,44,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2017-09-23,2017,R,,miami-fl,toledo,H,52,30,0,14.0,,Hard Rock Stadium - Miami Gardens Florida
 2017-09-23,2017,R,,toledo,miami-fl,A,30,52,0,,14.0,Hard Rock Stadium - Miami Gardens Florida
 2017-09-23,2017,R,,miami-oh,central-michigan,A,31,14,0,,,Kelly/Shorts Stadium - Mount Pleasant Michigan
@@ -675,8 +675,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-09-30,2017,R,,south-carolina,texas-a-m,A,17,24,0,,,Kyle Field - College Station Texas
 2017-09-30,2017,R,,troy,louisiana-state,A,24,21,0,,25.0,Tiger Stadium - Baton Rouge Louisiana
 2017-09-30,2017,R,,louisiana-state,troy,H,21,24,0,25.0,,Tiger Stadium - Baton Rouge Louisiana
-2017-09-30,2017,R,,ucla,colorado,H,27,23,0,,,Rose Bowl - Pasadena California
-2017-09-30,2017,R,,colorado,ucla,A,23,27,0,,,Rose Bowl - Pasadena California
+2017-09-30,2017,R,CFP-SF,ucla,colorado,H,27,23,0,,,Rose Bowl - Pasadena California
+2017-09-30,2017,R,CFP-SF,colorado,ucla,A,23,27,0,,,Rose Bowl - Pasadena California
 2017-09-30,2017,R,,washington,oregon-state,A,42,7,0,6.0,,Reser Stadium - Corvallis Oregon
 2017-09-30,2017,R,,oregon-state,washington,H,7,42,0,,6.0,Reser Stadium - Corvallis Oregon
 2017-09-30,2017,R,,western-michigan,ball-state,H,55,3,0,,,Waldo Stadium - Kalamazoo Michigan
@@ -783,8 +783,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-10-07,2017,R,,west-virginia,texas-christian,A,24,31,0,23.0,8.0,Amon G. Carter Stadium - Fort Worth Texas
 2017-10-07,2017,R,,texas-tech,kansas,A,65,19,0,,,Memorial Stadium - Lawrence Kansas
 2017-10-07,2017,R,,kansas,texas-tech,H,19,65,0,,,Memorial Stadium - Lawrence Kansas
-2017-10-07,2017,R,,toledo,eastern-michigan,H,20,15,0,,,Glass Bowl - Toledo Ohio
-2017-10-07,2017,R,,eastern-michigan,toledo,A,15,20,0,,,Glass Bowl - Toledo Ohio
+2017-10-07,2017,R,BOWL,toledo,eastern-michigan,H,20,15,0,,,Glass Bowl - Toledo Ohio
+2017-10-07,2017,R,BOWL,eastern-michigan,toledo,A,15,20,0,,,Glass Bowl - Toledo Ohio
 2017-10-07,2017,R,,tulane,tulsa,H,62,28,0,,,Yulman Stadium - New Orleans Louisiana
 2017-10-07,2017,R,,tulsa,tulane,A,28,62,0,,,Yulman Stadium - New Orleans Louisiana
 2017-10-07,2017,R,,virginia,duke,H,28,21,0,,,Scott Stadium - Charlottesville Virginia
@@ -795,8 +795,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-10-07,2017,R,,california,washington,A,7,38,0,,6.0,Husky Stadium - Seattle Washington
 2017-10-07,2017,R,,washington-state,oregon,A,33,10,0,11.0,,Autzen Stadium - Eugene Oregon
 2017-10-07,2017,R,,oregon,washington-state,H,10,33,0,,11.0,Autzen Stadium - Eugene Oregon
-2017-10-07,2017,R,,western-kentucky,texas-el-paso,A,15,14,0,,,Sun Bowl - El Paso Texas
-2017-10-07,2017,R,,texas-el-paso,western-kentucky,H,14,15,0,,,Sun Bowl - El Paso Texas
+2017-10-07,2017,R,BOWL,western-kentucky,texas-el-paso,A,15,14,0,,,Sun Bowl - El Paso Texas
+2017-10-07,2017,R,BOWL,texas-el-paso,western-kentucky,H,14,15,0,,,Sun Bowl - El Paso Texas
 2017-10-07,2017,R,,western-michigan,buffalo,A,71,68,0,,,UB Stadium - Buffalo New York
 2017-10-07,2017,R,,buffalo,western-michigan,H,68,71,0,,,UB Stadium - Buffalo New York
 2017-10-07,2017,R,,wisconsin,nebraska,A,38,17,0,9.0,,Memorial Stadium - Lincoln Nebraska
@@ -857,8 +857,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-10-14,2017,R,,auburn,louisiana-state,A,23,27,0,10.0,,Tiger Stadium - Baton Rouge Louisiana
 2017-10-14,2017,R,,marshall,old-dominion,H,35,3,0,,,Joan C. Edwards Stadium - Huntington West Virginia
 2017-10-14,2017,R,,old-dominion,marshall,A,3,35,0,,,Joan C. Edwards Stadium - Huntington West Virginia
-2017-10-14,2017,R,,memphis,navy,H,30,27,0,,25.0,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2017-10-14,2017,R,,navy,memphis,A,27,30,0,25.0,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2017-10-14,2017,R,BOWL,memphis,navy,H,30,27,0,,25.0,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2017-10-14,2017,R,BOWL,navy,memphis,A,27,30,0,25.0,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2017-10-14,2017,R,,miami-fl,georgia-tech,H,25,24,0,11.0,,Hard Rock Stadium - Miami Gardens Florida
 2017-10-14,2017,R,,georgia-tech,miami-fl,A,24,25,0,,11.0,Hard Rock Stadium - Miami Gardens Florida
 2017-10-14,2017,R,,michigan,indiana,A,27,20,0,17.0,,"Memorial Stadium ""The Rock"" - Bloomington Indiana"
@@ -883,8 +883,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-10-14,2017,R,,bowling-green,ohio,H,30,48,0,,,Doyt Perry Stadium - Bowling Green Ohio
 2017-10-14,2017,R,,ohio-state,nebraska,A,56,14,0,9.0,,Memorial Stadium - Lincoln Nebraska
 2017-10-14,2017,R,,nebraska,ohio-state,H,14,56,0,,9.0,Memorial Stadium - Lincoln Nebraska
-2017-10-14,2017,R,,oklahoma,texas,N,29,24,0,12.0,,Cotton Bowl - Dallas Texas
-2017-10-14,2017,R,,texas,oklahoma,N,24,29,0,,12.0,Cotton Bowl - Dallas Texas
+2017-10-14,2017,R,BOWL,oklahoma,texas,N,29,24,0,12.0,,Cotton Bowl - Dallas Texas
+2017-10-14,2017,R,BOWL,texas,oklahoma,N,24,29,0,,12.0,Cotton Bowl - Dallas Texas
 2017-10-14,2017,R,,oklahoma-state,baylor,H,59,16,0,14.0,,Boone Pickens Stadium - Stillwater Oklahoma
 2017-10-14,2017,R,,baylor,oklahoma-state,A,16,59,0,,14.0,Boone Pickens Stadium - Stillwater Oklahoma
 2017-10-14,2017,R,,rutgers,illinois,A,35,24,0,,,Memorial Stadium - Champaign Illinois
@@ -1015,12 +1015,12 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-10-21,2017,R,,kansas,texas-christian,A,0,43,0,,4.0,Amon G. Carter Stadium - Fort Worth Texas
 2017-10-21,2017,R,,texas-san-antonio,rice,H,20,7,0,,,Alamodome - San Antonio Texas
 2017-10-21,2017,R,,rice,texas-san-antonio,A,7,20,0,,,Alamodome - San Antonio Texas
-2017-10-21,2017,R,,toledo,akron,H,48,21,0,,,Glass Bowl - Toledo Ohio
-2017-10-21,2017,R,,akron,toledo,A,21,48,0,,,Glass Bowl - Toledo Ohio
+2017-10-21,2017,R,BOWL,toledo,akron,H,48,21,0,,,Glass Bowl - Toledo Ohio
+2017-10-21,2017,R,BOWL,akron,toledo,A,21,48,0,,,Glass Bowl - Toledo Ohio
 2017-10-21,2017,R,,troy,georgia-state,A,34,10,0,,,Georgia State Stadium - Atlanta Georgia
 2017-10-21,2017,R,,georgia-state,troy,H,10,34,0,,,Georgia State Stadium - Atlanta Georgia
-2017-10-21,2017,R,,ucla,oregon,H,31,14,0,,,Rose Bowl - Pasadena California
-2017-10-21,2017,R,,oregon,ucla,A,14,31,0,,,Rose Bowl - Pasadena California
+2017-10-21,2017,R,CFP-SF,ucla,oregon,H,31,14,0,,,Rose Bowl - Pasadena California
+2017-10-21,2017,R,CFP-SF,oregon,ucla,A,14,31,0,,,Rose Bowl - Pasadena California
 2017-10-21,2017,R,,utah-state,nevada-las-vegas,A,52,28,0,,,Sam Boyd Stadium - Las Vegas Nevada
 2017-10-21,2017,R,,nevada-las-vegas,utah-state,H,28,52,0,,,Sam Boyd Stadium - Las Vegas Nevada
 2017-10-21,2017,R,,virginia-tech,north-carolina,H,59,7,0,14.0,,Lane Stadium - Blacksburg Virginia
@@ -1043,8 +1043,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-10-26,2017,R,,ball-state,toledo,H,17,58,0,,,Scheumann Stadium - Muncie Indiana
 2017-10-27,2017,R,,boston-college,florida-state,H,35,3,0,,,Alumni Stadium - Chestnut Hill Massachusetts
 2017-10-27,2017,R,,florida-state,boston-college,A,3,35,0,,,Alumni Stadium - Chestnut Hill Massachusetts
-2017-10-27,2017,R,,memphis,tulane,H,56,26,0,24.0,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2017-10-27,2017,R,,tulane,memphis,A,26,56,0,,24.0,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2017-10-27,2017,R,BOWL,memphis,tulane,H,56,26,0,24.0,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2017-10-27,2017,R,BOWL,tulane,memphis,A,26,56,0,,24.0,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2017-10-27,2017,R,,southern-methodist,tulsa,H,38,34,0,,,Gerald J. Ford Stadium - Dallas Texas
 2017-10-27,2017,R,,tulsa,southern-methodist,A,34,38,0,,,Gerald J. Ford Stadium - Dallas Texas
 2017-10-28,2017,R,,air-force,colorado-state,A,45,28,0,,,Sonny Lubrick Field at Colorado State Stadium - Fort Collins Colorado
@@ -1133,8 +1133,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-10-28,2017,R,,baylor,texas,H,7,38,0,,,McLane Stadium - Waco Texas
 2017-10-28,2017,R,,texas-state,coastal-carolina,A,27,7,0,,,Brooks Stadium - Conway South Carolina
 2017-10-28,2017,R,,coastal-carolina,texas-state,H,7,27,0,,,Brooks Stadium - Conway South Carolina
-2017-10-28,2017,R,,texas-san-antonio,texas-el-paso,A,31,14,0,,,Sun Bowl - El Paso Texas
-2017-10-28,2017,R,,texas-el-paso,texas-san-antonio,H,14,31,0,,,Sun Bowl - El Paso Texas
+2017-10-28,2017,R,BOWL,texas-san-antonio,texas-el-paso,A,31,14,0,,,Sun Bowl - El Paso Texas
+2017-10-28,2017,R,BOWL,texas-el-paso,texas-san-antonio,H,14,31,0,,,Sun Bowl - El Paso Texas
 2017-10-28,2017,R,,troy,georgia-southern,H,38,16,0,,,Veterans Memorial Stadium - Troy Alabama
 2017-10-28,2017,R,,georgia-southern,troy,A,16,38,0,,,Veterans Memorial Stadium - Troy Alabama
 2017-10-28,2017,R,,virginia-tech,duke,H,24,3,0,13.0,,Lane Stadium - Blacksburg Virginia
@@ -1157,8 +1157,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-11-02,2017,R,,ball-state,eastern-michigan,A,14,56,0,,,Rynearson Stadium - Ypsilanti Michigan
 2017-11-02,2017,R,,temple,navy,H,34,26,0,,,Lincoln Financial Field - Philadelphia Pennsylvania
 2017-11-02,2017,R,,navy,temple,A,26,34,0,,,Lincoln Financial Field - Philadelphia Pennsylvania
-2017-11-02,2017,R,,toledo,northern-illinois,H,27,17,0,,,Glass Bowl - Toledo Ohio
-2017-11-02,2017,R,,northern-illinois,toledo,A,17,27,0,,,Glass Bowl - Toledo Ohio
+2017-11-02,2017,R,BOWL,toledo,northern-illinois,H,27,17,0,,,Glass Bowl - Toledo Ohio
+2017-11-02,2017,R,BOWL,northern-illinois,toledo,A,17,27,0,,,Glass Bowl - Toledo Ohio
 2017-11-02,2017,R,,troy,idaho,H,24,21,0,,,Veterans Memorial Stadium - Troy Alabama
 2017-11-02,2017,R,,idaho,troy,A,21,24,0,,,Veterans Memorial Stadium - Troy Alabama
 2017-11-03,2017,R,,florida-atlantic,marshall,H,30,25,0,,,FAU Football Stadium - Boca Raton Florida
@@ -1381,8 +1381,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-11-11,2017,R,,coastal-carolina,troy,H,17,42,0,,,Brooks Stadium - Conway South Carolina
 2017-11-11,2017,R,,tulane,east-carolina,A,31,24,0,,,Dowdy-Ficklen Stadium - Greenville North Carolina
 2017-11-11,2017,R,,east-carolina,tulane,H,24,31,0,,,Dowdy-Ficklen Stadium - Greenville North Carolina
-2017-11-11,2017,R,,ucla,arizona-state,H,44,37,0,,,Rose Bowl - Pasadena California
-2017-11-11,2017,R,,arizona-state,ucla,A,37,44,0,,,Rose Bowl - Pasadena California
+2017-11-11,2017,R,CFP-SF,ucla,arizona-state,H,44,37,0,,,Rose Bowl - Pasadena California
+2017-11-11,2017,R,CFP-SF,arizona-state,ucla,A,37,44,0,,,Rose Bowl - Pasadena California
 2017-11-11,2017,R,,wake-forest,syracuse,A,64,43,0,,,Carrier Dome - Syracuse New York
 2017-11-11,2017,R,,syracuse,wake-forest,H,43,64,0,,,Carrier Dome - Syracuse New York
 2017-11-11,2017,R,,washington-state,utah,A,33,25,0,19.0,,Rice-Eccles Stadium - Salt Lake City Utah
@@ -1459,14 +1459,14 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-11-18,2017,R,,new-mexico-state,louisiana,A,34,47,0,,,Cajun Field - Lafayette Louisiana
 2017-11-18,2017,R,,louisiana-state,tennessee,A,30,10,0,21.0,,Neyland Stadium - Knoxville Tennessee
 2017-11-18,2017,R,,tennessee,louisiana-state,H,10,30,0,,21.0,Neyland Stadium - Knoxville Tennessee
-2017-11-18,2017,R,,louisiana-tech,texas-el-paso,A,42,21,0,,,Sun Bowl - El Paso Texas
-2017-11-18,2017,R,,texas-el-paso,louisiana-tech,H,21,42,0,,,Sun Bowl - El Paso Texas
+2017-11-18,2017,R,BOWL,louisiana-tech,texas-el-paso,A,42,21,0,,,Sun Bowl - El Paso Texas
+2017-11-18,2017,R,BOWL,texas-el-paso,louisiana-tech,H,21,42,0,,,Sun Bowl - El Paso Texas
 2017-11-18,2017,R,,louisville,syracuse,H,56,10,0,,,Papa John's Cardinal Stadium - Louisville Kentucky
 2017-11-18,2017,R,,syracuse,louisville,A,10,56,0,,,Papa John's Cardinal Stadium - Louisville Kentucky
 2017-11-18,2017,R,,massachusetts,brigham-young,A,16,10,0,,,LaVell Edwards Stadium - Provo Utah
 2017-11-18,2017,R,,brigham-young,massachusetts,H,10,16,0,,,LaVell Edwards Stadium - Provo Utah
-2017-11-18,2017,R,,memphis,southern-methodist,H,66,45,0,18.0,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2017-11-18,2017,R,,southern-methodist,memphis,A,45,66,0,,18.0,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2017-11-18,2017,R,BOWL,memphis,southern-methodist,H,66,45,0,18.0,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2017-11-18,2017,R,BOWL,southern-methodist,memphis,A,45,66,0,,18.0,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2017-11-18,2017,R,,miami-fl,virginia,H,44,28,0,2.0,,Hard Rock Stadium - Miami Gardens Florida
 2017-11-18,2017,R,,virginia,miami-fl,A,28,44,0,,2.0,Hard Rock Stadium - Miami Gardens Florida
 2017-11-18,2017,R,,michigan-state,maryland,H,17,7,0,22.0,,Spartan Stadium - East Lansing Michigan
@@ -1555,12 +1555,12 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-11-24,2017,R,,baylor,texas-christian,A,22,45,0,,10.0,Amon G. Carter Stadium - Fort Worth Texas
 2017-11-24,2017,R,,texas-tech,texas,A,27,23,0,,,Darrell K Royal-Texas Memorial Stadium - Austin Texas
 2017-11-24,2017,R,,texas,texas-tech,H,23,27,0,,,Darrell K Royal-Texas Memorial Stadium - Austin Texas
-2017-11-24,2017,R,,toledo,western-michigan,H,37,10,0,,,Glass Bowl - Toledo Ohio
-2017-11-24,2017,R,,western-michigan,toledo,A,10,37,0,,,Glass Bowl - Toledo Ohio
+2017-11-24,2017,R,BOWL,toledo,western-michigan,H,37,10,0,,,Glass Bowl - Toledo Ohio
+2017-11-24,2017,R,BOWL,western-michigan,toledo,A,10,37,0,,,Glass Bowl - Toledo Ohio
 2017-11-24,2017,R,,troy,texas-state,H,62,9,0,,,Veterans Memorial Stadium - Troy Alabama
 2017-11-24,2017,R,,texas-state,troy,A,9,62,0,,,Veterans Memorial Stadium - Troy Alabama
-2017-11-24,2017,R,,ucla,california,H,30,27,0,,,Rose Bowl - Pasadena California
-2017-11-24,2017,R,,california,ucla,A,27,30,0,,,Rose Bowl - Pasadena California
+2017-11-24,2017,R,CFP-SF,ucla,california,H,30,27,0,,,Rose Bowl - Pasadena California
+2017-11-24,2017,R,CFP-SF,california,ucla,A,27,30,0,,,Rose Bowl - Pasadena California
 2017-11-24,2017,R,,virginia-tech,virginia,A,10,0,0,24.0,,Scott Stadium - Charlottesville Virginia
 2017-11-24,2017,R,,virginia,virginia-tech,H,0,10,0,,24.0,Scott Stadium - Charlottesville Virginia
 2017-11-25,2017,R,,air-force,utah-state,H,38,35,0,,,Falcon Stadium - Colorado Springs Colorado
@@ -1603,8 +1603,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-11-25,2017,R,,texas-san-antonio,louisiana-tech,A,6,20,0,,,Joe Aillet Stadium - Ruston Louisiana
 2017-11-25,2017,R,,louisville,kentucky,A,44,17,0,,,Kroger Field - Lexington Kentucky
 2017-11-25,2017,R,,kentucky,louisville,H,17,44,0,,,Kroger Field - Lexington Kentucky
-2017-11-25,2017,R,,memphis,east-carolina,H,70,13,0,17.0,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2017-11-25,2017,R,,east-carolina,memphis,A,13,70,0,,17.0,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2017-11-25,2017,R,BOWL,memphis,east-carolina,H,70,13,0,17.0,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2017-11-25,2017,R,BOWL,east-carolina,memphis,A,13,70,0,,17.0,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2017-11-25,2017,R,,michigan-state,rutgers,A,40,7,0,21.0,,High Point Solutions Stadium - Piscataway New Jersey
 2017-11-25,2017,R,,rutgers,michigan-state,H,7,40,0,,21.0,High Point Solutions Stadium - Piscataway New Jersey
 2017-11-25,2017,R,,middle-tennessee-state,old-dominion,H,41,10,0,,,Floyd Stadium - Murfreesboro Tennessee
@@ -1683,83 +1683,83 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2017-12-02,2017,R,,arkansas-state,troy,H,25,32,0,,,Centennial Bank Stadium - Jonesboro Arkansas
 2017-12-09,2017,R,,army,navy,N,14,13,0,,,Lincoln Financial Field - Philadelphia Pennsylvania
 2017-12-09,2017,R,,navy,army,N,13,14,0,,,Lincoln Financial Field - Philadelphia Pennsylvania
-2017-12-16,2017,R,,boise-state,oregon,N,38,28,0,25.0,,Las Vegas Bowl (Sam Boyd Stadium - Las Vegas Nevada)
-2017-12-16,2017,R,,oregon,boise-state,N,28,38,0,,25.0,Las Vegas Bowl (Sam Boyd Stadium - Las Vegas Nevada)
-2017-12-16,2017,R,,georgia-state,western-kentucky,N,27,17,0,,,Cure Bowl (Camping World Stadium - Orlando Florida)
-2017-12-16,2017,R,,western-kentucky,georgia-state,N,17,27,0,,,Cure Bowl (Camping World Stadium - Orlando Florida)
-2017-12-16,2017,R,,marshall,colorado-state,N,31,28,0,,,New Mexico Bowl (Dreamstyle Stadium - Albuquerque New Mexico)
-2017-12-16,2017,R,,colorado-state,marshall,N,28,31,0,,,New Mexico Bowl (Dreamstyle Stadium - Albuquerque New Mexico)
-2017-12-16,2017,R,,middle-tennessee-state,arkansas-state,N,35,30,0,,,Camellia Bowl (Cramton Bowl - Montgomery Alabama)
-2017-12-16,2017,R,,arkansas-state,middle-tennessee-state,N,30,35,0,,,Camellia Bowl (Cramton Bowl - Montgomery Alabama)
-2017-12-16,2017,R,,troy,north-texas,N,50,30,0,,,New Orleans Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
-2017-12-16,2017,R,,north-texas,troy,N,30,50,0,,,New Orleans Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
-2017-12-19,2017,R,,florida-atlantic,akron,H,50,3,0,,,Boca Raton Bowl (FAU Football Stadium - Boca Raton Florida)
-2017-12-19,2017,R,,akron,florida-atlantic,A,3,50,0,,,Boca Raton Bowl (FAU Football Stadium - Boca Raton Florida)
-2017-12-20,2017,R,,louisiana-tech,southern-methodist,N,51,10,0,,,Frisco Bowl (Toyota Stadium - Frisco Texas)
-2017-12-20,2017,R,,southern-methodist,louisiana-tech,N,10,51,0,,,Frisco Bowl (Toyota Stadium - Frisco Texas)
-2017-12-21,2017,R,,temple,florida-international,N,28,3,0,,,Gasparilla Bowl (Tropicana Field - St. Petersburg Florida)
-2017-12-21,2017,R,,florida-international,temple,N,3,28,0,,,Gasparilla Bowl (Tropicana Field - St. Petersburg Florida)
-2017-12-22,2017,R,,ohio,alabama-birmingham,N,41,6,0,,,Bahamas Bowl (Thomas Robinson Stadium - Nassau BHS)
-2017-12-22,2017,R,,alabama-birmingham,ohio,N,6,41,0,,,Bahamas Bowl (Thomas Robinson Stadium - Nassau BHS)
-2017-12-22,2017,R,,wyoming,central-michigan,N,37,14,0,,,Famous Idaho Potato Bowl (Albertsons Stadium - Boise Idaho)
-2017-12-22,2017,R,,central-michigan,wyoming,N,14,37,0,,,Famous Idaho Potato Bowl (Albertsons Stadium - Boise Idaho)
-2017-12-23,2017,R,,appalachian-state,toledo,N,34,0,0,,,Dollar General Bowl (Ladd-Peebles Stadium - Mobile Alabama)
-2017-12-23,2017,R,,toledo,appalachian-state,N,0,34,0,,,Dollar General Bowl (Ladd-Peebles Stadium - Mobile Alabama)
-2017-12-23,2017,R,,army,san-diego-state,N,42,35,0,,,Armed Forces Bowl (Amon G. Carter Stadium - Fort Worth Texas)
-2017-12-23,2017,R,,san-diego-state,army,N,35,42,0,,,Armed Forces Bowl (Amon G. Carter Stadium - Fort Worth Texas)
-2017-12-23,2017,R,,south-florida,texas-tech,N,38,34,0,23.0,,Birmingham Bowl (Legion Field - Birmingham Alabama)
-2017-12-23,2017,R,,texas-tech,south-florida,N,34,38,0,,23.0,Birmingham Bowl (Legion Field - Birmingham Alabama)
-2017-12-24,2017,R,,fresno-state,houston,N,33,27,0,,,Hawaii Bowl (Aloha Stadium - Honolulu Hawaii)
-2017-12-24,2017,R,,houston,fresno-state,N,27,33,0,,,Hawaii Bowl (Aloha Stadium - Honolulu Hawaii)
-2017-12-26,2017,R,,duke,northern-illinois,N,36,14,0,,,Quick Lane Bowl (Ford Field - Detroit Michigan)
-2017-12-26,2017,R,,northern-illinois,duke,N,14,36,0,,,Quick Lane Bowl (Ford Field - Detroit Michigan)
-2017-12-26,2017,R,,kansas-state,ucla,N,35,17,0,,,Cactus Bowl (Chase Field - Phoenix Arizona)
-2017-12-26,2017,R,,ucla,kansas-state,N,17,35,0,,,Cactus Bowl (Chase Field - Phoenix Arizona)
-2017-12-26,2017,R,,utah,west-virginia,N,30,14,0,,,Heart of Dallas Bowl (Cotton Bowl - Dallas Texas)
-2017-12-26,2017,R,,west-virginia,utah,N,14,30,0,,,Heart of Dallas Bowl (Cotton Bowl - Dallas Texas)
-2017-12-27,2017,R,,florida-state,southern-mississippi,N,42,13,0,,,Independence Bowl (Independence Stadium - Shreveport Louisiana)
-2017-12-27,2017,R,,southern-mississippi,florida-state,N,13,42,0,,,Independence Bowl (Independence Stadium - Shreveport Louisiana)
-2017-12-27,2017,R,,iowa,boston-college,N,27,20,0,,,Pinstripe Bowl (New Yankee Stadium - New York New York)
-2017-12-27,2017,R,,boston-college,iowa,N,20,27,0,,,Pinstripe Bowl (New Yankee Stadium - New York New York)
-2017-12-27,2017,R,,purdue,arizona,N,38,35,0,,,Foster Farms Bowl (Levi's Stadium - Santa Clara California)
-2017-12-27,2017,R,,arizona,purdue,N,35,38,0,,,Foster Farms Bowl (Levi's Stadium - Santa Clara California)
-2017-12-27,2017,R,,texas,missouri,N,33,16,0,,,Texas Bowl (NRG Stadium - Houston Texas)
-2017-12-27,2017,R,,missouri,texas,N,16,33,0,,,Texas Bowl (NRG Stadium - Houston Texas)
-2017-12-28,2017,R,,michigan-state,washington-state,N,42,17,0,18.0,21.0,Holiday Bowl (SDCCU Stadium - San Diego California)
-2017-12-28,2017,R,,washington-state,michigan-state,N,17,42,0,21.0,18.0,Holiday Bowl (SDCCU Stadium - San Diego California)
-2017-12-28,2017,R,,navy,virginia,H,49,7,0,,,Military Bowl (Navy-Marine Corps Memorial Stadium - Annapolis Maryland)
-2017-12-28,2017,R,,virginia,navy,A,7,49,0,,,Military Bowl (Navy-Marine Corps Memorial Stadium - Annapolis Maryland)
-2017-12-28,2017,R,,oklahoma-state,virginia-tech,N,30,21,0,17.0,22.0,Camping World Bowl (Camping World Stadium - Orlando Florida)
-2017-12-28,2017,R,,virginia-tech,oklahoma-state,N,21,30,0,22.0,17.0,Camping World Bowl (Camping World Stadium - Orlando Florida)
-2017-12-28,2017,R,,texas-christian,stanford,N,39,37,0,13.0,15.0,Alamo Bowl (Alamodome - San Antonio Texas)
-2017-12-28,2017,R,,stanford,texas-christian,N,37,39,0,15.0,13.0,Alamo Bowl (Alamodome - San Antonio Texas)
-2017-12-29,2017,R,,new-mexico-state,utah-state,N,26,20,0,,,Arizona Bowl (Arizona Stadium - Tucson Arizona)
-2017-12-29,2017,R,,utah-state,new-mexico-state,N,20,26,0,,,Arizona Bowl (Arizona Stadium - Tucson Arizona)
-2017-12-29,2017,R,,north-carolina-state,arizona-state,N,52,31,0,,,Sun Bowl (Sun Bowl - El Paso Texas)
-2017-12-29,2017,R,,arizona-state,north-carolina-state,N,31,52,0,,,Sun Bowl (Sun Bowl - El Paso Texas)
-2017-12-29,2017,R,,northwestern,kentucky,N,24,23,0,20.0,,Music City Bowl (Nissan Stadium - Nashville Tennessee)
-2017-12-29,2017,R,,kentucky,northwestern,N,23,24,0,,20.0,Music City Bowl (Nissan Stadium - Nashville Tennessee)
-2017-12-29,2017,R,,ohio-state,southern-california,N,24,7,0,5.0,8.0,Cotton Bowl (AT&T Stadium - Arlington Texas)
-2017-12-29,2017,R,,southern-california,ohio-state,N,7,24,0,8.0,5.0,Cotton Bowl (AT&T Stadium - Arlington Texas)
-2017-12-29,2017,R,,wake-forest,texas-a-m,N,55,52,0,,,Belk Bowl (Bank of America Stadium - Charlotte North Carolina)
-2017-12-29,2017,R,,texas-a-m,wake-forest,N,52,55,0,,,Belk Bowl (Bank of America Stadium - Charlotte North Carolina)
-2017-12-30,2017,R,,iowa-state,memphis,A,21,20,0,,19.0,Liberty Bowl (Liberty Bowl Memorial Stadium - Memphis Tennessee)
-2017-12-30,2017,R,,memphis,iowa-state,H,20,21,0,19.0,,Liberty Bowl (Liberty Bowl Memorial Stadium - Memphis Tennessee)
-2017-12-30,2017,R,,mississippi-state,louisville,N,31,27,0,24.0,,TaxSlayer Bowl (EverBank Field - Jacksonville Florida)
-2017-12-30,2017,R,,louisville,mississippi-state,N,27,31,0,,24.0,TaxSlayer Bowl (EverBank Field - Jacksonville Florida)
-2017-12-30,2017,R,,penn-state,washington,N,35,28,0,9.0,12.0,Fiesta Bowl (University of Phoenix Stadium - Glendale Arizona)
-2017-12-30,2017,R,,washington,penn-state,N,28,35,0,12.0,9.0,Fiesta Bowl (University of Phoenix Stadium - Glendale Arizona)
-2017-12-30,2017,R,,wisconsin,miami-fl,A,34,24,0,6.0,11.0,Orange Bowl (Hard Rock Stadium - Miami Gardens Florida)
-2017-12-30,2017,R,,miami-fl,wisconsin,H,24,34,0,11.0,6.0,Orange Bowl (Hard Rock Stadium - Miami Gardens Florida)
-2018-01-01,2017,R,,alabama,clemson,N,24,6,0,4.0,1.0,Sugar Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
-2018-01-01,2017,R,,clemson,alabama,N,6,24,0,1.0,4.0,Sugar Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
-2018-01-01,2017,R,,central-florida,auburn,N,34,27,0,10.0,7.0,Peach Bowl (Mercedes-Benz Stadium - Atlanta Georgia)
-2018-01-01,2017,R,,auburn,central-florida,N,27,34,0,7.0,10.0,Peach Bowl (Mercedes-Benz Stadium - Atlanta Georgia)
-2018-01-01,2017,R,,georgia,oklahoma,N,54,48,0,3.0,2.0,Rose Bowl (Rose Bowl - Pasadena California)
-2018-01-01,2017,R,,oklahoma,georgia,N,48,54,0,2.0,3.0,Rose Bowl (Rose Bowl - Pasadena California)
-2018-01-01,2017,R,,notre-dame,louisiana-state,N,21,17,0,14.0,16.0,Citrus Bowl (Camping World Stadium - Orlando Florida)
-2018-01-01,2017,R,,louisiana-state,notre-dame,N,17,21,0,16.0,14.0,Citrus Bowl (Camping World Stadium - Orlando Florida)
-2018-01-01,2017,R,,south-carolina,michigan,N,26,19,0,,,Outback Bowl (Raymond James Stadium - Tampa Florida)
-2018-01-01,2017,R,,michigan,south-carolina,N,19,26,0,,,Outback Bowl (Raymond James Stadium - Tampa Florida)
-2018-01-08,2017,R,CCG,alabama,georgia,N,26,23,0,4.0,3.0,College Football Playoff National Championship (Mercedes-Benz Stadium - Atlanta Georgia)
-2018-01-08,2017,R,CCG,georgia,alabama,N,23,26,0,3.0,4.0,College Football Playoff National Championship (Mercedes-Benz Stadium - Atlanta Georgia)
+2017-12-16,2017,R,BOWL,boise-state,oregon,N,38,28,0,25.0,,Las Vegas Bowl (Sam Boyd Stadium - Las Vegas Nevada)
+2017-12-16,2017,R,BOWL,oregon,boise-state,N,28,38,0,,25.0,Las Vegas Bowl (Sam Boyd Stadium - Las Vegas Nevada)
+2017-12-16,2017,R,BOWL,georgia-state,western-kentucky,N,27,17,0,,,Cure Bowl (Camping World Stadium - Orlando Florida)
+2017-12-16,2017,R,BOWL,western-kentucky,georgia-state,N,17,27,0,,,Cure Bowl (Camping World Stadium - Orlando Florida)
+2017-12-16,2017,R,BOWL,marshall,colorado-state,N,31,28,0,,,New Mexico Bowl (Dreamstyle Stadium - Albuquerque New Mexico)
+2017-12-16,2017,R,BOWL,colorado-state,marshall,N,28,31,0,,,New Mexico Bowl (Dreamstyle Stadium - Albuquerque New Mexico)
+2017-12-16,2017,R,BOWL,middle-tennessee-state,arkansas-state,N,35,30,0,,,Camellia Bowl (Cramton Bowl - Montgomery Alabama)
+2017-12-16,2017,R,BOWL,arkansas-state,middle-tennessee-state,N,30,35,0,,,Camellia Bowl (Cramton Bowl - Montgomery Alabama)
+2017-12-16,2017,R,BOWL,troy,north-texas,N,50,30,0,,,New Orleans Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
+2017-12-16,2017,R,BOWL,north-texas,troy,N,30,50,0,,,New Orleans Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
+2017-12-19,2017,R,BOWL,florida-atlantic,akron,H,50,3,0,,,Boca Raton Bowl (FAU Football Stadium - Boca Raton Florida)
+2017-12-19,2017,R,BOWL,akron,florida-atlantic,A,3,50,0,,,Boca Raton Bowl (FAU Football Stadium - Boca Raton Florida)
+2017-12-20,2017,R,BOWL,louisiana-tech,southern-methodist,N,51,10,0,,,Frisco Bowl (Toyota Stadium - Frisco Texas)
+2017-12-20,2017,R,BOWL,southern-methodist,louisiana-tech,N,10,51,0,,,Frisco Bowl (Toyota Stadium - Frisco Texas)
+2017-12-21,2017,R,BOWL,temple,florida-international,N,28,3,0,,,Gasparilla Bowl (Tropicana Field - St. Petersburg Florida)
+2017-12-21,2017,R,BOWL,florida-international,temple,N,3,28,0,,,Gasparilla Bowl (Tropicana Field - St. Petersburg Florida)
+2017-12-22,2017,R,BOWL,ohio,alabama-birmingham,N,41,6,0,,,Bahamas Bowl (Thomas Robinson Stadium - Nassau BHS)
+2017-12-22,2017,R,BOWL,alabama-birmingham,ohio,N,6,41,0,,,Bahamas Bowl (Thomas Robinson Stadium - Nassau BHS)
+2017-12-22,2017,R,BOWL,wyoming,central-michigan,N,37,14,0,,,Famous Idaho Potato Bowl (Albertsons Stadium - Boise Idaho)
+2017-12-22,2017,R,BOWL,central-michigan,wyoming,N,14,37,0,,,Famous Idaho Potato Bowl (Albertsons Stadium - Boise Idaho)
+2017-12-23,2017,R,BOWL,appalachian-state,toledo,N,34,0,0,,,Dollar General Bowl (Ladd-Peebles Stadium - Mobile Alabama)
+2017-12-23,2017,R,BOWL,toledo,appalachian-state,N,0,34,0,,,Dollar General Bowl (Ladd-Peebles Stadium - Mobile Alabama)
+2017-12-23,2017,R,BOWL,army,san-diego-state,N,42,35,0,,,Armed Forces Bowl (Amon G. Carter Stadium - Fort Worth Texas)
+2017-12-23,2017,R,BOWL,san-diego-state,army,N,35,42,0,,,Armed Forces Bowl (Amon G. Carter Stadium - Fort Worth Texas)
+2017-12-23,2017,R,BOWL,south-florida,texas-tech,N,38,34,0,23.0,,Birmingham Bowl (Legion Field - Birmingham Alabama)
+2017-12-23,2017,R,BOWL,texas-tech,south-florida,N,34,38,0,,23.0,Birmingham Bowl (Legion Field - Birmingham Alabama)
+2017-12-24,2017,R,BOWL,fresno-state,houston,N,33,27,0,,,Hawaii Bowl (Aloha Stadium - Honolulu Hawaii)
+2017-12-24,2017,R,BOWL,houston,fresno-state,N,27,33,0,,,Hawaii Bowl (Aloha Stadium - Honolulu Hawaii)
+2017-12-26,2017,R,BOWL,duke,northern-illinois,N,36,14,0,,,Quick Lane Bowl (Ford Field - Detroit Michigan)
+2017-12-26,2017,R,BOWL,northern-illinois,duke,N,14,36,0,,,Quick Lane Bowl (Ford Field - Detroit Michigan)
+2017-12-26,2017,R,BOWL,kansas-state,ucla,N,35,17,0,,,Cactus Bowl (Chase Field - Phoenix Arizona)
+2017-12-26,2017,R,BOWL,ucla,kansas-state,N,17,35,0,,,Cactus Bowl (Chase Field - Phoenix Arizona)
+2017-12-26,2017,R,BOWL,utah,west-virginia,N,30,14,0,,,Heart of Dallas Bowl (Cotton Bowl - Dallas Texas)
+2017-12-26,2017,R,BOWL,west-virginia,utah,N,14,30,0,,,Heart of Dallas Bowl (Cotton Bowl - Dallas Texas)
+2017-12-27,2017,R,BOWL,florida-state,southern-mississippi,N,42,13,0,,,Independence Bowl (Independence Stadium - Shreveport Louisiana)
+2017-12-27,2017,R,BOWL,southern-mississippi,florida-state,N,13,42,0,,,Independence Bowl (Independence Stadium - Shreveport Louisiana)
+2017-12-27,2017,R,BOWL,iowa,boston-college,N,27,20,0,,,Pinstripe Bowl (New Yankee Stadium - New York New York)
+2017-12-27,2017,R,BOWL,boston-college,iowa,N,20,27,0,,,Pinstripe Bowl (New Yankee Stadium - New York New York)
+2017-12-27,2017,R,BOWL,purdue,arizona,N,38,35,0,,,Foster Farms Bowl (Levi's Stadium - Santa Clara California)
+2017-12-27,2017,R,BOWL,arizona,purdue,N,35,38,0,,,Foster Farms Bowl (Levi's Stadium - Santa Clara California)
+2017-12-27,2017,R,BOWL,texas,missouri,N,33,16,0,,,Texas Bowl (NRG Stadium - Houston Texas)
+2017-12-27,2017,R,BOWL,missouri,texas,N,16,33,0,,,Texas Bowl (NRG Stadium - Houston Texas)
+2017-12-28,2017,R,BOWL,michigan-state,washington-state,N,42,17,0,18.0,21.0,Holiday Bowl (SDCCU Stadium - San Diego California)
+2017-12-28,2017,R,BOWL,washington-state,michigan-state,N,17,42,0,21.0,18.0,Holiday Bowl (SDCCU Stadium - San Diego California)
+2017-12-28,2017,R,BOWL,navy,virginia,H,49,7,0,,,Military Bowl (Navy-Marine Corps Memorial Stadium - Annapolis Maryland)
+2017-12-28,2017,R,BOWL,virginia,navy,A,7,49,0,,,Military Bowl (Navy-Marine Corps Memorial Stadium - Annapolis Maryland)
+2017-12-28,2017,R,BOWL,oklahoma-state,virginia-tech,N,30,21,0,17.0,22.0,Camping World Bowl (Camping World Stadium - Orlando Florida)
+2017-12-28,2017,R,BOWL,virginia-tech,oklahoma-state,N,21,30,0,22.0,17.0,Camping World Bowl (Camping World Stadium - Orlando Florida)
+2017-12-28,2017,R,BOWL,texas-christian,stanford,N,39,37,0,13.0,15.0,Alamo Bowl (Alamodome - San Antonio Texas)
+2017-12-28,2017,R,BOWL,stanford,texas-christian,N,37,39,0,15.0,13.0,Alamo Bowl (Alamodome - San Antonio Texas)
+2017-12-29,2017,R,BOWL,new-mexico-state,utah-state,N,26,20,0,,,Arizona Bowl (Arizona Stadium - Tucson Arizona)
+2017-12-29,2017,R,BOWL,utah-state,new-mexico-state,N,20,26,0,,,Arizona Bowl (Arizona Stadium - Tucson Arizona)
+2017-12-29,2017,R,BOWL,north-carolina-state,arizona-state,N,52,31,0,,,Sun Bowl (Sun Bowl - El Paso Texas)
+2017-12-29,2017,R,BOWL,arizona-state,north-carolina-state,N,31,52,0,,,Sun Bowl (Sun Bowl - El Paso Texas)
+2017-12-29,2017,R,BOWL,northwestern,kentucky,N,24,23,0,20.0,,Music City Bowl (Nissan Stadium - Nashville Tennessee)
+2017-12-29,2017,R,BOWL,kentucky,northwestern,N,23,24,0,,20.0,Music City Bowl (Nissan Stadium - Nashville Tennessee)
+2017-12-29,2017,R,BOWL,ohio-state,southern-california,N,24,7,0,5.0,8.0,Cotton Bowl (AT&T Stadium - Arlington Texas)
+2017-12-29,2017,R,BOWL,southern-california,ohio-state,N,7,24,0,8.0,5.0,Cotton Bowl (AT&T Stadium - Arlington Texas)
+2017-12-29,2017,R,BOWL,wake-forest,texas-a-m,N,55,52,0,,,Belk Bowl (Bank of America Stadium - Charlotte North Carolina)
+2017-12-29,2017,R,BOWL,texas-a-m,wake-forest,N,52,55,0,,,Belk Bowl (Bank of America Stadium - Charlotte North Carolina)
+2017-12-30,2017,R,BOWL,iowa-state,memphis,A,21,20,0,,19.0,Liberty Bowl (Liberty Bowl Memorial Stadium - Memphis Tennessee)
+2017-12-30,2017,R,BOWL,memphis,iowa-state,H,20,21,0,19.0,,Liberty Bowl (Liberty Bowl Memorial Stadium - Memphis Tennessee)
+2017-12-30,2017,R,BOWL,mississippi-state,louisville,N,31,27,0,24.0,,TaxSlayer Bowl (EverBank Field - Jacksonville Florida)
+2017-12-30,2017,R,BOWL,louisville,mississippi-state,N,27,31,0,,24.0,TaxSlayer Bowl (EverBank Field - Jacksonville Florida)
+2017-12-30,2017,R,BOWL,penn-state,washington,N,35,28,0,9.0,12.0,Fiesta Bowl (University of Phoenix Stadium - Glendale Arizona)
+2017-12-30,2017,R,BOWL,washington,penn-state,N,28,35,0,12.0,9.0,Fiesta Bowl (University of Phoenix Stadium - Glendale Arizona)
+2017-12-30,2017,R,BOWL,wisconsin,miami-fl,A,34,24,0,6.0,11.0,Orange Bowl (Hard Rock Stadium - Miami Gardens Florida)
+2017-12-30,2017,R,BOWL,miami-fl,wisconsin,H,24,34,0,11.0,6.0,Orange Bowl (Hard Rock Stadium - Miami Gardens Florida)
+2018-01-01,2017,R,CFP-SF,alabama,clemson,N,24,6,0,4.0,1.0,Sugar Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
+2018-01-01,2017,R,CFP-SF,clemson,alabama,N,6,24,0,1.0,4.0,Sugar Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
+2018-01-01,2017,R,BOWL,central-florida,auburn,N,34,27,0,10.0,7.0,Peach Bowl (Mercedes-Benz Stadium - Atlanta Georgia)
+2018-01-01,2017,R,BOWL,auburn,central-florida,N,27,34,0,7.0,10.0,Peach Bowl (Mercedes-Benz Stadium - Atlanta Georgia)
+2018-01-01,2017,R,CFP-SF,georgia,oklahoma,N,54,48,0,3.0,2.0,Rose Bowl (Rose Bowl - Pasadena California)
+2018-01-01,2017,R,CFP-SF,oklahoma,georgia,N,48,54,0,2.0,3.0,Rose Bowl (Rose Bowl - Pasadena California)
+2018-01-01,2017,R,BOWL,notre-dame,louisiana-state,N,21,17,0,14.0,16.0,Citrus Bowl (Camping World Stadium - Orlando Florida)
+2018-01-01,2017,R,BOWL,louisiana-state,notre-dame,N,17,21,0,16.0,14.0,Citrus Bowl (Camping World Stadium - Orlando Florida)
+2018-01-01,2017,R,BOWL,south-carolina,michigan,N,26,19,0,,,Outback Bowl (Raymond James Stadium - Tampa Florida)
+2018-01-01,2017,R,BOWL,michigan,south-carolina,N,19,26,0,,,Outback Bowl (Raymond James Stadium - Tampa Florida)
+2018-01-08,2017,R,NC,alabama,georgia,N,26,23,0,4.0,3.0,College Football Playoff National Championship (Mercedes-Benz Stadium - Atlanta Georgia)
+2018-01-08,2017,R,NC,georgia,alabama,N,23,26,0,3.0,4.0,College Football Playoff National Championship (Mercedes-Benz Stadium - Atlanta Georgia)

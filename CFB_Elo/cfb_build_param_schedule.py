@@ -143,10 +143,9 @@ def coordinate_ascent(conn, seed_eng: "engine.EloEngine", weeks: dict, fcs_ratin
                        season_rosters: dict, first_season: int, rounds: int = 3,
                        start=(0.4, 44.0, 52.0)) -> dict:
     alpha, kmax, hfa = start
-    alpha_range = [round(0.1 * i, 2) for i in range(1, 10)]
-    kmax_range = list(range(20, 101, 4))
-    hfa_range = list(range(0, 121, 4))
-
+    alpha_range = [round(0.01 * i, 2) for i in range(1, 100)]
+    kmax_range = [round(0.5 * i, 1) for i in range(10, 400)]   # 5.0 to 199.5, step 0.5
+    hfa_range = [round(0.5 * i, 1) for i in range(0, 300)]     # 0.0 to 149.5, step 0.5
     def score(a, k, h):
         params = make_params(a, k, h, fcs_rating)
         _, rows = replay_window(conn, seed_eng, weeks, params, season_rosters, first_season)

@@ -34,10 +34,7 @@ CFB-SPECIFIC SCHEMA ADDITIONS
   to work off game data without a database round-trip.
 - `games`/`schedule` also carry nullable `home_ap_rank`/`away_ap_rank`
   (the AP poll rank at kickoff, parsed from source data like
-  "(11) Penn State"). Display-only for most games - the Elo engine
-  only reads these for Round=="BOWL" games, to score bowl importance
-  by participants' rank instead of a hardcoded bowl-name list (see
-  engine.py's POSTSEASON docstring section / _bowl_mult).
+  "(11) Penn State"). Display-only - the Elo engine never reads these.
 - `ratings` carries `conf_game`/`div_game` (whether this was a
   conference/division matchup) and `t` (ties), on top of the same
   columns NBA/WNBA use - same as NFL_Elo. Note division games are far
@@ -820,8 +817,8 @@ def load_param_schedule(conn: sqlite3.Connection) -> Optional[dict[int, dict]]:
 def params_for_season(conn: sqlite3.Connection, season: int) -> dict:
     """The single lookup rebuild.py needs at each season boundary: the
     schedule's entry for this season if one exists (merged onto the
-    engine baseline, so only alpha/kmax/hfa are overridden and
-    everything else - k_floor, rest adjustments, div/conf/playoff
+    engine baseline, so only alpha/kmax/hfa/fcs_rating are overridden
+    and everything else - k_floor, rest adjustments, div/conf/playoff
     multipliers - stays at the validated baseline); otherwise the most
     recently locked EARLIER season in the schedule (e.g. an unplayed
     season with a schedule uploaded via add_season.py but not yet
@@ -835,14 +832,15 @@ def params_for_season(conn: sqlite3.Connection, season: int) -> dict:
     import engine
     schedule = load_param_schedule(conn)
     base = engine.default_params()
+    SCHEDULE_KEYS = ("alpha", "kmax", "hfa", "fcs_rating")
     if schedule:
         if season in schedule:
-            base.update({k: v for k, v in schedule[season].items() if k in ("alpha", "kmax", "hfa")})
+            base.update({k: v for k, v in schedule[season].items() if k in SCHEDULE_KEYS})
             return base
         earlier = [s for s in schedule if s < season]
         if earlier:
             nearest = max(earlier)
-            base.update({k: v for k, v in schedule[nearest].items() if k in ("alpha", "kmax", "hfa")})
+            base.update({k: v for k, v in schedule[nearest].items() if k in SCHEDULE_KEYS})
             return base
     active = load_active_params(conn)
     if active:

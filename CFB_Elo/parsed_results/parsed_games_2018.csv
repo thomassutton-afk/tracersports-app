@@ -73,8 +73,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-09-01,2018,R,,north-carolina,california,A,17,24,0,,,California Memorial Stadium - Berkeley California
 2018-09-01,2018,R,,charlotte,fordham,H,34,10,0,,,Jerry Richardson Stadium - Charlotte North Carolina
 2018-09-01,2018,R,,fordham,charlotte,A,10,34,0,,,Jerry Richardson Stadium - Charlotte North Carolina
-2018-09-01,2018,R,,cincinnati,ucla,A,26,17,0,,,Rose Bowl - Pasadena California
-2018-09-01,2018,R,,ucla,cincinnati,H,17,26,0,,,Rose Bowl - Pasadena California
+2018-09-01,2018,R,BOWL,cincinnati,ucla,A,26,17,0,,,Rose Bowl - Pasadena California
+2018-09-01,2018,R,BOWL,ucla,cincinnati,H,17,26,0,,,Rose Bowl - Pasadena California
 2018-09-01,2018,R,,clemson,furman,H,48,7,0,2.0,,Clemson Memorial Stadium - Clemson South Carolina
 2018-09-01,2018,R,,furman,clemson,A,7,48,0,,2.0,Clemson Memorial Stadium - Clemson South Carolina
 2018-09-01,2018,R,,florida,charleston-southern,H,53,6,0,,,Ben Hill Griffin Stadium - Gainesville Florida
@@ -111,8 +111,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-09-01,2018,R,,miami-oh,marshall,H,28,35,0,,,Fred Yager Stadium - Oxford Ohio
 2018-09-01,2018,R,,maryland,texas,N,34,29,0,,23.0,FedExField - Landover Maryland
 2018-09-01,2018,R,,texas,maryland,N,29,34,0,23.0,,FedExField - Landover Maryland
-2018-09-01,2018,R,,memphis,mercer,H,66,14,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2018-09-01,2018,R,,mercer,memphis,A,14,66,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2018-09-01,2018,R,BOWL,memphis,mercer,H,66,14,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2018-09-01,2018,R,BOWL,mercer,memphis,A,14,66,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2018-09-01,2018,R,,mississippi,texas-tech,N,47,27,0,,,NRG Stadium - Houston Texas
 2018-09-01,2018,R,,texas-tech,mississippi,N,27,47,0,,,NRG Stadium - Houston Texas
 2018-09-01,2018,R,,mississippi-state,stephen-f-austin,H,63,6,0,18.0,,Davis Wade Stadium - Starkville Mississippi
@@ -127,8 +127,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-09-01,2018,R,,james-madison,north-carolina-state,A,13,24,0,,,Carter-Finley Stadium - Raleigh North Carolina
 2018-09-01,2018,R,,north-texas,southern-methodist,H,46,23,0,,,Apogee Stadium - Denton Texas
 2018-09-01,2018,R,,southern-methodist,north-texas,A,23,46,0,,,Apogee Stadium - Denton Texas
-2018-09-01,2018,R,,northern-arizona,texas-el-paso,A,30,10,0,,,Sun Bowl - El Paso Texas
-2018-09-01,2018,R,,texas-el-paso,northern-arizona,H,10,30,0,,,Sun Bowl - El Paso Texas
+2018-09-01,2018,R,BOWL,northern-arizona,texas-el-paso,A,30,10,0,,,Sun Bowl - El Paso Texas
+2018-09-01,2018,R,BOWL,texas-el-paso,northern-arizona,H,10,30,0,,,Sun Bowl - El Paso Texas
 2018-09-01,2018,R,,notre-dame,michigan,H,24,17,0,12.0,14.0,Notre Dame Stadium - South Bend Indiana
 2018-09-01,2018,R,,michigan,notre-dame,A,17,24,0,14.0,12.0,Notre Dame Stadium - South Bend Indiana
 2018-09-01,2018,R,,ohio,howard,H,38,32,0,,,Peden Stadium - Athens Ohio
@@ -155,8 +155,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-09-01,2018,R,,jackson-state,southern-mississippi,A,7,55,0,,,M. M. Roberts Stadium - Hattiesburg Mississippi
 2018-09-01,2018,R,,texas-christian,southern,H,55,7,0,16.0,,Amon G. Carter Stadium - Fort Worth Texas
 2018-09-01,2018,R,,southern,texas-christian,A,7,55,0,,16.0,Amon G. Carter Stadium - Fort Worth Texas
-2018-09-01,2018,R,,toledo,virginia-military-institute,H,66,3,0,,,Glass Bowl - Toledo Ohio
-2018-09-01,2018,R,,virginia-military-institute,toledo,A,3,66,0,,,Glass Bowl - Toledo Ohio
+2018-09-01,2018,R,BOWL,toledo,virginia-military-institute,H,66,3,0,,,Glass Bowl - Toledo Ohio
+2018-09-01,2018,R,BOWL,virginia-military-institute,toledo,A,3,66,0,,,Glass Bowl - Toledo Ohio
 2018-09-01,2018,R,,tulsa,central-arkansas,H,38,27,0,,,Skelly Field at H.A. Chapman Stadium - Tulsa Oklahoma
 2018-09-01,2018,R,,central-arkansas,tulsa,A,27,38,0,,,Skelly Field at H.A. Chapman Stadium - Tulsa Oklahoma
 2018-09-01,2018,R,,vanderbilt,middle-tennessee-state,H,35,7,0,,,Vanderbilt Stadium - Nashville Tennessee
@@ -339,8 +339,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-09-13,2018,R,,old-dominion,charlotte,A,25,28,0,,,Jerry Richardson Stadium - Charlotte North Carolina
 2018-09-13,2018,R,,utah-state,tennessee-tech,H,73,12,0,,,Merlin Olsen Field at Maverik Stadium - Logan Utah
 2018-09-13,2018,R,,tennessee-tech,utah-state,A,12,73,0,,,Merlin Olsen Field at Maverik Stadium - Logan Utah
-2018-09-14,2018,R,,memphis,georgia-state,H,59,22,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2018-09-14,2018,R,,georgia-state,memphis,A,22,59,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2018-09-14,2018,R,BOWL,memphis,georgia-state,H,59,22,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2018-09-14,2018,R,BOWL,georgia-state,memphis,A,22,59,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2018-09-15,2018,R,,akron,northwestern,A,39,34,0,,,Ryan Field - Evanston Illinois
 2018-09-15,2018,R,,northwestern,akron,H,34,39,0,,,Ryan Field - Evanston Illinois
 2018-09-15,2018,R,,alabama,mississippi,A,62,7,0,1.0,,Vaught-Hemingway Stadium - Oxford Mississippi
@@ -377,8 +377,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-09-15,2018,R,,bethune-cookman,florida-atlantic,A,28,49,0,,,FAU Football Stadium - Boca Raton Florida
 2018-09-15,2018,R,,florida-international,massachusetts,H,63,24,0,,,Riccardo Silva Stadium - Miami Florida
 2018-09-15,2018,R,,massachusetts,florida-international,A,24,63,0,,,Riccardo Silva Stadium - Miami Florida
-2018-09-15,2018,R,,fresno-state,ucla,A,38,14,0,,,Rose Bowl - Pasadena California
-2018-09-15,2018,R,,ucla,fresno-state,H,14,38,0,,,Rose Bowl - Pasadena California
+2018-09-15,2018,R,BOWL,fresno-state,ucla,A,38,14,0,,,Rose Bowl - Pasadena California
+2018-09-15,2018,R,BOWL,ucla,fresno-state,H,14,38,0,,,Rose Bowl - Pasadena California
 2018-09-15,2018,R,,georgia,middle-tennessee-state,H,49,7,0,3.0,,Sanford Stadium - Athens Georgia
 2018-09-15,2018,R,,middle-tennessee-state,georgia,A,7,49,0,,3.0,Sanford Stadium - Athens Georgia
 2018-09-15,2018,R,,indiana,ball-state,H,38,10,0,,,"Memorial Stadium ""The Rock"" - Bloomington Indiana"
@@ -395,8 +395,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-09-15,2018,R,,auburn,louisiana-state,H,21,22,0,7.0,12.0,Jordan-Hare Stadium - Auburn Alabama
 2018-09-15,2018,R,,louisville,western-kentucky,H,20,17,0,,,Cardinal Stadium - Louisville Kentucky
 2018-09-15,2018,R,,western-kentucky,louisville,A,17,20,0,,,Cardinal Stadium - Louisville Kentucky
-2018-09-15,2018,R,,miami-fl,toledo,A,49,24,0,21.0,,Glass Bowl - Toledo Ohio
-2018-09-15,2018,R,,toledo,miami-fl,H,24,49,0,,21.0,Glass Bowl - Toledo Ohio
+2018-09-15,2018,R,BOWL,miami-fl,toledo,A,49,24,0,21.0,,Glass Bowl - Toledo Ohio
+2018-09-15,2018,R,BOWL,toledo,miami-fl,H,24,49,0,,21.0,Glass Bowl - Toledo Ohio
 2018-09-15,2018,R,,michigan,southern-methodist,H,45,20,0,19.0,,Michigan Stadium - Ann Arbor Michigan
 2018-09-15,2018,R,,southern-methodist,michigan,A,20,45,0,,19.0,Michigan Stadium - Ann Arbor Michigan
 2018-09-15,2018,R,,minnesota,miami-oh,H,26,3,0,,,TCF Bank Stadium - Minneapolis Minnesota
@@ -519,8 +519,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-09-22,2018,R,,minnesota,maryland,A,13,42,0,,,Capital One Field at Maryland Stadium - College Park Maryland
 2018-09-22,2018,R,,massachusetts,charlotte,H,49,31,0,,,Warren McGuirk Alumni Stadium - Amherst Massachusetts
 2018-09-22,2018,R,,charlotte,massachusetts,A,31,49,0,,,Warren McGuirk Alumni Stadium - Amherst Massachusetts
-2018-09-22,2018,R,,memphis,south-alabama,H,52,35,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2018-09-22,2018,R,,south-alabama,memphis,A,35,52,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2018-09-22,2018,R,BOWL,memphis,south-alabama,H,52,35,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2018-09-22,2018,R,BOWL,south-alabama,memphis,A,35,52,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2018-09-22,2018,R,,miami-fl,florida-international,H,31,17,0,21.0,,Hard Rock Stadium - Miami Gardens Florida
 2018-09-22,2018,R,,florida-international,miami-fl,A,17,31,0,,21.0,Hard Rock Stadium - Miami Gardens Florida
 2018-09-22,2018,R,,miami-oh,bowling-green,A,38,23,0,,,Doyt Perry Stadium - Bowling Green Ohio
@@ -531,8 +531,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-09-22,2018,R,,indiana,michigan-state,H,21,35,0,,24.0,"Memorial Stadium ""The Rock"" - Bloomington Indiana"
 2018-09-22,2018,R,,mississippi,kent-state,H,38,17,0,,,Vaught-Hemingway Stadium - Oxford Mississippi
 2018-09-22,2018,R,,kent-state,mississippi,A,17,38,0,,,Vaught-Hemingway Stadium - Oxford Mississippi
-2018-09-22,2018,R,,new-mexico-state,texas-el-paso,A,27,20,0,,,Sun Bowl - El Paso Texas
-2018-09-22,2018,R,,texas-el-paso,new-mexico-state,H,20,27,0,,,Sun Bowl - El Paso Texas
+2018-09-22,2018,R,BOWL,new-mexico-state,texas-el-paso,A,27,20,0,,,Sun Bowl - El Paso Texas
+2018-09-22,2018,R,BOWL,texas-el-paso,new-mexico-state,H,20,27,0,,,Sun Bowl - El Paso Texas
 2018-09-22,2018,R,,north-carolina,pittsburgh,H,38,35,0,,,Kenan Memorial Stadium - Chapel Hill North Carolina
 2018-09-22,2018,R,,pittsburgh,north-carolina,A,35,38,0,,,Kenan Memorial Stadium - Chapel Hill North Carolina
 2018-09-22,2018,R,,north-carolina-state,marshall,A,37,20,0,,,Joan C. Edwards Stadium - Huntington West Virginia
@@ -569,8 +569,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-09-22,2018,R,,oklahoma-state,texas-tech,H,17,41,0,15.0,,Boone Pickens Stadium - Stillwater Oklahoma
 2018-09-22,2018,R,,texas-san-antonio,texas-state,H,25,21,0,,,Alamodome - San Antonio Texas
 2018-09-22,2018,R,,texas-state,texas-san-antonio,A,21,25,0,,,Alamodome - San Antonio Texas
-2018-09-22,2018,R,,toledo,nevada,H,63,44,0,,,Glass Bowl - Toledo Ohio
-2018-09-22,2018,R,,nevada,toledo,A,44,63,0,,,Glass Bowl - Toledo Ohio
+2018-09-22,2018,R,BOWL,toledo,nevada,H,63,44,0,,,Glass Bowl - Toledo Ohio
+2018-09-22,2018,R,BOWL,nevada,toledo,A,44,63,0,,,Glass Bowl - Toledo Ohio
 2018-09-22,2018,R,,troy,louisiana-monroe,A,35,27,0,,,Malone Stadium - Monroe Louisiana
 2018-09-22,2018,R,,louisiana-monroe,troy,H,27,35,0,,,Malone Stadium - Monroe Louisiana
 2018-09-22,2018,R,,utah-state,air-force,H,42,32,0,,,Merlin Olsen Field at Maverik Stadium - Logan Utah
@@ -755,8 +755,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-10-06,2018,R,,oklahoma-state,iowa-state,H,42,48,0,25.0,,Boone Pickens Stadium - Stillwater Oklahoma
 2018-10-06,2018,R,,louisiana,texas-state,A,42,27,0,,,Bobcat Stadium - San Marcos Texas
 2018-10-06,2018,R,,texas-state,louisiana,H,27,42,0,,,Bobcat Stadium - San Marcos Texas
-2018-10-06,2018,R,,memphis,connecticut,H,55,14,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2018-10-06,2018,R,,connecticut,memphis,A,14,55,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2018-10-06,2018,R,BOWL,memphis,connecticut,H,55,14,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2018-10-06,2018,R,BOWL,connecticut,memphis,A,14,55,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2018-10-06,2018,R,,miami-fl,florida-state,H,28,27,0,17.0,,Hard Rock Stadium - Miami Gardens Florida
 2018-10-06,2018,R,,florida-state,miami-fl,A,27,28,0,,17.0,Hard Rock Stadium - Miami Gardens Florida
 2018-10-06,2018,R,,miami-oh,akron,A,41,17,0,,,InfoCision Stadium - Akron Ohio
@@ -773,8 +773,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-10-06,2018,R,,liberty,new-mexico-state,A,41,49,0,,,Aggie Memorial Stadium - Las Cruces New Mexico
 2018-10-06,2018,R,,north-carolina-state,boston-college,H,28,23,0,23.0,,Carter-Finley Stadium - Raleigh North Carolina
 2018-10-06,2018,R,,boston-college,north-carolina-state,A,23,28,0,,23.0,Carter-Finley Stadium - Raleigh North Carolina
-2018-10-06,2018,R,,north-texas,texas-el-paso,A,27,24,0,,,Sun Bowl - El Paso Texas
-2018-10-06,2018,R,,texas-el-paso,north-texas,H,24,27,0,,,Sun Bowl - El Paso Texas
+2018-10-06,2018,R,BOWL,north-texas,texas-el-paso,A,27,24,0,,,Sun Bowl - El Paso Texas
+2018-10-06,2018,R,BOWL,texas-el-paso,north-texas,H,24,27,0,,,Sun Bowl - El Paso Texas
 2018-10-06,2018,R,,northern-illinois,ball-state,A,24,16,0,,,Scheumann Stadium - Muncie Indiana
 2018-10-06,2018,R,,ball-state,northern-illinois,H,16,24,0,,,Scheumann Stadium - Muncie Indiana
 2018-10-06,2018,R,,northwestern,michigan-state,A,29,19,0,,20.0,Spartan Stadium - East Lansing Michigan
@@ -795,18 +795,18 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-10-06,2018,R,,massachusetts,south-florida,H,42,58,0,,,Warren McGuirk Alumni Stadium - Amherst Massachusetts
 2018-10-06,2018,R,,temple,east-carolina,H,49,6,0,,,Lincoln Financial Field - Philadelphia Pennsylvania
 2018-10-06,2018,R,,east-carolina,temple,A,6,49,0,,,Lincoln Financial Field - Philadelphia Pennsylvania
-2018-10-06,2018,R,,texas,oklahoma,N,48,45,0,19.0,7.0,Cotton Bowl - Dallas Texas
-2018-10-06,2018,R,,oklahoma,texas,N,45,48,0,7.0,19.0,Cotton Bowl - Dallas Texas
+2018-10-06,2018,R,CFP-SF,texas,oklahoma,N,48,45,0,19.0,7.0,Cotton Bowl - Dallas Texas
+2018-10-06,2018,R,CFP-SF,oklahoma,texas,N,45,48,0,7.0,19.0,Cotton Bowl - Dallas Texas
 2018-10-06,2018,R,,texas-a-m,kentucky,H,20,14,0,,13.0,Kyle Field - College Station Texas
 2018-10-06,2018,R,,kentucky,texas-a-m,A,14,20,0,13.0,,Kyle Field - College Station Texas
 2018-10-06,2018,R,,texas-san-antonio,rice,A,20,3,0,,,Rice Stadium - Houston Texas
 2018-10-06,2018,R,,rice,texas-san-antonio,H,3,20,0,,,Rice Stadium - Houston Texas
-2018-10-06,2018,R,,toledo,bowling-green,H,52,36,0,,,Glass Bowl - Toledo Ohio
-2018-10-06,2018,R,,bowling-green,toledo,A,36,52,0,,,Glass Bowl - Toledo Ohio
+2018-10-06,2018,R,BOWL,toledo,bowling-green,H,52,36,0,,,Glass Bowl - Toledo Ohio
+2018-10-06,2018,R,BOWL,bowling-green,toledo,A,36,52,0,,,Glass Bowl - Toledo Ohio
 2018-10-06,2018,R,,utah,stanford,A,40,21,0,,14.0,Stanford Stadium - Stanford California
 2018-10-06,2018,R,,stanford,utah,H,21,40,0,14.0,,Stanford Stadium - Stanford California
-2018-10-06,2018,R,,washington,ucla,A,31,24,0,10.0,,Rose Bowl - Pasadena California
-2018-10-06,2018,R,,ucla,washington,H,24,31,0,,10.0,Rose Bowl - Pasadena California
+2018-10-06,2018,R,BOWL,washington,ucla,A,31,24,0,10.0,,Rose Bowl - Pasadena California
+2018-10-06,2018,R,BOWL,ucla,washington,H,24,31,0,,10.0,Rose Bowl - Pasadena California
 2018-10-06,2018,R,,washington-state,oregon-state,A,56,37,0,,,Reser Stadium - Corvallis Oregon
 2018-10-06,2018,R,,oregon-state,washington-state,H,37,56,0,,,Reser Stadium - Corvallis Oregon
 2018-10-06,2018,R,,west-virginia,kansas,H,38,22,0,9.0,,Mountaineer Field at Milan Puskar Stadium - Morgantown West Virginia
@@ -843,8 +843,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-10-13,2018,R,,hawaii,brigham-young,A,23,49,0,,,LaVell Edwards Stadium - Provo Utah
 2018-10-13,2018,R,,buffalo,akron,H,24,6,0,,,UB Stadium - Buffalo New York
 2018-10-13,2018,R,,akron,buffalo,A,6,24,0,,,UB Stadium - Buffalo New York
-2018-10-13,2018,R,,central-florida,memphis,A,31,30,0,10.0,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2018-10-13,2018,R,,memphis,central-florida,H,30,31,0,,10.0,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2018-10-13,2018,R,BOWL,central-florida,memphis,A,31,30,0,10.0,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2018-10-13,2018,R,BOWL,memphis,central-florida,H,30,31,0,,10.0,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2018-10-13,2018,R,,charlotte,western-kentucky,H,40,14,0,,,Jerry Richardson Stadium - Charlotte North Carolina
 2018-10-13,2018,R,,western-kentucky,charlotte,A,14,40,0,,,Jerry Richardson Stadium - Charlotte North Carolina
 2018-10-13,2018,R,,colorado-state,new-mexico,H,20,18,0,,,Sonny Lubick Field at Canvas Stadium - Fort Collins Colorado
@@ -947,8 +947,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-10-20,2018,R,,miami-oh,army,A,30,31,0,,,Michie Stadium - West Point New York
 2018-10-20,2018,R,,auburn,mississippi,A,31,16,0,,,Vaught-Hemingway Stadium - Oxford Mississippi
 2018-10-20,2018,R,,mississippi,auburn,H,16,31,0,,,Vaught-Hemingway Stadium - Oxford Mississippi
-2018-10-20,2018,R,,buffalo,toledo,A,31,17,0,,,Glass Bowl - Toledo Ohio
-2018-10-20,2018,R,,toledo,buffalo,H,17,31,0,,,Glass Bowl - Toledo Ohio
+2018-10-20,2018,R,BOWL,buffalo,toledo,A,31,17,0,,,Glass Bowl - Toledo Ohio
+2018-10-20,2018,R,BOWL,toledo,buffalo,H,17,31,0,,,Glass Bowl - Toledo Ohio
 2018-10-20,2018,R,,california,oregon-state,A,49,7,0,,,Reser Stadium - Corvallis Oregon
 2018-10-20,2018,R,,oregon-state,california,H,7,49,0,,,Reser Stadium - Corvallis Oregon
 2018-10-20,2018,R,,central-florida,east-carolina,A,37,10,0,10.0,,Dowdy-Ficklen Stadium - Greenville North Carolina
@@ -1019,8 +1019,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-10-20,2018,R,,cincinnati,temple,A,17,24,0,20.0,,Lincoln Financial Field - Philadelphia Pennsylvania
 2018-10-20,2018,R,,texas-tech,kansas,H,48,16,0,,,Jones AT&T Stadium - Lubbock Texas
 2018-10-20,2018,R,,kansas,texas-tech,A,16,48,0,,,Jones AT&T Stadium - Lubbock Texas
-2018-10-20,2018,R,,ucla,arizona,H,31,30,0,,,Rose Bowl - Pasadena California
-2018-10-20,2018,R,,arizona,ucla,A,30,31,0,,,Rose Bowl - Pasadena California
+2018-10-20,2018,R,BOWL,ucla,arizona,H,31,30,0,,,Rose Bowl - Pasadena California
+2018-10-20,2018,R,BOWL,arizona,ucla,A,30,31,0,,,Rose Bowl - Pasadena California
 2018-10-20,2018,R,,utah,southern-california,H,41,28,0,,,Rice-Eccles Stadium - Salt Lake City Utah
 2018-10-20,2018,R,,southern-california,utah,A,28,41,0,,,Rice-Eccles Stadium - Salt Lake City Utah
 2018-10-20,2018,R,,utah-state,wyoming,A,24,16,0,,,Jonah Field War Memorial Stadium - Laramie Wyoming
@@ -1053,14 +1053,14 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-10-26,2018,R,,florida-atlantic,louisiana-tech,H,13,21,0,,,FAU Football Stadium - Boca Raton Florida
 2018-10-26,2018,R,,minnesota,indiana,H,38,31,0,,,TCF Bank Stadium - Minneapolis Minnesota
 2018-10-26,2018,R,,indiana,minnesota,A,31,38,0,,,TCF Bank Stadium - Minneapolis Minnesota
-2018-10-26,2018,R,,utah,ucla,A,41,10,0,23.0,,Rose Bowl - Pasadena California
-2018-10-26,2018,R,,ucla,utah,H,10,41,0,,23.0,Rose Bowl - Pasadena California
+2018-10-26,2018,R,BOWL,utah,ucla,A,41,10,0,23.0,,Rose Bowl - Pasadena California
+2018-10-26,2018,R,BOWL,ucla,utah,H,10,41,0,,23.0,Rose Bowl - Pasadena California
 2018-10-26,2018,R,,wyoming,colorado-state,A,34,21,0,,,Sonny Lubick Field at Canvas Stadium - Fort Collins Colorado
 2018-10-26,2018,R,,colorado-state,wyoming,H,21,34,0,,,Sonny Lubick Field at Canvas Stadium - Fort Collins Colorado
 2018-10-27,2018,R,,akron,central-michigan,H,17,10,0,,,InfoCision Stadium - Akron Ohio
 2018-10-27,2018,R,,central-michigan,akron,A,10,17,0,,,InfoCision Stadium - Akron Ohio
-2018-10-27,2018,R,,alabama-birmingham,texas-el-paso,A,19,0,0,,,Sun Bowl - El Paso Texas
-2018-10-27,2018,R,,texas-el-paso,alabama-birmingham,H,0,19,0,,,Sun Bowl - El Paso Texas
+2018-10-27,2018,R,BOWL,alabama-birmingham,texas-el-paso,A,19,0,0,,,Sun Bowl - El Paso Texas
+2018-10-27,2018,R,BOWL,texas-el-paso,alabama-birmingham,H,0,19,0,,,Sun Bowl - El Paso Texas
 2018-10-27,2018,R,,arizona,oregon,H,44,15,0,,19.0,Arizona Stadium - Tucson Arizona
 2018-10-27,2018,R,,oregon,arizona,A,15,44,0,19.0,,Arizona Stadium - Tucson Arizona
 2018-10-27,2018,R,,arizona-state,southern-california,A,38,35,0,,,Los Angeles Memorial Coliseum - Los Angeles California
@@ -1151,8 +1151,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-10-30,2018,R,,miami-oh,buffalo,A,42,51,0,,,UB Stadium - Buffalo New York
 2018-10-30,2018,R,,kent-state,bowling-green,A,35,28,0,,,Doyt Perry Stadium - Bowling Green Ohio
 2018-10-30,2018,R,,bowling-green,kent-state,H,28,35,0,,,Doyt Perry Stadium - Bowling Green Ohio
-2018-10-31,2018,R,,toledo,ball-state,H,45,13,0,,,Glass Bowl - Toledo Ohio
-2018-10-31,2018,R,,ball-state,toledo,A,13,45,0,,,Glass Bowl - Toledo Ohio
+2018-10-31,2018,R,BOWL,toledo,ball-state,H,45,13,0,,,Glass Bowl - Toledo Ohio
+2018-10-31,2018,R,BOWL,ball-state,toledo,A,13,45,0,,,Glass Bowl - Toledo Ohio
 2018-11-01,2018,R,,central-florida,temple,H,52,40,0,9.0,,Spectrum Stadium - Orlando Florida
 2018-11-01,2018,R,,temple,central-florida,A,40,52,0,,9.0,Spectrum Stadium - Orlando Florida
 2018-11-01,2018,R,,northern-illinois,akron,A,36,26,0,,,InfoCision Stadium - Akron Ohio
@@ -1339,12 +1339,12 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-11-10,2018,R,,south-alabama,louisiana-monroe,H,10,38,0,,,Ladd-Peebles Stadium - Mobile Alabama
 2018-11-10,2018,R,,marshall,charlotte,H,30,13,0,,,Joan C. Edwards Stadium - Huntington West Virginia
 2018-11-10,2018,R,,charlotte,marshall,A,13,30,0,,,Joan C. Edwards Stadium - Huntington West Virginia
-2018-11-10,2018,R,,memphis,tulsa,H,47,21,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2018-11-10,2018,R,,tulsa,memphis,A,21,47,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2018-11-10,2018,R,BOWL,memphis,tulsa,H,47,21,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2018-11-10,2018,R,BOWL,tulsa,memphis,A,21,47,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2018-11-10,2018,R,,michigan,rutgers,A,42,7,0,4.0,,High Point Solutions Stadium - Piscataway New Jersey
 2018-11-10,2018,R,,rutgers,michigan,H,7,42,0,,4.0,High Point Solutions Stadium - Piscataway New Jersey
-2018-11-10,2018,R,,middle-tennessee-state,texas-el-paso,A,48,32,0,,,Sun Bowl - El Paso Texas
-2018-11-10,2018,R,,texas-el-paso,middle-tennessee-state,H,32,48,0,,,Sun Bowl - El Paso Texas
+2018-11-10,2018,R,BOWL,middle-tennessee-state,texas-el-paso,A,48,32,0,,,Sun Bowl - El Paso Texas
+2018-11-10,2018,R,BOWL,texas-el-paso,middle-tennessee-state,H,32,48,0,,,Sun Bowl - El Paso Texas
 2018-11-10,2018,R,,minnesota,purdue,H,41,10,0,,,TCF Bank Stadium - Minneapolis Minnesota
 2018-11-10,2018,R,,purdue,minnesota,A,10,41,0,,,TCF Bank Stadium - Minneapolis Minnesota
 2018-11-10,2018,R,,missouri,vanderbilt,H,33,28,0,,,Memorial Stadium/Faurot Field - Columbia Missouri
@@ -1509,8 +1509,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-11-17,2018,R,,baylor,texas-christian,H,9,16,0,,,McLane Stadium - Waco Texas
 2018-11-17,2018,R,,troy,texas-state,H,12,7,0,,,Veterans Memorial Stadium - Troy Alabama
 2018-11-17,2018,R,,texas-state,troy,A,7,12,0,,,Veterans Memorial Stadium - Troy Alabama
-2018-11-17,2018,R,,ucla,southern-california,H,34,27,0,,,Rose Bowl - Pasadena California
-2018-11-17,2018,R,,southern-california,ucla,A,27,34,0,,,Rose Bowl - Pasadena California
+2018-11-17,2018,R,BOWL,ucla,southern-california,H,34,27,0,,,Rose Bowl - Pasadena California
+2018-11-17,2018,R,BOWL,southern-california,ucla,A,27,34,0,,,Rose Bowl - Pasadena California
 2018-11-17,2018,R,,utah,colorado,A,30,7,0,21.0,,Folsom Field - Boulder Colorado
 2018-11-17,2018,R,,colorado,utah,H,7,30,0,,21.0,Folsom Field - Boulder Colorado
 2018-11-17,2018,R,,utah-state,colorado-state,A,29,24,0,14.0,,Sonny Lubick Field at Canvas Stadium - Fort Collins Colorado
@@ -1545,8 +1545,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-11-23,2018,R,,kent-state,eastern-michigan,H,20,28,0,,,Dix Stadium - Kent Ohio
 2018-11-23,2018,R,,iowa,nebraska,H,31,28,0,,,Kinnick Stadium - Iowa City Iowa
 2018-11-23,2018,R,,nebraska,iowa,A,28,31,0,,,Kinnick Stadium - Iowa City Iowa
-2018-11-23,2018,R,,memphis,houston,H,52,31,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2018-11-23,2018,R,,houston,memphis,A,31,52,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2018-11-23,2018,R,BOWL,memphis,houston,H,52,31,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2018-11-23,2018,R,BOWL,houston,memphis,A,31,52,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2018-11-23,2018,R,,missouri,arkansas,H,38,0,0,,,Memorial Stadium/Faurot Field - Columbia Missouri
 2018-11-23,2018,R,,arkansas,missouri,A,0,38,0,,,Memorial Stadium/Faurot Field - Columbia Missouri
 2018-11-23,2018,R,,ohio,akron,H,49,28,0,,,Peden Stadium - Athens Ohio
@@ -1559,8 +1559,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-11-23,2018,R,,coastal-carolina,south-alabama,A,28,31,0,,,Ladd-Peebles Stadium - Mobile Alabama
 2018-11-23,2018,R,,texas,kansas,A,24,17,0,11.0,,Memorial Stadium - Lawrence Kansas
 2018-11-23,2018,R,,kansas,texas,H,17,24,0,,11.0,Memorial Stadium - Lawrence Kansas
-2018-11-23,2018,R,,toledo,central-michigan,H,51,13,0,,,Glass Bowl - Toledo Ohio
-2018-11-23,2018,R,,central-michigan,toledo,A,13,51,0,,,Glass Bowl - Toledo Ohio
+2018-11-23,2018,R,BOWL,toledo,central-michigan,H,51,13,0,,,Glass Bowl - Toledo Ohio
+2018-11-23,2018,R,BOWL,central-michigan,toledo,A,13,51,0,,,Glass Bowl - Toledo Ohio
 2018-11-23,2018,R,,virginia-tech,virginia,H,34,31,0,,,Lane Stadium - Blacksburg Virginia
 2018-11-23,2018,R,,virginia,virginia-tech,A,31,34,0,,,Lane Stadium - Blacksburg Virginia
 2018-11-23,2018,R,,washington,washington-state,A,28,15,0,16.0,7.0,Martin Stadium - Pullman Washington
@@ -1629,10 +1629,10 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-11-24,2018,R,,indiana,purdue,H,21,28,0,,,"Memorial Stadium ""The Rock"" - Bloomington Indiana"
 2018-11-24,2018,R,,rice,old-dominion,H,27,13,0,,,Rice Stadium - Houston Texas
 2018-11-24,2018,R,,old-dominion,rice,A,13,27,0,,,Rice Stadium - Houston Texas
-2018-11-24,2018,R,,southern-mississippi,texas-el-paso,A,39,7,0,,,Sun Bowl - El Paso Texas
-2018-11-24,2018,R,,texas-el-paso,southern-mississippi,H,7,39,0,,,Sun Bowl - El Paso Texas
-2018-11-24,2018,R,,stanford,ucla,A,49,42,0,,,Rose Bowl - Pasadena California
-2018-11-24,2018,R,,ucla,stanford,H,42,49,0,,,Rose Bowl - Pasadena California
+2018-11-24,2018,R,BOWL,southern-mississippi,texas-el-paso,A,39,7,0,,,Sun Bowl - El Paso Texas
+2018-11-24,2018,R,BOWL,texas-el-paso,southern-mississippi,H,7,39,0,,,Sun Bowl - El Paso Texas
+2018-11-24,2018,R,BOWL,stanford,ucla,A,49,42,0,,,Rose Bowl - Pasadena California
+2018-11-24,2018,R,BOWL,ucla,stanford,H,42,49,0,,,Rose Bowl - Pasadena California
 2018-11-24,2018,R,,syracuse,boston-college,A,42,21,0,19.0,,Alumni Stadium - Chestnut Hill Massachusetts
 2018-11-24,2018,R,,boston-college,syracuse,H,21,42,0,,19.0,Alumni Stadium - Chestnut Hill Massachusetts
 2018-11-24,2018,R,,temple,connecticut,A,57,7,0,,,Pratt & Whitney Stadium at Rentschler Field - East Hartford Connecticut
@@ -1689,81 +1689,81 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2018-12-01,2018,R,,marshall,virginia-tech,A,20,41,0,,,Lane Stadium - Blacksburg Virginia
 2018-12-08,2018,R,,army,navy,N,17,10,0,22.0,,Lincoln Financial Field - Philadelphia Pennsylvania
 2018-12-08,2018,R,,navy,army,N,10,17,0,,22.0,Lincoln Financial Field - Philadelphia Pennsylvania
-2018-12-15,2018,R,,appalachian-state,middle-tennessee-state,N,45,13,0,,,New Orleans Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
-2018-12-15,2018,R,,middle-tennessee-state,appalachian-state,N,13,45,0,,,New Orleans Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
-2018-12-15,2018,R,,fresno-state,arizona-state,N,31,20,0,19.0,,Las Vegas Bowl (Sam Boyd Stadium - Las Vegas Nevada)
-2018-12-15,2018,R,,arizona-state,fresno-state,N,20,31,0,,19.0,Las Vegas Bowl (Sam Boyd Stadium - Las Vegas Nevada)
-2018-12-15,2018,R,,georgia-southern,eastern-michigan,N,23,21,0,,,Camellia Bowl (Cramton Bowl - Montgomery Alabama)
-2018-12-15,2018,R,,eastern-michigan,georgia-southern,N,21,23,0,,,Camellia Bowl (Cramton Bowl - Montgomery Alabama)
-2018-12-15,2018,R,,tulane,louisiana,N,41,24,0,,,Cure Bowl (Camping World Stadium - Orlando Florida)
-2018-12-15,2018,R,,louisiana,tulane,N,24,41,0,,,Cure Bowl (Camping World Stadium - Orlando Florida)
-2018-12-15,2018,R,,utah-state,north-texas,N,52,13,0,,,New Mexico Bowl (Dreamstyle Stadium - Albuquerque New Mexico)
-2018-12-15,2018,R,,north-texas,utah-state,N,13,52,0,,,New Mexico Bowl (Dreamstyle Stadium - Albuquerque New Mexico)
-2018-12-18,2018,R,,alabama-birmingham,northern-illinois,N,37,13,0,,,Boca Raton Bowl (FAU Football Stadium - Boca Raton Florida)
-2018-12-18,2018,R,,northern-illinois,alabama-birmingham,N,13,37,0,,,Boca Raton Bowl (FAU Football Stadium - Boca Raton Florida)
-2018-12-19,2018,R,,ohio,san-diego-state,N,27,0,0,,,Frisco Bowl (Toyota Stadium - Frisco Texas)
-2018-12-19,2018,R,,san-diego-state,ohio,N,0,27,0,,,Frisco Bowl (Toyota Stadium - Frisco Texas)
-2018-12-20,2018,R,,marshall,south-florida,A,38,20,0,,,Gasparilla Bowl (Raymond James Stadium - Tampa Florida)
-2018-12-20,2018,R,,south-florida,marshall,H,20,38,0,,,Gasparilla Bowl (Raymond James Stadium - Tampa Florida)
-2018-12-21,2018,R,,brigham-young,western-michigan,N,49,18,0,,,Famous Idaho Potato Bowl (Albertsons Stadium - Boise Idaho)
-2018-12-21,2018,R,,western-michigan,brigham-young,N,18,49,0,,,Famous Idaho Potato Bowl (Albertsons Stadium - Boise Idaho)
-2018-12-21,2018,R,,florida-international,toledo,N,35,32,0,,,Bahamas Bowl (Thomas Robinson Stadium - Nassau BHS)
-2018-12-21,2018,R,,toledo,florida-international,N,32,35,0,,,Bahamas Bowl (Thomas Robinson Stadium - Nassau BHS)
-2018-12-22,2018,R,,army,houston,N,70,14,0,22.0,,Armed Forces Bowl (Amon G. Carter Stadium - Fort Worth Texas)
-2018-12-22,2018,R,,houston,army,N,14,70,0,,22.0,Armed Forces Bowl (Amon G. Carter Stadium - Fort Worth Texas)
-2018-12-22,2018,R,,louisiana-tech,hawaii,N,31,14,0,,,Hawaii Bowl (Aloha Stadium - Honolulu Hawaii)
-2018-12-22,2018,R,,hawaii,louisiana-tech,N,14,31,0,,,Hawaii Bowl (Aloha Stadium - Honolulu Hawaii)
-2018-12-22,2018,R,,troy,buffalo,N,42,32,0,,,Dollar General Bowl (Ladd-Peebles Stadium - Mobile Alabama)
-2018-12-22,2018,R,,buffalo,troy,N,32,42,0,,,Dollar General Bowl (Ladd-Peebles Stadium - Mobile Alabama)
-2018-12-22,2018,R,,wake-forest,memphis,N,37,34,0,,,Birmingham Bowl (Legion Field - Birmingham Alabama)
-2018-12-22,2018,R,,memphis,wake-forest,N,34,37,0,,,Birmingham Bowl (Legion Field - Birmingham Alabama)
-2018-12-26,2018,R,,minnesota,georgia-tech,N,34,10,0,,,Quick Lane Bowl (Ford Field - Detroit Michigan)
-2018-12-26,2018,R,,georgia-tech,minnesota,N,10,34,0,,,Quick Lane Bowl (Ford Field - Detroit Michigan)
-2018-12-26,2018,R,,texas-christian,california,N,10,7,0,,,Cheez-It Bowl (Chase Field - Phoenix Arizona)
-2018-12-26,2018,R,,california,texas-christian,N,7,10,0,,,Cheez-It Bowl (Chase Field - Phoenix Arizona)
-2018-12-27,2018,R,,baylor,vanderbilt,N,45,38,0,,,Texas Bowl (NRG Stadium - Houston Texas)
-2018-12-27,2018,R,,vanderbilt,baylor,N,38,45,0,,,Texas Bowl (NRG Stadium - Houston Texas)
-2018-12-27,2018,R,,duke,temple,N,56,27,0,,,Independence Bowl (Independence Stadium - Shreveport Louisiana)
-2018-12-27,2018,R,,temple,duke,N,27,56,0,,,Independence Bowl (Independence Stadium - Shreveport Louisiana)
-2018-12-27,2018,R,,wisconsin,miami-fl,N,35,3,0,,,Pinstripe Bowl (Yankee Stadium - New York New York)
-2018-12-27,2018,R,,miami-fl,wisconsin,N,3,35,0,,,Pinstripe Bowl (Yankee Stadium - New York New York)
-2018-12-28,2018,R,,auburn,purdue,N,63,14,0,,,Music City Bowl (Nissan Stadium - Nashville Tennessee)
-2018-12-28,2018,R,,purdue,auburn,N,14,63,0,,,Music City Bowl (Nissan Stadium - Nashville Tennessee)
-2018-12-28,2018,R,,syracuse,west-virginia,N,34,18,0,17.0,15.0,Camping World Bowl (Camping World Stadium - Orlando Florida)
-2018-12-28,2018,R,,west-virginia,syracuse,N,18,34,0,15.0,17.0,Camping World Bowl (Camping World Stadium - Orlando Florida)
-2018-12-28,2018,R,,washington-state,iowa-state,N,28,26,0,12.0,25.0,Alamo Bowl (Alamodome - San Antonio Texas)
-2018-12-28,2018,R,,iowa-state,washington-state,N,26,28,0,25.0,12.0,Alamo Bowl (Alamodome - San Antonio Texas)
-2018-12-29,2018,R,,alabama,oklahoma,N,45,34,0,1.0,4.0,Orange Bowl (Hard Rock Stadium - Miami Gardens Florida)
-2018-12-29,2018,R,,oklahoma,alabama,N,34,45,0,4.0,1.0,Orange Bowl (Hard Rock Stadium - Miami Gardens Florida)
-2018-12-29,2018,R,,clemson,notre-dame,N,30,3,0,2.0,3.0,Cotton Bowl (AT&T Stadium - Arlington Texas)
-2018-12-29,2018,R,,notre-dame,clemson,N,3,30,0,3.0,2.0,Cotton Bowl (AT&T Stadium - Arlington Texas)
-2018-12-29,2018,R,,florida,michigan,N,41,15,0,10.0,8.0,Peach Bowl (Mercedes-Benz Stadium - Atlanta Georgia)
-2018-12-29,2018,R,,michigan,florida,N,15,41,0,8.0,10.0,Peach Bowl (Mercedes-Benz Stadium - Atlanta Georgia)
-2018-12-29,2018,R,,nevada,arkansas-state,N,16,13,0,,,Arizona Bowl (Arizona Stadium - Tucson Arizona)
-2018-12-29,2018,R,,arkansas-state,nevada,N,13,16,0,,,Arizona Bowl (Arizona Stadium - Tucson Arizona)
-2018-12-29,2018,R,,virginia,south-carolina,N,28,0,0,,,Belk Bowl (Bank of America Stadium - Charlotte North Carolina)
-2018-12-29,2018,R,,south-carolina,virginia,N,0,28,0,,,Belk Bowl (Bank of America Stadium - Charlotte North Carolina)
-2018-12-31,2018,R,,cincinnati,virginia-tech,N,35,31,0,,,Military Bowl (Navy-Marine Corps Memorial Stadium - Annapolis Maryland)
-2018-12-31,2018,R,,virginia-tech,cincinnati,N,31,35,0,,,Military Bowl (Navy-Marine Corps Memorial Stadium - Annapolis Maryland)
-2018-12-31,2018,R,,northwestern,utah,N,31,20,0,,20.0,Holiday Bowl (SDCCU Stadium - San Diego California)
-2018-12-31,2018,R,,utah,northwestern,N,20,31,0,20.0,,Holiday Bowl (SDCCU Stadium - San Diego California)
-2018-12-31,2018,R,,oklahoma-state,missouri,N,38,33,0,,24.0,Liberty Bowl (Liberty Bowl Memorial Stadium - Memphis Tennessee)
-2018-12-31,2018,R,,missouri,oklahoma-state,N,33,38,0,24.0,,Liberty Bowl (Liberty Bowl Memorial Stadium - Memphis Tennessee)
-2018-12-31,2018,R,,oregon,michigan-state,N,7,6,0,,,Redbox Bowl (Levi's Stadium - Santa Clara California)
-2018-12-31,2018,R,,michigan-state,oregon,N,6,7,0,,,Redbox Bowl (Levi's Stadium - Santa Clara California)
-2018-12-31,2018,R,,stanford,pittsburgh,N,14,13,0,,,Sun Bowl (Sun Bowl - El Paso Texas)
-2018-12-31,2018,R,,pittsburgh,stanford,N,13,14,0,,,Sun Bowl (Sun Bowl - El Paso Texas)
-2018-12-31,2018,R,,texas-a-m,north-carolina-state,N,52,13,0,21.0,,Gator Bowl (TIAA Bank Field - Jacksonville Florida)
-2018-12-31,2018,R,,north-carolina-state,texas-a-m,N,13,52,0,,21.0,Gator Bowl (TIAA Bank Field - Jacksonville Florida)
-2019-01-01,2018,R,,iowa,mississippi-state,N,27,22,0,,18.0,Outback Bowl (Raymond James Stadium - Tampa Florida)
-2019-01-01,2018,R,,mississippi-state,iowa,N,22,27,0,18.0,,Outback Bowl (Raymond James Stadium - Tampa Florida)
-2019-01-01,2018,R,,kentucky,penn-state,N,27,24,0,16.0,13.0,Citrus Bowl (Camping World Stadium - Orlando Florida)
-2019-01-01,2018,R,,penn-state,kentucky,N,24,27,0,13.0,16.0,Citrus Bowl (Camping World Stadium - Orlando Florida)
-2019-01-01,2018,R,,louisiana-state,central-florida,N,40,32,0,11.0,7.0,Fiesta Bowl (State Farm Stadium - Glendale Arizona)
-2019-01-01,2018,R,,central-florida,louisiana-state,N,32,40,0,7.0,11.0,Fiesta Bowl (State Farm Stadium - Glendale Arizona)
-2019-01-01,2018,R,,ohio-state,washington,N,28,23,0,5.0,9.0,Rose Bowl (Rose Bowl - Pasadena California)
-2019-01-01,2018,R,,washington,ohio-state,N,23,28,0,9.0,5.0,Rose Bowl (Rose Bowl - Pasadena California)
-2019-01-01,2018,R,,texas,georgia,N,28,21,0,14.0,6.0,Sugar Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
-2019-01-01,2018,R,,georgia,texas,N,21,28,0,6.0,14.0,Sugar Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
-2019-01-07,2018,R,CCG,clemson,alabama,N,44,16,0,2.0,1.0,College Football Playoff National Championship (Levi's Stadium - Santa Clara California)
-2019-01-07,2018,R,CCG,alabama,clemson,N,16,44,0,1.0,2.0,College Football Playoff National Championship (Levi's Stadium - Santa Clara California)
+2018-12-15,2018,R,BOWL,appalachian-state,middle-tennessee-state,N,45,13,0,,,New Orleans Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
+2018-12-15,2018,R,BOWL,middle-tennessee-state,appalachian-state,N,13,45,0,,,New Orleans Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
+2018-12-15,2018,R,BOWL,fresno-state,arizona-state,N,31,20,0,19.0,,Las Vegas Bowl (Sam Boyd Stadium - Las Vegas Nevada)
+2018-12-15,2018,R,BOWL,arizona-state,fresno-state,N,20,31,0,,19.0,Las Vegas Bowl (Sam Boyd Stadium - Las Vegas Nevada)
+2018-12-15,2018,R,BOWL,georgia-southern,eastern-michigan,N,23,21,0,,,Camellia Bowl (Cramton Bowl - Montgomery Alabama)
+2018-12-15,2018,R,BOWL,eastern-michigan,georgia-southern,N,21,23,0,,,Camellia Bowl (Cramton Bowl - Montgomery Alabama)
+2018-12-15,2018,R,BOWL,tulane,louisiana,N,41,24,0,,,Cure Bowl (Camping World Stadium - Orlando Florida)
+2018-12-15,2018,R,BOWL,louisiana,tulane,N,24,41,0,,,Cure Bowl (Camping World Stadium - Orlando Florida)
+2018-12-15,2018,R,BOWL,utah-state,north-texas,N,52,13,0,,,New Mexico Bowl (Dreamstyle Stadium - Albuquerque New Mexico)
+2018-12-15,2018,R,BOWL,north-texas,utah-state,N,13,52,0,,,New Mexico Bowl (Dreamstyle Stadium - Albuquerque New Mexico)
+2018-12-18,2018,R,BOWL,alabama-birmingham,northern-illinois,N,37,13,0,,,Boca Raton Bowl (FAU Football Stadium - Boca Raton Florida)
+2018-12-18,2018,R,BOWL,northern-illinois,alabama-birmingham,N,13,37,0,,,Boca Raton Bowl (FAU Football Stadium - Boca Raton Florida)
+2018-12-19,2018,R,BOWL,ohio,san-diego-state,N,27,0,0,,,Frisco Bowl (Toyota Stadium - Frisco Texas)
+2018-12-19,2018,R,BOWL,san-diego-state,ohio,N,0,27,0,,,Frisco Bowl (Toyota Stadium - Frisco Texas)
+2018-12-20,2018,R,BOWL,marshall,south-florida,A,38,20,0,,,Gasparilla Bowl (Raymond James Stadium - Tampa Florida)
+2018-12-20,2018,R,BOWL,south-florida,marshall,H,20,38,0,,,Gasparilla Bowl (Raymond James Stadium - Tampa Florida)
+2018-12-21,2018,R,BOWL,brigham-young,western-michigan,N,49,18,0,,,Famous Idaho Potato Bowl (Albertsons Stadium - Boise Idaho)
+2018-12-21,2018,R,BOWL,western-michigan,brigham-young,N,18,49,0,,,Famous Idaho Potato Bowl (Albertsons Stadium - Boise Idaho)
+2018-12-21,2018,R,BOWL,florida-international,toledo,N,35,32,0,,,Bahamas Bowl (Thomas Robinson Stadium - Nassau BHS)
+2018-12-21,2018,R,BOWL,toledo,florida-international,N,32,35,0,,,Bahamas Bowl (Thomas Robinson Stadium - Nassau BHS)
+2018-12-22,2018,R,BOWL,army,houston,N,70,14,0,22.0,,Armed Forces Bowl (Amon G. Carter Stadium - Fort Worth Texas)
+2018-12-22,2018,R,BOWL,houston,army,N,14,70,0,,22.0,Armed Forces Bowl (Amon G. Carter Stadium - Fort Worth Texas)
+2018-12-22,2018,R,BOWL,louisiana-tech,hawaii,N,31,14,0,,,Hawaii Bowl (Aloha Stadium - Honolulu Hawaii)
+2018-12-22,2018,R,BOWL,hawaii,louisiana-tech,N,14,31,0,,,Hawaii Bowl (Aloha Stadium - Honolulu Hawaii)
+2018-12-22,2018,R,BOWL,troy,buffalo,N,42,32,0,,,Dollar General Bowl (Ladd-Peebles Stadium - Mobile Alabama)
+2018-12-22,2018,R,BOWL,buffalo,troy,N,32,42,0,,,Dollar General Bowl (Ladd-Peebles Stadium - Mobile Alabama)
+2018-12-22,2018,R,BOWL,wake-forest,memphis,N,37,34,0,,,Birmingham Bowl (Legion Field - Birmingham Alabama)
+2018-12-22,2018,R,BOWL,memphis,wake-forest,N,34,37,0,,,Birmingham Bowl (Legion Field - Birmingham Alabama)
+2018-12-26,2018,R,BOWL,minnesota,georgia-tech,N,34,10,0,,,Quick Lane Bowl (Ford Field - Detroit Michigan)
+2018-12-26,2018,R,BOWL,georgia-tech,minnesota,N,10,34,0,,,Quick Lane Bowl (Ford Field - Detroit Michigan)
+2018-12-26,2018,R,BOWL,texas-christian,california,N,10,7,0,,,Cheez-It Bowl (Chase Field - Phoenix Arizona)
+2018-12-26,2018,R,BOWL,california,texas-christian,N,7,10,0,,,Cheez-It Bowl (Chase Field - Phoenix Arizona)
+2018-12-27,2018,R,BOWL,baylor,vanderbilt,N,45,38,0,,,Texas Bowl (NRG Stadium - Houston Texas)
+2018-12-27,2018,R,BOWL,vanderbilt,baylor,N,38,45,0,,,Texas Bowl (NRG Stadium - Houston Texas)
+2018-12-27,2018,R,BOWL,duke,temple,N,56,27,0,,,Independence Bowl (Independence Stadium - Shreveport Louisiana)
+2018-12-27,2018,R,BOWL,temple,duke,N,27,56,0,,,Independence Bowl (Independence Stadium - Shreveport Louisiana)
+2018-12-27,2018,R,BOWL,wisconsin,miami-fl,N,35,3,0,,,Pinstripe Bowl (Yankee Stadium - New York New York)
+2018-12-27,2018,R,BOWL,miami-fl,wisconsin,N,3,35,0,,,Pinstripe Bowl (Yankee Stadium - New York New York)
+2018-12-28,2018,R,BOWL,auburn,purdue,N,63,14,0,,,Music City Bowl (Nissan Stadium - Nashville Tennessee)
+2018-12-28,2018,R,BOWL,purdue,auburn,N,14,63,0,,,Music City Bowl (Nissan Stadium - Nashville Tennessee)
+2018-12-28,2018,R,BOWL,syracuse,west-virginia,N,34,18,0,17.0,15.0,Camping World Bowl (Camping World Stadium - Orlando Florida)
+2018-12-28,2018,R,BOWL,west-virginia,syracuse,N,18,34,0,15.0,17.0,Camping World Bowl (Camping World Stadium - Orlando Florida)
+2018-12-28,2018,R,BOWL,washington-state,iowa-state,N,28,26,0,12.0,25.0,Alamo Bowl (Alamodome - San Antonio Texas)
+2018-12-28,2018,R,BOWL,iowa-state,washington-state,N,26,28,0,25.0,12.0,Alamo Bowl (Alamodome - San Antonio Texas)
+2018-12-29,2018,R,CFP-SF,alabama,oklahoma,N,45,34,0,1.0,4.0,Orange Bowl (Hard Rock Stadium - Miami Gardens Florida)
+2018-12-29,2018,R,CFP-SF,oklahoma,alabama,N,34,45,0,4.0,1.0,Orange Bowl (Hard Rock Stadium - Miami Gardens Florida)
+2018-12-29,2018,R,CFP-SF,clemson,notre-dame,N,30,3,0,2.0,3.0,Cotton Bowl (AT&T Stadium - Arlington Texas)
+2018-12-29,2018,R,CFP-SF,notre-dame,clemson,N,3,30,0,3.0,2.0,Cotton Bowl (AT&T Stadium - Arlington Texas)
+2018-12-29,2018,R,BOWL,florida,michigan,N,41,15,0,10.0,8.0,Peach Bowl (Mercedes-Benz Stadium - Atlanta Georgia)
+2018-12-29,2018,R,BOWL,michigan,florida,N,15,41,0,8.0,10.0,Peach Bowl (Mercedes-Benz Stadium - Atlanta Georgia)
+2018-12-29,2018,R,BOWL,nevada,arkansas-state,N,16,13,0,,,Arizona Bowl (Arizona Stadium - Tucson Arizona)
+2018-12-29,2018,R,BOWL,arkansas-state,nevada,N,13,16,0,,,Arizona Bowl (Arizona Stadium - Tucson Arizona)
+2018-12-29,2018,R,BOWL,virginia,south-carolina,N,28,0,0,,,Belk Bowl (Bank of America Stadium - Charlotte North Carolina)
+2018-12-29,2018,R,BOWL,south-carolina,virginia,N,0,28,0,,,Belk Bowl (Bank of America Stadium - Charlotte North Carolina)
+2018-12-31,2018,R,BOWL,cincinnati,virginia-tech,N,35,31,0,,,Military Bowl (Navy-Marine Corps Memorial Stadium - Annapolis Maryland)
+2018-12-31,2018,R,BOWL,virginia-tech,cincinnati,N,31,35,0,,,Military Bowl (Navy-Marine Corps Memorial Stadium - Annapolis Maryland)
+2018-12-31,2018,R,BOWL,northwestern,utah,N,31,20,0,,20.0,Holiday Bowl (SDCCU Stadium - San Diego California)
+2018-12-31,2018,R,BOWL,utah,northwestern,N,20,31,0,20.0,,Holiday Bowl (SDCCU Stadium - San Diego California)
+2018-12-31,2018,R,BOWL,oklahoma-state,missouri,N,38,33,0,,24.0,Liberty Bowl (Liberty Bowl Memorial Stadium - Memphis Tennessee)
+2018-12-31,2018,R,BOWL,missouri,oklahoma-state,N,33,38,0,24.0,,Liberty Bowl (Liberty Bowl Memorial Stadium - Memphis Tennessee)
+2018-12-31,2018,R,BOWL,oregon,michigan-state,N,7,6,0,,,Redbox Bowl (Levi's Stadium - Santa Clara California)
+2018-12-31,2018,R,BOWL,michigan-state,oregon,N,6,7,0,,,Redbox Bowl (Levi's Stadium - Santa Clara California)
+2018-12-31,2018,R,BOWL,stanford,pittsburgh,N,14,13,0,,,Sun Bowl (Sun Bowl - El Paso Texas)
+2018-12-31,2018,R,BOWL,pittsburgh,stanford,N,13,14,0,,,Sun Bowl (Sun Bowl - El Paso Texas)
+2018-12-31,2018,R,BOWL,texas-a-m,north-carolina-state,N,52,13,0,21.0,,Gator Bowl (TIAA Bank Field - Jacksonville Florida)
+2018-12-31,2018,R,BOWL,north-carolina-state,texas-a-m,N,13,52,0,,21.0,Gator Bowl (TIAA Bank Field - Jacksonville Florida)
+2019-01-01,2018,R,BOWL,iowa,mississippi-state,N,27,22,0,,18.0,Outback Bowl (Raymond James Stadium - Tampa Florida)
+2019-01-01,2018,R,BOWL,mississippi-state,iowa,N,22,27,0,18.0,,Outback Bowl (Raymond James Stadium - Tampa Florida)
+2019-01-01,2018,R,BOWL,kentucky,penn-state,N,27,24,0,16.0,13.0,Citrus Bowl (Camping World Stadium - Orlando Florida)
+2019-01-01,2018,R,BOWL,penn-state,kentucky,N,24,27,0,13.0,16.0,Citrus Bowl (Camping World Stadium - Orlando Florida)
+2019-01-01,2018,R,BOWL,louisiana-state,central-florida,N,40,32,0,11.0,7.0,Fiesta Bowl (State Farm Stadium - Glendale Arizona)
+2019-01-01,2018,R,BOWL,central-florida,louisiana-state,N,32,40,0,7.0,11.0,Fiesta Bowl (State Farm Stadium - Glendale Arizona)
+2019-01-01,2018,R,BOWL,ohio-state,washington,N,28,23,0,5.0,9.0,Rose Bowl (Rose Bowl - Pasadena California)
+2019-01-01,2018,R,BOWL,washington,ohio-state,N,23,28,0,9.0,5.0,Rose Bowl (Rose Bowl - Pasadena California)
+2019-01-01,2018,R,BOWL,texas,georgia,N,28,21,0,14.0,6.0,Sugar Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
+2019-01-01,2018,R,BOWL,georgia,texas,N,21,28,0,6.0,14.0,Sugar Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
+2019-01-07,2018,R,NC,clemson,alabama,N,44,16,0,2.0,1.0,College Football Playoff National Championship (Levi's Stadium - Santa Clara California)
+2019-01-07,2018,R,NC,alabama,clemson,N,16,44,0,1.0,2.0,College Football Playoff National Championship (Levi's Stadium - Santa Clara California)

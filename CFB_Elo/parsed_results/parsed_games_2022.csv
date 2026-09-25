@@ -1707,87 +1707,87 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2022-12-03,2022,R,,central-florida,tulane,A,28,45,0,22.0,18.0,
 2022-12-10,2022,R,,army,navy,N,20,17,0,,,
 2022-12-10,2022,R,,navy,army,N,17,20,0,,,
-2022-12-16,2022,R,,alabama-birmingham,miami-oh,N,24,20,0,,,Bahamas Bowl
-2022-12-16,2022,R,,miami-oh,alabama-birmingham,N,20,24,0,,,Bahamas Bowl
-2022-12-16,2022,R,,troy,texas-san-antonio,N,18,12,0,23.0,22.0,Cure Bowl
-2022-12-16,2022,R,,texas-san-antonio,troy,N,12,18,0,22.0,23.0,Cure Bowl
-2022-12-17,2022,R,,boise-state,north-texas,N,35,32,0,,,Frisco Bowl
-2022-12-17,2022,R,,north-texas,boise-state,N,32,35,0,,,Frisco Bowl
-2022-12-17,2022,R,,brigham-young,southern-methodist,N,24,23,0,,,New Mexico Bowl
-2022-12-17,2022,R,,southern-methodist,brigham-young,N,23,24,0,,,New Mexico Bowl
-2022-12-17,2022,R,,fresno-state,washington-state,N,29,6,0,,,LA Bowl
-2022-12-17,2022,R,,washington-state,fresno-state,N,6,29,0,,,LA Bowl
-2022-12-17,2022,R,,louisville,cincinnati,N,24,7,0,,,Fenway Bowl
-2022-12-17,2022,R,,cincinnati,louisville,N,7,24,0,,,Fenway Bowl
-2022-12-17,2022,R,,oregon-state,florida,N,30,3,0,17.0,,Las Vegas Bowl
-2022-12-17,2022,R,,florida,oregon-state,N,3,30,0,,17.0,Las Vegas Bowl
-2022-12-17,2022,R,,southern-mississippi,rice,N,38,24,0,,,LendingTree Bowl
-2022-12-17,2022,R,,rice,southern-mississippi,N,24,38,0,,,LendingTree Bowl
-2022-12-19,2022,R,,marshall,connecticut,N,28,14,0,,,Myrtle Beach Bowl
-2022-12-19,2022,R,,connecticut,marshall,N,14,28,0,,,Myrtle Beach Bowl
-2022-12-20,2022,R,,eastern-michigan,san-jose-state,N,41,27,0,,,Famous Idaho Potato Bowl
-2022-12-20,2022,R,,san-jose-state,eastern-michigan,N,27,41,0,,,Famous Idaho Potato Bowl
-2022-12-20,2022,R,,toledo,liberty,N,21,19,0,,,Boca Raton Bowl
-2022-12-20,2022,R,,liberty,toledo,N,19,21,0,,,Boca Raton Bowl
-2022-12-21,2022,R,,western-kentucky,south-alabama,N,44,23,0,,,New Orleans Bowl
-2022-12-21,2022,R,,south-alabama,western-kentucky,N,23,44,0,,,New Orleans Bowl
-2022-12-22,2022,R,,air-force,baylor,N,30,15,0,,,Armed Forces Bowl
-2022-12-22,2022,R,,baylor,air-force,N,15,30,0,,,Armed Forces Bowl
-2022-12-23,2022,R,,houston,louisiana,N,23,16,0,,,Independence Bowl
-2022-12-23,2022,R,,louisiana,houston,N,16,23,0,,,Independence Bowl
-2022-12-23,2022,R,,wake-forest,missouri,N,27,17,0,,,Gasparilla Bowl
-2022-12-23,2022,R,,missouri,wake-forest,N,17,27,0,,,Gasparilla Bowl
-2022-12-24,2022,R,,middle-tennessee-state,san-diego-state,N,25,23,0,,,Hawaii Bowl
-2022-12-24,2022,R,,san-diego-state,middle-tennessee-state,N,23,25,0,,,Hawaii Bowl
-2022-12-26,2022,R,,new-mexico-state,bowling-green,N,24,19,0,,,Quick Lane Bowl
-2022-12-26,2022,R,,bowling-green,new-mexico-state,N,19,24,0,,,Quick Lane Bowl
-2022-12-27,2022,R,,buffalo,georgia-southern,N,23,21,0,,,Camellia Bowl
-2022-12-27,2022,R,,georgia-southern,buffalo,N,21,23,0,,,Camellia Bowl
-2022-12-27,2022,R,,east-carolina,coastal-carolina,N,53,29,0,,,Birmingham Bowl
-2022-12-27,2022,R,,coastal-carolina,east-carolina,N,29,53,0,,,Birmingham Bowl
-2022-12-27,2022,R,,memphis,utah-state,N,38,10,0,,,First Responder Bowl
-2022-12-27,2022,R,,utah-state,memphis,N,10,38,0,,,First Responder Bowl
-2022-12-27,2022,R,,wisconsin,oklahoma-state,N,24,17,0,,,Guaranteed Rate Bowl
-2022-12-27,2022,R,,oklahoma-state,wisconsin,N,17,24,0,,,Guaranteed Rate Bowl
-2022-12-28,2022,R,,arkansas,kansas,N,55,53,0,,,Liberty Bowl
-2022-12-28,2022,R,,kansas,arkansas,N,53,55,0,,,Liberty Bowl
-2022-12-28,2022,R,,duke,central-florida,N,30,13,0,,,Military Bowl
-2022-12-28,2022,R,,central-florida,duke,N,13,30,0,,,Military Bowl
-2022-12-28,2022,R,,oregon,north-carolina,N,28,27,0,15.0,,Holiday Bowl
-2022-12-28,2022,R,,north-carolina,oregon,N,27,28,0,,15.0,Holiday Bowl
-2022-12-28,2022,R,,texas-tech,mississippi,N,42,25,0,,,Texas Bowl
-2022-12-28,2022,R,,mississippi,texas-tech,N,25,42,0,,,Texas Bowl
-2022-12-29,2022,R,,florida-state,oklahoma,N,35,32,0,13.0,,Cheez-It Bowl
-2022-12-29,2022,R,,oklahoma,florida-state,N,32,35,0,,13.0,Cheez-It Bowl
-2022-12-29,2022,R,,minnesota,syracuse,N,28,20,0,,,Pinstripe Bowl
-2022-12-29,2022,R,,syracuse,minnesota,N,20,28,0,,,Pinstripe Bowl
-2022-12-29,2022,R,,washington,texas,N,27,20,0,12.0,21.0,Alamo Bowl
-2022-12-29,2022,R,,texas,washington,N,20,27,0,21.0,12.0,Alamo Bowl
-2022-12-30,2022,R,,maryland,north-carolina-state,N,16,12,0,,25.0,Duke's Mayo Bowl
-2022-12-30,2022,R,,north-carolina-state,maryland,N,12,16,0,25.0,,Duke's Mayo Bowl
-2022-12-30,2022,R,,notre-dame,south-carolina,N,45,38,0,19.0,20.0,Gator Bowl
-2022-12-30,2022,R,,south-carolina,notre-dame,N,38,45,0,20.0,19.0,Gator Bowl
-2022-12-30,2022,R,,ohio,wyoming,N,30,27,0,,,Arizona Bowl
-2022-12-30,2022,R,,wyoming,ohio,N,27,30,0,,,Arizona Bowl
-2022-12-30,2022,R,,pittsburgh,ucla,N,37,35,0,,18.0,Sun Bowl
-2022-12-30,2022,R,,ucla,pittsburgh,N,35,37,0,18.0,,Sun Bowl
-2022-12-30,2022,R,,tennessee,clemson,N,31,14,0,6.0,10.0,Orange Bowl
-2022-12-30,2022,R,,clemson,tennessee,N,14,31,0,10.0,6.0,Orange Bowl
-2022-12-31,2022,R,,alabama,kansas-state,N,45,20,0,5.0,11.0,Sugar Bowl
-2022-12-31,2022,R,,kansas-state,alabama,N,20,45,0,11.0,5.0,Sugar Bowl
-2022-12-31,2022,R,,georgia,ohio-state,N,42,41,0,1.0,4.0,Peach Bowl
-2022-12-31,2022,R,,ohio-state,georgia,N,41,42,0,4.0,1.0,Peach Bowl
-2022-12-31,2022,R,,iowa,kentucky,N,21,0,0,,,Music City Bowl
-2022-12-31,2022,R,,kentucky,iowa,N,0,21,0,,,Music City Bowl
-2022-12-31,2022,R,,texas-christian,michigan,N,51,45,0,3.0,2.0,Fiesta Bowl
-2022-12-31,2022,R,,michigan,texas-christian,N,45,51,0,2.0,3.0,Fiesta Bowl
-2023-01-02,2022,R,,louisiana-state,purdue,N,63,7,0,16.0,,Citrus Bowl
-2023-01-02,2022,R,,purdue,louisiana-state,N,7,63,0,,16.0,Citrus Bowl
-2023-01-02,2022,R,,mississippi-state,illinois,N,19,10,0,24.0,,ReliaQuest Bowl
-2023-01-02,2022,R,,illinois,mississippi-state,N,10,19,0,,24.0,ReliaQuest Bowl
-2023-01-02,2022,R,,penn-state,utah,N,35,21,0,9.0,7.0,Rose Bowl
-2023-01-02,2022,R,,utah,penn-state,N,21,35,0,7.0,9.0,Rose Bowl
-2023-01-02,2022,R,,tulane,southern-california,N,46,45,0,14.0,8.0,Cotton Bowl
-2023-01-02,2022,R,,southern-california,tulane,N,45,46,0,8.0,14.0,Cotton Bowl
-2023-01-09,2022,R,CCG,georgia,texas-christian,N,65,7,0,1.0,3.0,College Football Playoff National Championship
-2023-01-09,2022,R,CCG,texas-christian,georgia,N,7,65,0,3.0,1.0,College Football Playoff National Championship
+2022-12-16,2022,R,BOWL,alabama-birmingham,miami-oh,N,24,20,0,,,Bahamas Bowl
+2022-12-16,2022,R,BOWL,miami-oh,alabama-birmingham,N,20,24,0,,,Bahamas Bowl
+2022-12-16,2022,R,BOWL,troy,texas-san-antonio,N,18,12,0,23.0,22.0,Cure Bowl
+2022-12-16,2022,R,BOWL,texas-san-antonio,troy,N,12,18,0,22.0,23.0,Cure Bowl
+2022-12-17,2022,R,BOWL,boise-state,north-texas,N,35,32,0,,,Frisco Bowl
+2022-12-17,2022,R,BOWL,north-texas,boise-state,N,32,35,0,,,Frisco Bowl
+2022-12-17,2022,R,BOWL,brigham-young,southern-methodist,N,24,23,0,,,New Mexico Bowl
+2022-12-17,2022,R,BOWL,southern-methodist,brigham-young,N,23,24,0,,,New Mexico Bowl
+2022-12-17,2022,R,BOWL,fresno-state,washington-state,N,29,6,0,,,LA Bowl
+2022-12-17,2022,R,BOWL,washington-state,fresno-state,N,6,29,0,,,LA Bowl
+2022-12-17,2022,R,BOWL,louisville,cincinnati,N,24,7,0,,,Fenway Bowl
+2022-12-17,2022,R,BOWL,cincinnati,louisville,N,7,24,0,,,Fenway Bowl
+2022-12-17,2022,R,BOWL,oregon-state,florida,N,30,3,0,17.0,,Las Vegas Bowl
+2022-12-17,2022,R,BOWL,florida,oregon-state,N,3,30,0,,17.0,Las Vegas Bowl
+2022-12-17,2022,R,BOWL,southern-mississippi,rice,N,38,24,0,,,LendingTree Bowl
+2022-12-17,2022,R,BOWL,rice,southern-mississippi,N,24,38,0,,,LendingTree Bowl
+2022-12-19,2022,R,BOWL,marshall,connecticut,N,28,14,0,,,Myrtle Beach Bowl
+2022-12-19,2022,R,BOWL,connecticut,marshall,N,14,28,0,,,Myrtle Beach Bowl
+2022-12-20,2022,R,BOWL,eastern-michigan,san-jose-state,N,41,27,0,,,Famous Idaho Potato Bowl
+2022-12-20,2022,R,BOWL,san-jose-state,eastern-michigan,N,27,41,0,,,Famous Idaho Potato Bowl
+2022-12-20,2022,R,BOWL,toledo,liberty,N,21,19,0,,,Boca Raton Bowl
+2022-12-20,2022,R,BOWL,liberty,toledo,N,19,21,0,,,Boca Raton Bowl
+2022-12-21,2022,R,BOWL,western-kentucky,south-alabama,N,44,23,0,,,New Orleans Bowl
+2022-12-21,2022,R,BOWL,south-alabama,western-kentucky,N,23,44,0,,,New Orleans Bowl
+2022-12-22,2022,R,BOWL,air-force,baylor,N,30,15,0,,,Armed Forces Bowl
+2022-12-22,2022,R,BOWL,baylor,air-force,N,15,30,0,,,Armed Forces Bowl
+2022-12-23,2022,R,BOWL,houston,louisiana,N,23,16,0,,,Independence Bowl
+2022-12-23,2022,R,BOWL,louisiana,houston,N,16,23,0,,,Independence Bowl
+2022-12-23,2022,R,BOWL,wake-forest,missouri,N,27,17,0,,,Gasparilla Bowl
+2022-12-23,2022,R,BOWL,missouri,wake-forest,N,17,27,0,,,Gasparilla Bowl
+2022-12-24,2022,R,BOWL,middle-tennessee-state,san-diego-state,N,25,23,0,,,Hawaii Bowl
+2022-12-24,2022,R,BOWL,san-diego-state,middle-tennessee-state,N,23,25,0,,,Hawaii Bowl
+2022-12-26,2022,R,BOWL,new-mexico-state,bowling-green,N,24,19,0,,,Quick Lane Bowl
+2022-12-26,2022,R,BOWL,bowling-green,new-mexico-state,N,19,24,0,,,Quick Lane Bowl
+2022-12-27,2022,R,BOWL,buffalo,georgia-southern,N,23,21,0,,,Camellia Bowl
+2022-12-27,2022,R,BOWL,georgia-southern,buffalo,N,21,23,0,,,Camellia Bowl
+2022-12-27,2022,R,BOWL,east-carolina,coastal-carolina,N,53,29,0,,,Birmingham Bowl
+2022-12-27,2022,R,BOWL,coastal-carolina,east-carolina,N,29,53,0,,,Birmingham Bowl
+2022-12-27,2022,R,BOWL,memphis,utah-state,N,38,10,0,,,First Responder Bowl
+2022-12-27,2022,R,BOWL,utah-state,memphis,N,10,38,0,,,First Responder Bowl
+2022-12-27,2022,R,BOWL,wisconsin,oklahoma-state,N,24,17,0,,,Guaranteed Rate Bowl
+2022-12-27,2022,R,BOWL,oklahoma-state,wisconsin,N,17,24,0,,,Guaranteed Rate Bowl
+2022-12-28,2022,R,BOWL,arkansas,kansas,N,55,53,0,,,Liberty Bowl
+2022-12-28,2022,R,BOWL,kansas,arkansas,N,53,55,0,,,Liberty Bowl
+2022-12-28,2022,R,BOWL,duke,central-florida,N,30,13,0,,,Military Bowl
+2022-12-28,2022,R,BOWL,central-florida,duke,N,13,30,0,,,Military Bowl
+2022-12-28,2022,R,BOWL,oregon,north-carolina,N,28,27,0,15.0,,Holiday Bowl
+2022-12-28,2022,R,BOWL,north-carolina,oregon,N,27,28,0,,15.0,Holiday Bowl
+2022-12-28,2022,R,BOWL,texas-tech,mississippi,N,42,25,0,,,Texas Bowl
+2022-12-28,2022,R,BOWL,mississippi,texas-tech,N,25,42,0,,,Texas Bowl
+2022-12-29,2022,R,BOWL,florida-state,oklahoma,N,35,32,0,13.0,,Cheez-It Bowl
+2022-12-29,2022,R,BOWL,oklahoma,florida-state,N,32,35,0,,13.0,Cheez-It Bowl
+2022-12-29,2022,R,BOWL,minnesota,syracuse,N,28,20,0,,,Pinstripe Bowl
+2022-12-29,2022,R,BOWL,syracuse,minnesota,N,20,28,0,,,Pinstripe Bowl
+2022-12-29,2022,R,BOWL,washington,texas,N,27,20,0,12.0,21.0,Alamo Bowl
+2022-12-29,2022,R,BOWL,texas,washington,N,20,27,0,21.0,12.0,Alamo Bowl
+2022-12-30,2022,R,BOWL,maryland,north-carolina-state,N,16,12,0,,25.0,Duke's Mayo Bowl
+2022-12-30,2022,R,BOWL,north-carolina-state,maryland,N,12,16,0,25.0,,Duke's Mayo Bowl
+2022-12-30,2022,R,BOWL,notre-dame,south-carolina,N,45,38,0,19.0,20.0,Gator Bowl
+2022-12-30,2022,R,BOWL,south-carolina,notre-dame,N,38,45,0,20.0,19.0,Gator Bowl
+2022-12-30,2022,R,BOWL,ohio,wyoming,N,30,27,0,,,Arizona Bowl
+2022-12-30,2022,R,BOWL,wyoming,ohio,N,27,30,0,,,Arizona Bowl
+2022-12-30,2022,R,BOWL,pittsburgh,ucla,N,37,35,0,,18.0,Sun Bowl
+2022-12-30,2022,R,BOWL,ucla,pittsburgh,N,35,37,0,18.0,,Sun Bowl
+2022-12-30,2022,R,BOWL,tennessee,clemson,N,31,14,0,6.0,10.0,Orange Bowl
+2022-12-30,2022,R,BOWL,clemson,tennessee,N,14,31,0,10.0,6.0,Orange Bowl
+2022-12-31,2022,R,BOWL,alabama,kansas-state,N,45,20,0,5.0,11.0,Sugar Bowl
+2022-12-31,2022,R,BOWL,kansas-state,alabama,N,20,45,0,11.0,5.0,Sugar Bowl
+2022-12-31,2022,R,CFP-SF,georgia,ohio-state,N,42,41,0,1.0,4.0,Peach Bowl
+2022-12-31,2022,R,CFP-SF,ohio-state,georgia,N,41,42,0,4.0,1.0,Peach Bowl
+2022-12-31,2022,R,BOWL,iowa,kentucky,N,21,0,0,,,Music City Bowl
+2022-12-31,2022,R,BOWL,kentucky,iowa,N,0,21,0,,,Music City Bowl
+2022-12-31,2022,R,CFP-SF,texas-christian,michigan,N,51,45,0,3.0,2.0,Fiesta Bowl
+2022-12-31,2022,R,CFP-SF,michigan,texas-christian,N,45,51,0,2.0,3.0,Fiesta Bowl
+2023-01-02,2022,R,BOWL,louisiana-state,purdue,N,63,7,0,16.0,,Citrus Bowl
+2023-01-02,2022,R,BOWL,purdue,louisiana-state,N,7,63,0,,16.0,Citrus Bowl
+2023-01-02,2022,R,BOWL,mississippi-state,illinois,N,19,10,0,24.0,,ReliaQuest Bowl
+2023-01-02,2022,R,BOWL,illinois,mississippi-state,N,10,19,0,,24.0,ReliaQuest Bowl
+2023-01-02,2022,R,BOWL,penn-state,utah,N,35,21,0,9.0,7.0,Rose Bowl
+2023-01-02,2022,R,BOWL,utah,penn-state,N,21,35,0,7.0,9.0,Rose Bowl
+2023-01-02,2022,R,BOWL,tulane,southern-california,N,46,45,0,14.0,8.0,Cotton Bowl
+2023-01-02,2022,R,BOWL,southern-california,tulane,N,45,46,0,8.0,14.0,Cotton Bowl
+2023-01-09,2022,R,NC,georgia,texas-christian,N,65,7,0,1.0,3.0,College Football Playoff National Championship
+2023-01-09,2022,R,NC,texas-christian,georgia,N,7,65,0,3.0,1.0,College Football Playoff National Championship

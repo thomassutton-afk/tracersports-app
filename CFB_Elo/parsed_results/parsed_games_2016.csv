@@ -105,8 +105,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-09-03,2016,R,,southern,louisiana-monroe,A,21,38,0,,,Malone Stadium - Monroe Louisiana
 2016-09-03,2016,R,,maryland,howard,H,52,13,0,,,Maryland Stadium - College Park Maryland
 2016-09-03,2016,R,,howard,maryland,A,13,52,0,,,Maryland Stadium - College Park Maryland
-2016-09-03,2016,R,,memphis,southeast-missouri-state,H,35,17,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2016-09-03,2016,R,,southeast-missouri-state,memphis,A,17,35,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2016-09-03,2016,R,BOWL,memphis,southeast-missouri-state,H,35,17,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2016-09-03,2016,R,BOWL,southeast-missouri-state,memphis,A,17,35,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2016-09-03,2016,R,,miami-fl,florida-a-m,H,70,3,0,,,Hard Rock Stadium - Miami Gardens Florida
 2016-09-03,2016,R,,florida-a-m,miami-fl,A,3,70,0,,,Hard Rock Stadium - Miami Gardens Florida
 2016-09-03,2016,R,,michigan,hawaii,H,63,3,0,7.0,,Michigan Stadium - Ann Arbor Michigan
@@ -151,8 +151,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-09-03,2016,R,,ohio,texas-state,H,54,56,0,,,Peden Stadium - Athens Ohio
 2016-09-03,2016,R,,texas-tech,stephen-f-austin,H,69,17,0,,,Jones AT&T Stadium - Lubbock Texas
 2016-09-03,2016,R,,stephen-f-austin,texas-tech,A,17,69,0,,,Jones AT&T Stadium - Lubbock Texas
-2016-09-03,2016,R,,texas-el-paso,new-mexico-state,H,38,22,0,,,Sun Bowl Stadium - El Paso Texas
-2016-09-03,2016,R,,new-mexico-state,texas-el-paso,A,22,38,0,,,Sun Bowl Stadium - El Paso Texas
+2016-09-03,2016,R,BOWL,texas-el-paso,new-mexico-state,H,38,22,0,,,Sun Bowl Stadium - El Paso Texas
+2016-09-03,2016,R,BOWL,new-mexico-state,texas-el-paso,A,22,38,0,,,Sun Bowl Stadium - El Paso Texas
 2016-09-03,2016,R,,texas-san-antonio,alabama-state,H,26,13,0,,,Alamodome - San Antonio Texas
 2016-09-03,2016,R,,alabama-state,texas-san-antonio,A,13,26,0,,,Alamodome - San Antonio Texas
 2016-09-03,2016,R,,troy,austin-peay,H,57,17,0,,,Veterans Memorial Stadium - Troy Alabama
@@ -309,12 +309,12 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-09-10,2016,R,,texas-el-paso,texas,A,7,41,0,,11.0,Darrell K Royal-Texas Memorial Stadium - Austin Texas
 2016-09-10,2016,R,,texas-a-m,prairie-view-a-m,H,67,0,0,20.0,,Kyle Field - College Station Texas
 2016-09-10,2016,R,,prairie-view-a-m,texas-a-m,A,0,67,0,,20.0,Kyle Field - College Station Texas
-2016-09-10,2016,R,,toledo,maine,H,45,3,0,,,Glass Bowl - Toledo Ohio
-2016-09-10,2016,R,,maine,toledo,A,3,45,0,,,Glass Bowl - Toledo Ohio
+2016-09-10,2016,R,BOWL,toledo,maine,H,45,3,0,,,Glass Bowl - Toledo Ohio
+2016-09-10,2016,R,BOWL,maine,toledo,A,3,45,0,,,Glass Bowl - Toledo Ohio
 2016-09-10,2016,R,,tulane,southern,H,66,21,0,,,Yulman Stadium - New Orleans Louisiana
 2016-09-10,2016,R,,southern,tulane,A,21,66,0,,,Yulman Stadium - New Orleans Louisiana
-2016-09-10,2016,R,,ucla,nevada-las-vegas,H,42,21,0,,,Rose Bowl - Pasadena California
-2016-09-10,2016,R,,nevada-las-vegas,ucla,A,21,42,0,,,Rose Bowl - Pasadena California
+2016-09-10,2016,R,BOWL,ucla,nevada-las-vegas,H,42,21,0,,,Rose Bowl - Pasadena California
+2016-09-10,2016,R,BOWL,nevada-las-vegas,ucla,A,21,42,0,,,Rose Bowl - Pasadena California
 2016-09-10,2016,R,,utah,brigham-young,H,20,19,0,,,Rice-Eccles Stadium - Salt Lake City Utah
 2016-09-10,2016,R,,brigham-young,utah,A,19,20,0,,,Rice-Eccles Stadium - Salt Lake City Utah
 2016-09-10,2016,R,,vanderbilt,middle-tennessee-state,H,47,24,0,,,Vanderbilt Stadium - Nashville Tennessee
@@ -345,8 +345,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-09-17,2016,R,,hawaii,arizona,A,28,47,0,,,Arizona Stadium - Tucson Arizona
 2016-09-17,2016,R,,arkansas,texas-state,H,42,3,0,24.0,,Donald W. Reynolds Razorback Stadium - Fayetteville Arkansas
 2016-09-17,2016,R,,texas-state,arkansas,A,3,42,0,,24.0,Donald W. Reynolds Razorback Stadium - Fayetteville Arkansas
-2016-09-17,2016,R,,army,texas-el-paso,A,66,14,0,,,Sun Bowl Stadium - El Paso Texas
-2016-09-17,2016,R,,texas-el-paso,army,H,14,66,0,,,Sun Bowl Stadium - El Paso Texas
+2016-09-17,2016,R,BOWL,army,texas-el-paso,A,66,14,0,,,Sun Bowl Stadium - El Paso Texas
+2016-09-17,2016,R,BOWL,texas-el-paso,army,H,14,66,0,,,Sun Bowl Stadium - El Paso Texas
 2016-09-17,2016,R,,ball-state,eastern-kentucky,H,41,14,0,,,Scheumann Stadium - Muncie Indiana
 2016-09-17,2016,R,,eastern-kentucky,ball-state,A,14,41,0,,,Scheumann Stadium - Muncie Indiana
 2016-09-17,2016,R,,california,texas,H,50,43,0,,11.0,Memorial Stadium - Berkeley California
@@ -387,8 +387,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-09-17,2016,R,,central-florida,maryland,H,24,30,0,,,Bright House Networks Stadium - Orlando Florida
 2016-09-17,2016,R,,massachusetts,florida-international,H,21,13,0,,,Warren McGuirk Alumni Stadium - Amherst Massachusetts
 2016-09-17,2016,R,,florida-international,massachusetts,A,13,21,0,,,Warren McGuirk Alumni Stadium - Amherst Massachusetts
-2016-09-17,2016,R,,memphis,kansas,H,43,7,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2016-09-17,2016,R,,kansas,memphis,A,7,43,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2016-09-17,2016,R,BOWL,memphis,kansas,H,43,7,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2016-09-17,2016,R,BOWL,kansas,memphis,A,7,43,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2016-09-17,2016,R,,miami-fl,appalachian-state,A,45,10,0,25.0,,Kidd Brewer Stadium - Boone North Carolina
 2016-09-17,2016,R,,appalachian-state,miami-fl,H,10,45,0,,25.0,Kidd Brewer Stadium - Boone North Carolina
 2016-09-17,2016,R,,michigan,colorado,H,45,28,0,4.0,,Michigan Stadium - Ann Arbor Michigan
@@ -439,8 +439,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-09-17,2016,R,,iowa-state,texas-christian,A,20,41,0,,,Amon G. Carter Stadium - Fort Worth Texas
 2016-09-17,2016,R,,texas-tech,louisiana-tech,H,59,45,0,,,Jones AT&T Stadium - Lubbock Texas
 2016-09-17,2016,R,,louisiana-tech,texas-tech,A,45,59,0,,,Jones AT&T Stadium - Lubbock Texas
-2016-09-17,2016,R,,toledo,fresno-state,H,52,17,0,,,Glass Bowl - Toledo Ohio
-2016-09-17,2016,R,,fresno-state,toledo,A,17,52,0,,,Glass Bowl - Toledo Ohio
+2016-09-17,2016,R,BOWL,toledo,fresno-state,H,52,17,0,,,Glass Bowl - Toledo Ohio
+2016-09-17,2016,R,BOWL,fresno-state,toledo,A,17,52,0,,,Glass Bowl - Toledo Ohio
 2016-09-17,2016,R,,troy,southern-mississippi,A,37,31,0,,,M.M. Roberts Stadium - Hattiesburg Mississippi
 2016-09-17,2016,R,,southern-mississippi,troy,H,31,37,0,,,M.M. Roberts Stadium - Hattiesburg Mississippi
 2016-09-17,2016,R,,tulsa,north-carolina-a-t,H,58,21,0,,,Chapman Stadium - Tulsa Oklahoma
@@ -521,8 +521,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-09-24,2016,R,,south-carolina,kentucky,A,10,17,0,,,Commonwealth Stadium - Lexington Kentucky
 2016-09-24,2016,R,,louisville,marshall,A,59,28,0,3.0,,Joan C. Edwards Stadium - Huntington West Virginia
 2016-09-24,2016,R,,marshall,louisville,H,28,59,0,,3.0,Joan C. Edwards Stadium - Huntington West Virginia
-2016-09-24,2016,R,,memphis,bowling-green,H,77,3,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2016-09-24,2016,R,,bowling-green,memphis,A,3,77,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2016-09-24,2016,R,BOWL,memphis,bowling-green,H,77,3,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2016-09-24,2016,R,BOWL,bowling-green,memphis,A,3,77,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2016-09-24,2016,R,,michigan,penn-state,H,49,10,0,4.0,,Michigan Stadium - Ann Arbor Michigan
 2016-09-24,2016,R,,penn-state,michigan,A,10,49,0,,4.0,Michigan Stadium - Ann Arbor Michigan
 2016-09-24,2016,R,,middle-tennessee-state,louisiana-tech,H,38,34,0,,,"Johnny ""Red"" Floyd Stadium - Murfreesboro Tennessee"
@@ -549,10 +549,10 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-09-24,2016,R,,nevada,purdue,A,14,24,0,,,Ross Ade Stadium - West Lafayette Indiana
 2016-09-24,2016,R,,south-alabama,nicholls-state,H,41,40,0,,,Ladd-Peebles Stadium - Mobile Alabama
 2016-09-24,2016,R,,nicholls-state,south-alabama,A,40,41,0,,,Ladd-Peebles Stadium - Mobile Alabama
-2016-09-24,2016,R,,southern-mississippi,texas-el-paso,A,34,7,0,,,Sun Bowl Stadium - El Paso Texas
-2016-09-24,2016,R,,texas-el-paso,southern-mississippi,H,7,34,0,,,Sun Bowl Stadium - El Paso Texas
-2016-09-24,2016,R,,stanford,ucla,A,22,13,0,7.0,,Rose Bowl - Pasadena California
-2016-09-24,2016,R,,ucla,stanford,H,13,22,0,,7.0,Rose Bowl - Pasadena California
+2016-09-24,2016,R,BOWL,southern-mississippi,texas-el-paso,A,34,7,0,,,Sun Bowl Stadium - El Paso Texas
+2016-09-24,2016,R,BOWL,texas-el-paso,southern-mississippi,H,7,34,0,,,Sun Bowl Stadium - El Paso Texas
+2016-09-24,2016,R,BOWL,stanford,ucla,A,22,13,0,7.0,,Rose Bowl - Pasadena California
+2016-09-24,2016,R,BOWL,ucla,stanford,H,13,22,0,,7.0,Rose Bowl - Pasadena California
 2016-09-24,2016,R,,syracuse,connecticut,A,31,24,0,,,Rentschler Field - East Hartford Connecticut
 2016-09-24,2016,R,,connecticut,syracuse,H,24,31,0,,,Rentschler Field - East Hartford Connecticut
 2016-09-24,2016,R,,temple,charlotte,H,48,20,0,,,Lincoln Financial Field - Philadelphia Pennsylvania
@@ -697,8 +697,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-10-01,2016,R,,idaho,troy,H,13,34,0,,,Kibbie Dome - Moscow Idaho
 2016-10-01,2016,R,,tulane,massachusetts,A,31,24,0,,,Warren McGuirk Alumni Stadium - Amherst Massachusetts
 2016-10-01,2016,R,,massachusetts,tulane,H,24,31,0,,,Warren McGuirk Alumni Stadium - Amherst Massachusetts
-2016-10-01,2016,R,,ucla,arizona,H,45,24,0,,,Rose Bowl - Pasadena California
-2016-10-01,2016,R,,arizona,ucla,A,24,45,0,,,Rose Bowl - Pasadena California
+2016-10-01,2016,R,BOWL,ucla,arizona,H,45,24,0,,,Rose Bowl - Pasadena California
+2016-10-01,2016,R,BOWL,arizona,ucla,A,24,45,0,,,Rose Bowl - Pasadena California
 2016-10-01,2016,R,,virginia,duke,A,34,20,0,,,Wallace Wade Stadium - Durham North Carolina
 2016-10-01,2016,R,,duke,virginia,H,20,34,0,,,Wallace Wade Stadium - Durham North Carolina
 2016-10-01,2016,R,,washington-state,oregon,H,51,33,0,,,Martin Stadium - Pullman Washington
@@ -715,8 +715,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-10-05,2016,R,,georgia-southern,arkansas-state,A,26,27,0,,,Centennial Bank Stadium - Jonesboro Arkansas
 2016-10-06,2016,R,,louisiana-tech,western-kentucky,H,55,52,0,,,Joe Aillet Stadium - Ruston Louisiana
 2016-10-06,2016,R,,western-kentucky,louisiana-tech,A,52,55,0,,,Joe Aillet Stadium - Ruston Louisiana
-2016-10-06,2016,R,,memphis,temple,H,34,27,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2016-10-06,2016,R,,temple,memphis,A,27,34,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2016-10-06,2016,R,BOWL,memphis,temple,H,34,27,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2016-10-06,2016,R,BOWL,temple,memphis,A,27,34,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2016-10-07,2016,R,,boise-state,new-mexico,A,49,21,0,19.0,,University Stadium - Albuquerque New Mexico
 2016-10-07,2016,R,,new-mexico,boise-state,H,21,49,0,,19.0,University Stadium - Albuquerque New Mexico
 2016-10-07,2016,R,,clemson,boston-college,A,56,10,0,3.0,,Alumni Stadium - Chestnut Hill Massachusetts
@@ -743,8 +743,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-10-08,2016,R,,cincinnati,connecticut,A,9,20,0,,,Rentschler Field - East Hartford Connecticut
 2016-10-08,2016,R,,duke,army,H,13,6,0,,,Wallace Wade Stadium - Durham North Carolina
 2016-10-08,2016,R,,army,duke,A,6,13,0,,,Wallace Wade Stadium - Durham North Carolina
-2016-10-08,2016,R,,florida-international,texas-el-paso,A,35,21,0,,,Sun Bowl Stadium - El Paso Texas
-2016-10-08,2016,R,,texas-el-paso,florida-international,H,21,35,0,,,Sun Bowl Stadium - El Paso Texas
+2016-10-08,2016,R,BOWL,florida-international,texas-el-paso,A,35,21,0,,,Sun Bowl Stadium - El Paso Texas
+2016-10-08,2016,R,BOWL,texas-el-paso,florida-international,H,21,35,0,,,Sun Bowl Stadium - El Paso Texas
 2016-10-08,2016,R,,florida-state,miami-fl,A,20,19,0,23.0,10.0,Hard Rock Stadium - Miami Gardens Florida
 2016-10-08,2016,R,,miami-fl,florida-state,H,19,20,0,10.0,23.0,Hard Rock Stadium - Miami Gardens Florida
 2016-10-08,2016,R,,georgia-state,texas-state,H,41,21,0,,,Georgia Dome - Atlanta Georgia
@@ -775,8 +775,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-10-08,2016,R,,bowling-green,ohio,A,24,30,0,,,Peden Stadium - Athens Ohio
 2016-10-08,2016,R,,ohio-state,indiana,H,38,17,0,2.0,,Ohio Stadium - Columbus Ohio
 2016-10-08,2016,R,,indiana,ohio-state,A,17,38,0,,2.0,Ohio Stadium - Columbus Ohio
-2016-10-08,2016,R,,oklahoma,texas,N,45,40,0,20.0,,Cotton Bowl Stadium - Dallas Texas
-2016-10-08,2016,R,,texas,oklahoma,N,40,45,0,,20.0,Cotton Bowl Stadium - Dallas Texas
+2016-10-08,2016,R,BOWL,oklahoma,texas,N,45,40,0,20.0,,Cotton Bowl Stadium - Dallas Texas
+2016-10-08,2016,R,BOWL,texas,oklahoma,N,40,45,0,,20.0,Cotton Bowl Stadium - Dallas Texas
 2016-10-08,2016,R,,oklahoma-state,iowa-state,H,38,31,0,,,Boone Pickens Stadium - Stillwater Oklahoma
 2016-10-08,2016,R,,iowa-state,oklahoma-state,A,31,38,0,,,Boone Pickens Stadium - Stillwater Oklahoma
 2016-10-08,2016,R,,oregon-state,california,H,47,44,0,,,Reser Stadium - Corvallis Oregon
@@ -885,8 +885,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-10-15,2016,R,,indiana,nebraska,H,22,27,0,,10.0,Memorial Stadium - Bloomington Indiana
 2016-10-15,2016,R,,nevada-las-vegas,hawaii,A,41,38,0,,,Hawaiian Tel Federal Credit Union Field at Aloha Stadium - Honolulu Hawaii
 2016-10-15,2016,R,,hawaii,nevada-las-vegas,H,38,41,0,,,Hawaiian Tel Federal Credit Union Field at Aloha Stadium - Honolulu Hawaii
-2016-10-15,2016,R,,new-mexico,air-force,N,45,40,0,,,Cotton Bowl Stadium - Dallas Texas
-2016-10-15,2016,R,,air-force,new-mexico,N,40,45,0,,,Cotton Bowl Stadium - Dallas Texas
+2016-10-15,2016,R,BOWL,new-mexico,air-force,N,45,40,0,,,Cotton Bowl Stadium - Dallas Texas
+2016-10-15,2016,R,BOWL,air-force,new-mexico,N,40,45,0,,,Cotton Bowl Stadium - Dallas Texas
 2016-10-15,2016,R,,north-carolina,miami-fl,A,20,13,0,,16.0,Hard Rock Stadium - Miami Gardens Florida
 2016-10-15,2016,R,,miami-fl,north-carolina,H,13,20,0,16.0,,Hard Rock Stadium - Miami Gardens Florida
 2016-10-15,2016,R,,northwestern,michigan-state,A,54,40,0,,,Spartan Stadium - East Lansing Michigan
@@ -913,8 +913,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-10-15,2016,R,,iowa-state,texas,A,6,27,0,,,Darrell K Royal-Texas Memorial Stadium - Austin Texas
 2016-10-15,2016,R,,texas-san-antonio,rice,A,14,13,0,,,Rice Stadium - Houston Texas
 2016-10-15,2016,R,,rice,texas-san-antonio,H,13,14,0,,,Rice Stadium - Houston Texas
-2016-10-15,2016,R,,toledo,bowling-green,H,42,35,0,,,Glass Bowl - Toledo Ohio
-2016-10-15,2016,R,,bowling-green,toledo,A,35,42,0,,,Glass Bowl - Toledo Ohio
+2016-10-15,2016,R,BOWL,toledo,bowling-green,H,42,35,0,,,Glass Bowl - Toledo Ohio
+2016-10-15,2016,R,BOWL,bowling-green,toledo,A,35,42,0,,,Glass Bowl - Toledo Ohio
 2016-10-15,2016,R,,troy,georgia-state,H,31,21,0,,,Veterans Memorial Stadium - Troy Alabama
 2016-10-15,2016,R,,georgia-state,troy,A,21,31,0,,,Veterans Memorial Stadium - Troy Alabama
 2016-10-15,2016,R,,utah,oregon-state,A,19,14,0,21.0,,Reser Stadium - Corvallis Oregon
@@ -1019,12 +1019,12 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-10-22,2016,R,,boston-college,syracuse,H,20,28,0,,,Alumni Stadium - Chestnut Hill Massachusetts
 2016-10-22,2016,R,,texas-el-paso,texas-san-antonio,A,52,49,0,,,Alamodome - San Antonio Texas
 2016-10-22,2016,R,,texas-san-antonio,texas-el-paso,H,49,52,0,,,Alamodome - San Antonio Texas
-2016-10-22,2016,R,,toledo,central-michigan,H,31,17,0,,,Glass Bowl - Toledo Ohio
-2016-10-22,2016,R,,central-michigan,toledo,A,17,31,0,,,Glass Bowl - Toledo Ohio
+2016-10-22,2016,R,BOWL,toledo,central-michigan,H,31,17,0,,,Glass Bowl - Toledo Ohio
+2016-10-22,2016,R,BOWL,central-michigan,toledo,A,17,31,0,,,Glass Bowl - Toledo Ohio
 2016-10-22,2016,R,,tulsa,tulane,H,50,27,0,,,Skelly Field at H.A. Chapman Stadium - Tulsa Oklahoma
 2016-10-22,2016,R,,tulane,tulsa,A,27,50,0,,,Skelly Field at H.A. Chapman Stadium - Tulsa Oklahoma
-2016-10-22,2016,R,,utah,ucla,A,52,45,0,19.0,,Rose Bowl - Pasadena California
-2016-10-22,2016,R,,ucla,utah,H,45,52,0,,19.0,Rose Bowl - Pasadena California
+2016-10-22,2016,R,BOWL,utah,ucla,A,52,45,0,19.0,,Rose Bowl - Pasadena California
+2016-10-22,2016,R,BOWL,ucla,utah,H,45,52,0,,19.0,Rose Bowl - Pasadena California
 2016-10-22,2016,R,,utah-state,fresno-state,H,38,20,0,,,Merlin Olsen Field at Maverik Stadium - Logan Utah
 2016-10-22,2016,R,,fresno-state,utah-state,A,20,38,0,,,Merlin Olsen Field at Maverik Stadium - Logan Utah
 2016-10-22,2016,R,,vanderbilt,tennessee-state,H,35,17,0,,,Vanderbilt Stadium - Nashville Tennessee
@@ -1047,8 +1047,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-10-27,2016,R,,georgia-southern,appalachian-state,H,10,34,0,,,Allen E. Paulson Stadium - Statesboro Georgia
 2016-10-27,2016,R,,buffalo,akron,H,41,20,0,,,University of Buffalo Stadium - Buffalo New York
 2016-10-27,2016,R,,akron,buffalo,A,20,41,0,,,University of Buffalo Stadium - Buffalo New York
-2016-10-27,2016,R,,ohio,toledo,A,31,26,0,,,Glass Bowl - Toledo Ohio
-2016-10-27,2016,R,,toledo,ohio,H,26,31,0,,,Glass Bowl - Toledo Ohio
+2016-10-27,2016,R,BOWL,ohio,toledo,A,31,26,0,,,Glass Bowl - Toledo Ohio
+2016-10-27,2016,R,BOWL,toledo,ohio,H,26,31,0,,,Glass Bowl - Toledo Ohio
 2016-10-27,2016,R,,southern-california,california,H,45,24,0,,,Los Angeles Memorial Coliseum - Los Angeles California
 2016-10-27,2016,R,,california,southern-california,A,24,45,0,,,Los Angeles Memorial Coliseum - Los Angeles California
 2016-10-27,2016,R,,virginia-tech,pittsburgh,A,39,36,0,25.0,,Heinz Field - Pittsburgh Pennsylvania
@@ -1113,8 +1113,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-10-29,2016,R,,kansas,oklahoma,A,3,56,0,,16.0,Gaylord Family - Oklahoma Memorial Stadium - Norman Oklahoma
 2016-10-29,2016,R,,oklahoma-state,west-virginia,H,37,20,0,,10.0,Boone Pickens Stadium - Stillwater Oklahoma
 2016-10-29,2016,R,,west-virginia,oklahoma-state,A,20,37,0,10.0,,Boone Pickens Stadium - Stillwater Oklahoma
-2016-10-29,2016,R,,old-dominion,texas-el-paso,A,31,21,0,,,Sun Bowl Stadium - El Paso Texas
-2016-10-29,2016,R,,texas-el-paso,old-dominion,H,21,31,0,,,Sun Bowl Stadium - El Paso Texas
+2016-10-29,2016,R,BOWL,old-dominion,texas-el-paso,A,31,21,0,,,Sun Bowl Stadium - El Paso Texas
+2016-10-29,2016,R,BOWL,texas-el-paso,old-dominion,H,21,31,0,,,Sun Bowl Stadium - El Paso Texas
 2016-10-29,2016,R,,oregon,arizona-state,H,54,35,0,,,Autzen Stadium - Eugene Oregon
 2016-10-29,2016,R,,arizona-state,oregon,A,35,54,0,,,Autzen Stadium - Eugene Oregon
 2016-10-29,2016,R,,penn-state,purdue,A,62,24,0,24.0,,Ross-Ade Stadium - West Lafayette Indiana
@@ -1141,8 +1141,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-10-29,2016,R,,texas-christian,texas-tech,H,24,27,0,,,Amon G. Carter Stadium - Fort Worth Texas
 2016-10-29,2016,R,,texas-san-antonio,north-texas,H,31,17,0,,,Alamodome - San Antonio Texas
 2016-10-29,2016,R,,north-texas,texas-san-antonio,A,17,31,0,,,Alamodome - San Antonio Texas
-2016-10-29,2016,R,,tulsa,memphis,A,59,30,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2016-10-29,2016,R,,memphis,tulsa,H,30,59,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2016-10-29,2016,R,BOWL,tulsa,memphis,A,59,30,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2016-10-29,2016,R,BOWL,memphis,tulsa,H,30,59,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2016-10-29,2016,R,,washington,utah,A,31,24,0,4.0,17.0,Rice-Eccles Stadium - Salt Lake City Utah
 2016-10-29,2016,R,,utah,washington,H,24,31,0,17.0,4.0,Rice-Eccles Stadium - Salt Lake City Utah
 2016-10-29,2016,R,,washington-state,oregon-state,A,35,31,0,,,Reser Stadium - Corvallis Oregon
@@ -1253,8 +1253,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-11-05,2016,R,,texas-tech,texas,H,37,45,0,,,Jones AT&T Stadium - Lubbock Texas
 2016-11-05,2016,R,,texas-christian,baylor,A,62,22,0,,13.0,McLane Stadium - Waco Texas
 2016-11-05,2016,R,,baylor,texas-christian,H,22,62,0,13.0,,McLane Stadium - Waco Texas
-2016-11-05,2016,R,,texas-el-paso,houston-baptist,H,42,10,0,,,Sun Bowl Stadium - El Paso Texas
-2016-11-05,2016,R,,houston-baptist,texas-el-paso,A,10,42,0,,,Sun Bowl Stadium - El Paso Texas
+2016-11-05,2016,R,BOWL,texas-el-paso,houston-baptist,H,42,10,0,,,Sun Bowl Stadium - El Paso Texas
+2016-11-05,2016,R,BOWL,houston-baptist,texas-el-paso,A,10,42,0,,,Sun Bowl Stadium - El Paso Texas
 2016-11-05,2016,R,,texas-san-antonio,middle-tennessee-state,A,45,25,0,,,"Johnny ""Red"" Floyd Stadium - Murfreesboro Tennessee"
 2016-11-05,2016,R,,middle-tennessee-state,texas-san-antonio,H,25,45,0,,,"Johnny ""Red"" Floyd Stadium - Murfreesboro Tennessee"
 2016-11-05,2016,R,,troy,massachusetts,H,52,31,0,,,Veterans Memorial Stadium - Troy Alabama
@@ -1373,8 +1373,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-11-12,2016,R,,charlotte,rice,H,21,22,0,,,Jerry Richardson Stadium - Charlotte North Carolina
 2016-11-12,2016,R,,san-diego-state,nevada,A,46,16,0,,,MacKay Stadium - Reno Nevada
 2016-11-12,2016,R,,nevada,san-diego-state,H,16,46,0,,,MacKay Stadium - Reno Nevada
-2016-11-12,2016,R,,south-florida,memphis,A,49,42,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2016-11-12,2016,R,,memphis,south-florida,H,42,49,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2016-11-12,2016,R,BOWL,south-florida,memphis,A,49,42,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2016-11-12,2016,R,BOWL,memphis,south-florida,H,42,49,0,,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2016-11-12,2016,R,,southern-california,washington,A,26,13,0,,4.0,Husky Stadium - Seattle Washington
 2016-11-12,2016,R,,washington,southern-california,H,13,26,0,4.0,,Husky Stadium - Seattle Washington
 2016-11-12,2016,R,,southern-methodist,east-carolina,A,55,31,0,,,Dowdy-Ficklen Stadium - Greenville North Carolina
@@ -1385,8 +1385,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-11-12,2016,R,,kentucky,tennessee,A,36,49,0,,,Neyland Stadium - Knoxville Tennessee
 2016-11-12,2016,R,,troy,appalachian-state,H,28,24,0,,,Veterans Memorial Stadium - Troy Alabama
 2016-11-12,2016,R,,appalachian-state,troy,A,24,28,0,,,Veterans Memorial Stadium - Troy Alabama
-2016-11-12,2016,R,,ucla,oregon-state,H,38,24,0,,,Rose Bowl - Pasadena California
-2016-11-12,2016,R,,oregon-state,ucla,A,24,38,0,,,Rose Bowl - Pasadena California
+2016-11-12,2016,R,BOWL,ucla,oregon-state,H,38,24,0,,,Rose Bowl - Pasadena California
+2016-11-12,2016,R,BOWL,oregon-state,ucla,A,24,38,0,,,Rose Bowl - Pasadena California
 2016-11-12,2016,R,,washington-state,california,H,56,21,0,23.0,,Martin Stadium - Pullman Washington
 2016-11-12,2016,R,,california,washington-state,A,21,56,0,,23.0,Martin Stadium - Pullman Washington
 2016-11-12,2016,R,,west-virginia,texas,A,24,20,0,11.0,,Darrell K Royal-Texas Memorial Stadium - Austin Texas
@@ -1401,8 +1401,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-11-15,2016,R,,ohio,central-michigan,A,20,27,0,,,Kelly/Shorts Stadium - Mount Pleasant Michigan
 2016-11-16,2016,R,,northern-illinois,eastern-michigan,A,31,24,0,,,Rynearson Stadium - Ypsilanti Michigan
 2016-11-16,2016,R,,eastern-michigan,northern-illinois,H,24,31,0,,,Rynearson Stadium - Ypsilanti Michigan
-2016-11-16,2016,R,,toledo,ball-state,H,37,19,0,,,Glass Bowl - Toledo Ohio
-2016-11-16,2016,R,,ball-state,toledo,A,19,37,0,,,Glass Bowl - Toledo Ohio
+2016-11-16,2016,R,BOWL,toledo,ball-state,H,37,19,0,,,Glass Bowl - Toledo Ohio
+2016-11-16,2016,R,BOWL,ball-state,toledo,A,19,37,0,,,Glass Bowl - Toledo Ohio
 2016-11-17,2016,R,,arkansas-state,troy,A,35,3,0,,25.0,Veterans Memorial Stadium - Troy Alabama
 2016-11-17,2016,R,,troy,arkansas-state,H,3,35,0,25.0,,Veterans Memorial Stadium - Troy Alabama
 2016-11-17,2016,R,,coastal-carolina,liberty,H,42,7,0,,,
@@ -1503,8 +1503,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-11-19,2016,R,,western-carolina,south-carolina,A,31,44,0,,,Williams-Brice Stadium - Columbia South Carolina
 2016-11-19,2016,R,,south-florida,southern-methodist,A,35,27,0,,,Gerald J. Ford Stadium - Dallas Texas
 2016-11-19,2016,R,,southern-methodist,south-florida,H,27,35,0,,,Gerald J. Ford Stadium - Dallas Texas
-2016-11-19,2016,R,,southern-california,ucla,A,36,14,0,15.0,,Rose Bowl - Pasadena California
-2016-11-19,2016,R,,ucla,southern-california,H,14,36,0,,15.0,Rose Bowl - Pasadena California
+2016-11-19,2016,R,BOWL,southern-california,ucla,A,36,14,0,15.0,,Rose Bowl - Pasadena California
+2016-11-19,2016,R,BOWL,ucla,southern-california,H,14,36,0,,15.0,Rose Bowl - Pasadena California
 2016-11-19,2016,R,,stanford,california,A,45,31,0,,,Memorial Stadium - Berkeley California
 2016-11-19,2016,R,,california,stanford,H,31,45,0,,,Memorial Stadium - Berkeley California
 2016-11-19,2016,R,,temple,tulane,A,31,0,0,,,Yulman Stadium - New Orleans Louisiana
@@ -1543,8 +1543,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-11-25,2016,R,,buffalo,bowling-green,A,19,27,0,,,Doyt L. Perry Stadium - Bowling Green Ohio
 2016-11-25,2016,R,,iowa,nebraska,H,40,10,0,,17.0,Kinnick Stadium - Iowa City Iowa
 2016-11-25,2016,R,,nebraska,iowa,A,10,40,0,17.0,,Kinnick Stadium - Iowa City Iowa
-2016-11-25,2016,R,,memphis,houston,H,48,44,0,,18.0,Liberty Bowl Memorial Stadium - Memphis Tennessee
-2016-11-25,2016,R,,houston,memphis,A,44,48,0,18.0,,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2016-11-25,2016,R,BOWL,memphis,houston,H,48,44,0,,18.0,Liberty Bowl Memorial Stadium - Memphis Tennessee
+2016-11-25,2016,R,BOWL,houston,memphis,A,44,48,0,18.0,,Liberty Bowl Memorial Stadium - Memphis Tennessee
 2016-11-25,2016,R,,missouri,arkansas,H,28,24,0,,,Faurot Field - Columbia Missouri
 2016-11-25,2016,R,,arkansas,missouri,A,24,28,0,,,Faurot Field - Columbia Missouri
 2016-11-25,2016,R,,north-carolina-state,north-carolina,A,28,21,0,,,Kenan Memorial Stadium - Chapel Hill North Carolina
@@ -1633,8 +1633,8 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-11-26,2016,R,,rice,stanford,A,17,41,0,,,Stanford Stadium - Stanford California
 2016-11-26,2016,R,,temple,east-carolina,H,37,10,0,,,Lincoln Financial Field - Philadelphia Pennsylvania
 2016-11-26,2016,R,,east-carolina,temple,A,10,37,0,,,Lincoln Financial Field - Philadelphia Pennsylvania
-2016-11-26,2016,R,,texas-el-paso,north-texas,H,52,24,0,,,Sun Bowl Stadium - El Paso Texas
-2016-11-26,2016,R,,north-texas,texas-el-paso,A,24,52,0,,,Sun Bowl Stadium - El Paso Texas
+2016-11-26,2016,R,BOWL,texas-el-paso,north-texas,H,52,24,0,,,Sun Bowl Stadium - El Paso Texas
+2016-11-26,2016,R,BOWL,north-texas,texas-el-paso,A,24,52,0,,,Sun Bowl Stadium - El Paso Texas
 2016-11-26,2016,R,,texas-san-antonio,charlotte,H,33,14,0,,,Alamodome - San Antonio Texas
 2016-11-26,2016,R,,charlotte,texas-san-antonio,A,14,33,0,,,Alamodome - San Antonio Texas
 2016-11-26,2016,R,,troy,texas-state,A,40,7,0,,,Bobcat Stadium - San Marcos Texas
@@ -1685,85 +1685,85 @@ Date,Season,Type,Round,Team,Opp,HomeAway,PointsFor,PointsAgainst,OT,TeamAPRank,O
 2016-12-03,2016,R,CCG,louisiana-tech,western-kentucky,A,44,58,0,,,Conference USA Championship (Bowling Green KY)
 2016-12-10,2016,R,,army,navy,N,21,17,0,,,M&T Bank Stadium - Baltimore Maryland
 2016-12-10,2016,R,,navy,army,N,17,21,0,,,M&T Bank Stadium - Baltimore Maryland
-2016-12-17,2016,R,,appalachian-state,toledo,N,31,28,0,,,Raycom Media Camellia Bowl (Montgomery AL)
-2016-12-17,2016,R,,toledo,appalachian-state,N,28,31,0,,,Raycom Media Camellia Bowl (Montgomery AL)
-2016-12-17,2016,R,,arkansas-state,central-florida,N,31,13,0,,,Cure Bowl (Camping World Stadium - Orlando Florida)
-2016-12-17,2016,R,,central-florida,arkansas-state,N,13,31,0,,,Cure Bowl (Camping World Stadium - Orlando Florida)
-2016-12-17,2016,R,,new-mexico,texas-san-antonio,N,23,20,0,,,New Mexico Bowl (University Stadium - Albuquerque New Mexico)
-2016-12-17,2016,R,,texas-san-antonio,new-mexico,N,20,23,0,,,New Mexico Bowl (University Stadium - Albuquerque New Mexico)
-2016-12-17,2016,R,,san-diego-state,houston,N,34,10,0,,,Las Vegas Bowl (Sam Boyd Stadium - Las Vegas Nevada)
-2016-12-17,2016,R,,houston,san-diego-state,N,10,34,0,,,Las Vegas Bowl (Sam Boyd Stadium - Las Vegas Nevada)
-2016-12-17,2016,R,,southern-mississippi,louisiana,N,28,21,0,,,New Orleans Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
-2016-12-17,2016,R,,louisiana,southern-mississippi,N,21,28,0,,,New Orleans Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
-2016-12-19,2016,R,,tulsa,central-michigan,N,55,10,0,,,Miami Beach Bowl (Marlins Park - Miami Florida)
-2016-12-19,2016,R,,central-michigan,tulsa,N,10,55,0,,,Miami Beach Bowl (Marlins Park - Miami Florida)
-2016-12-20,2016,R,,western-kentucky,memphis,N,51,31,0,,,Boca Raton Bowl (FAU Football Stadium - Boca Raton Florida)
-2016-12-20,2016,R,,memphis,western-kentucky,N,31,51,0,,,Boca Raton Bowl (FAU Football Stadium - Boca Raton Florida)
-2016-12-21,2016,R,,brigham-young,wyoming,N,24,21,0,,,Poinsettia Bowl (Qualcomm Stadium - San Diego California)
-2016-12-21,2016,R,,wyoming,brigham-young,N,21,24,0,,,Poinsettia Bowl (Qualcomm Stadium - San Diego California)
-2016-12-22,2016,R,,idaho,colorado-state,N,61,50,0,,,Famous Idaho Potato Bowl (Albertsons Stadium - Boise Idaho)
-2016-12-22,2016,R,,colorado-state,idaho,N,50,61,0,,,Famous Idaho Potato Bowl (Albertsons Stadium - Boise Idaho)
-2016-12-23,2016,R,,louisiana-tech,navy,N,48,45,0,,,Armed Forces Bowl (Amon G. Carter Stadium - Fort Worth Texas)
-2016-12-23,2016,R,,navy,louisiana-tech,N,45,48,0,,,Armed Forces Bowl (Amon G. Carter Stadium - Fort Worth Texas)
-2016-12-23,2016,R,,old-dominion,eastern-michigan,N,24,20,0,,,Bahamas Bowl (Thomas A. Robinson Stadium - Nassau Bahamas)
-2016-12-23,2016,R,,eastern-michigan,old-dominion,N,20,24,0,,,Bahamas Bowl (Thomas A. Robinson Stadium - Nassau Bahamas)
-2016-12-23,2016,R,,troy,ohio,N,28,23,0,,,Dollar General Bowl (Ladd-Peebles Stadium - Mobile Alabama)
-2016-12-23,2016,R,,ohio,troy,N,23,28,0,,,Dollar General Bowl (Ladd-Peebles Stadium - Mobile Alabama)
-2016-12-24,2016,R,,hawaii,middle-tennessee-state,N,52,35,0,,,Hawaii Bowl (Hawaiian Tel Federal Credit Union Field at Aloha Stadium - Honolulu Hawaii)
-2016-12-24,2016,R,,middle-tennessee-state,hawaii,N,35,52,0,,,Hawaii Bowl (Hawaiian Tel Federal Credit Union Field at Aloha Stadium - Honolulu Hawaii)
-2016-12-26,2016,R,,boston-college,maryland,N,36,30,0,,,Quick Lane Bowl (Ford Field - Detroit Michigan)
-2016-12-26,2016,R,,maryland,boston-college,N,30,36,0,,,Quick Lane Bowl (Ford Field - Detroit Michigan)
-2016-12-26,2016,R,,mississippi-state,miami-oh,N,17,16,0,,,St. Petersburg Bowl (Tropicana Field - St. Petersburg Florida)
-2016-12-26,2016,R,,miami-oh,mississippi-state,N,16,17,0,,,St. Petersburg Bowl (Tropicana Field - St. Petersburg Florida)
-2016-12-26,2016,R,,north-carolina-state,vanderbilt,N,41,17,0,,,Independence Bowl (Independence Stadium - Shreveport Louisiana)
-2016-12-26,2016,R,,vanderbilt,north-carolina-state,N,17,41,0,,,Independence Bowl (Independence Stadium - Shreveport Louisiana)
-2016-12-27,2016,R,,army,north-texas,N,38,31,0,,,Heart of Dallas Bowl (Dallas TX)
-2016-12-27,2016,R,,north-texas,army,N,31,38,0,,,Heart of Dallas Bowl (Dallas TX)
-2016-12-27,2016,R,,baylor,boise-state,N,31,12,0,,,Cactus Bowl (Chase Field - Phoenix Arizona)
-2016-12-27,2016,R,,boise-state,baylor,N,12,31,0,,,Cactus Bowl (Chase Field - Phoenix Arizona)
-2016-12-27,2016,R,,minnesota,washington-state,N,17,12,0,,,Holiday Bowl (Qualcomm Stadium - San Diego California)
-2016-12-27,2016,R,,washington-state,minnesota,N,12,17,0,,,Holiday Bowl (Qualcomm Stadium - San Diego California)
-2016-12-27,2016,R,,wake-forest,temple,N,34,26,0,,23.0,Military Bowl (Navy Marine Corps Memorial Stadium - Annapolis Maryland)
-2016-12-27,2016,R,,temple,wake-forest,N,26,34,0,23.0,,Military Bowl (Navy Marine Corps Memorial Stadium - Annapolis Maryland)
-2016-12-28,2016,R,,kansas-state,texas-a-m,N,33,28,0,,,Texas Bowl (NRG Stadium - Houston Texas)
-2016-12-28,2016,R,,texas-a-m,kansas-state,N,28,33,0,,,Texas Bowl (NRG Stadium - Houston Texas)
-2016-12-28,2016,R,,miami-fl,west-virginia,N,31,14,0,,14.0,Russell Athletic Bowl (Camping World Stadium - Orlando Florida)
-2016-12-28,2016,R,,west-virginia,miami-fl,N,14,31,0,14.0,,Russell Athletic Bowl (Camping World Stadium - Orlando Florida)
-2016-12-28,2016,R,,northwestern,pittsburgh,N,31,24,0,,22.0,Pinstripe Bowl (Yankee Stadium - Bronx New York)
-2016-12-28,2016,R,,pittsburgh,northwestern,N,24,31,0,22.0,,Pinstripe Bowl (Yankee Stadium - Bronx New York)
-2016-12-28,2016,R,,utah,indiana,N,26,24,0,,,Foster Farms Bowl (Levi's Stadium - Santa Clara California)
-2016-12-28,2016,R,,indiana,utah,N,24,26,0,,,Foster Farms Bowl (Levi's Stadium - Santa Clara California)
-2016-12-29,2016,R,,oklahoma-state,colorado,N,38,8,0,13.0,11.0,Alamo Bowl (Alamodome - San Antonio Texas)
-2016-12-29,2016,R,,colorado,oklahoma-state,N,8,38,0,11.0,13.0,Alamo Bowl (Alamodome - San Antonio Texas)
-2016-12-29,2016,R,,south-florida,south-carolina,N,46,39,0,25.0,,Birmingham Bowl (Legion Field - Birmingham Alabama)
-2016-12-29,2016,R,,south-carolina,south-florida,N,39,46,0,,25.0,Birmingham Bowl (Legion Field - Birmingham Alabama)
-2016-12-29,2016,R,,virginia-tech,arkansas,N,35,24,0,18.0,,Belk Bowl (Bank of America Stadium - Charlotte North Carolina)
-2016-12-29,2016,R,,arkansas,virginia-tech,N,24,35,0,,18.0,Belk Bowl (Bank of America Stadium - Charlotte North Carolina)
-2016-12-30,2016,R,,air-force,south-alabama,N,45,21,0,,,Arizona Bowl (Arizona Stadium - Tucson Arizona)
-2016-12-30,2016,R,,south-alabama,air-force,N,21,45,0,,,Arizona Bowl (Arizona Stadium - Tucson Arizona)
-2016-12-30,2016,R,,florida-state,michigan,N,33,32,0,10.0,6.0,Orange Bowl (Hard Rock Stadium - Miami Gardens Florida)
-2016-12-30,2016,R,,michigan,florida-state,N,32,33,0,6.0,10.0,Orange Bowl (Hard Rock Stadium - Miami Gardens Florida)
-2016-12-30,2016,R,,georgia,texas-christian,N,31,23,0,,,Liberty Bowl (Liberty Bowl Memorial Stadium - Memphis Tennessee)
-2016-12-30,2016,R,,texas-christian,georgia,N,23,31,0,,,Liberty Bowl (Liberty Bowl Memorial Stadium - Memphis Tennessee)
-2016-12-30,2016,R,,stanford,north-carolina,N,25,23,0,16.0,,Sun Bowl (Sun Bowl Stadium - El Paso Texas)
-2016-12-30,2016,R,,north-carolina,stanford,N,23,25,0,,16.0,Sun Bowl (Sun Bowl Stadium - El Paso Texas)
-2016-12-30,2016,R,,tennessee,nebraska,N,38,24,0,,24.0,Music City Bowl (Nissan Stadium - Nashville Tennessee)
-2016-12-30,2016,R,,nebraska,tennessee,N,24,38,0,24.0,,Music City Bowl (Nissan Stadium - Nashville Tennessee)
-2016-12-31,2016,R,,alabama,washington,N,24,7,0,1.0,4.0,Peach Bowl (Georgia Dome - Atlanta Georgia)
-2016-12-31,2016,R,,washington,alabama,N,7,24,0,4.0,1.0,Peach Bowl (Georgia Dome - Atlanta Georgia)
-2016-12-31,2016,R,,clemson,ohio-state,N,31,0,0,3.0,2.0,Fiesta Bowl (University of Phoenix Stadium - Glendale Arizona)
-2016-12-31,2016,R,,ohio-state,clemson,N,0,31,0,2.0,3.0,Fiesta Bowl (University of Phoenix Stadium - Glendale Arizona)
-2016-12-31,2016,R,,georgia-tech,kentucky,N,33,18,0,,,TaxSlayer Bowl (EverBank Field - Jacksonville Florida)
-2016-12-31,2016,R,,kentucky,georgia-tech,N,18,33,0,,,TaxSlayer Bowl (EverBank Field - Jacksonville Florida)
-2016-12-31,2016,R,,louisiana-state,louisville,N,29,9,0,19.0,15.0,Citrus Bowl (Camping World Stadium - Orlando Florida)
-2016-12-31,2016,R,,louisville,louisiana-state,N,9,29,0,15.0,19.0,Citrus Bowl (Camping World Stadium - Orlando Florida)
-2017-01-02,2016,R,,florida,iowa,N,30,3,0,20.0,21.0,Outback Bowl (Raymond James Stadium - Tampa Florida)
-2017-01-02,2016,R,,iowa,florida,N,3,30,0,21.0,20.0,Outback Bowl (Raymond James Stadium - Tampa Florida)
-2017-01-02,2016,R,,oklahoma,auburn,N,35,19,0,7.0,17.0,Sugar Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
-2017-01-02,2016,R,,auburn,oklahoma,N,19,35,0,17.0,7.0,Sugar Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
-2017-01-02,2016,R,,southern-california,penn-state,N,52,49,0,9.0,5.0,Rose Bowl (Pasadena CA)
-2017-01-02,2016,R,,penn-state,southern-california,N,49,52,0,5.0,9.0,Rose Bowl (Pasadena CA)
-2017-01-02,2016,R,,wisconsin,western-michigan,N,24,16,0,8.0,12.0,Cotton Bowl (AT&T Stadium - Arlington Texas)
-2017-01-02,2016,R,,western-michigan,wisconsin,N,16,24,0,12.0,8.0,Cotton Bowl (AT&T Stadium - Arlington Texas)
-2017-01-09,2016,R,CCG,clemson,alabama,N,35,31,0,3.0,1.0,College Football Playoff National Championship (Raymond James Stadium - Tampa Florida)
-2017-01-09,2016,R,CCG,alabama,clemson,N,31,35,0,1.0,3.0,College Football Playoff National Championship (Raymond James Stadium - Tampa Florida)
+2016-12-17,2016,R,BOWL,appalachian-state,toledo,N,31,28,0,,,Raycom Media Camellia Bowl (Montgomery AL)
+2016-12-17,2016,R,BOWL,toledo,appalachian-state,N,28,31,0,,,Raycom Media Camellia Bowl (Montgomery AL)
+2016-12-17,2016,R,BOWL,arkansas-state,central-florida,N,31,13,0,,,Cure Bowl (Camping World Stadium - Orlando Florida)
+2016-12-17,2016,R,BOWL,central-florida,arkansas-state,N,13,31,0,,,Cure Bowl (Camping World Stadium - Orlando Florida)
+2016-12-17,2016,R,BOWL,new-mexico,texas-san-antonio,N,23,20,0,,,New Mexico Bowl (University Stadium - Albuquerque New Mexico)
+2016-12-17,2016,R,BOWL,texas-san-antonio,new-mexico,N,20,23,0,,,New Mexico Bowl (University Stadium - Albuquerque New Mexico)
+2016-12-17,2016,R,BOWL,san-diego-state,houston,N,34,10,0,,,Las Vegas Bowl (Sam Boyd Stadium - Las Vegas Nevada)
+2016-12-17,2016,R,BOWL,houston,san-diego-state,N,10,34,0,,,Las Vegas Bowl (Sam Boyd Stadium - Las Vegas Nevada)
+2016-12-17,2016,R,BOWL,southern-mississippi,louisiana,N,28,21,0,,,New Orleans Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
+2016-12-17,2016,R,BOWL,louisiana,southern-mississippi,N,21,28,0,,,New Orleans Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
+2016-12-19,2016,R,BOWL,tulsa,central-michigan,N,55,10,0,,,Miami Beach Bowl (Marlins Park - Miami Florida)
+2016-12-19,2016,R,BOWL,central-michigan,tulsa,N,10,55,0,,,Miami Beach Bowl (Marlins Park - Miami Florida)
+2016-12-20,2016,R,BOWL,western-kentucky,memphis,N,51,31,0,,,Boca Raton Bowl (FAU Football Stadium - Boca Raton Florida)
+2016-12-20,2016,R,BOWL,memphis,western-kentucky,N,31,51,0,,,Boca Raton Bowl (FAU Football Stadium - Boca Raton Florida)
+2016-12-21,2016,R,BOWL,brigham-young,wyoming,N,24,21,0,,,Poinsettia Bowl (Qualcomm Stadium - San Diego California)
+2016-12-21,2016,R,BOWL,wyoming,brigham-young,N,21,24,0,,,Poinsettia Bowl (Qualcomm Stadium - San Diego California)
+2016-12-22,2016,R,BOWL,idaho,colorado-state,N,61,50,0,,,Famous Idaho Potato Bowl (Albertsons Stadium - Boise Idaho)
+2016-12-22,2016,R,BOWL,colorado-state,idaho,N,50,61,0,,,Famous Idaho Potato Bowl (Albertsons Stadium - Boise Idaho)
+2016-12-23,2016,R,BOWL,louisiana-tech,navy,N,48,45,0,,,Armed Forces Bowl (Amon G. Carter Stadium - Fort Worth Texas)
+2016-12-23,2016,R,BOWL,navy,louisiana-tech,N,45,48,0,,,Armed Forces Bowl (Amon G. Carter Stadium - Fort Worth Texas)
+2016-12-23,2016,R,BOWL,old-dominion,eastern-michigan,N,24,20,0,,,Bahamas Bowl (Thomas A. Robinson Stadium - Nassau Bahamas)
+2016-12-23,2016,R,BOWL,eastern-michigan,old-dominion,N,20,24,0,,,Bahamas Bowl (Thomas A. Robinson Stadium - Nassau Bahamas)
+2016-12-23,2016,R,BOWL,troy,ohio,N,28,23,0,,,Dollar General Bowl (Ladd-Peebles Stadium - Mobile Alabama)
+2016-12-23,2016,R,BOWL,ohio,troy,N,23,28,0,,,Dollar General Bowl (Ladd-Peebles Stadium - Mobile Alabama)
+2016-12-24,2016,R,BOWL,hawaii,middle-tennessee-state,N,52,35,0,,,Hawaii Bowl (Hawaiian Tel Federal Credit Union Field at Aloha Stadium - Honolulu Hawaii)
+2016-12-24,2016,R,BOWL,middle-tennessee-state,hawaii,N,35,52,0,,,Hawaii Bowl (Hawaiian Tel Federal Credit Union Field at Aloha Stadium - Honolulu Hawaii)
+2016-12-26,2016,R,BOWL,boston-college,maryland,N,36,30,0,,,Quick Lane Bowl (Ford Field - Detroit Michigan)
+2016-12-26,2016,R,BOWL,maryland,boston-college,N,30,36,0,,,Quick Lane Bowl (Ford Field - Detroit Michigan)
+2016-12-26,2016,R,BOWL,mississippi-state,miami-oh,N,17,16,0,,,St. Petersburg Bowl (Tropicana Field - St. Petersburg Florida)
+2016-12-26,2016,R,BOWL,miami-oh,mississippi-state,N,16,17,0,,,St. Petersburg Bowl (Tropicana Field - St. Petersburg Florida)
+2016-12-26,2016,R,BOWL,north-carolina-state,vanderbilt,N,41,17,0,,,Independence Bowl (Independence Stadium - Shreveport Louisiana)
+2016-12-26,2016,R,BOWL,vanderbilt,north-carolina-state,N,17,41,0,,,Independence Bowl (Independence Stadium - Shreveport Louisiana)
+2016-12-27,2016,R,BOWL,army,north-texas,N,38,31,0,,,Heart of Dallas Bowl (Dallas TX)
+2016-12-27,2016,R,BOWL,north-texas,army,N,31,38,0,,,Heart of Dallas Bowl (Dallas TX)
+2016-12-27,2016,R,BOWL,baylor,boise-state,N,31,12,0,,,Cactus Bowl (Chase Field - Phoenix Arizona)
+2016-12-27,2016,R,BOWL,boise-state,baylor,N,12,31,0,,,Cactus Bowl (Chase Field - Phoenix Arizona)
+2016-12-27,2016,R,BOWL,minnesota,washington-state,N,17,12,0,,,Holiday Bowl (Qualcomm Stadium - San Diego California)
+2016-12-27,2016,R,BOWL,washington-state,minnesota,N,12,17,0,,,Holiday Bowl (Qualcomm Stadium - San Diego California)
+2016-12-27,2016,R,BOWL,wake-forest,temple,N,34,26,0,,23.0,Military Bowl (Navy Marine Corps Memorial Stadium - Annapolis Maryland)
+2016-12-27,2016,R,BOWL,temple,wake-forest,N,26,34,0,23.0,,Military Bowl (Navy Marine Corps Memorial Stadium - Annapolis Maryland)
+2016-12-28,2016,R,BOWL,kansas-state,texas-a-m,N,33,28,0,,,Texas Bowl (NRG Stadium - Houston Texas)
+2016-12-28,2016,R,BOWL,texas-a-m,kansas-state,N,28,33,0,,,Texas Bowl (NRG Stadium - Houston Texas)
+2016-12-28,2016,R,BOWL,miami-fl,west-virginia,N,31,14,0,,14.0,Russell Athletic Bowl (Camping World Stadium - Orlando Florida)
+2016-12-28,2016,R,BOWL,west-virginia,miami-fl,N,14,31,0,14.0,,Russell Athletic Bowl (Camping World Stadium - Orlando Florida)
+2016-12-28,2016,R,BOWL,northwestern,pittsburgh,N,31,24,0,,22.0,Pinstripe Bowl (Yankee Stadium - Bronx New York)
+2016-12-28,2016,R,BOWL,pittsburgh,northwestern,N,24,31,0,22.0,,Pinstripe Bowl (Yankee Stadium - Bronx New York)
+2016-12-28,2016,R,BOWL,utah,indiana,N,26,24,0,,,Foster Farms Bowl (Levi's Stadium - Santa Clara California)
+2016-12-28,2016,R,BOWL,indiana,utah,N,24,26,0,,,Foster Farms Bowl (Levi's Stadium - Santa Clara California)
+2016-12-29,2016,R,BOWL,oklahoma-state,colorado,N,38,8,0,13.0,11.0,Alamo Bowl (Alamodome - San Antonio Texas)
+2016-12-29,2016,R,BOWL,colorado,oklahoma-state,N,8,38,0,11.0,13.0,Alamo Bowl (Alamodome - San Antonio Texas)
+2016-12-29,2016,R,BOWL,south-florida,south-carolina,N,46,39,0,25.0,,Birmingham Bowl (Legion Field - Birmingham Alabama)
+2016-12-29,2016,R,BOWL,south-carolina,south-florida,N,39,46,0,,25.0,Birmingham Bowl (Legion Field - Birmingham Alabama)
+2016-12-29,2016,R,BOWL,virginia-tech,arkansas,N,35,24,0,18.0,,Belk Bowl (Bank of America Stadium - Charlotte North Carolina)
+2016-12-29,2016,R,BOWL,arkansas,virginia-tech,N,24,35,0,,18.0,Belk Bowl (Bank of America Stadium - Charlotte North Carolina)
+2016-12-30,2016,R,BOWL,air-force,south-alabama,N,45,21,0,,,Arizona Bowl (Arizona Stadium - Tucson Arizona)
+2016-12-30,2016,R,BOWL,south-alabama,air-force,N,21,45,0,,,Arizona Bowl (Arizona Stadium - Tucson Arizona)
+2016-12-30,2016,R,BOWL,florida-state,michigan,N,33,32,0,10.0,6.0,Orange Bowl (Hard Rock Stadium - Miami Gardens Florida)
+2016-12-30,2016,R,BOWL,michigan,florida-state,N,32,33,0,6.0,10.0,Orange Bowl (Hard Rock Stadium - Miami Gardens Florida)
+2016-12-30,2016,R,BOWL,georgia,texas-christian,N,31,23,0,,,Liberty Bowl (Liberty Bowl Memorial Stadium - Memphis Tennessee)
+2016-12-30,2016,R,BOWL,texas-christian,georgia,N,23,31,0,,,Liberty Bowl (Liberty Bowl Memorial Stadium - Memphis Tennessee)
+2016-12-30,2016,R,BOWL,stanford,north-carolina,N,25,23,0,16.0,,Sun Bowl (Sun Bowl Stadium - El Paso Texas)
+2016-12-30,2016,R,BOWL,north-carolina,stanford,N,23,25,0,,16.0,Sun Bowl (Sun Bowl Stadium - El Paso Texas)
+2016-12-30,2016,R,BOWL,tennessee,nebraska,N,38,24,0,,24.0,Music City Bowl (Nissan Stadium - Nashville Tennessee)
+2016-12-30,2016,R,BOWL,nebraska,tennessee,N,24,38,0,24.0,,Music City Bowl (Nissan Stadium - Nashville Tennessee)
+2016-12-31,2016,R,CFP-SF,alabama,washington,N,24,7,0,1.0,4.0,Peach Bowl (Georgia Dome - Atlanta Georgia)
+2016-12-31,2016,R,CFP-SF,washington,alabama,N,7,24,0,4.0,1.0,Peach Bowl (Georgia Dome - Atlanta Georgia)
+2016-12-31,2016,R,CFP-SF,clemson,ohio-state,N,31,0,0,3.0,2.0,Fiesta Bowl (University of Phoenix Stadium - Glendale Arizona)
+2016-12-31,2016,R,CFP-SF,ohio-state,clemson,N,0,31,0,2.0,3.0,Fiesta Bowl (University of Phoenix Stadium - Glendale Arizona)
+2016-12-31,2016,R,BOWL,georgia-tech,kentucky,N,33,18,0,,,TaxSlayer Bowl (EverBank Field - Jacksonville Florida)
+2016-12-31,2016,R,BOWL,kentucky,georgia-tech,N,18,33,0,,,TaxSlayer Bowl (EverBank Field - Jacksonville Florida)
+2016-12-31,2016,R,BOWL,louisiana-state,louisville,N,29,9,0,19.0,15.0,Citrus Bowl (Camping World Stadium - Orlando Florida)
+2016-12-31,2016,R,BOWL,louisville,louisiana-state,N,9,29,0,15.0,19.0,Citrus Bowl (Camping World Stadium - Orlando Florida)
+2017-01-02,2016,R,BOWL,florida,iowa,N,30,3,0,20.0,21.0,Outback Bowl (Raymond James Stadium - Tampa Florida)
+2017-01-02,2016,R,BOWL,iowa,florida,N,3,30,0,21.0,20.0,Outback Bowl (Raymond James Stadium - Tampa Florida)
+2017-01-02,2016,R,BOWL,oklahoma,auburn,N,35,19,0,7.0,17.0,Sugar Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
+2017-01-02,2016,R,BOWL,auburn,oklahoma,N,19,35,0,17.0,7.0,Sugar Bowl (Mercedes-Benz Superdome - New Orleans Louisiana)
+2017-01-02,2016,R,BOWL,southern-california,penn-state,N,52,49,0,9.0,5.0,Rose Bowl (Pasadena CA)
+2017-01-02,2016,R,BOWL,penn-state,southern-california,N,49,52,0,5.0,9.0,Rose Bowl (Pasadena CA)
+2017-01-02,2016,R,BOWL,wisconsin,western-michigan,N,24,16,0,8.0,12.0,Cotton Bowl (AT&T Stadium - Arlington Texas)
+2017-01-02,2016,R,BOWL,western-michigan,wisconsin,N,16,24,0,12.0,8.0,Cotton Bowl (AT&T Stadium - Arlington Texas)
+2017-01-09,2016,R,NC,clemson,alabama,N,35,31,0,3.0,1.0,College Football Playoff National Championship (Raymond James Stadium - Tampa Florida)
+2017-01-09,2016,R,NC,alabama,clemson,N,31,35,0,1.0,3.0,College Football Playoff National Championship (Raymond James Stadium - Tampa Florida)
