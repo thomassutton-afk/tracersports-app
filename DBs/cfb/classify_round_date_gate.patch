@@ -1,0 +1,83 @@
+diff --git a/CFB_Elo/normalize_sr_games.py b/CFB_Elo/normalize_sr_games.py
+index 0cffc58..471fb03 100644
+--- a/CFB_Elo/normalize_sr_games.py
++++ b/CFB_Elo/normalize_sr_games.py
+@@ -134,35 +134,63 @@ CFP_SEMIFINAL_PAIR = {
+ NY6_BOWLS = ("Rose", "Sugar", "Orange", "Cotton", "Fiesta", "Peach")
+ 
+ 
+-def classify_round(notes: str, season: int) -> "str | None":
++def classify_round(notes: str, season: int, date) -> "str | None":
+     """PHASE 2 postseason round classification - see module docstring
+     for the full era-by-era rationale. Order matters: NC must be ruled
+     out before the CCG check, since both "BCS Championship" and
+     "College Football Playoff National Championship" contain the word
+-    "Championship" too."""
++    "Championship" too.
++
++    Every "___ Bowl"-style check below is a plain substring/regex
++    match against Sports-Reference's free-text Notes field, which
++    ALSO carries venue names for plenty of regular-season games - and
++    several stadiums are themselves named "___ Bowl" (Memphis's
++    Liberty Bowl Memorial Stadium, UTEP's Sun Bowl Stadium, UCLA's
++    Rose Bowl), and one annual regular-season rivalry game
++    (Texas-Oklahoma) is played every October at the Cotton Bowl in
++    Dallas. Confirmed against 104 such false positives across
++    1996-2025 (including the SAME collision independently breaking
++    the CFP-SF embedded-bowl-name check in 2015 and 2017, when the
++    Cotton Bowl/Rose Bowl happened to be that year's semifinal host).
++    Real postseason games only ever happen from December through the
++    following June (see season_for_date's own Dec/Jan year-boundary
++    convention, reused here) - so every "___ Bowl" check is gated on
++    that window. Conference championship games are NOT gated the same
++    way: "Championship" never collides with a venue name (confirmed:
++    zero false positives across 30 seasons), and Championship Saturday
++    itself sometimes falls on November 30 (MAC/Pac-12, seen in 2001,
++    2006, 2012, 2018) - gating it to December would incorrectly drop
++    those. Widening the "___ Bowl" window into late November to catch
++    those same six games would reintroduce the venue-name false
++    positives (Memphis/UTEP/Toledo/UCLA all play regular-season home
++    games that late too) - confirmed 12 such collisions in the Nov
++    20-30 range alone. So the two checks need different gates, not one
++    shared cutoff.
++    """
+     if not notes:
+         return None
++    in_bowl_window = date.month == 12 or date.month <= 6
+ 
+     if "BCS Championship" in notes or "College Football Playoff National Championship" in notes:
+         return "NC"
+     embedded_host = BCS_EMBEDDED_TITLE_BOWL.get(season)
+-    if embedded_host and f"{embedded_host} Bowl" in notes:
++    if embedded_host and in_bowl_window and f"{embedded_host} Bowl" in notes:
+         return "NC"
+ 
+     if "College Football Playoff - First Round" in notes:
+         return "CFP-R1"
+ 
+     sf_pair = CFP_SEMIFINAL_PAIR.get(season)
+-    if sf_pair and any(f"{b} Bowl" in notes for b in sf_pair):
++    if sf_pair and in_bowl_window and any(f"{b} Bowl" in notes for b in sf_pair):
+         return "CFP-SF"
+ 
+-    if season >= 2024 and any(f"{b} Bowl" in notes for b in NY6_BOWLS):
++    if season >= 2024 and in_bowl_window and any(f"{b} Bowl" in notes for b in NY6_BOWLS):
+         return "CFP-QF"
+ 
+     if re.search(r"\bChampionship\b", notes):
+         return "CCG"
+ 
+-    if re.search(r"\bBowl\b", notes):
++    if in_bowl_window and re.search(r"\bBowl\b", notes):
+         return "BOWL"
+ 
+     return None
+@@ -337,7 +365,7 @@ def normalize(path: str) -> pd.DataFrame:
+         # PHASE 2 POSTSEASON (see this module's docstring and
+         # classify_round() above for the full era-by-era rationale).
+         notes = str(r["Notes"]).strip() if "Notes" in df.columns and pd.notna(r["Notes"]) else ""
+-        round_ = classify_round(notes, season)
++        round_ = classify_round(notes, season, r["Date"])
+ 
+         rows.append(dict(
+             Date=date_str, Season=season, Type="R", Round=round_,
