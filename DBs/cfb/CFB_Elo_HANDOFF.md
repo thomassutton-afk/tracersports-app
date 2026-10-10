@@ -1,13 +1,16 @@
 # CFB_Elo — Project Handoff
 
 **Status as of this handoff:** Core Elo engine is solid, data-driven-tuned,
-and (as of this session) has real postseason-round classification instead
-of the earlier CCG-only version. 30 historical seasons (1996–2025) plus a
-partial 2026 season are loaded and validated. **Not yet ready to treat like
-the live NBA/NFL/WNBA site sections** — the current-season prediction
-pipeline has a real bug (see §10, item 1), the postseason multipliers are
-still untuned no-ops, and there is zero integration outside the `CFB_Elo/`
-folder itself (no Supabase export, no frontend awareness).
+has real postseason-round classification, and now correctly handles an
+in-progress current season (unplayed games route to `schedule` instead of
+vanishing). **Migrated into `DBs/cfb/`** to match the site's `nba`/`nfl`/`wnba`
+layout — committed and pushed, confirmed working against the real database.
+Season projections (`simulate_season.py`) are ported and validated. 30
+historical seasons (1996–2025) plus an in-progress 2026 season are loaded.
+**Still not on the live site** — `export_to_supabase.py` has zero CFB
+awareness, `lib/sports/` has no `cfb/` config, and closing that gap is a real
+scoping project in its own right, not a quick patch (see §10, item 6, which
+now has a concrete breakdown of what it actually involves).
 
 This document is meant to let a fresh conversation (or future-you) pick up
 exactly where this one left off, without re-deriving any of the design
@@ -25,20 +28,23 @@ on GitHub, feeding a site called TRACER Sports). It computes weekly Elo
 ratings for every FBS program, going back to the 1996 season, from
 Sports-Reference schedule/standings exports.
 
-Repo: `github.com/thomassutton-afk/tracersports-app`, in the `CFB_Elo/`
-subfolder (a separate Python/SQLite data-engineering project, distinct from
-the site's Next.js/Supabase frontend). The site itself has `DBs/nba`,
-`DBs/nfl`, `DBs/wnba` following a consistent pattern — `CFB_Elo` still lives
-at the repo root, not under `DBs/`, and hasn't been migrated in (see §10,
-item 5).
+Repo: `github.com/thomassutton-afk/tracersports-app`, now in `DBs/cfb/`
+(migrated from a root-level `CFB_Elo/` this session — a separate
+Python/SQLite data-engineering project, distinct from the site's
+Next.js/Supabase frontend, but now following the same layout convention as
+`DBs/nba`, `DBs/nfl`, `DBs/wnba`). The database itself is `DBs/cfb_elo.db`
+(one level up from the scripts, sibling to `nba_elo.db`/`nfl_elo.db`/
+`wnba_elo.db`) — every script's `DB_PATH` resolves via
+`os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "cfb_elo.db")`,
+matching the sibling leagues' convention exactly. A few structural gaps
+remain beyond the move itself — see §10, item 5.
 
 ## 2. Current data state
 
-- **30 full historical seasons (1996–2025), plus a partial 2026 season**
-  loaded and in progress. ~23,987 completed games through 2025, plus 260
-  completed 2026 games as of this handoff (630 remaining 2026 games are
-  currently NOT in the pipeline at all — see §10, item 1, this is a real bug,
-  not an intentional gap).
+- **30 full historical seasons (1996–2025), plus an in-progress 2026 season**
+  — 24,247 total games in the database. 260 completed 2026 games plus 630
+  correctly-scheduled upcoming 2026 games (fixed this session — see below and
+  §10, item 1, now resolved).
 - Both rating variants (Echo = continuous carryover, Pulse = full reset each
   season) computed and stored in `cfb_elo.db`.
 - Conference membership (`team_conference_history`) and FBS status
@@ -63,6 +69,32 @@ item 5).
     just a code fix) to actually take effect in `cfb_elo.db` — done this
     session. If you ever see game counts change unexpectedly after a
     reload, check this section before assuming something's broken.
+- **New this session: fixed the unplayed-games/schedule bug (former §10 item
+  1).** `normalize_sr_games.py` was unconditionally dropping every scoreless
+  row. Now a scoreless row's DATE decides its fate: today-or-future (within a
+  small buffer for a same-day result not yet posted) → kept and routed to
+  `schedule` for prediction; further in the past → still dropped as a
+  genuine postponement, same as before. Validated end-to-end against the
+  real 630 upcoming 2026 games — all correctly landed in `schedule`, not
+  `games`. See §5e for a second, related classification fix found and
+  fixed the same session.
+- **New this session: found and fixed a real classification bug behind the
+  BOWL-accuracy gap (former §10 item 3) — see §5e and §8.** Not a modeling
+  gap; `classify_round()`'s bare `"Bowl"` regex match was catching venue
+  names (Memphis's Liberty Bowl Memorial Stadium, UTEP's Sun Bowl Stadium,
+  UCLA's Rose Bowl, and the annual regular-season Texas-Oklahoma game at the
+  Cotton Bowl), misclassifying 104-113 ordinary regular-season games as
+  postseason across 1996-2025 depending on exactly how it's counted. Fixed
+  with a December-June date gate on the `"___ Bowl"`-based checks
+  specifically (NOT on the `"Championship"`/CCG check, which needed to stay
+  open through Nov 30 for years when Championship Saturday falls there, and
+  never had this collision risk anyway). Re-ingested and confirmed: the
+  corrected BOWL accuracy is actually a bit LOWER (60.1-60.2%, was
+  61.2-61.9%) since the misclassified games had been propping the number up
+  — the real postseason gap is slightly worse than originally reported, but
+  now trustworthy. CFP-SF accuracy improved substantially (was suffering the
+  same venue-collision bug via a different code path) once its false
+  positives were removed.
 
 ## 3. File-by-file summary
 
@@ -71,18 +103,20 @@ item 5).
 | `db.py` | SQLite schema + all data-access helpers. See §4 for the CFB-specific schema additions. |
 | `engine.py` | The actual Elo math (`EloEngine`, weekly-batch replay). See §5 for the season-entry/FCS/postseason mechanics — these are the parts that differ meaningfully from the NFL version. |
 | `rebuild.py` | Replays all games from `games` into `ratings`, from scratch, for one rating variant. Owns `apply_season_entry()` — the actual implementation of the conference-average algorithm (engine.py just executes what this hands it). |
-| `add_season.py` | Loads one season's normalized CSV into `games`/`schedule`, registers new teams, triggers a full rebuild, writes schedule predictions. **Its own docstring's "postseason: Round=None for bowls" paragraph is now stale** — fix this next time you're in the file, see §10. |
+| `add_season.py` | Loads one season's normalized CSV into `games`/`schedule`, registers new teams, triggers a full rebuild, writes schedule predictions. |
 | `franchise.py` | `rename` (cosmetic name fix), `realign` (conference change), `revive` (fold+revival reset). No `relocate` — CFB programs don't physically relocate the way NFL/NBA franchises do. |
-| `normalize_sr_games.py` | Converts a raw Sports-Reference schedule CSV into the standardized per-team-row shape `add_season.py` expects. Handles AP rank parsing, team-code slugification, season-year logic for bowl games, source-data dedup, and full postseason `Round` classification (see §5e). **Known bug:** unconditionally drops any row with no final score — this was fine when the assumption was "only completed historical seasons get loaded" but breaks for an in-progress current season, where most unscored rows are real future games, not postponements. See §10, item 1. |
-| `load_conference_membership.py` | Loads one season's Standings CSV into `team_conference_history` + `fbs_membership`. Triggers a full rebuild (FBS status now affects rating math, not just display). **Must be run for a season AFTER `add_season.py` has loaded that season's games** — otherwise every team in it silently scores as FCS (fixed rating, no persisted `ratings` row, invisible in standings) until this catches up. Confirmed directly this session loading 2026: 260 games loaded fine, but standings came back completely empty until this was run. |
+| `normalize_sr_games.py` | Converts a raw Sports-Reference schedule CSV into the standardized per-team-row shape `add_season.py` expects. Handles AP rank parsing, team-code slugification, season-year logic for bowl games, source-data dedup, and full postseason `Round` classification (see §5e). Unplayed-game routing and the venue-name-collision fix (both former known bugs) are fixed this session — see §2 and §5e. |
+| `load_conference_membership.py` | Loads one season's Standings CSV into `team_conference_history` + `fbs_membership`. Triggers a full rebuild (FBS status now affects rating math, not just display). **Must be run for a season AFTER `add_season.py` has loaded that season's games** — otherwise every team in it silently scores as FCS (fixed rating, no persisted `ratings` row, invisible in standings) until this catches up. Confirmed directly loading 2026: games loaded fine, but standings came back completely empty until this was run. Re-run for 2026 this session with the full real Standings export: 0 unresolved teams, no `KNOWN_ALIASES` gaps. |
 | `cfb_tune_engine.py` | Coordinate-ascent tuner over `alpha`/`kmax`/`hfa`/`fcs_rating` for one window, using the real engine (not a reimplementation). |
 | `cfb_tune_fcs_rating.py` | Separate era-block tuning for `fcs_rating` specifically (too thin a sample to tune on the same rolling cadence as the others). |
-| `cfb_build_param_schedule.py` | **New since the last handoff.** Builds the actual `param_schedule.json` (see §7) via a rolling 10-year walk-forward search, seeded from one continuous engine's real snapshotted state at each window boundary (not a fresh flat restart per window) — genuinely equivalent to what production's continuous replay does. Heavy compute job (30 seasons × coordinate-ascent search × real multi-season replay per candidate) — a "kick off and let it churn" script. |
-| `cfb_accuracy_report.py` | **New since the last handoff.** Accuracy/calibration report: overall + regular-season + postseason (by round) accuracy/Brier/log-loss, by-season and by-month breakdowns, calibration table, biggest upsets, worst predictions. See §9 for current output. |
-| `rebuild_ratings_only.py` | **New since the last handoff.** Thin wrapper that just re-runs `rebuild.rebuild_ratings()` for both variants against an existing `cfb_elo.db` without touching `games` — useful after a params or engine change that doesn't need a re-ingest. |
+| `cfb_build_param_schedule.py` | Builds the actual `param_schedule.json` (see §7) via a rolling 10-year walk-forward search, seeded from one continuous engine's real snapshotted state at each window boundary (not a fresh flat restart per window) — genuinely equivalent to what production's continuous replay does. Heavy compute job (30 seasons × coordinate-ascent search × real multi-season replay per candidate) — a "kick off and let it churn" script. |
+| `cfb_accuracy_report.py` | Accuracy/calibration report: overall + regular-season + postseason (by round) accuracy/Brier/log-loss, by-season and by-month breakdowns, calibration table, biggest upsets, worst predictions. **Naming doesn't match the sibling leagues' `report.py` convention** — see §10, item 5. See §8 for current output (partially refreshed this session — see that section's note on what still needs a full re-run). |
+| `rebuild_ratings_only.py` | Thin wrapper that just re-runs `rebuild.rebuild_ratings()` for both variants against an existing `cfb_elo.db` without touching `games` — useful after a params or engine change that doesn't need a re-ingest. |
+| `reingest_phase2.py` | Backs up `cfb_elo.db`, re-normalizes and reloads every season 1996-2026 through the current `normalize_sr_games.py`/`classify_round()`, then rebuilds ratings for both variants. The right tool whenever a classification or normalization fix needs to retroactively apply to already-loaded history — used twice this session (the unplayed-games fix and the venue-collision fix each needed a full re-ingest, not just a code change, to take effect in `cfb_elo.db`). |
+| `test_phase2.py` | Sanity-checks the postseason classification against a copy of the real db (never touches `cfb_elo.db` directly). |
 | `cfb_worst_season_endings.py` | Analysis script — not part of the core pipeline. |
-| `predict.py` | Predicts upcoming/unplayed games from current ratings. Has one known simplification — see §10. |
-| `simulate_season.py` | **Does not exist yet.** Season Monte Carlo projections are a no-op in `add_season.py` (prints a message, skips gracefully) until this is ported from NFL_Elo. |
+| `predict.py` | Predicts upcoming/unplayed games from current ratings. Has one known simplification — see §10, item 9 (deferred by deliberate decision this session, not urgent). |
+| `simulate_season.py` | **New this session** — ported from `TRACERsports/DBs/nfl/simulate_season.py`. Monte Carlo season projection (remaining schedule simulated many times from current ratings). One real CFB-specific addition beyond a straight port: remaining games need `home_conf`/`away_conf`/`home_div`/`away_div`/`home_is_fbs`/`away_is_fbs` annotated (via `rebuild._annotate_conferences()`) before `process_week()`/`preview_matchup()` can use them correctly — the NFL original doesn't need this. Also filters final projections to FBS teams only, since a same-season FCS "buy game" opponent otherwise gets a meaningless fragment-of-a-season win projection. Validated against the real 2026 season (1000 trials, 630 remaining games) — sane output across all ~136 teams, no errors. |
 
 ## 4. Schema additions beyond NFL_Elo
 
@@ -203,12 +237,13 @@ division-tier value). `div_game` is still computed and stored on every
 `ratings` row for potential future display use — it just no longer moves the
 K-multiplier.
 
-### 5e. Postseason — full classification done this session (values still untuned)
+### 5e. Postseason — full classification done, values still untuned
 
 **Round now takes one of:** `"CCG"`, `"NC"`, `"CFP-R1"`, `"CFP-QF"`,
 `"CFP-SF"`, `"BOWL"`, or `None` (regular season). Classification happens in
-`normalize_sr_games.classify_round(notes, season)`, checked in this order
-(order matters — see the NC/CCG note below):
+`normalize_sr_games.classify_round(notes, season, date)` (the `date` param
+was added this session — see the venue-collision fix below), checked in this
+order (order matters — see the NC/CCG note below):
 
 1. **`NC`** (national championship) — explicit in `Notes` from 2006 onward
    (`"BCS Championship"` 2006–2013, `"College Football Playoff National
@@ -245,9 +280,37 @@ K-multiplier.
    the two teams' own AP ranks at the multiplier level — see below.
 7. `None` — regular season.
 
-**Two multiplier mechanisms apply these, both new this session, both firing
-regardless of `type`** (every CFB game, postseason included, is still
-`type='R'` by design — see `normalize_sr_games.py`'s docstring):
+**New this session — every `"___ Bowl"`-based check above (NC's
+embedded-title case, CFP-SF, CFP-QF, and plain BOWL) is gated to a
+December-through-June window** (`date.month == 12 or date.month <= 6`,
+reusing `season_for_date()`'s own year-boundary convention). Root cause:
+Sports-Reference's `Notes` field also carries venue names for ordinary
+regular-season games, and several stadiums are themselves named `"___ Bowl"`
+— Memphis's Liberty Bowl Memorial Stadium, UTEP's Sun Bowl Stadium, Toledo's
+Glass Bowl, UCLA's Rose Bowl — plus the annual regular-season
+Texas-Oklahoma game, played every October at the Cotton Bowl in Dallas.
+Without the date gate, `"\bBowl\b"` matches those venue names directly, and
+the CFP-SF semifinal-pair check had the *identical* collision independently
+(2015's semifinal host was the Cotton Bowl, 2017's was the Rose Bowl — every
+UCLA or Texas-OU regular-season game those years was already being
+misclassified as `CFP-SF` before this fix). Confirmed and fixed: 113 real
+false positives across 1996-2025, re-ingested via `reingest_phase2.py`.
+
+**The CCG (`"Championship"`) check is deliberately NOT gated the same way —
+this needed its own, different reasoning, not just a wider version of the
+same date window.** Two things ruled out a shared gate: (1) `"Championship"`
+has zero observed collision risk with any venue name across 30 years of
+data, so it doesn't need a gate at all; (2) Championship Saturday itself
+sometimes falls on **November 30** (confirmed: MAC/Pac-12 in 2001, 2006,
+2012, 2018) — gating CCG to December would have incorrectly dropped those,
+and widening the BOWL-side gate into late November to cover them instead
+would reintroduce the venue-collision bug (Memphis/UTEP/Toledo/UCLA all play
+real regular-season home games that late too — confirmed 12 such collisions
+checking just the Nov 20-30 window).
+
+**Two multiplier mechanisms apply these, both firing regardless of `type`**
+(every CFB game, postseason included, is still `type='R'` by design — see
+`normalize_sr_games.py`'s docstring):
 
 - **`_postseason_mult()` / `postseason_round_mult`** — a CCG-style,
   type-agnostic parallel to NFL_Elo's inherited `playoff_round_mult`. This
@@ -269,8 +332,10 @@ regardless of `type`** (every CFB game, postseason included, is still
 **All of `postseason_round_mult`, `bowl_rank_bonus_max`, and
 `bowl_one_ranked_bonus_max` are still at their no-op defaults** (`{}` /
 `0.0`) — same "untuned placeholder" convention as `conf_championship_mult`
-always has been. **Classification is done; the actual multiplier VALUES are
-not tuned yet.** This is the top item in §10.
+always has been. **Classification is done and now trustworthy (the
+venue-collision bug above is fixed); the actual multiplier VALUES remain
+untuned by deliberate decision** — see §10, item 2 for the reasoning on why
+this is being left alone for now rather than tuned opportunistically.
 
 **Source-data dedup** (`normalize_sr_games.dedupe_raw_rows()`) runs
 immediately before classification, for a specific reason: `add_season.py`'s
@@ -328,45 +393,53 @@ baseline's 0.5176) is superseded by this full schedule — no need to keep
 re-deriving that one-window proof of concept, it's been generalized into
 the real cadence now.
 
-## 8. Accuracy snapshot (from `cfb_accuracy_report.py`, full 1996–2025+partial-2026 history, Echo variant)
+## 8. Accuracy snapshot — REFRESHED this session after the venue-collision fix (§5e), Echo variant
 
-Use this as the baseline to compare against once the postseason multipliers
-(§5e) actually get tuned — right now these numbers reflect classification
-with zero postseason-specific rating impact yet.
+**The table below supersedes the previous handoff's numbers, which were
+computed on contaminated data** (104-113 misclassified regular-season games
+mixed into the BOWL/CFP-SF buckets — see §2 and §5e). This round-by-round
+breakdown is from a direct post-fix query (`check_bowl_accuracy.py`,
+included this session) against the real re-ingested `cfb_elo.db`:
 
-| Scope | n | Accuracy | Brier | Log-loss |
-|---|---|---|---|---|
-| All games | 23,943 | 74.9% | 0.1666 | 0.4993 |
-| Regular season | 22,692 | 75.6% | 0.1633 | 0.4916 |
-| Postseason (all) | 1,251 | 62.7% | 0.2251 | 0.6391 |
-
-Baselines for context: coin flip = 0.2500 Brier; always-pick-home = 62.2%
-accuracy.
-
-**By postseason round:**
-
-| Round | n | Accuracy | Brier |
+| Round | n (games) | Accuracy | Brier |
 |---|---|---|---|
-| BOWL | 1,026 | 61.9% | 0.2295 |
+| BOWL | 922 | 60.2% | 0.2382 |
 | CCG | 148 | 72.3% | 0.1892 |
 | CFP-R1 | 8 | 87.5% | 0.1325 |
 | CFP-QF | 8 | 50.0% | 0.2689 |
-| CFP-SF | 33 | 51.5% | 0.2383 |
+| CFP-SF | 24 | 62.5% | 0.2056 |
 | NC | 28 | 53.6% | 0.2500 |
+| Regular season | 21,750 | 74.7% | 0.1683 |
 
-**Reading this:** the model is well-calibrated overall (predicted vs. actual
-win rate matches within ~1 point across every probability bucket — see the
-full report for the calibration table). `BOWL` games are doing almost all of
-the postseason accuracy damage, plausibly a real structural gap (roster
-opt-outs, portal departures, a month of dead time between selection and
-kickoff) that an Elo model — which only ever sees team-vs-team results —
-has no way to see. `CFP-SF`/`NC` sitting near a coin flip is a small sample
-(28–33 games) and may partly reflect that a title game is, by construction,
-a matchup between two elite teams with a genuinely small true gap between
-them — not necessarily a calibration failure. Worth re-running this report
-after the postseason multipliers are tuned to see whether tuning moves
-these numbers at all (it may not — the multipliers change how much a result
-*teaches* the model, not the pre-game win probability itself).
+Baselines for context: coin flip = 0.2500 Brier; always-pick-home ≈ 62%
+accuracy.
+
+**What changed vs. the contaminated numbers, and why it matters:** BOWL
+accuracy actually went DOWN (60.2%, was 61.9%) — the misclassified games
+(mostly Memphis/UTEP/Toledo beating overmatched non-conference opponents)
+were easy, correctly-predicted games that had been quietly propping the
+number up. The real postseason gap is a bit worse than originally reported,
+but now it's measuring the right thing. CFP-SF improved substantially
+(62.5%, was 51.5%) now that its own independent venue-collision false
+positives (2015 Cotton Bowl, 2017 Rose Bowl — see §5e) are gone.
+
+**Reading the BOWL gap:** TJ's read, which the data doesn't contradict — a
+lot of non-CFP bowl games are closer to preseason exhibitions than
+high-stakes postseason football for a lot of the teams in them (opt-outs,
+portal departures, low stakes for a 6-6 team in a minor bowl), which an Elo
+model that only ever sees team-vs-team results has no way to see. `CFP-SF`/
+`NC` sitting near a coin flip is a small sample (24-28 games) and may partly
+reflect that a title-adjacent game is, by construction, a matchup between
+two elite teams with a genuinely small true gap — not necessarily a
+calibration failure.
+
+**Not yet refreshed:** the overall all-games/regular-season-vs-postseason
+aggregate figures and log-loss numbers from the original `cfb_accuracy_report.py`
+full report weren't regenerated this session (that script wasn't available
+in this environment — only the round-by-round query above was run directly).
+Worth a full `cfb_accuracy_report.py` re-run for the complete picture,
+including the calibration table, before treating this section as fully
+up to date.
 
 ## 9. Standard per-season / update-season workflow
 
@@ -385,82 +458,142 @@ completely empty standings, because every team scored as FCS in the
 meantime. Both `add_season.py` and `load_conference_membership.py` trigger
 their own full rebuild, so re-running either is always safe.
 
-**Known limitation for an in-progress (not-yet-completed) season:**
-`normalize_sr_games.py` currently drops any row with no final score
-entirely — it does NOT route future/unplayed games into the `schedule`
-table the way `add_season.py`'s docstring says it should. This was never a
-problem loading a fully-completed historical season (a handful of
-postponements, genuinely rare), but for the current season it means
-hundreds of legitimate future games are simply absent from the pipeline,
-not sitting in `schedule` awaiting a prediction. **This needs an actual code
-fix** (distinguish "postponed/cancelled in an otherwise-complete season"
-from "hasn't been played yet in the current season" as two different
-cases) — see §10, item 1.
+**An in-progress (not-yet-completed) season now works correctly** (fixed
+this session — see §2, §10 item 1): `normalize_sr_games.py` routes a
+scoreless row to `schedule` for prediction if its date is today-or-future
+(within a small buffer for a same-day result not yet posted), and still
+drops it as a genuine postponement only if the date is further in the past.
+After running the three commands above for an in-progress season, run
+`python3 simulate_season.py --season YYYY` too if season projections are
+wanted (ported this session — see §3).
 
 ## 10. What's left to do (in rough priority order)
 
-1. **Fix the unplayed-games/schedule bug.** `normalize_sr_games.py` drops
-   every unscored row instead of routing it to `schedule` for prediction.
-   This is the actual blocker for the current season being usable for
-   anything resembling "here's who's favored this week" — confirmed
-   directly this session loading 2026 (630 future games silently absent
-   from the pipeline). Needs a real code change, not a workaround.
+**Items 1, 3, 4, 8, and 11 from the previous handoff are done this session.**
+Item 2 is deliberately deferred (not forgotten). Item 9 is deliberately
+deferred (not urgent, see its entry). Item 10 was reviewed and needs no
+change unless a design preference changes. **Item 6 is the live item** — the
+rest of this list exists mostly so nothing gets silently dropped.
 
-2. **Tune the postseason multipliers.** Classification (§5e) is done and
-   validated; `postseason_round_mult`, `bowl_rank_bonus_max`,
-   `bowl_one_ranked_bonus_max`, and `conf_championship_mult` are all still
-   at their no-op defaults. Now that real postseason data exists with real
-   `Round` labels, this is a legitimate Track A tuning job. Worth
-   re-running `cfb_accuracy_report.py` afterward to see whether it moves
-   the postseason accuracy numbers in §9 at all.
+1. ~~Fix the unplayed-games/schedule bug.~~ **DONE.** `normalize_sr_games.py`
+   now routes a scoreless row to `schedule` (today-or-future date) instead of
+   dropping it, and only drops a genuine stale postponement. Validated
+   end-to-end against the real 630 upcoming 2026 games. See §2, §9.
 
-3. **Investigate the `BOWL`-accuracy gap (61.9%) as its own question,
-   separate from tuning.** Plausibly a structural gap (roster opt-outs,
-   portal departures) an Elo model can't see regardless of how well-tuned
-   its multipliers are — worth deciding whether that's an accepted
-   limitation or something worth investigating further before assuming
-   tuning alone will fix it.
+2. **Tune the postseason multipliers — explicitly SKIPPED for now, by
+   decision, not an oversight.** `postseason_round_mult`, `bowl_rank_bonus_max`,
+   `bowl_one_ranked_bonus_max`, and `conf_championship_mult` are all still at
+   their no-op defaults. Classification is done and now trustworthy (§5e),
+   so this is a legitimate Track A job whenever it's picked back up — just
+   not now. Worth re-reading §8's reading of the BOWL gap first if/when this
+   gets revisited: TJ's view is a lot of the gap reflects real low-stakes/
+   opt-out dynamics an Elo model can't see, not something tuning alone fixes.
 
-4. **Port `simulate_season.py`** from NFL_Elo if season projections are
-   wanted for CFB (currently a graceful no-op in `add_season.py`).
+3. ~~Investigate the `BOWL`-accuracy gap as its own question.~~ **DONE** —
+   turned out to be a data-classification bug, not a modeling gap. See §5e
+   and §8 for the full root-cause and corrected numbers.
 
-5. **Decide on the `DBs/` migration.** The site's other sports live under
-   `DBs/nba`, `DBs/nfl`, `DBs/wnba`; `CFB_Elo` still lives at the repo root.
-   Structural gaps beyond just moving the folder: missing
-   `accuracy_report.py`-equivalent (now actually exists as
-   `cfb_accuracy_report.py` — naming convention differs from the other
-   sports' `report.py`, worth aligning or not), `delete_season.py`,
-   `stabilization_check.py`, `test_db.py`, `test_engine.py` don't exist for
-   CFB yet.
+4. ~~Port `simulate_season.py`.~~ **DONE** — ported from
+   `TRACERsports/DBs/nfl/simulate_season.py`, CFB-specific conference/FBS
+   annotation fix added, validated against real 2026 data. See §3.
 
-6. **Zero integration outside `CFB_Elo/` itself.** `export_to_supabase.py`'s
-   `SPORT_FOR_LEAGUE`/league-config dicts have no CFB entries, `schema.sql`
-   has no CFB/college references, `lib/sports/` has no `cfb/` config folder,
-   the frontend (`app/`) has no CFB references anywhere. A structurally
-   perfect backend doesn't appear on the live site without this — separate
-   effort from item 5.
+5. **`DBs/` migration — core move DONE this session, some structural gaps
+   remain.** `CFB_Elo/` → `DBs/cfb/`, `cfb_elo.db` → `DBs/cfb_elo.db`,
+   every `DB_PATH` reference updated to the sibling-repo convention,
+   committed/pushed, confirmed working against the real database
+   (`rebuild_ratings_only.py`, `predict.py`, `franchise.py` all ran clean
+   from the new location). **Remaining gaps**, your call on whether "match
+   the structure" extends this far: `delete_season.py`, `report.py`,
+   `stabilization_check.py`, `test_db.py`, `test_engine.py` exist for
+   nba/nfl/wnba but not CFB yet, and `cfb_accuracy_report.py`'s name doesn't
+   match the sibling `report.py` convention.
 
-7. **First-year-FBS discount calibration (Track B).** Once there's enough
-   real newcomer data, measure how first-year FBS teams actually perform
-   relative to their Step-D starting point and calibrate a discount — don't
-   grid-search this (§6).
+6. **Supabase/site integration — THE LIVE ITEM, concrete scope now known.**
+   `export_to_supabase.py` has zero CFB awareness; closing that gap turned
+   out to split into three genuinely different pieces of work, not one:
+   - **Easy, mechanical:** add `"cfb": "football"` to `SPORT_FOR_LEAGUE` and
+     a `"cfb"` entry to `ACTIVE_CODES`. The `--league` CLI flag
+     auto-validates off `SPORT_FOR_LEAGUE`'s keys, so this alone unblocks
+     running the exporter at all. Open design question: `ACTIVE_CODES` for
+     the pro leagues is a small hand-maintained set of ~30 franchises that
+     rarely change — CFB has ~136 FBS teams with real year-to-year
+     membership churn (realignment), so hand-maintaining it the same way is
+     a maintenance trap. Since `fbs_membership` already tracks exactly this,
+     generating `ACTIVE_CODES["cfb"]` from the current season's
+     `fbs_membership` at export time (instead of hardcoding it) is probably
+     the right call.
+   - **Real, blocking gap:** `build_games()`'s and `build_season_projection()`'s
+     raw SQL queries match CFB's actual `ratings`/`season_projections` schema
+     columns exactly (verified directly — `w`/`l`/`t`/`r1w`.../`fw`/`fl` and
+     `median_wins`/`trials`/`remaining_games`/`computed_at` are all already
+     there) — but `build_schedule()` selects `p.predicted_spread` from
+     `schedule_predictions`, and that column **does not exist at all** in
+     CFB's `schedule_predictions` table, not just NULL. This isn't a
+     one-line fix: NFL's `predicted_spread` isn't a rule-of-thumb constant
+     (not "538's Elo/25") — it's a real regression fit against actual Vegas
+     closing lines (`spread.py`, calibrated against `games_betting.csv`,
+     refit periodically). No equivalent CFB betting-lines dataset exists in
+     this repo. Until this is resolved, `build_schedule()` will hard-crash
+     against `cfb_elo.db`. Options: (a) add the column now as nullable and
+     leave it NULL for CFB until real odds data + a calibrated CFB
+     `spread.py` exist, or (b) source a CFB betting-lines dataset and build
+     the calibration now. (a) is almost certainly the right near-term call —
+     don't invent an uncalibrated conversion constant just to fill the
+     column.
+   - **Real, substantial content-authoring project, not a data export:**
+     `lib/sports/cfb/config.js` doesn't exist. Looking at `lib/sports/nfl/config.js`
+     as the template, this needs hand-authored conferences, divisions, a
+     `playoffFormat` definition, and a full per-team roster with colors —
+     for CFB that's ~136 teams across ~10 conferences (SEC, Big Ten, ACC,
+     Big 12, American, Mountain West, MAC, C-USA, Sun Belt, independents)
+     and a 12-team CFP bracket with byes for the top 4 seeds plus both
+     at-large and conference-champion auto-bids — a meaningfully bigger and
+     differently-shaped job than any pro league's config. This deserves
+     planning as its own effort, not a quick addition alongside a bug fix.
 
-8. **Fix `add_season.py`'s stale docstring** — still claims bowls/CCGs load
-   with `Round=None`, no longer true since this session's postseason work.
-   Small, but will mislead whoever reads it next if left as-is.
+   **Suggested near-term scope, not yet started:** add the two dict entries,
+   add `predicted_spread` as a nullable column and skip CFB calibration for
+   now, and start `config.js` with just the team roster/conferences/colors —
+   defer the playoff bracket display until closer to the actual CFP.
 
-9. **Close `predict.py`'s known gap:** `preview_matchup()` falls back to a
-   flat `base` rating (not conference-average) when previewing a season with
-   zero real games loaded yet — correctly reproducing the conference average
-   there would need database access this method intentionally doesn't have.
-   Only matters for previewing a season's very first games before any real
-   results exist for it.
+7. **First-year-FBS discount calibration (Track B) — still not actionable.**
+   Needs enough real newcomer-season data to measure from, which doesn't
+   exist yet. Don't grid-search this (§6) once it is actionable.
 
-10. **Extend `conference_tier` seed data as gaps surface.** Only
-    SEC/Big Ten/ACC/Big 12/Pac-12/old Big East are seeded — everything else
-    defaults to midmajor. Worth a deliberate review pass (WAC/Mountain West
-    split history, the American's tier status, etc.) rather than waiting for
-    something to look wrong.
+8. ~~Fix `add_season.py`'s stale docstring.~~ **DONE** — the stale
+   "Round=None for bowls" paragraph is removed, and the Round description at
+   the top of the file's docstring now reflects real classification.
 
-11. **Routine maintenance:** check `reports/unresolved_conference_teams_*.csv`
-    whenever a new season is loaded and extend `KNOWN_ALIASES` as needed.
+9. **Close `predict.py`'s known gap — deliberately deferred, low urgency.**
+   `preview_matchup()` falls back to a flat `base` rating (not
+   conference-average) when previewing a season with zero real games loaded
+   yet. Investigated this session: `conn` is already available at the one
+   call site (`predict_all()`), so threading it through is structurally
+   feasible, but a correct fix isn't a one-liner — it needs to find every
+   other returning team in the same conference, average their current
+   ratings (with the same overall-FBS-average fallback `rebuild.py`'s real
+   `_enter_season()` uses for empty conferences), and handle the previewed
+   team itself being a debut (needing the 50/50 fcs_rating blend too). Only
+   matters in the narrow window before a season's very first game is loaded
+   — once `add_season.py` has loaded even one real game, the real
+   conference-average logic takes over automatically. **Decided this
+   session:** not worth building now, since the 2026 season is already
+   loaded and running — this window won't matter again until next season's
+   preseason, ~11 months out.
+
+10. ~~Extend `conference_tier` seed data.~~ **REVIEWED this session, no
+    change made.** Researched the actual history: the WAC (pre- and
+    post-1999 Mountain West split) and the American (formed 2013) were never
+    AQ/Power-5-equivalent conferences at any point — Group of Five by any
+    standard definition, same tier as Conference USA/MAC/Sun Belt, which
+    already correctly default to `midmajor`. The existing fallback already
+    handles all of them correctly; there's no actual gap to fill under the
+    current binary power/midmajor scheme. **Open question for TJ, not yet
+    decided:** whether a third tier is wanted for a conference like the
+    American (competitive enough to lose Cincinnati/Houston/UCF to the Big
+    12 in 2023) or whether binary is fine as-is.
+
+11. ~~Routine maintenance: check `reports/unresolved_conference_teams_*.csv`.~~
+    **DONE for 2026** — ran `load_conference_membership.py` against the real
+    `Standings/CFB_2026_Standings.csv`: 0 unresolved teams, no `KNOWN_ALIASES`
+    gaps. Still something to re-check whenever a new season is loaded.
