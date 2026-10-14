@@ -97,10 +97,16 @@ ACTIVE_CODES = {
     },
 }
 
+ACTIVE_CODES["cfb"] = set()  # filled from fbs_membership in main()
+
+# Leagues with no single-table standings, so no tiebreaker check (CFB: 138 teams, ~12 conferences).
+NO_TIEBREAKER_LEAGUES = {"cfb"}
+
 SPORT_FOR_LEAGUE = {
     "nba": "basketball",
     "wnba": "basketball",
     "nfl": "football",
+    "cfb": "football",
 }
 
 # Both rating variants this export moves over. 'echo' is the original
@@ -350,10 +356,13 @@ def build_schedule(conn, league, id_to_code, variant):
     and simpler than trying to diff out exactly which rows to remove.
     """
     cur = conn.cursor()
+    has_spread = any(c[1] == "predicted_spread"
+                     for c in cur.execute("PRAGMA table_info(schedule_predictions)"))
+    spread_sql = "p.predicted_spread" if has_spread else "NULL AS predicted_spread"
     cur.execute(
         "SELECT s.schedule_id, s.date, s.season, s.type, s.round, s.home_team, "
         "s.away_team, s.neutral, p.expected_win_home, p.expected_win_away, "
-        "p.home_days_off, p.away_days_off, p.rest_adj, p.predicted_spread "
+        f"p.home_days_off, p.away_days_off, p.rest_adj, {spread_sql} "
         "FROM schedule s LEFT JOIN schedule_predictions p "
         "ON p.schedule_id = s.schedule_id AND p.variant = ?", (variant,)
     )
@@ -474,6 +483,8 @@ def main():
     args = parser.parse_args()
 
     conn = sqlite3.connect(args.db)
+    if args.league == "cfb":
+        ACTIVE_CODES["cfb"] = {r[0] for r in conn.execute("SELECT h.code FROM team_history h JOIN fbs_membership f ON f.team_id=h.team_id AND f.season=(SELECT MAX(season) FROM fbs_membership) WHERE h.end_season IS NULL")}
     id_to_code = resolve_current_codes(conn)
     teams_rows = build_teams(conn, args.league, id_to_code)  # variant-independent, built once
     team_history_rows = build_team_history(conn, args.league, id_to_code)  # also variant-independent
@@ -487,7 +498,8 @@ def main():
         # after every real criterion (see tiebreakers.py for the full
         # procedure). Runs on every export, dry-run or not, since a tie is
         # a tie regardless of whether this run pushes to Supabase.
-        check_tiebreakers(variant_games, args.league, variant, name_by_code, interactive=True)
+        if args.league not in NO_TIEBREAKER_LEAGUES:
+            check_tiebreakers(variant_games, args.league, variant, name_by_code, interactive=True)
         games_rows += variant_games
         schedule_rows += build_schedule(conn, args.league, id_to_code, variant)
         projection_rows += build_season_projection(conn, args.league, id_to_code, variant)

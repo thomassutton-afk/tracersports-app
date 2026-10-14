@@ -101,6 +101,13 @@ ALIASES = {
     "SE Louisiana": "Southeastern Louisiana",
     "Hawai'i": "Hawaii",
     "Sam Houston State": "Sam Houston",
+    "McNeese": "McNeese State",
+    "Middle Tennessee": "Middle Tennessee State",
+    "The Citadel": "Citadel",
+    "Grambling": "Grambling State",
+    "UAlbany": "Albany",
+    "Nicholls": "Nicholls State",
+    "Central Connecticut": "Central Connecticut State",
 }
 
 
