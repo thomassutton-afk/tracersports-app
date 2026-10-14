@@ -387,6 +387,7 @@ class EloEngine:
                     w=win, l=loss, t=tie,
                     r1w=po_w["r1"], r1l=po_l["r1"], r2w=po_w["r2"], r2l=po_l["r2"],
                     r3w=po_w["r3"], r3l=po_l["r3"], fw=po_w["f"], fl=po_l["f"],
+                    neutral=1 if g.get("neutral") else 0,
                 )
 
             row_home = row(home_id, away_id, True, pre_home, pre_away, exp_home,

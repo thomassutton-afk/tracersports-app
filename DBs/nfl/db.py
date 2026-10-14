@@ -173,6 +173,7 @@ CREATE TABLE IF NOT EXISTS ratings (
     post_rate     REAL,
     w REAL, l REAL, t REAL, r1w REAL, r1l REAL, r2w REAL, r2l REAL,
     r3w REAL, r3l REAL, fw REAL, fl REAL,
+    neutral       INTEGER NOT NULL DEFAULT 0,
     PRIMARY KEY (game_id, team, variant)
 );
 
@@ -266,6 +267,16 @@ def _migrate(conn: sqlite3.Connection) -> None:
     for col in ("primary_color", "secondary_color", "tertiary_color"):
         if col not in history_cols:
             conn.execute(f"ALTER TABLE team_history ADD COLUMN {col} TEXT")
+
+    # `ratings` predates carrying the neutral-site flag through from
+    # `games` (it was tracked on games/schedule but silently dropped
+    # once a game reached ratings). Same additive backfill pattern as
+    # team_history's color columns above - existing rows default to 0
+    # (not neutral) until the next rebuild_ratings() pass recomputes
+    # them from `games.neutral`, which is the actual source of truth.
+    ratings_cols = {row[1] for row in conn.execute("PRAGMA table_info(ratings)")}
+    if "neutral" not in ratings_cols:
+        conn.execute("ALTER TABLE ratings ADD COLUMN neutral INTEGER NOT NULL DEFAULT 0")
     conn.commit()
 
 
@@ -419,7 +430,11 @@ def load_resets(conn: sqlite3.Connection) -> set[tuple[str, int]]:
     return {(t, s) for t, s in rows}
 
 
-PARAMS_FILE = "active_params.json"
+import os as _os
+PARAMS_FILE = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "active_params.json")
+# Resolved relative to this file for the same reason as SCHEDULE_FILE
+# below: a bare filename breaks silently when a script is run from a
+# different working directory (e.g. DBs/ instead of DBs/nfl/).
 # Active (tuned) parameters live in this file, deliberately SEPARATE
 # from the database, so deleting/resetting nfl_elo.db can never
 # silently wipe out tuning. There's no set_params.py for NFL yet (see
@@ -452,7 +467,14 @@ def load_active_params(conn: sqlite3.Connection) -> Optional[dict]:
         return json.load(f)
 
 
-SCHEDULE_FILE = "param_schedule.json"
+# Resolved relative to THIS FILE, not the process's current working
+# directory. A bare "param_schedule.json" silently resolves to nothing
+# (no error - see params_for_season's fallback chain) the moment a
+# script is run from anywhere other than DBs/nfl/ - e.g. `python
+# nfl/rebuild.py` from DBs/ - which is exactly the failure mode that
+# had every season quietly using the engine's 72 Elo baseline instead
+# of the schedule's tuned per-season HFA.
+SCHEDULE_FILE = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "param_schedule.json")
 # A per-season override of alpha/kmax/hfa (see nfl_tune_engine.py /
 # nfl_reconstruct_engine.py). Deliberately a SEPARATE file from
 # active_params.json rather than a new shape inside it, so a system that
@@ -475,10 +497,24 @@ def save_param_schedule(conn: sqlite3.Connection, schedule: dict[int, dict]) -> 
 def load_param_schedule(conn: sqlite3.Connection) -> Optional[dict[int, dict]]:
     """Returns the persisted season -> {alpha, kmax, hfa} schedule, or
     None if no schedule file exists yet (caller should fall back to
-    load_active_params()/baseline - see PARAMS_FILE note above)."""
+    load_active_params()/baseline - see PARAMS_FILE note above).
+
+    SCHEDULE_FILE is resolved next to this module (see above), so
+    "not found" here should only mean the file was actually deleted or
+    renamed, not a wrong working directory - warn loudly rather than
+    silently falling back to the engine baseline for every season,
+    which is the bug this replaced."""
     import json
     import os
+    import warnings
     if not os.path.exists(SCHEDULE_FILE):
+        warnings.warn(
+            f"param_schedule.json not found at {SCHEDULE_FILE!r} - every season will "
+            "silently use active_params.json / the engine baseline instead of its tuned "
+            "per-season hfa/alpha/kmax. If a schedule should exist, this will misprice "
+            "every prediction.",
+            stacklevel=2,
+        )
         return None
     with open(SCHEDULE_FILE) as f:
         raw = json.load(f)
@@ -645,7 +681,7 @@ def save_ratings(conn: sqlite3.Connection, variant: str, rows: list[dict],
             "pre_rate", "opp_pre_rate", "expected_win", "points_for", "points_against", "ot",
             "mov", "result", "accuracy", "test", "brier", "mov_mult", "po_mult", "k", "keff",
             "rating_change", "post_rate", "w", "l", "t", "r1w", "r1l", "r2w", "r2l", "r3w", "r3l",
-            "fw", "fl"]
+            "fw", "fl", "neutral"]
     placeholders = ",".join("?" for _ in cols)
     sql = f"INSERT INTO ratings ({','.join(cols)}) VALUES ({placeholders})"
     for gid, r in zip(game_id_by_row, rows):
