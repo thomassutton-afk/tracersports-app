@@ -51,3 +51,9 @@ reports/
 social_posts/
 
 DBs/cfb/cfb_elo_backup_*.db
+# Database backups and sync snapshots
+DBs/*_backup_*.db
+DBs/*_pre_sync_*.db
+
+# Excel lock files
+~$*
