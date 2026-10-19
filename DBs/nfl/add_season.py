@@ -1,3 +1,4 @@
+import os
 """
 Add a new season's games to the database, from a single command.
 
@@ -58,7 +59,9 @@ from rebuild import rebuild_ratings, standings, sanity_checks, VARIANTS
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # DBs/ - for social_card.py
 import social_card
 
-DB_PATH = "nfl_elo.db"
+DB_PATH = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "..", "nfl_elo.db"
+)
 
 
 def _read_any(path: str) -> pd.DataFrame:
