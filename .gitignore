@@ -57,3 +57,7 @@ DBs/*_pre_sync_*.db
 
 # Excel lock files
 ~$*
+
+# Mirrors of main's databases: refresh by copying from main, never commit
+DBs/nfl_elo.db
+DBs/wnba_elo.db
