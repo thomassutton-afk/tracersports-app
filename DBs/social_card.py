@@ -83,6 +83,15 @@ def _font(weight: str, size: int) -> ImageFont.FreeTypeFont:
     return _FONT_CACHE[key]
 
 
+def _has_column(conn: sqlite3.Connection, table: str, column: str) -> bool:
+    """Whether `column` exists on `table` in this connection's db. Used
+    to keep _next_slate() safe across leagues that share this script -
+    NFL's schedule_predictions has predicted_spread (see spread.py),
+    NBA/WNBA's doesn't, and a hardcoded SELECT of a column that doesn't
+    exist would throw for those leagues rather than just skip it."""
+    return any(row[1] == column for row in conn.execute(f"PRAGMA table_info({table})"))
+
+
 def _next_slate(conn: sqlite3.Connection) -> tuple[date, list[dict]] | None:
     """Soonest date in `schedule` with at least one unplayed game and a
     saved Echo prediction. `schedule` only ever holds unplayed games
@@ -94,8 +103,9 @@ def _next_slate(conn: sqlite3.Connection) -> tuple[date, list[dict]] | None:
     if not row or not row[0]:
         return None
     next_date = row[0]
+    spread_select = ", p.predicted_spread" if _has_column(conn, "schedule_predictions", "predicted_spread") else ""
     cur = conn.execute(
-        "SELECT s.home_team, s.away_team, p.expected_win_home "
+        f"SELECT s.home_team, s.away_team, p.expected_win_home{spread_select} "
         "FROM schedule s LEFT JOIN schedule_predictions p "
         "ON p.schedule_id = s.schedule_id AND p.variant = 'echo' "
         "WHERE s.date = ? ORDER BY s.schedule_id",
@@ -326,7 +336,41 @@ def _render_page(games: list[dict], slate_date: date, league: str, page: int, to
     # value - so they dominate their cell (~85-90% of its height) instead
     # of floating in it. Everything else (labels, badge) is layered on top
     # of/around the logo rather than pushed into its own reserved band.
-    logo_size = int(min(row_h * 0.75, half_col * 0.61))
+    #
+    # That headroom is already razor-thin by design - the win% badge
+    # alone sits within ~5px of the row's own bottom edge at several
+    # common slate sizes, and touches it exactly at others (checked
+    # directly against this geometry, not assumed - a flat shrink factor
+    # tried here first still overlapped at n=4 and n=8 specifically,
+    # because margin-below-the-badge isn't linear in row_h; it depends
+    # on badge_r's own max(24, ...) floor kicking in at different logo
+    # sizes for different slate sizes). So instead of a fixed factor,
+    # solve per-render for the largest logo that still leaves >=10px
+    # between the spread pill's actual bottom edge and this row's own
+    # bottom edge - guaranteed correct at any n, rather than verified
+    # only at the handful of slate sizes anyone thought to check.
+    # Pages without spread data (NBA/WNBA, or NFL before
+    # write_schedule_predictions has run) are completely unaffected -
+    # same fixed 0.75 as always, no pill to make room for.
+    has_spread_data = any(g.get("predicted_spread") is not None for g in games)
+    pill_gap, pill_h = (7, 26) if games_per_row == 1 else (6, 20)
+
+    def _logo_factor_for_pill(target_margin=10.0):
+        lo, hi = 0.20, 0.75
+        for _ in range(30):
+            mid = (lo + hi) / 2
+            probe_logo = min(row_h * mid, half_col * 0.61)
+            probe_ring_r = probe_logo / 2 + 14
+            probe_badge_r = max(24, probe_logo * 0.15)
+            pill_bottom = probe_ring_r * 0.90 + probe_badge_r + pill_gap + pill_h
+            if row_h / 2 - pill_bottom > target_margin:
+                lo = mid
+            else:
+                hi = mid
+        return lo
+
+    logo_factor = _logo_factor_for_pill() if has_spread_data else 0.75
+    logo_size = int(min(row_h * logo_factor, half_col * 0.61))
     ring_r = logo_size / 2 + 14
     badge_r = max(24, int(logo_size * 0.15))
     team_font = _font("Bold", 22 if games_per_row == 1 else 18)
@@ -381,6 +425,29 @@ def _render_page(games: list[dict], slate_date: date, league: str, page: int, to
         draw.ellipse((badge_cx - badge_r, badge_cy - badge_r, badge_cx + badge_r, badge_cy + badge_r),
                      fill=_heat_color(pct), outline=BG, width=4)
         draw.text((badge_cx, badge_cy), f"{pct}%", font=badge_font, fill="#FFFFFF", anchor="mm")
+
+        # Predicted spread, when this league's db has it (currently NFL
+        # only - see _has_column() in _next_slate()). Grouped directly
+        # under the win% badge as a small solid pill - same badge_cx so
+        # the two read as one "confidence" cluster instead of two
+        # unrelated labels, and a filled pill (not bare text) so it
+        # holds contrast regardless of what's behind it on the canvas.
+        # `.get()` rather than a dict key access - a league without the
+        # column simply never has this key, and nothing here draws.
+        spread = g.get("predicted_spread")
+        if spread is not None:
+            spread_text = f"-{abs(spread):.1f}"
+            spread_font = _font("Bold", 18 if games_per_row == 1 else 14)
+            # pill_gap/pill_h come from the same variables logo_factor was
+            # solved against above - using different values here would
+            # silently break the no-overlap guarantee that solve exists
+            # to provide.
+            pill_cy = badge_cy + badge_r + pill_gap + pill_h / 2
+            text_w = draw.textlength(spread_text, font=spread_font)
+            pill_w = text_w + 18
+            pill_box = (badge_cx - pill_w / 2, pill_cy - pill_h / 2, badge_cx + pill_w / 2, pill_cy + pill_h / 2)
+            draw.rounded_rectangle(pill_box, radius=pill_h / 2, fill=TEXT)
+            draw.text((badge_cx, pill_cy), spread_text, font=spread_font, fill="#FFFFFF", anchor="mm")
 
         # Thin divider down the middle of each game cell (away | home)
         draw.line([(cell_x0 + half_col, row_y0 + 10), (cell_x0 + half_col, row_y1 - 10)], fill=BORDER2, width=2)
